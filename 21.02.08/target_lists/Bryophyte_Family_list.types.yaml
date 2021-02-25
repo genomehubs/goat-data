@@ -1,0 +1,46 @@
+file:
+  format: tsv
+  header: false
+  comment: "#"
+  name: Bryophyte_Family_list.tsv
+  source: Bryophytes Pete Hollingsworth RBGE
+  source_url: 
+  source_date: 2021-01-26
+  display_group: target_lists
+  display_level: 2
+attributes:
+  long_list:
+    constraint:
+      enum:
+        - DTOL
+    index: 3
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  other_priority:
+    constraint:
+      enum:
+        - DTOL
+    index: 4
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  family_representative:
+    constraint:
+      enum:
+        - DTOL
+    index: 5
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+taxonomy:
+  genus:
+    index: 0
+  species:
+    index: [0, 1]
+    join: " "
+  family:
+    index: 2

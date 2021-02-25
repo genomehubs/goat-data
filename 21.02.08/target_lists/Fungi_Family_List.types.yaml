@@ -1,0 +1,43 @@
+file:
+  format: tsv
+  header: false
+  comment: "#"
+  name: Fungi_Family_List.tsv
+  source: Fungi_Family_List Ester Gaya RBG Kew
+  source_url: 
+  source_date: 2021-02-11
+  display_group: target_lists
+  display_level: 2
+attributes:
+  long_list:
+    constraint:
+      enum:
+        - DTOL
+    index: 2
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  other_priority:
+    constraint:
+      enum:
+        - DTOL
+    index: 3
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  family_representative:
+    constraint:
+      enum:
+        - DTOL
+    index: 4
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+taxonomy:
+  species:
+    index: 0
+  family:
+    index: 1
