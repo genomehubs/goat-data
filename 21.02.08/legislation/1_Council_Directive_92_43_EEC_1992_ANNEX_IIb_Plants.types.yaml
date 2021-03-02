@@ -24,12 +24,16 @@ attributes:
     traverse_direction: up
     type: keyword
 taxonomy:
+  genus:
+    header: genus
   species:
     header: scientific_name
   subspecies:
     header: subspecies
   phylum:
     header: phylum
+  alt_taxon_id:
+    header: alt_taxon_id
 metadata:
   comment:
     header: comment
