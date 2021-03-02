@@ -27,9 +27,15 @@ metadata:
   comment:
     header: comment
 taxonomy:
+  genus:
+    header: genus
   species:
     header: scientific_name
   phylum:
     header: phylum
   subspecies:
     header: subspecies
+  alt_taxon_id:
+    header: alt_taxon_id
+  synonym:
+    header: synonym
