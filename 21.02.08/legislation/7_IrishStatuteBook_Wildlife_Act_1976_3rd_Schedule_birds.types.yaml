@@ -1,0 +1,35 @@
+file:
+  format: tsv
+  header: true
+  name: 7_IrishStatuteBook_Wildlife_Act_1976_3rd_Schedule_birds.tsv
+  source: Irish Statute Book Wildlife Act, 1976 Third Schedule (Exceptions)
+  description: List of protected bird species under Irish Statute Book Wildlife Act, 1976. All birds in Schedule 3 removed from Irish Rare Birds Committee list
+  source_url: http://www.irishstatutebook.ie/eli/1976/act/39/schedule/3/enacted/en/html
+attributes:
+  isb_wildlife_act_1976:
+    constraint:
+      enum:
+        - IWA-nSch3
+        - IWA-Sch5
+    description: Section in which species is listed
+    display_group: legislation
+    display_level: 2
+    display_name: Irish Statute Book Wildlife Act, 1976
+    header: isb_wildlife_act_1976
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+taxon_names:
+  common_name:
+    header: common_name
+taxonomy:
+  species:
+    header: scientific_name
+  class:
+    header: class
+  subspecies:
+    header: subspecies
+metadata:
+  comment:
+    header: comment

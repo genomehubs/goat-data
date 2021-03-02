@@ -1,0 +1,38 @@
+file:
+  format: tsv
+  header: true
+  name: 6_Wildlife_and_Countryside_Act_1981_Sch_5_Animals.tsv
+  source: Wildlife and Countryside Act 1981 Schedule 5 Animals
+  description: List of protected animal species under the Wildlife and Countryside Act 1981 Schedule 5
+  source_url: https://www.legislation.gov.uk/ukpga/1981/69/schedule/5
+attributes:
+  waca_1981:
+    constraint:
+      enum:
+        - WACA-Sch1
+        - WACA-Sch5
+    description: Section in which species is listed
+    display_group: legislation
+    display_level: 2
+    display_name: Wildlife and Countryside Act 1981
+    header: waca_1981
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+metadata:
+  comment:
+    header: comment
+taxon_names:
+  common_name:
+    header: common_name
+taxonomy:
+  species:
+    header: scientific_name
+  phylum:
+    header: phylum
+  subspecies:
+    header: subspecies
+metadata:
+  comment:
+    header: comment
