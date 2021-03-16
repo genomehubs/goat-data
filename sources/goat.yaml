@@ -1,12 +1,12 @@
 common:
   hub:
     name: goat
-    path: /volumes/goat
-    version: 21.02.08
+    path: /home/ubuntu
+    version: 21.03.04
   es:
-    path: /volumes/goat/preview_resources/es
+    path: /home/ubuntu/21.03.04_resources/es
   taxonomy:
-    path: /volumes/goat/21.02.08_resources/taxdump
+    path: /home/ubuntu/21.03.04_resources/taxdump
 fill: {}
 index: {}
 init: {}

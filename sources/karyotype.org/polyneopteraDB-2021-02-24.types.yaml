@@ -19,7 +19,7 @@ attributes:
     description: Chromosome number
     display_level: 1
     display_name: Chromosome number
-    header: femalediploidnumber
+    header: haploidnumber
     separator:
       - ","
       - "-"
