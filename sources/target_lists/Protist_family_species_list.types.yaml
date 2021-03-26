@@ -1,0 +1,52 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: Protist_family_species_list.tsv
+  source: DTOL Protists Oxford University, Zoology Department, Estelle Killias
+  source_date: 2021-02-03
+  display_group: target_lists
+  display_level: 2
+attributes:
+  long_list:
+    constraint:
+      enum:
+        - DTOL
+    header: long_list
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  other_priority:
+    constraint:
+      enum:
+        - DTOL
+    header: other_priority
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  family_representative:
+    constraint:
+      enum:
+        - DTOL
+    header: family_representative
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+taxonomy:
+  genus:
+    header: genus
+  species:
+    index: [0, 1]
+    join: " "
+  family:
+    header: family
+  synonym:
+    header: synonym
+  taxon_id:
+    header: taxid
+metadata:
+  comment:
+    header: comment

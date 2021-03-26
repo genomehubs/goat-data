@@ -1,0 +1,81 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: Nematoda_species_karyotype_records.tsv
+  source: Mark Blaxter, Darwin Tree of Life
+  source_date: 2021-03-03
+  display_group: karyotype
+attributes:
+  chromosome_number:
+    bins:
+      min: 0
+      max: 10
+      count: 10
+      scale: log2
+    constraint:
+      max: 2000
+      min: 0
+    description: Chromosome number
+    display_level: 1
+    display_name: Chromosome number
+    header: female haploid K
+    separator:
+      - ","
+      - "-"
+    summary:
+      - median_high
+      - mode
+      - max
+      - min
+    traverse: median_high
+    type: short
+  ploidy:
+    bins:
+      min: 0
+      max: 10
+      count: 10
+    constraint:
+      max: 100
+      min: 0
+    description: Ploidy
+    display_level: 2
+    display_name: Ploidy
+    header: ploidy
+    separator:
+      - ","
+      - "-"
+    summary:
+      - median_high
+      - mode
+      - max
+      - min
+    traverse: median_high
+    type: short
+  sex_determination:
+    description: Sex determination mechanism
+    display_level: 2
+    display_name: Sex Determination
+    header: sex determination mechanism
+    separator:
+      - ","
+      - "-"
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+taxonomy:
+  phylum:
+    header: Phylum
+  class:
+    header: Class
+  order:
+    header: Order
+  family:
+    header: Family
+  genus:
+    header: Genus
+  species:
+    header: resolved species name
+  taxon_id:
+    header: taxid
