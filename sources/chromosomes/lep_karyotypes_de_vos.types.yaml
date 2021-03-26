@@ -1,0 +1,38 @@
+file:
+  format: tsv
+  header: true
+  name: lep_karyotypes_de_vos.tsv.gz
+  source: de Vos et al. 2020
+  source_url: https://doi.org/10.1098/rstb.2019.0539
+  display_group: karyotype
+attributes:
+  chromosome_number:
+    bins:
+      min: 0
+      max: 10
+      count: 10
+      scale: log2
+    constraint:
+      max: 2000
+      min: 0
+    description: Chromosome number
+    display_level: 1
+    display_name: Chromosome number
+    index: 4
+    separator:
+      - ","
+      - "-"
+    summary:
+      - median_high
+      - mode
+      - max
+      - min
+    traverse: median_high
+    type: short
+taxonomy:
+  taxon_id:
+    index: 10
+  species:
+    index: 3
+  family:
+    index: 0

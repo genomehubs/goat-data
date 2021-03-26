@@ -2,8 +2,8 @@ file:
   format: tsv
   header: true
   name: genomesize.tsv.gz
-  source_url: Animal Genome Size Database
-  url: http://genomesize.com
+  source: Animal Genome Size Database
+  source_url: http://genomesize.com
   display_group: genome_size
 attributes:
   c_value:
@@ -196,6 +196,7 @@ attributes:
     display_group: karyotype
     display_name: Chromosome number
     index: 10
+    function: "{} / 2"
     separator:
       - ","
       - "-"

@@ -1,0 +1,45 @@
+file:
+  format: csv
+  header: true
+  name: ACC_DB_Download.csv
+  source: Animal Chromosome Counts Database
+  source_url: https://cromanpa94.github.io/ACC/
+  source_date: 2021-02-03
+  display_group: karyotype
+attributes:
+  chromosome_number:
+    bins:
+      min: 0
+      max: 10
+      count: 10
+      scale: log2
+    constraint:
+      max: 2000
+      min: 0
+    description: Chromosome number
+    display_level: 1
+    display_name: Chromosome number
+    header: N
+    separator:
+      - ","
+      - "-"
+    summary:
+      - median_high
+      - mode
+      - max
+      - min
+    traverse: median_high
+    type: short
+taxonomy:
+  phylum:
+    header: Phylum
+  class:
+    header: Class
+  order:
+    header: Order
+  family:
+    header: Family
+  genus:
+    header: Genus
+  species:
+    header: Species

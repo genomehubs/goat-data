@@ -30,6 +30,10 @@ taxonomy:
     header: phylum
   subspecies:
     header: subspecies
+  alt_taxon_id:
+    header: alt_taxon_id
+  synonym:
+    header: synonym
 metadata:
   comment:
     header: comment

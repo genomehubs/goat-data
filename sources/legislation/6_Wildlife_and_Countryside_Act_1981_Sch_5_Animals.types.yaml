@@ -20,9 +20,6 @@ attributes:
     traverse: list
     traverse_direction: up
     type: keyword
-metadata:
-  comment:
-    header: comment
 taxon_names:
   common_name:
     header: common_name
@@ -33,6 +30,8 @@ taxonomy:
     header: phylum
   subspecies:
     header: subspecies
+  synonym:
+    header: synonym
 metadata:
   comment:
     header: comment
