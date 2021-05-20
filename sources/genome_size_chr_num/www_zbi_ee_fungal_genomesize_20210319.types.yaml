@@ -1,0 +1,67 @@
+file:
+  format: tsv
+  header: true
+  name: www_zbi_ee_fungal_genomesize_20210319.tsv
+  source: Fungal Genome Size Database
+  source_url: http://www.zbi.ee/fungal-genomesize/
+  source_date: 2021-03-19
+  display_group: genome_size
+attributes:
+  c_value:
+    bins:
+      min: -2.5
+      max: 2.5
+      count: 10
+      scale: log10
+    constraint:
+      max: 200
+      min: 0
+    description: 1C value
+    display_level: 1
+    display_name: C value
+    header: "1C in pg"
+    separator:
+      - ","
+      - "-"
+    summary:
+      - mean
+      - median
+      - max
+      - min
+    traverse: mean
+    type: half_float
+    units: pgDNA
+  genome_size:
+    bins:
+      min: 6
+      max: 11
+      count: 10
+      scale: log10
+    constraint:
+      min: 0
+    description: Genome size
+    display_level: 1
+    display_name: Genome size
+    function: "{} * 1000000"
+    header: "1C in Mbp"
+    separator:
+      - ","
+      - "(?<!e)-"
+    summary:
+      - mean
+      - median
+      - max
+      - min
+    traverse: mean
+    type: long
+    units: bases
+taxonomy:
+  phylum:
+    header: PHYLUM
+  order:
+    header: ORDER
+  genus:
+    header: GENUS
+  species:
+    index: [2, 3]
+    join: " "
