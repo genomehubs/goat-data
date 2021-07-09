@@ -1,0 +1,37 @@
+file:
+  format: tsv
+  header: true
+  name: DTOL_Plant_Genome_Size_Estimates.20210512.tsv
+  source: Sahr Mian Kew 2021-05-12
+  display_group: genome_size
+attributes:
+  genome_size:
+    bins:
+      min: 6
+      max: 11
+      count: 10
+      scale: log10
+    constraint:
+      min: 0
+    description: Genome size
+    display_level: 1
+    display_name: Genome size
+    function: "{} * 978000000"
+    header: "GS (1C)"
+    separator:
+      - ","
+      - "(?<!e)-"
+    summary:
+      - mean
+      - median
+      - max
+      - min
+    traverse: mean
+    type: long
+    units: bases
+taxonomy:
+  species:
+    index: [5, 6]
+    join: " "
+  family:
+    header: "Higher Group"

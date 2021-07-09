@@ -1,7 +1,7 @@
 file:
   format: tsv
   header: true
-  name: genomesize.tsv.gz
+  name: genomesize.tsv
   source: Animal Genome Size Database
   source_url: http://genomesize.com
   display_group: genome_size

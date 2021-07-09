@@ -1,0 +1,127 @@
+attributes:
+  at_percent:
+    description: AT percent
+    display_group: btk
+    display_level: 2
+    display_name: AT percent
+    header: at_percent
+    type: 1dp
+    units: '%'
+  busco_completeness:
+    description: Busco completeness
+    display_group: busco
+    display_level: 1
+    display_name: BUSCO completeness
+    header: busco_complete
+    taxon_bins:
+      count: 10
+      max: 100
+      min: 50
+      scale: linear
+    taxon_display_group: assembly
+    taxon_display_level: 1
+    taxon_key: busco_completeness
+    taxon_name: BUSCO completeness
+    taxon_summary: max
+    taxon_traverse: false
+    taxon_type: 1dp
+    type: 1dp
+    units: '%'
+  busco_lineage:
+    description: Busco lineage
+    display_group: busco
+    display_level: 2
+    display_name: BUSCO lineage
+    header: busco_lineage
+    type: keyword
+  busco_string:
+    description: Busco string
+    display_group: busco
+    display_level: 2
+    display_name: BUSCO string
+    header: busco_string
+    type: keyword
+  gc_percent:
+    description: GC percent
+    display_group: btk
+    display_level: 2
+    display_name: GC percent
+    header: gc_percent
+    type: 1dp
+    units: '%'
+  n_percent:
+    description: N percent
+    display_group: btk
+    display_level: 2
+    display_name: N percent
+    header: n_percent
+    type: 1dp
+    units: '%'
+  nohit:
+    description: Sequences with no hits in the reference database
+    display_group: btk
+    display_level: 2
+    display_name: No hit
+    header: nohit
+    type: 1dp
+    units: '%'
+  target:
+    description: Hits matching target
+    display_group: btk
+    display_level: 2
+    display_name: Target
+    header: target
+    type: 1dp
+    units: '%'
+file:
+  display_group: btk
+  format: tsv
+  header: true
+  name: btk.tsv.gz
+identifiers:
+  assembly_alias:
+    header: alias
+    type: keyword
+  assembly_id:
+    header: accession
+    type: keyword
+  bioproject_accession:
+    header: bioproject
+    type: keyword
+  biosample_accession:
+    header: biosample
+    type: keyword
+  blobtoolkit_accession:
+    header: id
+    type: keyword
+  genbank_accession:
+    header: accession
+    type: keyword
+metadata:
+  source:
+    header: source
+  source_slug:
+    header: sourceSlug
+  source_url_stub:
+    header: sourceStub
+taxonomy:
+  class:
+    header: class
+  family:
+    header: family
+  genus:
+    header: genus
+  kingdom:
+    header: kingdom
+  order:
+    header: order
+  phylum:
+    header: phylum
+  species:
+    header: species
+  subspecies:
+    header: subspecies
+  superkingdom:
+    header: superkingdom
+  taxon_id:
+    header: taxid

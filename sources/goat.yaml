@@ -1,12 +1,12 @@
 common:
   hub:
     name: goat
-    path: /volumes/goat/2021.03.16_resources
-    version: 2021.03.16
+    path: /volumes/goat/2021.05.11_resources
+    version: 2021.05.11
   es:
-    path: /volumes/goat/2021.03.16_resources/es
+    path: /volumes/goat/2021.05.11_resources/es
   taxonomy:
-    path: /volumes/goat/2021.03.16_resources/taxdump
+    path: /volumes/goat/2021.05.11_resources/taxdump
 fill: {}
 index: {}
 init: {}
