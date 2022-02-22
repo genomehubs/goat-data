@@ -1,0 +1,16 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: ASG_pilot_long_list.tsv
+  source: Victoria McKenna, ASG
+  source_description: Victoria McKenna, Aquatic Symbiosis Genomics, Tree of Life, Wellcome Sanger Institute
+attributes:
+  long_list:
+    header: long_list
+    type: keyword
+taxonomy:
+  taxon_id:
+    header: tax_id
+  species:
+    header: scientific_name

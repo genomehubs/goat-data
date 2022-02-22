@@ -1,0 +1,30 @@
+file:
+  format: tsv
+  header: true
+  name: www_zbi_ee_fungal_genomesize_20210319.tsv
+  source: Fungal Genome Size Database
+  source_url: http://www.zbi.ee/fungal-genomesize/
+  source_date: 2021-03-19
+attributes:
+  c_value:
+    header: "1C in pg"
+    separator:
+      - ","
+      - "-"
+    type: half_float
+  genome_size:
+    header: "1C in Mbp"
+    separator:
+      - ","
+      - "(?<!e)-"
+    type: long
+taxonomy:
+  phylum:
+    header: PHYLUM
+  order:
+    header: ORDER
+  genus:
+    header: GENUS
+  species:
+    index: [2, 3]
+    join: " "

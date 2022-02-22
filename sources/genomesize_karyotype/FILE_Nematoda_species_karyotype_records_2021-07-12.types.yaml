@@ -1,0 +1,40 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: Nematoda_species_karyotype_records_2021-07-12.tsv
+  source: Mark Blaxter, Darwin Tree of Life
+  source_date: 2021-03-03
+attributes:
+  chromosome_number:
+    header: "Chromosome_number"
+    separator:
+      - ","
+      - "-"
+    type: short
+  haploid_number:
+    header: "female_haploid_K"
+    separator:
+      - ","
+      - "-"
+    type: short
+  sex_determination:
+    header: "sex_determination_mechanism"
+    separator:
+      - "/"
+      - ","
+      - "-"
+    type: keyword
+  ploidy:
+    header: "ploidy"
+    separator:
+      - ","
+      - "-"
+    type: short
+taxonomy:
+  family:
+    header: Family
+  species:
+    header: "resolved_species_name"
+  taxon_id:
+    header: taxid

@@ -1,0 +1,34 @@
+file:
+  format: tsv
+  header: true
+  name: polyneopteraDB-2021-08-17.tsv
+  source: Polyneoptera Karyotype Database
+  source_url: https://evobir.shinyapps.io/PolyneopteraDB/
+  source_description: A karyotype is a highly variable and complex trait that can reveal changes in genome organization, uncover phylogenetic history, and distinguish cryptic species. The current database contains 4,960 Coleoptera karyotypes which we have compiled from 252 publications. Blackmon, Heath, and Jeffery P. Demuth. Coleoptera Karyotype Database. The Coleopterists Bulletin 69.1 (2015) 174-175.  Current version of the database is 1.4 last updated 30 October 2020.
+attributes:
+  chromosome_number: 
+    header: femalediploidnumber/malediploidnumber
+    separator:
+      - "/"
+      - ","
+      - "-"
+    type: short
+  haploid_number:
+    header: "haploidnumber"
+    separator:
+      - ","
+      - "-"
+    type: short
+  sex_determination:
+    header: "sexchromosome"
+    separator:
+      - ","
+      - "-"
+    type: keyword
+taxonomy:
+  species:
+    header: Species
+  genus:
+    header: Genus
+  family:
+    header: Family

@@ -1,0 +1,1 @@
+NAME=$1; echo $NAME; echo `curl -s "localhost:3003/api/v0.0.1/lookup?searchTerm=$NAME&result=taxon&taxonomy=ncbi" | perl -lne 'if (/"taxon_id":"(\d+)","taxon_rank":"genus","scientific_name":"'$NAME'"}/) {print "$1"} else {print "0"}'`

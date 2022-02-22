@@ -1,0 +1,20 @@
+file:
+  format: tsv
+  header: true
+  name: lep_karyotypes_de_vos.tsv
+  source: de Vos et al. 2020
+  source_url: https://doi.org/10.1098/rstb.2019.0539
+attributes:
+  chromosome_number:
+    header: number_chromosomes
+    separator:
+      - ","
+      - "-"
+    type: short
+taxonomy:
+  taxon_id:
+    index: 10
+  species:
+    index: 3
+  family:
+    index: 0

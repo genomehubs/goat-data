@@ -1,0 +1,38 @@
+file:
+  format: csv
+  header: true
+  name: apidae-2021-07-07.csv
+  source: Bee Chromosome Database
+  source_url: http://www.bees.ufop.br
+  source_description: The Apidae Chromosome Database is an online resource to gather information on chromosome number and nuclear genome size on bee species from all over the world.
+attributes:
+  chromosome_number:
+    header: Diploid_2n
+    separator:
+      - "-"
+      - "/"
+      - " or "
+    type: short
+  haploid_number:
+    header: Haploid_n
+    separator:
+      - "-"
+      - "/"
+    type: short
+  genome_size:
+    function: "{} * 978000000"
+    header: "Genome_size_pg"
+    separator:
+      - ","
+      - "-"
+      - " - "
+    type: long
+taxonomy:
+  species:
+    header: Species
+  subfamily:
+    header: Subfamily
+  tribe:
+    header: Tribe
+  family:
+    header: Family

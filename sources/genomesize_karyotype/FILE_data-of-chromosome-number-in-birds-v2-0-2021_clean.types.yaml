@@ -1,0 +1,28 @@
+file:
+  format: csv
+  header: true
+  name: data-of-chromosome-number-in-birds-v2-0-2021_clean.csv
+  source: Bird Chromosome Database
+  source_url: https://sites.unipampa.edu.br/birdchromosomedatabase/chromosome-number-in-birds/
+  source_description: The BCD is an open resource that comprises information about chromosome number, karyotype, and the advances obtained by Fluorescent in situ Hybridization (FISH) studies in birds. The main purpose of this database is to retrieve and organize historical/current information regarding avian cytogenetics. Furthermore, it also aims to stimulate the development of new studies in this field. The database will be updated regularly and all users are encouraged to contribute to the improvement and spreading of bird cytogenetic information.
+attributes:
+  chromosome_number:
+    header: 2n
+    separator:
+      - "-"
+      - "/"
+    type: short
+  haploid_number:
+    header: Estimated_haploid_2n/2
+    separator:
+      - "-"
+      - "/"
+    type: short
+taxonomy:
+  species:
+    header: Species
+  family:
+    header: Family
+  order:
+    header: Order
+

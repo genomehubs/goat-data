@@ -1,0 +1,34 @@
+file:
+  format: csv
+  header: true
+  name: amphib-2021-02-24.csv
+  source: Amphibian Karyotype Database
+  source_url: https://evobir.shinyapps.io/AmphibianDB/
+attributes:
+  chromosome_number:
+    header: Diploid.number
+    separator:
+      - "-"
+      - "/"
+      - " or "
+    type: short
+  sex_determination:
+    header: "Sex.chromosome"
+    separator:
+      - ","
+      - "-"
+    type: keyword
+  ploidy:
+    header: Ploidy
+    separator:
+      - ","
+      - "-"
+      - "/"
+    type: short
+taxonomy:
+  species:
+    header: Species
+  family:
+    header: Family
+  order:
+    header: Order

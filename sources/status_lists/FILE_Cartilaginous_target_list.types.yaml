@@ -1,0 +1,27 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: Cartilaginous_target_list.tsv
+  source: Kun Wang
+  source_date: 2021-10-26
+attributes:
+  long_list:
+    header: long_list
+    type: keyword
+  other_priority:
+    header: other_priority
+    type: keyword
+  family_representative:
+    header: family_representative
+    type: keyword
+taxonomy:
+  genus:
+    header: Genus
+  species:
+    index: [1, 2]
+    join: " "
+  family:
+    header: family
+  taxon_id:
+    header: NCBI_taxon_id
