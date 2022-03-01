@@ -802,7 +802,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2096	NA	Porifera	NA	Demospongiae	Hadromerida	Suberitidae	Suberites sp.	Demosponge	0.09	NA	FIA	WB	GD	703
 2106	NA	Porifera	NA	Demospongiae	Halisarcida	Halisarcidae	"Halisarca n.sp. ""restingiensis"""	Demosponge	0.15	NA	FIA	WB	GD	703
 2107	NA	Porifera	NA	Demospongiae	Halisarcida	Halisarcidae	"Halisarca n.sp. ""restingiensis"""	Demosponge	0.19	NA	FCM	WB	GD	703
-2108	NA	Porifera	NA	Demospongiae	Haplosclerida	Callyspongiidae	Callyspongia sp.	Demosponge	0.13	NA	FIA	WB	GD	703
 2817	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Allolobophora chloritica	Green earthworm	1.02	32	FIA	C	EF	175
 2967	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Allolobophora chloritica	Green earthworm	1.02	32	FIA	C	EF	175
 2821	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Dendrobaena rubida	European bark worm	1.24	34	FIA	C	EF	175
@@ -861,8 +860,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2319	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Pleuroceridae	Goniobasis livescens	Great Lakes horn snail	2.1	40	FCM	MC	HS, V	650
 2324	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Pleuroceridae	Leptoxis (Mudalia) carinata	Snail	2.1	NA	FCM	MC	HS, V	650
 2551	NA	Mollusca	NA	Gastropoda	Nudibranchia	Tergipedidae	Phestilla sp.	Sea slug	0.91	NA	FIA	SC	GD	186
-2016	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Eoperipatus sp.	Velvet worm	18.32	NA	FCM	AN, L	GD	704
-2017	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Eoperipatus sp.	Velvet worm	19.87	NA	FIA	HE	GD	704
 2018	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Epiperipatus sp.	Velvet worm	6.03	NA	FCM	AN, L	GD	704
 2019	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Epiperipatus sp.	Velvet worm	6.99	NA	FIA	HE	GD	704
 2887	NA	Annelida	NA	Polychaeta	Orbiniida	Orbiniidae	Leioscoloplos fragilis	Polychaete	2.3	NA	FD	WB	V	95

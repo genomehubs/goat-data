@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: vgp_table_tracker_2022-02-14.tsv
+  name: vgp_table_tracker_2022-02-28.tsv
   source: VGP Project tracker
-  source_date: 2021-12-17
+  source_date: 2022-02-28
   source_url: https://github.com/vgl-hub/genome-portal/blob/master/_data/table_tracker.yml
 attributes:
   sequencing_status:
