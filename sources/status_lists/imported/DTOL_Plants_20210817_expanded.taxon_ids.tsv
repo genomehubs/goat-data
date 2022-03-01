@@ -53,7 +53,6 @@ taxon_id	input	rank
 32110	Athyrium filix-femina	species
 1303118	Woodsia alpina	species
 872911	Woodsia ilvensis	species
-voBleSpic	Blechnum spicant	species
 239546	Dryopteris aemula	species
 239547	Dryopteris affinis	species
 239555	Dryopteris carthusiana	species
@@ -200,7 +199,6 @@ voBleSpic	Blechnum spicant	species
 1155344	Melilotus altissimus	species
 3882	Onobrychis viciifolia	species
 798030	Ononis reclinata	species
-264192	Ononis repens	species
 58890	Ononis spinosa	species
 181291	Ornithopus perpusillus	species
 237897	Ornithopus pinnatus	species
@@ -275,7 +273,6 @@ voBleSpic	Blechnum spicant	species
 667241	Potentilla crantzii	species
 57940	Potentilla erecta	species
 57933	Potentilla reptans	species
-drPotRupe	Potentilla rupestris	species
 644184	Potentilla sterilis	species
 1016828	Potentilla verna	species
 42229	Prunus avium	species
@@ -303,18 +300,11 @@ drPotRupe	Potentilla rupestris	species
 70741	Rubus arcticus	species
 75065	Rubus caesius	species
 57936	Rubus chamaemorus	species
-drRubFrut	Rubus fruticosus	species
 32247	Rubus idaeus	species
 75091	Rubus saxatilis	species
 137457	Sanguisorba officinalis	species
 57947	Sibbaldia procumbens	species
-drSorArvo	Sorbus arvonicola	species
 36599	Sorbus aucuparia	species
-drSorEvan	Sorbus evansii	species
-drSorGree	Sorbus greenii	species
-drSorHere	Sorbus herefordensis	species
-drSorRich	Sorbus richii	species
-drSorSpec	Sorbus spectans	species
 409509	Spiraea douglasii	species
 409519	Spiraea salicifolia	species
 193516	Hippophae rhamnoides	species
@@ -459,7 +449,6 @@ drSorSpec	Sorbus spectans	species
 202615	Reseda lutea	species
 415813	Reseda luteola	species
 126270	Alliaria petiolata	species
-ddAraPeta	Arabidopsis petraea	species
 3702	Arabidopsis thaliana	species
 50452	Arabis alpina	species
 78191	Arabis hirsuta	species
@@ -525,13 +514,8 @@ ddAraPeta	Arabidopsis petraea	species
 2500067	Limonium auriculae-ursifolium	species
 1288431	Limonium bellidifolium	species
 1155340	Limonium binervosum	species
-dcLimDoda	Limonium dodartiforme	species
 1155341	Limonium humile	species
-dcLimLoga	Limonium loganicum	species
 1572679	Limonium normannicum	species
-dcLimPara	Limonium paradoxum	species
-dcLimParv	Limonium parvum	species
-dcLimTran	Limonium transwallianum	species
 70358	Limonium vulgare	species
 125587	Bistorta officinalis	species
 371026	Bistorta vivipara	species
@@ -841,7 +825,6 @@ dcLimTran	Limonium transwallianum	species
 194200	Ballota nigra	species
 53173	Betonica officinalis	species
 306377	Clinopodium acinos	species
-daCliAsce	Clinopodium ascendens	species
 260593	Clinopodium menthifolium	species
 306383	Clinopodium nepeta	species
 204222	Clinopodium vulgare	species
@@ -885,7 +868,6 @@ daCliAsce	Clinopodium ascendens	species
 1155327	Euphrasia anglica	species
 474999	Euphrasia arctica	species
 1155328	Euphrasia cambrica	species
-daEupCamp	Euphrasia campbelliae	species
 475003	Euphrasia confusa	species
 475387	Euphrasia foulaensis	species
 762980	Euphrasia frigida	species
@@ -1037,7 +1019,6 @@ daEupCamp	Euphrasia campbelliae	species
 128002	Tanacetum vulgare	species
 152001	Tephroseris palustris	species
 41653	Tragopogon pratensis	species
-daTriInod	Tripleurospermum inodorum	species
 669858	Tripleurospermum maritimum	species
 74787	Tripolium pannonicum	species
 118778	Tussilago farfara	species
@@ -1199,7 +1180,6 @@ daTriInod	Tripleurospermum inodorum	species
 230572	Dactylorhiza maculata	species
 337432	Dactylorhiza praetermissa	species
 231483	Dactylorhiza purpurella	species
-lsDacTran	Dactylorhiza traunsteinerioides	species
 492483	Epipactis atrorubens	species
 207363	Epipactis dunensis	species
 28472	Epipactis helleborine	species
@@ -1250,7 +1230,6 @@ lsDacTran	Dactylorhiza traunsteinerioides	species
 4684	Allium ursinum	species
 1053326	Allium vineale	species
 39639	Narcissus pseudonarcissus	species
-lsAspPros	Asparagus prostratus	species
 32189	Convallaria majalis	species
 81759	Hyacinthoides hispanica	species
 81762	Hyacinthoides non-scripta	species
@@ -1406,7 +1385,6 @@ lsAspPros	Asparagus prostratus	species
 434052	Scirpus sylvaticus	species
 291103	Trichophorum alpinum	species
 76515	Trichophorum cespitosum	species
-lpTriGerm	Trichophorum germanicum	species
 218142	Agrostis canina	species
 204232	Agrostis capillaris	species
 1155246	Agrostis curtisii	species
@@ -1458,7 +1436,6 @@ lpTriGerm	Trichophorum germanicum	species
 1155333	Festuca arenaria	species
 1572677	Festuca armoricana	species
 89683	Festuca filiformis	species
-lpFesHuon	Festuca huonii	species
 98749	Festuca lemanii	species
 481247	Festuca longifolia	species
 98750	Festuca ovina	species
@@ -1496,18 +1473,15 @@ lpFesHuon	Festuca huonii	species
 96050	Phalaris arundinacea	species
 669775	Phleum alpinum	species
 1155349	Phleum arenarium	species
-lpPhlBert	Phleum bertolonii	species
 204233	Phleum phleoides	species
 15957	Phleum pratense	species
 29695	Phragmites australis	species
 87701	Poa alpina	species
-lpPoaAngu	Poa angustifolia	species
 93036	Poa annua	species
 202404	Poa bulbosa	species
 269373	Poa compressa	species
 87704	Poa flexuosa	species
 227214	Poa glauca	species
-lpPoaHumi	Poa humilis	species
 165094	Poa infirma	species
 29659	Poa nemoralis	species
 4545	Poa pratensis	species

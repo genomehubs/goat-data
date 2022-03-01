@@ -7171,6 +7171,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2469	NA	Mollusca	NA	Gastropoda	Basommatophora	Lymnaeidae	Lymnaea fontinalis	Pond snail	1.32	NA	FCM	LV	RT	540
 1948	NA	Platyhelminthes	NA	Turbellaria	Catenulida	Stenostomidae	Stenostomum unicolor	Flatworm	0.2	NA	FD	WB	V	174
 2623	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Schizoporella longirostris	Bryozoan	0.35	NA	FCM	PPC	HS, MM	400
+2108	NA	Porifera	NA	Demospongiae	Haplosclerida	Callyspongiidae	Callyspongia sp.	Demosponge	0.13	NA	FIA	WB	GD	703
 2825	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Eisenia rosea	Pink soil earthworm	1.1	54	FIA	C	EF	175
 2975	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Eisenia rosea	Pink soil earthworm	1.1	54	FIA	C	EF	175
 2346	NA	Mollusca	NA	Bivavlia	Limoida	Limidae	Lima scabra	Rough fileclam	1.6	NA	BFA	S	SP	217
@@ -7185,6 +7186,8 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2546	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Naticidae	Polinices heros	Moon shell	2.4	NA	BFA	S	SP	217
 2316	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Pleuroceridae	Goniobasis alabamensis	Snail	2.1	NA	FCM	MC	HS, V	650
 2321	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Pleuroceridae	Goniobasis simplex	Snail	2.1	NA	FCM	MC	HS, V	650
+2016	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Eoperipatus sp.	Velvet worm	18.32	NA	FCM	AN, L	GD	704
+2017	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Eoperipatus sp.	Velvet worm	19.87	NA	FIA	HE	GD	704
 2884	NA	Annelida	NA	Polychaeta	Ophelida	Paraonidae	Aricidea cerruti	Polychaete	0.62	NA	FD	WB	MM	146
 3034	NA	Annelida	NA	Polychaeta	Ophelida	Paraonidae	Aricidea cerruti	Polychaete	0.62	NA	FD	WB	MM	146
 2391	NA	Mollusca	NA	Bivavlia	Ostreoida	Pectinidae	Chlamys opercularis	Scallop	1.12	NA	FCM	G	GD	438
