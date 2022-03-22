@@ -15,6 +15,7 @@ taxon_id	input	rank	suggested
 	Bembidion platum	species	bembidion planum
 1553803	Bembidion rivulare	species	Trechus rivularis
 1166858	Bembidion stephensi	species	Bembidion stephensii
+2493403	Bembidion thetys	species	Bembidion tethys
 	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
 1944111	Bembidion yukonoum	species	Bembidion yukonum
 60828	Blethsia multipunctata	species	Blethisa multipunctata
@@ -31,7 +32,6 @@ taxon_id	input	rank	suggested
 869531	Cicindela bigemi	species	Cylindera bigemina
 1587494	Cicindela silvicola	species	Cicindela sylvicola
 1343317	Cicindela trisigta	species	Cylindera trisignata
-1163509	Colfax stevensi	species	Colias sieversi
 170253	Colliuris pennsylvanica	species	Cosnania pensylvanica
 1343317	Cylindera trisigta	species	Cylindera trisignata
 1343309	Cylindra germanica	species	Cylindera germanica
@@ -55,7 +55,6 @@ taxon_id	input	rank	suggested
 795083	Omaseus atterrimus	species	Pterostichus aterrimus
 2109442	Omus dejeani	species	Omus dejeanii
 1553614	Oodes helopiodes	species	Oodes helopioides
-	Ophonus parallelus	species	pogonus parallelus
 207750	Pamborus alterns	species	Pamborus alternans
 239177	Percus quiraoi	species	Percus guiraoi
 586010	Platynus dorsale	species	Anchomenus dorsalis
@@ -148,7 +147,7 @@ taxon_id	input	rank	suggested
 	Chiridopsis bupunctata	species	chiridopsis bipunctata
 	Chrysoli affinis	species	chrysolina affinis	chrysopa affinis
 111535	Chrysoli aurichalcea	species	Chrysolina aurichalcea
-75507	Chrysoli banksi	species	Chrysolina bankii
+	Chrysoli banksi	species	chrysolina bankii	chrysolina banksi	chrysolina banksii
 75508	Chrysoli bicolor	species	Chrysolina bicolor
 75509	Chrysoli carnifex	species	Chrysolina carnifex
 75510	Chrysoli cerealis	species	Chrysolina cerealis
@@ -202,6 +201,7 @@ taxon_id	input	rank	suggested
 	Leptinotarsa undecimlineata	species	leptinotarsa decimlineata	leptinotarsa undecemlineata
 88632	Lieidea aenea	species	Lecidea fuscoatra
 1845050	Longitarsus pellucides	species	Longitarsus pellucidus
+icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 481850	Lysathia ludovicia	species	Lysathia ludoviciana
 2728761	Microtenochira quadrata	species	Microctenochira quadrata
 96932	Nodonota virdis	species	Pyganodon grandis
@@ -215,7 +215,6 @@ taxon_id	input	rank	suggested
 153785	Phratora vitellie	species	Phratora vitellinae
 172885	Platyphora spectablis	species	Platyphora spectabilis
 1425596	Psylliodes circumdata	species	Psylliodes circumdatus
-79523	Timarcha gradensis	species	Timarcha granadensis
 1525726	Zygogramma bigenera	species	Zygogramma bigenea
 577137	Octotemnus aevis	species	Octotemnus laevis
 	Enoclerus nigripes rujiventris	species	enoclerus nigripes rufiventris
@@ -345,6 +344,7 @@ taxon_id	input	rank	suggested
 166349	Onthophagus hirculus	species	Onthophagus hirtus
 422247	Onthophagus lucidus	species	Onthophagus rectecornutus
 1675891	Onthophagus verticornis	species	Onthophagus dama
+465150	Oryctes sicornis	species	Oryctes nasicornis
 465331	Phyllogthus dionysius	species	Phyllognathus dionysius
 296037	Phyllogthus silensis	species	Phyllanthus reticulatus
 1142444	Propomacrus bimucrotus	species	Propomacrus bimucronatus
@@ -363,14 +363,12 @@ taxon_id	input	rank	suggested
 102857	Pityogenes crannulatus	species	Pityogenes carinulatus
 1367342	Pityphthorus lichtensteini	species	Pityophthorus lichtensteinii
 141178	Polygraphus rugipennis	species	Polygraphus rufipennis
-1553731	Scolytus ratzeburgi	species	Scolytus ratzeburgii
 483325	Silpha surimensis	species	Necrodes surinamensis
 414939	Thatophilus sinuatus	species	Thanatophilus sinuatus
 41112	Oryzaephilus surimensis	species	Oryzaephilus surinamensis
 	Creophilus maxillosis villosus	species	creophilus maxillosus villosus
 1752710	Adesmia biskrensis	species	Adesmia biskreensis
 1656916	Alphitobius pliceus	species	Alphitobius laevigatus
-2836444	Belopus elongatus	species	Berosus elongatulus
 197344	Blaps mucrota	species	Blaps mucronata
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
@@ -379,7 +377,7 @@ taxon_id	input	rank	suggested
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata	species	Isomira quadristriata
-1328854	Phaleria acumita	species	Phaleria acuminata Kuster, 1852
+	Phaleria acumita	species	phaleria acuminata	sphaeria acuminata
 	Pimelia grandis latesti	species	pimelia grandis latastei
 1470707	Tentyria mucrota	species	Tentyria mucronata
 575791	Tentyria rotunda	species	Tentyria rotundata

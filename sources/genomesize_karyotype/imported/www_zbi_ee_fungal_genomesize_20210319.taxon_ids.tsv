@@ -82,6 +82,8 @@ taxon_id	input	rank
 5507	Fusarium oxysporum	species
 101028	Fusarium pseudograminearum	species
 42677	Fusarium subglutinans	species
+grGibMoni	Gibberella moniliformis	species
+grGibZeae	Gibberella zeae	species
 1052584	Hypocreopsis lichenoides	species
 76883	Hypomyces odoratus	species
 42307	Hypomyces polyporinus	species
@@ -91,6 +93,7 @@ taxon_id	input	rank
 568076	Metarhizium robertsii	species
 110576	Myrothecium inundatum	species
 29855	Nectria cinnabarina	species
+grNecHaem	Nectria haematococca	species
 64661	Nectria inventa	species
 796314	Nectriopsis exigua	species
 110586	Nectriopsis violacea	species
@@ -104,6 +107,8 @@ taxon_id	input	rank
 51453	Trichoderma reesei	species
 1159556	Ustilaginoidea virens	species
 152775	Valetoniellopsis laxa	species
+gdActHyst	Actidium hysterioides	species
+gdGloNiti	Glonium nitidum	species
 574775	Hysterium angustatum	species
 100027	Hysterium pulicare	species
 394111	Hysteropatella elliptica	species
@@ -172,10 +177,13 @@ taxon_id	input	rank
 5188	Aleuria aurantia	species
 2074765	Anthracobia melaloma	species
 2074783	Ascobolus equinus	species
+gpAscFoli	Ascobolus foliicola	species
+gpAscMinu	Ascobolus minutus	species
 255055	Ascobolus stercorarius	species
 341454	Ascodesmis nigricans	species
 47187	Caloscypha fulgens	species
 352976	Cheilymenia fimicola	species
+gpCheOlig	Cheilymenia oligotricha	species
 47189	Cheilymenia stercorea	species
 352977	Cheilymenia theleboloides	species
 44640	Choiromyces venosus	species
@@ -229,10 +237,12 @@ taxon_id	input	rank
 173135	Peziza limnaea	species
 269398	Peziza lobulata	species
 173137	Peziza michelii	species
+gpPezMora	Peziza moravecii	species
 1033322	Peziza moseri	species
 1033645	Peziza pseudoviolacea	species
 90805	Peziza repanda	species
 90806	Peziza varia	species
+gpPezViol	Peziza violacea	species
 51149	Pithya cupressina	species
 1280572	Plectania melastoma	species
 398099	Plicaria leiocarpa	species
@@ -247,6 +257,7 @@ taxon_id	input	rank
 231687	Scutellinia crinita	species
 1319891	Scutellinia crucipila	species
 2903302	Scutellinia macrospora	species
+gpScuPseu	Scutellinia pseudotrechispora	species
 47209	Scutellinia scutellata	species
 231690	Scutellinia subhirtella	species
 1250544	Sphaerosporella brunnea	species
@@ -277,6 +288,7 @@ taxon_id	input	rank
 101162	Bipolaris oryzae	species
 45130	Bipolaris sorokiniana	species
 40125	Bipolaris victoriae	species
+gdColChae	Coleroa chaetomium	species
 5022	Leptosphaeria maculans	species
 13684	Parastagonospora nodorum	species
 178149	Phaeosphaeria caricinella	species
@@ -289,6 +301,7 @@ taxon_id	input	rank
 160035	Zopfia rhizophila	species
 4754	Pneumocystis carinii	species
 42068	Pneumocystis jirovecii	species
+gyCocCoro	Coccomyces coronatus	species
 64355	Cyclaneusma minus	species
 931568	Lophodermium arundinaceum	species
 279237	Potebniamyces pyri	species
@@ -422,6 +435,7 @@ taxon_id	input	rank
 221103	Moniliophthora roreri	species
 1745969	Mycena alexandri	species
 380012	Mycena amicta	species
+gfMycBell	Mycena belliarum	species
 230804	Mycena capillaripes	species
 658473	Mycena chlorophos	species
 220801	Mycena crocata	species
@@ -472,11 +486,14 @@ taxon_id	input	rank
 1297035	Boletus auripes	species
 279506	Boletus bicolor	species
 1833961	Boletus bresinskyanus	species
+gfBolCalo	Boletus calopus	species
 36056	Boletus edulis	species
 318600	Boletus ferrugineus	species
 1355218	Boletus miniato-olivaceus	species
 1354906	Boletus morrisii	species
 57192	Boletus pinophilus	species
+gfBolRadi	Boletus radicans	species
+gfBolRube	Boletus rubellus	species
 374761	Boletus speciosus	species
 676142	Buchwaldoboletus lignicola	species
 145387	Chalciporus piperatus	species
@@ -516,6 +533,7 @@ taxon_id	input	rank
 5374	Phylloporus rhodoxanthus	species
 80664	Pisolithus arhizus	species
 178872	Pisolithus microcarpus	species
+gfPorPorp	Porphyrellus porphyrosporus	species
 388867	Pseudoboletus parasiticus	species
 693315	Pseudomerulius curtisii	species
 279514	Pulveroboletus auriflammeus	species
@@ -611,8 +629,11 @@ taxon_id	input	rank
 231932	Phanerochaete carnosa	species
 194682	Phlebia brevispora	species
 82310	Phlebiopsis gigantea	species
+gfPhyRivu	Physisporinus rivulosus	species
 5639	Polyporus arcularius	species
 104341	Postia placenta	species
+gfPycCinn	Pycnoporus cinnabarinus	species
+gfPycSang	Pycnoporus sanguineus	species
 1202976	Sparassis latifolia	species
 2696576	Taiwanofungus camphoratus	species
 158605	Trametes coccinea	species
@@ -757,7 +778,6 @@ taxon_id	input	rank
 51141	Sarcoscypha emarginata	species
 2508941	Geomorium fuegianum	species
 93612	Exserohilum turcicum	species
-54788	Stagonospora	genus
 85948	Didymosphaeria enalia	species
 51930	Tortispora caseinolytica	species
 5478	[Candida] glabrata	species
