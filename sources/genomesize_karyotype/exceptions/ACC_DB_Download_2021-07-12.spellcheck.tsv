@@ -18,7 +18,7 @@ taxon_id	input	rank	suggested
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
+	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -179,7 +179,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
-2493403	Bembidion thetys	species	Bembidion tethys
 	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
@@ -1130,7 +1129,6 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 27455	Musca veltustissima	species	Musca vetustissima
 27455	Musca vestustissima	species	Musca vetustissima
 1473718	Myolepta pretiosa	species	Myolepta varipes
-377549	Chrysops suavis	species	Chrysotus suavis
 2494420	Hybomitra muhlfeldi	species	Hybomitra muehlfeldi
 1334903	Tabanus unifasciatus	species	Triclista guttata
 1754249	Winthemia dantanae	species	Winthemia datanae
@@ -1139,7 +1137,7 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 idBibHort	Bibio bortulanus	species	Bibio hortulanus
 50660	Oligotoma saundersi	species	Oligotoma saundersii
 202358	Grylloblatta campodeioformis	species	Grylloblatta campodeiformis
-1960866	Cerococcus quercus	species	Sirococcus quercus
+	Cerococcus quercus	species	sirococcus quercus	kermococcus quercus
 	Cicada tibecen	species	cicada tibicen
 2316782	Metapodius femoralis	species	Acanthocephala femorata
 1545138	Gonocerus scuteangulatus	species	Gonocerus acuteangulatus
@@ -1304,7 +1302,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 649077	Tiedemannia neopolitana	species	Gleba cordata
 87838	Euhadra smaliae	species	Euhadra amaliae
 225461	Monacha cathusiana	species	Monacha cartusiana
-	Polygyra appressa	species	polygala depressa	polygala adpressa
+	Polygyra appressa	species	polygala adpressa	polygala depressa
 52793	Lymnaea nuricularia	species	Radix auricularia
 1076771	Stenostomum grandi	species	Stenostomum grande
 66787	Dipylidium caminum	species	Dipylidium caninum
