@@ -1,0 +1,39 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: Aus_Genome_status_Bioplatforms.tsv
+  source: Australian Genomes Google Spreadsheet
+  source_date: 2022-03-25
+attributes:
+  long_list:
+    header: long_list
+    type: keyword
+  other_priority:
+    header: other_priority
+    type: keyword
+  sequencing_status:
+    header: sequencing_status
+    type: keyword
+  sample_collected:
+    header: sample_collected
+    type: keyword
+  sample_acquired:
+    header: sample_acquired
+    type: keyword
+  in_progress:
+    header: in_progress
+    type: keyword
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  genus:
+    header: genus
+  species:
+    header: [genus, species]
+    join: " "
+  subspecies:
+    header: [genus, species, subspecies]
+    join: " "
+  family:
+    header: taxonomic_family_example_hominidae

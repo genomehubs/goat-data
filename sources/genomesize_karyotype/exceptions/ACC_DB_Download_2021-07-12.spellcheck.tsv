@@ -18,7 +18,7 @@ taxon_id	input	rank	suggested
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
+	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -307,6 +307,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1343316	Cicindela suturalis_	species	Cylindera suturalis
 176377	Cicindela tranquebarica_	species	Cicindela tranquebarica
 1343317	Cicindela trisigta	species	Cylindera trisignata
+1163509	Colfax stevensi	species	Colias sieversi
 2611535	Craspedophorus angulatus_	species	Craspedophorus angulatus
 247365	Cryptophonus tenebrosus_	species	Cryptophonus tenebrosus
 225036	Ctenostoma ornatum	species	Sutera cordata
@@ -506,7 +507,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 2586298	Chlorophorus annularis_	species	Chlorophorus annularis
 1587171	Chlorophorus figuratus_	species	Chlorophorus figuratus
 132597	Clytus arietis_	species	Clytus arietis
-1586466	Clytus lama_	species	Clytus lama
 1313182	Clytus melaenus_	species	Clytus melaenus
 256647	Criocephalus rusticus_	species	Arhopalus rusticus
 58006	Cyllene robiniae_	species	Megacyllene robiniae
@@ -752,6 +752,7 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1075297	Clytra laeviscula_	species	Clytra laeviuscula
 1075297	Clytra laeviuscula_	species	Clytra laeviuscula
 1425548	Clytra quadripunctata_	species	Clytra quadripunctata
+2484307	Clytra succinata	species	Cleora subcincta
 284335	Colasposoma auripenne_	species	Colasposoma auripenne
 1592289	Conicobruchus indicus_	species	Conicobruchus indicus
 1654395	Coptocephala unifasciata_	species	Coptocephala unifasciata
@@ -999,7 +1000,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 1457043	Speonomus pyreeus	species	Speonomus pyreneus
 1457043	Speonomus pyrenaeus	species	Speonomus pyreneus
 	Troglocharinus ferreri_pallaresi	species	troglocharinus ferreri pallaresi
-	Cerchus ligrius	species	ceruchus lignarius	trechus liguricus
+273953	Cerchus ligrius	species	Ceruchus lignarius
 617909	Lamprima adolphie	species	Lamprima adolphinae
 231745	Lucanus maculifermoratus	species	Lucanus maculifemoratus
 1588445	Lytta picta	species	Scydmaenus tarsatus
@@ -1040,7 +1041,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopsis	homalopoma
+	Homaloplia	species	homalomyia	homalopoma	homalopsis
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 1207216	Mecynorrhi torquata	species	Mecynorrhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1081,7 +1082,6 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
 icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
-466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata_	species	Isomira quadristriata
@@ -1137,7 +1137,7 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 idBibHort	Bibio bortulanus	species	Bibio hortulanus
 50660	Oligotoma saundersi	species	Oligotoma saundersii
 202358	Grylloblatta campodeioformis	species	Grylloblatta campodeiformis
-	Cerococcus quercus	species	sirococcus quercus	kermococcus quercus
+1960866	Cerococcus quercus	species	Sirococcus quercus
 	Cicada tibecen	species	cicada tibicen
 2316782	Metapodius femoralis	species	Acanthocephala femorata
 1545138	Gonocerus scuteangulatus	species	Gonocerus acuteangulatus
