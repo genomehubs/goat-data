@@ -69,6 +69,7 @@ taxon_id	input	rank
 8879	Mergus serrator	species
 8884	Oxyura jamaicensis	species
 48398	Chordeiles minor	species
+bCapRuf	Caprimulgus ruficollis	species
 111811	Caprimulgus europaeus	species
 723173	Caprimulgus aegyptius	species
 190690	Hirundapus caudacutus	species
@@ -119,6 +120,8 @@ taxon_id	input	rank
 225398	Himantopus himantopus	species
 171275	Recurvirostra avosetta	species
 100859	Vanellus vanellus	species
+bVanGre	Vanellus gregarius	species
+bVanLeu	Vanellus leucurus	species
 670352	Pluvialis apricaria	species
 371922	Pluvialis fulva	species
 240205	Pluvialis dominica	species
@@ -217,6 +220,7 @@ taxon_id	input	rank
 555356	Thalasseus maximus	species
 2705045	Thalasseus bengalensis	species
 126723	Thalasseus sandvicensis	species
+bThaAcu	Thalasseus acuflavidus	species
 297817	Thalasseus elegans	species
 507597	Sternula albifrons	species
 471862	Sternula antillarum	species
@@ -350,6 +354,7 @@ taxon_id	input	rank
 337178	Lanius cristatus	species
 56324	Lanius collurio	species
 276764	Lanius isabellinus	species
+bLanPho	Lanius phoenicuroides	species
 276763	Lanius schach	species
 466048	Lanius minor	species
 158049	Lanius excubitor	species
@@ -427,6 +432,7 @@ taxon_id	input	rank
 68496	Hippolais olivetorum	species
 68498	Hippolais polyglotta	species
 68497	Hippolais icterina	species
+bHelCer	Helopsaltes certhiola	species
 260104	Locustella lanceolata	species
 260105	Locustella naevia	species
 68491	Locustella fluviatilis	species
@@ -593,6 +599,7 @@ taxon_id	input	rank
 92121	Setophaga magnolia	species
 231568	Setophaga castanea	species
 240591	Setophaga fusca	species
+bSetAes	Setophaga aestiva	species
 92122	Setophaga pensylvanica	species
 1212470	Setophaga striata	species
 111975	Setophaga coronata	species

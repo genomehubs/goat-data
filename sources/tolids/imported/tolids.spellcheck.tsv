@@ -25,7 +25,7 @@ taxon_id	input	rank	suggested
 200806	Bryum cyclophyllum	species	Ptychostomum cyclophyllum
 576378	Bryum dichotomum	species	Gemmabryum dichotomum
 66993	Bryum donianum	species	Plagiobryum donianum
-981514	Bryum elegans	species	Rosulabryum elegans
+2929762	Bryum elegans	species	Ptychostomum elegans
 187836	Bryum funckii	species	Ptychostomum funkii
 388898	Bryum gemmilucens	species	Gemmabryum gemmilucens
 216088	Bryum gemmiferum	species	Gemmabryum gemmiferum
@@ -39,7 +39,7 @@ taxon_id	input	rank	suggested
 190272	Bryum radiculosum	species	Gemmabryum radiculosum
 187841	Bryum rubens	species	Rosulabryum rubens
 190271	Bryum ruderale	species	Gemmabryum ruderale
-388900	Bryum subapiculatum	species	Gemmabryum subapiculatum
+388900	Bryum subapiculatum	species	Imbribryum subapiculatum
 200812	Bryum uliginosum	species	Plagiobryum uliginosum
 388903	Bryum violaceum	species	Gemmabryum violaceum
 98485	Dicranoweisia crispula	species	Hymenoloma crispulum
@@ -47,7 +47,6 @@ taxon_id	input	rank	suggested
 98466	Ditrichum flexicaule	species	Flexitrichum flexicaule
 184650	Homalothecium lutescens	species	Camptothecium lutescens
 111435	Hygroamblystegium tenax	species	Amblystegium tenax
-111436	Hygroamblystegium varium	species	Amblystegium varium
 304431	Hypnum bambergeri	species	Campylium bambergeri
 455281	Hypnum callichroum	species	Stereodon callichrous
 1161994	Hypnum hamulosum	species	Stereodon hamulosus
@@ -527,17 +526,16 @@ taxon_id	input	rank	suggested
 71705	Coprinus rostrupianus	species	Coprinellus flocculosus
 71722	Coprinus squamosus	species	Coprinopsis romagnesiana
 176089	Coprinus velox	species	Coprinopsis stercorea
-304800	Cortinarius angulosus	species	Cortinarius renidens
+304800	Cortinarius angulosus	species	Hygronarius renidens
 47347	Cortinarius cinnamomeoluteus	species	Dermocybe cinnamomeolutea
-183880	Cortinarius croceocoeruleus	species	Cortinarius croceocaeruleus
+183880	Cortinarius croceocoeruleus	species	Thaxterogaster croceocoeruleus
 222037	Cortinarius cyanopus	species	Cortinarius largus
 350808	Cortinarius elatior	species	Cortinarius livido-ochraceus
 1647777	Corticium lacteum	species	Efibula tuberculata
 194996	Corticium radiosum	species	Vesiculomyces citrinus
 1032580	Cortinarius scutulatus	species	Cortinarius ionophyllus
-222029	Cortinarius sulphureus	species	Cortinarius citrinus
+222029	Cortinarius sulphureus	species	Calonarius citrinus
 318601	Cortinarius unimodus	species	Cortinarius casimirii
-304715	Cortinarius xantho-ochraceus	species	Cortinarius langei
 180942	Crepidotus autochthonus	species	Crepidotus fragilis
 156599	Cristella submutabilis	species	Trechispora farinacea
 89915	Cryptococcus aerius	species	Solicoccozyma aeria
@@ -575,7 +573,6 @@ taxon_id	input	rank	suggested
 150782	Geastrum stellatum	species	Astraeus hygrometricus
 1125956	Gloiocephala menieri	species	Marasmius menieri
 98781	Grandinia mucida	species	Resinicium bicolor
-29891	Guepiniopsis alpina	species	Heterotextus alpinus
 230773	Gymnopus hariolorum	species	Collybia hariolorum
 2074861	Gymnopus inodorus	species	Collybia inodora
 2074863	Gymnopus putillus	species	Collybia putilla
@@ -605,7 +602,6 @@ taxon_id	input	rank	suggested
 160944	Irpex hypogaeus	species	Sebacina incrustans
 333286	Lactarius impolitus	species	Lactarius glyciosmus
 111139	Lactarius lividus	species	Lactarius zonarius
-2234109	Lactarius luridus	species	Tricholoma luridum
 504334	Lacrymaria pyrotricha	species	Psathyrella pyrotricha
 1032847	Lactarius tithymalinus	species	Lactarius rubrocinctus
 121047	Leccinum pseudoscabrum	species	Leccinum carpini
@@ -1705,9 +1701,6 @@ taxon_id	input	rank	suggested
 2079660	Cryptus tuberculatus	species	Cryptus australis
 1045596	Ctenochira sphaerocephala	species	Ctenochira sphaerocephalus
 1889504	Cubocephalus nigriventris	species	Cubocephalus insidiator
-310393	Diadegma armillatum	species	Diadegma armillata
-1031612	Dusona carinifrons	species	Enicospilus cameronii
-2163655	Dusona tenuis	species	Gelis proximus
 765376	Empria gussakovskii	species	Empria tridens
 310280	Eurytoma pistaciae	species	Eurytoma setigera
 2033419	Euura weiffenbachii	species	Euura weiffenbachiella
@@ -2001,7 +1994,6 @@ taxon_id	input	rank	suggested
 381654	Rhynchotalona falcata	species	Rynchotalona falcata
 2041964	Arrhopalites principalis	species	Pygmarrhopalites principalis
 2041965	Arrhopalites pygmaeus	species	Pygmarrhopalites pygmaeus
-383857	Campodea plusiochaeta	species	Campodea fragilis
 1385863	Dicyrtoma fuscus	species	Dicyrtoma fusca
 247613	Entomobrya multifasciatus	species	Entomobrya multifasciata
 1184803	Isotomurus prasinus	species	Isotomurus graminis
@@ -2329,7 +2321,6 @@ taxon_id	input	rank	suggested
 1261578	Pterosiphonia pennata	species	Xiphosiphonia pennata
 2305477	Pterosiphonia pinnulata	species	Xiphosiphonia pinnulata
 700708	Rhodochorton concrescens	species	Meiodiscus concrescens
-912070	Scinaia furcellata	species	Scinaia forcellata
 536604	Spongoclonium caribaeum	species	Pleonosporium caribaeum
 1526501	Spongites fruticulosus	species	Spongites fruticulosa
 348029	Titanoderma pustulatum	species	Lithophyllum pustulatum
@@ -2354,7 +2345,6 @@ taxon_id	input	rank	suggested
 188453	Scoletoma funchalensis	species	Lumbrineris funchalensis
 1812980	Claparedrilus semifuscus	species	Lumbricillus semifuscus
 1628863	Cognettia glandulosa	species	Chamaedrilus glandulosus
-318809	Acholoe squamosa	species	Acholoe astericola
 714613	Aglaophamus pulcher	species	Aglaophamus pulchra
 55702	Fimbriosthenelais minor	species	Sthenelais boa
 715978	Goniadella bobretzkii	species	Goniadella bobrezkii
@@ -2820,8 +2810,6 @@ taxon_id	input	rank	suggested
 1622308	Bathyplectes tibiator	species	Agrothereutes abbreviatus
 662498	Campoletis punctata	species	Syrphoctonus fissorius
 662504	Diadegma hygrobium	species	Syrphoctonus signatus
-2163654	Dusona inermis	species	Gelis hortensis
-494316	Dusona juvenilis	species	Gelis rufogaster
 2651462	Olesicampe binotata	species	Cycasis rubiginosa
 1045622	Olesicampe erythropyga	species	Rhorus substitutor
 1835304	Dimophora evanialis	species	Zabrachypus primus
@@ -3470,7 +3458,7 @@ taxon_id	input	rank	suggested
 104226	Agaricus eburneus	species	Hygrophorus eburneus
 71851	Agaricus elasticus	species	Flammulina elastica
 181748	Agaricus ericeus	species	Hypholoma ericaeum
-86075	Agaricus ferruginascens	species	Cortinarius multiformis
+86075	Agaricus ferruginascens	species	Thaxterogaster multiformis
 1358933	Agaricus ficoides	species	Cuphophyllus pratensis
 376689	Agaricus flexuosus	species	Lactarius flexuosus
 38945	Agaricus fuscipes	species	Flammulina velutipes
@@ -3510,8 +3498,6 @@ taxon_id	input	rank	suggested
 289947	Lycoperdon parasiticum	species	Leocarpus fragilis
 67695	Amanita aurantiaca	species	Amanita caesarea
 71668	Conocybe togularis	species	Agrocybe praecox
-2608311	Pholiotina intermedia	species	Pholiotina septentrionalis
-566062	Clavaria asperulispora	species	Clavaria asperulospora
 104212	Clavaria bifurca	species	Clavulinopsis fusiformis
 435415	Clavaria byssoides	species	Ceratiomyxa fruticulosa
 152639	Clavaria herbarum	species	Acrospermum compressum

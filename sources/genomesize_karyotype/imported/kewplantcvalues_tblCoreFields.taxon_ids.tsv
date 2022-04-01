@@ -202,6 +202,7 @@ taxon_id	input	rank
 114195	Alopecurus geniculatus	species
 368342	Alopecurus magellanicus	species
 81473	Alopecurus myosuroides	species
+lpAloUtri	Alopecurus utriculatus	species
 502213	Alstroemeria angustifolia subsp. angustifolia	subspecies
 56742	Alstroemeria aurea	species
 1208243	Alstroemeria brasiliensis	species
@@ -532,6 +533,7 @@ taxon_id	input	rank
 882375	Chenopodium pallidicaule	species
 63459	Chenopodium quinoa	species
 110876	Chloris gayana	species
+daChrSege	Chrysanthemum segetum	species
 137606	Chrysanthemum sp.	species
 115457	Chuniophoenix nana	species
 3827	Cicer arietinum	species
@@ -861,11 +863,13 @@ taxon_id	input	rank
 376124	Holcus mollis	species
 4516	Hordeum bulbosum	species
 15565	Hordeum chilense	species
+lpHorGeni	Hordeum geniculatum	species
 4517	Hordeum jubatum	species
 4519	Hordeum marinum	species
 97361	Hordeum murinum	species
 38857	Hordeum pusillum	species
 118676	Hordeum secalinum	species
+lpHorViol	Hordeum violaceum	species
 4513	Hordeum vulgare	species
 28481	Hosta rectifolia	species
 16752	Houttuynia cordata	species
@@ -1056,6 +1060,7 @@ taxon_id	input	rank
 223700	Luzula pilosa	species
 59018	Luzula sylvatica	species
 101708	Eustrephus latifolius	species
+daLycPimp	Lycopersicon pimpinellifolium	species
 112568	Lycoris squamigera	species
 29684	Lygeum spartum	species
 2848670	Lysiana casuarinae	species
@@ -1550,6 +1555,7 @@ taxon_id	input	rank
 1053794	Sisyrinchium alatum	species
 1053798	Sisyrinchium arizonicum	species
 915439	Sisyrinchium bellum	species
+lsSisBerm	Sisyrinchium bermudiana	species
 915440	Sisyrinchium californicum	species
 1053808	Sisyrinchium chilense	species
 1053814	Sisyrinchium convolutum	species
@@ -1919,6 +1925,7 @@ taxon_id	input	rank
 50284	Dendrobium taurinum	species
 281132	Pennisetum schweinfurthii	species
 153950	Vicia amoena	species
+ddLavArbo	Lavatera arborea	species
 145754	Malva sylvestris	species
 1082186	Ionopsidium savianum	species
 49988	Satureja montana	species
@@ -2139,6 +2146,7 @@ taxon_id	input	rank
 127554	Rosa fedtschenkoana	species
 2705061	Rosa latibracteata	species
 74644	Rosa moyesii	species
+drRosCent	Rosa centifolia	species
 74628	Rosa persica	species
 74649	Rosa chinensis	species
 74629	Rosa foetida	species
@@ -2205,6 +2213,7 @@ taxon_id	input	rank
 43166	Citrus aurantium	species
 171251	Citrus medica	species
 2708	Citrus limon	species
+drCitPara	Citrus paradisi	species
 1641301	Hedysarum varium	species
 2250691	Hedysarum pestalozzae	species
 224085	Acacia mangium	species
@@ -3040,6 +3049,7 @@ taxon_id	input	rank
 49456	Asarum europaeum	species
 3724	Matthiola incana	species
 50142	Loranthus europaeus	species
+daAntAlti	Anthemis altissima	species
 292547	Iris stenophylla	species
 79376	Nemophila menziesii	species
 115624	Herniaria glabra	species
@@ -3147,6 +3157,7 @@ taxon_id	input	rank
 31443	Agardhiella subulata	species
 38546	Gymnogongrus griffithsiae	species
 3018	Acinetospora crinita	species
+urAntVill	Antithamnion villosum	species
 35170	Corallina officinalis	species
 172948	Gracilaria mammillaris	species
 31471	Gracilaria pacifica	species
@@ -3168,6 +3179,7 @@ taxon_id	input	rank
 35952	Aeonium nobile	species
 35955	Aeonium simsii	species
 159752	Polysiphonia denudata	species
+urPolOpac	Polysiphonia opaca	species
 102165	Closterium ehrenbergii	species
 65404	Polysiphonia urceolata	species
 31393	Chondria dasyphylla	species
@@ -3325,6 +3337,7 @@ taxon_id	input	rank
 205937	Crinum asiaticum	species
 209086	Crinum bulbispermum	species
 82223	Crinum moorei	species
+lsCroAure	Crocosmia aurea	species
 1053288	Crocosmia x crocosmiiflora	species
 428242	Cyanotis somaliensis	species
 112543	Cyrtanthus elatus	species
@@ -4484,6 +4497,7 @@ taxon_id	input	rank
 906890	Festuca circummediterranea	species
 2306353	Festuca csikhegyensis	species
 208424	Festuca dalmatica	species
+lpFesDuri	Festuca duriotagana	species
 2306354	Festuca duvalii	species
 649490	Festuca extremiorientalis	species
 89683	Festuca filiformis	species
@@ -4625,6 +4639,7 @@ taxon_id	input	rank
 260211	Colpodium versicolor	species
 630110	Luzula pallescens	species
 40916	Crithmum maritimum	species
+daAstTrip	Aster tripolium	species
 190330	Atriplex prostrata	species
 206448	Salicornia europaea	species
 355939	Salsola soda	species
@@ -4989,6 +5004,7 @@ taxon_id	input	rank
 1979451	Xanthium albinum	species
 422332	Lasiocephalus ovatus	species
 858926	Lasiocephalus sodiroi	species
+lpEleAust	Eleocharis austriaca	species
 753698	Eleocharis carniolica	species
 110283	Eleocharis cellulosa	species
 753700	Eleocharis macrostachya	species
@@ -5363,6 +5379,7 @@ taxon_id	input	rank
 531995	Zonaria tournefortii	species
 116065	Choristocarpus tenellus	species
 64923	Adenocystis utricularis	species
+uoSpaSoli	Spatoglossum solieri	species
 441170	Asterocladon rhodochortonoides	species
 43935	Ectocarpus fasciculatus	species
 87146	Fucus ceranoides	species
@@ -5373,7 +5390,7 @@ taxon_id	input	rank
 74462	Bifurcaria bifurcata	species
 590111	Cystoseira compressa	species
 590109	Cystoseira foeniculacea	species
-74464	Cystoseira nodicaulis	species
+74464	Gongolaria nodicaulis	species
 590723	Cystoseira usneoides	species
 74466	Halidrys siliquosa	species
 74468	Sargassum muticum	species
@@ -5407,6 +5424,7 @@ taxon_id	input	rank
 37432	Diphasiastrum tristachyum	species
 52538	Amelanchier stolonifera	species
 1143217	Cotoneaster divaricatus	species
+drCotVeit	Cotoneaster veitchii	species
 356593	Crataegus coccinea	species
 147046	Pyrus elaeagrifolia	species
 2019957	Thymus migricus	species
@@ -6832,6 +6850,7 @@ taxon_id	input	rank
 374117	Trentepohlia umbrina	species
 205396	Capsosiphon fulvescens	species
 153906	Percursaria percursa	species
+ucChlEllp	Chlorella ellipsoidea	species
 3077	Chlorella vulgaris	species
 133487	Marvania coccoides	species
 76111	Nannochloris bacillaris	species
@@ -6952,6 +6971,7 @@ taxon_id	input	rank
 191233	Aster bellidiastrum	species
 1091133	Astragalus onobrychis	species
 3505	Betula pendula	species
+voBleSpic	Blechnum spicant	species
 2907177	Bromus pannonicus	species
 389630	Calamagrostis arundinacea	species
 2054450	Cheilanthes marantae	species
@@ -7148,6 +7168,7 @@ taxon_id	input	rank
 13481	Dasyphyllum diacanthoides	species
 118770	Doronicum pardalianches	species
 406080	Echinops setifer	species
+daEriAcer	Erigeron acer	species
 1532809	Erigeron alpinus	species
 1240356	Facelis retusa	species
 92911	Galactites tomentosus	species
@@ -8063,6 +8084,7 @@ taxon_id	input	rank
 566142	Lonicera hirsuta	species
 134521	Lonicera involucrata	species
 566145	Lonicera korolkowii	species
+daLonMorr	Lonicera morrowii	species
 566149	Lonicera oblongifolia	species
 447675	Lonicera ruprechtiana	species
 134522	Lonicera sempervirens	species
@@ -8116,6 +8138,7 @@ taxon_id	input	rank
 525434	Euphorbia spinosa	species
 40869	Laserpitium siler	species
 566143	Lonicera implexa	species
+drPotRupe	Potentilla rupestris	species
 23265	Saxifraga rotundifolia	species
 42039	Silene otites	species
 1302570	Astragalus cedreti	species
@@ -8457,6 +8480,7 @@ taxon_id	input	rank
 1222204	Horovitzia cnidoscoloides	species
 1385509	Jarilla caudata	species
 161023	Jarilla heterophylla	species
+dhBetAlbo	Betula albosinensis	species
 1017136	Viola laricicola	species
 97450	Viola reichenbachiana	species
 502521	Viola rupestris	species
@@ -9523,6 +9547,7 @@ taxon_id	input	rank
 702247	Gnaphalium uliginosum	species
 261776	Helichrysum arenarium	species
 1851368	Hieracium glaucinum	species
+daHieInul	Hieracium inuloides	species
 378952	Hieracium maculatum	species
 1522193	Inula ensifolia	species
 313945	Inula germanica	species
@@ -9560,6 +9585,7 @@ taxon_id	input	rank
 462579	Tephroseris crispa	species
 462580	Tephroseris integrifolia	species
 261649	Tragopogon orientalis	species
+daTriInod	Tripleurospermum inodorum	species
 519273	Willemetia stipitata	species
 1764295	Chloropicon primus	species
 36881	Cymbomonas tetramitiformis	species
@@ -9571,6 +9597,7 @@ taxon_id	input	rank
 1060937	Myosotis ramosissima	species
 94424	Phacelia tanacetifolia	species
 169068	Alyssum alyssoides	species
+ddAraPeta	Arabidopsis petraea	species
 571369	Arabis sagittata	species
 1282100	Arabis sudetica	species
 3704	Armoracia rusticana	species
@@ -9619,6 +9646,7 @@ taxon_id	input	rank
 2294041	Agrostis micrantha	species
 166799	Allium cupani	species
 165651	Allium przewalskianum	species
+2922820	Allium praescissum	species
 166826	Allium umbilicatum	species
 201010	Aphanamixis polystachya	species
 175741	Amorphophallus muelleri	species
@@ -10004,7 +10032,7 @@ taxon_id	input	rank
 2163620	Helonias orientalis	species
 995823	Iris tuberosa	species
 637969	Zephyranthes elwesii	species
-82527	Tristagma uniflorum	species
+82527	Ipheion uniflorum	species
 39329	Lavandula angustifolia	species
 59627	Myrmecodia tuberosa	species
 480432	Albuca concordiana	species
@@ -10055,8 +10083,10 @@ taxon_id	input	rank
 294294	Connorochloa tenuis	species
 291150	Rytidosperma exiguum	species
 272650	Festuca novaezealandiae	species
+2928660	Bupleurum salicifolium subsp. aciphyllum	subspecies
 2769828	Digitalis canariensis	species
 41614	Asteriscus sericeus	species
+2928665	Pimpinella cumbrae	species
 223586	Rutheopsis tortuosa	species
 49847	Genista canariensis	species
 109150	Athamanta montana	species
@@ -10372,7 +10402,7 @@ taxon_id	input	rank
 519557	Angiopteris hypoleuca	species
 204585	Alsophila podophylla	species
 29636	Cyathea lepifera	species
-449893	Thelypteris dentata	species
+449893	Christella dentata	species
 1196204	Austroblechnum microphyllum	species
 393581	Lomaria nuda	species
 85334	Tectaria zeylanica	species
@@ -10397,8 +10427,9 @@ taxon_id	input	rank
 120001	Helonias leucantha	species
 120002	Helonias umbellata	species
 59788	Megathyrsus maximus	species
+152122	Soldanella major	species
 393609	Opuntia albicarpa (nom. inval.)	species
-1628755	Tristagma tweedieanum	species
+1628755	Ipheion tweedieanum	species
 51455	Tristagma sessile	species
 37682	Aegilops tauschii	species
 257840	Prosthechea fragrans	species
@@ -10407,6 +10438,7 @@ taxon_id	input	rank
 2058725	Eria rostriflora	species
 1164708	Acianthera pubescens	species
 217544	Scaphyglottis behrii	species
+2918941	Arachis herzogii	species
 64595	Balanocarpus heimii	species
 39984	Bruguiera gymnorhiza	species
 49994	Volkameria inermis	species
@@ -10448,6 +10480,7 @@ taxon_id	input	rank
 125587	Bistorta officinalis	species
 565439	Rumex alpestris	species
 109081	Anthriscus nitida	species
+2928658	Bupleurum affine	species
 173704	Silphiodaucus prutenicus	species
 595332	Omalotheca norvegica	species
 1754164	Omalotheca sylvatica	species

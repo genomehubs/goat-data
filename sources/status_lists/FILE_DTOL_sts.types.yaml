@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: sts_2022-02-28_3073.tsv
+  name: sts.tsv
   source: DTOL STS
-  source_date: 2022-02-28
+  source_date: 2022-03-08
   source_url: https://sts.tol.sanger.ac.uk/api/v1/swagger
 attributes:
   family_representative:

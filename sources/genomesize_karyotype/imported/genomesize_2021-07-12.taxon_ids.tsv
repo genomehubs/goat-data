@@ -204,6 +204,8 @@ taxon_id	input	rank
 27403	Bosmina longirostris	species
 77716	Eurycercus glacialis	species
 302197	Ceriodaphnia reticulata	species
+qbCteMagn	Ctenodaphnia magna	species
+qbCteSimi	Ctenodaphnia similis	species
 77756	Daphnia ambigua	species
 121628	Daphnia arenata	species
 247388	Daphnia catawba	species
@@ -224,6 +226,7 @@ taxon_id	input	rank
 77711	Holopedium gibberum	species
 77707	Leptodora kindtii	species
 1917103	Ilyocryptus sordidus	species
+qbMacHirs	Macrothrix hirsuticornis	species
 77662	Polyphemus pediculus	species
 77656	Sida crystallina	species
 202087	Lynceus brachyurus	species
@@ -357,6 +360,7 @@ taxon_id	input	rank
 2305247	Cypris pubera	species
 425018	Heterocypris incongruens	species
 2853943	Sarscypridopsis aculeata	species
+qoCypMarg	Cyprois marginata	species
 399045	Notodromas monacha	species
 72036	Lepeophtheirus salmonis	species
 120882	Pseudosquilla ciliata	species
@@ -432,6 +436,7 @@ taxon_id	input	rank
 298093	Callosobruchus phaseoli	species
 298094	Callosobruchus subinnotatus	species
 1971280	Cassida bergeali	species
+icCasHemi	Cassida hemisphaerica	species
 1971281	Cassida leucanthemi	species
 1654392	Cassida pannonica	species
 294607	Cassida rubiginosa	species
@@ -444,6 +449,7 @@ taxon_id	input	rank
 75504	Chrysolina affinis	species
 75506	Chrysolina americana	species
 111535	Chrysolina aurichalcea	species
+icChrBank	Chrysolina banksi	species
 75509	Chrysolina carnifex	species
 75521	Chrysolina herbacea	species
 75529	Chrysolina peregrina	species
@@ -905,6 +911,7 @@ taxon_id	input	rank
 297830	Aphelinus abdominalis	species
 2890793	Aphelinus atriplicis	species
 1041456	Aphelinus certus	species
+iyAphDauc	Aphelinus daucicola	species
 163154	Aphelinus hordei	species
 1118584	Aphelinus kurdjumovi	species
 2840465	Aphelinus rhamni	species
@@ -4579,6 +4586,7 @@ taxon_id	input	rank
 273048	Arenicola cristata	species
 51294	Capitella capitata	species
 167831	Notomastus latericeus	species
+wuEucColl	Euclymene collaris	species
 570263	Rhynchoscolex simplex	species
 570252	Stenostomum arevaloi	species
 2880247	Stenostomum brevipharyngium	species
@@ -4597,6 +4605,7 @@ taxon_id	input	rank
 1118983	Pentapora fascialis	species
 1443271	Schizobrachiella sanguinea	species
 544679	Schizoporella errata	species
+tzTurMagn	Turbicellepora magnicostata	species
 67896	Cristatella mucedo	species
 349672	Fredericella sultana	species
 361475	Lophopodella carteri	species
@@ -4831,6 +4840,7 @@ taxon_id	input	rank
 328598	Lepidonotus sublevis	species
 418334	Odontosyllis fulgurans	species
 1045422	Parapionosyllis elegans	species
+wpPlaBrev	Plakosyllis brevipes	species
 418353	Sphaerosyllis pirifera	species
 1045436	Syllis prolifera	species
 1917099	Asplanchna priodonta	species
@@ -4886,6 +4896,7 @@ taxon_id	input	rank
 1311880	Castrella pinguis	species
 1311980	Dalyellia viridis	species
 57450	Bothromesostoma sp.	species
+hrMesEhre	Mesostoma ehrenbergii	species
 297415	Olisthanella truncula	species
 297429	Strongylostoma elongatum	species
 1311918	Strongylostoma radiatum	species
@@ -4920,6 +4931,7 @@ taxon_id	input	rank
 316166	Agalma elegans	species
 168775	Physalia physalis	species
 13268	Solemya velum	species
+wdPriMalm	Prionospio malmgreni	species
 666329	Cinachyrella alloclada	species
 6279	Brugia malayi	species
 6282	Onchocerca volvulus	species
@@ -4949,6 +4961,7 @@ taxon_id	input	rank
 39786	Polycelis nigra	species
 27898	Crenobia alpina	species
 39785	Polycelis felina	species
+hrUteVulg	Uteriporus vulgaris	species
 6325	Bursaphelenchus mucronatus	species
 344371	Hemicycliophora conida	species
 874381	Betulodera betulae	species
@@ -5309,7 +5322,9 @@ taxon_id	input	rank
 766170	Thylacodes squamigerus	species
 2291435	Ampullaceana fontinalis	species
 570260	Stenostomum sphagnetorum	species
+2924096	Mollia patellaria	species
 1118970	Schizoporella dunkeri	species
+2923016	Suberites sp.	species
 2916753	Callyspongia sp.	species
 27389	Aporrectodea rosea	species
 1411920	Ctenoides scaber	species

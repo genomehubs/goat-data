@@ -16,6 +16,12 @@ attributes:
         - gaga
         - squalomix
         - vgp
+        - agi
+        - arg
+        - gap
+        - gbr
+        - omg
+        - tsi
     header: long_list
     summary: list
     traverse: list
@@ -38,6 +44,12 @@ attributes:
         - gaga
         - squalomix
         - vgp
+        - agi
+        - arg
+        - gap
+        - gbr
+        - omg
+        - tsi
     header: long_list
     summary: list
     traverse: list
@@ -46,6 +58,7 @@ attributes:
   family_representative:
     display_group: target_lists
     display_level: 2
+    constraint:
     constraint:
       enum:
         - asg
@@ -60,6 +73,12 @@ attributes:
         - gaga
         - squalomix
         - vgp
+        - agi
+        - arg
+        - gap
+        - gbr
+        - omg
+        - tsi
     header: long_list
     summary: list
     traverse: list

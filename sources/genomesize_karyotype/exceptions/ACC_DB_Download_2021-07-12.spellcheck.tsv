@@ -20,6 +20,7 @@ taxon_id	input	rank	suggested
 878088	Ernobius mollis_	species	Ernobius mollis
 	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
+icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
 295656	Stegobium paniceum_	species	Stegobium paniceum
 2680750	Notoxus calcaratus_	species	Notoxus calcaratus
@@ -378,7 +379,7 @@ taxon_id	input	rank	suggested
 247416	Ophonus azureus_	species	Ophonus azureus
 2666065	Ophonus cordatus_	species	Ophonus cordatus
 247419	Ophonus longicollis_	species	Ophonus longicollis
-	Ophonus parallelus_	species	pogonus parallelus
+	Ophonus parallelus_	species	pogonus parallelus	ophonus parallelus
 	Ophonus rufipes_	species	ophonus rufipes
 247425	Ophonus stictus_	species	Ophonus stictus
 2083040	Orthomus barbarus_	species	Orthomus barbarus
@@ -506,7 +507,6 @@ taxon_id	input	rank	suggested
 2586298	Chlorophorus annularis_	species	Chlorophorus annularis
 1587171	Chlorophorus figuratus_	species	Chlorophorus figuratus
 132597	Clytus arietis_	species	Clytus arietis
-1586466	Clytus lama_	species	Clytus lama
 1313182	Clytus melaenus_	species	Clytus melaenus
 256647	Criocephalus rusticus_	species	Arhopalus rusticus
 58006	Cyllene robiniae_	species	Megacyllene robiniae
@@ -680,6 +680,7 @@ taxon_id	input	rank	suggested
 111203	Cassida circumdata_	species	Cassida circumdata
 877892	Cassida flaveola_	species	Cassida flaveola
 222433	Cassida fuscorufa_	species	Cassida fuscorufa
+icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1971281	Cassida leucanthemi_	species	Cassida leucanthemi
 2320939	Cassida margaritacea_	species	Cassida margaritacea
 1254966	Cassida nebulosa_	species	Cassida nebulosa
@@ -711,6 +712,7 @@ taxon_id	input	rank	suggested
 	Chrysoli affinis_	species	chrysolina affinis	chrysopa affinis
 75506	Chrysoli america_	species	Chrysolina americana
 111535	Chrysoli aurichalcea	species	Chrysolina aurichalcea
+	Chrysoli banksi_	species	chrysolina banksii	chrysolina banksi
 75508	Chrysoli bicolor_	species	Chrysolina bicolor
 75509	Chrysoli carnifex_	species	Chrysolina carnifex
 75510	Chrysoli cerealis_	species	Chrysolina cerealis
@@ -750,6 +752,7 @@ taxon_id	input	rank	suggested
 1075297	Clytra laeviscula_	species	Clytra laeviuscula
 1075297	Clytra laeviuscula_	species	Clytra laeviuscula
 1425548	Clytra quadripunctata_	species	Clytra quadripunctata
+2484307	Clytra succinata	species	Cleora subcincta
 284335	Colasposoma auripenne_	species	Colasposoma auripenne
 1592289	Conicobruchus indicus_	species	Conicobruchus indicus
 1654395	Coptocephala unifasciata_	species	Coptocephala unifasciata
@@ -782,12 +785,12 @@ taxon_id	input	rank	suggested
 226770	Gyndrobrotica lepida	species	Gynandrobrotica lepida
 226768	Gyndrobrotica nigrofasciata	species	Gynandrobrotica nigrofasciata
 2611628	Gyndrobrotica variabilis	species	Gynandrobrotica variabilis
-661327	Haltica chalybea	species	Altica chalybea
 1425620	Hypocassida subferruginea_	species	Hypocassida subferruginea
 1412126	Lema coromandelia	species	Lema praeusta
 	Leptinotarsa undecimlineata	species	leptinotarsa decimlineata	leptinotarsa undecemlineata
 88632	Lieidea aenea	species	Lecidea fuscoatra
 1845050	Longitarsus pellucides	species	Longitarsus pellucidus
+icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 481850	Lysathia ludovicia	species	Lysathia ludoviciana
 2728761	Microtenochira quadrata	species	Microctenochira quadrata
 96932	Nodonota virdis	species	Pyganodon grandis
@@ -803,7 +806,6 @@ taxon_id	input	rank	suggested
 1425596	Psylliodes circumdata	species	Psylliodes circumdatus
 428709	Psylloides marcida	species	Psylliodes marcidus
 	Timarcha erosa_vermiculata	species	timarcha erosa vermiculata
-79523	Timarcha gradensis	species	Timarcha granadensis
 122865	Zabrotes subfasciatus_	species	Zabrotes subfasciatus
 1525726	Zygogramma bigenera	species	Zygogramma bigenea
 577137	Octotemnus aevis	species	Octotemnus laevis
@@ -937,6 +939,7 @@ taxon_id	input	rank	suggested
 107862	Hydaticus leander_	species	Prodaticus leander
 666459	Hydaticus luczonicus_	species	Prodaticus luczonicus
 666472	Hydaticus vittatus_	species	Prodaticus vittatus
+icHydCusp	Hydrovatus cuspidatus_	species	Hydrovatus cuspidatus
 156943	Ilybius aenescens_	species	Ilybius aenescens
 156944	Ilybius albarracinensis_	species	Ilybius albarracinensis
 156948	Ilybius ater_	species	Ilybius ater
@@ -967,6 +970,8 @@ taxon_id	input	rank	suggested
 1978417	Dineutes americanus_	species	Dineutus americanus
 1564125	Dineutes horni_	species	Dineutus hornii
 1564125	Dineutes hornii	species	Dineutus hornii
+icGyrCasp	Gyrinus caspius_	species	Gyrinus caspius
+icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 1553336	Gyrinus paykulli_	species	Gyrinus paykulli
 446440	Gyrinus substriatus_	species	Gyrinus substriatus
 	Gyrinus suffriani_	species	gyrinus suffriani
@@ -995,7 +1000,7 @@ taxon_id	input	rank	suggested
 1457043	Speonomus pyreeus	species	Speonomus pyreneus
 1457043	Speonomus pyrenaeus	species	Speonomus pyreneus
 	Troglocharinus ferreri_pallaresi	species	troglocharinus ferreri pallaresi
-	Cerchus ligrius	species	ceruchus lignarius	trechus liguricus
+273953	Cerchus ligrius	species	Ceruchus lignarius
 617909	Lamprima adolphie	species	Lamprima adolphinae
 231745	Lucanus maculifermoratus	species	Lucanus maculifemoratus
 1588445	Lytta picta	species	Scydmaenus tarsatus
@@ -1036,7 +1041,7 @@ taxon_id	input	rank	suggested
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopsis	homalopoma
+	Homaloplia	species	homalomyia	homalopoma	homalopsis
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 1207216	Mecynorrhi torquata	species	Mecynorrhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1073,16 +1078,15 @@ taxon_id	input	rank	suggested
 1720610	Cephaloon lepturides_	species	Cephaloon lepturides
 1752710	Adesmia biskrensis	species	Adesmia biskreensis
 1656916	Alphitobius pliceus	species	Alphitobius laevigatus
-2836444	Belopus elongatus	species	Berosus elongatulus
 197344	Blaps mucrota	species	Blaps mucronata
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
-466958	Gthocerus cornutus	species	Gnathocerus cornutus
+icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata_	species	Isomira quadristriata
 139195	Nesotes porrecta	species	Nesotes porrectus
-1328854	Phaleria acumita	species	Phaleria acuminata Kuster, 1852
+	Phaleria acumita	species	phaleria acuminata	sphaeria acuminata
 2501507	Pimelia aranacea	species	Pimelia arenacea
 	Pimelia atlantis_atlantis	species	pimelia atlantis atlantis
 	Pimelia atlantis_frigioides	species	pimelia atlantis frigioides
@@ -1125,12 +1129,12 @@ taxon_id	input	rank	suggested
 27455	Musca veltustissima	species	Musca vetustissima
 27455	Musca vestustissima	species	Musca vetustissima
 1473718	Myolepta pretiosa	species	Myolepta varipes
-377549	Chrysops suavis	species	Chrysotus suavis
 2494420	Hybomitra muhlfeldi	species	Hybomitra muehlfeldi
 1334903	Tabanus unifasciatus	species	Triclista guttata
 1754249	Winthemia dantanae	species	Winthemia datanae
 33395	Rhagoletis conivora	species	Rhagoletis cornivora
 	Rhagoletis jungladis	species	rhagoletis juglandis
+idBibHort	Bibio bortulanus	species	Bibio hortulanus
 50660	Oligotoma saundersi	species	Oligotoma saundersii
 202358	Grylloblatta campodeioformis	species	Grylloblatta campodeiformis
 1960866	Cerococcus quercus	species	Sirococcus quercus
@@ -1299,7 +1303,6 @@ taxon_id	input	rank	suggested
 87838	Euhadra smaliae	species	Euhadra amaliae
 225461	Monacha cathusiana	species	Monacha cartusiana
 	Polygyra appressa	species	polygala adpressa	polygala depressa
-342353	Stenotrema morosum	species	Stenocercus formosus
 52793	Lymnaea nuricularia	species	Radix auricularia
 1076771	Stenostomum grandi	species	Stenostomum grande
 66787	Dipylidium caminum	species	Dipylidium caninum

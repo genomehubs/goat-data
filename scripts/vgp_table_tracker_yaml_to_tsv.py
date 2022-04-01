@@ -4,7 +4,7 @@ import sys
 import csv
 import yaml
 
-fieldnames = ['common_name', 'family', 'order', 'scientific_name', 'status', 'taxon_id']
+fieldnames = ['common_name', 'family', 'order', 'scientific_name', 'status', 'taxon_id', 'vgp_phase']
 
 input_file = sys.stdin
 

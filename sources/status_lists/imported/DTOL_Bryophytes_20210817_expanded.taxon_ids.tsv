@@ -232,6 +232,7 @@ taxon_id	input	rank
 1230433	Cephaloziella elachista	species
 2779685	Cephaloziella hampeana	species
 2779686	Cephaloziella integerrima	species
+cjCepMass	Cephaloziella massalongi	species
 2779748	Cephaloziella nicholsonii	species
 1230435	Cephaloziella rubella	species
 2779687	Cephaloziella spinigera	species
@@ -407,7 +408,7 @@ taxon_id	input	rank
 140396	Drepanocladus trifarius	species
 140397	Drepanocladus turgescens	species
 2779697	Hygroamblystegium fluviatile	species
-2779698	Hygroamblystegium humile	species
+2779698	Hygroamblystegium varium var. humile	varietas
 140004	Hygrohypnum luridum	species
 319550	Hygrohypnum styriacum	species
 170931	Leptodictyum riparium	species
@@ -517,6 +518,7 @@ taxon_id	input	rank
 98486	Dicranum bonjeanii	species
 380526	Dicranum elongatum	species
 446145	Dicranum flagellare	species
+cbDicFlex	Dicranum flexicaule	species
 226468	Dicranum fuscescens	species
 1510176	Dicranum leioneuron	species
 98326	Dicranum polysetum	species
@@ -535,6 +537,7 @@ taxon_id	input	rank
 52978	Dicranella staphylina	species
 2736559	Dicranella varia	species
 175170	Distichium inclinatum	species
+cbCerConi	Ceratodon conicus	species
 3225	Ceratodon purpureus	species
 226471	Cheilothela chloropus	species
 2779784	Ditrichum cornubicum	species
@@ -611,6 +614,7 @@ taxon_id	input	rank
 2779713	Racomitrium affine	species
 2779714	Racomitrium ellipticum	species
 374220	Racomitrium heterostichum	species
+cbRacMaco	Racomitrium macounii	species
 1431309	Racomitrium obtusum	species
 860393	Schistidium agassizii	species
 65527	Schistidium apocarpum	species
@@ -740,7 +744,7 @@ taxon_id	input	rank
 520847	Orthotrichum tenellum	species
 67002	Plenogemma phyllantha	species
 700990	Ulota bruchii	species
-1621533	Ulota calvescens	species
+1621533	Atlantichella calvescens	species
 1835017	Ulota coarctata	species
 140636	Ulota crispa	species
 1835018	Ulota crispula	species
@@ -1025,7 +1029,7 @@ taxon_id	input	rank
 1331045	Lophoziopsis excisa	species
 1331084	Lophoziopsis longidens	species
 111435	Amblystegium tenax	species
-111436	Amblystegium varium	species
+111436	Hygroamblystegium varium	species
 140012	Platydictya confervoides	species
 184650	Camptothecium lutescens	species
 200801	Plagiobryum algovicum	species
@@ -1039,7 +1043,7 @@ taxon_id	input	rank
 187845	Plagiobryum demissum	species
 576378	Gemmabryum dichotomum	species
 66993	Plagiobryum donianum	species
-981514	Rosulabryum elegans	species
+2929762	Ptychostomum elegans	species
 216088	Gemmabryum gemmiferum	species
 388898	Gemmabryum gemmilucens	species
 187837	Imbribryum gemmiparum	species
@@ -1051,7 +1055,7 @@ taxon_id	input	rank
 190272	Gemmabryum radiculosum	species
 187841	Rosulabryum rubens	species
 190271	Gemmabryum ruderale	species
-388900	Gemmabryum subapiculatum	species
+388900	Imbribryum subapiculatum	species
 981517	Ptychostomum turbinatum	species
 200812	Plagiobryum uliginosum	species
 388903	Gemmabryum violaceum	species
