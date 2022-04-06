@@ -27,6 +27,4 @@ done > ena-taxonomy.extra.jsonl
 
 perl -i -plne 's/(.*scientificName\" : \"(\S+) (\S+) .*?\".*\"subspecies\".*?lineage\" : \".*?)( \".*)/$1 $2 $3;$4/' ena-taxonomy.extra.jsonl
 
-perl -lne 'print unless /scientificName\" : \"((\S+?)\s+(\S+?)\s+(.+?))\".*\"subspecies\"/ and (scalar split(/\s+/,$1) !=3 and $4!~/^(var|ssp|subsp)/)' ena-taxonomy.extra.jsonl | grep -v -w 1676804 | grep Eukaryota > tmp
-
-mv tmp ena-taxonomy.extra.jsonl
+perl -lne 'print unless /scientificName\" : \"((\S+?)\s+(\S+?)\s+(.+?))\".*\"subspecies\"/ and (scalar split(/\s+/,$1) !=3 and $4!~/^(var|ssp|subsp)/)' ena-taxonomy.extra.jsonl | grep -v -w 1676804 | grep Eukaryota
