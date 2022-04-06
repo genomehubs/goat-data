@@ -17,17 +17,19 @@ jobs:
       - run: mkdir -p resources
       - name: Run genomehubs init
         run: |
+          pwd
+          ls
           docker run --rm \
-            -v sources:/genomehubs/sources \
-            -v resources:/genomehubs/resources \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v `pwd`/resources:/genomehubs/resources \
               genomehubs/genomehubs:latest bash -c \
               "find /genomehubs"
 
       - name: Run genomehubs init
         run: |
           docker run --rm \
-            -v sources:/genomehubs/sources \
-            -v resources:/genomehubs/resources \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v `pwd`/resources:/genomehubs/resources \
               genomehubs/genomehubs:latest bash -c \
               "genomehubs init \
                 --es-host es1:9200 \
