@@ -5,14 +5,14 @@ on: [push]
 jobs:
   run-test-fill:
     runs-on: self-hosted
-    services:
-      genomehubs-docker:
-        image: genomehubs/genomehubs:latest
-        options: -v goat-data:/usr/share/elasticsearch/data
+    #services:
+    #  genomehubs-docker:
+    #    image: genomehubs/genomehubs:latest
+    #    options: -v goat-data:/usr/share/elasticsearch/data
     steps:
-      - uses: actions/checkout@v2
       - name: Check health
         run: |
           curl -s "http://es1:9200/_cat/health"
           pwd
           ls
+      - uses: actions/checkout@v2
