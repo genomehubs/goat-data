@@ -21,6 +21,14 @@ jobs:
             -v sources:/genomehubs/sources \
             -v resources:/genomehubs/resources \
               genomehubs/genomehubs:latest bash -c \
+              "find /genomehubs"
+
+      - name: Run genomehubs init
+        run: |
+          docker run --rm \
+            -v sources:/genomehubs/sources \
+            -v resources:/genomehubs/resources \
+              genomehubs/genomehubs:latest bash -c \
               "genomehubs init \
                 --es-host es1:9200 \
                 --taxonomy-path /genomehubs/resources/taxdump \
