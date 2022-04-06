@@ -1,0 +1,16 @@
+name: test-genomehubs
+
+on: [push]
+
+jobs:
+  run-test-fill:
+    runs-on: self-hosted
+    services:
+      genomehubs-docker:
+        image: genomehubs/genomehubs:latest
+        # options: -v es-data:/usr/share/elasticsearch/data
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check health
+        run: |
+          curl -s "http://es1:9200/_cat/health"
