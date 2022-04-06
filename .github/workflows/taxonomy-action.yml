@@ -19,7 +19,7 @@ jobs:
           rm -rf resources/taxdump/*
           curl -X DELETE "es1:9200/*"
       - name: Get extra ENA taxonomy nodes
-        run: bash ./scripts/get_ena_taxonomy_extra.bash > /genomehubs/sources/ena-taxonomy.extra.jsonl
+        run: bash ./scripts/get_ena_taxonomy_extra.bash > sources/ena-taxonomy.extra.jsonl
       - name: Genomehubs init
         run: |
           docker run --rm --network=host \
