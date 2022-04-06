@@ -17,23 +17,15 @@ jobs:
       - run: mkdir -p resources
       - name: Run genomehubs init
         run: |
-          pwd
-          ls
-          docker run --rm \
-            -v `pwd`/sources:/genomehubs/sources \
-            -v `pwd`/resources:/genomehubs/resources \
-              genomehubs/genomehubs:latest bash -c \
-              "find /genomehubs"
-
-      - name: Run genomehubs init
-        run: |
-          docker run --rm \
+          docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             -v `pwd`/resources:/genomehubs/resources \
               genomehubs/genomehubs:latest bash -c \
               "genomehubs init \
-                --es-host es1:9200 \
+                --es-host http://es1:9200 \
                 --taxonomy-path /genomehubs/resources/taxdump \
+                --taxonomy-file names.dmp --taxonomy-file nodes.dmp \
+                --taxonomy-url https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
                 --hub-path /genomehubs/resources \
                 --taxonomy-source ncbi \
                 --config-file /genomehubs/sources/goat.yaml \
