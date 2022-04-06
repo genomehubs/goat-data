@@ -1,0 +1,34 @@
+name: test-goat
+
+on: workflow_dispatch
+
+jobs:
+  run-test-fill:
+    runs-on: self-hosted
+    #services:
+    #  genomehubs-docker:
+    #    image: genomehubs/genomehubs:latest
+    #    options: -v goat-data:/usr/share/elasticsearch/data
+    steps:
+      - name: Check health
+        run: |
+          curl -s "http://es1:9200/_cat/health"
+      - uses: actions/checkout@v2
+      - run: | 
+          mkdir -p resources/taxdump
+          rm -rf resources/taxdump/*
+          curl -X DELETE "es1:9200/*"
+      - name: Get extra ENA taxonomy nodes
+        run: bash ./scripts/get_ena_taxonomy_extra.bash > /genomehubs/sources/ena-taxonomy.extra.jsonl
+      - name: Genomehubs init
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v `pwd`/resources:/genomehubs/resources \
+              genomehubs/genomehubs:latest bash -c \
+              "genomehubs init \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file /genomehubs/sources/goat.yaml \
+                --taxonomy-jsonl /genomehubs/sources/ena-taxonomy.extra.jsonl \
+                --taxonomy-ncbi-root 2759"
