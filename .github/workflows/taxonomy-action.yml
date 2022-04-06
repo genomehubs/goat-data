@@ -14,7 +14,10 @@ jobs:
         run: |
           curl -s "http://es1:9200/_cat/health"
       - uses: actions/checkout@v2
-      - run: mkdir -p resources
+      - run: | 
+          mkdir -p resources/taxdump
+          rm -rf resources/taxdump/*
+          curl -X DELETE "es1:9200/*"
       - name: Run genomehubs init
         run: |
           docker run --rm --network=host \
@@ -29,4 +32,4 @@ jobs:
                 --hub-path /genomehubs/resources \
                 --taxonomy-source ncbi \
                 --config-file /genomehubs/sources/goat.yaml \
-                --taxonomy-ncbi-root 7088"
+                --taxonomy-ncbi-root 9608"
