@@ -8,9 +8,11 @@ jobs:
     services:
       genomehubs-docker:
         image: genomehubs/genomehubs:latest
-        # options: -v es-data:/usr/share/elasticsearch/data
+        options: -v goat-data:/usr/share/elasticsearch/data
     steps:
       - uses: actions/checkout@v2
       - name: Check health
         run: |
           curl -s "http://es1:9200/_cat/health"
+          pwd
+          ls
