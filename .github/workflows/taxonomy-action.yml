@@ -17,7 +17,7 @@ jobs:
       - run: mkdir -p resources
       - name: Run genomehubs init
         run: |
-          docker run -it --rm \
+          docker run --rm \
             -v sources:/genomehubs/sources \
             -v resources:/genomehubs/resources \
               genomehubs/genomehubs:latest bash -c \
@@ -27,4 +27,4 @@ jobs:
                 --hub-path /genomehubs/resources \
                 --taxonomy-source ncbi \
                 --config-file /genomehubs/sources/goat.yaml \
-                --taxonomy-ncbi-root 7708"
+                --taxonomy-ncbi-root 7088"
