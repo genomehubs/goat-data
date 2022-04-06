@@ -1,6 +1,9 @@
-name: test-genomehubs
+name: test-goat
 
-on: [push]
+on:
+  push:
+    branches:    
+      - main
 
 jobs:
   run-test-fill:
@@ -18,7 +21,7 @@ jobs:
           mkdir -p resources/taxdump
           rm -rf resources/taxdump/*
           curl -X DELETE "es1:9200/*"
-      - name: Run genomehubs init
+      - name: Genomehubs init
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
