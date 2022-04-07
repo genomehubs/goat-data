@@ -1,6 +1,8 @@
 name: test-goat
 
 on: push
+  branch:
+    main
 
 jobs:
   run-test-fill:
