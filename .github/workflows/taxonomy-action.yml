@@ -34,5 +34,5 @@ jobs:
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file /genomehubs/sources/goat.yaml \
-                --taxonomy-jsonl /genomehubs/sources/ena-taxonomy.extra.jsonl \
+                --taxonomy-jsonl /genomehubs/sources/ena-taxonomy/ena-taxonomy.extra.jsonl \
                 --taxonomy-ncbi-root 2759"
