@@ -33,12 +33,5 @@ do
   '
 done > ena-taxonomy.extra.curr.jsonl
 
-# convert 3 part scientific name jsonl subspecies entries to include species as parent:
-cat ena-taxonomy.extra.curr.jsonl \
-| perl -plne 's/(.*scientificName\" : \"(\S+) (\S+) .*?\".*\"subspecies\".*?lineage\" : \".*?)( \".*)/$1 $2 $3;$4/' \
-| perl -lne 'print unless /scientificName\" : \"((\S+?)\s+(\S+?)\s+(.+?))\".*\"subspecies\"/ and (scalar split(/\s+/,$1) !=3 and $4!~/^(var|ssp|subsp)/)' \
-| grep -v -w 1676804 \
-| grep Eukaryota \
-| cat ena-taxonomy.extra.prev.jsonl - \
-> ena-taxonomy.extra.jsonl
+cat ena-taxonomy.extra.prev.jsonl ena-taxonomy.extra.curr.jsonl > ena-taxonomy.extra.jsonl
 
