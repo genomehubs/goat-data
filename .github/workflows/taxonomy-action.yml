@@ -1,8 +1,6 @@
 name: test-goat
 
-on: push
-  branch:
-    main
+on: workflow_dispatch
 
 jobs:
   run-test-fill:
@@ -21,7 +19,11 @@ jobs:
           rm -rf resources/taxdump/*
           curl -X DELETE "es1:9200/*"
       - name: Get extra ENA taxonomy nodes
-        run: bash ./scripts/get_ena_taxonomy_extra.bash > sources/ena-taxonomy.extra.jsonl
+        run: |
+          mkdir -p sources/ena-taxonomy
+          cd sources/ena-taxonomy
+          bash ./scripts/get_ena_taxonomy_extra.bash
+          cd ../../
       - name: Genomehubs init
         run: |
           docker run --rm --network=host \
