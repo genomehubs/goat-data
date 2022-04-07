@@ -22,8 +22,8 @@ jobs:
         run: |
           mkdir -p sources/ena-taxonomy
           cd sources/ena-taxonomy
-          bash ../scripts/get_ena_taxonomy_extra.bash
-          cd ../../
+          bash ../../scripts/get_ena_taxonomy_extra.bash
+          cd   ../../
       - name: Genomehubs init
         run: |
           docker run --rm --network=host \
