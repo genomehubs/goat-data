@@ -9,6 +9,7 @@ curl -s "https://www.ebi.ac.uk/ena/portal/api/search?result=taxon&query=tax_tree
 
 # if prev extra jsonl exists, gunzip it first
 gunzip ena-taxonomy.extra.jsonl.gz
+
 # then only keep those entries which are in current resulttaxon.tax_tree2759.tsv
 tail -n+2 resulttaxon.tax_tree2759.tsv \
 | cut -f1 \
@@ -49,4 +50,6 @@ END
   foreach my $jsonl (sort { $jsonl_hash{$a} <=> $jsonl_hash{$b} } keys %jsonl_hash) {
     print $jsonl;
   }
-}' | gzip -c > ena-taxonomy.extra.jsonl.gz
+}' > ena-taxonomy.extra.jsonl
+
+gzip ena-taxonomy.extra.jsonl
