@@ -35,4 +35,18 @@ do
   '
 done > ena-taxonomy.extra.curr.jsonl
 
-cat ena-taxonomy.extra.prev.jsonl ena-taxonomy.extra.curr.jsonl | gzip -c > ena-taxonomy.extra.jsonl.gz
+# cat the prev and curr jsonl, but sort by length of lineage:
+cat ena-taxonomy.extra.prev.jsonl ena-taxonomy.extra.curr.jsonl \
+| perl -lne '
+{
+  $jsonl = $_;
+  $lineage = $1 if /"lineage" : "(.+?)"/;
+  $lineage_count = ($lineage =~ s/;/;/g);
+  $jsonl_hash{$jsonl} = $lineage_count;
+}
+END
+{
+  foreach my $jsonl (sort { $jsonl_hash{$a} <=> $jsonl_hash{$b} } keys %jsonl_hash) {
+    print $jsonl;
+  }
+}' | gzip -c > ena-taxonomy.extra.jsonl.gz
