@@ -29,7 +29,7 @@ jobs:
 
   genomehubs-init:
     needs:
-      - check-health-get-dockers
+#      - check-health-get-dockers
       - get-ena-taxonomy-extra
     runs-on:  self-hosted
     steps:
@@ -52,7 +52,7 @@ jobs:
                 --taxonomy-ncbi-root 2759"
 
   get-ncbi-datasets:
-    needs:    check-health-get-dockers
+#    needs:    check-health-get-dockers
     runs-on:  self-hosted
     steps:
       - name: Download NCBI datasets executable
@@ -75,7 +75,7 @@ jobs:
             rm -rf sources/assembly-data/ncbi_dataset
 
   get-refseq-organelles:
-    needs:    check-health-get-dockers
+#    needs:    check-health-get-dockers
     runs-on:  self-hosted
     steps:
       - name: Run docker genomehubs parse --refseq-organelles
