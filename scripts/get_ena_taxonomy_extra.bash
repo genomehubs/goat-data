@@ -8,7 +8,7 @@ curl -s ftp://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/taxonomy.xml.gz \
 curl -s "https://www.ebi.ac.uk/ena/portal/api/search?result=taxon&query=tax_tree(2759)&limit=5000000" > resulttaxon.tax_tree2759.tsv
 
 # if prev extra jsonl exists, gunzip it first
-gunzip ena-taxonomy.extra.jsonl
+gunzip ena-taxonomy.extra.jsonl.gz
 # then only keep those entries which are in current resulttaxon.tax_tree2759.tsv
 tail -n+2 resulttaxon.tax_tree2759.tsv \
 | cut -f1 \
