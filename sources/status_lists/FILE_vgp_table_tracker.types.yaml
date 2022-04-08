@@ -23,6 +23,9 @@ attributes:
   long_list:
     header: sample_collected
     type: keyword
+  other_priority:
+    header: other_priority
+    type: keyword
   sample_collected:
     header: sample_collected
     type: keyword
