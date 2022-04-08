@@ -13,7 +13,6 @@ jobs:
     - name: Get dockers
       run:  docker pull genomehubs/genomehubs:latest
 
-jobs:
   get-ena-taxonomy-extra:
     needs:    check-health-get-dockers
     runs-on:  self-hosted
@@ -25,7 +24,6 @@ jobs:
         bash ../../scripts/get_ena_taxonomy_extra.bash
         cd   ../../
 
-jobs:
   genomehubs-init:
     needs:    check-health-get-dockers
     runs-on:  self-hosted
@@ -72,5 +70,3 @@ jobs:
           -v `pwd`/sources:/genomehubs/sources \
           genomehubs/genomehubs:latest bash -c \
           "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz
-
-
