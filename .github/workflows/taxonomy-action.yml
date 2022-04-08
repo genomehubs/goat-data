@@ -1,20 +1,20 @@
 name: test-goat
 
-on: push
+on: workflow_dispatch
 
 jobs:
-  check-health-get-dockers:
-    runs-on:  self-hosted
-    steps:
-    - name: Check health
-      run:  curl -s "http://es1:9200/_cat/health"
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Get dockers
-      run:  docker pull genomehubs/genomehubs:latest
+#   check-health-get-dockers:
+#     runs-on:  self-hosted
+#     steps:
+#     - name: Check health
+#       run:  curl -s "http://es1:9200/_cat/health"
+#     - name: Checkout
+#       uses: actions/checkout@v2
+#     - name: Get dockers
+#       run:  docker pull genomehubs/genomehubs:latest
 
   get-ena-taxonomy-extra:
-    needs:    check-health-get-dockers
+#    needs:    check-health-get-dockers
     runs-on:  self-hosted
     steps:
     - name: Get extra ENA taxonomy nodes
@@ -22,6 +22,9 @@ jobs:
         mkdir -p sources/ena-taxonomy
         cd sources/ena-taxonomy
         bash ../../scripts/get_ena_taxonomy_extra.bash
+        rm ena-taxonomy.xml.taxids resulttaxon.tax_tree2759.tsv \
+          ena-taxonomy.extra.prev.jsonl ena-taxonomy.extra.prev.taxids \
+          resulttaxon.tax_tree2759.extra.curr.tsv ena-taxonomy.extra.curr.jsonl
         cd   ../../
 
   genomehubs-init:
@@ -44,8 +47,8 @@ jobs:
               "genomehubs init \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
-                --config-file /genomehubs/sources/goat.yaml \
-                --taxonomy-jsonl /genomehubs/sources/ena-taxonomy/ena-taxonomy.extra.jsonl \
+                --config-file sources/goat.yaml \
+                --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
                 --taxonomy-ncbi-root 2759"
 
   get-ncbi-datasets:
@@ -67,6 +70,9 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:latest bash -c \
             "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
+      - name: Clean up expanded zip
+        run: |
+            rm -rf sources/assembly-data/ncbi_dataset
 
   get-refseq-organelles:
     needs:    check-health-get-dockers
@@ -77,4 +83,4 @@ jobs:
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:latest bash -c \
-            "genomehubs parse --refseq-organelles --outfile assembly-data/refseq_organelles.tsv.gz"
+            "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
