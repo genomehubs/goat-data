@@ -25,48 +25,56 @@ jobs:
         cd   ../../
 
   genomehubs-init:
-    needs:    check-health-get-dockers
+    needs:
+      - check-health-get-dockers
+      - get-ena-taxonomy-extra
     runs-on:  self-hosted
     steps:
-    - name: Genomehubs init
-      run: |
-        mkdir -p resources/taxdump
-        rm -rf resources/taxdump/*
-        curl -X DELETE "es1:9200/*"
-        docker run --rm --network=host \
-          -v `pwd`/sources:/genomehubs/sources \
-          -v `pwd`/resources:/genomehubs/resources \
-            genomehubs/genomehubs:latest bash -c \
-            "genomehubs init \
-              --es-host http://es1:9200 \
-              --taxonomy-source ncbi \
-              --config-file /genomehubs/sources/goat.yaml \
-              --taxonomy-jsonl /genomehubs/sources/ena-taxonomy/ena-taxonomy.extra.jsonl \
-              --taxonomy-ncbi-root 2759"
+      - name: Clean taxdump folder and delete indices
+        run: |
+          mkdir -p resources/taxdump
+          rm -rf resources/taxdump/*
+          curl -X DELETE "es1:9200/*"
+      - name: Run docker genomehubs init
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v `pwd`/resources:/genomehubs/resources \
+              genomehubs/genomehubs:latest bash -c \
+              "genomehubs init \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file /genomehubs/sources/goat.yaml \
+                --taxonomy-jsonl /genomehubs/sources/ena-taxonomy/ena-taxonomy.extra.jsonl \
+                --taxonomy-ncbi-root 2759"
 
   get-ncbi-datasets:
     needs:    check-health-get-dockers
     runs-on:  self-hosted
     steps:
-    - name: Download NCBI datasets
-      run: |
-        curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > /tmp/datasets
-        chmod a+x /tmp/datasets
-        mkdir -p sources/assembly-data
-        /tmp/datasets download genome taxon "Eukaryota" --dehydrated --filename sources/assembly-data/eukaryota.zip
-        unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
-        docker run --rm --network=host \
-          -v `pwd`/sources:/genomehubs/sources \
-          genomehubs/genomehubs:latest bash -c \
-          "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz
+      - name: Download NCBI datasets executable
+        run: |
+          curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > /tmp/datasets
+          chmod a+x /tmp/datasets
+      - name: Download NCBI eukaryota datasets zip
+        run: |
+          mkdir -p sources/assembly-data
+          /tmp/datasets download genome taxon "Eukaryota" --dehydrated --filename sources/assembly-data/eukaryota.zip
+          unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
+      - name: Run docker genomehubs parse --ncbi-datasets
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+            "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz
 
   get-refseq-organelles:
     needs:    check-health-get-dockers
     runs-on:  self-hosted
     steps:
-    - name: Download Refseq Organelles
-      run: |
-        docker run --rm --network=host \
-          -v `pwd`/sources:/genomehubs/sources \
-          genomehubs/genomehubs:latest bash -c \
-          "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz
+      - name: Run docker genomehubs parse --refseq-organelles
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+            "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz
