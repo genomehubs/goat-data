@@ -7,7 +7,9 @@ curl -s ftp://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/taxonomy.xml.gz \
 # get ALL ena taxids from ena api (these include the ones NOT in ncbi taxdump)
 curl -s "https://www.ebi.ac.uk/ena/portal/api/search?result=taxon&query=tax_tree(2759)&limit=5000000" > resulttaxon.tax_tree2759.tsv
 
-# if prev jsonl exists, only keep those entries which are in current resulttaxon.tax_tree2759.tsv
+# if prev extra jsonl exists, gunzip it first
+gunzip ena-taxonomy.extra.jsonl
+# then only keep those entries which are in current resulttaxon.tax_tree2759.tsv
 tail -n+2 resulttaxon.tax_tree2759.tsv \
 | cut -f1 \
 | perl -plne 's/(\d+)/"taxId" : "$1"/' \
@@ -33,5 +35,4 @@ do
   '
 done > ena-taxonomy.extra.curr.jsonl
 
-cat ena-taxonomy.extra.prev.jsonl ena-taxonomy.extra.curr.jsonl > ena-taxonomy.extra.jsonl
-
+cat ena-taxonomy.extra.prev.jsonl ena-taxonomy.extra.curr.jsonl | gzip -c > ena-taxonomy.extra.jsonl.gz
