@@ -23,11 +23,11 @@ jobs:
       run:  curl -s "http://es1:9200/_cat/health"
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Create venv
-      run:  |
-        python3 -m venv ~/genomehubsenv
-        source ~/genomehubsenv/bin/activate
-        pip install --force-reinstall genomehubs
+#     - name: Create venv
+#       run:  |
+#         python3 -m venv ~/genomehubsenv
+#         source ~/genomehubsenv/bin/activate
+#         pip install --force-reinstall genomehubs
 
 #   get-ena-taxonomy-extra:
 #     needs:    check-health-get-dockers
