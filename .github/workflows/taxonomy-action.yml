@@ -88,7 +88,7 @@ jobs:
 #             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
 
   index-assembly-data:
-    needs:
+#     needs:
 #       - check-health-get-dockers
 #       - genomehubs-init
 #       - get-ncbi-datasets
