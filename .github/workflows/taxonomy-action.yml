@@ -6,71 +6,23 @@ on:
       - feature/taxonomy-action
 
 jobs:
-#   check-health-get-dockers:
-#     runs-on:  self-hosted
-#     steps:
-#     - name: Check health
-#       run:  curl -s "http://es1:9200/_cat/health"
-#     - name: Checkout
-#       uses: actions/checkout@v2
-#     - name: Get dockers
-#       run:  docker pull genomehubs/genomehubs:latest
-
-  check-health-pip-genomehubs:
+  check-health:
     runs-on:  self-hosted
     steps:
-    - name: Check health
+    - name: Check es health
       run:  curl -s "http://es1:9200/_cat/health"
     - name: Checkout
       uses: actions/checkout@v2
+#     - name: Get dockers
+#       run:  docker pull genomehubs/genomehubs:latest
 #     - name: Create venv
 #       run:  |
 #         python3 -m venv ~/genomehubsenv
 #         source ~/genomehubsenv/bin/activate
 #         pip install --force-reinstall genomehubs
 
-#   get-ena-taxonomy-extra:
-#     needs:    check-health-get-dockers
-#     runs-on:  self-hosted
-#     steps:
-#     - name: Get extra ENA taxonomy nodes
-#       run:  |
-#         mkdir -p sources/ena-taxonomy
-#         cd sources/ena-taxonomy
-#         bash ../../scripts/get_ena_taxonomy_extra.bash
-#         rm -f ena-taxonomy.extra.jsonl ena-taxonomy.xml.taxids \
-#           resulttaxon.tax_tree2759.tsv ena-taxonomy.extra.prev.jsonl \
-#           ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.tsv \
-#           ena-taxonomy.extra.curr.jsonl
-#         cd   ../../
-
-#   genomehubs-init:
-#     needs:
-#       - check-health-get-dockers
-#       - get-ena-taxonomy-extra
-#     runs-on:  self-hosted
-#     steps:
-#       - name: Clean taxdump folder and delete indices
-#         run: |
-#           mkdir -p resources/taxdump
-#           rm -rf resources/taxdump/*
-#           curl -X DELETE "es1:9200/*"
-#       - name: Run docker genomehubs init
-#         run: |
-#           docker run --rm --network=host \
-#             -v `pwd`/sources:/genomehubs/sources \
-#             -v `pwd`/resources:/genomehubs/resources \
-#               genomehubs/genomehubs:latest bash -c \
-#               "genomehubs init \
-#                 --es-host http://es1:9200 \
-#                 --taxonomy-source ncbi \
-#                 --config-file sources/goat.yaml \
-#                 --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
-#                 --taxonomy-ncbi-root 2759 \
-#                 --taxon-preload"
-
 #   get-ncbi-datasets:
-#     needs:    check-health-get-dockers
+#     needs:    check-health
 #     runs-on:  self-hosted
 #     steps:
 #       - name: Download NCBI datasets executable
@@ -93,7 +45,7 @@ jobs:
 #             rm -rf sources/assembly-data/ncbi_dataset
 
 #   get-refseq-organelles:
-#     needs:    check-health-get-dockers
+#     needs:    check-health
 #     runs-on:  self-hosted
 #     steps:
 #       - name: Run docker genomehubs parse --refseq-organelles
@@ -103,10 +55,53 @@ jobs:
 #             genomehubs/genomehubs:latest bash -c \
 #             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
 
+#   get-ena-taxonomy-extra:
+#     needs:    check-health
+#     runs-on:  self-hosted
+#     steps:
+#     - name: Get extra ENA taxonomy nodes
+#       run:  |
+#         mkdir -p sources/ena-taxonomy
+#         cd sources/ena-taxonomy
+#         bash ../../scripts/get_ena_taxonomy_extra.bash
+#         rm -f ena-taxonomy.extra.jsonl ena-taxonomy.xml.taxids \
+#           resulttaxon.tax_tree2759.tsv ena-taxonomy.extra.prev.jsonl \
+#           ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.tsv \
+#           ena-taxonomy.extra.curr.jsonl
+#         cd   ../../
+
+  genomehubs-init:
+    needs:
+      - check-health
+#       - get-ena-taxonomy-extra
+    runs-on:  self-hosted
+    steps:
+      - name: Clean taxdump folder and delete indices
+        run: |
+          mkdir -p resources/taxdump
+          rm -rf resources/taxdump/*
+          curl -X DELETE "es1:9200/*"
+      - name: Run genomehubs init
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             -v `pwd`/resources:/genomehubs/resources \
+#             genomehubs/genomehubs:latest bash -c \
+        run:  |
+          source ~/genomehubsenv/bin/activate
+          genomehubs init \
+            --es-host http://es1:9200 \
+            --taxonomy-source ncbi \
+            --config-file sources/goat.yaml \
+            --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
+            --taxonomy-ncbi-root 2759 \
+            --taxon-preload
+
+
   index-assembly-data:
     needs:
-      - check-health-pip-genomehubs
-#       - genomehubs-init
+      - check-health
+      - genomehubs-init
 #       - get-ncbi-datasets
 #       - get-refseq-organelles
     runs-on:  self-hosted
@@ -132,7 +127,7 @@ jobs:
 
   fill:
     needs:
-      - check-health-pip-genomehubs
+      - check-health
       - index-assembly-data
     runs-on:  self-hosted
     steps:
