@@ -23,6 +23,11 @@ jobs:
       run:  curl -s "http://es1:9200/_cat/health"
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Create venv
+      run:  |
+        python3 -m venv ~/genomehubsenv
+        source ~/genomehubsenv/bin/activate
+        pip install --force-reinstall genomehubs
 
 #   get-ena-taxonomy-extra:
 #     needs:    check-health-get-dockers
@@ -118,7 +123,7 @@ jobs:
 #               --assembly-dir sources/assembly-data"
       - name: Run genomehubs index --assembly-data
         run: |
-          pip install genomehubs
+          source ~/genomehubsenv/bin/activate
           genomehubs index \
             --es-host http://es1:9200 \
             --taxonomy-source ncbi \
@@ -144,7 +149,7 @@ jobs:
 #               --traverse-infer-both"
       - name: Run genomehubs fill
         run: |
-          pip install genomehubs
+          source ~/genomehubsenv/bin/activate
           genomehubs fill \
             --es-host http://es1:9200 \
             --taxonomy-source ncbi \
