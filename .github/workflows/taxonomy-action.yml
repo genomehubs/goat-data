@@ -53,36 +53,58 @@ jobs:
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
 
-#   get-ncbi-datasets:
-#     needs:    check-health-get-dockers
-#     runs-on:  self-hosted
-#     steps:
-#       - name: Download NCBI datasets executable
-#         run: |
-#           curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > /tmp/datasets
-#           chmod a+x /tmp/datasets
-#       - name: Download NCBI eukaryota datasets zip
-#         run: |
-#           mkdir -p sources/assembly-data
-#           /tmp/datasets download genome taxon "Eukaryota" --dehydrated --filename sources/assembly-data/eukaryota.zip
-#           unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
-#       - name: Run docker genomehubs parse --ncbi-datasets
-#         run: |
-#           docker run --rm --network=host \
-#             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
-#             "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
-#       - name: Clean up expanded zip
-#         run: |
-#             rm -rf sources/assembly-data/ncbi_dataset
+  get-ncbi-datasets:
+    needs:    check-health-get-dockers
+    runs-on:  self-hosted
+    steps:
+      - name: Download NCBI datasets executable
+        run: |
+          curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > /tmp/datasets
+          chmod a+x /tmp/datasets
+      - name: Download NCBI eukaryota datasets zip
+        run: |
+          mkdir -p sources/assembly-data
+          /tmp/datasets download genome taxon "Eukaryota" --dehydrated --filename sources/assembly-data/eukaryota.zip
+          unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
+      - name: Run docker genomehubs parse --ncbi-datasets
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+            "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
+      - name: Clean up expanded zip
+        run: |
+            rm -rf sources/assembly-data/ncbi_dataset
 
-#   get-refseq-organelles:
-#     needs:    check-health-get-dockers
-#     runs-on:  self-hosted
-#     steps:
-#       - name: Run docker genomehubs parse --refseq-organelles
-#         run: |
-#           docker run --rm --network=host \
-#             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
-#             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
+  get-refseq-organelles:
+    needs:    check-health-get-dockers
+    runs-on:  self-hosted
+    steps:
+      - name: Run docker genomehubs parse --refseq-organelles
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+            "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
+
+  index-assembly-data:
+    needs:    check-health-get-dockers
+    runs-on:  self-hosted
+    steps:
+      - name: Run docker genomehubs index --assembly-data
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+            "genomehubs index --taxonomy-source ncbi --config-file sources/goat.yaml --assembly-dir sources/assembly-data"
+
+  fill:
+    needs:    check-health-get-dockers
+    runs-on:  self-hosted
+    steps:
+      - name: Run docker genomehubs fill
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+            "genomehubs fill  --taxonomy-source ncbi --config-file sources/goat.yaml --traverse-root 2759 --traverse-infer-both"
