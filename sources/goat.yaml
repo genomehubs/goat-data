@@ -1,12 +1,12 @@
 common:
   hub:
     name: goat
-    path: /genomehubs/resources
-    version: 2022.03.30
+    path: ~/genomehubsrun/resources
+    version: 2022.04.10
   es:
-    path: /genomehubs/resources/es
+    path: ~/genomehubsrun/resources/es
   taxonomy:
-    path: /genomehubs/resources/taxdump
+    path: ~/genomehubsrun/resources/taxdump
     url: https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz
     file:
       - names.dmp
