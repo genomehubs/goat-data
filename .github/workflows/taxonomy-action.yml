@@ -13,6 +13,18 @@ jobs:
 #     - name: Get dockers
 #       run:  docker pull genomehubs/genomehubs:latest
 
+  check-health-pip-genomehubs:
+    runs-on:  self-hosted
+    steps:
+    - name: Check health
+      run:  curl -s "http://es1:9200/_cat/health"
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: pip install genomehubs
+      run:  |
+        python3 -m pip install --upgrade pip
+        pip install --force-reinstall genomehubs
+
 #   get-ena-taxonomy-extra:
 #     needs:    check-health-get-dockers
 #     runs-on:  self-hosted
@@ -88,38 +100,53 @@ jobs:
 #             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
 
   index-assembly-data:
-#     needs:
-#       - check-health-get-dockers
+    needs:
+      - check-health-pip-genomehubs
 #       - genomehubs-init
 #       - get-ncbi-datasets
 #       - get-refseq-organelles
     runs-on:  self-hosted
     steps:
-      - name: Run docker genomehubs index --assembly-data
+#       - name: Run docker genomehubs index --assembly-data
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             genomehubs/genomehubs:latest bash -c \
+#             "genomehubs index \
+#               --es-host http://es1:9200 \
+#               --taxonomy-source ncbi \
+#               --config-file sources/goat.yaml \
+#               --assembly-dir sources/assembly-data"
+      - name: Run genomehubs index --assembly-data
         run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-            "genomehubs index \
-              --es-host http://es1:9200 \
-              --taxonomy-source ncbi \
-              --config-file sources/goat.yaml \
-              --assembly-dir sources/assembly-data"
+          genomehubs index \
+            --es-host http://es1:9200 \
+            --taxonomy-source ncbi \
+            --config-file sources/goat.yaml \
+            --assembly-dir sources/assembly-data
 
   fill:
     needs:
-#       - check-health-get-dockers
+      - check-health-pip-genomehubs
       - index-assembly-data
     runs-on:  self-hosted
     steps:
-      - name: Run docker genomehubs fill
+#       - name: Run docker genomehubs fill
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             genomehubs/genomehubs:latest bash -c \
+#             "genomehubs fill \
+#               --es-host http://es1:9200 \
+#               --taxonomy-source ncbi \
+#               --config-file sources/goat.yaml \
+#               --traverse-root 2759 \
+#               --traverse-infer-both"
+      - name: Run genomehubs fill
         run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-            "genomehubs fill \
-              --es-host http://es1:9200 \
-              --taxonomy-source ncbi \
-              --config-file sources/goat.yaml \
-              --traverse-root 2759 \
-              --traverse-infer-both"
+          genomehubs fill \
+            --es-host http://es1:9200 \
+            --taxonomy-source ncbi \
+            --config-file sources/goat.yaml \
+            --traverse-root 2759 \
+            --traverse-infer-both
