@@ -88,7 +88,11 @@ jobs:
             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
 
   index-assembly-data:
-    needs:    check-health-get-dockers
+    needs:
+      - check-health-get-dockers
+      - genomehubs-init
+      - get-ncbi-datasets
+      - get-refseq-organelles
     runs-on:  self-hosted
     steps:
       - name: Run docker genomehubs index --assembly-data
@@ -99,7 +103,9 @@ jobs:
             "genomehubs index --taxonomy-source ncbi --config-file sources/goat.yaml --assembly-dir sources/assembly-data"
 
   fill:
-    needs:    check-health-get-dockers
+    needs:
+      - check-health-get-dockers
+      - index-assembly-data
     runs-on:  self-hosted
     steps:
       - name: Run docker genomehubs fill
