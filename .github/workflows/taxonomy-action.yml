@@ -1,6 +1,9 @@
 name: test-goat
 
-on: push
+on:
+  push:
+    branches:
+      - feature/taxonomy-action
 
 jobs:
 #   check-health-get-dockers:
