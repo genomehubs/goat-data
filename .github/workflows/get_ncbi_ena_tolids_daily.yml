@@ -60,7 +60,7 @@ jobs:
       run:  |
         mkdir -p sources/ena-taxonomy
         cd sources/ena-taxonomy
-        bash ../../scripts/get_ena_taxonomy_extra.bash || exit 0
+        bash ../../scripts/get_ena_taxonomy_extra.bash
         rm -f ena-taxonomy.extra.jsonl ena-taxonomy.xml.taxids \
           resulttaxon.tax_tree2759.tsv ena-taxonomy.extra.prev.jsonl \
           ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.tsv \
