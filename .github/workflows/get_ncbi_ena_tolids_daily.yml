@@ -2,11 +2,11 @@ name: get_ncbi_ena_tolids_daily
 env:
   RELEASE: 2022.04.11
 
-on:
-  schedule:
-    # Runs "at 5 min past midnight" (see https://crontab.guru)
-    - cron: '5 0 * * *'
-# on: workflow_dispatch
+# on:
+#   schedule:
+#     # Runs "at 5 min past midnight" (see https://crontab.guru)
+#     - cron: '5 0 * * *'
+on: workflow_dispatch
 
 jobs:
   check-health:
