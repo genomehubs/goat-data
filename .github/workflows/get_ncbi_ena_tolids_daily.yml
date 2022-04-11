@@ -69,7 +69,7 @@ jobs:
   commit-changes:
     needs:
       - get-ncbi-datasets
-      - get-refeq-organelles
+      - get-refseq-organelles
       - get-ena-taxonomy-extra
     runs-on:  self-hosted
     steps:
