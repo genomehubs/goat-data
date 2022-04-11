@@ -65,8 +65,11 @@ jobs:
           resulttaxon.tax_tree2759.tsv ena-taxonomy.extra.prev.jsonl \
           ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.tsv \
           ena-taxonomy.extra.curr.jsonl
-        git add ena-taxonomy.extra.jsonl.gz
-        git diff-index --quiet HEAD || git commit -m "update $RELEASE"
-        git push
-        cd   ../../
+    - name: Commit changes if needed
+      uses: stefanzweifel/git-auto-commit-action@v4
+
+  # git add ena-taxonomy.extra.jsonl.gz
+  # git diff-index --quiet HEAD || git commit -m "update $RELEASE"
+  # git push
+  # cd   ../../
 
