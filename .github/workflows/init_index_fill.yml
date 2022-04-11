@@ -1,4 +1,5 @@
 name: init_index_fill
+# Assumes that get_ncbi_ena_tolids_daily.yml workflow has been run by a cron job
 
 on: workflow_dispatch
 
@@ -6,17 +7,16 @@ jobs:
   check-health:
     runs-on:  self-hosted
     steps:
-    - name: Check es health
-      run:  curl -s "http://es1:9200/_cat/health"
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Get dockers
-      run:  docker pull genomehubs/genomehubs:latest
+      - name: Check es health
+        run:  curl -s "http://es1:9200/_cat/health"
+      - name: Get dockers
+        run:  docker pull genomehubs/genomehubs:latest
+      - name: Checkout
+        uses: actions/checkout@v2
 
   genomehubs-init:
     needs:
       - check-health
-#       - get-ena-taxonomy-extra
     runs-on:  self-hosted
     steps:
       - name: Clean taxdump folder and delete indices
@@ -25,72 +25,85 @@ jobs:
           rm -rf resources/taxdump/*
           curl -X DELETE "es1:9200/*"
       - name: Run genomehubs init
-#         run: |
-#           docker run --rm --network=host \
-#             -v `pwd`/sources:/genomehubs/sources \
-#             -v `pwd`/resources:/genomehubs/resources \
-#             genomehubs/genomehubs:latest bash -c \
-        run:  |
-          source ~/genomehubsenv/bin/activate
-          genomehubs init \
-            --es-host http://es1:9200 \
-            --taxonomy-source ncbi \
-            --config-file sources/goat.yaml \
-            --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
-            --taxonomy-ncbi-root 2759 \
-            --taxon-preload
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v `pwd`/resources:/genomehubs/resources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs init \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
+                --taxonomy-ncbi-root 2759 \
+                --taxon-preload"
 
-
-  index-assembly-data:
+  genomehubs-index-assembly-data:
     needs:
       - check-health
       - genomehubs-init
-#       - get-ncbi-datasets
-#       - get-refseq-organelles
     runs-on:  self-hosted
     steps:
-#       - name: Run docker genomehubs index --assembly-data
-#         run: |
-#           docker run --rm --network=host \
-#             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
-#             "genomehubs index \
-#               --es-host http://es1:9200 \
-#               --taxonomy-source ncbi \
-#               --config-file sources/goat.yaml \
-#               --assembly-dir sources/assembly-data"
-      - name: Run genomehubs index --assembly-data
+      - name: Run docker genomehubs index --assembly-data
         run: |
-          source ~/genomehubsenv/bin/activate
-          genomehubs index \
-            --es-host http://es1:9200 \
-            --taxonomy-source ncbi \
-            --config-file sources/goat.yaml \
-            --assembly-dir sources/assembly-data
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --assembly-dir sources/assembly-data"
 
-  fill:
+  genomehubs-index-ott:
     needs:
       - check-health
-      - index-assembly-data
+      - genomehubs-index-assembly-data
     runs-on:  self-hosted
     steps:
-#       - name: Run docker genomehubs fill
-#         run: |
-#           docker run --rm --network=host \
-#             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
-#             "genomehubs fill \
-#               --es-host http://es1:9200 \
-#               --taxonomy-source ncbi \
-#               --config-file sources/goat.yaml \
-#               --traverse-root 2759 \
-#               --traverse-infer-both"
-      - name: Run genomehubs fill
+      - name: Run docker genomehubs index ott3.3
         run: |
-          source ~/genomehubsenv/bin/activate
-          genomehubs fill \
-            --es-host http://es1:9200 \
-            --taxonomy-source ncbi \
-            --config-file sources/goat.yaml \
-            --traverse-root 2759 \
-            --traverse-infer-both
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/ott3.3"
+
+  genomehubs-index-tolids:
+    needs:
+      - check-health
+      - genomehubs-index-ott
+    runs-on:  self-hosted
+    steps:
+      - name: Run docker genomehubs index tolids
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/tolids \
+                --taxon-lookup any --taxon-spellcheck"
+
+  genomehubs-fill:
+    needs:
+      - check-health
+      - genomehubs-index-tolids
+    runs-on:  self-hosted
+    steps:
+      - name: Run docker genomehubs fill
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs fill \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --traverse-root 2759 \
+                --traverse-infer-both"

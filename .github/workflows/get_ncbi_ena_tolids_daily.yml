@@ -2,10 +2,11 @@ name: get_ncbi_ena_tolids_daily
 env:
   RELEASE: 2022.04.11
 
-on: workflow_dispatch
-  # schedule:
-  #   # Runs "at 5 min past midnight" (see https://crontab.guru)
-  #   - cron: '5 0 * * *'
+on:
+  schedule:
+    # Runs "at 5 min past midnight" (see https://crontab.guru)
+    - cron: '5 0 * * *'
+# on: workflow_dispatch
 
 jobs:
   check-health:
@@ -46,7 +47,6 @@ jobs:
 
   get-refseq-organelles:
     needs:
-      - check-health
       - get-ncbi-datasets
     runs-on:  self-hosted
     steps:
@@ -63,8 +63,6 @@ jobs:
 
   get-ena-taxonomy-extra:
     needs:
-      - check-health
-      - get-ncbi-datasets
       - get-refseq-organelles
     runs-on:  self-hosted
     steps:
@@ -79,5 +77,23 @@ jobs:
             resulttaxon.tax_tree2759.tsv ena-taxonomy.extra.prev.jsonl \
             ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.tsv \
             ena-taxonomy.extra.curr.jsonl
+          cd ../../
+      - name: Commit changes if needed
+        uses: stefanzweifel/git-auto-commit-action@v4
+
+  get-tolids:
+    needs:
+      - get-ena-taxonomy-extra
+    runs-on:  self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get extra ENA taxonomy nodes
+        run:  |
+          mkdir -p sources/tolids
+          cd sources/tolids
+          curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
+          | gzip -c > sources/tolids/tolids.tsv.gz
+          cd ../../
       - name: Commit changes if needed
         uses: stefanzweifel/git-auto-commit-action@v4
