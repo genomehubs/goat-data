@@ -49,7 +49,7 @@ jobs:
     runs-on:  self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run:  git pull
       - name: Run docker genomehubs parse --refseq-organelles
         run: |
           docker run --rm --network=host \
@@ -65,7 +65,7 @@ jobs:
     runs-on:  self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run:  git pull
       - name: Get extra ENA taxonomy nodes
         run:  |
           mkdir -p sources/ena-taxonomy
@@ -85,7 +85,7 @@ jobs:
     runs-on:  self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run:  git pull
       - name: Get latest tolids
         run:  |
           mkdir -p sources/tolids
