@@ -9,17 +9,15 @@ env:
 on: workflow_dispatch
 
 jobs:
-  check-health:
+  pull-docker:
     runs-on:  self-hosted
     steps:
-      - name: Check es health
-        run:  curl -s "http://es1:9200/_cat/health"
       - name: Get dockers
         run:  docker pull genomehubs/genomehubs:latest
 
   get-ncbi-datasets:
     needs:
-      - check-health
+      - pull-docker
     runs-on:  self-hosted
     steps:
       - name: Checkout
