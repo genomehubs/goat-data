@@ -11,13 +11,14 @@ jobs:
   check-health:
     runs-on:  self-hosted
     steps:
-    - name: Check es health
-      run:  curl -s "http://es1:9200/_cat/health"
-    - name: Get dockers
-      run:  docker pull genomehubs/genomehubs:latest
+      - name: Check es health
+        run:  curl -s "http://es1:9200/_cat/health"
+      - name: Get dockers
+        run:  docker pull genomehubs/genomehubs:latest
 
   get-ncbi-datasets:
-    needs:    check-health
+    needs:
+      - check-health
     runs-on:  self-hosted
     steps:
       - name: Checkout
@@ -44,7 +45,9 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
 
   get-refseq-organelles:
-    needs:    check-health
+    needs:
+      - check-health
+      - get-ncbi-datasets
     runs-on:  self-hosted
     steps:
       - name: Checkout
@@ -59,7 +62,10 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
 
   get-ena-taxonomy-extra:
-    needs:    check-health
+    needs:
+      - check-health
+      - get-ncbi-datasets
+      - get-refseq-organelles
     runs-on:  self-hosted
     steps:
       - name: Checkout
