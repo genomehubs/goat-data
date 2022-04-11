@@ -86,7 +86,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Get extra ENA taxonomy nodes
+      - name: Get latest tolids
         run:  |
           mkdir -p sources/tolids
           cd sources/tolids
