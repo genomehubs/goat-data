@@ -65,7 +65,7 @@ jobs:
           resulttaxon.tax_tree2759.tsv ena-taxonomy.extra.prev.jsonl \
           ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.tsv \
           ena-taxonomy.extra.curr.jsonl
-        git add ena-taxonomy.extra.json.gz
+        git add ena-taxonomy.extra.jsonl.gz
         git commit -m "update $RELEASE"
         git push
         cd   ../../
