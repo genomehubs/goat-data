@@ -1,6 +1,9 @@
 name: init_index_fill
 # Assumes that get_ncbi_ena_tolids_daily.yml workflow has been run by a cron job
 
+env:
+  RELEASE: 2022.04.11
+
 on: workflow_dispatch
 
 jobs:
@@ -54,6 +57,12 @@ jobs:
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --assembly-dir sources/assembly-data"
+      - name: Snapshot initassembly
+        run: |
+          curl -X DELETE "es1:9200/_snapshot/snapshots/initassembly_${RELEASE}" || exit 0
+          curl -X PUT    "es1:9200/_snapshot/snapshots/initassembly_${RELEASE}?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
   genomehubs-index-ott:
     needs:
@@ -89,6 +98,12 @@ jobs:
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/tolids \
                 --taxon-lookup any --taxon-spellcheck"
+      - name: Snapshot initassembly_otttolids
+        run: |
+          curl -X DELETE "es1:9200/_snapshot/snapshots/initassembly_otttolids_${RELEASE}" || exit 0
+          curl -X PUT    "es1:9200/_snapshot/snapshots/initassembly_otttolids_${RELEASE}?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
   genomehubs-fill:
     needs:
@@ -107,3 +122,9 @@ jobs:
                 --config-file sources/goat.yaml \
                 --traverse-root 2759 \
                 --traverse-infer-both"
+      - name: Snapshot initassembly_otttolids_fill
+        run: |
+          curl -X DELETE "es1:9200/_snapshot/snapshots/initassembly_otttolids_fill_${RELEASE}" || exit 0
+          curl -X PUT    "es1:9200/_snapshot/snapshots/initassembly_otttolids_fill_${RELEASE}?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
