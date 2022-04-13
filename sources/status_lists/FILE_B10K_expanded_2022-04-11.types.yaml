@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: EBPN_expanded_2022-03-28.tsv
-  source: Ole K. Tørresen - University of Oslo
-  source_date: 2022-02-10
+  name: B10K_expanded_2022-04-11.tsv
+  source: B10K Spreadsheet
+  source_date: 2021-10-26
 attributes:
   long_list:
     header: long_list
@@ -25,21 +25,19 @@ attributes:
     header: sample_acquired
     type: keyword
   in_progress:
-    header: data_generation
+    header: in_progress
     type: keyword
   insdc_open:
-    header: insdc_open
+    header: insdc_submitted     
     type: keyword
   published:
-    header: published
+    header: insdc_submitted     
     type: keyword
 taxonomy:
-  taxon_id:
-    header: NCBI_taxon_id
-  genus:
-    header: Genus
   species:
-    index: [2, 3]
+    header: Species_name
+  subspecies:
+    header: [Species_name, Subspecies]
     join: " "
   family:
-    header: family
+    header: Family

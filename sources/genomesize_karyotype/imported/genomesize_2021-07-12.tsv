@@ -7122,7 +7122,9 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 4329	NA	Chordata	Vertebrata	Aves	Passeriformes	Corvidae	Aphelocoma coerulescens coerulescens	Florida scrub jay	1.56	NA	FCM	RBC	GD	503
 4426	NA	Chordata	Vertebrata	Aves	Passeriformes	Hirundinidae	Hirundo rupestris	Crag martin	1.25	NA	FD	RBC	GD	529
 4626	NA	Chordata	Vertebrata	Aves	Passeriformes	Thraupidae	Tiaris obscurus	Dull-coloured grassquit	1.3	NA	FIA	RBC	GD	711
+4678	NA	Chordata	Vertebrata	Aves	Passeriformes	Tyrannidae	Empidonax sp.	Traills flycatcher	1.17	NA	FIA	RBC	GD	675
 6815	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Ambassidae	Ambassis elongatus	Yellowfin glassfish	0.56	NA	FIA	RBC	BS, GD, OM, RP	204
+6826	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Apogonidae	Apogon poecilopterus	Pearly-finned cardinalfish	0.97	NA	FIA	RBC	BS, GD, OM, RP	204
 6879	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Callionymidae	Callionymus limiceps	Rough-headed dragonet	1.02	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 6892	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Carangidae	Elegatis bipinnulata	Rainbow runner	0.71	NA	FIA	RBC	BS, GD, OM, RP	204
 6973	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Haplochromis longirostris	N/A	1.1	NA	BFA	RBC	SP	216
@@ -7200,6 +7202,8 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2553	NA	Mollusca	NA	Gastropoda	Patellogastropoda	Acmaeidae	Collisella digitalis	Ribbed limpet	0.61	NA	BFA	S	SP	217
 2555	NA	Mollusca	NA	Gastropoda	Patellogastropoda	Acmaeidae	Collisella paradigitalis	Limpet	0.58	NA	BFA	S	SP	217
 2556	NA	Mollusca	NA	Gastropoda	Patellogastropoda	Acmaeidae	Collisella scabra	Rough limpet	0.57	NA	BFA	S	SP	217
+2896	NA	Annelida	NA	Polychaeta	Phyllodocida	Hesionidae	Kefersteinia sp.	Polychaete	0.2	NA	FD	WB	MM	146
+3046	NA	Annelida	NA	Polychaeta	Phyllodocida	Hesionidae	Kefersteinia sp.	Polychaete	0.2	NA	FD	WB	MM	146
 2898	NA	Annelida	NA	Polychaeta	Phyllodocida	Hesionidae	Ophiodromus obscurus	Polychaete	1.6	NA	FD	WB	V	95
 3048	NA	Annelida	NA	Polychaeta	Phyllodocida	Hesionidae	Ophiodromus obscurus	Polychaete	1.6	NA	FD	WB	V	95
 2567	NA	Mollusca	NA	Gastropoda	Stylommatophora	Helicidae	Helix vulgaris	Snail	4	NA	FCM	LV	RT	540

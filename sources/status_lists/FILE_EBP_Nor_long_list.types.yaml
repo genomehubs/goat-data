@@ -24,9 +24,6 @@ attributes:
   sample_acquired:
     header: sample_acquired
     type: keyword
-  in_progress:
-    header: in_progress
-    type: keyword
   insdc_open:
     header: insdc_open
     type: keyword

@@ -644,6 +644,7 @@ taxon_id	input	rank	suggested
 398331	Lentithecium arundinaceum	species	Setoseptoria arundinacea
 2664510	Leptographium abietinum	species	Grosmannia abietina
 187512	Leptostroma pinorum	species	Lophodermium conigenum
+101486	Leptostromella graminis	species	Phyllachora graminis
 411561	Leucogyrophana lichenicola	species	Penttilamyces lichenicola
 1574094	Leucopaxillus macrocephalus	species	Pogonoloma macrocephalum
 1663179	Leucopaxillus rhodoleucus	species	Pseudoclitopilus rhodoleucus
@@ -931,8 +932,6 @@ taxon_id	input	rank	suggested
 3560	Chenopodium rubrum	species	Oxybasis rubra
 1072212	Chenopodium chenopodioides	species	Oxybasis chenopodioides
 244509	Chenopodium glaucum	species	Oxybasis glauca
-376799	Atriplex portulacoides	species	Halimione portulacoides
-240063	Atriplex pedunculata	species	Halimione pedunculata
 145752	Lavatera cretica	species	Malva linnaei
 181254	Dorycnium pentaphyllum	species	Lotus dorycnium
 118937	Tetragonolobus maritimus	species	Lotus maritimus
@@ -942,6 +941,7 @@ taxon_id	input	rank	suggested
 1155247	Alchemilla minima	species	Alchemilla filicaulis
 36606	Sorbus domestica	species	Cormus domestica
 691236	Sorbus intermedia	species	Scandosorbus intermedia
+2906878	Sorbus aria	species	Aria edulis
 2914000	Sorbus torminalis	species	Torminalis glaberrima
 203015	Sedum rosea	species	Rhodiola rosea
 91097	Sedum telephium	species	Hylotelephium telephium
@@ -1010,7 +1010,6 @@ taxon_id	input	rank	suggested
 247365	Harpalus tenebrosus	species	Cryptophonus tenebrosus
 1710568	Lebia scapularis	species	Lebia solea
 107863	Hydaticus transversalis	species	Prodaticus transversalis
-359458	Thereva bipunctata	species	Irwiniella frontata
 2755262	Exochomus nigromaculatus	species	Parexochomus nigromaculatus
 1223722	Rhyacophila septentrionis	species	Rhyacophila fasciata
 446513	Mystacides azurea	species	Mystacides azureus
@@ -1365,6 +1364,7 @@ taxon_id	input	rank	suggested
 1641916	Camilla glabra	species	Drosophila glabra
 77771	Drosophila confusa	species	Hirtodrosophila confusa
 414252	Cerodontha hammi	species	Cerodontha incisa
+2882661	Napomyza lateralis	species	Phytomyza lateralis
 498668	Phytomyza aquilegiae	species	Phytomyza minuscula
 572248	Phebellia nigripalpis	species	Prooppia nigripalpis
 113122	Norellisoma opacum	species	Norellia liturata
@@ -3109,6 +3109,7 @@ taxon_id	input	rank	suggested
 378272	Porotheleum friesii	species	Irpex rosettiformis
 81048	Postia balsamea	species	Oligoporus balsameus
 1338681	Postia floriformis	species	Spongiporus floriformis
+2697058	Postia hibernica	species	Cystidiopostia hibernica
 1046361	Postia leucomallella	species	Fuscopostia leucomallella
 290186	Postia subcaesia	species	Cyanosporus subcaesius
 1333645	Postia undosa	species	Osteina undosa
@@ -3662,7 +3663,6 @@ taxon_id	input	rank	suggested
 650190	Petractis nodispora	species	Neopetractis nodispora
 116135	Favonius quercus	species	Hypaurotis quercus
 425645	Calidris falcinellus	species	Limicola falcinellus
-228306	Larvivora cyane	species	Luscinia cyane
 2175297	Trionymus isfarensis	species	Saccharicoccus isfarensis
 1295211	Trionymus tomlini	species	Trionymus perrisii
 1269710	Microgaster subcompleta	species	Microgaster subcompletus
@@ -3746,7 +3746,6 @@ taxon_id	input	rank	suggested
 221862	Pleioplana atomata	species	Notoplana atomata
 67583	Foviella affinis	species	Procerodes littoralis
 1006793	Dercitus (Dercitus) bucklandi	species	Dercitus bucklandi
-1006804	Nethea amygdaloides	species	Poecillastra amygdaloides
 237119	Axinella brondstedi	species	Axinella verrucosa
 942672	Halicnemia verticillata	species	Hymeraphia verticillata
 1336808	Clathria (Microciona) armata	species	Clathria armata
@@ -4203,7 +4202,6 @@ taxon_id	input	rank	suggested
 198322	Baizongia pistaceae	species	Baizongia pistaciae
 527747	Macrosiphum daphinidis	species	Macrosiphum daphnidis
 51992	Myzus (Nectarosiphon) antirrhinii	species	Myzus antirrhinii
-1835304	Dimophora evanialis	species	Zabrachypus primus
 473338	Anagrus parvus	species	Anagrus ustulatus
 54492	Zapornia pusilla	species	Porzana pusilla
 216193	Curruca communis	species	Sylvia communis
