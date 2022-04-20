@@ -7,7 +7,7 @@ attributes:
       scale: log10
     constraint:
       max: 200
-      min: 0
+      min: 0.001
     description: 1C value
     display_level: 1
     display_name: C value
@@ -207,7 +207,7 @@ attributes:
       count: 10
       scale: log10
     constraint:
-      min: 0
+      min: 1000000
     description: Genome size
     display_name: Genome size
     display_level: 1
@@ -228,7 +228,7 @@ attributes:
       count: 10
       scale: log10
     constraint:
-      min: 0
+      min: 1000000
     description: Genome size estimate from kmers
     display_level: 1
     display_name: Genome size kmer
@@ -247,7 +247,7 @@ attributes:
       count: 10
       scale: log10
     constraint:
-      min: 0
+      min: 1000000
     description: Genome size estimate from draft assembly
     display_level: 1
     display_name: Genome size draft
