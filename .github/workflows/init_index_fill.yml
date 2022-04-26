@@ -2,7 +2,7 @@ name: init_index_fill
 # Assumes that get_ncbi_ena_tolids_daily.yml workflow has been run by a cron job
 
 env:
-  RELEASE: 2022.04.11
+  RELEASE: 2022.04.26
 
 on: workflow_dispatch
 
