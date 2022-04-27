@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir -p resources/taxdump
           rm -rf resources/taxdump/*
-          curl -X DELETE "es1:9200/*"
+          curl -s -X DELETE "es1:9200/*"
       - name: Run genomehubs init
         run: |
           docker run --rm --network=host \
@@ -59,8 +59,8 @@ jobs:
                 --assembly-dir sources/assembly-data"
       - name: Snapshot initassembly
         run: |
-          curl -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly" || exit 0
-          curl -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
       - name: Run docker genomehubs index ott3.3
@@ -86,8 +86,8 @@ jobs:
                 --taxon-lookup any --taxon-spellcheck"
       - name: Snapshot initassembly_otttolids
         run: |
-          curl -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids" || exit 0
-          curl -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
       - name: Run docker genomehubs index genomesizekaryotype
@@ -103,8 +103,8 @@ jobs:
                 --taxon-lookup any --taxon-spellcheck"
       - name: Snapshot initassembly_otttolids_gensizekaryo
         run: |
-          curl -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
-          curl -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
       - name: Run docker genomehubs index regional_lists
@@ -151,8 +151,8 @@ jobs:
                 --assembly-dir sources/btk"
       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm
         run: |
-          curl -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
-          curl -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
       - name: Run docker genomehubs index status_lists
@@ -168,8 +168,8 @@ jobs:
                 --taxon-lookup any --taxon-spellcheck"
       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status
         run: |
-          curl -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
-          curl -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
@@ -191,7 +191,7 @@ jobs:
                 --traverse-infer-both"
       - name: Snapshot fill
         run: |
-          curl -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
-          curl -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
