@@ -21,9 +21,9 @@ jobs:
     runs-on:  self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref }}
       - name: Download NCBI datasets executable
         run: |
           curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > datasets
@@ -43,8 +43,13 @@ jobs:
       - name: Clean up expanded zip
         run: |
             rm -rf sources/assembly-data/ncbi_dataset datasets
-      - name: Commit changes if needed
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit files if needed
+        run: |
+          git commit -m "Add changes" -a || exit 0
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.ref }}
 
   get-refseq-organelles:
     needs:
@@ -53,17 +58,22 @@ jobs:
     runs-on:  self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref }}
       - name: Run docker genomehubs parse --refseq-organelles
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:latest bash -c \
             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
-      - name: Commit changes if needed
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit files if needed
+        run: |
+          git commit -m "Add changes" -a || exit 0
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.ref }}
 
   get-ena-taxonomy-extra:
     needs:
@@ -71,9 +81,9 @@ jobs:
     runs-on:  self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref }}
       - name: Get extra ENA taxonomy nodes
         run:  |
           mkdir -p sources/ena-taxonomy
@@ -84,8 +94,13 @@ jobs:
             ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.tsv \
             ena-taxonomy.extra.curr.jsonl
           cd ../../
-      - name: Commit changes if needed
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit files if needed
+        run: |
+          git commit -m "Add changes" -a || exit 0
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.ref }}
 
   get-tolids:
     needs:
@@ -93,13 +108,18 @@ jobs:
     runs-on:  self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref }}
       - name: Get latest tolids
         run:  |
           mkdir -p sources/tolids
           curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
           | gzip -c > sources/tolids/tolids.tsv.gz
-      - name: Commit changes if needed
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit files if needed
+        run: |
+          git commit -m "Add changes" -a || exit 0
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.ref }}
