@@ -41,11 +41,9 @@ jobs:
             genomehubs/genomehubs:latest bash -c \
             "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
       - name: Clean up expanded zip
-        run: |
-            rm -rf sources/assembly-data/ncbi_dataset datasets
+        run:  rm -rf sources/assembly-data/ncbi_dataset datasets
       - name: Commit files if needed
-        run: |
-          git commit -m "Add changes" -a || exit 0
+        run:  git commit -m "Add changes" -a || exit 0
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
@@ -68,8 +66,7 @@ jobs:
             genomehubs/genomehubs:latest bash -c \
             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
       - name: Commit files if needed
-        run: |
-          git commit -m "Add changes" -a || exit 0
+        run:  git commit -m "Add changes" -a || exit 0
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
@@ -95,8 +92,7 @@ jobs:
             ena-taxonomy.extra.curr.jsonl
           cd ../../
       - name: Commit files if needed
-        run: |
-          git commit -m "Add changes" -a || exit 0
+        run:  git commit -m "Add changes" -a || exit 0
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
@@ -117,8 +113,7 @@ jobs:
           curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
           | gzip -c > sources/tolids/tolids.tsv.gz
       - name: Commit files if needed
-        run: |
-          git commit -m "Add changes" -a || exit 0
+        run:  git commit -m "Add changes" -a || exit 0
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
