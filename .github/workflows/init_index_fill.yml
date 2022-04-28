@@ -110,28 +110,28 @@ jobs:
   #         curl -s -X PUT    "es1:9200/_snapshot/snapshots/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
   #           -H 'Content-Type: application/json' \
   #           -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
-  #     - name: Run docker genomehubs index regional_lists
-  #       run: |
-  #         docker run --rm --network=host \
-  #           -v `pwd`/sources:/genomehubs/sources \
-  #           genomehubs/genomehubs:latest bash -c \
-  #             "genomehubs index \
-  #               --es-host http://es1:9200 \
-  #               --taxonomy-source ncbi \
-  #               --config-file sources/goat.yaml \
-  #               --taxon-dir sources/regional_lists \
-  #               --taxon-lookup any --taxon-spellcheck"
-  #     - name: Run docker genomehubs index uk_legislation
-  #       run: |
-  #         docker run --rm --network=host \
-  #           -v `pwd`/sources:/genomehubs/sources \
-  #           genomehubs/genomehubs:latest bash -c \
-  #             "genomehubs index \
-  #               --es-host http://es1:9200 \
-  #               --taxonomy-source ncbi \
-  #               --config-file sources/goat.yaml \
-  #               --taxon-dir sources/uk_legislation \
-  #               --taxon-lookup any --taxon-spellcheck"
+      - name: Run docker genomehubs index regional_lists
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/regional_lists \
+                --taxon-lookup any --taxon-spellcheck"
+      - name: Run docker genomehubs index uk_legislation
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/uk_legislation \
+                --taxon-lookup any --taxon-spellcheck"
       - name: Run docker genomehubs parse btk
         run: |
           docker run --rm --network=host \
