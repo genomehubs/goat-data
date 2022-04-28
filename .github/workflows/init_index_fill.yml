@@ -135,10 +135,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:latest bash -c \
               "genomehubs parse \
-                --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml"
+                --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
       - name: Run docker genomehubs index btk assemblies
         run: |
           docker run --rm --network=host \
