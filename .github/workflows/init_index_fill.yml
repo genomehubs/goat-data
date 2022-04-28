@@ -138,6 +138,11 @@ jobs:
             genomehubs/genomehubs:latest bash -c \
               "genomehubs parse \
                 --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
+      - name: Add ES index.mapping.nested_objects.limit 100000
+        run:  |
+          curl -X PUT "http://localhost:9200/taxon--ncbi--goat--$VERSION/_settings" \
+            -H 'Content-Type: application/json' \
+            -d '{ "index.mapping.nested_objects.limit" : 100000 }'
       - name: Run docker genomehubs index btk assemblies
         run: |
           docker run --rm --network=host \
