@@ -24,7 +24,8 @@ jobs:
     needs:
       - check-health
     runs-on:  self-hosted
-  #   steps:
+    steps:
+      - run: echo "No init steps as continuing from genomehubs parse --btk"
   #     - name: Clean taxdump folder and delete indices
   #       run: |
   #         mkdir -p resources/taxdump
