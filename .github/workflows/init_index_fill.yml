@@ -20,10 +20,10 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-  # genomehubs-init:
-  #   needs:
-  #     - check-health
-  #   runs-on:  self-hosted
+  genomehubs-init:
+    needs:
+      - check-health
+    runs-on:  self-hosted
   #   steps:
   #     - name: Clean taxdump folder and delete indices
   #       run: |
@@ -44,11 +44,11 @@ jobs:
   #               --taxonomy-ncbi-root 2759 \
   #               --taxon-preload"
 
-  # genomehubs-index:
-  #   needs:
-  #     - genomehubs-init
-  #   runs-on:  self-hosted
-  #   steps:
+  genomehubs-index:
+    needs:
+      - genomehubs-init
+    runs-on:  self-hosted
+    steps:
   #     - name: Run docker genomehubs index --assembly-data
   #       run: |
   #         docker run --rm --network=host \
