@@ -8,7 +8,7 @@ attributes:
       scale: log2
     constraint:
       max: 2000
-      min: 0
+      min: 1
     description: Chromosome number
     display_level: 1
     display_name: Chromosome number
@@ -29,7 +29,7 @@ attributes:
       scale: log2
     constraint:
       max: 2000
-      min: 0
+      min: 1
     description: Haploid number
     display_level: 1
     display_name: Haploid number
@@ -59,7 +59,7 @@ attributes:
       scale: linear
     constraint:
       max: 200
-      min: 0
+      min: 1
     description: Ploidy
     display_level: 2
     display_name: Ploidy

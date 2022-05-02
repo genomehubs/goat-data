@@ -1,0 +1,43 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: B10K_expanded_2022-04-11.tsv
+  source: B10K Spreadsheet
+  source_date: 2021-10-26
+attributes:
+  long_list:
+    header: long_list
+    type: keyword
+  other_priority:
+    header: other_priority
+    type: keyword
+  family_representative:
+    header: family_representative
+    type: keyword
+  sequencing_status:
+    header: sequencing_status
+    type: keyword
+  sample_collected:
+    header: sample_collected
+    type: keyword
+  sample_acquired:
+    header: sample_acquired
+    type: keyword
+  in_progress:
+    header: in_progress
+    type: keyword
+  insdc_open:
+    header: insdc_submitted     
+    type: keyword
+  published:
+    header: insdc_submitted     
+    type: keyword
+taxonomy:
+  species:
+    header: Species_name
+  subspecies:
+    header: [Species_name, Subspecies]
+    join: " "
+  family:
+    header: Family

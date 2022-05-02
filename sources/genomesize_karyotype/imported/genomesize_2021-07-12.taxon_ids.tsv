@@ -204,8 +204,8 @@ taxon_id	input	rank
 27403	Bosmina longirostris	species
 77716	Eurycercus glacialis	species
 302197	Ceriodaphnia reticulata	species
-qbCteMagn	Ctenodaphnia magna	species
-qbCteSimi	Ctenodaphnia similis	species
+#qbCteMagn	Ctenodaphnia magna	species
+#qbCteSimi	Ctenodaphnia similis	species
 77756	Daphnia ambigua	species
 121628	Daphnia arenata	species
 247388	Daphnia catawba	species
@@ -226,7 +226,7 @@ qbCteSimi	Ctenodaphnia similis	species
 77711	Holopedium gibberum	species
 77707	Leptodora kindtii	species
 1917103	Ilyocryptus sordidus	species
-qbMacHirs	Macrothrix hirsuticornis	species
+#qbMacHirs	Macrothrix hirsuticornis	species
 77662	Polyphemus pediculus	species
 77656	Sida crystallina	species
 202087	Lynceus brachyurus	species
@@ -360,7 +360,7 @@ qbMacHirs	Macrothrix hirsuticornis	species
 2305247	Cypris pubera	species
 425018	Heterocypris incongruens	species
 2853943	Sarscypridopsis aculeata	species
-qoCypMarg	Cyprois marginata	species
+#qoCypMarg	Cyprois marginata	species
 399045	Notodromas monacha	species
 72036	Lepeophtheirus salmonis	species
 120882	Pseudosquilla ciliata	species
@@ -436,7 +436,7 @@ qoCypMarg	Cyprois marginata	species
 298093	Callosobruchus phaseoli	species
 298094	Callosobruchus subinnotatus	species
 1971280	Cassida bergeali	species
-icCasHemi	Cassida hemisphaerica	species
+#icCasHemi	Cassida hemisphaerica	species
 1971281	Cassida leucanthemi	species
 1654392	Cassida pannonica	species
 294607	Cassida rubiginosa	species
@@ -449,7 +449,7 @@ icCasHemi	Cassida hemisphaerica	species
 75504	Chrysolina affinis	species
 75506	Chrysolina americana	species
 111535	Chrysolina aurichalcea	species
-icChrBank	Chrysolina banksi	species
+#icChrBank	Chrysolina banksi	species
 75509	Chrysolina carnifex	species
 75521	Chrysolina herbacea	species
 75529	Chrysolina peregrina	species
@@ -911,7 +911,7 @@ icChrBank	Chrysolina banksi	species
 297830	Aphelinus abdominalis	species
 2890793	Aphelinus atriplicis	species
 1041456	Aphelinus certus	species
-iyAphDauc	Aphelinus daucicola	species
+#iyAphDauc	Aphelinus daucicola	species
 163154	Aphelinus hordei	species
 1118584	Aphelinus kurdjumovi	species
 2840465	Aphelinus rhamni	species
@@ -4586,7 +4586,7 @@ iyAphDauc	Aphelinus daucicola	species
 273048	Arenicola cristata	species
 51294	Capitella capitata	species
 167831	Notomastus latericeus	species
-wuEucColl	Euclymene collaris	species
+#wuEucColl	Euclymene collaris	species
 570263	Rhynchoscolex simplex	species
 570252	Stenostomum arevaloi	species
 2880247	Stenostomum brevipharyngium	species
@@ -4605,7 +4605,7 @@ wuEucColl	Euclymene collaris	species
 1118983	Pentapora fascialis	species
 1443271	Schizobrachiella sanguinea	species
 544679	Schizoporella errata	species
-tzTurMagn	Turbicellepora magnicostata	species
+#tzTurMagn	Turbicellepora magnicostata	species
 67896	Cristatella mucedo	species
 349672	Fredericella sultana	species
 361475	Lophopodella carteri	species
@@ -4840,7 +4840,7 @@ tzTurMagn	Turbicellepora magnicostata	species
 328598	Lepidonotus sublevis	species
 418334	Odontosyllis fulgurans	species
 1045422	Parapionosyllis elegans	species
-wpPlaBrev	Plakosyllis brevipes	species
+#wpPlaBrev	Plakosyllis brevipes	species
 418353	Sphaerosyllis pirifera	species
 1045436	Syllis prolifera	species
 1917099	Asplanchna priodonta	species
@@ -4896,7 +4896,7 @@ wpPlaBrev	Plakosyllis brevipes	species
 1311880	Castrella pinguis	species
 1311980	Dalyellia viridis	species
 57450	Bothromesostoma sp.	species
-hrMesEhre	Mesostoma ehrenbergii	species
+#hrMesEhre	Mesostoma ehrenbergii	species
 297415	Olisthanella truncula	species
 297429	Strongylostoma elongatum	species
 1311918	Strongylostoma radiatum	species
@@ -4931,7 +4931,7 @@ hrMesEhre	Mesostoma ehrenbergii	species
 316166	Agalma elegans	species
 168775	Physalia physalis	species
 13268	Solemya velum	species
-wdPriMalm	Prionospio malmgreni	species
+#wdPriMalm	Prionospio malmgreni	species
 666329	Cinachyrella alloclada	species
 6279	Brugia malayi	species
 6282	Onchocerca volvulus	species
@@ -4961,7 +4961,7 @@ wdPriMalm	Prionospio malmgreni	species
 39786	Polycelis nigra	species
 27898	Crenobia alpina	species
 39785	Polycelis felina	species
-hrUteVulg	Uteriporus vulgaris	species
+#hrUteVulg	Uteriporus vulgaris	species
 6325	Bursaphelenchus mucronatus	species
 344371	Hemicycliophora conida	species
 874381	Betulodera betulae	species
@@ -5282,7 +5282,9 @@ hrUteVulg	Uteriporus vulgaris	species
 39617	Aphelocoma coerulescens	species
 317151	Ptyonoprogne rupestris	species
 2724891	Asemospiza obscura	species
+1897772	Empidonax sp.	species
 1379489	Ambassis elongata	species
+2746913	Jaydia poeciloptera	species
 1972138	Repomucenus limiceps	species
 173324	Elagatis bipinnulata	species
 281265	Prognathochromis longirostris	species
@@ -5346,6 +5348,7 @@ hrUteVulg	Uteriporus vulgaris	species
 225159	Lottia digitalis	species
 142882	Lottia paradigitalis	species
 225169	Lottia scabra	species
+2046818	Kefersteinia sp.	species
 1622186	Oxydromus obscurus	species
 1616901	Helix albescens	species
 67583	Procerodes littoralis	species

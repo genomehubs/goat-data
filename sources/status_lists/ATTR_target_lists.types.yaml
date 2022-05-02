@@ -15,6 +15,7 @@ attributes:
         - eurofish
         - gaga
         - squalomix
+        - metainvert
         - vgp
         - agi
         - arg
@@ -22,7 +23,7 @@ attributes:
         - gbr
         - omg
         - tsi
-    header: long_list
+        - b10k
     summary: list
     traverse: list
     traverse_direction: up
@@ -43,6 +44,7 @@ attributes:
         - eurofish
         - gaga
         - squalomix
+        - metainvert
         - vgp
         - agi
         - arg
@@ -50,7 +52,7 @@ attributes:
         - gbr
         - omg
         - tsi
-    header: long_list
+        - b10k
     summary: list
     traverse: list
     traverse_direction: up
@@ -58,7 +60,6 @@ attributes:
   family_representative:
     display_group: target_lists
     display_level: 2
-    constraint:
     constraint:
       enum:
         - asg
@@ -72,6 +73,7 @@ attributes:
         - eurofish
         - gaga
         - squalomix
+        - metainvert
         - vgp
         - agi
         - arg
@@ -79,7 +81,7 @@ attributes:
         - gbr
         - omg
         - tsi
-    header: long_list
+        - b10k
     summary: list
     traverse: list
     traverse_direction: up

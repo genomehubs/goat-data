@@ -6,12 +6,6 @@ file:
   source: Mark Blaxter, Darwin Tree of Life
   source_date: 2021-03-03
 attributes:
-  chromosome_number:
-    header: "Chromosome_number"
-    separator:
-      - ","
-      - "-"
-    type: short
   haploid_number:
     header: "female_haploid_K"
     separator:
