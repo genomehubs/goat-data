@@ -1,12 +1,12 @@
 name: get_ncbi_ena_tolids_daily
 on:
   schedule:
-    # Runs "at 5 min past midnight" (see https://crontab.guru)
-    - cron: '5 0 * * *'
+    # Runs "at 10 min past midnight" (see https://crontab.guru)
+    - cron: '10 0 * * *'
 
 jobs:
-  get_ncbi_ena_tolids
-    runs-on:  self-hosted
+  get_ncbi_ena_tolids:
+    runs-on: self-hosted
     steps:
       - name: Get dockers
         run:  docker pull genomehubs/genomehubs:latest
