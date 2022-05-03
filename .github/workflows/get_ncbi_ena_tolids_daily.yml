@@ -1,8 +1,8 @@
 name: get_ncbi_ena_tolids_daily
 on:
   schedule:
-    # Runs "at 10 min past midnight" (see https://crontab.guru)
-    - cron: '10 0 * * *'
+    # Runs "at 0:13am" (see https://crontab.guru)
+    - cron: '13 0 * * *'
 
 jobs:
   get_ncbi_ena_tolids:
