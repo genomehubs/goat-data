@@ -1,8 +1,9 @@
 name: get_ncbi_ena_tolids_daily
 on:
-  schedule:
-    # Runs "at 0:13am" (see https://crontab.guru)
-    - cron: '13 0 * * *'
+  workflow_dispatch
+#   schedule:
+#     # Runs "at 0:15am" (see https://crontab.guru)
+#     - cron: '15 0 * * *'
 
 jobs:
   get_ncbi_ena_tolids:
