@@ -1,8 +1,8 @@
 name: get_ncbi_ena_tolids_daily
-on:
-  schedule:
-    # Runs "at 5 min past midnight" (see https://crontab.guru)
-    - cron: '5 0 * * *'
+on: workflow_dispatch
+  # schedule:
+  #   # Runs "at 5 min past midnight" (see https://crontab.guru)
+  #   - cron: '5 0 * * *'
 
 jobs:
   get_ncbi_ena_tolids
