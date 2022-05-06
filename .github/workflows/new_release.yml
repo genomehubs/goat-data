@@ -249,7 +249,7 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          branch: ${{ github.ref }}
+          branch: ${{ env.RELEASE }}
 
       - name: Run docker genomehubs fill
         run: |
