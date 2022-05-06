@@ -488,7 +488,6 @@ taxon_id	input	rank
 1833961	Boletus bresinskyanus	species
 #gfBolCalo	Boletus calopus	species
 36056	Boletus edulis	species
-318600	Boletus ferrugineus	species
 1355218	Boletus miniato-olivaceus	species
 1354906	Boletus morrisii	species
 57192	Boletus pinophilus	species
@@ -505,7 +504,6 @@ taxon_id	input	rank
 80637	Coniophora puteana	species
 2798786	Gastroboletus valdivianus	species
 5393	Gomphidius glutinosus	species
-186656	Gomphidius maculatus	species
 132918	Gomphidius roseus	species
 1581014	Gymnopaxillus morchelliformis	species
 85971	Gyrodon lividus	species
@@ -802,7 +800,7 @@ taxon_id	input	rank
 2028077	Heimioporus betula	species
 1661727	Aureoboletus projectellus	species
 1354919	Xerocomellus armeniacus	species
-36058	Xerocomus badius	species
+#gfBolBadu	Boletus badius	species
 1354920	Xerocomellus chrysenteron	species
 178454	Butyriboletus fechtneri	species
 537024	Exsudoporus frostii	species

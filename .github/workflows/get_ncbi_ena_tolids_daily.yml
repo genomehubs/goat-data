@@ -5,8 +5,8 @@ on: workflow_dispatch
   #   - cron: '5 0 * * *'
 
 jobs:
-  get_ncbi_ena_tolids
-    runs-on:  self-hosted
+  get_ncbi_ena_tolids:
+    runs-on: self-hosted
     steps:
       - name: Get dockers
         run:  docker pull genomehubs/genomehubs:latest
