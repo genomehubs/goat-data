@@ -5,7 +5,7 @@ attributes:
     display_group: metrics
     display_level: 1
     index: 8
-    source: NCBI Organelle Genome Resources
+    source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
     taxon_bins:
       count: 10
@@ -29,7 +29,7 @@ attributes:
     display_group: metrics
     display_level: 1
     index: 9
-    source: NCBI Organelle Genome Resources
+    source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
     taxon_bins:
       count: 10
@@ -50,7 +50,7 @@ attributes:
     display_group: misc
     display_level: 2
     index: 11
-    source: NCBI Organelle Genome Resources
+    source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
     type: date
   n_percent:
@@ -60,7 +60,7 @@ attributes:
     display_group: metrics
     display_level: 1
     index: 10
-    source: NCBI Organelle Genome Resources
+    source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
     type: 2dp
     units: '%'
@@ -68,7 +68,7 @@ attributes:
     display_group: misc
     display_level: 2
     index: 12
-    source: NCBI Organelle Genome Resources
+    source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
     taxon_display_group: '{{organelle}}_assembly'
     taxon_display_level: 2
@@ -82,7 +82,7 @@ file:
   format: tsv
   header: true
   name: refseq_organelles.tsv.gz
-  source: NCBI Organelle Genome Resources
+  source: NCBI
   source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
 identifiers:
   assembly_id:
