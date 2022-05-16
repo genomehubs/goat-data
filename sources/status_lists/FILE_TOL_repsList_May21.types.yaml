@@ -1,0 +1,25 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: ToL_repsLists_May21_2022-05-13.tsv
+  source: Samples Working Groups, Darwin Tree of Life
+  source_date: 2021-05-20
+attributes:
+  long_list:
+    header: long_list
+    type: keyword
+  family_representative:
+    header: family_representative
+    type: keyword
+  other_priority:
+    header: other_priority
+    type: keyword
+taxonomy:
+  species:
+    index: [1, 2]
+    join: " "
+  genus:
+    header: gen
+  family:
+    header: fam
