@@ -121,13 +121,13 @@ jobs:
 #             -H 'Content-Type: application/json' \
 #             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
-  genomehubs_index_attributes:
+#   genomehubs_index_attributes:
 #     needs: genomehubs_init
-    runs-on:  self-hosted
-    steps:
+#     runs-on:  self-hosted
+#     steps:
 
-      - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+#       - name: Get bash release name
+#         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
 #       - name: Run docker genomehubs index ott3.3
 #         run: |
@@ -157,94 +157,94 @@ jobs:
 #             -H 'Content-Type: application/json' \
 #             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
-      - name: Run docker genomehubs index genomesizekaryotype
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs index \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --taxon-dir sources/genomesize_karyotype \
-                --taxon-lookup any --taxon-spellcheck"
-      - name: Snapshot initassembly_otttolids_gensizekaryo
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
-      - name: Run docker genomehubs index regional_lists
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs index \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --taxon-dir sources/regional_lists \
-                --taxon-lookup any --taxon-spellcheck"
-      - name: Run docker genomehubs index uk_legislation
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs index \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --taxon-dir sources/uk_legislation \
-                --taxon-lookup any --taxon-spellcheck"
+#       - name: Run docker genomehubs index genomesizekaryotype
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             genomehubs/genomehubs:latest bash -c \
+#               "genomehubs index \
+#                 --es-host http://es1:9200 \
+#                 --taxonomy-source ncbi \
+#                 --config-file sources/goat.yaml \
+#                 --taxon-dir sources/genomesize_karyotype \
+#                 --taxon-lookup any --taxon-spellcheck"
+#       - name: Snapshot initassembly_otttolids_gensizekaryo
+#         run: |
+#           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
+#           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
+#             -H 'Content-Type: application/json' \
+#             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+#       - name: Run docker genomehubs index regional_lists
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             genomehubs/genomehubs:latest bash -c \
+#               "genomehubs index \
+#                 --es-host http://es1:9200 \
+#                 --taxonomy-source ncbi \
+#                 --config-file sources/goat.yaml \
+#                 --taxon-dir sources/regional_lists \
+#                 --taxon-lookup any --taxon-spellcheck"
+#       - name: Run docker genomehubs index uk_legislation
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             genomehubs/genomehubs:latest bash -c \
+#               "genomehubs index \
+#                 --es-host http://es1:9200 \
+#                 --taxonomy-source ncbi \
+#                 --config-file sources/goat.yaml \
+#                 --taxon-dir sources/uk_legislation \
+#                 --taxon-lookup any --taxon-spellcheck"
 
-      - name: Run docker genomehubs parse btk
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs parse \
-                --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
+#       - name: Run docker genomehubs parse btk
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             genomehubs/genomehubs:latest bash -c \
+#               "genomehubs parse \
+#                 --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
 
-      - name: Add ES index.mapping.nested_objects.limit 100000
-        run:  |
-          curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
-            -H 'Content-Type: application/json' \
-            -d '{ "index.mapping.nested_objects.limit" : 100000 }'
+#       - name: Add ES index.mapping.nested_objects.limit 100000
+#         run:  |
+#           curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
+#             -H 'Content-Type: application/json' \
+#             -d '{ "index.mapping.nested_objects.limit" : 100000 }'
 
-      - name: Run docker genomehubs index btk assemblies
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs index \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --assembly-dir sources/btk"
-      - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+#       - name: Run docker genomehubs index btk assemblies
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             genomehubs/genomehubs:latest bash -c \
+#               "genomehubs index \
+#                 --es-host http://es1:9200 \
+#                 --taxonomy-source ncbi \
+#                 --config-file sources/goat.yaml \
+#                 --assembly-dir sources/btk"
+#       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm
+#         run: |
+#           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
+#           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
+#             -H 'Content-Type: application/json' \
+#             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
-      - name: Run docker genomehubs index status_lists
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs index \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --taxon-dir sources/status_lists \
-                --taxon-lookup any --taxon-spellcheck"
-      - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+#       - name: Run docker genomehubs index status_lists
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             genomehubs/genomehubs:latest bash -c \
+#               "genomehubs index \
+#                 --es-host http://es1:9200 \
+#                 --taxonomy-source ncbi \
+#                 --config-file sources/goat.yaml \
+#                 --taxon-dir sources/status_lists \
+#                 --taxon-lookup any --taxon-spellcheck"
+#       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status
+#         run: |
+#           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
+#           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
+#             -H 'Content-Type: application/json' \
+#             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
 #   genomehubs_index_files:
 #     needs: genomehubs_index_attributes
@@ -279,31 +279,31 @@ jobs:
 #         with:
 #           branch: ${{ env.RELEASE }}
 
-#   genomehubs_fill:
+  genomehubs_fill:
 #     needs: genomehubs_index_files
-#     runs-on:  self-hosted
-#     steps:
+    runs-on:  self-hosted
+    steps:
 
-#       - name: Get bash release name
-#         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+      - name: Get bash release name
+        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
-#       - name: Run docker genomehubs fill
-#         run: |
-#           docker run --rm --network=host \
-#             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
-#               "genomehubs fill \
-#                 --es-host http://es1:9200 \
-#                 --taxonomy-source ncbi \
-#                 --config-file sources/goat.yaml \
-#                 --traverse-root 2759 \
-#                 --traverse-infer-both"
-#       - name: Snapshot fill
-#         run: |
-#           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files_fill" || exit 0
-#           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files_fill?wait_for_completion=true&pretty" \
-#             -H 'Content-Type: application/json' \
-#             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+      - name: Run docker genomehubs fill
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs fill \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --traverse-root 2759 \
+                --traverse-infer-both"
+      - name: Snapshot fill
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files_fill?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
 #       - name: Snapshot final fill to production
 #         run: |
