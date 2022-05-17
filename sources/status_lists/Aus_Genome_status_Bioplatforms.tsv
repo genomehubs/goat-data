@@ -15,12 +15,15 @@ ARG	Lampropholis	delicata	eugongylus	Scincidae	316451	in_progress	ARG	ARG	ARG	ot
 ARG	Pogona	vitticeps	NA	Agamidae	103695	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
 ARG	Pseudemoia	entrecasteauxii	NA	Scincidae	223249	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
 ARG	Saiphos	equalis	NA	Scincidae	172942	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
-ARG	Phyllurus	nephtys	NA	Pygopoidae	NA	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
+ARG	Phyllurus	nephtys	NA	Pygopoidae	NA					other_priority	ARG	ARG
 ARG	Hydrophis	major	NA	Hydrophiidae	355693	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
 ARG	Carettochelys	insculpta	NA	Carettochelyidae	44489	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
 ARG	Chelodina	expansa	NA	Chelidae	665104	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
-ARG	Cophixalus	australis	NA	Microhylidae	NA	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
+ARG	Cophixalus	australis	NA	Microhylidae	NA					other_priority	ARG	ARG
 ARG	Rheobatrachus	silus	NA	Rheobatrachidae	326985	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
+ARG	Rheobatrachus	vitellinus	NA	Rheobatrachidae	NA	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
+ARG	Pseudophryne	occidentalis	NA	Myobatrachidae	1338023	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG
+ARG	Heteronotia	binoei	NA	Gekkonidae	13085					other_priority	ARG	ARG
 AGI	Themeda	triandra	NA	Poaceae	106636	in_progress	AGI	AGI	AGI	other_priority	AGI	AGI
 GAP	Acacia	pycnantha	NA	Fabaceae	880440	in_progress	GAP	GAP	GAP	other_priority	GAP	GAP
 GAP	Telopea	speciosissima	NA	Proteaceae	54955	in_progress	GAP	GAP	GAP	other_priority	GAP	GAP
@@ -87,8 +90,8 @@ TSI	Pardalotus	quadragintus	NA	Pardalotidae	1931069					other_priority	TSI	TSI
 TSI	Lathamus	discolor	NA	Psittacidae	678569					other_priority	TSI	TSI
 TSI	Dasyurus	geoffroii	NA	Dasyuridae	63143					other_priority	TSI	TSI
 TSI	NA	NA	NA	NA	NA	in_progress	TSI	TSI	TSI	other_priority	TSI	TSI
-TSI	Pezoporus	wallicus	NA	Psittacidae	35540					other_priority	TSI	TSI
-TSI	Pezoporus	flaviventris	NA	Psittacidae	889875					other_priority	TSI	TSI
+TSI	Pezoporus	wallicus	wallicus	Psittacidae	35540					other_priority	TSI	TSI
+TSI	Pezoporus	wallicus	flaviventris	Psittacidae	889875					other_priority	TSI	TSI
 TSI	Banksia	cuneata	NA	Proteaceae	83699					other_priority	TSI	TSI
 GAP	Triticum	aestivum	NA	Poaceae	4565	in_progress	GAP	GAP	GAP	other_priority	GAP	GAP
 GAP	vitis	vinifera	subs vinifera cv chardonnay	Vitaceae	29760	in_progress	GAP	GAP	GAP	other_priority	GAP	GAP
