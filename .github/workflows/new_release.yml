@@ -122,7 +122,7 @@ jobs:
 #             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
   genomehubs_index_attributes:
-    needs: genomehubs_init
+#     needs: genomehubs_init
     runs-on:  self-hosted
     steps:
 
