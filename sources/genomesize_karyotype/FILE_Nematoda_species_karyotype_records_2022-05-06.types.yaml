@@ -2,7 +2,7 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: Nematoda_species_karyotype_records_2021-07-12.tsv
+  name: Nematoda_species_karyotype_records_2022-05-06.tsv
   source: Mark Blaxter, Darwin Tree of Life
   source_date: 2021-03-03
 attributes:
@@ -13,6 +13,8 @@ attributes:
       - "-"
     type: short
   sex_determination:
+    translate:
+      hp: "haplodiploid"
     header: "sex_determination_mechanism"
     separator:
       - "/"
