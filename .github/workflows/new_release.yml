@@ -13,7 +13,7 @@ jobs:
       - name: Get dockers
         run:  |
           docker pull genomehubs/genomehubs:latest
-          docker run --rm -it genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
     
 #   update_ncbi_ena_tolids:
 #     runs-on:  self-hosted
