@@ -77,7 +77,7 @@ taxon_id	input	rank	suggested
 178871	Polycoccum marmoratum	species	Pisolithus marmoratus
 178872	Polycoccum microcarpum	species	Pisolithus microcarpus
 2081385	Rhabdospora lupinii	species	Rhabdospora lupini
-1351432	Septoria astragali	species	Septoria astralagi
+1351432	Septoria astragali	species	Septoria sp. 'astralagi'
 1329199	Septoria cisti	species	Septoria cirsii
 446915	Septoria menyanthis	species	Septoria oenanthis
 1198103	Septoria scutellariae	species	Septoria stellariae
@@ -133,7 +133,6 @@ taxon_id	input	rank	suggested
 599325	Merismodes ochracea	species	Melissodes ochraea
 1117156	Moniliella acetoabutans	species	Moniliella acetoabutens
 91739	Mycena agrestis	species	Aricia agestis
-71904	Mycena clavularis	species	Mycena clavicularis
 2820540	Mycena farrea	species	Ahlbergia ferrea
 1924115	Mycena nucicola	species	Mycena nivicola
 68801	Odontia sulphurea	species	Dentocorticium sulphurellum
@@ -179,7 +178,6 @@ taxon_id	input	rank	suggested
 1197372	Micarea parva	species	Minaria parva
 2713048	Rhizocarpon ferax	species	Rhizocarpon furax
 200981	Rhizocarpon laevatum	species	Rhizocarpon lavatum
-	Rhizocarpon ridescens	species	rhizocarpon rubescens	rhodocarpon rufescens
 2126609	Rimularia mullensis	species	Ligularia muliensis
 267812	Rinodina occulta	species	Pertusaria oculata
 192176	Usnea dasypoga	species	Usnea dasopoga
@@ -345,6 +343,7 @@ taxon_id	input	rank	suggested
 2836843	Phytobia errans	species	Phytomia errans
 498689	Phytomyza ranunculicola	species	Phytomyza ranunculivora
 498688	Phytomyza rapunculi	species	Phytomyza ranunculi
+2882705	Platypalpus divisus	species	Platypalpus vividus
 1446193	Platypalpus ecalceatus	species	Platypalpus calceatus
 2725521	Polyodaspis sulcicolis	species	Polyodaspis sulcicollis
 2882739	Procladius simplicistylis	species	Procladius simplicistylus
@@ -352,7 +351,7 @@ taxon_id	input	rank	suggested
 511112	Rhaphium auctum	species	Pesotum aureum
 	Rhamphomyia tarsata	species	rhamphomyia barbata
 1231557	Rymosia acta	species	Ormosia arborea
-	Rymosia affinis	species	ormosia affinis	drymonia affinis
+	Rymosia affinis	species	drymonia affinis	ormosia affinis
 1231565	Rymosia bifida	species	Ormosia nitida
 1824977	Scaptomyza vittata	species	Poecilolycia vittata
 1918184	Smittia amoena	species	Smidtia amoena
@@ -363,6 +362,7 @@ taxon_id	input	rank	suggested
 1155462	Tethina grisea	species	Exorista rustica
 903472	Thalassomya frauenfeldi	species	Thalassomyia frauenfeldi
 1088292	Thereva inornata	species	Theretra inornata
+377534	Thrypticus divisus	species	Argyra argyria
 1285112	Trichonta fragilis	species	Columnea tenella
 316471	Villa venusta	species	Viola sacchalinensis
 2886778	Xenopelopia falcigera	species	Telopelopia fascigera
@@ -448,7 +448,6 @@ taxon_id	input	rank	suggested
 468723	Psilus frontalis	species	Dioctria rufipes
 2107781	Psilus fuscipennis	species	Dysmachus fuscipennis
 1727121	Pteromalus dispar	species	Acaenacis lausus
-2922075	Rhorus extirpatorius	species	Rhorus exstirpatorius
 206924	Sinophorus costalis	species	Sarophorus costatus
 640692	Tetramesa elongata	species	Tetracera oblongata
 245885	Torymus pulchellus	species	Toramus pulchellus
@@ -511,7 +510,7 @@ taxon_id	input	rank	suggested
 48718	Isotomurus trifasciatus	species	Isotomurus unifasciatus
 2926732	Protaphorura bicampata	species	Protaphorura tricampata
 1817608	Bradya furcata	species	Bradysia nervosa
-656152	Caligus minimus	species	Calcinus minutus
+114070	Caligus minimus	species	Calanus sinicus
 862522	Caligus tenuis	species	Calamus tenuis
 1765884	Centropages kroeyeri	species	Centropages kroyeri
 422159	Cletodes spinulatus	species	Aleiodes apiculatus
@@ -555,6 +554,7 @@ taxon_id	input	rank	suggested
 199560	Eylais hamata	species	Haplosyllis spongicola
 691542	Feltria subterranea	species	Agrotis subterranea
 119153	Harpactea hombergi	species	Harpactea hombergii
+280703	Lebertia dubia	species	Pichonia dubia
 1907025	Opilio canestrini	species	Opilio canestrinii
 926819	Piona carnea	species	Pinna carnea
 1264953	Sabacon viscayanum	species	Sabacon viscayanus
@@ -695,7 +695,6 @@ taxon_id	input	rank	suggested
 326605	Aeolosoma variegatum	species	Cirrospilus variegatus
 2878864	Neoamphitrite edwardsi	species	Neoamphitrite edwardsii
 103589	Clymenura borealis	species	Stenella clymene
-2922066	Euclymene lumbricoides	species	Euclymene lombricoides
 2602920	Anadara gibbosa	species	Anadara globosa
 246754	Donax semistriatus	species	Donax semiestriatus
 163058	Ervilia purpurea	species	Nervilia plicata
@@ -716,7 +715,6 @@ taxon_id	input	rank	suggested
 429272	Marsenina glabra	species	Marsdenia glabra
 	Nassarius elatus	species	nassarius velatus
 1273237	Pseudosetia turgida	species	Eatonina fulgida
-2849247	Skenea rugulosa	species	Svenzea tubulosa
 582797	Tenellia genovae	species	Terellia zerovae
 321064	Thesbia nana	species	Apotreubia nana
 2594867	Theodoxus schultzi	species	Theodoxus schultzii
@@ -793,6 +791,7 @@ taxon_id	input	rank	suggested
 1587214	Cryptophagus schmidtii	species	Cryptophagus schmidti
 381601	Bagous brevis	species	Puntius brevis
 298148	Bagous lutosus	species	Bagous limosus
+1342067	Orchestes iota	species	Orchestes jota
 2584144	Pseudophloeophagus aeneopiceus	species	Pseudophloeophagus aenopiceus
 1553731	Scolytus ratzeburgi	species	Scolytus ratzeburgii
 1588514	Trachyphloeus scabricul	species	Trachyphloeus scabriculus
@@ -875,6 +874,7 @@ taxon_id	input	rank	suggested
 1045592	Cotesia risilis	species	Cotesia tibialis
 54539	Trichomma intermedium	species	Tricholoma intermedium
 1667496	Eriborus dorsalis	species	Dolichomitus terebrans
+904094	Cryptus minator	species	Ischnus inquisitorius
 1550550	Gambrus ornatus	species	Parthenope longimanus
 1045616	Mesoleptidea stallii	species	Mesoleptidea stalii
 605254	Campodorus flavescens	species	Camponotus flavescens

@@ -903,6 +903,7 @@ taxon_id	input	rank	suggested
 2484223	Toninia diffracta	species	Thalloidima diffractum
 2480772	Toninia fusispora	species	Toniniopsis aromatica
 161837	Toninia opuntioides	species	Thalloidima opuntioides
+2480739	Toninia physaroides	species	Thalloidima physaroides
 161841	Toninia rosulata	species	Thalloidima rosulatum
 93110	Toninia sedifolia	species	Thalloidima sedifolium
 161849	Toninia verrucarioides	species	Toniniopsis verrucarioides
@@ -1117,6 +1118,7 @@ taxon_id	input	rank	suggested
 1661792	Melanospora fusispora	species	Microthecium fusisporum
 1940567	Melanconium juglandinum	species	Juglanconis juglandina
 2075149	Melanamphora spinifera	species	Melogramma spiniferum
+280754	Metacordyceps chlamydosporia	species	Pochonia chlamydosporia
 186337	Microascus albonigrescens	species	Acaulium albonigrescens
 561152	Microascus brevicaulis	species	Scopulariopsis brevicaulis
 1651239	Microascus chartarum	species	Microascus chartarus
@@ -1296,7 +1298,6 @@ taxon_id	input	rank	suggested
 1436886	Sclerotinia homoeocarpa	species	Clarireedia homoeocarpa
 2496072	Skyttea tephromelarum	species	Skyttea elachistophora
 103884	Sphaeropsis candollei	species	Hyponectria buxi
-38492	Stromatinia cepivora	species	Sclerotium cepivorum
 186293	Tapesia cinerella	species	Mollisia cinerella
 186294	Tapesia fusca	species	Mollisia fusca
 2075156	Tapesia lividofusca	species	Mollisia lividofusca
@@ -1380,7 +1381,6 @@ taxon_id	input	rank	suggested
 355579	Leiodes oblonga	species	Anisotoma humeralis
 1586545	Leptura rufa	species	Stictoleptura trisignata
 2824085	Limoniscus violaceus	species	Gambrinus violaceus
-227480	Lochmaea caprea	species	Lochmaea capreae
 1588193	Meligethes brunnicornis	species	Lamiogethes brunnicornis
 1895325	Meligethes erythropus	species	Genistogethes carinulatus
 1553815	Meligethes haemorrhoidalis	species	Lamiogethes haemorrhoidalis
@@ -2019,7 +2019,6 @@ taxon_id	input	rank	suggested
 257370	Caligus coryphaenae	species	Caligus elongatus
 389310	Monstrilla longicornis	species	Monstrilla clavata
 1042268	Sarsamphiascus tenuiremis	species	Amphiascus tenuiremis
-1332849	Scaphocalanus curtus	species	Scaphocalanus similis
 2592937	Stenhelia pygmaea	species	Haloschizopera pygmaea
 298441	Trochicola enterica	species	Trochicola entericus
 1005064	Ampelisca eschrichti	species	Ampelisca eschrichtii
@@ -2906,7 +2905,6 @@ taxon_id	input	rank	suggested
 426095	Chelidonichthys lastoviza	species	Trigloporus lastoviza
 495836	Squalus uyato	species	Centrophorus uyato
 54492	Zapornia pusilla	species	Porzana pusilla
-1365152	Alauda leucoptera	species	Melanocorypha leucoptera
 215310	Alaudala rufescens	species	Calandrella rufescens
 216193	Curruca communis	species	Sylvia communis
 216225	Curruca hortensis	species	Sylvia hortensis
@@ -3365,6 +3363,7 @@ taxon_id	input	rank	suggested
 2494355	Pseudovalsa lanciformis	species	Coryneum lanciforme
 1230097	Cytospora ferruginea	species	Cytospora leucostoma
 1230083	Leucostoma niveum	species	Valsa nivea
+280754	Diheterospora chlamydosporia	species	Pochonia chlamydosporia
 45235	Cordyceps canadensis	species	Tolypocladium capitatum
 87730	Cordyceps myrmecophila	species	Ophiocordyceps myrmecophila
 29852	Diplocladium minus	species	Hypomyces aurantius
