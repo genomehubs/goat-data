@@ -2,8 +2,8 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: Cartilaginous_target_list.tsv
-  source: Kun Wang
+  name: CFGP_expanded_2022-05-10.tsv
+  source: Kun Wang, School of Ecology and Environment, Northwestern Polytechnical University, China
   source_date: 2021-10-26
 attributes:
   long_list:
@@ -15,13 +15,24 @@ attributes:
   family_representative:
     header: family_representative
     type: keyword
+  sequencing_status:
+    header: sequencing_status
+    type: keyword
+  sample_collected:
+    header: sample_collected
+    type: keyword
+  sample_acquired:
+    header: sample_acquired
+    type: keyword
+  in_progress:
+    header: in_progress
+    type: keyword
+  insdc_open:
+    header: insdc_open
+    type: keyword
+  published:
+    header: published
+    type: keyword
 taxonomy:
-  genus:
-    header: Genus
-  species:
-    index: [1, 2]
-    join: " "
-  family:
-    header: family
   taxon_id:
     header: NCBI_taxon_id

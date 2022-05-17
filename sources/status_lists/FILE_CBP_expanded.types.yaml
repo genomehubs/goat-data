@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: CBP_expanded_2022-02-15.tsv
+  name: CBP_expanded_2022-05-13.tsv
   source: CBP Pilot Montserrat Corominas
-  source_date: 2022-02-07
+  source_date: 2021-07-22
 attributes:
   long_list:
     header: long_list
@@ -17,12 +17,6 @@ attributes:
     type: keyword
   sequencing_status:
     header: sequencing_status
-    translate:
-      Sample located: sample_collected
-      data_generation: in_progress
-      assembly: in_progress
-      in_assembly: in_progress
-      insdc_submitted: in_progress
     type: keyword
   sample_collected:
     header: sample_collected
@@ -41,11 +35,11 @@ attributes:
     type: keyword
 taxonomy:
   taxon_id:
-    header: number_ncbi_taxon_id
+    header: NCBI_taxon_id
   genus:
-    header: genus
+    header: Genus
   species:
-    index: [1, 2]
+    index: [2, 3]
     join: " "
   family:
     header: family
