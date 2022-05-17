@@ -8,31 +8,24 @@ file:
 attributes:
   long_list:
     header: long_list
-    type: keyword
   other_priority:
     header: other_priority
-    type: keyword
   family_representative:
     header: family_representative
-    type: keyword
   sequencing_status:
     header: sequencing_status
-    type: keyword
+  sequencing_status_erga:
+    header: sequencing_status
   sample_collected:
     header: sample_collected
-    type: keyword
   sample_acquired:
     header: sample_acquired
-    type: keyword
   in_progress:
     header: in_progress
-    type: keyword
   insdc_open:
     header: insdc_open
-    type: keyword
   published:
     header: published
-    type: keyword
 taxonomy:
   taxon_id:
     header: NCBI_taxon_id

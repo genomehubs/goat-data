@@ -9,27 +9,26 @@ file:
 attributes:
   family_representative:
     header: family_representative
-    type: keyword
     separator:
       - ","
   sequencing_status:
     header: sequencing_status_simple
-    type: keyword
+    separator:
+      - ","
+  sequencing_status_dtol:
+    header: sequencing_status_simple
     separator:
       - ","
   sample_collected:
     header: sample_collected
-    type: keyword
     separator:
       - ","
   sample_acquired:
     header: sample_acquired
-    type: keyword
     separator:
       - ","
   in_progress:
     header: in_progress
-    type: keyword
     separator:
       - ","
   sample_collected_by:
@@ -42,7 +41,6 @@ attributes:
       UNIVERSITY OF OXFORD: OXF
     header: submitted_gals
     separator: ","
-    type: keyword
 taxonomy:
   taxon_id:
     header: taxon_id

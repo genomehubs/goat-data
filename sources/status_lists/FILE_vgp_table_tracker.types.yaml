@@ -19,28 +19,32 @@ attributes:
       7-asm_curated: in_progress
       8-NCBI: insdc_open
     header: status
-    type: keyword
+  sequencing_status_vgp:
+    translate:
+      0-data_queued: sample_acquired
+      1-DNA_isolation: in_progress
+      2-data_progress: in_progress
+      3-data_done: in_progress
+      4-asm_progress: in_progress
+      5-asm_done: in_progress
+      6-asm_curation: in_progress
+      7-asm_curated: in_progress
+      8-NCBI: insdc_open
+    header: status
   long_list:
     header: sample_collected
-    type: keyword
   other_priority:
     header: other_priority
-    type: keyword
   sample_collected:
     header: sample_collected
-    type: keyword
   sample_acquired:
     header: sample_acquired
-    type: keyword
   in_progress:
     header: in_progress
-    type: keyword
   insdc_open:
     header: insdc_open
-    type: keyword
   published:
     header: published
-    type: keyword
 taxonomy:
   taxon_id:
     header: taxon_id

@@ -8,25 +8,20 @@ file:
 attributes:
   long_list:
     header: long_list
-    type: keyword
   other_priority:
     header: other_priority
-    type: keyword
   family_representative:
     header: family_representative
-    type: keyword
   sequencing_status:
     header: sequencing_status
-    type: keyword
+  sequencing_status_endemixit:
+    header: sequencing_status
   sample_collected:
     header: sample_collected
-    type: keyword
   sample_acquired:
     header: sample_acquired
-    type: keyword
   in_progress:
     header: in_progress
-    type: keyword
 taxonomy:
   genus:
     header: Genus

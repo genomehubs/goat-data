@@ -9,13 +9,12 @@ file:
 attributes:
   sequencing_status:
     header: sequencing_status
-    type: keyword
+  sequencing_status_dtol:
+    header: sequencing_status
   sample_collected:
     header: sample_collected
-    type: keyword
   sample_collected_by:
     header: sample_collected_by
-    type: keyword
 taxonomy:
   phylum:
     header: phylum
