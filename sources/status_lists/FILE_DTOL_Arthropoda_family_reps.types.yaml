@@ -1,0 +1,32 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: DTOL_Arthropoda_family_reps_expanded_2022-05-17.tsv
+  source: DTOL Arthropod Samples Working Group and NHM
+  source_date: 2022-05-17
+attributes:
+  long_list:
+    header: long_list
+    type: keyword
+  family_representative:
+    header: family_representative
+    type: keyword
+  sample_collected:
+    header: sample_collected
+    type: keyword
+  sample_collected_by:
+    index: [6, 7, 8]
+    join: ","
+    translate:
+      NOT COLLECTED: ""
+    separator:
+      - ","
+    type: keyword
+taxonomy:
+  species:
+    header: SPECIES
+  family:
+    header: FAMILY
+  order:
+    header: ORDER
