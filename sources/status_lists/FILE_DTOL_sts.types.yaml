@@ -11,27 +11,27 @@ attributes:
     header: family_representative
     type: keyword
     separator:
-      - ", "
+      - ","
   sequencing_status:
     header: sequencing_status_simple
     type: keyword
     separator:
-      - ", "
+      - ","
   sample_collected:
     header: sample_collected
     type: keyword
     separator:
-      - ", "
+      - ","
   sample_acquired:
     header: sample_acquired
     type: keyword
     separator:
-      - ", "
+      - ","
   in_progress:
     header: in_progress
     type: keyword
     separator:
-      - ", "
+      - ","
   sample_collected_by:
     translate:
       MARINE BIOLOGICAL ASSOCIATION: MBA
@@ -41,7 +41,7 @@ attributes:
       SANGER INSTITUTE: SAN
       UNIVERSITY OF OXFORD: OXF
     header: submitted_gals
-    separator: ", "
+    separator: ","
     type: keyword
 taxonomy:
   taxon_id:
