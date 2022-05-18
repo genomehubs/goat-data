@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Get dockers
         run:  |
-          docker pull genomehubs/genomehubs:latest
+          docker pull genomehubs/genomehubs:develop
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
     
 #   update_ncbi_ena_tolids:
@@ -41,7 +41,7 @@ jobs:
 #         run: |
 #           docker run --rm --network=host \
 #             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
+#             genomehubs/genomehubs:develop bash -c \
 #             "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
 #       - name: Clean up expanded ncbi datasets zip
 #         run:  rm -rf sources/assembly-data/ncbi_dataset datasets
@@ -49,7 +49,7 @@ jobs:
 #         run: |
 #           docker run --rm --network=host \
 #             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
+#             genomehubs/genomehubs:develop bash -c \
 #             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
 #       - name: Get extra ENA taxonomy nodes
 #         run:  |
@@ -88,8 +88,6 @@ jobs:
 
 #       - name: Check es health
 #         run:  curl -s "http://es1:9200/_cat/health"
-#       - name: Get dockers
-#         run:  docker pull genomehubs/genomehubs:latest
 
 #       - name: Clean taxdump folder and delete indices and snapshots for that release
 #         run: |
@@ -102,7 +100,7 @@ jobs:
 #           docker run --rm --network=host \
 #             -v `pwd`/sources:/genomehubs/sources \
 #             -v /volumes/docker/resources:/genomehubs/resources \
-#             genomehubs/genomehubs:latest bash -c \
+#             genomehubs/genomehubs:develop bash -c \
 #               "genomehubs init \
 #                 --es-host http://es1:9200 \
 #                 --taxonomy-source ncbi \
@@ -114,7 +112,7 @@ jobs:
 #         run: |
 #           docker run --rm --network=host \
 #             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
+#             genomehubs/genomehubs:develop bash -c \
 #               "genomehubs index \
 #                 --es-host http://es1:9200 \
 #                 --taxonomy-source ncbi \
@@ -141,7 +139,7 @@ jobs:
 #         run: |
 #           docker run --rm --network=host \
 #             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
+#             genomehubs/genomehubs:develop bash -c \
 #               "genomehubs index \
 #                 --es-host http://es1:9200 \
 #                 --taxonomy-source ncbi \
@@ -151,7 +149,7 @@ jobs:
 #         run: |
 #           docker run --rm --network=host \
 #             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
+#             genomehubs/genomehubs:develop bash -c \
 #               "genomehubs index \
 #                 --es-host http://es1:9200 \
 #                 --taxonomy-source ncbi \
@@ -169,7 +167,7 @@ jobs:
 #         run: |
 #           docker run --rm --network=host \
 #             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:latest bash -c \
+#             genomehubs/genomehubs:develop bash -c \
 #               "genomehubs index \
 #                 --es-host http://es1:9200 \
 #                 --taxonomy-source ncbi \
@@ -187,7 +185,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -198,7 +196,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -210,7 +208,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs parse \
                 --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
 
@@ -224,7 +222,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -241,7 +239,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -268,7 +266,7 @@ jobs:
 #           docker run --rm --network=host \
 #             -v `pwd`/sources:/genomehubs/sources \
 #             -v /volumes/docker/resources:/genomehubs/resources \
-#             genomehubs/genomehubs:latest bash -c \
+#             genomehubs/genomehubs:develop bash -c \
 #               "genomehubs index \
 #                 --es-host http://es1:9200 \
 #                 --taxonomy-source ncbi \
@@ -303,7 +301,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs fill \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
