@@ -127,15 +127,15 @@ jobs:
 #             -H 'Content-Type: application/json' \
 #             -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
 
-  genomehubs_index_attributes:
-    needs:
-      - get_dockers
+#   genomehubs_index_attributes:
+#     needs:
+#       - get_dockers
 #       - genomehubs_init
-    runs-on:  self-hosted
+#     runs-on:  self-hosted
   
-    steps:
-      - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+#     steps:
+#       - name: Get bash release name
+#         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
 #       - name: Run docker genomehubs index ott3.3
 #         run: |
