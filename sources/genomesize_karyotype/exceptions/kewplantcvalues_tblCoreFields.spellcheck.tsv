@@ -11,6 +11,7 @@ taxon_id	input	rank	suggested
 1640868	Arisarum proboscidium	species	Arisarum proboscideum
 3704	Armoracia lapatifolia	species	Armoracia rusticana
 422315	Arrhenechtites mixta	species	Arrhenechthites mixta
+55769	Bromus bonariensis	species	Bromus lanceolatus
 629273	Bromus macranthus	species	Bromus pictus
 172644	Broussonetia payprifera	species	Broussonetia papyrifera
 398446	Avena nudi-brevis	species	Avena brevis
@@ -42,6 +43,7 @@ taxon_id	input	rank	suggested
 357476	Papaver ruprifragum	species	Papaver rupifragum
 53089	Paphiopedilum godefroye	species	Paphiopedilum godefroyae
 364694	Peraxilla tetrasepala	species	Peraxilla tetrapetala
+999236	Petunia parodii	species	Peronia peronii
 82020	Scilla pushkinioides	species	Fessia puschkinioides
 82021	Scilla vvendenskyi	species	Fessia vvedenskyi
 409907	Phaseolus geophillus	species	Macroptilium panduratum
@@ -84,8 +86,10 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 137163	Selaginella pallescans	species	Selaginella pallescens
 519570	Marattia purpurescens	species	Ptisana purpurascens
 41971	Loxsoma cunninghami	species	Loxsoma cunninghamii
+	Nephrolepis cordifolia 'Duffi'	subspecies	nephrolepis cordifolia duffii
 34165	Nephrolepis exsaltata	species	Nephrolepis exaltata
 208984	Pseudoleskella catenulata	species	Pseudoleskeella catenulata
+	Thuidium philbertii	species	thuidium philibertii
 184640	Cirrhiphyllum piliferum	species	Cirriphyllum piliferum
 167990	Pterostyrax psilophylla	species	Pterostyrax psilophyllus
 1160865	Calibrachoa ericaefolia	species	Calibrachoa ericifolia
@@ -113,6 +117,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 85370	Lilium euxanthum	species	Lilium leucanthum
 	Paeonia broteroi	species	paeonia broteri	pavonia berteroi
 400870	Philodendron pinnatafidum 	species	Philodendron pinnatifidum
+361561	Trillium luteum         	species	Trifolium aureum
 82491	Trillium rivale 	species	Trillium nivale
 378697	Passiflora giberti	species	Passiflora gibertii
 295152	Gasteria pendulifolia	species	Guatteria australis
@@ -139,7 +144,6 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 165363	Teesdalia nudicalis	species	Teesdalia nudicaulis
 159435	Passiflora marifloia	species	Passiflora morifolia
 38785	Arabidopsis arensosa	species	Arabidopsis arenosa
-2862462	Salvia brachyodon	species	Salvia brachyodonta
 585829	Iris nelsonii	species	Iris wilsonii
 91067	Aeonium tabulaeforme	species	Aeonium tabuliforme
 91093	Greenovia dodrendalis	species	Aeonium dodrantale
@@ -147,7 +151,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 243141	Lotus mascaënsis	species	Lotus mascaensis
 109149	Tinguarra cervariaefolia	species	Athamanta cervariifolia
 1027787	Artemisia ledeebouriana	species	Artemisia ledebouriana
-	Festuca degenii	species	festuca regelii	festuca meyenii
+	Festuca degenii	species	festuca meyenii	festuca regelii
 116550	Festuca drymeia	species	Festuca drymeja
 2056049	Festuca eggleri	species	Festuca engleri
 98750	Festuca guestfalica	species	Festuca ovina
@@ -232,6 +236,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 1094120	Colchicum steveni	species	Colchicum stevenii
 1155345	Minuartia hybridia	species	Sabulina tenuifolia
 81770	Muscari pinardi	species	Leopoldia comosa
+2941613	Ophrys sintenesii	species	Ophrys sintenisii
 2782	Gracilariopsis lemanieformis	species	Gracilariopsis lemaneiformis
 796888	Laxmannia squarroa	species	Laxmannia squarrosa
 273599	Protea gaguedii	species	Protea gaguedi
