@@ -351,5 +351,5 @@ jobs:
 
       - name: rsync production snapshot to edinburgh prod
         run: |
-          rsync -av --delete  /volumes/docker/snapshots/production/production-$RELEASE goat:/volumes/docker/snapshots/
-          rsync -av --delete  /volumes/docker/resources/files                          goat:/volumes/docker/resources/files
+          rsync -av --delete  /volumes/docker/snapshots/production/production-$RELEASE goat:/volumes/docker/snapshots/production/
+          rsync -av --delete  /volumes/docker/resources/files                          goat:/volumes/docker/resources/
