@@ -93,12 +93,24 @@ jobs:
       - name: Check es health
         run:  curl -s "http://es1:9200/_cat/health"
 
+      - name: Create dev snapshot repo if it doesn't exist
+        run: |
+          curl -s -X PUT "es1:9200/_snapshot/dev" \
+            -H 'Content-Type: application/json' \
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/dev" } }' || exit 0
+
+      - name: Create production-RELEASE snapshot repo if it doesn't exist
+        run: |
+          curl -s -X PUT "es1:9200/_snapshot/production-$RELEASE" \
+            -H 'Content-Type: application/json' \
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/production-'$RELEASE'" } }' || exit 0
+
       - name: Clean taxdump folder and delete indices and snapshots for that release
         run: |
           mkdir -p resources/taxdump
           rm -rf resources/taxdump/*
           curl -s -X DELETE "es1:9200/*"
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}*"
+          curl -s -X DELETE "es1:9200/_snapshot/dev/*"
       - name: Run genomehubs init
         run: |
           docker run --rm --network=host \
@@ -127,7 +139,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
   genomehubs_index_attributes:
     needs:
@@ -165,7 +177,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
       - name: Run docker genomehubs index genomesizekaryotype
         run: |
@@ -183,7 +195,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
       - name: Run docker genomehubs index regional_lists
         run: |
@@ -237,7 +249,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
       - name: Run docker genomehubs index status_lists
         run: |
@@ -255,7 +267,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
   genomehubs_index_files:
     needs:
@@ -280,17 +292,17 @@ jobs:
                 --file-metadata sources/btk/btk.files.yaml"
       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_analysis_file?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+            -d' { "indices": "analysis*,file*", "include_global_state":false}'
+      - name: Snapshot files to production-$RELEASE
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_analysis_file?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "analysis*,file*", "include_global_state":false}'
 
-      - name: Commit files if needed
-        run:  git commit -m "Add changes" -a || exit 0
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          branch: ${{ env.RELEASE }}
 
   genomehubs_fill:
     needs:
@@ -315,19 +327,29 @@ jobs:
                 --traverse-infer-both"
       - name: Snapshot fill
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files_fill" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files_fill?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
-
-      - name: Snapshot final fill to production
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
+    
+      - name: Snapshot final fill to production-$RELEASE
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/production/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files_fill" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/production/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files_fill?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "*--'$RELEASE'", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
-      - name: rsync files and production snapshot to edinburgh prod
+  rsync_to_edin_prod:
+    needs:
+      - genomehubs_index_files
+      - genomehubs_fill
+    runs-on:  self-hosted
+    steps:
+
+      - name: Get bash release name
+        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+
+      - name: rsync production snapshot to edinburgh prod
         run: |
-          rsync -av --delete  /volumes/docker/snapshots/production/* goat:/volumes/docker/snapshots/$RELEASE/
-          rsync -av --delete  /volumes/docker/resources/             goat:/volumes/docker/resources/
+          rsync -av --delete  /volumes/docker/snapshots/production/production-$RELEASE goat:/volumes/docker/snapshots/
+          rsync -av --delete  /volumes/docker/resources/files                          goat:/volumes/docker/resources/files
