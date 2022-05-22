@@ -20,6 +20,8 @@ attributes:
     join: ","
     translate:
       NOT COLLECTED: ""
+      WW: OXF
+      WYTHAM: OXF
     separator:
       - ","
     type: keyword

@@ -48,6 +48,12 @@ attributes:
     traverse: list
     traverse_direction: up
     type: keyword
+    constraint:
+      enum:
+        - NHM
+        - OXF
+        - TOL_SCOTLAND
+        - Sanger
   sequencing_status:
     display_group: sequencing_status
     display_level: 2
