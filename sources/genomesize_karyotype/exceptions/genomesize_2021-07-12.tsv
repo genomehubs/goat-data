@@ -134,10 +134,13 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 1774	NA	Arthropoda	Crustacea	Ostracoda	Podocopida	Cyproidinae	Cyprois occidentalis	Ostracode	2.25	NA	FD	EP	V	578
 1775	NA	Arthropoda	Crustacea	Ostracoda	Podocopida	Loxoconchidae	Loxoconcha sp.	Ostracode	0.7	NA	FD	EP	V	578
 1439	NA	Arthropoda	Crustacea	Cirripedia	Rhizocephala	Sacculinidae	Sacculina sp.	Parasitic barnacle	0.67	NA	FD	WB	NS (V)	435
+1442	NA	Arthropoda	Crustacea	Cirripedia	Thoracica	Balanidae	Balanus cariosus	Thatched barnacle	1.4	NA	FD	WB	NS (V)	17
 1444	NA	Arthropoda	Crustacea	Cirripedia	Thoracica	Chthamalidae	Chthalamus sp.	Acorn barnacle	1.23	NA	FD	WB	NS (V)	435
+1446	NA	Arthropoda	Crustacea	Cirripedia	Thoracica	Pollicipedidae	Mitella polymerus	Pacific goose barnacle	0.9	NA	FD	WB	NS (V)	17
 2686	NA	Echinodermata	Echinozoa	Holothuroidea	Aspidochirotida	Stichopodidae	Stichopus diabole	Sea cucumber	0.99	NA	FD	S	GD	324
 2687	NA	Echinodermata	Echinozoa	Holothuroidea	Dendrochirotida	Cucumariidae	Cucumaria rubi	Sea cucumber	3.1	NA	BFA	S	SP	218
 2689	NA	Echinodermata	Echinozoa	Holothuroidea	Dendrochirotida	Cucumariidae	Thyone mexicana	Sea cucumber	1.9	NA	BFA	S	SP	218
+2691	NA	Echinodermata	Echinozoa	Holothuroidea	Dendrochirotida	Psloidae	Thyonepsolus nutriens	Sea cucumber	2.3	NA	BFA	S	SP	218
 2692	NA	Echinodermata	Echinozoa	Holothuroidea	Dendrochirotida	Sclerodactylidae	Eupentacta sp.	Sea cucumber	2	NA	BFA	S	SP	218
 31	NA	Arthropoda	Hexapoda	Insecta	Blattaria	Blaberidae	Blaberus fuscus	Cockroach	3.36	NA	FD	S	MD	53
 34	NA	Arthropoda	Hexapoda	Insecta	Blattaria	Blatellidae	Blatella nipponica	Wood roach	2.13	NA	FIA	HE	DM	679
@@ -444,6 +447,9 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 5167	NA	Chordata	Vertebrata	Mammalia	Artiodactyla	Bovidae	Ovis aries aries	Sheep	3.41	NA	FCM	LK	HS, OM	598
 6061	NA	Chordata	Vertebrata	Osteichthyes	Beloniformes	Hemiramphidae	Hemiramphus kurumeus	Halfbeak	0.75	40	FD	RBC	GD	98
 6063	NA	Chordata	Vertebrata	Osteichthyes	Beloniformes	Hemiramphidae	Hyporhampus affinis	Long billed half beak	0.94	NA	FIA	RBC	BS, GD, OM, RP	204
+6068	NA	Chordata	Vertebrata	Osteichthyes	Beryciformes	Holocentridae	Holocentrus ascensionis	Squirrelfish	0.65	NA	FD	LV, RBC	V	16
+6069	NA	Chordata	Vertebrata	Osteichthyes	Beryciformes	Holocentridae	Holocentrus ascensionis	Squirrelfish	0.66	NA	FD	RBC	GD	324
+6070	NA	Chordata	Vertebrata	Osteichthyes	Beryciformes	Holocentridae	Holocentrus ascensionis	Squirrelfish	0.92	NA	BFA	RBC	SP	216
 4988	NA	Chordata	Vertebrata	Chondrichthyes	Carchariniformes	Triakidae	Mustelus sp.	Smooth-hound shark	4.8	NA	BFA	RBC	SP	219
 5232	NA	Chordata	Vertebrata	Mammalia	Carnivora	Felidae	Panthera unica	Snow leopard	3.54	NA	FD	S	FC	576
 5239	NA	Chordata	Vertebrata	Mammalia	Carnivora	Ursidae	Ursus hibetanus	Himalayan black bear	2.75	NA	FCM	LK	HS, OM	598
@@ -541,9 +547,11 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 6729	NA	Chordata	Vertebrata	Osteichthyes	Gadiformes	Macrouridae	Caelorinchus maurofasciatus	Dark banded rattail	0.75	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 4249	NA	Chordata	Vertebrata	Aves	Galliformes	Cracidae	Penelope sp.	Guan	1.23	NA	FD	RBC	GD	529
 4286	NA	Chordata	Vertebrata	Aves	Gruiformes	Gruidae	Bugeranus carunculus	Wattled crane	1.4	80	FD	RBC	GD, XL	419, 632
+6755	NA	Chordata	Vertebrata	Osteichthyes	Lepidosireniformes	Protopteridae	Protopterus aethiopicus congicus	Marbled lungfish	40.08	NA	FD	RBC	GD	531
 6768	NA	Chordata	Vertebrata	Osteichthyes	Lophiiformes	Ogcocephalidae	Ogcocephalus nausutus	Shortnose batfish	0.74	NA	BFA	RBC	SP	215, 216
 5013	NA	Chordata	Vertebrata	Chondrichthyes	Orectolobiformes	Ginglymostomatidae	Ginglymostoma cirratum (3x)	Nurse shark	5.7	NA	FCM	RBC	GC	247
 5014	NA	Chordata	Vertebrata	Chondrichthyes	Orectolobiformes	Ginglymostomatidae	Ginglymostoma cirratum (3x?)	Nurse shark	5.45	NA	FD	RBC	SC	480
+6782	NA	Chordata	Vertebrata	Osteichthyes	Osmeriformes	Bathylagidae	Bathylagus milleri	Stout blacksmelt	3.15	60	FD	RBC	HS	116
 4320	NA	Chordata	Vertebrata	Aves	Passeriformes	Cisticolidae	Cisticola aridulus	Desert cisticola	1.24	NA	FIA	RBC	GD	711
 4321	NA	Chordata	Vertebrata	Aves	Passeriformes	Cisticolidae	Cisticola chiniana	Rattling cisticola	1.23	NA	FIA	RBC	GD	711
 4324	NA	Chordata	Vertebrata	Aves	Passeriformes	Cisticolidae	Cisticola subruficapilla	Grey-backed cisticola	1.12	NA	FIA	RBC	GD	711
@@ -552,17 +560,26 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 4416	NA	Chordata	Vertebrata	Aves	Passeriformes	Furnariidae	Syndactyla subularis	Lineated foliage-gleaner	1.17	NA	FIA	RBC	GD	711
 4449	NA	Chordata	Vertebrata	Aves	Passeriformes	Laniidae	Urolestes melanoleucus	Magpie shrike	1.19	NA	FIA	RBC	GD	711
 4516	NA	Chordata	Vertebrata	Aves	Passeriformes	Passerellidae	Atlapetes canigenis	Cuzco brush finch	1.56	NA	FIA	RBC	GD	711
+6815	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Ambassidae	Ambassis elongatus	Yellowfin glassfish	0.56	NA	FIA	RBC	BS, GD, OM, RP	204
 6820	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Apogonidae	Apogon endetakaena	Candystripe cardinalfish	1.03	NA	FIA	RBC	BS, GD, OM, RP	203, 204
+6826	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Apogonidae	Apogon poecilopterus	Pearly-finned cardinalfish	0.97	NA	FIA	RBC	BS, GD, OM, RP	204
 6833	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Bathymasteridae	Rathbunella sp.	Ronquil	0.96	NA	BFA	RBC	SP	216
 6856	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Blenniidae	Ecsenius aequalis	Fourline blenny	0.64	NA	FIA	RBC	BS, GD, OM, RP	204
 6860	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Blenniidae	Hypsoblennius sp.	Blenny	0.95	NA	BFA	RBC	SP	216
 6865	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Blenniidae	Paralipophrys trigloide	Blenny	1.19	46	FD	RBC	GD	71
 6878	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Callionymidae	Callionymus goodladi	Goodlad's stinkfish	0.69	NA	FIA	RBC	BS, GD, OM, RP	204
+6879	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Callionymidae	Callionymus limiceps	Rough-headed dragonet	1.02	NA	FIA	RBC	BS, GD, OM, RP	203, 204
+6892	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Carangidae	Elegatis bipinnulata	Rainbow runner	0.71	NA	FIA	RBC	BS, GD, OM, RP	204
 6941	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Chaetodontidae	Angelichthys bermudensis	N/A	0.55	NA	FD	LV, RBC	V	16
 6967	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Apistogramma sp.	N/A	1	NA	BFA	RBC	SP	216
+6973	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Haplochromis longirostris	N/A	1.1	NA	BFA	RBC	SP	216
 6975	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Haplochromis quiarti	N/A	1	NA	BFA	RBC	SP	216
 6976	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Haplochromis squamipinnus	N/A	1.1	NA	BFA	RBC	SP	216
 6977	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Haplochromis squamulatus	N/A	1.2	NA	BFA	RBC	SP	216
+6980	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Oreochromis macrochir macrochir	N/A	0.84	44	FD	RBC	CCR	296
+6988	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Oreochromis spilurus spilurus	Sabaki tilapia	0.95	44	FD	RBC	CCR	296
+6992	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Cichlidae	Sarotherodon galilaeus galilaeus	Mango tilapia	0.84	44	FD	RBC	CCR	296
+7043	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Gobiidae	Pomatoschistus canestrini	Goby	0.95	46	FCM	RBC	GD	666
 7059	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Haemulidae	Heamulon flavolineatum	French grunt	0.65	NA	FD	LV, RBC	V	16
 7060	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Haemulidae	Heamulon flavolineatum	French grunt	0.67	NA	FD	RBC	GD	324
 7061	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Haemulidae	Heamulon flavolineatum	French grunt	0.88	NA	BFA	RBC	SP	216
@@ -576,17 +593,26 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 7141	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Lutjanidae	Lutjanus sp.	Snapper	0.81	NA	FIA	RBC	BS, GD, OM, RP	204
 7169	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Nemipteridae	Nemipterus theodorei	Theodore's threadfin bream	0.77	NA	FIA	RBC	BS, GD, OM, RP	204
 7179	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Opistognathidae	Opistognathus sp.	Jawfish	1.06	NA	FIA	RBC	BS, GD, OM, RP	203, 204
+7203	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Pomacentridae	Abudefduf marginatus	Pearly sergeant	0.85	NA	FD	LV, RBC	V	16
 7221	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Pomacentridae	Chromis sp.	Chromis	1.1	NA	BFA	RBC	SP	216
 7243	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Pomacentridae	Pomacentrus bakanensis	Speckled damselfish	1	NA	FIA	RBC	BS, GD, OM, RP	204
 7268	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Pseudochromidae	Ogilbyina queenslandiae	Queensland dottyback	0.91	NA	FIA	RBC	BS, GD, OM, RP	204
+7273	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Pseudochromidae	Pseudochromis rosae	Rose Island basslet	0.77	NA	FIA	RBC	BS, GD, OM, RP	204
+7287	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Scatophagidae	Scatophagus multifasciatus	Spotbanded scat	0.7	NA	FIA	RBC	BS, GD, OM, RP	203, 204
+7290	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Sciaenidae	Bairdiella chrysura	Silver croaker	0.76	48	BFA	RBC	SP	216
+7309	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Scombridae	Sarda velox	Striped bonito	0.92	NA	BFA	RBC	SP	216
+7362	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Sillaginidae	Sillaginodes punctata	Spotted sillago	0.63	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 7403	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Toxotidae	Toxotes chatereus	Spotted archerfish	0.72	NA	FCM	RBC	MM	359
 7407	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Blennodon dorsale	Giant triplefin	0.85	NA	FCM	RBC	GD	599
 7410	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Forsterygion malcolmi	Mottled triplefin	1.18	NA	FCM	RBC	GD	599
+7411	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Forsterygion profundum	Deepwater triplefin	0.96	NA	FCM	RBC	GD	599
 7413	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Gilloblennius abditus	Obscure triplefin	1.25	NA	FCM	RBC	GD	599
+7416	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Grahamina nigripenne	Estuarine triplefin	1.18	NA	FCM	RBC	GD	599
 7418	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Notoclinops segmentatus	Blue-eyed triplefin	1.1	NA	FCM	RBC	GD	599
 7419	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Notoclinops yaldwyni	Yaldwyn's triplefin	1.12	NA	FCM	RBC	GD	599
 7420	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Obliquichthys maryannae	Oblique-swimming triplefin	1.23	NA	FCM	RBC	GD	599
 7421	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Ruanoho decemdigitatus	Longfinned triplefin	1.15	NA	FCM	RBC	GD	599
+7423	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Tripterygiidae	Tripterygion tripteronotus	Threefin blenny	0.88	NA	FCM	KC	GD	664
 7426	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Uranoscopidae	Uranoscopus sp.	Stargazer	0.77	NA	FCM	RBC	MM	359
 7431	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Zoarcidae	Lycodes jugoricus	Shulupaoluk	1.05	NA	FIA	RBC	BS, GD, OM, RP	204
 7436	NA	Chordata	Vertebrata	Osteichthyes	Perciformes	Zoarcidae	Lycoduchthys dearborni	Eelpout	1.11	NA	FIA	RBC	BS, GD, OM, RP	203, 204
@@ -685,6 +711,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 8136	NA	Chordata	Vertebrata	Reptilia	Squamata	Polychrotidae	Anolis cf. nitens, sp.1	Anole	2.29	NA	FCM	RBC	BF	288
 8137	NA	Chordata	Vertebrata	Reptilia	Squamata	Polychrotidae	Anolis cf. nitens, sp.2	Anole	2.49	NA	FCM	RBC	BF	288
 8139	NA	Chordata	Vertebrata	Reptilia	Squamata	Polychrotidae	Anolis sagraei	Brown anole	1.89	28	SCF	RBC	HS	106
+8193	NA	Chordata	Vertebrata	Reptilia	Squamata	Tropiduridae	Tropidurus umbra	Green tree climber	2.11	NA	FCM	RBC	BF	288
 7774	NA	Chordata	Vertebrata	Osteichthyes	Synbranchiformes	Synbranchidae	Synbranchus marmoratus 1	Marbled swamp eel	3.8	42	FD	RBC	CP, GD, OM	596
 7775	NA	Chordata	Vertebrata	Osteichthyes	Synbranchiformes	Synbranchidae	Synbranchus marmoratus 2	Marbled swamp eel	4.26	42	FD	RBC	CP, GD, OM	596
 7776	NA	Chordata	Vertebrata	Osteichthyes	Synbranchiformes	Synbranchidae	Synbranchus marmoratus 3	Marbled swamp eel	3.7	42	FD	RBC	CP, GD, OM	596
@@ -730,6 +757,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2851	NA	Annelida	NA	Polychaeta	Amphinomida	Amphinomidae	Linopherus ambigua	Polychaete	2.4	NA	FD	WB	V	95
 3001	NA	Annelida	NA	Polychaeta	Amphinomida	Amphinomidae	Linopherus ambigua	Polychaete	2.4	NA	FD	WB	V	95
 2723	NA	Cnidaria	NA	Hydrozoa	Anthomedusae	Oceanidae	Turritopsis sp.	Jellyfish	0.39	NA	FCM	TN, WB	HDH	731
+2460	NA	Mollusca	NA	Gastropoda	Archaeogastropoda	Vermetidae	Aletes squamigerus	Worm shell	1.5	NA	BFA	S	SP	217
 2461	NA	Mollusca	NA	Gastropoda	Architaenioglossa	Ampullariidae	Pomacea cuprina	Applesnail	0.67	NA	BFA	S	SP	217
 2305	NA	Mollusca	NA	Bivalvia	Arcoida	Arcidae	Anadara broughtoni	Ark	1.45	NA	FIA	NA	CG	678
 2468	NA	Mollusca	NA	Gastropoda	Basommatophora	Lymnaeidae	Lymnaea calamphala	Pond snail	1.22	NA	FCM	LV	LS	543
@@ -749,9 +777,11 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2951	NA	Annelida	NA	Polychaeta	Chaetopterida	Chaetopteridae	Chaetopterus sp.	Tube worm	0.88	NA	FIA	C	GD	575
 2610	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Bugula calathus	Bryozoan	0.35	NA	FCM	PPC	HS, MM	400
 2611	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Bugula sp.	Bryozoan	0.2	NA	FCM	PPC	HS, MM	400
+2616	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Mollia patellaria	Bryozoan	0.5	NA	FCM	PPC	HS, MM	400
 2618	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Pentapora ottomulleriana	Bryozoan	0.85	NA	FCM	PPC	HS, MM	400
 2619	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Reptadoenella violacea	Bryozoan	0.65	NA	FCM	PPC	HS, MM	400
 2620	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Rhynchozoon sp.	Bryozoan	1.55	NA	FCM	PPC	HS, MM	400
+2623	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Schizoporella longirostris	Bryozoan	0.35	NA	FCM	PPC	HS, MM	400
 2624	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Sertella mediterranea	Bryozoan	0.95	NA	FCM	PPC	HS, MM	400
 2626	NA	Ectoprocta	NA	Gymnolaemata	Cheilostomata	Spadellidae	Watersipora sp.	Bryozoan	0.2	NA	FCM	PPC	HS, MM	455
 2634	NA	Ectoprocta	NA	Stenolaemata	Cheilostomata	Spadellidae	Lichenopora radiata	Bryozoan	0.25	NA	FCM	PPC	HS, MM	400
@@ -796,6 +826,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 3031	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Onuphis sp.	Polychaete	1.7	NA	FD	WB	V	95
 2585	NA	Mollusca	NA	Scaphopoda	Gadilida	Gadilidae	Siphonodentalium dalli	Tusk shell	2.41	NA	FIA	MC	SP	717
 2221	NA	Sipuncula	NA	Sipunculidea	Golfingiiformes	Themistidae	Themiste langeniformis	Peanut worm	1.28	NA	FIA	C	GD	575
+2096	NA	Porifera	NA	Demospongiae	Hadromerida	Suberitidae	Suberites sp.	Demosponge	0.09	NA	FIA	WB	GD	703
 2106	NA	Porifera	NA	Demospongiae	Halisarcida	Halisarcidae	"Halisarca n.sp. ""restingiensis"""	Demosponge	0.15	NA	FIA	WB	GD	703
 2107	NA	Porifera	NA	Demospongiae	Halisarcida	Halisarcidae	"Halisarca n.sp. ""restingiensis"""	Demosponge	0.19	NA	FCM	WB	GD	703
 2817	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Allolobophora chloritica	Green earthworm	1.02	32	FIA	C	EF	175
@@ -852,10 +883,18 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2580	NA	Mollusca	NA	Polyplacophora	Neoloricata	Ischnochitonidae	Ischnochiton conspicua	Chiton	1.5	NA	BFA	S	SP	217
 2336	NA	Mollusca	NA	Aplacophora	Neomeniamorpha	Neomeniidae	Neomenia permagna	Solenogastre	0.3	NA	FIA	MC	HS, V	717
 2532	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Bithyniidae	Bithynia sp.	Bithynia	1.25	NA	FCM	LV	LS	543
+2535	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Littorinidae	Littorina irrorata	Marsh periwinkle	0.82	NA	BFA	S	SP	217
+2540	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Littorinidae	Littorina neritoides	Periwinkle	1.38	NA	FCM	MT	ME	544
+2541	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Littorinidae	Littorina neritoides	Periwinkle	1.47	NA	FCM	G	GD	275
+2542	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Littorinidae	Littorina punctata	Periwinkle	0.81	NA	FCM	MT	ME	544
+2545	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Naticidae	Polinices duplicatus	Moon shell	1.5	NA	BFA	S	SP	217
+2546	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Naticidae	Polinices heros	Moon shell	2.4	NA	BFA	S	SP	217
 2318	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Pleuroceridae	Goniobasis floridensis	Snail	2.1	NA	FCM	MC	HS, V	650
 2319	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Pleuroceridae	Goniobasis livescens	Great Lakes horn snail	2.1	40	FCM	MC	HS, V	650
 2324	NA	Mollusca	NA	Gastropoda	Neotaenioglossa	Pleuroceridae	Leptoxis (Mudalia) carinata	Snail	2.1	NA	FCM	MC	HS, V	650
 2551	NA	Mollusca	NA	Gastropoda	Nudibranchia	Tergipedidae	Phestilla sp.	Sea slug	0.91	NA	FIA	SC	GD	186
+2016	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Eoperipatus sp.	Velvet worm	18.32	NA	FCM	AN, L	GD	704
+2017	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Eoperipatus sp.	Velvet worm	19.87	NA	FIA	HE	GD	704
 2018	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Epiperipatus sp.	Velvet worm	6.03	NA	FCM	AN, L	GD	704
 2019	NA	Onychophora	NA	Udeonycophora	Onychophorida	Peripatidae	Epiperipatus sp.	Velvet worm	6.99	NA	FIA	HE	GD	704
 2887	NA	Annelida	NA	Polychaeta	Orbiniida	Orbiniidae	Leioscoloplos fragilis	Polychaete	2.3	NA	FD	WB	V	95

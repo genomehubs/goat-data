@@ -9,16 +9,19 @@ taxon_id	input	rank	suggested
 2527844	Sancassania berlesi	species	Sancassania berlesei
 1827023	Argas zumpti	species	Argas brumpti
 34620	Dermacentor anderson	species	Dermacentor andersoni
+224535	Ornithonysus	genus	Ornithonyssus
+224536	Ornithonysus sylviarum	species	Ornithonyssus sylviarum
 50030	Tetranychus neocalendonicus	species	Tetranychus neocaledonicus
 1967476	Ananteris balzanii	species	Ananteris balzani
 2796863	Neumania vemalis	species	Neumania vernalis
 478652	Branchipus vernalis	species	Eubranchipus vernalis
 4726	Pandarus sinuatus	species	Pandanus tectorius
 36959	Phortioica phoraspoides	species	Phortioeca phoraspoides
+	Lupparia	genus	lepraria	lutraria	lopharia
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
+	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -29,6 +32,11 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 251759	Araecerus fasciculatus_	species	Araecerus fasciculatus
 1661878	Euparius marmoreus_	species	Euparius marmoreus
 638814	Ptychoderes tricostifrons_	species	Ptychoderes tricostifrons
+	Acrossus	genus	dicrossus	acossus
+	Agolius	genus	agorius	aegolius	anolius
+75361	Chilothorax	genus	Schizothorax
+	Colobopterus	genus	chloropterus	dilobopterus	colopterus
+1415215	Nimbus	genus	Niveus
 201766	Apoderus coryli_	species	Apoderus coryli
 207440	Byctiscus congener	species	Agabus congener
 1515506	Euops punctatostriata	species	Sawadaeuops punctatostriatus
@@ -179,7 +187,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
-2493403	Bembidion thetys	species	Bembidion tethys
 	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
@@ -338,6 +345,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1587335	Harpalus neglectus_	species	Harpalus neglectus
 1206001	Harpalus opacipennis_	species	Harpalus opacipennis
 331376	Harpalus pennsylvanicus_	species	Harpalus pensylvanicus
+247295	Harpalus pygmaeus	species	Harpalus pigmaeus
 247297	Harpalus rubripes_	species	Harpalus rubripes
 247299	Harpalus serripes_	species	Harpalus serripes
 247300	Harpalus wagnerii	species	Harpalus wagneri
@@ -352,6 +360,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 2609233	Macrocheilus trimaculatus_	species	Macrocheilus bensoni
 175617	Mantichora amigdaloides_	species	Manticora amygdaloides
 175617	Mantichora amigdaloides	species	Manticora amygdaloides
+2493273	Mecyclothorax punctipennis	species	Pericompsus punctipennis
 2493273	Mecyclothorax punctipennis_	species	Pericompsus punctipennis
 346504	Megacephala brasiliensis_	species	Tetracha brasiliensis
 346487	Megacephala cruciata_	species	Phaeoxantha cruciata
@@ -518,7 +527,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1473609	Elaphidion villosum_	species	Anelaphus villosus
 558742	Epiglenea comes_	species	Epiglenea comes
 1554469	Ergates faber_	species	Ergates faber
-557795	Eutrapha ocelota_	species	Eutetrapha ocelota
 1586481	Exocentrus adspersus_	species	Exocentrus adspersus
 1553321	Exocentrus lusitanus_	species	Exocentrus lusitanus
 1586482	Exocentrus punctipennis_	species	Exocentrus punctipennis
@@ -744,6 +752,7 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1553210	Chrysoli staphylea_	species	Chrysolina staphylaea
 75532	Chrysoli timarchoides_	species	Chrysolina timarchoides
 75533	Chrysoli varians_	species	Chrysolina varians
+97483	Chrysomela elongata	species	Pleurochrysis elongata
 153782	Chrysomela interrupta_	species	Chrysomela interrupta
 153811	Chrysomela lapponica_	species	Chrysomela lapponica
 63697	Chrysomela oleracea	species	Gonioctena olivacea
@@ -753,6 +762,7 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1075297	Clytra laeviscula_	species	Clytra laeviuscula
 1075297	Clytra laeviuscula_	species	Clytra laeviuscula
 1425548	Clytra quadripunctata_	species	Clytra quadripunctata
+2484307	Clytra succinata	species	Cleora subcincta
 284335	Colasposoma auripenne_	species	Colasposoma auripenne
 1592289	Conicobruchus indicus_	species	Conicobruchus indicus
 1654395	Coptocephala unifasciata_	species	Coptocephala unifasciata
@@ -841,6 +851,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 703275	Scymnus nubilis	species	Scymnus nubilus
 347477	Tythaspis sedecimpunctata	species	Tytthaspis sedecimpunctata
 364896	Acalles echitus	species	Acalles echinatus
+220518	Alcidodes convexus	species	Aleiodes convexus
 1709595	Anthonomus sigtus	species	Anthonomus signatus
 1069516	Apodrusus wolcotti	species	Apodrosus wolcotti
 201769	Baris arthemisiae	species	Baris artemisiae
@@ -852,6 +863,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 574154	Ceutorrhynchus punctiger	species	Glocianus punctiger
 877912	Cionus hortulans	species	Cionus hortulanus
 201897	Cryptorrhynchus lapathi	species	Cryptorhynchus lapathi
+	Curculio pictus	species	curculio piceus
 13040	Diaprepres abbreviata	species	Diaprepes abbreviatus
 2729800	Donus oxalidis	species	Donus oxalis
 1679453	Ectatorhinus adamsi	species	Ectatorhinus adamsii
@@ -860,6 +872,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 312704	Ectemnorrhinus viridis	species	Ectemnorhinus viridis
 2898287	Eugthus distinctus	species	Eugnathus distinctus
 2898287	Eugthus distincyus	species	Eugnathus distinctus
+298155	Gymnetron antirrhini	species	Gymnetron antirhini
 1553497	Hylobius pistri	species	Hylobius pinastri
 141166	Hylurgus rufipennis	species	Hylurgops rugipennis
 346786	Hypera rumicus	species	Hypera rumicis
@@ -900,11 +913,13 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2729884	Polydrusus viridicintus	species	Polydrusus viridicinctus
 2340076	Rhynchaenus niger	species	Tachyerges niger
 1206597	Ryssematus lineaticollis	species	Rhyssomatus lineaticollis
+	Ruteria	genus	rogeria	eutelia
 1588459	Simo variegates	species	Simo variegatus
 202214	Strophosomus capitatus	species	Strophosoma capitatum
 527267	Sympiezomias cribicollis	species	Sympiezomias cribricollis
 122903	upactus peregrinus	species	Naupactus peregrinus
 114905	upactus xantographus	species	Naupactus xanthographus
+	Xanium	genus	panicum	xanthium	lanium
 452470	Dermestes frischi	species	Dermestes frischii
 93128	Rynchophorus palmarum	species	Rhynchophorus palmarum
 166299	Agabus biguttatus_	species	Agabus biguttatus
@@ -934,6 +949,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 156939	Deronectes wewalai	species	Deronectes wewalkai
 253321	Dytiscus circumcinctus_	species	Dytiscus circumcinctus
 207422	Dytiscus dauricus_	species	Dytiscus dauricus
+	Dytiscus piceus	species	dytiscus pictus
 183365	Hydaticus fabricii_	species	Prodaticus fabricii
 107862	Hydaticus leander_	species	Prodaticus leander
 666459	Hydaticus luczonicus_	species	Prodaticus luczonicus
@@ -964,7 +980,9 @@ icHydCusp	Hydrovatus cuspidatus_	species	Hydrovatus cuspidatus
 1587082	Heteroderes sericeus	species	Augyles sericans
 2485418	Melanotus leordi	species	Melanotus leonardi
 1490104	Prosternon tesselatum	species	Prosternon tessellatum
+403538	Silene echinata	species	Silene nuda
 1080105	Silene sangaria	species	Silene songarica
+663355	Silene schwarzenbergii	species	Silene schwarzenbergeri
 295533	Lichnthe rathvoni	species	Lichnanthe rathvoni
 1978417	Dineutes americanus_	species	Dineutus americanus
 1564125	Dineutes horni_	species	Dineutus hornii
@@ -999,7 +1017,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 1457043	Speonomus pyreeus	species	Speonomus pyreneus
 1457043	Speonomus pyrenaeus	species	Speonomus pyreneus
 	Troglocharinus ferreri_pallaresi	species	troglocharinus ferreri pallaresi
-	Cerchus ligrius	species	ceruchus lignarius	trechus liguricus
+1407881	Cerchus ligrius	species	Trechus liguricus
 617909	Lamprima adolphie	species	Lamprima adolphinae
 231745	Lucanus maculifermoratus	species	Lucanus maculifemoratus
 1588445	Lytta picta	species	Scydmaenus tarsatus
@@ -1033,6 +1051,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 1573397	Dichranocephalus wallichii	species	Dicronocephalus wallichii
 	Dystes hercules_hercules	species	dynastes hercules hercules
 1248199	Dystes tityus	species	Dynastes tityus
+62196	Epicometis	genus	Eucometis
 166328	Euonticellus fulvus	species	Euoniticellus fulvus
 166343	Euonticellus pallipes	species	Euoniticellus pallipes
 166365	Euothonphagus amyntas	species	Euonthophagus amyntas
@@ -1040,7 +1059,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopoma	homalopsis
+	Homaloplia	species	homalomyia	homalopsis	homalopoma
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 1207216	Mecynorrhi torquata	species	Mecynorrhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1081,6 +1100,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
 icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
+466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata_	species	Isomira quadristriata
@@ -1108,6 +1128,7 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 	Villa sinuosa	species	zilla spinosa	vella spinosa
 2726335	Villa velutina	species	Viola velutina
 27454	Calliphora bomitoria	species	Calliphora vomitoria
+219349	Phytophaga	genus	Phyllophaga
 586676	Aedes joreicus	species	Aedes koreicus
 51957	Aniella pulchra	species	Anniella pulchra
 58241	Anopheles agrgyritarsus	species	Anopheles argyritarsis
@@ -1121,6 +1142,7 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 1096038	Tetanocera loewiE	species	Tetanocera loewi
 	Eusimulium vernum	species	simulium vernum	simulium varium
 2890591	Leptocera frontinalis	species	Leptocera fontinalis
+273426	Cheilosia aenea	species	Cheilosia aerea
 2663930	Criorhina coquilIetti	species	Criorhina coquilletti
 198635	Eristalis lenax	species	Eristalis tenax
 1738121	Lejota cyanea	species	Leucocoprinus cygneus
@@ -1129,17 +1151,22 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 27455	Musca vestustissima	species	Musca vetustissima
 1473718	Myolepta pretiosa	species	Myolepta varipes
 2494420	Hybomitra muhlfeldi	species	Hybomitra muehlfeldi
+2944585	Hybomitra ussuriensis	species	Gyromitra ussuriensis
+	Nemorius	genus	nemobius
 1334903	Tabanus unifasciatus	species	Triclista guttata
 1754249	Winthemia dantanae	species	Winthemia datanae
 33395	Rhagoletis conivora	species	Rhagoletis cornivora
 	Rhagoletis jungladis	species	rhagoletis juglandis
 idBibHort	Bibio bortulanus	species	Bibio hortulanus
 50660	Oligotoma saundersi	species	Oligotoma saundersii
+1217528	Apterembia	genus	Apteromyia
 202358	Grylloblatta campodeioformis	species	Grylloblatta campodeiformis
 1960866	Cerococcus quercus	species	Sirococcus quercus
 	Cicada tibecen	species	cicada tibicen
+	Vinsonia	genus	monsonia	mansonia
 2316782	Metapodius femoralis	species	Acanthocephala femorata
 1545138	Gonocerus scuteangulatus	species	Gonocerus acuteangulatus
+40466	Separaspis	genus	Sparassis
 2804216	Apiomorpha rosaeforma	species	Apiomorpha rosaeformis
 1511269	Nysius jabcobeae	species	Nithecus jacobaeae
 2095909	Ceresa dicerus	species	Ceresa diceros
@@ -1175,14 +1202,21 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 155165	Lycaena agyrognomon	species	Plebejus argyrognomon
 1160691	Lysandra nivescens	species	Pleroma trichopodum
 282014	Lysandra osmarr	species	Lysandra ossmar
+764587	Narathura japonica	species	Paranthura japonica
 282003	Polyommatus medon	species	Polyommatus aedon
+987935	Sphrageidus similis	species	Euproctis similis
 211498	Plusia intermixta	species	Clusia intertexta
+	Aglais	genus	aglaia	agelas
+	Aphantopus	genus	aphanopus	aphaniops
 405033	Brenthis heate	species	Brenthis hecate
 2798323	Chazara bischoffi	species	Chazara bischoffii
 447839	Erebia nerine	species	Erebia neriene
 2798363	Euphaedra edwardsii	species	Euphaedra edwardsi
+	Kaniska	genus	banisia	panisea
 	Libythea bachmanni	species	libytheana bachmanii
 2093611	Pseudacraea boisduvalii	species	Pseudacraea boisduvali
+	Pyronia	genus	phronia	pyropia	peronia
+42308	Speyeria	genus	Hypoxylon
 76193	Papilio lnachaon	species	Papilio machaon
 7116	Pieris bassicae	species	Pieris brassicae
 262188	Siederia alpicolella	species	Siederia rupicolella
@@ -1214,6 +1248,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 2547837	Macrotona australis	species	Cnemoplites australis
 	Oxya jezoensis	species	oxya yezoensis
 1034442	Paraorphula graminea	species	Parorphula graminea
+	Pedies	genus	pedipes	pedius
 	Schistocerca paraensis	species	schistocerca paranensis
 355370	Stauronotus macroccanus	species	Dociostaurus maroccanus
 1260741	Ommexechia germari	species	Ommexecha virens
@@ -1223,6 +1258,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 1678041	Isophya krausii	species	Isophya kraussii
 910292	Isophya modesta_longicaudata	species	Isophya longicaudata
 910298	Isophya plevnensis	species	Isophya pienensis
+2420531	Elysiacris	genus	Lysacris
 202390	Orxines macklotti	species	Orxines macklottii
 202447	Tropiderus childrenii	species	Tropidoderus childrenii
 	Bacillus grandii_benazzii	species	bacillus grandii benazzii
@@ -1231,12 +1267,15 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 909449	Dictyogenus alpinum	species	Dictyogenus alpinus
 909435	Perlodes intricala	species	Perlodes intricatus
 1071617	Perlodes microcephala	species	Perlodes microcephalus
+	Xeninae	family	xenidae	xeniidae
+50526	Xenos pecki	species	Xenos peckii
 45055	Taeniothrips iconsequene	species	Taeniothrips inconsequens
 1875416	Halesus tesselatus	species	Halesus tessellatus
 6759	Carcinus menas	species	Carcinus maenas
 1124764	Macrocheira kampferi	species	Macrocheira kaempferi
 8090	Oryzias ltipes	species	Oryzias latipes
 930369	Roeboides microlepis	species	Phenagoniates macrolepis
+154684	Gibelion	genus	Ionopsis
 219677	Moroco lagwoski	species	Rhynchocypris lagowskii
 109666	Moroco oxcephalus	species	Phoxinus oxycephalus
 32479	Xiphophorus motezumae	species	Xiphophorus montezumae
@@ -1246,14 +1285,18 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 	Bufo gargarizans_gargarizans	species	bufo gargarizans gargarizans
 	Bufotes oblongus_oblongus	species	bufotes oblongus oblongus
 	Bufotes pewzowi_taxkorensis	species	bufotes pewzowi taxkorensis
+613087	Calyptocephalella	genus	Calyptocephallela
 356179	Syrrhophus marnocki	species	Eleutherodactylus marnockii
 2782222	Acris crepitans_blanchardi	species	Acris blanchardi
 194199	Pseudacris ocularis_	species	Pseudacris ocularis
+	Leiuperidae	family	leiuperinae
 	Leptodactylus gracilis_delattini	species	leptodactylus gracilis delattini
 	Leptodactylus gracilis_gracilis	species	leptodactylus gracilis gracilis
 1273188	Pleurodema somuncurense	species	Pleurodema somuncurensis
 258858	Guibemantis pulcher_	species	Guibemantis pulcher
 2837600	Cophyla barbouri_	species	Cophyla barbouri
+	Pelodryadidae	family	pelodryadinae
+336081	Litoria wotjulumensis	species	Litoria watjulumensis
 369514	Odorrana andersoni	species	Odorrana andersonii
 1168020	Rana amurensis_coreana	species	Rana coreana
 290503	Rana aurora_draytoni	species	Rana draytonii
@@ -1273,6 +1316,8 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 37189	Hippotragus miger	species	Hippotragus niger
 77149	Mustela eversmanii	species	Mustela eversmannii
 	Pteronotus psilotus	species	pteronotus psilotis
+526815	Trinycteris	genus	Arielulus
+	Micoureus	genus	micrurus
 52232	Callithrix humeralifer	species	Mico humeralifer
 10149	Hydrochoeris hydrochaeris	species	Hydrochoerus hydrochaeris
 82463	Eothenomys smithi	species	Myodes smithii
@@ -1287,6 +1332,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
+219442	Natricidae	family	Anthicidae
 	Cyclodina olivieri	species	cyclodina oliveri
 253933	Ameiva maynardii	species	Pholidoscelis maynardi
 2936315	Aspidoscelis neomexicana	species	Aspidoscelis neomexicanus
@@ -1302,9 +1348,10 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 649077	Tiedemannia neopolitana	species	Gleba cordata
 87838	Euhadra smaliae	species	Euhadra amaliae
 225461	Monacha cathusiana	species	Monacha cartusiana
-	Polygyra appressa	species	polygala adpressa	polygala depressa
+	Polygyra appressa	species	polygala depressa	polygala adpressa
 52793	Lymnaea nuricularia	species	Radix auricularia
 1076771	Stenostomum grandi	species	Stenostomum grande
+	Hymenolepidae	family	hymenolepididae	hymenoceridae
 66787	Dipylidium caminum	species	Dipylidium caninum
 147835	Diplozoon markevitschi	species	Paradiplozoon bliccae
 146680	Microcotyle mormiri	species	Pagellicotyle mormyri

@@ -16,9 +16,11 @@ taxon_id	input	rank	suggested
 172644	Broussonetia payprifera	species	Broussonetia papyrifera
 398446	Avena nudi-brevis	species	Avena brevis
 511980	Briza jurgensii	species	Chascolytrum juergensii
+511986	Briza poaemorpha	species	Chascolytrum poomorphum
 52878	Cyphomandra luteoalba	species	Solanum luteoalbum
 906780	Dendrobium hookeriana	species	Dendrobium hookerianum
 263444	Carludovica drudeii	species	Carludovica drudei
+2806786	Chrysanthemum macrophyllum	species	Thyrsanthemum macrophyllum
 81941	Clarkia lasseninsis	species	Clarkia lassenensis
 268015	Crepis conyzaefolia	species	Crepis conyzifolia
 509670	Crepis lapsanoides	species	Crepis lampsanoides
@@ -43,7 +45,6 @@ taxon_id	input	rank	suggested
 357476	Papaver ruprifragum	species	Papaver rupifragum
 53089	Paphiopedilum godefroye	species	Paphiopedilum godefroyae
 364694	Peraxilla tetrasepala	species	Peraxilla tetrapetala
-999236	Petunia parodii	species	Peronia peronii
 82020	Scilla pushkinioides	species	Fessia puschkinioides
 82021	Scilla vvendenskyi	species	Fessia vvedenskyi
 409907	Phaseolus geophillus	species	Macroptilium panduratum
@@ -100,6 +101,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 258301	Rhapidophora peepla	species	Rhaphidophora peepla
 197152	Aloe dinteri	species	Cloeon dipterum
 1389506	Aloe fleurentiniorum	species	Aloe fleurentinorum
+233879	Putranjavaceae	family	Putranjivaceae
 159622	Gymnostoma deplancheana	species	Gymnostoma deplancheanum
 78176	Arabidopsis korshynskyi	species	Olimarabidopsis cabulica
 2582796	Muscari mcbeathianum	species	Muscari macbeathianum
@@ -117,7 +119,6 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 85370	Lilium euxanthum	species	Lilium leucanthum
 	Paeonia broteroi	species	paeonia broteri	pavonia berteroi
 400870	Philodendron pinnatafidum 	species	Philodendron pinnatifidum
-361561	Trillium luteum         	species	Trifolium aureum
 82491	Trillium rivale 	species	Trillium nivale
 378697	Passiflora giberti	species	Passiflora gibertii
 295152	Gasteria pendulifolia	species	Guatteria australis
@@ -144,6 +145,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 165363	Teesdalia nudicalis	species	Teesdalia nudicaulis
 159435	Passiflora marifloia	species	Passiflora morifolia
 38785	Arabidopsis arensosa	species	Arabidopsis arenosa
+2862462	Salvia brachyodon	species	Salvia brachyodonta
 585829	Iris nelsonii	species	Iris wilsonii
 91067	Aeonium tabulaeforme	species	Aeonium tabuliforme
 91093	Greenovia dodrendalis	species	Aeonium dodrantale
@@ -219,11 +221,12 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 347527	Centaurea erdneri	species	Centaurea werneri
 629255	Cyanus triumfetti	species	Centaurea triumfettii
 160069	Gleotilopsis sterilis	species	Gloeotilopsis sterilis
-43939	Pseudendoclonium basilense	species	Hazenia basiliensis
+	Pseudendoclonium basilense	species	pseudendoclonium basiliense
 3188	Picochlorum eucaryotum	species	Picochlorum eukaryotum
 1263708	Phaeoceros engellii	species	Phaeoceros engelii
 356590	Pyrus piraster	species	Pyrus pyraster
 519245	Gigantochloa scertechnii	species	Gigantochloa scortechinii
+1479382	Minuartia villarsii	species	Minuartia villarii
 663342	Silene ciliate	species	Silene ciliata
 268105	Tolpis macrorrhiza	species	Tolpis macrorhiza
 700927	Genlisea glandulossisima	species	Genlisea glandulosissima
@@ -234,7 +237,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 171899	Helleborus bocconei	species	Helleborus purpurascens
 2321410	Camellia concina	species	Camellia concinna
 1094120	Colchicum steveni	species	Colchicum stevenii
-1155345	Minuartia hybridia	species	Sabulina tenuifolia
+	Minuartia hybridia	species	minuartia hybrida
 81770	Muscari pinardi	species	Leopoldia comosa
 2941613	Ophrys sintenesii	species	Ophrys sintenisii
 2782	Gracilariopsis lemanieformis	species	Gracilariopsis lemaneiformis
@@ -256,6 +259,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 1521226	Diplazium arboresecens	species	Diplazium arborescens
 120713	Brainea insigne	species	Brainea insignis
 120732	Woodwardia unigemata	species	Woodwardia unigemmata
+85334	Tectaria zeilanica	species	Tectaria zeylanica
 38350	Pieopeltis macrocarpa	species	Pleopeltis macrocarpa
 1608375	Quercus austrochinchinensis	species	Quercus austrocochinchinensis
 167423	Quercus franchetti	species	Quercus franchetii

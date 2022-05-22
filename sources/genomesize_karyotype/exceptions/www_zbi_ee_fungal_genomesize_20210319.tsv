@@ -1,5 +1,6 @@
 PHYLUM	ORDER	GENUS	SPECIES	METHOD	1C in pg	1C in Mbp	x	FGSDID	SPECIMEN ID
 Ascomycota	Botryosphaeriales	Phyllosticta	citrichinensis	CS	0.030	29.16		5966	CBS 130529 v1.0
+Ascomycota	Capnodiales	Davidiella	populorum	CS	0.030	29.35		5012	SO2202
 Ascomycota	Eurotiales	Emericella	nidulans	Fe-IC	0.030	29.32		2792	FGSC A4
 Ascomycota	Eurotiales	Emericella	nidulans	CS	0.031	30.16		4991	FGSC A4
 Ascomycota	Eurotiales	Emericella	nidulans	CS	0.031	30.48		5245	from AspGD
@@ -9,11 +10,31 @@ Ascomycota	Eurotiales	Emericella	nidulans	CHEF gel electrophoresis	0.032	31.00		
 Ascomycota	Eurotiales	Emericella	nidulans	CS	0.032	31.00		3930	
 Ascomycota	Eurotiales	Emericella	nidulans	CS	0.032	31.00		3951	strain FGSC A4
 Ascomycota	Eurotiales	Penicillium i	chrysogenum	CS	0.032	31.34		5311	v1.0
+Ascomycota	Hypocreales	Acremonium	alcalophilum	CS	0.037	35.79		5393	v2.0
+Ascomycota	Hypocreales	Acremonium	alcalophilum	CS	0.056	54.42		4848	v2.0
+Ascomycota	Hypocreales	Gliocladium	virens	CS	0.036	35.00		4011	
+Ascomycota	Hypocreales	Gliocladium	virens	CS	0.040	38.80		4989	Gv29-8
+Ascomycota	Hypocreales	Gliocladium	virens	CS	0.040	39.00		4860	Gv29-8 v2.0
 Ascomycota	Hypocreales	Hypocrea	citrina	Fl-PC	0.079	77.33		2010	REG
 Ascomycota	Hypocreales	Neotyphodium	lolii	CHEF gel electrophoresis	0.031	30.60	1	3992	
 Ascomycota	Hysteriales	Rhystidhysteron	rufulum	CS	0.041	40.18		5011	
+Ascomycota	incertae sedis	Glomerella	graminicola	genomic reconstruction	0.045	44.00		4413	M1.401
+Ascomycota	incertae sedis	Glomerella	graminicola	Re-association kinetics	0.049	48.00		4410	M1.401
+Ascomycota	incertae sedis	Glomerella	graminicola	Re-association kinetics	0.051	50.00		4412	S16.001
 Ascomycota	Incertae sedis	Hyalinia	dilutella cf.	Fl-PC	0.098	96.14	6	2153	BARAL 4117
 Ascomycota	Incertae sedis	Hyalinia	rosella	Fl-PC	0.026	25.27	1?	2540	BARAL 4014
+Ascomycota	Incertae sedis	Magnaporthe	grisea	CS	0.039	37.80		4992	70-15
+Ascomycota	Incertae sedis	Magnaporthe	grisea	Integrated Physical/Genetic Map	0.041	40.00		3918	
+Ascomycota	Incertae sedis	Magnaporthe	grisea	CS	0.041	40.00		4929	70-15
+Ascomycota	Incertae sedis	Magnaporthe	grisea	CS	0.041	40.00		4930	70-15
+Ascomycota	Incertae sedis	Magnaporthe	grisea	CS	0.043	41.60		4784	
+Ascomycota	Incertae sedis	Magnaporthe	grisea	CS	0.043	41.60		5408	
+Ascomycota	Incertae sedis	Magnaporthe	grisea	CS	0.043	41.70		5409	
+Ascomycota	Incertae sedis	Magnaporthe	oryzae	CS	0.039	37.95		5080	P131
+Ascomycota	Incertae sedis	Magnaporthe	oryzae	CS	0.040	38.87		5081	Y34
+Ascomycota	Incertae sedis	Magnaporthe	oryzae	CS	0.041	40.00		3919	
+Ascomycota	Incertae sedis	Magnaporthe	oryzae	CS	0.041	40.00		4831	Taxonomy ID: 242507; strain 70-15
+Ascomycota	Incertae sedis	Magnaporthe	oryzae	CS	0.043	41.70		5079	Taxonomy ID: 242507; strain 70-15
 Ascomycota	Incertae sedis	Myriogonium sp.		Fl-PC	0.015	14.63	1	2390	BARAL 4153 (Weber 650)
 Ascomycota	Incertae sedis	Myriogonium sp.		Fl-PC	0.017	17.10	1	2391	MARSON 4404
 Ascomycota	Incertae sedis	Tromeropsis	microtheca cf.	Fl-PC	0.026	25.27		2009	REG
@@ -25,15 +46,23 @@ Ascomycota	Pezizales	Fimaria sp.		Fl-PC	0.052	51.30	3	2665	REG (Weber 186)
 Ascomycota	Pezizales	Otidea	alutacea cf.	Fl-PC	0.037	36.67	2	2667	REG
 Ascomycota	Pezizales	Otidea	cochleata cf.	Fl-PC	0.035	34.20	2	2666	REG
 Ascomycota	Pezizales	Pachyella	celtica	Fl-PC	0.092	90.44	6	2649	REG
-Ascomycota	Pezizales	Peziza	nivea	Fl-PC	0.076	74.10	4	2260	REG
+Ascomycota	Pezizales	Peziza	jungermanniae	Fl-PC	0.028	26.98	1-2	2389	REG
 Ascomycota	Pezizales	Pseudoplectania	vogesiaca	Fl-PC	0.063	61.18	3-4?	2592	REG (Weber 288)
 Ascomycota	Pezizales	Pseudoplectania	vogesiaca	Fl-PC	0.063	61.18	3-4?	2591	REG (Weber 71)
 Ascomycota	Pezizales	Scutellinia	ceijpii	Fl-PC	0.029	28.50	2	2688	REG (Weber 211)
 Ascomycota	Pezizales	Scutellinia	ceijpii	Fl-PC	0.032	30.97	2	2689	REG (Weber 210)
 Ascomycota	Pezizales	Scutellinia	ceijpii	Fl-PC	0.032	31.73	2	2690	REG (Weber 66)
 Ascomycota	Pezizales	Scutellinia	ceijpii	Fl-PC	0.035	34.20	2	2691	REG (Weber 58)
+Ascomycota	Pezizales	Underwoodia	fuegiana	Fl-PC	0.096	93.67	6	2630	REG
 Ascomycota	Pleosporales	Stagonospora		CS	0.037	36.08		5386	SRC1lsM3a v1.0
+Ascomycota	Saccharomycetales	Candida	caseinolytica	CS	0.009	9.18		5015	Y-17796
+Ascomycota	Saccharomycetales	Candida	lusitaniae	CS	0.016	16.00		3962	strain ATCC 42720
+Ascomycota	Saccharomycetales	Candida	tenuis	CS	0.011	10.70		5016	NRRL Y-1498
+Ascomycota	Saccharomycetales	Pichia	sorbitophila	CHEF gel electrophoresis	0.014	13.90		4423	CBS 7064
 Ascomycota	Saccharomycetes	Lipomyces	starkeyi NRRL Y-11557	CS	0.022	21.27		5922	
+Ascomycota	Sordariales	Lasiosphaeria	spermoides	Fl-PC	0.025	24.51		2032	REG
+Ascomycota	Sordariales	Myceliophthora	thermophila	CS	0.040	38.74		4855	
+Ascomycota	Xylariales	Endoxyla	avocetta	CS	0.057	56.23		5265	NRRL 3190 v1.0
 Ascomycota	Xylariales	Hypoxylon	multiforme	Fl-PC	0.025	24.51	0.0	2037	REG
 Ascomycota	Xylariales	Hypoxylon	sp	CS	0.039	37.70		5281	CI-4A v1.0
 Ascomycota	Xylariales	Hypoxylon	sp	CS	0.048	46.59		5282	CO27-5 v1.0
@@ -44,36 +73,54 @@ Basidiomycota	Agaricales	Armillaria sp.	NABS XI	PI-FC	0.078	76.28	2	4104	SP83-07
 Basidiomycota	Agaricales	Auriculariopsis	albomellea	CS	0.052	50.89		5969	FP 102339 v1.0
 Basidiomycota	Agaricales	Coprinopsis	Coprinopsis strossmayeri	CS	0.034	33.32		5685	
 Basidiomycota	Agaricales	Cortinarius	glaucopus A	CS	0.065	63.45		5480	T 2004 276 v2.0
+Basidiomycota	Agaricales	Cystoderma	adnatifolium	FC	0.049	47.75	3	2722	TAAM 147343,171701,147356, 147360, 147381; H 92-1155
+Basidiomycota	Agaricales	Saproamanita	inopinata	CS	0.023	22.12		5671	
+Basidiomycota	Agaricostilbomycetes	Agaricostilbum	hyphaenes	CS	0.018	17.89		5504	ATCC MYA-4628 v1.0
 Basidiomycota	Auriculariales	Aporpium	caryae	CS	0.040	39.53		5493	L-13461
 Basidiomycota	Boletales	Austrogaster	marthae	DAPI-PC	0.099	96.65	4	4201	REG 3410
 Basidiomycota	Boletales	Austropaxillus	contulmensis	DAPI-PC	0.093	91.28	4	4203	REG 539
 Basidiomycota	Boletales	Boletus	griseus	DAPI-PC	0.042	41.00	1	4313	REG 301
-Basidiomycota	Boletales	Boletus	luridiformis	DAPI-PC	0.092	90.31	3	4339	REG 2977
-Basidiomycota	Boletales	Boletus	luridiformis	DAPI-PC	0.099	97.13	3	4340	REG 2974
-Basidiomycota	Boletales	Boletus	luridiformis	DAPI-PC	0.100	98.11	3	4338	REG 2975
-Basidiomycota	Boletales	Boletus	luridiformis	DAPI-PC	0.101	98.59	3	4337	REG 2976
+Basidiomycota	Boletales	Boletus	ornatipes	DAPI-PC	0.039	38.08	1	4314	REG 329
+Basidiomycota	Boletales	Boletus	ornatipes	DAPI-PC	0.043	41.97	1	4315	REG 399
+Basidiomycota	Boletales	Boletus	pallidus	DAPI-PC	0.043	42.47	1	4311	REG 307
 Basidiomycota	Boletales	Boletus	subtomentosus	DAPI-PC	0.059	58.08	2	4297	REG 3459
 Basidiomycota	Boletales	Boletus	subtomentosus	DAPI-PC	0.061	60.04	2	4294	REG 3463
 Basidiomycota	Boletales	Boletus	subtomentosus	DAPI-PC	0.065	63.45	2	4295	REG 3460
 Basidiomycota	Boletales	Boletus	subtomentosus	DAPI-PC	0.068	66.87	2	4296	REG 3461
+Basidiomycota	Boletales	Gyrodon	merulioides	DAPI-PC	0.056	54.66	2	4216	REG 479
+Basidiomycota	Boletales	Leccinum	chromapes	DAPI-PC	0.039	38.56	1	4342	REG 444
+Basidiomycota	Boletales	Leccinum	chromapes	DAPI-PC	0.041	40.51	1	4341	REG 2999
+Basidiomycota	Boletales	Leccinum	rubropunctum	DAPI-PC	0.036	35.63	1	4344	REG 333
+Basidiomycota	Boletales	Leucogyrophana	romellii	DAPI-PC	0.054	52.72	2	4158	REG 401
 Basidiomycota	Boletales	Porphyrellus	fumosipes	DAPI-PC	0.109	106.40	3	4376	REG 378
 Basidiomycota	Boletales	Rhizoctonia	cucumeris	CS	0.049	47.66		5436	AG-1 IB
 Basidiomycota	Boletales	Rhizoctonia	cucumeris	CS	0.050	48.51		5663	AG-1 IB
 Basidiomycota	Boletales	Rhizoctonia	cucumeris	Nanopore-Generated Reads	0.055	54.00		5550	
 Basidiomycota	Boletales	Suillus	albidipes	DAPI-PC	0.066	64.43	2	4253	REG 627
+Basidiomycota	Boletales	Xerocomus	castanellus	DAPI-PC	0.036	35.14	1	4285	REG 330
 Basidiomycota	Hymenochaetales	Phellinus	ialni	DAPI-IC	0.050	49.33		5881	CBS 380-72; TFC 2006-1
 Basidiomycota	Hymenochaetales	Phellinus	ialni	DAPI-IC	0.050	49.33		5882	TAAM191390; TFC 2005-123
 Basidiomycota	Hymenochaetales	Phellinus	ialni	DAPI-IC	0.057	56.00		5880	TAAM 191375; TFC 2005-33
 Basidiomycota	Hymenochaetales	Phellinus	ialni	DAPI-IC	0.065	64.00		5883	TAAM 191388; TFC 2005-40
+Basidiomycota	Polyporales	Ceriporiopsis	subvermispora	CS	0.040	38.97		5541	B
+Basidiomycota	Polyporales	Ceriporiopsis	subvermispora	CS	0.040	39.00		4937	
+Basidiomycota	Polyporales	Trametes	ljubarskyi	CS	0.035	34.00		5422	CIRM1659 v1.0
 Basidiomycota	Pucciniales	Uromyces	bidentis	FC	2.545	2489.00	1	5523	
 Basidiomycota	Russulales	Russula	Russula	CS	0.050	48.53		5992	BPL707 v1.0
+Basidiomycota	Sebacinales	Sebacina	vermifera	CS	0.039	38.09		5428	MAFF 305830 v1.0
+Basidiomycota	Sporidiobolales	Sporobolomyces	linderae	CS	0.019	18.24		5513	CBS 7893 v1.0
 Basidiomycota	Tritirachiales	Tritirachium	sp	CS	0.019	18.89		5514	CBS 265.96 v1.0
 Chytridiomycota	Neocallimastigales	Piromyces sp.		CS	0.031	30.00		4008	Piromyces sp. E2
 Chytridiomycota	Neocallimastigales	Piromyces sp.		CS	0.073	71.02		5335	E2 v1.0
+Glomeromycota	Glomerales	Glomus	etunicatum	PI-FC	0.038	37.45		3928	
 Glomeromycota	Glomerales	Glomus	intraradice	FC	0.153	150.00		5561	industrial strain produced by AMykor GmbH (Germany)
 Glomeromycota	Glomerales	Glomus	intraradice	Fe-IC	0.168	164.05		5563	DAOM197198
 Glomeromycota	Glomerales	Glomus	intraradice	Fe-IC	0.183	178.52		5564	industrial strain produced by AMykor GmbH (Germany)
+Glomeromycota	Glomerales	Glomus	versiforme	DAPI-PC	0.333	325.19		4079	HC/ Fungi E01
+Glomeromycota	Glomerales	Glomus	versiforme	DAPI-PC	0.346	338.19		4016	HC/ Fungi E01
+Glomeromycota	Glomerales	Glomus	versiforme	DAPI-PC	0.359	351.20		4080	HC/ Fungi E01
 Zygomycota	Mucorales	Fennellomyces	sp.	CS	0.047	45.90		5978	T-0311 v1.0
+Zygomycota	Mucorales	Rhizomucor	variabilis	CS	0.034	33.04		5839	B7584
 Zygomycota	Mucorales	Rhizopus	oryzae	CS	0.036	35.00		2901	
 Zygomycota	Mucorales	Rhizopus	oryzae	CS	0.038	37.46		5841	99-892
 Zygomycota	Mucorales	Rhizopus	oryzae	CS	0.041	40.00		4932	RA 99-880

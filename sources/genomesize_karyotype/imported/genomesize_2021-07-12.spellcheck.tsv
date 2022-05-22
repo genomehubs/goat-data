@@ -8,11 +8,8 @@ taxon_id	input	rank	suggested
 95461	Jasus novaehollandiae	species	Jasus edwardsii
 412132	Thalamita edwardsi	species	Thalamita admete
 108119	Neopanope texana	species	Dyspanopeus texanus
-261876	Balanus cariosus	species	Semibalanus cariosus
-36137	Mitella polymerus	species	Pollicipes polymerus
 7640	Arbacia aequituberculata	species	Arbacia lixula
 2032702	Stichopus californicus	species	Apostichopus californicus
-1902863	Thyonepsolus nutriens	species	Lissothuria nutriens
 105367	Tripneustes esculentus	species	Tripneustes ventricosus
 1483170	Archodontes melanopus	species	Mallodon dasystomus
 1425560	Cryptocephalus alboscutellatus	species	Cryptocephalus saucius
@@ -31,7 +28,6 @@ taxon_id	input	rank	suggested
 318373	Hyla vasta	species	Osteopilus vastus
 410599	Mantella cowanii	species	Mantidactylus cowanii
 159452	Arrhamphus sclerolepis sclerolepis	species	Arrhamphus sclerolepis
-371673	Holocentrus ascensionis	species	Holocentrus adscensionis
 304017	Hyphessobrycon callistus	species	Hyphessobrycon eques
 357590	Prochilodus affinis	species	Prochilodus costatus
 42582	Raphiodon vulpinus	species	Rhaphiodon vulpinus
@@ -53,34 +49,14 @@ taxon_id	input	rank	suggested
 630661	Caelorinchus innotabilis	species	Coelorinchus innotabilis
 8994	Guttera edouardi	species	Guttera pucherani
 1171711	Anthropoides paradisea	species	Grus paradisea
-7886	Protopterus aethiopicus congicus	species	Protopterus aethiopicus
 1311476	Ophidion welshi	species	Ophidion josephi
-301820	Bathylagus milleri	species	Pseudobathylagus milleri
 39617	Aphelocoma coerulescens coerulescens	species	Aphelocoma coerulescens
 317151	Hirundo rupestris	species	Ptyonoprogne rupestris
 2724891	Tiaris obscurus	species	Asemospiza obscura
-1379489	Ambassis elongatus	species	Ambassis elongata
-2746913	Apogon poecilopterus	species	Jaydia poeciloptera
-1972138	Callionymus limiceps	species	Repomucenus limiceps
-173324	Elegatis bipinnulata	species	Elagatis bipinnulata
-281265	Haplochromis longirostris	species	Prognathochromis longirostris
-158766	Oreochromis macrochir macrochir	species	Oreochromis macrochir
-64544	Oreochromis spilurus spilurus	species	Oreochromis spilurus
-8144	Sarotherodon galilaeus galilaeus	species	Sarotherodon galilaeus
-257723	Pomatoschistus canestrini	species	Ninnigobius canestrinii
 317480	Coris dorsomaculata	species	Coris dorsomacula
 40500	Lutjanus hastingsi	species	Lutjanus vivanus
 112728	Polyprion moeone	species	Polyprion americanus
-50731	Abudefduf marginatus	species	Abudefduf saxatilis
-1648443	Pseudochromis rosae	species	Pseudoplesiops rosae
-75040	Scatophagus multifasciatus	species	Selenotoca multifasciata
-331523	Bairdiella chrysura	species	Bairdiella chrysoura
-8230	Sarda velox	species	Sarda orientalis
 160736	Trisotropis venenosus	species	Mycteroperca venenosa
-135776	Sillaginodes punctata	species	Sillaginodes punctatus
-2697108	Forsterygion profundum	species	Matanui profundum
-2769046	Grahamina nigripenne	species	Forsterygion nigripenne
-152555	Tripterygion tripteronotus	species	Tripterygion tripteronotum
 8262	Pleuronectes platessus	species	Pleuronectes platessa
 1213677	Dasyatis chrysonota marmorata	species	Dasyatis marmorata
 2599772	Dasyatis gerrardi	species	Maculabatis gerrardi
@@ -95,27 +71,19 @@ taxon_id	input	rank	suggested
 153723	Hemidactylus leightoni	species	Hemidactylus brookii
 401539	Platypholis walbergii	species	Homopholis walbergii
 39310	Lacerta galloti	species	Gallotia galloti
-179269	Tropidurus umbra	species	Plica umbra
 202459	Clemmys caspica	species	Mauremys caspica
 303685	Balistes carolinensis	species	Balistes capriscus
 181478	Sufflamen fraenatus	species	Sufflamen fraenatum
 223141	Cyclichthys schoepfi	species	Chilomycterus schoepfii
 303713	Cantherines pullus	species	Cantherhines pullus
 8321	Taricha granulosa granulosa	species	Taricha granulosa
-766170	Aletes squamigerus	species	Thylacodes squamigerus
 2291435	Lymnaea fontinalis	species	Ampullaceana fontinalis
 570260	Stenostomum unicolor	species	Stenostomum sphagnetorum
-1118970	Schizoporella longirostris	species	Schizoporella dunkeri
 27389	Eisenia rosea	species	Aporrectodea rosea
 1411920	Lima scabra	species	Ctenoides scaber
 61348	Barnea costata	species	Cyrtopleura costata
 151218	Mytilus grayanus	species	Crenomytilus grayanus
 40256	Volsella modiolus	species	Modiolus modiolus
-619694	Littorina irrorata	species	Littoraria irrorata
-58619	Littorina neritoides	species	Melarhaphe neritoides
-45756	Littorina punctata	species	Echinolittorina punctata
-509938	Polinices duplicatus	species	Neverita duplicata
-1514950	Polinices heros	species	Euspira heros
 53508	Goniobasis alabamensis	species	Elimia alabamensis
 1041099	Goniobasis simplex	species	Elimia simplex
 2291601	Aricidea cerruti	species	Aricidea cerrutii
@@ -129,6 +97,5 @@ taxon_id	input	rank	suggested
 1622186	Ophiodromus obscurus	species	Oxydromus obscurus
 1616901	Helix vulgaris	species	Helix albescens
 67583	Procerodes litoralis	species	Procerodes littoralis
-67583	Foviella affinis	species	Procerodes littoralis
 2602930	Callithaca adamsi	species	Protocallithaca adamsi
 1676567	Cerastoderma pinnulatum	species	Parvicardium pinnulatum
