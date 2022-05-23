@@ -1,9 +1,9 @@
 name: new_release
-on: workflow_dispatch
-# on:
-#   schedule:
-#     # Runs "at 5 min past midnight" (see https://crontab.guru)
-#     - cron: '5 0 * * *'
+# on: workflow_dispatch
+on:
+  schedule:
+    # Runs "at 5 min past 1AM" (see https://crontab.guru)
+    - cron: '5 1 * * *'
 
 jobs:
 
@@ -353,3 +353,55 @@ jobs:
         run: |
           rsync -av --delete  /volumes/docker/snapshots/production/production-$RELEASE goat:/volumes/docker/snapshots/production/
           rsync -av --delete  /volumes/docker/resources/files                          goat:/volumes/docker/resources/
+
+  restore_on_edin_prod:
+    needs:
+      - rsync_to_edin_prod
+    runs-on:  self-hosted
+    steps:
+
+      - name: Get bash release name
+        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+
+      - name: ssh edin prod and restore
+        run: |
+          ssh goat "
+          curl -s -X DELETE 'es1:9200/*--$RELEASE'
+          curl -s -X PUT 'es1:9200/_snapshot/production-$RELEASE' \
+            -H 'Content-Type: application/json' \
+            -d' { \"type\": \"fs\", \"settings\": { \"location\": \"/usr/share/elasticsearch/snapshots/production/production-$RELEASE\" } }'
+          curl -s -X POST 'es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_analysis_file/_restore?wait_for_completion=true&pretty' \
+            -H 'Content-Type: application/json' \
+            -d' { \"indices\": \"*--$RELEASE\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
+          curl -s -X POST 'es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill/_restore?wait_for_completion=true&pretty' \
+            -H 'Content-Type: application/json' \
+            -d' { \"indices\": \"*--$RELEASE\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
+          "
+
+      - name: get release day number
+        run:  if [[ $RELEASE =~ [0-9]{,2}$  ]]; then RELEASE_DAY=${BASH_REMATCH}; fi
+
+      - name: ssh edin prod and start docker
+        run: |
+          ssh goat "
+          mkdir -p /volumes/docker/logs/${RELEASE} &&
+          docker rm -f goat-api-${RELEASE_DAY}
+          docker run -d \
+          --restart=always \
+          --net net-es \
+          -p 30${RELEASE_DAY}:3000 \
+          --user \$UID:\$GROUPS \
+          -e GH_ORIGINS='https://goat.genomehubs.org null' \
+          -e GH_HUBNAME=goat \
+          -e GH_HUBPATH='/genomehubs/resources/' \
+          -e GH_NODE='http://es1:9200' \
+          -e GH_RELEASE=$RELEASE \
+          -e GH_MEMCACHED='memcache:11211' \
+          -e GH_SOURCE=https://github.com/genomehubs/goat-data \
+          -e GH_ACCESS_LOG=/genomehubs/logs/access.log \
+          -e GH_ERROR_LOG=/genomehubs/logs/error.log \
+          -v /volumes/docker/logs/$RELEASE:/genomehubs/logs \
+          -v /volumes/docker/resources:/genomehubs/resources \
+          --name goat-api-${RELEASE_DAY} \
+          genomehubs/genomehubs-api:latest
+          "
