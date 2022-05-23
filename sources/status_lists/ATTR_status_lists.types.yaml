@@ -52,7 +52,6 @@ attributes:
       enum:
         - NHM
         - OXF
-        - TOL_SCOTLAND
         - Sanger
   sequencing_status:
     display_group: sequencing_status
