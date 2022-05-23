@@ -379,17 +379,20 @@ jobs:
           "
 
       - name: get release day number
-        run:  if [[ $RELEASE =~ [0-9]{,2}$  ]]; then RELEASEDAY=${BASH_REMATCH}; fi
+        run: |
+          if [[ $RELEASE =~ ([0-3][0-9])$ ]]; then 
+            echo "RELEASEDAY=${BASH_REMATCH[1]}" | tee -a /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+          fi
 
-      - name: ssh edin prod and start docker
+      - name: ssh edin prod and start dockers
         run: |
           ssh goat "
-          mkdir -p /volumes/docker/logs/${RELEASE} &&
+          mkdir -p /volumes/docker/logs/$RELEASE &&
           docker rm -f goat-api-$RELEASEDAY
           docker run -d \
           --restart=always \
           --net net-es \
-          -p 30$RELEASE_DAY:3000 \
+          -p 30$RELEASEDAY:3000 \
           --user \$UID:\$GROUPS \
           -e GH_ORIGINS='https://goat.genomehubs.org null' \
           -e GH_HUBNAME=goat \
@@ -404,4 +407,14 @@ jobs:
           -v /volumes/docker/resources:/genomehubs/resources \
           --name goat-api-$RELEASEDAY \
           genomehubs/genomehubs-api:latest
+          docker rm -f goat-ui-$RELEASEDAY
+          docker run -d --restart always \
+          --net net-es \
+          -p 80$RELEASEDAY:8880 \
+          --user \$UID:\$GROUPS \
+          -e GH_CLIENT_PORT=8880 \
+          -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
+          -e GH_SUGGESTED_TERM=Canidae \
+          --name goat-ui-$RELEASEDAY \
+          genomehubs/goat:latest
           "
