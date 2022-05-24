@@ -2,7 +2,7 @@ name: new_release
 # on: workflow_dispatch
 on:
   schedule:
-    - cron: '28 1 * * *'
+    - cron: '5 0 * * *'
 
 jobs:
 
@@ -267,6 +267,13 @@ jobs:
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
+
+      - name: Commit files if needed
+        run:  git commit -m "Add changes" -a || exit 0
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ env.RELEASE }}
 
   genomehubs_index_files:
     needs:
