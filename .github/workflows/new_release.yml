@@ -2,8 +2,8 @@ name: new_release
 # on: workflow_dispatch
 on:
   schedule:
-    # Runs "at 5 min past 1AM" (see https://crontab.guru)
-    - cron: '5 1 * * *'
+    # Runs "at 5 min past midnight" (see https://crontab.guru)
+    - cron: '5 0 * * *'
 
 jobs:
 
