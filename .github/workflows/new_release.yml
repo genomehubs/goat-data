@@ -395,6 +395,7 @@ jobs:
           ssh goat "
           mkdir -p /volumes/docker/logs/$RELEASE &&
           docker rm -f goat-api-$RELEASEDAY
+          docker pull genomehubs/genomehubs-api:latest
           docker run -d \
           --restart=always \
           --net net-es \
@@ -413,7 +414,9 @@ jobs:
           -v /volumes/docker/resources:/genomehubs/resources \
           --name goat-api-$RELEASEDAY \
           genomehubs/genomehubs-api:latest
+
           docker rm -f goat-ui-$RELEASEDAY
+          docker pull genomehubs/goat:latest
           docker run -d --restart always \
           --net net-es \
           -p 80$RELEASEDAY:8880 \
