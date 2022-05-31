@@ -5,6 +5,8 @@ file:
   source: dToL sample naming
   source_url: https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming
 taxon_names:
+  tolid_prefix:
+    index: 0
   tol_id:
     index: 0
   common_name:
