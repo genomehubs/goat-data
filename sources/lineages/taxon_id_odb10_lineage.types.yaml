@@ -73,15 +73,15 @@ attributes:
       - tremellomycetes_odb10
       - vertebrata_odb10
       - viridiplantae_odb10
-    taxon_display_group: names
-    taxon_display_level: 2
-    taxon_display_name: Busco_odb10 lineage
-    taxon_key: odb10_lineage
-    taxon_name: asseodb10_lineagembly_level
-    taxon_summary:
+    display_group: names
+    display_level: 2
+    display_name: Busco_odb10 lineage
+    key: odb10_lineage
+    name: asseodb10_lineagembly_level
+    summary:
     - list
-    taxon_traverse: none
-    taxon_traverse_direction: none
+    traverse: none
+    traverse_direction: none
 taxonomy:
   taxon_id:
     header: taxon_id
