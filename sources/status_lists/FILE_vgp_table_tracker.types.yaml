@@ -34,7 +34,9 @@ attributes:
   long_list:
     header: sample_collected
   other_priority:
-    header: other_priority
+    header: vgp_phase
+    translate:
+      phase1: vgp
   sample_collected:
     header: sample_collected
   sample_acquired:

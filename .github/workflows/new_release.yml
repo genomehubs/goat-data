@@ -1,8 +1,8 @@
 name: new_release
-# on: workflow_dispatch
-on:
-  schedule:
-    - cron: '5 0 * * 1,3,5'
+on: workflow_dispatch
+# on:
+#   schedule:
+#     - cron: '5 0 * * 1,3,5'
 
 jobs:
 
@@ -44,6 +44,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:develop bash -c \
             "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
+          cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
       - name: Clean up expanded ncbi datasets zip
         run:  rm -rf sources/assembly-data/ncbi_dataset datasets
       - name: Run docker genomehubs parse --refseq-organelles
@@ -271,6 +272,16 @@ jobs:
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/status_lists \
                 --taxon-lookup any --taxon-spellcheck"
+      - name: Run docker genomehubs index --assembly-data-taxon
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:develop bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/assembly-data-taxon"
       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
