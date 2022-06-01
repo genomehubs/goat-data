@@ -364,7 +364,7 @@ jobs:
       - get_dockers
       - genomehubs_index_attributes
     runs-on:  [ self-hosted, runner1 ]
-        steps:
+    steps:
 
       - name: Get bash release name
         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
