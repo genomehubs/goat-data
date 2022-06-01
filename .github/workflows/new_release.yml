@@ -19,10 +19,10 @@ jobs:
       - get_dockers
     runs-on:  self-hosted
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
+      - uses: actions/checkout@v3
         with:
-          ref: ${{ github.ref }}
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       # - name: Get release name from date
       #   run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       # - name: Create a new branch
@@ -73,11 +73,16 @@ jobs:
       #   run:  |
       #     perl -i -plne 's/20\d\d\.\d\d.\d\d/'$RELEASE'/g' sources/goat.yaml
 
-      # - name: Commit files if needed
-      #   run:  git commit -m "Add changes" -a || exit 0
+      # - name: Commit files in branch
+      #   run: |
+      #     git config --local user.email "sujaikumar@gmail.com"
+      #     git config --local user.name "sujaikumar"
+      #     git add -A
+      #     git commit -m "Add changes from update_ncbi_ena_tolids"
       # - name: Push changes
       #   uses: ad-m/github-push-action@master
       #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
       #     branch: ${{ env.RELEASE }}
 
   genomehubs_init:
@@ -89,6 +94,12 @@ jobs:
 
       - name: Get bash release name
         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+          ref: ${{ env.RELEASE }}
 
       # - name: Check es health
       #   run:  curl -s "http://es1:9200/_cat/health"
@@ -150,6 +161,12 @@ jobs:
     steps:
       - name: Get bash release name
         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+          ref: ${{ env.RELEASE }}
 
       # - name: Run docker genomehubs index ott3.3
       #   run: |
@@ -289,11 +306,16 @@ jobs:
       #       -H 'Content-Type: application/json' \
       #       -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
-      # - name: Commit files if needed
-      #   run:  git commit -m "Add changes" -a || exit 0
+      # - name: Commit files in branch
+      #   run: |
+      #     git config --local user.email "sujaikumar@gmail.com"
+      #     git config --local user.name "sujaikumar"
+      #     git add -A
+      #     git commit -m "Add changes from update_ncbi_ena_tolids"
       # - name: Push changes
       #   uses: ad-m/github-push-action@master
       #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
       #     branch: ${{ env.RELEASE }}
 
   genomehubs_index_files:
@@ -305,6 +327,12 @@ jobs:
 
       - name: Get bash release name
         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+          ref: ${{ env.RELEASE }}
 
       - name: Run docker genomehubs index btk files
         run: |
@@ -340,6 +368,12 @@ jobs:
 
       - name: Get bash release name
         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+          ref: ${{ env.RELEASE }}
 
       - name: Run docker genomehubs fill
         run: |
