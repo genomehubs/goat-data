@@ -334,29 +334,29 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
           ref: ${{ env.RELEASE }}
 
-      - name: Run docker genomehubs index btk files
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            -v /volumes/docker/resources:/genomehubs/resources \
-            genomehubs/genomehubs:develop bash -c \
-              "genomehubs index \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --file-metadata sources/btk/btk.files.yaml"
-      - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_analysis_file" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_analysis_file?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "analysis*,file*", "include_global_state":false}'
-      - name: Snapshot files to production-$RELEASE
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_analysis_file" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_analysis_file?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "analysis*,file*", "include_global_state":false}'
+      # - name: Run docker genomehubs index btk files
+      #   run: |
+      #     docker run --rm --network=host \
+      #       -v `pwd`/sources:/genomehubs/sources \
+      #       -v /volumes/docker/resources:/genomehubs/resources \
+      #       genomehubs/genomehubs:develop bash -c \
+      #         "genomehubs index \
+      #           --es-host http://es1:9200 \
+      #           --taxonomy-source ncbi \
+      #           --config-file sources/goat.yaml \
+      #           --file-metadata sources/btk/btk.files.yaml"
+      # - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status_files
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_analysis_file" || exit 0
+      #     curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_analysis_file?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "analysis*,file*", "include_global_state":false}'
+      # - name: Snapshot files to production-$RELEASE
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_analysis_file" || exit 0
+      #     curl -s -X PUT    "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_analysis_file?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "analysis*,file*", "include_global_state":false}'
 
 
   genomehubs_fill:
@@ -375,30 +375,30 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
           ref: ${{ env.RELEASE }}
 
-      - name: Run docker genomehubs fill
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:develop bash -c \
-              "genomehubs fill \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --traverse-root 2759 \
-                --traverse-infer-both"
-      - name: Snapshot fill
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
+      # - name: Run docker genomehubs fill
+      #   run: |
+      #     docker run --rm --network=host \
+      #       -v `pwd`/sources:/genomehubs/sources \
+      #       genomehubs/genomehubs:develop bash -c \
+      #         "genomehubs fill \
+      #           --es-host http://es1:9200 \
+      #           --taxonomy-source ncbi \
+      #           --config-file sources/goat.yaml \
+      #           --traverse-root 2759 \
+      #           --traverse-infer-both"
+      # - name: Snapshot fill
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+      #     curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
     
-      - name: Snapshot final fill to production-$RELEASE
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
+      # - name: Snapshot final fill to production-$RELEASE
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+      #     curl -s -X PUT    "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
   rsync_to_edin_prod:
     needs:
