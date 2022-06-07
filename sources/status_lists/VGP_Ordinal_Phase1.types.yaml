@@ -1,0 +1,18 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: VGP_Ordinal_Phase1_2022-06-07.tsv
+  source: VGP Ordinal Phase List
+  source_date: 2022-06-07
+  source_url: https://docs.google.com/spreadsheets/d/1Jwjv6Kwc6VIn1UMMhnG6kvFCxjwGdC5b7p_HtbDOMOs/edit#gid=0
+attributes:
+  long_list:
+    header: phase1
+  other_priority:
+    header: phase1
+taxonomy:
+  phylum:
+    header: phylum
+  species:
+    header: latin_name_1
