@@ -1,5 +1,4 @@
 taxon_id	input	rank	suggested
-	Emberizidae	family	emberizinae
 48153	Phylloscopus sibillatrix	species	Phylloscopus sibilatrix
 98942	Platyhypnidium ripariodes	species	Rhynchostegium riparioides
 1497759	Cephaloziella massalongi	species	Cephaloziella massalongoi
@@ -193,7 +192,6 @@ taxon_id	input	rank	suggested
 	Cladonia alpina	species	caladenia alpina
 	Cladonia glabriuscula	species	cladonia scabriuscula
 	Diplotomma vezdanum	species	diplotomma vezdana
-5389	Gomphillaceae	family	Gomphidiaceae
 258902	Lecidea alpestris	species	Protoblastenia rupestris
 1301421	Lecanora fugiens	species	Gyalolechia fulgens
 	Lecidea fuliginosa	species	lecidea uliginosa
@@ -391,6 +389,7 @@ taxon_id	input	rank	suggested
 2836843	Phytobia errans	species	Phytomia errans
 498689	Phytomyza ranunculicola	species	Phytomyza ranunculivora
 498688	Phytomyza rapunculi	species	Phytomyza ranunculi
+2882705	Platypalpus divisus	species	Platypalpus vividus
 1446193	Platypalpus ecalceatus	species	Platypalpus calceatus
 2725521	Polyodaspis sulcicolis	species	Polyodaspis sulcicollis
 2882739	Procladius simplicistylis	species	Procladius simplicistylus
@@ -398,7 +397,7 @@ taxon_id	input	rank	suggested
 511112	Rhaphium auctum	species	Pesotum aureum
 	Rhamphomyia tarsata	species	rhamphomyia barbata
 1231557	Rymosia acta	species	Ormosia arborea
-	Rymosia affinis	species	ormosia affinis	drymonia affinis
+	Rymosia affinis	species	drymonia affinis	ormosia affinis
 1231565	Rymosia bifida	species	Ormosia nitida
 1824977	Scaptomyza vittata	species	Poecilolycia vittata
 1918184	Smittia amoena	species	Smidtia amoena
@@ -409,6 +408,7 @@ taxon_id	input	rank	suggested
 1155462	Tethina grisea	species	Exorista rustica
 903472	Thalassomya frauenfeldi	species	Thalassomyia frauenfeldi
 1088292	Thereva inornata	species	Theretra inornata
+377534	Thrypticus divisus	species	Argyra argyria
 1285112	Trichonta fragilis	species	Columnea tenella
 316471	Villa venusta	species	Viola sacchalinensis
 2886778	Xenopelopia falcigera	species	Telopelopia fascigera
@@ -615,12 +615,11 @@ taxon_id	input	rank	suggested
 691542	Feltria subterranea	species	Agrotis subterranea
 119153	Harpactea hombergi	species	Harpactea hombergii
 	Lauroppia	genus	lucoppia	aeroppia	lauroia
+280703	Lebertia dubia	species	Pichonia dubia
 1907025	Opilio canestrini	species	Opilio canestrinii
 926819	Piona carnea	species	Pinna carnea
-166053	Protziidae	family	Proteidae
 1264953	Sabacon viscayanum	species	Sabacon viscayanus
 600226	Tydeus interruptus	species	Thyreus interruptus
-39131	Sminthurida	family	Sminthuridae
 121349	Coronula reginae	species	Erythrolamprus reginae
 424460	Pantopipetta longituberculata	species	Pantopipetta lonbituberculata
 763142	Hemithiris psitacea	species	Hemithiris psittacea
@@ -774,7 +773,6 @@ taxon_id	input	rank	suggested
 2821804	Aporrhais serresianus	species	Aporrhais serresiana
 71480	Armina loveni	species	Armina lovenii
 	Astyris rosacea	species	asterias rosacea
-1920660	Belomitridae	family	Geomitridae
 1955509	Callumbonella suturale	species	Callumbonella suturalis
 2873313	Carinaria lamarckii	species	Carinaria lamarcki
 	Colus glaber	species	conus scaber
@@ -829,7 +827,7 @@ taxon_id	input	rank	suggested
 2796199	Laelaspis astronomica	species	Laelaspis astronomicus
 195221	Macronyssus	genus	Macronychus
 645005	Phytoseius macropilis	species	Phytoseiulus macropilis
-	Seiulus	genus	suillus	sciurus
+	Seiulus	genus	suillus	sciurus	seiurus
 161517	Hahnia candida	species	Halenia pringlei
 347913	Exopalpiger trianguliceps	species	Ixodes trianguliceps
 87361	Cepheus tuberculatus	species	Alpheus malleator
@@ -935,7 +933,7 @@ taxon_id	input	rank	suggested
 50979	Omphale obscura	species	Arrhenia obscurata
 1567043	Elachertus gallicus	species	Hyssopus pallidus
 1566858	Eupelmus martelli	species	Eupelmus martellii
-	Mangoma	genus	maniola	mangora
+	Mangoma	genus	maniola	langona
 634056	Alaptus antennatus	species	Araptus attenuatus
 316456	Anagrus similis	species	Anabrus simplex
 2921236	Gastrancistrus flavicornis	species	Gastrancistrus fulvicornis
@@ -963,6 +961,7 @@ taxon_id	input	rank	suggested
 54539	Trichomma intermedium	species	Tricholoma intermedium
 1667496	Eriborus dorsalis	species	Dolichomitus terebrans
 2651462	Olesicampe binotata	species	Cycasis rubiginosa
+904094	Cryptus minator	species	Ischnus inquisitorius
 1550550	Gambrus ornatus	species	Parthenope longimanus
 1045616	Mesoleptidea stallii	species	Mesoleptidea stalii
 605254	Campodorus flavescens	species	Camponotus flavescens

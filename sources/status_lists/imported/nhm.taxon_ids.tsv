@@ -1,8 +1,13 @@
 taxon_id	input	rank
+42113	Clitellata	class
+256425	Lissotriton helveticus	species
+560355	Ameletus inopinatus	species
+551854	Leptophlebia marginata	species
+62803	Nemoura	genus
+7399	Hymenoptera	order
 1230162	Sialis fuliginosa	species
 7408	Ichneumonidae	family
 279441	Coniopterygidae	family
-7399	Hymenoptera	order
 172486	Gelis	genus
 1173315	Leuctra geniculata	species
 608843	Zwicknia bifrons	species
@@ -11,7 +16,6 @@ taxon_id	input	rank
 7041	Coleoptera	order
 1231183	Amphinemura standfussi	species
 1240991	Siphlonurus lacustris	species
-62803	Nemoura	genus
 1077841	Serratella ignita	species
 1395073	Perla bipunctata	species
 446500	Potamanthus luteus	species
@@ -19,7 +23,6 @@ taxon_id	input	rank
 248243	Siphlonurus alternatus	species
 30263	Trichoptera	order
 1592913	Procloeon bifidum	species
-42113	Clitellata	class
 753225	Roeslerstammia erxlebella	species
 79500	Bruchus	genus
 2681869	Depressariidae	family
@@ -281,7 +284,6 @@ taxon_id	input	rank
 881790	Scolopostethus	genus
 347974	Nabis limbatus	species
 1545228	Psallus haematodes	species
-256425	Lissotriton helveticus	species
 8324	Lissotriton vulgaris	species
 27474	Tachinidae	family
 7384	Sarcophaga	genus
@@ -512,6 +514,8 @@ taxon_id	input	rank
 1870035	Lithophane leautieri	species
 988156	Rhizedra lutosa	species
 116128	Epirrita dilutata	species
+145616	Trochulus striolatus	species
+145610	Deroceras reticulatum	species
 104719	Lumbrineridae	family
 2268715	Trivia arctica	species
 1545131	Eysarcoris venustissimus	species
@@ -596,11 +600,9 @@ taxon_id	input	rank
 2065413	Brachyptera putata	species
 #ieArtCong	Arthroplea congener	species
 1485927	Diura bicaudata	species
-560355	Ameletus inopinatus	species
 1592924	Heptagenia longicauda	species
 143750	Siphonoperla torrentium	species
 466568	Leuctra inermis	species
-551854	Leptophlebia marginata	species
 107769	Agabus	genus
 466662	Chloroperla tripunctata	species
 466578	Protonemura meyeri	species
@@ -924,11 +926,9 @@ taxon_id	input	rank
 1593253	Myrmarachne formicaria	species
 146086	Limax maximus	species
 1872065	Nuctenea umbratica	species
-145610	Deroceras reticulatum	species
 856749	Geophilus flavus	species
 336591	Larinioides cornutus	species
 1100095	Misumena vatia	species
-145616	Trochulus striolatus	species
 1871992	Phylloneta sisyphia	species
 145417	Cochlodina laminata	species
 #tzNolDila	Nolella dilatata	species
@@ -1122,6 +1122,14 @@ taxon_id	input	rank
 192226	Euglesa casertana	species
 356141	Dilatata dilatata	species
 #ilDenPygm	Denticucullus pygmina	species
+6388	Enchytraeidae	family
+194188	Arion subfuscus	species
+1302814	Tandonia sowerbyi	species
+1737323	Pyramidula pusilla	species
+1461386	Selenochlamys ysbryda	species
+145446	Lauria cylindracea	species
+2742872	Aegopinella nitidula	species
+381128	Lehmannia marginata	species
 2857466	Apertochrysa prasina	species
 1520482	Parakontikia ventrolineata	species
 2903269	Parakontikia atrata	species
