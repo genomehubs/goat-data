@@ -28,25 +28,25 @@ jobs:
       - name: Create a new branch
         run:  |
           git checkout -b $RELEASE
-#       - name: Download NCBI datasets executable
-#         run: |
-#           curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > datasets
-#           chmod a+x datasets
-#           sudo ip link set ens3 mtu 1500
-#       - name: Download NCBI eukaryota datasets zip
-#         run: |
-#           mkdir -p sources/assembly-data
-#           ./datasets download genome taxon "Eukaryota" --no-progressbar --dehydrated --filename sources/assembly-data/eukaryota.zip
-#           unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
-#       - name: Run docker genomehubs parse --ncbi-datasets
-#         run: |
-#           docker run --rm --network=host \
-#             -v `pwd`/sources:/genomehubs/sources \
-#             genomehubs/genomehubs:develop bash -c \
-#             "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
-#           cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
-#       - name: Clean up expanded ncbi datasets zip
-#         run:  rm -rf sources/assembly-data/ncbi_dataset datasets
+      - name: Download NCBI datasets executable
+        run: |
+          curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > datasets
+          chmod a+x datasets
+          sudo ip link set ens3 mtu 1500
+      - name: Download NCBI eukaryota datasets zip
+        run: |
+          mkdir -p sources/assembly-data
+          ./datasets download genome taxon "Eukaryota" --no-progressbar --dehydrated --filename sources/assembly-data/eukaryota.zip
+          unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
+      - name: Run docker genomehubs parse --ncbi-datasets
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:develop bash -c \
+            "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
+          cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
+      - name: Clean up expanded ncbi datasets zip
+        run:  rm -rf sources/assembly-data/ncbi_dataset datasets
       - name: Run docker genomehubs parse --refseq-organelles
         run: |
           docker run --rm --network=host \
