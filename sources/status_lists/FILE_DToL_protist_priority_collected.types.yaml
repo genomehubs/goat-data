@@ -13,9 +13,15 @@ attributes:
     header: project
     type: keyword
   sample_collected:
-    header: sample_collected
+    header: Status
     translate:
       sample_collected: DTOL
+    type: keyword
+  sequencing_status:
+    header: Status
+    type: keyword
+  sequencing_status_dtol:
+    header: Status
     type: keyword
 taxonomy:
   species:
