@@ -1,0 +1,30 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: DToL_protist_priority_collected.tsv
+  source: DTOL Protist Samples Working Group
+  source_date: 2022-06-16
+attributes:
+  long_list:
+    header: project
+    type: keyword
+  other_priority:
+    header: project
+    type: keyword
+  sample_collected:
+    header: sample_collected
+    translate:
+      sample_collected: DTOL
+    type: keyword
+taxonomy:
+  species:
+    header: Species
+  family:
+    header: Family
+  order:
+    header: Order
+  class:
+    header: Class
+   phylum:
+    header: Phylum
