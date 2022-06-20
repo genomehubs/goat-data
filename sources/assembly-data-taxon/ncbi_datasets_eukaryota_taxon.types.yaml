@@ -24,32 +24,85 @@ attributes:
       PRJNA758215: METAINVERT
       PRJNA707598: SQUALOMIX
       PRJNA489243: VGP
-  sequencing_status_vgp:
+
+  sequencing_status_ebp:
     display_group: sequencing_status
-    constraint:
-      enum:
-        - insdc_open
-        - in_progress
-        - sample_acquired
-        - sample_collected
     header: bioProjectAccession
     separator:
       - ;
     translate:
-      PRJNA489243: insdc_open
+      PRJNA533106: insdc_open
+  sequencing_status_asg:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB43743: insdc_open
+  sequencing_status_b10k:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA545868: insdc_open
+  sequencing_status_cbp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB49670: insdc_open
   sequencing_status_dtol:
     display_group: sequencing_status
-    constraint:
-      enum:
-        - insdc_open
-        - in_progress
-        - sample_acquired
-        - sample_collected
     header: bioProjectAccession
     separator:
       - ;
     translate:
       PRJEB40665: insdc_open
+  sequencing_status_endemixit:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA712951: insdc_open
+  sequencing_status_erga:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB47820: insdc_open
+  sequencing_status_eurofish:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA393850: insdc_open
+  sequencing_status_metainvert:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA758215: insdc_open
+  sequencing_status_squalomix:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA707598: insdc_open
+  sequencing_status_vgp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA489243: insdc_open
+
 file:
   format: tsv
   header: true
