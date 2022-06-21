@@ -3,11 +3,10 @@ attributes:
     display_group: sequencing_status
     header: assemblyLevel
     translate:
-      contig: insdc_open
-      scaffold: insdc_open
+      Contig: insdc_open
       Scaffold: insdc_open
-      chromosome: insdc_open
-      complete: insdc_open
+      Chromosome: insdc_open
+      Complete Genome: insdc_open
   insdc_open:
     display_group: sequencing_status
     header: bioProjectAccession
