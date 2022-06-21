@@ -88,6 +88,7 @@ jobs:
   update_api_googlesheets_data:
     needs:
       - get_dockers
+      - update_ncbi_ena_tolids
     runs-on:  [ self-hosted ]
     steps:
       - name: Install dependencies
