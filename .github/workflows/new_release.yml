@@ -114,7 +114,7 @@ jobs:
 
       - name: Get from sts api
         run: |
-          python3 ./scripts/sts_to_tsv.py \
+          python3 ./scripts/sts_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} \
           | perl -plne '
             s/^(family_representative.*)$/$1\tsequencing_status_simple\tsample_collected\tsample_acquired\tin_progress/ and next;
             @F=split/\t/;
