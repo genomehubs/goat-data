@@ -135,7 +135,7 @@ jobs:
                 --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
-      - name: Run docker genomehubs index --assembly-data
+      - name: Run docker genomehubs index assembly assembly-data
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -168,7 +168,7 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
           ref: ${{ env.RELEASE }}
 
-      - name: Run docker genomehubs index ott3.3
+      - name: Run docker genomehubs index taxon ott3.3
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -178,7 +178,7 @@ jobs:
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/ott3.3"
-      - name: Run docker genomehubs index tolids
+      - name: Run docker genomehubs index taxon tolids
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -196,7 +196,7 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
-      - name: Run docker genomehubs index genomesizekaryotype
+      - name: Run docker genomehubs index taxon genomesizekaryotype
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -214,7 +214,7 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
-      - name: Run docker genomehubs index regional_lists
+      - name: Run docker genomehubs index taxon regional_lists
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -225,7 +225,7 @@ jobs:
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/regional_lists \
                 --taxon-lookup any --taxon-spellcheck"
-      - name: Run docker genomehubs index uk_legislation
+      - name: Run docker genomehubs index taxon uk_legislation
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -251,7 +251,7 @@ jobs:
             -H 'Content-Type: application/json' \
             -d '{ "index.mapping.nested_objects.limit" : 100000 }'
 
-      - name: Run docker genomehubs index btk assemblies
+      - name: Run docker genomehubs index assembly btk assemblies
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -268,7 +268,7 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
-      - name: Run docker genomehubs index lineages
+      - name: Run docker genomehubs index taxon lineages
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -279,7 +279,7 @@ jobs:
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/lineages"
 
-      - name: Run docker genomehubs index status_lists
+      - name: Run docker genomehubs index taxon status_lists
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -290,7 +290,7 @@ jobs:
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/status_lists \
                 --taxon-lookup any --taxon-spellcheck"
-      - name: Run docker genomehubs index --assembly-data-taxon
+      - name: Run docker genomehubs index taxon assembly-data-taxon
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
