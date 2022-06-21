@@ -141,7 +141,7 @@ jobs:
             -v $GITHUB_WORKSPACE:/goat-data \
             -w /goat-data \
             genomehubs/r-ver:latest \
-            Rscript ./scripts/get_googlesheet.R
+            Rscript ./scripts/get_googlesheets.R
       - name: Commit files in branch
         run: |
           git config --local user.email "sujaikumar@gmail.com"
