@@ -83,9 +83,8 @@ attributes:
     display_name: Busco_odb10 lineage
     key: odb10_lineage
     name: odb10_lineage
-    summary:
-      - list
-    traverse: none
+    summary: list
+    traverse: false
     traverse_direction: none
 taxonomy:
   taxon_id:
