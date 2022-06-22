@@ -1,4 +1,7 @@
 taxon_id	input	rank
+7041	Coleoptera	order
+79500	Bruchus	genus
+41160	Phyllobius	genus
 42113	Clitellata	class
 256425	Lissotriton helveticus	species
 560355	Ameletus inopinatus	species
@@ -13,7 +16,6 @@ taxon_id	input	rank
 608843	Zwicknia bifrons	species
 2014050	Siphlonurus armatus	species
 279420	Sialis lutaria	species
-7041	Coleoptera	order
 1231183	Amphinemura standfussi	species
 1240991	Siphlonurus lacustris	species
 1077841	Serratella ignita	species
@@ -24,11 +26,9 @@ taxon_id	input	rank
 30263	Trichoptera	order
 1592913	Procloeon bifidum	species
 753225	Roeslerstammia erxlebella	species
-79500	Bruchus	genus
 2681869	Depressariidae	family
 41098	Cantharis	genus
 7147	Diptera	order
-41160	Phyllobius	genus
 #ilComAene	Commophila aeneana	species
 1585357	Centrotus cornutus	species
 581588	Pammene	genus
@@ -938,6 +938,13 @@ taxon_id	input	rank
 560974	Schizomavella linearis	species
 560983	Escharella immersa	species
 626261	Alcyonidium mamillatum	species
+197941	Clangula hyemalis	species
+8869	Cygnus olor	species
+1100941	Cauchas fibulella	species
+1660672	Pancalia leuwenhoekella	species
+1594295	Epinotia immundana	species
+1101021	Monopis obviella	species
+13164	Myzus persicae	species
 687019	Caloptilia stigmatella	species
 988004	Nycteola revayana	species
 1594366	Nematopogon schwarziellus	species
@@ -948,9 +955,7 @@ taxon_id	input	rank
 1192867	Chroicocephalus ridibundus	species
 8915	Larus fuscus	species
 132585	Anser brachyrhynchus	species
-8869	Cygnus olor	species
 219593	Aythya ferina	species
-197941	Clangula hyemalis	species
 28680	Anas acuta	species
 9123	Gallinula chloropus	species
 45623	Pelophylax lessonae	species
@@ -959,17 +964,12 @@ taxon_id	input	rank
 184711	Branta leucopsis	species
 287198	Cacoecimorpha pronubana	species
 1857973	Bryotropha affinis	species
-13164	Myzus persicae	species
-1101021	Monopis obviella	species
-1594295	Epinotia immundana	species
 1101060	Syndemis musculana	species
 1869957	Glyphipterix fuscoviridella	species
 912699	Elachista argentella	species
 1869850	Epiblema costipunctana	species
 1405621	Glyphipterix simpliciella	species
-1660672	Pancalia leuwenhoekella	species
 2566637	Grapholita jungiella	species
-1100941	Cauchas fibulella	species
 1871927	Anyphaena sabina	species
 1430565	Gravitarmata margarotana	species
 2871731	Ectobius vittiventris	species
