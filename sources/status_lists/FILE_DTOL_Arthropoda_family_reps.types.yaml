@@ -12,6 +12,16 @@ attributes:
   family_representative:
     header: family_representative
     type: keyword
+  sequencing_status:
+    header: sample_collected
+    translate:
+      DTOL: sample_collected
+    type: keyword
+  sequencing_status_dtol:
+    header: sample_collected
+    translate:
+      DTOL: sample_collected
+    type: keyword
   sample_collected:
     header: sample_collected
     type: keyword

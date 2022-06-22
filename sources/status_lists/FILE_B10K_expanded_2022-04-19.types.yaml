@@ -14,18 +14,22 @@ attributes:
     header: family_representative
   sequencing_status:
     header: sequencing_status
+    translate:
+      insdc_submitted: in_progress
   sequencing_status_b10k:
     header: sequencing_status
+    translate:
+      insdc_submitted: in_progress
   sample_collected:
     header: sample_collected
   sample_acquired:
     header: sample_acquired
   in_progress:
     header: in_progress
-  insdc_open:
-    header: insdc_submitted     
-  published:
-    header: insdc_submitted     
+  # insdc_open:
+  #   header: insdc_submitted     
+  # published:
+  #   header: insdc_submitted     
 taxonomy:
   species:
     header: Species_name
