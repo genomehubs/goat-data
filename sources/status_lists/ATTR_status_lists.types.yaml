@@ -13,13 +13,13 @@ attributes:
     traverse: list
     traverse_direction: up
     type: keyword
-  insdc_submitted:
-    display_group: sequencing_status
-    display_level: 2
-    summary: list
-    traverse: list
-    traverse_direction: up
-    type: keyword
+  # insdc_submitted:
+  #   display_group: sequencing_status
+  #   display_level: 2
+  #   summary: list
+  #   traverse: list
+  #   traverse_direction: up
+  #   type: keyword
   insdc_open:
     display_group: sequencing_status
     display_level: 2
@@ -60,7 +60,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -75,7 +75,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -90,7 +90,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -105,7 +105,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -120,7 +120,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -135,7 +135,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -150,7 +150,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -165,7 +165,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -180,7 +180,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -195,7 +195,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -210,7 +210,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -225,7 +225,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
@@ -240,7 +240,7 @@ attributes:
       enum:
         - published
         - insdc_open
-        - insdc_submitted
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
