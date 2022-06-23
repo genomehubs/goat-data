@@ -26,13 +26,6 @@ attributes:
     header: insdc_open
   published:
     header: published
-taxon_names:
-  tolid_prefix:
-    header: TOLiD
-  tol_id:
-    header: TOLiD
 taxonomy:
   taxon_id:
     header: NCBI_taxon_id
-  alt_taxon_id:
-    header: TOLiD 
