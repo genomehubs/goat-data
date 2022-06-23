@@ -10,13 +10,14 @@ taxon_id	input	rank	suggested
 1166940	Bembidion cribum	species	Sinechostictus cribrum
 2493287	Bembidion dahli	species	Sinechostictus dahlii
 	Bembidion fortutum	species	bembidion fortunatum
+1166747	Bembidion hasti	species	Bembidion hastii
 795071	Bembidion littorale	species	Bembidion litorale
 1944110	Bembidion operosum	species	Bembidion petrosum
 	Bembidion platum	species	bembidion planum
 1553803	Bembidion rivulare	species	Trechus rivularis
 1166858	Bembidion stephensi	species	Bembidion stephensii
 2493403	Bembidion thetys	species	Bembidion tethys
-	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
+	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
 1944111	Bembidion yukonoum	species	Bembidion yukonum
 60828	Blethsia multipunctata	species	Blethisa multipunctata
 1343429	Calachroa sexpunctata	species	Cicindela sexpunctata
@@ -32,7 +33,6 @@ taxon_id	input	rank	suggested
 869531	Cicindela bigemi	species	Cylindera bigemina
 1587494	Cicindela silvicola	species	Cicindela sylvicola
 1343317	Cicindela trisigta	species	Cylindera trisignata
-1163509	Colfax stevensi	species	Colias sieversi
 170253	Colliuris pennsylvanica	species	Cosnania pensylvanica
 1343317	Cylindera trisigta	species	Cylindera trisignata
 1343309	Cylindra germanica	species	Cylindera germanica
@@ -67,6 +67,7 @@ taxon_id	input	rank	suggested
 2060222	Pterostichus ghiliani	species	Pterostichus ghilianii
 2850094	Pterostichus muehlfeldi	species	Pterostichus muehlfeldii
 484291	Pterostichus patruellis	species	Pterostichus riparius
+2933878	Sphodrus leucophthalmus	species	Sphodrus leucophtalmus
 1588474	Stenolophus skrimshireanus	species	Stenolophus skrimshiranus
 586002	Synchus vivalis	species	Synuchus vivalis
 528232	Syrdenus grayi	species	Sirdenus grayii
@@ -148,7 +149,7 @@ taxon_id	input	rank	suggested
 	Chiridopsis bupunctata	species	chiridopsis bipunctata
 	Chrysoli affinis	species	chrysolina affinis	chrysopa affinis
 111535	Chrysoli aurichalcea	species	Chrysolina aurichalcea
-	Chrysoli banksi	species	chrysolina bankii	chrysolina banksi	chrysolina banksii
+	Chrysoli banksi	species	chrysolina banksi	chrysolina bankii	chrysolina banksii
 75508	Chrysoli bicolor	species	Chrysolina bicolor
 75509	Chrysoli carnifex	species	Chrysolina carnifex
 75510	Chrysoli cerealis	species	Chrysolina cerealis
