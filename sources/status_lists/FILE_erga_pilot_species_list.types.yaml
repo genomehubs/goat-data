@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: erga_expanded_2022-02-14.tsv
-  source: ERGA Spreadsheet
-  source_date: 2022-02-14
+  name: erga_expanded.tsv
+  source: ERGA Pilot Project Tracker Spreadsheet
+  source_date: 2022-06-22
 attributes:
   long_list:
     header: long_list

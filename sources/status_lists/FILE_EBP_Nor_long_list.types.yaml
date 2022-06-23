@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: EBPN_expanded_2022-03-28.tsv
+  name: EBPN_expanded.tsv
   source: Ole K. Tørresen - University of Oslo
-  source_date: 2022-02-10
+  source_date: 2022-06-22
 attributes:
   long_list:
     header: long_list
@@ -30,7 +30,7 @@ taxonomy:
   genus:
     header: Genus
   species:
-    index: [2, 3]
+    header: [Genus, species]
     join: " "
   family:
     header: family

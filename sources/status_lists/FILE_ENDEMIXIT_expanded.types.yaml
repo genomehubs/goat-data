@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: ENDEMIXIT_expanded_2021-05-13.tsv
+  name: ENDEMIXIT_expanded.tsv
   source: Giorgio Bertorelle - Department of Life Sciences and Biotechnology, University of Ferrara
-  source_date: 2022-02-07
+  source_date: 2021-10-26
 attributes:
   long_list:
     header: long_list
@@ -26,7 +26,7 @@ taxonomy:
   genus:
     header: Genus
   species:
-    index: [2, 3]
+    header: [Genus, species]
     join: " "
   family:
     header: family
