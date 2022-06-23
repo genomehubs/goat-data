@@ -23,11 +23,11 @@ jobs:
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-      # - name: Get release name from date
-      #   run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
-      # - name: Create a new branch
-      #   run:  |
-      #     git checkout -b $RELEASE
+      - name: Get release name from date
+        run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+      - name: Create a new branch
+        run:  |
+          git checkout -b $RELEASE
       # - name: Download NCBI datasets executable
       #   run: |
       #     curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > datasets
@@ -38,21 +38,21 @@ jobs:
       #     mkdir -p sources/assembly-data
       #     ./datasets download genome taxon "Eukaryota" --no-progressbar --dehydrated --filename sources/assembly-data/eukaryota.zip
       #     unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
-      # - name: Run docker genomehubs parse --ncbi-datasets
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:develop bash -c \
-      #       "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
-      #     cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
-      # - name: Clean up expanded ncbi datasets zip
-      #   run:  rm -rf sources/assembly-data/ncbi_dataset datasets
-      # - name: Run docker genomehubs parse --refseq-organelles
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:develop bash -c \
-      #       "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
+      - name: Run docker genomehubs parse --ncbi-datasets
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:develop bash -c \
+            "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
+          cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
+      - name: Clean up expanded ncbi datasets zip
+        run:  rm -rf sources/assembly-data/ncbi_dataset datasets
+      - name: Run docker genomehubs parse --refseq-organelles
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:develop bash -c \
+            "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
       # - name: Get extra ENA taxonomy nodes
       #   run:  |
       #     mkdir -p sources/ena-taxonomy
@@ -69,22 +69,22 @@ jobs:
       #     curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
       #     | gzip -c > sources/tolids/tolids.tsv.gz
 
-      # - name: Update sources/goat.yaml
-      #   run:  |
-      #     perl -i -plne 's/20\d\d\.\d\d.\d\d/'$RELEASE'/g' sources/goat.yaml
+      - name: Update sources/goat.yaml
+        run:  |
+          perl -i -plne 's/20\d\d\.\d\d.\d\d/'$RELEASE'/g' sources/goat.yaml
 
-      # - name: Commit files in branch
-      #   run: |
-      #     git config --local user.email "sujaikumar@gmail.com"
-      #     git config --local user.name "sujaikumar"
-      #     git add -A
-      #     git commit -m "Add changes from workflow running $RELEASE"
+      - name: Commit files in branch
+        run: |
+          git config --local user.email "sujaikumar@gmail.com"
+          git config --local user.name "sujaikumar"
+          git add -A
+          git commit -m "Add changes from workflow running $RELEASE"
 
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: ${{ env.RELEASE }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.RELEASE }}
 
   update_api_googlesheets_data:
     needs:
