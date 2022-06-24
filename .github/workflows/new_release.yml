@@ -48,8 +48,9 @@ jobs:
             genomehubs/genomehubs:develop bash -c \
             "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
           cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
-      - name: genomehubs parse --ncbi-datasets
+      - name: genomehubs parse --ncbi-datasets-sample
         run: |
+          mkdir -p sources/assembly-data-sample
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:develop bash -c \
