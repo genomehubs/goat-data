@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Get dockers
         run:  |
-          docker pull genomehubs/genomehubs:latest
+          docker pull genomehubs/genomehubs:develop
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
     
   update_ncbi_ena_tolids:
@@ -19,8 +19,9 @@ jobs:
       - get_dockers
     runs-on: self-hosted
     steps:
-      - name: Get release name from date
-        run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+      # - name: Get release name from date
+      #   run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+      - run:  echo "RELEASE=2022.06.25" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
@@ -37,20 +38,26 @@ jobs:
           ./datasets download genome taxon "Eukaryota" --no-progressbar --dehydrated --filename sources/assembly-data/eukaryota.zip
       - name: Unzip NCBI eukaryota datasets zip
         run: unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
-      - name: Run docker genomehubs parse --ncbi-datasets
+      - name: genomehubs parse --ncbi-datasets
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
             "genomehubs parse --ncbi-datasets sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
           cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
-      - name: Clean up expanded ncbi datasets zip
-        run:  rm -rf sources/assembly-data/ncbi_dataset datasets
-      - name: Run docker genomehubs parse --refseq-organelles
+      - name: genomehubs parse --ncbi-datasets
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
+            "genomehubs parse --ncbi-datasets-sample sources/assembly-data --outfile sources/assembly-data-sample/ncbi_datasets_eukaryota_sample.tsv.gz"
+      - name: Clean up expanded ncbi datasets zip
+        run:  rm -rf sources/assembly-data/ncbi_dataset datasets
+      - name: genomehubs parse --refseq-organelles
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:develop bash -c \
             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
       - name: Get extra ENA taxonomy nodes
         run:  |
@@ -191,12 +198,12 @@ jobs:
           rm -rf resources/taxdump/*
           curl -s -X DELETE "es1:9200/{assembly,attributes,feature,identifiers,taxon,taxonomy}--*"
           curl -s -X DELETE "es1:9200/_snapshot/dev/*"
-      - name: Run genomehubs init
+      - name: genomehubs init
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             -v /volumes/docker/resources:/genomehubs/resources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs init \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -204,16 +211,26 @@ jobs:
                 --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
-      - name: Run docker genomehubs index assembly assembly-data
+      - name: genomehubs index assembly assembly-data
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --assembly-dir sources/assembly-data"
+      - name: genomehubs index assembly assembly-data-sample
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:develop bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --sample-dir sources/assembly-data-sample"
       - name: Snapshot initassembly
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly" || exit 0
@@ -238,21 +255,21 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
           ref: ${{ env.RELEASE }}
 
-      - name: Run docker genomehubs index taxon ott3.3
+      - name: genomehubs index taxon ott3.3
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/ott3.3"
-      - name: Run docker genomehubs index taxon tolids
+      - name: genomehubs index taxon tolids
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -266,11 +283,11 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
-      - name: Run docker genomehubs index taxon genomesizekaryotype
+      - name: genomehubs index taxon genomesizekaryotype
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -284,22 +301,22 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
-      - name: Run docker genomehubs index taxon regional_lists
+      - name: genomehubs index taxon regional_lists
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/regional_lists \
                 --taxon-lookup any --taxon-spellcheck"
-      - name: Run docker genomehubs index taxon uk_legislation
+      - name: genomehubs index taxon uk_legislation
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -307,11 +324,11 @@ jobs:
                 --taxon-dir sources/uk_legislation \
                 --taxon-lookup any --taxon-spellcheck"
 
-      - name: Run docker genomehubs parse btk
+      - name: genomehubs parse btk
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs parse \
                 --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
 
@@ -321,11 +338,11 @@ jobs:
             -H 'Content-Type: application/json' \
             -d '{ "index.mapping.nested_objects.limit" : 100000 }'
 
-      - name: Run docker genomehubs index assembly btk assemblies
+      - name: genomehubs index assembly btk assemblies
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -338,33 +355,33 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,taxon*", "include_global_state":false}'
 
-      - name: Run docker genomehubs index taxon lineages
+      - name: genomehubs index taxon lineages
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/lineages"
 
-      - name: Run docker genomehubs index taxon status_lists
+      - name: genomehubs index taxon status_lists
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/status_lists \
                 --taxon-lookup any --taxon-spellcheck"
-      - name: Run docker genomehubs index taxon assembly-data-taxon
+      - name: genomehubs index taxon assembly-data-taxon
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -411,12 +428,12 @@ jobs:
           git diff origin/main...origin/$RELEASE -- sources/btk/btk.files.yaml \
           | grep -P "^\+" | grep -v -P "^\+\+\+" | perl -plne 's/^\+//' \
           > sources/btk_files_extra/btk.files.yaml
-      - name: Run docker genomehubs index btk files
+      - name: genomehubs index btk files
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             -v /volumes/docker/resources:/genomehubs/resources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs index \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
@@ -452,11 +469,11 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
           ref: ${{ env.RELEASE }}
 
-      - name: Run docker genomehubs fill
+      - name: genomehubs fill
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
+            genomehubs/genomehubs:develop bash -c \
               "genomehubs fill \
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
