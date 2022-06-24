@@ -22,6 +22,9 @@ jobs:
       # - name: Get release name from date
       #   run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       - run:  echo "RELEASE=2022.06.25" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+      - name: Checkout RELEASE, or create a new branch
+        run:  |
+          git checkout -b $RELEASE
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
