@@ -30,15 +30,15 @@ jobs:
       - name: checkout RELEASE, or create a new branch
         run:  |
           git checkout -b $RELEASE
-      # - name: Download NCBI datasets executable
-      #   run: |
-      #     curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > datasets
-      #     chmod a+x datasets
-      #     sudo ip link set ens3 mtu 1500
-      # - name: Download NCBI eukaryota datasets zip
-      #   run: |
-      #     mkdir -p sources/assembly-data
-      #     ./datasets download genome taxon "Eukaryota" --no-progressbar --dehydrated --filename sources/assembly-data/eukaryota.zip
+      - name: Download NCBI datasets executable
+        run: |
+          curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets > datasets
+          chmod a+x datasets
+          sudo ip link set ens3 mtu 1500
+      - name: Download NCBI eukaryota datasets zip
+        run: |
+          mkdir -p sources/assembly-data
+          ./datasets download genome taxon "Eukaryota" --no-progressbar --dehydrated --filename sources/assembly-data/eukaryota.zip
       - name: Unzip NCBI eukaryota datasets zip
         run: unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
       - name: genomehubs parse --ncbi-datasets-genome
@@ -124,16 +124,7 @@ jobs:
           ' > ./sources/status_lists/nhm.tsv
 
       - name: Get from sts api
-        run: |
-          python3 ./scripts/sts_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} \
-          | perl -plne '
-            s/^(family_representative.*)$/$1\tsequencing_status_simple\tsample_collected\tsample_acquired\tin_progress/ and next;
-            @F=split/\t/;
-            $F[4] =~ s/'\''|\[|\]//g;
-            $F[8] =~ s/'\''|\[|\]//g;
-            if ($F[10]=~/NOVEL/) { $F[19] .= "\tsample_acquired\t$F[8]\t$F[8]\t" } else {$F[19] .= "\tin_progress\t$F[8]\t$F[8]\t$F[8]" };
-            $_ = join("\t", @F)
-          ' > ./sources/status_lists/sts.tsv
+        run:  python3 ./scripts/sts_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} > ./sources/status_lists/sts.tsv
 
       - name: Get from vgp yaml
         run: |
