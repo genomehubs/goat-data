@@ -19,9 +19,9 @@ jobs:
       - get_dockers
     runs-on: self-hosted
     steps:
-      # - name: Get release name from date
-      #   run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
-      - run:  echo "RELEASE=2022.06.25" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+      - name: Get release name from date
+        run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+      # - run:  echo "RELEASE=2022.06.25" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       - name: checkout first
         uses: actions/checkout@v3
         with:
