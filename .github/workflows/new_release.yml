@@ -242,7 +242,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
 
   genomehubs_index_attributes:
     needs:
@@ -287,7 +287,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
 
       - name: genomehubs index taxon genomesizekaryotype
         run: |
@@ -305,7 +305,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
 
       - name: genomehubs index taxon regional_lists
         run: |
@@ -359,7 +359,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
 
       - name: genomehubs index taxon lineages
         run: |
@@ -398,7 +398,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
 
       - name: Commit files in branch
         run: |
