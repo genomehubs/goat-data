@@ -25,12 +25,13 @@ for page in range(1,int(species_total / page_size) + 2):
   url = f"https://sts.tol.sanger.ac.uk/api/v1/species?page={page}&page_size={page_size}"
   r   = requests.get(url, headers=headers).json()
   dl  = r['data']['list']
-  # d = [[species.get(f) for f in fieldnames] for species in dl]
+
   for species in dl:
 
+    sequencing_status_simple = 'sample_collected' # default
     lws = species.get('lab_work_status')
     if 'NOVEL' in str(lws):
-      sequencing_status_simple = 'sample_collected'
+      sequencing_status_simple = 'sample_acquired'
     elif 'ASSIGNED_TO_LAB' in str(lws):
       sequencing_status_simple = 'sample_acquired'
     else:
