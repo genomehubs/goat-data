@@ -172,71 +172,71 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
           ref: ${{ env.RELEASE }}
 
-      # - name: Check es health
-      #   run:  curl -s "http://es1:9200/_cat/health"
+      - name: Check es health
+        run:  curl -s "http://es1:9200/_cat/health"
 
-      # - name: Create dev snapshot repo if it doesn't exist
-      #   run: |
-      #     curl -s -X PUT "es1:9200/_snapshot/dev" \
-      #       -H 'Content-Type: application/json' \
-      #       -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/dev" } }' || exit 0
+      - name: Create dev snapshot repo if it doesn't exist
+        run: |
+          curl -s -X PUT "es1:9200/_snapshot/dev" \
+            -H 'Content-Type: application/json' \
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/dev" } }' || exit 0
 
-      # - name: Create production-RELEASE snapshot repo if it doesn't exist
-      #   run: |
-      #     curl -s -X PUT "es1:9200/_snapshot/production-$RELEASE" \
-      #       -H 'Content-Type: application/json' \
-      #       -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/production-'$RELEASE'" } }' || exit 0
+      - name: Create production-RELEASE snapshot repo if it doesn't exist
+        run: |
+          curl -s -X PUT "es1:9200/_snapshot/production-$RELEASE" \
+            -H 'Content-Type: application/json' \
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/production-'$RELEASE'" } }' || exit 0
 
-      # - name: Clean taxdump folder and delete indices and snapshots for that release, except dev/analysis_file snapshot
-      #   run: |
-      #     mkdir -p resources/taxdump
-      #     rm -rf resources/taxdump/*
-      #     curl -s -X DELETE "es1:9200/*"
-      #     curl -s -X DELETE "es1:9200/_snapshot/dev/20*"
-      # - name: Restore and rename analysis_file snapshot to current RELEASE indices
-      #   run: |
-      #     curl -s -X POST "es1:9200/_snapshot/dev/analysis_file/_restore?wait_for_completion=true&pretty" \
-      #       -H 'Content-Type: application/json' \
-      #       -d' {
-      #         "ignore_unavailable": true,
-      #         "include_global_state": false,
-      #         "include_aliases": false,
-      #         "rename_pattern" : "--goat--202.*",
-      #         "rename_replacement" : "--goat--'$RELEASE'"
-      #         }'
-      # - name: genomehubs init
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       -v /volumes/docker/resources:/genomehubs/resources \
-      #       genomehubs/genomehubs:latest bash -c \
-      #         "genomehubs init \
-      #           --es-host http://es1:9200 \
-      #           --taxonomy-source ncbi \
-      #           --config-file sources/goat.yaml \
-      #           --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
-      #           --taxonomy-ncbi-root 2759 \
-      #           --taxon-preload"
-      # - name: genomehubs index assembly assembly-data
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:latest bash -c \
-      #         "genomehubs index \
-      #           --es-host http://es1:9200 \
-      #           --taxonomy-source ncbi \
-      #           --config-file sources/goat.yaml \
-      #           --assembly-dir sources/assembly-data"
-      # - name: genomehubs index assembly assembly-data-sample
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:latest bash -c \
-      #         "genomehubs index \
-      #           --es-host http://es1:9200 \
-      #           --taxonomy-source ncbi \
-      #           --config-file sources/goat.yaml \
-      #           --sample-dir sources/assembly-data-sample"
+      - name: Clean taxdump folder and delete indices and snapshots for that release, except dev/analysis_file snapshot
+        run: |
+          mkdir -p resources/taxdump
+          rm -rf resources/taxdump/*
+          curl -s -X DELETE "es1:9200/*"
+          curl -s -X DELETE "es1:9200/_snapshot/dev/20*"
+      - name: Restore and rename analysis_file snapshot to current RELEASE indices
+        run: |
+          curl -s -X POST "es1:9200/_snapshot/dev/analysis_file/_restore?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' {
+              "ignore_unavailable": true,
+              "include_global_state": false,
+              "include_aliases": false,
+              "rename_pattern" : "--goat--202.*",
+              "rename_replacement" : "--goat--'$RELEASE'"
+              }'
+      - name: genomehubs init
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v /volumes/docker/resources:/genomehubs/resources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs init \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
+                --taxonomy-ncbi-root 2759 \
+                --taxon-preload"
+      - name: genomehubs index assembly assembly-data
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --assembly-dir sources/assembly-data"
+      - name: genomehubs index assembly assembly-data-sample
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --sample-dir sources/assembly-data-sample"
       - name: Snapshot initassembly
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly" || exit 0
