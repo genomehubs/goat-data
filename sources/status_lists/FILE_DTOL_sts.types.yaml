@@ -19,46 +19,46 @@ attributes:
     header: sequencing_status_asg
     separator:
       - ","
-  sequencing_status_berri:
-    header: sequencing_status_berri
-    separator:
-      - ","
-  sequencing_status_blax:
-    header: sequencing_status_blax
-    separator:
-      - ","
   sequencing_status_dtol:
     header: sequencing_status_dtol
     separator:
       - ","
-  sequencing_status_durb:
-    header: sequencing_status_durb
-    separator:
-      - ","
-  sequencing_status_ergapi:
+  sequencing_status_erga:
     header: sequencing_status_ergapi
-    separator:
-      - ","
-  sequencing_status_lawn:
-    header: sequencing_status_lawn
-    separator:
-      - ","
-  sequencing_status_meier:
-    header: sequencing_status_meier
-    separator:
-      - ","
-  sequencing_status_misk:
-    header: sequencing_status_misk
-    separator:
-      - ","
-  sequencing_status_rnd:
-    header: sequencing_status_rnd
     separator:
       - ","
   sequencing_status_vgp:
     header: sequencing_status_vgp
     separator:
       - ","
+  # sequencing_status_berri:
+  #   header: sequencing_status_berri
+  #   separator:
+  #     - ","
+  # sequencing_status_blax:
+  #   header: sequencing_status_blax
+  #   separator:
+  #     - ","
+  # sequencing_status_durb:
+  #   header: sequencing_status_durb
+  #   separator:
+  #     - ","
+  # sequencing_status_rnd:
+  #   header: sequencing_status_rnd
+  #   separator:
+  #     - ","
+  # sequencing_status_lawn:
+  #   header: sequencing_status_lawn
+  #   separator:
+  #     - ","
+  # sequencing_status_meier:
+  #   header: sequencing_status_meier
+  #   separator:
+  #     - ","
+  # sequencing_status_misk:
+  #   header: sequencing_status_misk
+  #   separator:
+  #     - ","
   sample_collected:
     header: sample_collected
     separator:
