@@ -2,18 +2,18 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: metainvert_expanded_2022-03-28.tsv
+  name: METAINVERT_expanded.tsv
   source: Gemma Collins, Senckenberg, Frankfurt, Germany
-  source_date: 2022-03-09
+  source_date: 2022-06-20
 attributes:
   long_list:
     header: long_list
   sequencing_status:
-    header: sequencing_status
+    header: sequencing_status_illumina
     translate:
       in_assembly: in_progress
   sequencing_status_metainvert:
-    header: sequencing_status
+    header: sequencing_status_illumina
     translate:
       in_assembly: in_progress
   sample_collected:
@@ -22,6 +22,10 @@ attributes:
     header: sample_acquired
   in_progress:
     header: in_progress
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
 taxonomy:
   taxon_id:
     header: NCBI_taxon_id
@@ -32,3 +36,6 @@ taxonomy:
     join: " "
   family:
     header: family
+  synonym: 
+    header: ["Genus", "synonym"]
+    join: " "
