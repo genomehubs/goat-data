@@ -113,6 +113,21 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_canbp:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_cbp:
     display_group: sequencing_status
     display_level: 2
