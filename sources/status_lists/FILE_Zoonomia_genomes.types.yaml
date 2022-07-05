@@ -1,0 +1,44 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: ZOONOMIA_expanded.tsv
+  source: Elinor Karlsson, Broad Institute
+  source_date: 2020-11-11
+  source_url: https://www.nature.com/articles/s41586-020-2876-6
+attributes:
+  long_list:
+    header: long_list
+  other_priority:
+    header: other_priority
+  family_representative:
+    header: family_representative
+  sequencing_status:
+    header: sequencing_status
+#    translate:
+#      data_generation: in_progress
+#      in_assembly: in_progress
+#      insdc_submitted: in_progress
+  sequencing_status_zoonomia:
+    header: sequencing_status
+    # translate:
+    #   data_generation: in_progress
+    #   in_assembly: in_progress
+    #   insdc_submitted: in_progress
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+  # publication_id:
+  #   header: publication_ID
+taxonomy:
+  species:
+    header: Species
+  order:
+    header: Order
