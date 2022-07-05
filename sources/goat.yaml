@@ -2,7 +2,7 @@ common:
   hub:
     name: goat
     path: /genomehubs/resources
-    version: 2022.07.04
+    version: 2022.07.05
   es:
     path: /genomehubs/resources/es
   taxonomy:
