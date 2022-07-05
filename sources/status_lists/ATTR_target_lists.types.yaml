@@ -4,27 +4,28 @@ attributes:
     display_level: 2
     constraint:
       enum:
+        - africabp
+        - agi
+        - arg
         - asg
+        - b10k
         - cbp
-        - ebpn
-        - ein
         - cfgp
         - dtol
         - ebpn
+        - ein 
         - endemixit
         - erga
         - eurofish
         - gaga
-        - squalomix
-        - metainvert
-        - vgp
-        - agi
-        - arg
         - gap
         - gbr
+        - metainvert
         - omg
+        - pgp
+        - squalomix
         - tsi
-        - b10k
+        - vgp
     summary: list
     traverse: list
     traverse_direction: up
@@ -34,27 +35,28 @@ attributes:
     display_level: 2
     constraint:
       enum:
+        - africabp
+        - agi
+        - arg
         - asg
+        - b10k
         - cbp
-        - ebpn
-        - ein
         - cfgp
         - dtol
         - ebpn
+        - ein 
         - endemixit
         - erga
         - eurofish
         - gaga
-        - squalomix
-        - metainvert
-        - vgp
-        - agi
-        - arg
         - gap
         - gbr
+        - metainvert
         - omg
+        - pgp
+        - squalomix
         - tsi
-        - b10k
+        - vgp
     summary: list
     traverse: list
     traverse_direction: up
@@ -64,27 +66,28 @@ attributes:
     display_level: 2
     constraint:
       enum:
+        - africabp
+        - agi
+        - arg
         - asg
+        - b10k
         - cbp
-        - ebpn
-        - ein
         - cfgp
         - dtol
         - ebpn
+        - ein 
         - endemixit
         - erga
         - eurofish
         - gaga
-        - squalomix
-        - metainvert
-        - vgp
-        - agi
-        - arg
         - gap
         - gbr
+        - metainvert
         - omg
+        - pgp
+        - squalomix
         - tsi
-        - b10k
+        - vgp
     summary: list
     traverse: list
     traverse_direction: up
