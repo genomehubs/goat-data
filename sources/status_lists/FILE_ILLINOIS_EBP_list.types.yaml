@@ -30,8 +30,8 @@ attributes:
   # publication_id:
   #   header: publication_id
 taxonomy:
-  # taxon_id:
-  #   header: ncbi_taxon_id
+  taxon_id:
+    header: ncbi_taxon_id
   species:
     header: species_name
   order:
