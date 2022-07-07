@@ -1,0 +1,38 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: CCGP_expanded_2022-07-06.tsv
+  source: Courtney Miller & Erin Toffelmier, University of California, Los Angeles - UCLA
+  source_description: California Conservation Genomics Project
+  source_date: 2022-06-28
+attributes:
+  long_list:
+    header: long_list
+  other_priority:
+    header: other_priority
+  family_representative:
+    header: family_representative
+  sequencing_status:
+    header: translated_status
+  sequencing_status_ccgp:
+    header: translated_status
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+  # publication_id:
+  #   header: publication_id
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family
