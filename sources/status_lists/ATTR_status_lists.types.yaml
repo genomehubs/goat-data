@@ -15,9 +15,20 @@ attributes:
     type: keyword
     constraint:
       enum:
+        - DALU
+        - GHC
+        - MBA
         - NHM
+        - NSU
+        - PSU
+        - QMUL
+        - RBGE
+        - KEW
+        - SAN
+        - UBC
+        - DERB
         - OXF
-        - Sanger
+        - VIEN
   sample_acquired:
     display_group: sequencing_status
     display_level: 2
