@@ -82,7 +82,7 @@ jobs:
           --restart=always \
           --net net-es \
           -p 3010:3000 \
-          --user \$UID:\$GROUPS \
+          --user $UID:$GROUPS \
           -e GH_ORIGINS="http://172.27.18.167:8010 http://172.27.18.167 null http://localhost:8010" \
           -e GH_HUBNAME=goat -e GH_HUBPATH="/genomehubs/resources/" \
           -e GH_NODE="http://es1:9200" \
@@ -100,7 +100,7 @@ jobs:
           docker run -d --restart always \
           --net net-es \
           -p 8010:8880 \
-          --user \$UID:\$GROUPS \
+          --user $UID:$GROUPS \
           -e GH_CLIENT_PORT=8880 \
           -e GH_API_URL=http://172.27.18.167:3010/api/v2 \
           -e GH_SUGGESTED_TERM=Canidae \
