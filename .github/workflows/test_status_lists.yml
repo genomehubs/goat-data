@@ -34,7 +34,7 @@ jobs:
               }'
       - name: update config.yaml version
         run:  |
-          perl -i -plne 's/^(\s*version:) .*/$1 ${{ $RELEASE }}/' sources/goat.yaml
+          perl -i -plne 's/^(\s*version:) .*/$1 '$RELEASE'/' sources/goat.yaml
       # - name: genomehubs index taxon status_lists
       #   run:  |
       #     docker run --rm --network=host \
