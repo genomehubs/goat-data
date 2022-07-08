@@ -23,7 +23,7 @@ jobs:
           curl -s -X DELETE "es1:9200/*--$RELEASE"
       - name: Restore and rename snapshot to current branch
         run:  |
-          curl -s -X POST "es1:9200/_snapshot/dev/analysis_file/_restore?wait_for_completion=true&pretty" \
+          curl -s -X POST "es1:9200/_snapshot/dev/initassembly/_restore?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' {
               "ignore_unavailable": true,
@@ -35,38 +35,38 @@ jobs:
       - name: update config.yaml version
         run:  |
           perl -i -plne 's/^(\s*version:) .*/$1 ${{ env.RELEASE }}/' sources/goat.yaml
-      # - name: genomehubs index taxon status_lists
-      #   run:  |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:latest bash -c \
-      #         "genomehubs index \
-      #           --es-host http://es1:9200 \
-      #           --taxonomy-source ncbi \
-      #           --config-file sources/goat.yaml \
-      #           --taxon-dir sources/status_lists \
-      #           --taxon-lookup any --taxon-spellcheck"
-      # - name: genomehubs index taxon assembly-data-taxon
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:latest bash -c \
-      #         "genomehubs index \
-      #           --es-host http://es1:9200 \
-      #           --taxonomy-source ncbi \
-      #           --config-file sources/goat.yaml \
-      #           --taxon-dir sources/assembly-data-taxon"
-      # - name: genomehubs fill
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:latest bash -c \
-      #         "genomehubs fill \
-      #           --es-host http://es1:9200 \
-      #           --taxonomy-source ncbi \
-      #           --config-file sources/goat.yaml \
-      #           --traverse-root 2759 \
-      #           --traverse-infer-both"
+      - name: genomehubs index taxon status_lists
+        run:  |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/status_lists \
+                --taxon-lookup any --taxon-spellcheck"
+      - name: genomehubs index taxon assembly-data-taxon
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/assembly-data-taxon"
+      - name: genomehubs fill
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs fill \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --traverse-root 2759 \
+                --traverse-infer-both"
 
 
 
