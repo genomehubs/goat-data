@@ -30,11 +30,11 @@ jobs:
               "include_global_state": false,
               "include_aliases": false,
               "rename_pattern" : "--goat--202.*",
-              "rename_replacement" : "--goat--$RELEASE"
+              "rename_replacement" : "--goat--${{ env.RELEASE }}"
               }'
       - name: update config.yaml version
         run:  |
-          perl -i -plne 's/^(\s*version:) .*/$1 '$RELEASE'/' sources/goat.yaml
+          perl -i -plne 's/^(\s*version:) .*/$1 ${{ env.RELEASE }}/' sources/goat.yaml
       # - name: genomehubs index taxon status_lists
       #   run:  |
       #     docker run --rm --network=host \
