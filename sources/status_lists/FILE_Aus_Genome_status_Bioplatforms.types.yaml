@@ -4,26 +4,32 @@ file:
   comment: "#"
   name: Aus_Genome_status_Bioplatforms.tsv
   source: Australian Genomes Google Spreadsheet
-  source_date: 2022-03-25
+  source_date: 2022-07-08
 attributes:
   long_list:
     header: long_list
-    type: keyword
   other_priority:
     header: other_priority
-    type: keyword
-  sequencing_status:
-    header: sequencing_status
-    type: keyword
   sample_collected:
     header: sample_collected
-    type: keyword
   sample_acquired:
     header: sample_acquired
-    type: keyword
   in_progress:
     header: in_progress
-    type: keyword
+  sequencing_status:
+    header: sequencing_status
+  sequencing_status_omg:
+    header: sequencing_status_omg
+  sequencing_status_arg:
+    header: sequencing_status_arg
+  sequencing_status_tsi:
+    header: sequencing_status_tsi
+  sequencing_status_gap:
+    header: sequencing_status_gap
+  sequencing_status_gbr:
+    header: sequencing_status_gbr
+  sequencing_status_agi:
+    header: sequencing_status_agi
 taxonomy:
   taxon_id:
     header: ncbi_taxon_id
