@@ -8,169 +8,101 @@ jobs:
   run_test:
     runs-on: self-hosted
     steps:
-      - name: Get dockers
-        run:  |
-          docker pull genomehubs/genomehubs:latest
-          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
-      - uses: actions/checkout@v3
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-      - name: Check es health
-        run:  curl -s "http://es1:9200/_cat/health"
-      - name: Delete indices for this branch/$RELEASE
-        run:  |
-          curl -s -X DELETE "es1:9200/*--$RELEASE"
-      - name: Restore and rename snapshot to current branch
-        run:  |
-          curl -s -X POST "es1:9200/_snapshot/dev/initassembly/_restore?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' {
-              "ignore_unavailable": true,
-              "include_global_state": false,
-              "include_aliases": false,
-              "rename_pattern" : "--goat--202.*",
-              "rename_replacement" : "--goat--${{ env.RELEASE }}"
-              }'
-      - name: Add ES index.mapping.nested_objects.limit 100000
-        run:  |
-          curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
-            -H 'Content-Type: application/json' \
-            -d '{ "index.mapping.nested_objects.limit" : 100000 }'
-      - name: update config.yaml version
-        run:  |
-          perl -i -plne 's/^(\s*version:) .*/$1 ${{ env.RELEASE }}/' sources/goat.yaml
-      - name: genomehubs index taxon status_lists
-        run:  |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs index \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --taxon-dir sources/status_lists \
-                --taxon-lookup any --taxon-spellcheck"
-      - name: genomehubs index taxon assembly-data-taxon
+      # - name: Get dockers
+      #   run:  |
+      #     docker pull genomehubs/genomehubs:latest
+      #     docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+      # - uses: actions/checkout@v3
+      #   with:
+      #     persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+      #     fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+      # - name: Check es health
+      #   run:  curl -s "http://es1:9200/_cat/health"
+      # - name: Delete indices for this branch/$RELEASE
+      #   run:  |
+      #     curl -s -X DELETE "es1:9200/*--$RELEASE"
+      # - name: Restore and rename snapshot to current branch
+      #   run:  |
+      #     curl -s -X POST "es1:9200/_snapshot/dev/initassembly/_restore?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' {
+      #         "ignore_unavailable": true,
+      #         "include_global_state": false,
+      #         "include_aliases": false,
+      #         "rename_pattern" : "--goat--202.*",
+      #         "rename_replacement" : "--goat--${{ env.RELEASE }}"
+      #         }'
+      # - name: Add ES index.mapping.nested_objects.limit 100000
+      #   run:  |
+      #     curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
+      #       -H 'Content-Type: application/json' \
+      #       -d '{ "index.mapping.nested_objects.limit" : 100000 }'
+      # - name: update config.yaml version
+      #   run:  |
+      #     perl -i -plne 's/^(\s*version:) .*/$1 ${{ env.RELEASE }}/' sources/goat.yaml
+      # - name: genomehubs index taxon status_lists
+      #   run:  |
+      #     docker run --rm --network=host \
+      #       -v `pwd`/sources:/genomehubs/sources \
+      #       genomehubs/genomehubs:latest bash -c \
+      #         "genomehubs index \
+      #           --es-host http://es1:9200 \
+      #           --taxonomy-source ncbi \
+      #           --config-file sources/goat.yaml \
+      #           --taxon-dir sources/status_lists \
+      #           --taxon-lookup any --taxon-spellcheck"
+      # - name: genomehubs index taxon assembly-data-taxon
+      #   run: |
+      #     docker run --rm --network=host \
+      #       -v `pwd`/sources:/genomehubs/sources \
+      #       genomehubs/genomehubs:latest bash -c \
+      #         "genomehubs index \
+      #           --es-host http://es1:9200 \
+      #           --taxonomy-source ncbi \
+      #           --config-file sources/goat.yaml \
+      #           --taxon-dir sources/assembly-data-taxon"
+      # - name: genomehubs fill
+      #   run: |
+      #     docker run --rm --network=host \
+      #       -v `pwd`/sources:/genomehubs/sources \
+      #       genomehubs/genomehubs:latest bash -c \
+      #         "genomehubs fill \
+      #           --es-host http://es1:9200 \
+      #           --taxonomy-source ncbi \
+      #           --config-file sources/goat.yaml \
+      #           --traverse-root 2759 \
+      #           --traverse-infer-both"
+
+      - name: restart dockers
         run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs index \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --taxon-dir sources/assembly-data-taxon"
-      - name: genomehubs fill
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:latest bash -c \
-              "genomehubs fill \
-                --es-host http://es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --traverse-root 2759 \
-                --traverse-infer-both"
+          mkdir -p /volumes/docker/logs/${{ env.RELEASE }}
+          docker pull genomehubs/genomehubs-api:latest
+          docker rm -f goat-api
+          docker run -d \
+          --restart=always \
+          --net net-es \
+          -p 3010:3000 \
+          --user \$UID:\$GROUPS \
+          -e GH_ORIGINS="http://172.27.18.167:8010 http://172.27.18.167 null http://localhost:8010" \
+          -e GH_HUBNAME=goat -e GH_HUBPATH="/genomehubs/resources/" \
+          -e GH_NODE="http://es1:9200" \
+          -e GH_RELEASE=${{ env.RELEASE }} \
+          -e GH_SOURCE=https://github.com/genomehubs/goat-data \
+          -e GH_ACCESS_LOG=/genomehubs/logs/access.log \
+          -e GH_ERROR_LOG=/genomehubs/logs/error.log \
+          -v /volumes/docker/logs/${{ env.RELEASE }}:/genomehubs/logs \
+          -v /volumes/docker/resources:/genomehubs/resources \
+          --name goat-api \
+          genomehubs/genomehubs-api:latest
 
-
-
-
-  #     - name: Snapshot fill
-  #       run: |
-  #         curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
-  #         curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
-    
-  #     - name: Snapshot final fill to production-$RELEASE
-  #       run: |
-  #         curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
-  #         curl -s -X PUT    "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
-
-
-  # rsync_to_edin_prod:
-  #   needs:
-  #     - genomehubs_index_files
-  #     - genomehubs_fill
-  #   runs-on:  self-hosted
-  #   steps:
-
-  #     - name: Get bash release name
-  #       run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
-
-  #     - name: rsync production snapshot to edinburgh prod
-  #       run: |
-  #         rsync -av --delete  /volumes/docker/snapshots/production/production-$RELEASE goat:/volumes/docker/snapshots/production/
-  #         rsync -av --delete  /volumes/docker/resources/files                          goat:/volumes/docker/resources/
-
-  # restore_on_edin_prod:
-  #   needs:
-  #     - rsync_to_edin_prod
-  #   runs-on:  self-hosted
-  #   steps:
-
-  #     - name: Get bash release name
-  #       run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
-
-  #     - name: ssh edin prod and restore
-  #       run: |
-  #         ssh goat "
-  #         curl -s -X DELETE 'es1:9200/*--$RELEASE'
-  #         curl -s -X PUT 'es1:9200/_snapshot/production-$RELEASE' \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { \"type\": \"fs\", \"settings\": { \"location\": \"/usr/share/elasticsearch/snapshots/production/production-$RELEASE\" } }'
-  #         curl -s -X POST 'es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_analysis_file/_restore?wait_for_completion=true&pretty' \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { \"indices\": \"*--$RELEASE\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
-  #         curl -s -X POST 'es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill/_restore?wait_for_completion=true&pretty' \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { \"indices\": \"*--$RELEASE\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
-  #         "
-
-  #     - name: get release day number
-  #       run: |
-  #         if [[ $RELEASE =~ ([0-3][0-9])$ ]]; then 
-  #           echo "RELEASEDAY=${BASH_REMATCH[1]}" | tee -a /tmp/CURRENT_RELEASE >> $GITHUB_ENV
-  #         fi
-
-  #     - name: ssh edin prod and start dockers
-  #       run: |
-  #         ssh goat "
-  #         mkdir -p /volumes/docker/logs/$RELEASE
-  #         docker pull genomehubs/genomehubs-api:latest
-  #         docker rm -f goat-api-$RELEASEDAY
-  #         docker run -d \
-  #         --restart=always \
-  #         --net net-es \
-  #         -p 30$RELEASEDAY:3000 \
-  #         --user \$UID:\$GROUPS \
-  #         -e GH_ORIGINS='https://goat.genomehubs.org null' \
-  #         -e GH_HUBNAME=goat \
-  #         -e GH_HUBPATH='/genomehubs/resources/' \
-  #         -e GH_NODE='http://es1:9200' \
-  #         -e GH_RELEASE=$RELEASE \
-  #         -e GH_MEMCACHED='memcache:11211' \
-  #         -e GH_SOURCE=https://github.com/genomehubs/goat-data \
-  #         -e GH_ACCESS_LOG=/genomehubs/logs/access.log \
-  #         -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
-  #         -e GH_ERROR_LOG=/genomehubs/logs/error.log \
-  #         -v /volumes/docker/logs/$RELEASE:/genomehubs/logs \
-  #         -v /volumes/docker/resources:/genomehubs/resources \
-  #         --name goat-api-$RELEASEDAY \
-  #         genomehubs/genomehubs-api:latest
-
-  #         docker pull genomehubs/goat:latest
-  #         docker rm -f goat-ui-$RELEASEDAY
-  #         docker run -d --restart always \
-  #         --net net-es \
-  #         -p 80$RELEASEDAY:8880 \
-  #         --user \$UID:\$GROUPS \
-  #         -e GH_CLIENT_PORT=8880 \
-  #         -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
-  #         -e GH_SUGGESTED_TERM=Canidae \
-  #         --name goat-ui-$RELEASEDAY \
-  #         genomehubs/goat:latest
-  #         "
+          docker pull genomehubs/goat:latest
+          docker rm -f goat-ui
+          docker run -d --restart always \
+          --net net-es \
+          -p 8010:8880 \
+          --user \$UID:\$GROUPS \
+          -e GH_CLIENT_PORT=8880 \
+          -e GH_API_URL=http://172.27.18.167:3010/api/v2 \
+          -e GH_SUGGESTED_TERM=Canidae \
+          --name goat-ui \
+          genomehubs/goat:latest
