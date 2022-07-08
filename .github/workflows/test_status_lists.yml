@@ -1,5 +1,7 @@
 name: test_status_lists
-on: workflow_dispatch
+on: push
+env:
+  RELEASE: ${{ github.ref_name }}
 
 jobs:
 
@@ -16,6 +18,9 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: Check es health
         run:  curl -s "http://es1:9200/_cat/health"
+      - name: Delete indices for this branch/$RELEASE
+        run:  |
+          curl -s -X DELETE "es1:9200/*--$RELEASE"
       - name: Restore and rename snapshot to current branch
         run:  |
           curl -s -X POST "es1:9200/_snapshot/dev/analysis_file/_restore?wait_for_completion=true&pretty" \
@@ -25,11 +30,11 @@ jobs:
               "include_global_state": false,
               "include_aliases": false,
               "rename_pattern" : "--goat--202.*",
-              "rename_replacement" : "--goat--${{ github.ref_name }}"
+              "rename_replacement" : "--goat--$RELEASE"
               }'
       - name: update config.yaml version
         run:  |
-          perl -i -plne 's/^(\s*version:) .*/$1 ${{ github.ref_name }}/' sources/goat.yaml
+          perl -i -plne 's/^(\s*version:) .*/$1 ${{ RELEASE }}/' sources/goat.yaml
       # - name: genomehubs index taxon status_lists
       #   run:  |
       #     docker run --rm --network=host \
