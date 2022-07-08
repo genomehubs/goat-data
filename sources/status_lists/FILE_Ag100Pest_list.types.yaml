@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: AG100PEST_expanded.tsv
   source: Anna Childers, USDA, Agricultural Research Service, Bee Research Laboratory, USA
-  source_description: Ag100Pest Initiative						
+  source_description: Ag100Pest Initiative
   source_date: 2022-06-08
 attributes:
   long_list:
@@ -35,7 +35,7 @@ taxonomy:
   species:
     header: species
   subspecies:
-    header: [species,subspecies]
+    header: [ species , subspecies ]
     join: " "
   family:
     header: family
