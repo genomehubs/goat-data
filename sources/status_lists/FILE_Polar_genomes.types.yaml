@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: EUROFISH_expanded.tsv
-  source: Gene Myers, mpi-cbg.de
-  source_date: 2022-04-12
+  name: PGP_expanded.tsv
+  source: Seunghyun Kang, Korea Polar Research Institute (KOPRI)
+  source_date: 2022-06-17
 attributes:
   long_list:
     header: long_list
@@ -18,7 +18,7 @@ attributes:
 #      data_generation: in_progress
 #      in_assembly: in_progress
 #      insdc_submitted: in_progress
-  sequencing_status_eurofish:
+  sequencing_status_pgp:
     header: sequencing_status
     # translate:
     #   data_generation: in_progress
@@ -36,13 +36,8 @@ attributes:
     header: published
 taxonomy:
   taxon_id:
-    header: NCBI_taxon_id
-  genus:
-    header: Genus
+    header: ncbi_taxon_id
   species:
-    header: [Genus, species]
-    join: " "
+    header: species
   family:
     header: family
-  synonym:
-    header: synonym

@@ -4,27 +4,33 @@ attributes:
     display_level: 2
     constraint:
       enum:
+        - africabp
+        - ag100pest
+        - agi
+        - arg
         - asg
+        - b10k
+        - canbp
         - cbp
-        - ebpn
-        - ein
+        - ccgp
         - cfgp
         - dtol
         - ebpn
+        - ein 
         - endemixit
         - erga
         - eurofish
         - gaga
-        - squalomix
-        - metainvert
-        - vgp
-        - agi
-        - arg
         - gap
         - gbr
+        - ilebp
+        - metainvert
         - omg
+        - pgp
+        - squalomix
         - tsi
-        - b10k
+        - vgp
+        - zoonomia
     summary: list
     traverse: list
     traverse_direction: up
@@ -34,27 +40,33 @@ attributes:
     display_level: 2
     constraint:
       enum:
+        - africabp
+        - ag100pest
+        - agi
+        - arg
         - asg
+        - b10k
+        - canbp
         - cbp
-        - ebpn
-        - ein
+        - ccgp
         - cfgp
         - dtol
         - ebpn
+        - ein 
         - endemixit
         - erga
         - eurofish
         - gaga
-        - squalomix
-        - metainvert
-        - vgp
-        - agi
-        - arg
         - gap
         - gbr
+        - ilebp
+        - metainvert
         - omg
+        - pgp
+        - squalomix
         - tsi
-        - b10k
+        - vgp
+        - zoonomia
     summary: list
     traverse: list
     traverse_direction: up
@@ -64,27 +76,33 @@ attributes:
     display_level: 2
     constraint:
       enum:
+        - africabp
+        - ag100pest
+        - agi
+        - arg
         - asg
+        - b10k
+        - canbp
         - cbp
-        - ebpn
-        - ein
+        - ccgp
         - cfgp
         - dtol
         - ebpn
+        - ein 
         - endemixit
         - erga
         - eurofish
         - gaga
-        - squalomix
-        - metainvert
-        - vgp
-        - agi
-        - arg
         - gap
         - gbr
+        - ilebp
+        - metainvert
         - omg
+        - pgp
+        - squalomix
         - tsi
-        - b10k
+        - vgp
+        - zoonomia
     summary: list
     traverse: list
     traverse_direction: up

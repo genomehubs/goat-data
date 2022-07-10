@@ -1,0 +1,20 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: AFRICABP.tsv
+  source: Abdoallah Sharaf, AfricaBP
+  source_date: 2022-07-05
+  source_description: Declared Target List - African BioGenome Project
+attributes:
+  long_list:
+    header: project
+    type: keyword
+  other_priority:
+    header: project
+    type: keyword
+taxonomy:
+  taxon_id:
+    header: taxid
+  species:
+    header: scientific_name

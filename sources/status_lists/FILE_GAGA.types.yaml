@@ -2,7 +2,7 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: GAGA_expanded_2022-02-07.tsv
+  name: GAGA_expanded.tsv
   source: Guojie Zhang, University of Copenhagen, Denmark
   source_date: 2021-09-20
 attributes:
@@ -12,27 +12,27 @@ attributes:
     header: family_representative
   sequencing_status:
     header: sequencing_status
-    translate:
-      data_generation: in_progress
-      in_assembly: in_progress
+    # translate:
+    #   data_generation: in_progress
+    #   in_assembly: in_progress
   sequencing_status_gaga:
     header: sequencing_status
-    translate:
-      data_generation: in_progress
-      in_assembly: in_progress
+    # translate:
+    #   data_generation: in_progress
+    #   in_assembly: in_progress
   sample_collected:
-    header: sample_acquired
+    header: sample_collected
   sample_acquired:
     header: sample_acquired
   in_progress:
-    header: data_generation
+    header: in_progress
 taxonomy:
   taxon_id:
     header: NCBI_taxon_id
   genus:
     header: Genus
   species:
-    index: [2, 3]
+    header: [Genus, species]
     join: " "
   family:
     header: family

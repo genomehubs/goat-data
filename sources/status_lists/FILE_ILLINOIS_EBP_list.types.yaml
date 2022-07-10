@@ -2,9 +2,10 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: EUROFISH_expanded.tsv
-  source: Gene Myers, mpi-cbg.de
-  source_date: 2022-04-12
+  name: ILEBP_pilot_expanded.tsv
+  source: Prof. Christopher Dietrich, University of Illinois, USA
+  source_description: Illinois EBP Pilot project - PRJNA844590
+  source_date: 2022-05-24
 attributes:
   long_list:
     header: long_list
@@ -14,16 +15,8 @@ attributes:
     header: family_representative
   sequencing_status:
     header: sequencing_status
-#    translate:
-#      data_generation: in_progress
-#      in_assembly: in_progress
-#      insdc_submitted: in_progress
-  sequencing_status_eurofish:
+  sequencing_status_ilebp:
     header: sequencing_status
-    # translate:
-    #   data_generation: in_progress
-    #   in_assembly: in_progress
-    #   insdc_submitted: in_progress
   sample_collected:
     header: sample_collected
   sample_acquired:
@@ -34,15 +27,14 @@ attributes:
     header: insdc_open
   published:
     header: published
+  # publication_id:
+  #   header: publication_id
 taxonomy:
   taxon_id:
-    header: NCBI_taxon_id
-  genus:
-    header: Genus
+    header: ncbi_taxon_id
   species:
-    header: [Genus, species]
-    join: " "
+    header: species_name
+  order:
+    header: order
   family:
     header: family
-  synonym:
-    header: synonym
