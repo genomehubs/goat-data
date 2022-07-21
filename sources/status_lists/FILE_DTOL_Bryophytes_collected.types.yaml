@@ -1,0 +1,37 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: DTOL_Bryophytes_collected.tsv
+  source: DTOL Plant Samples Working Group Google Spreadsheet
+  source_date: 2022-07-18
+attributes:
+  long_list:
+    header: long_list
+    type: keyword
+  family_representative:
+    header: family_representative
+    type: keyword
+  sequencing_status:
+    header: sample_collected
+    translate:
+      DTOL: sample_collected
+    type: keyword
+  sequencing_status_dtol:
+    header: sample_collected
+    translate:
+      DTOL: sample_collected
+    type: keyword
+  sample_collected:
+    header: sample_collected
+    type: keyword
+  # sample_collected_by:
+  #   header:
+  #   join: ","
+  #  type: keyword
+taxonomy:
+  species:
+    header: [Genus, Species]
+    join: " "
+  family:
+    header: Family
