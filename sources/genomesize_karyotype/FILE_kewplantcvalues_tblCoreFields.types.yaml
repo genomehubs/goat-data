@@ -20,6 +20,12 @@ attributes:
     separator:
       - ","
       - "-"
+  ploidy:
+    header: AcceptedPloidyLevel
+    separator:
+      - ","
+      - "-"
+      - "/"
   genome_size:
     type: long
     function: "{} * 978000000"
