@@ -21,6 +21,7 @@ attributes:
       - ","
       - "-"
   ploidy:
+    type: short
     header: AcceptedPloidyLevel
     separator:
       - ","
