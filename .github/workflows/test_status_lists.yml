@@ -51,6 +51,17 @@ jobs:
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/status_lists \
                 --taxon-lookup any --taxon-spellcheck"
+      - name: genomehubs index taxon genomesizekaryotype
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:latest bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/genomesize_karyotype \
+                --taxon-lookup any --taxon-spellcheck"
       - name: genomehubs index taxon assembly-data-taxon
         run: |
           docker run --rm --network=host \
