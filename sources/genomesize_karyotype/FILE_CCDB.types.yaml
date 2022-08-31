@@ -10,12 +10,32 @@ attributes:
   chromosome_number:
     header: sporophytic
     separator:
+      - " c. "
+      - "c. "
+      - "c."
+      - ", "
       - "-"
+      - "2n = "
+      - " + "
+      - " + f"
+      - "*"
+      - " ("
+      - ")"
     type: short
   haploid_number:
     header: parsed_n
     separator:
+      - " c. "
+      - "c. "
+      - "c."
+      - ", "
       - "-"
+      - "2n = "
+      - " + "
+      - " + f"
+      - "*"
+      - " ("
+      - ")"
     type: short
 taxonomy:
   family:
