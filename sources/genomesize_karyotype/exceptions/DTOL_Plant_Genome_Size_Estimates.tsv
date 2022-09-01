@@ -190,6 +190,7 @@ Sanger	MB3	DTOL	Angiosperm	Asteraceae	Erigeron	acris	<Petro	GPB3%PVP	208.8	303.1
 Sanger	MB4	DTOL	Angiosperm	Geraniaceae	Geranium	pusillum	<Petro	GPB3%PVP	142.54	333.25	3.95	2.19	2.338	149.21	345.34	1.94	0.97	0.95	3.35	2.01	0.020	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
 Sanger	MB5	DTOL	Angiosperm	Rosaceae	Rubus	ulmifolius	<Solanum	GPB3%PVP	129.36	314.3	4.64	3.31	2.43	133.27	323.08	0.82	0.41	0.4	4.29	3.22	0.006	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
 Sanger	MB6	DTOL	Angiosperm	Polygonaceae	Rumex	obtusifolius	<Petro	GPB3%PVP	181.89	290.09	3.62	2.82	1.595	191.85	301.59	2.86	1.43	1.4	3.49	2.66	0.022	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR254	DTOL	Angiosperm	Polygonaceae	Rumex	obtusifolius	<Petro	GPB3%PVP	195.48	324.52	2.51	2.05	1.66	199.49	329.24	2.73	1.36	1.33	3	2.25	0.009	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
 Sanger	MB7	DTOL	Angiosperm	Asteaceae	Centauria	scabiosa	<Petro	GPB3%PVP	261.19	316.76	2.25	2.27	1.213	265.87	321.74	3.72	1.86	1.82	2.3	2.17	0.003	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
 Sanger	MB9	DTOL	Angiosperm	Poaceae	Poa	pratensis	>Petro	GPB3%PVP	213.85	329.06	2.64	2.83	1.539	338.55	219.93	6.93	3.46	3.39	2.58	2.47	0.002	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
 Sanger	MB11	DTOL	Angiosperm	Violaceae	Viola	arvensis	NO RESULT	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
@@ -372,3 +373,48 @@ RBGK	MC9403	DTOL	Angiosperm	Onagraceae	Fuchsia	magellanica	<Pisum	LB01	250.96	50
 RBGK	MC9409	DTOL	Angiosperm	Apiaceae	Anethum	foeniculum	>Solanum	OXPRO	244.48	398.55	4.2	4.39	1.63	405.3	246.88	3.25	1.63	1.59	3.1	3.71	0.011	Nacho	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9410	DTOL	Angiosperm	Asteraceae	Carlina	vulgaris	>Solanum	OXPRO	140.21	583.45	4.73	2.18	4.161	583.17	140.1	8.24	4.12	4.03	2.12	4.78	0.006	Nacho	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9401	DTOL	Angiosperm	Ericaceae	Erica	tetralix	<Petro	GPB3%PVP	130.51	541.07	3.84	2.44	4.146	133.65	556.6	1.08	0.54	0.53	4	2.33	0.045	Nacho	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR252	DTOL	Angiosperm	Ranunculaceae	Ranunculus	scleratus	>Petro	GPB3%PVP	305.33	497.69	2.62	2.37	1.63	514.66	318.31	7.28	3.64	3.56	2.26	2.49	0.011	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR255	DTOL	Angiosperm	Polygonaceae	Persicaria	amphibia	>Solanum	GPB3%PVP	213.87	429.24	3.24	3.72	2.007	445.85	224.35	3.93	1.97	1.92	3.57	3.01	0.017	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR255	DTOL	Angiosperm	Asteraceae	Jacobaea	vulgaris	>Solanum	GPB3%PVP	225.64	498.17	3.3	2.67	2.208	504.67	231.79	4.31	2.16	2.11	2.47	3.13	0.029	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR253	DTOL	Angiosperm	Juncaceae	Juncus	conglomeratus	<Solanum	GPB3%PVP	113.9	365.53	3.83	2.71	3.209	116.73	374.11	0.62	0.31	0.3	3.6	2.6	0.008	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR256	DTOL	Angiosperm	Orchidaceae	Coeloglossum	viride	>Pisum	GPB3%PVP	249.97	437.75	2.94	3.97	1.751	449.89	259.67	15.75	7.87	7.7	3.86	2.89	0.018	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9413	DTOL	Angiosperm	Caryophyllaceae	Sagine	nodosa	<Solanum	GPB3%PVP	186.27	318.12	3.89	3.64	1.708	192.03	326.63	1.16	0.58	0.57	3.59	3.25	0.006	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9411	DTOL	Angiosperm	Asteraceae	Filago	minima	<Solanum	GPB3%PVP	137.49	219.72	4.06	2.57	1.598	137.02	219.77	1.23	0.62	0.6	4.23	2.41	0.008	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9414	DTOL	Angiosperm	Onagraceae	Epilobium	brunnescens	<Solanum	GPB3%PVP	116.56	315.46	5.01	3.57	2.706	119.32	321.73	0.73	0.37	0.36	4.84	3.36	0.014	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9415	DTOL	Angiosperm	Lythraceae	Lythrum	hyssopifolia	<Solanum	GPB3%PVP	364.03	449.29	4.49	4.02	1.234	373.48	460.08	1.61	0.8	0.79	3.76	3.46	0.003	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9416	DTOL	Angiosperm	Cyperaceae	Cyperus	fuscus	<Solanum	GPB3%PVP	125.94	476.6	4.45	3.01	3.784	129.2	484.24	0.53	0.26	0.26	4.21	2.84	0.031	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9417	DTOL	Angiosperm	Asteraceae	Filago	lutescens	<Solanum	GPB3%PVP	314.19	417.22	2.71	2.53	1.328	321.83	424.47	1.5	0.75	0.73	2.39	2.63	0.008	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9413	DTOL	Angiosperm	Asteraceae	Gnaphalium	uliginosa	<Solanum	GPB3%PVP	174.72	413.08	4.4	2.8	2.364	177.98	424.35	0.83	0.42	0.41	4.24	2.45	0.028	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR263	DTOL	Angiosperm	Boraginaceae	Myosotis	alpestris	<Petro	GPB3%PVP	138.27	345.38	4.56	2.93	2.498	141.44	349.98	1.82	0.91	0.89	4.39	2.82	0.021	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR264	DTOL	Angiosperm	Rubiaceae	Galium	saxitile	<Petro	GPB3%PVP	234.97	334.38	3.26	2.53	1.423	236.87	334.29	3.19	1.59	1.56	3.36	2.36	0.011	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR262	DTOL	Angiosperm	Saxifragaceae	Micranthes	stellaris	<Solanum	GPB3%PVP	126.58	318.12	5.68	2.99	2.513	126.68	319.53	0.78	0.39	0.38	5.6	2.87	0.008	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR260	DTOL	Angiosperm	Asteraceae	Erigeron	borealis	<Petro	GPB3%PVP	254.27	349.86	3.52	2.68	1.376	256.4	351.99	3.28	1.64	1.6	3.29	2.53	0.004	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR258	DTOL	Angiosperm	Ranunculaceae	Ranunculus	penicillatus	>Petro	GPB3%PVP	225.66	403.65	2.87	2.34	1.789	412.56	232.26	7.99	4	3.91	2.75	2.76	0.013	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR261	DTOL	Angiosperm	Poaceae	Poa	alpina	>Petro	GPB3%PVP	323.7	485.19	2.47	2.43	1.499	490.98	327.67	6.74	3.37	3.3	2.25	2.34	0.001	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR259	DTOL	Angiosperm	Caryophllaceae	Cerastium	alpinum	>Solanum	GPB3%PVP	203.61	383.24	3.15	3.22	1.882	386.94	206.71	3.71	1.85	1.81	3.34	3.22	0.011	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR267	DTOL	Angiosperm	Plantaginaceae	Veronica	anagallis - aquatica	<Petro	GPB3%PVP	163.27	294.97	3.66	2.77	1.807	166.25	297.11	2.52	1.26	1.23	3.38	2.61	0.017	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR268	DTOL	Angiosperm	Apiaceae	Oenanthe	lachenallii	<Solanum	GPB3%PVP	252.25	342.51	4.08	2.74	1.358	258.69	350.89	1.46	0.73	0.71	4	2.65	0.005	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR266	DTOL	Angiosperm	Ranunculaceae	Ranunculus	lingua	>Allium	GBP3%PVP	279.75	421.4	3.15	2.85	1.508	423.85	281.61	52.51	26.26	25.68	2.93	3.28	0.003	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9421	DTOL	Angiosperm	Polygonaceae	Polygonum	maritimum	<Solanum	GPB3%PVP	174.86	323.91	3.95	3.85	1.852	179.38	331.24	1.07	0.54	0.52	4.29	3.74	0.008	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9420	DTOL	Angiosperm	Cyperaceae	Carex	pallescens	<Solanum	GPB3%PVP	157.63	326.31	3.06	2.05	2.07	160.02	332.88	0.95	0.48	0.47	3.05	2.21	0.010	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9422	DTOL	Angiosperm	Apiaceae	Silaum	Silaus	>Solanum	GPB3%PVP	173.61	564.08	3.29	2.41	3.249	574.5	177.45	6.41	3.21	3.13	2.36	2.99	0.012	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9418	DTOL	Angiosperm	Lamiaceae	Galeopsis	angustifolia	<Petro	GPB3%PVP	91.19	327.21	3.87	2.35	3.588	93.86	338.86	1.25	0.62	0.61	3.43	1.98	0.036	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9419	DTOL	Angiosperm	Asteraceae	Scorznera	humilis	>Petro	GPB3%PVP	179.37	571.16	2.29	1.8	3.184	576.98	183.46	14.15	7.08	6.92	1.82	2.35	0.037	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9423	DTOL	Angiosperm	Lamiaceae	Ajuga	chamaepitys	<Petro	GPB3%PVP	219.92	433.24	3.48	2.68	1.97	223.18	437.84	2.29	1.15	1.12	3.47	2.8	0.183	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9424	DTOL	Angiosperm	Poaceae	Leersia	oryzoides	<Petro	GPB3%PVP	182.91	413.19	3.81	3.22	2.259	186.63	417.89	2.01	1	0.98	3.98	3.24	0.017	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9425	DTOL	Angiosperm	Asteraceae	Hieracium	britannicum	>Petro	GPB3%PVP	171.71	542.69	3.49	2.83	3.16	548.56	175.84	14.04	7.02	6.86	2.78	3.25	0.039	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9427	DTOL	Angiosperm	Campanulaceae	Lobelia	urens	<Petro	GPB3%PVP	103.06	437.44	4.67	2.38	4.245	104.13	441.68	1.06	0.53	0.52	4.38	2.44	0.009	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9428	DTOL	Angiosperm	Primulaceae	Hottonia	palustris	<Petro	GPB3%PVP	187.39	420.41	4.03	2.51	2.244	190.63	427.98	2	1	0.98	4.43	3.1	0.002	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9429	DTOL	Angiosperm	Genitanaceae	Gentiana	pneumonanthe	>Petro	GPB3%PVP	166.63	384.85	3.56	3.55	2.31	390.14	170.06	10.32	5.16	5.05	3.36	3.23	0.016	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9430	DTOL	Angiosperm	Caryophyllaceae	Illecebrum	verticillatum	<Petro	GPB3%PVP	103.23	466.28	4.68	3.56	4.517	104.11	480.92	0.97	0.49	0.48	4.58	3.09	0.090	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9429	DTOL	Angiosperm	Alismataceae	Baldellia	ranunculoides	>Pisum	GPB3%PVP	139.5	421.39	3.13	3.54	3.021	425.62	140.32	27.57	13.79	13.48	3.53	3.36	0.011	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR270	DTOL	Angiosperm	Lamiaceae	Galeopsis	tetrahit	<Petro	GPB3%PVP	247.89	315.48	3.42	2.87	1.273	250.23	317.22	3.55	1.77	1.74	3.36	2.76	0.007	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR271	DTOL	Angiosperm	Juncaceae	Juncus	butomius	<Petro	GPB3%PVP	168.67	399.29	4.49	2.96	2.367	174.04	406.84	1.93	0.96	0.94	4.03	2.59	0.027	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR269	DTOL	Angiosperm	Lamiaceae	Mentha	arvensis	>Solanum	GPB3%PVP	327.11	437.46	3.38	3.52	1.337	454.45	334.99	2.69	1.34	1.31	3.57	3.38	0.007	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR272	DTOL	Angiosperm	Brassicaceae	Rorripa	palustris	<Solanum	GPB3%PVP	102.77	376.22	3.25	3.48	3.601	103.33	379.87	0.54	0.27	0.26	3.36	3.47	0.053	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR273	DTOL	Angiosperm	Cyperaceae	Bolboschoenus	maritimus	<Solanum	GPB3%PVP	110.38	343.98	5.26	3.46	3.116	111.55	351.45	0.63	0.31	0.31	5.36	3.36	0.032	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9435	DTOL	Angiosperm	Euphorbiaceae	Euphorbia	maculata	<Petro	GPB3%PVP	141.8	323.02	3.97	2.57	2.278	144.18	326.65	1.99	0.99	0.97	3.81	2.42	0.011	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9434	DTOL	Angiosperm	Polygonaceae	Fallopia	baldschuanica	<Petro	GPB3%PVP	226.57	299.2	4.52	3.53	1.321	226.49	298.36	3.42	1.71	1.67	4.12	3.5	0.003	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9431	DTOL	Angiosperm	Apiaceae	Hydrocotyle	ranunculoides	<Petro	GPB3%PVP	115.1	296.45	3.6	3.13	2.575	117.6	300.38	1.76	0.88	0.86	3.61	3.03	0.022	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9433	DTOL	Angiosperm	Malvaceae	Malva	sylvestris	<Petro	Galbraith	118.15	305.06	6.39	3.99	2.582	117.47	303.19	1.74	0.87	0.85	6.45	3.95	0.001	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9432	DTOL	Angiosperm	Asteraceae	Bidens	cernua	<Pisum	GPB3%PVP	170.11	325.33	3.35	2.63	1.912	174.34	331.2	4.78	2.39	2.34	3.3	2.45	0.011	Sahr Mian	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
