@@ -237,10 +237,16 @@ jobs:
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --sample-dir sources/assembly-data-sample"
-      - name: Snapshot initassembly
+      - name: Snapshot RELEASE initassembly
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+      - name: Snapshot BACKUP initassembly
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/dev/initassembly" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/dev/initassembly?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
 
