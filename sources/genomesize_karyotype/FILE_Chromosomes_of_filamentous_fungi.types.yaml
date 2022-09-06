@@ -1,0 +1,22 @@
+file:
+  format: tsv
+  header: true
+  name: Chromosomes_of_filamentous_fungi.tsv
+  source: Wioletta Wieloch 2006
+  source_url: https://doi.org/10.1016/j.mimet.2006.05.022
+attributes:
+  chromosome_number:
+    header: chromosome_number
+    separator:
+      - ","
+    type: short
+taxonomy:
+  taxon_id:
+    header: taxon_id
+  species:
+    header: species
+  phylum:
+    header: phylum
+  kingdom:
+    header: kingdom
+
