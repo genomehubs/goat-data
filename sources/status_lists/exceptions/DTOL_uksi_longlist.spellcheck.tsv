@@ -3,10 +3,12 @@ taxon_id	input	rank	suggested
 159720	Fumago vagans	species	Fuligo septica
 566113	Pseudothis apophysata	species	Otidea apophysata
 289990	Didymium verrucisporum	species	Didymium verrucosporum
-	Gloeodes	genus	aloeides	elaeodes	cloeodes
+	Gloeodes	genus	elaeodes	aloeides	cloeodes
 2033203	Helicofilia	genus	Heliconilla
 	Myxosporium	genus	zygosporium	monosporium
 298094	Trechus subnotatus	species	Callosobruchus subinnotatus
+2933878	Sphodrus leucophthalmus	species	Sphodrus leucophtalmus
+	Arnium olerum	species	allium odorum
 icDroHeer	Dropephylla heeri	species	Dropephylla heerii
 icBagCzwa	Bagous czwalinai	species	Bagous czwalinae
 idLesPisi	Lestodiplosis pini	species	Lestodiplosis pisi
@@ -14,19 +16,18 @@ idLesPisi	Lestodiplosis pini	species	Lestodiplosis pisi
 	Snails	species	sialis	snail
 71834	Armeria pseudoarmeria	species	Armeria pseudarmeria
 124277	Alcyonium glomeratum	species	Alcyonidium glomeratum
-	Chenopodium capitatum	species	chenopodium carinatum
 690321	Cotoneaster villosulus	species	Cotoneaster integerrimus
 	Solanum sarachoides	species	solanum sarrachoides	solanum sarachioides
 1536483	Sorbaria tomentosa	species	Cladorrhinum tomentosum
 	Aglais	genus	aglaia
-	Aphantopus	genus	aphanopus	aphaniops
+268864	Aphantopus	genus	Aphanopus
 	Pyronia	genus	phronia	pyropia	peronia
 2530053	Psathyrella silvestris	species	Cystoagaricus sylvestris
 	Eurynebria	genus	eunebria	euryneura
 1475168	Olios sanctivicentii	species	Olios sanctivincenti
 588353	Bathyporeiidae	family	Bathypontiidae
 198673	Discosporina	genus	Pileolaria
-	Toxoptera	genus	tomopterna	trogoptera	poeoptera
+	Toxoptera	genus	tomopterna	trogoptera	loboptera
 	Fragilaria	species	gracilaria	fragaria
 1400509	Ameliella grisea	species	Santessoniella grisea
 3035	Euglenoidea	class	Euglenida
@@ -42,6 +43,7 @@ urHarSamo	Harveylithon samoënse	species	Harveylithon samoinse
 	Dicladia	genus	diplodia	villadia	dycladia
 	Vibrio	genus	vireo	virbia
 33589	Leptoptilos crumenifer	species	Leptoptilos crumeniferus
+	Radjah	genus	radish
 	Prooppia	species	prosapia	prosopeia
 1586428	Poecilium lividum	species	Phymatodes lividus
 524672	Bodiloides	genus	Prodiloides
@@ -58,7 +60,7 @@ icPilFast	Pilemostoma fastuosum	species	Pilemostoma fastuosa
 	Colobopterus	genus	chloropterus	dilobopterus
 	Esymus	genus	elymus	thymus	esomus
 64849	Labarrus	genus	Alabagrus
-	Limarus	genus	liparus	limatus
+	Limarus	genus	limatus	liparus
 1415215	Nimbus	genus	Niveus
 	Phalacronothus	genus	phalacronotus	phalacrognathus
 qqKneMuta	Knemidocoptes mutans	species	Knemidokoptes mutans
