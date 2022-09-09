@@ -6,7 +6,7 @@ import json
 import requests
 
 url = 'https://sts.tol.sanger.ac.uk/api/v1/species'
-headers = {"Authorization": "g7dj92nzla74gf09mjwqc3xo7ma26cmn", "Project": "ALL"}
+headers = {"Authorization": sys.argv[1], "Project": "ALL"}
 
 r = requests.get(url, headers=headers).json()
 species_total = (r['data']['total'])
