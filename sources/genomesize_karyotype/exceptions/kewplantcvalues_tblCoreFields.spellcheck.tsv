@@ -11,7 +11,6 @@ taxon_id	input	rank	suggested
 1640868	Arisarum proboscidium	species	Arisarum proboscideum
 3704	Armoracia lapatifolia	species	Armoracia rusticana
 422315	Arrhenechtites mixta	species	Arrhenechthites mixta
-55769	Bromus bonariensis	species	Bromus lanceolatus
 629273	Bromus macranthus	species	Bromus pictus
 172644	Broussonetia payprifera	species	Broussonetia papyrifera
 398446	Avena nudi-brevis	species	Avena brevis
@@ -20,7 +19,6 @@ taxon_id	input	rank	suggested
 52878	Cyphomandra luteoalba	species	Solanum luteoalbum
 906780	Dendrobium hookeriana	species	Dendrobium hookerianum
 263444	Carludovica drudeii	species	Carludovica drudei
-376683	Carum copticum	species	Scaligeria napiformis
 2806786	Chrysanthemum macrophyllum	species	Thyrsanthemum macrophyllum
 81941	Clarkia lasseninsis	species	Clarkia lassenensis
 268015	Crepis conyzaefolia	species	Crepis conyzifolia
@@ -88,6 +86,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 137163	Selaginella pallescans	species	Selaginella pallescens
 519570	Marattia purpurescens	species	Ptisana purpurascens
 41971	Loxsoma cunninghami	species	Loxsoma cunninghamii
+	Nephrolepis cordifolia 'Duffi'	subspecies	nephrolepis cordifolia duffii
 34165	Nephrolepis exsaltata	species	Nephrolepis exaltata
 208984	Pseudoleskella catenulata	species	Pseudoleskeella catenulata
 184640	Cirrhiphyllum piliferum	species	Cirriphyllum piliferum
@@ -114,6 +113,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 35855	Chlorocladus australaxicus	species	Chloroclados australasicus
 133509	Hinksia irregularis	species	Feldmannia irregularis
 133512	Punctaria tennuissima	species	Punctaria tenuissima
+35851	Acicularia schenckii	species	Acetabularia schenckii
 121088	Ostrobium queketii	species	Ostreobium quekettii
 85370	Lilium euxanthum	species	Lilium leucanthum
 	Paeonia broteroi	species	paeonia broteri	pavonia berteroi
@@ -129,7 +129,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 948801	Lupinus vavilovi	species	Lupinus vavilovii
 60913	Thlaspi goesigense	species	Noccaea goesingensis
 52521	Amelanchier arboria	species	Amelanchier arborea
-	Zoysia pauciflora	species	voyria parviflora	zornia parviflora
+	Zoysia pauciflora	species	zornia parviflora	voyria parviflora
 113641	Argyranthemum teneriffae	species	Argyranthemum tenerifae
 376435	Descurainia gonzalesii	species	Descurainia gonzalezii
 2304417	Erigeron calderae	species	Erigeron andicola
@@ -160,6 +160,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 1068662	Curcuma leucorhiza	species	Curcuma leucorrhiza
 1533118	Hieracium rothianum	species	Hieracium kochianum
 224149	Sarcocornia fruiticosa	species	Salicornia fruticosa
+1505746	Centaurea kusanii	species	Cheirolophus duranii
 75943	Lactuca angustana	species	Lactuca serriola
 98748	Festuca idahoenis	species	Festuca idahoensis
 37427	Isoetes engelmanii	species	Isoetes engelmannii
@@ -284,13 +285,12 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 1417448	Restio scaberulous	species	Restio scaberulus
 1417457	Restio triteceus	species	Restio triticeus
 2067289	Lessingianthus pusillus	species	Lessingianthus pumillus
-	Trillium parviflorum	species	trifolium pauciflorum	trifolium parviflorum
+	Trillium parviflorum	species	trifolium pauciflorum	trifolium parviflorum	tripolium pauciflorum
 155756	Erysimum heiracifolium	species	Erysimum hieraciifolium
 152135	Soldanella rhodopea	species	Soldanella rhodopaea
 152123	Soldanella marmarossensis	species	Soldanella marmarossiensis
 272863	Asparagus pyrimidalis	species	Asparagus setaceus
 1885039	Opuntia oligocantha	species	Opuntia oligacantha
-544607	Epidendrum falcatum	species	Epidendrum anceps
 	Vanilla leprieuri	species	vanilla leprieurii
 228481	Phalaeanopsis honghenensis	species	Phalaenopsis honghenensis
 212401	Phalaeanopsis lowii	species	Phalaenopsis lowii
