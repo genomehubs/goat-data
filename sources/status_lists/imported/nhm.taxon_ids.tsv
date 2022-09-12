@@ -1,10 +1,24 @@
 taxon_id	input	rank
+7147	Diptera	order
+1173315	Leuctra geniculata	species
+7399	Hymenoptera	order
+7041	Coleoptera	order
+881470	Heterotoma planicornis	species
+1077841	Serratella ignita	species
+1504852	Micromus variegatus	species
+42113	Clitellata	class
+295196	Neophilaenus lineatus	species
+94026	Metellina segmentata	species
+7552	Lithobius forficatus	species
+1569488	Lithobius microps	species
+1418174	Cryptops anomalans	species
+856749	Geophilus flavus	species
+7408	Ichneumonidae	family
+58824	Plodia interpunctella	species
+279441	Coniopterygidae	family
 399045	Notodromas monacha	species
 6670	Ostracoda	class
 70849	Nudibranchia	order
-7408	Ichneumonidae	family
-7041	Coleoptera	order
-7399	Hymenoptera	order
 6341	Polychaeta	class
 6373	Terebellida	order
 32261	Terebellidae	family
@@ -16,17 +30,13 @@ taxon_id	input	rank
 10212	Bugula neritina	species
 51258	Sabella	genus
 65288	Netelia	genus
-7147	Diptera	order
 987918	Cybosia mesomella	species
-881470	Heterotoma planicornis	species
 280361	Amaurobius	genus
 1008866	Ommatoiulus sabulosus	species
 1134731	Eurygaster testudinaria	species
 29979	Isopoda	order
-1569488	Lithobius microps	species
 47131	Cylindroiulus	genus
 88022	Blaniulidae	family
-7552	Lithobius forficatus	species
 173289	Stigmatogaster subterranea	species
 1008843	Brachyiulus pusillus	species
 173284	Geophilus truncorum	species
@@ -82,21 +92,17 @@ taxon_id	input	rank
 6650	Polyplacophora	class
 214286	Oligia	genus
 79500	Bruchus	genus
-42113	Clitellata	class
 256425	Lissotriton helveticus	species
 560355	Ameletus inopinatus	species
 551854	Leptophlebia marginata	species
 62803	Nemoura	genus
 1230162	Sialis fuliginosa	species
-279441	Coniopterygidae	family
 172486	Gelis	genus
-1173315	Leuctra geniculata	species
 608843	Zwicknia bifrons	species
 2014050	Siphlonurus armatus	species
 279420	Sialis lutaria	species
 1231183	Amphinemura standfussi	species
 1240991	Siphlonurus lacustris	species
-1077841	Serratella ignita	species
 1395073	Perla bipunctata	species
 446500	Potamanthus luteus	species
 329003	Cloeon simile	species
@@ -144,7 +150,6 @@ taxon_id	input	rank
 57111	Erpobdella	genus
 1255755	Lithobius melanops	species
 126940	Lamyctes emarginatus	species
-1418174	Cryptops anomalans	species
 1569485	Lithobius borealis	species
 60158	Lithobius variegatus	species
 77651	Simocephalus vetulus	species
@@ -172,7 +177,6 @@ taxon_id	input	rank
 1506264	Oecobius navus	species
 1304667	Zoropsis spinimana	species
 473176	Pachygnatha degeeri	species
-94026	Metellina segmentata	species
 31925	Segestria florentina	species
 61980	Nesticus cellulanus	species
 1926196	Meta bourneti	species
@@ -298,7 +302,6 @@ taxon_id	input	rank
 1112515	Ero	genus
 233289	Theridiosoma gemmosum	species
 1871997	Pseudeuophrys lanigera	species
-1504852	Micromus variegatus	species
 2747131	Steatoda nobilis	species
 1907025	Opilio canestrinii	species
 209691	Ptychoptera	genus
@@ -306,7 +309,6 @@ taxon_id	input	rank
 491266	Cixius nervosus	species
 145650	Cernuella virgata	species
 1073585	Endrosis sarcitrella	species
-58824	Plodia interpunctella	species
 2560943	Amblyptilia acanthadactyla	species
 2043226	Alopecosa albofasciata	species
 7509	Siphonaptera	order
@@ -756,7 +758,6 @@ taxon_id	input	rank
 988174	Luperina testacea	species
 2818049	Neophilaenus exclamationis	species
 2803877	Batracomorphus irroratus	species
-295196	Neophilaenus lineatus	species
 #ihHylElea	Hyledelphax elegantula	species
 355390	Stenobothrus lineatus	species
 1962538	Batracomorphus allionii	species
@@ -917,7 +918,6 @@ taxon_id	input	rank
 1593253	Myrmarachne formicaria	species
 146086	Limax maximus	species
 1872065	Nuctenea umbratica	species
-856749	Geophilus flavus	species
 336591	Larinioides cornutus	species
 1100095	Misumena vatia	species
 1871992	Phylloneta sisyphia	species
@@ -929,6 +929,16 @@ taxon_id	input	rank
 560974	Schizomavella linearis	species
 560983	Escharella immersa	species
 626261	Alcyonidium mamillatum	species
+143734	Leuctra	genus
+301037	Bembecia ichneumoniformis	species
+172515	Baetidae	family
+6893	Araneae	order
+757356	Oeciacus hirundinis	species
+2746508	Ledra aurita	species
+1560625	Sisyra terminalis	species
+1504853	Nineta flava	species
+34613	Ixodes ricinus	species
+1504870	Sympherobius pygmaeus	species
 1857974	Bucculatrix albedinella	species
 987996	Noctua janthina	species
 753163	Catocala sponsa	species
@@ -940,7 +950,6 @@ taxon_id	input	rank
 1101054	Spilonota laricana	species
 934885	Parectropis similaria	species
 1869848	Ephestia unicolorella	species
-1560625	Sisyra terminalis	species
 61998	Dilta	genus
 642069	Anthocoris nemorum	species
 75003	Alopecosa pulverulenta	species
@@ -957,7 +966,6 @@ taxon_id	input	rank
 997542	Orthosia gracilis	species
 43337	Orthosia gothica	species
 1594366	Nematopogon schwarziellus	species
-34613	Ixodes ricinus	species
 7516	Neuroptera	order
 934940	Gymnoscelis rufifasciata	species
 997538	Lithophane socia	species
