@@ -537,8 +537,8 @@ jobs:
 
       - name: rsync production snapshot to edinburgh prod
         run: |
-          rsync -av /volumes/docker/snapshots/production/production-$RELEASE goat:/volumes/docker/snapshots/production/
-          rsync -av /volumes/docker/resources/files                          goat:/volumes/docker/resources/
+          rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE goat:/volumes/docker/snapshots/production/
+          rsync -av --delete /volumes/docker/resources/files                          goat:/volumes/docker/resources/
 
   rsync_to_lustre:
     needs:
@@ -552,22 +552,8 @@ jobs:
 
       - name: rsync production snapshot to sanger lustre
         run: |
-          rsync -av /volumes/docker/snapshots/production/production-$RELEASE f:/lustre/scratch123/tol/share/goat/dev/
-          rsync -av /volumes/docker/resources/files/                         f:/lustre/scratch123/tol/share/goat/dev/files/
-
-  delete_snapshot_locally:
-    needs:
-      - rsync_to_edin_prod
-      - rsync_to_lustre
-    runs-on:  self-hosted
-    steps:
-      - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
-
-      - name: delete prod snapshot and files
-        run: |
-          rm -rf /volumes/docker/snapshots/production/production-$RELEASE
-          rm -rf /volumes/docker/resources/files/*
+          rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE f:/lustre/scratch123/tol/share/goat/dev/
+          rsync -av --delete /volumes/docker/resources/files/                         f:/lustre/scratch123/tol/share/goat/dev/files/
 
   restore_on_edin_prod:
     needs:
