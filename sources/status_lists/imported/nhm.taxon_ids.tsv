@@ -1,7 +1,39 @@
 taxon_id	input	rank
+161569	Lekanesphaera	genus
+6341	Polychaeta	class
+51258	Sabella	genus
+6821	Amphipoda	order
+6681	Malacostraca	class
+317509	Haustorius arenarius	species
+39820	Nereididae	family
+69514	Australoplana sanguinea	species
+10212	Bugula neritina	species
+50417	Mimachlamys varia	species
+258330	Ammothea hilgendorfi	species
+6683	Decapoda	order
+32261	Terebellidae	family
+6103	Actiniaria	order
+6373	Terebellida	order
+1443160	Saccoglossus horsti	species
+6448	Gastropoda	class
+373274	Callipallene brevirostris	species
+7408	Ichneumonidae	family
+73079	Lecithophyllum botryophorum	species
+27878	Lepidapedon gaevskayae	species
+#htGloMacr	Glomericirrus macrouri	species
+128749	Steringophorus thulini	species
+217225	Aphthona	genus
+442124	Brachypterolus	genus
+582143	Pyrausta	genus
+7399	Hymenoptera	order
+27515	Pompilidae	family
+77572	Halictidae	family
+60577	Henricia	genus
+6544	Bivalvia	class
+7588	Asteroidea	class
+7625	Echinoidea	class
 7147	Diptera	order
 1173315	Leuctra geniculata	species
-7399	Hymenoptera	order
 7041	Coleoptera	order
 881470	Heterotoma planicornis	species
 1077841	Serratella ignita	species
@@ -13,22 +45,14 @@ taxon_id	input	rank
 1569488	Lithobius microps	species
 1418174	Cryptops anomalans	species
 856749	Geophilus flavus	species
-7408	Ichneumonidae	family
+1101017	Metalampra italica	species
 58824	Plodia interpunctella	species
 279441	Coniopterygidae	family
 399045	Notodromas monacha	species
 6670	Ostracoda	class
 70849	Nudibranchia	order
-6341	Polychaeta	class
-6373	Terebellida	order
-32261	Terebellidae	family
 36120	Nephtys	genus
-6103	Actiniaria	order
-258330	Ammothea hilgendorfi	species
 296241	Poecilochirus	genus
-6683	Decapoda	order
-10212	Bugula neritina	species
-51258	Sabella	genus
 65288	Netelia	genus
 987918	Cybosia mesomella	species
 280361	Amaurobius	genus
@@ -62,21 +86,13 @@ taxon_id	input	rank
 219450	Philonthus	genus
 1869522	Caloptilia betulicola	species
 136194	Endeis spinosa	species
-6821	Amphipoda	order
 7713	Ascidiacea	class
 96822	Sphaeromatidae	family
-6448	Gastropoda	class
 102289	Anomiidae	family
 317526	Ampelisca	genus
-69514	Australoplana sanguinea	species
 92169	Talitridae	family
 7719	Ciona intestinalis	species
 59560	Phallusia mammillata	species
-50417	Mimachlamys varia	species
-6544	Bivalvia	class
-1443160	Saccoglossus horsti	species
-39820	Nereididae	family
-161569	Lekanesphaera	genus
 6349	Glycera	genus
 6366	Sabellidae	family
 39832	Oweniidae	family
@@ -86,9 +102,7 @@ taxon_id	input	rank
 228466	Varicorbula gibba	species
 399303	Abra alba	species
 71505	Philine aperta	species
-7588	Asteroidea	class
 47127	Nuculidae	family
-7625	Echinoidea	class
 6650	Polyplacophora	class
 214286	Oligia	genus
 79500	Bruchus	genus
@@ -139,7 +153,6 @@ taxon_id	input	rank
 77569	Lumbriculidae	family
 111556	Crangonyx	genus
 6745	Paguridae	family
-6681	Malacostraca	class
 6082	Hydra viridissima	species
 2794005	Nanogona polydesmoides	species
 118470	Ophyiulus pilosus	species
@@ -230,11 +243,11 @@ taxon_id	input	rank
 1101069	Ypsolopha ustella	species
 680436	Kleidocerys resedae	species
 136195	Nymphon gracile	species
-373274	Callipallene brevirostris	species
 256750	Steatoda grossa	species
+1268897	Cryptops hortensis	species
+1569481	Stenotaenia linearis	species
 1073664	Thiotricha subocellea	species
 35052	Ophiopholis aculeata	species
-60577	Henricia	genus
 72673	Ophiura ophiura	species
 70180	Ophiothrix fragilis	species
 82377	Amphiura	genus
@@ -354,7 +367,6 @@ taxon_id	input	rank
 29065	Martes martes	species
 #qdMelScut	Melogona scutellaris	species
 2219560	Neobisium carcinoides	species
-1268897	Cryptops hortensis	species
 1569506	Brachychaeteuma melanops	species
 #qdMacPali	Macrosternodesmus palicola	species
 1915218	Ceratosphys amoena	species
@@ -378,7 +390,6 @@ taxon_id	input	rank
 1582074	Diaea dorsata	species
 1926211	Philodromus buxi	species
 2750061	Lithobius pilicornis	species
-1569481	Stenotaenia linearis	species
 119122	Dysdera erythrina	species
 685700	Stemonyphantes lineatus	species
 209522	Coelotes atropos	species
@@ -470,7 +481,6 @@ taxon_id	input	rank
 537469	Rhyparochromus vulgaris	species
 1393966	Cacopsylla fulguralis	species
 190354	Idaea seriata	species
-582143	Pyrausta	genus
 237228	Campyloneura virgula	species
 1425412	Periphyllus acericola	species
 1096078	Psacadina	genus
@@ -528,7 +538,6 @@ taxon_id	input	rank
 2268715	Trivia arctica	species
 1545131	Eysarcoris venustissimus	species
 36150	Cicadella viridis	species
-217225	Aphthona	genus
 1545300	Coreus marginatus	species
 347976	Himacerus apterus	species
 706294	Xylocoris cursitans	species
@@ -561,10 +570,6 @@ taxon_id	input	rank
 116967	Zoogonoides	genus
 73077	Lecithaster gibbosus	species
 1679969	Hemiurus	genus
-73079	Lecithophyllum botryophorum	species
-#htGloMacr	Glomericirrus macrouri	species
-128749	Steringophorus thulini	species
-27878	Lepidapedon gaevskayae	species
 1162388	Prosorhynchoides borealis	species
 73367	Zoogonidae	family
 73052	Derogenes varicus	species
@@ -633,7 +638,6 @@ taxon_id	input	rank
 1870006	Incurvaria oehlmanniella	species
 1660606	Cochylimorpha straminea	species
 286670	Pentatoma rufipes	species
-77572	Halictidae	family
 700836	Dicranota	genus
 441507	Leuctra fusca	species
 2794000	Canthophorus impressus	species
@@ -768,7 +772,6 @@ taxon_id	input	rank
 987956	Hoplodrina blanda	species
 934869	Horisme vitalbata	species
 1481754	Oncocera semirubella	species
-27515	Pompilidae	family
 987935	Euproctis similis	species
 104448	Idaea biselata	species
 1870628	Eremobia ochroleuca	species
@@ -828,7 +831,6 @@ taxon_id	input	rank
 1545166	Miris striatus	species
 1081820	Ischnodemus sabuleti	species
 236939	Capsus ater	species
-442124	Brachypterolus	genus
 1545302	Cyphostethus tristriatus	species
 55431	Palomena prasina	species
 2794002	Stenocranus minutus	species
@@ -929,6 +931,17 @@ taxon_id	input	rank
 560974	Schizomavella linearis	species
 560983	Escharella immersa	species
 626261	Alcyonidium mamillatum	species
+27876	Lepidapedon	genus
+2109640	Hyphalaster inermis	species
+172134	Bathysaurus ferox	species
+619854	Colossendeis minor	species
+55639	Psychropotes longicauda	species
+#xcGriDisc	Grimpoteuthis discoveryi	species
+37710	Lepas anatifera	species
+94934	Scopeloberyx robustus	species
+473298	Argyropelecus olfersii	species
+279102	Teuthowenia megalops	species
+78443	Grimpoteuthis sp.	species
 143734	Leuctra	genus
 301037	Bembecia ichneumoniformis	species
 172515	Baetidae	family
@@ -1168,7 +1181,6 @@ taxon_id	input	rank
 187594	Amphiporus lactifloreus	species
 88926	Lineus ruber	species
 941274	Leucocephalonemertes aurantiaca	species
-38561	Ascidia mentula	species
 94630	Semibalanus balanoides	species
 95550	Chthamalus stellatus	species
 95551	Chthamalus montagui	species
@@ -1198,7 +1210,6 @@ taxon_id	input	rank
 381128	Lehmannia marginata	species
 2857466	Apertochrysa prasina	species
 1520482	Parakontikia ventrolineata	species
-27876	Lepidapedon	genus
 1807724	Brachyphallus	genus
 2903269	Parakontikia atrata	species
 #ilPhiPilo	Phigalia pilosaria	species
