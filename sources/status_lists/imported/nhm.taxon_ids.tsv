@@ -1,22 +1,42 @@
 taxon_id	input	rank
+82377	Amphiura	genus
+7625	Echinoidea	class
+6398	Lumbricus terrestris	species
+173284	Geophilus truncorum	species
+192233	Pisidium subtruncatum	species
+153587	Ancylus fluviatilis	species
+54978	Viviparus viviparus	species
+120472	Theodoxus fluviatilis	species
+399045	Notodromas monacha	species
+1698855	Eratigena atrica	species
+29979	Isopoda	order
+6821	Amphipoda	order
 161569	Lekanesphaera	genus
 6341	Polychaeta	class
 51258	Sabella	genus
-6821	Amphipoda	order
 6681	Malacostraca	class
 317509	Haustorius arenarius	species
+106738	Amphiuridae	family
+373274	Callipallene brevirostris	species
+7588	Asteroidea	class
+51768	Alcyonium digitatum	species
+6103	Actiniaria	order
+7713	Ascidiacea	class
+35052	Ophiopholis aculeata	species
+70180	Ophiothrix fragilis	species
+72673	Ophiura ophiura	species
+72672	Ophiura albida	species
 39820	Nereididae	family
+27804	Cyanea capillata	species
 69514	Australoplana sanguinea	species
 10212	Bugula neritina	species
 50417	Mimachlamys varia	species
 258330	Ammothea hilgendorfi	species
 6683	Decapoda	order
 32261	Terebellidae	family
-6103	Actiniaria	order
 6373	Terebellida	order
 1443160	Saccoglossus horsti	species
 6448	Gastropoda	class
-373274	Callipallene brevirostris	species
 7408	Ichneumonidae	family
 73079	Lecithophyllum botryophorum	species
 27878	Lepidapedon gaevskayae	species
@@ -30,8 +50,6 @@ taxon_id	input	rank
 77572	Halictidae	family
 60577	Henricia	genus
 6544	Bivalvia	class
-7588	Asteroidea	class
-7625	Echinoidea	class
 7147	Diptera	order
 1173315	Leuctra geniculata	species
 7041	Coleoptera	order
@@ -48,7 +66,6 @@ taxon_id	input	rank
 1101017	Metalampra italica	species
 58824	Plodia interpunctella	species
 279441	Coniopterygidae	family
-399045	Notodromas monacha	species
 6670	Ostracoda	class
 70849	Nudibranchia	order
 36120	Nephtys	genus
@@ -58,12 +75,10 @@ taxon_id	input	rank
 280361	Amaurobius	genus
 1008866	Ommatoiulus sabulosus	species
 1134731	Eurygaster testudinaria	species
-29979	Isopoda	order
 47131	Cylindroiulus	genus
 88022	Blaniulidae	family
 173289	Stigmatogaster subterranea	species
 1008843	Brachyiulus pusillus	species
-173284	Geophilus truncorum	species
 1545159	Megalonotus chiragra	species
 1147033	Schendyla nemorensis	species
 1068628	Polydesmus angustus	species
@@ -86,19 +101,15 @@ taxon_id	input	rank
 219450	Philonthus	genus
 1869522	Caloptilia betulicola	species
 136194	Endeis spinosa	species
-7713	Ascidiacea	class
 96822	Sphaeromatidae	family
 102289	Anomiidae	family
 317526	Ampelisca	genus
 92169	Talitridae	family
-7719	Ciona intestinalis	species
-59560	Phallusia mammillata	species
 6349	Glycera	genus
 6366	Sabellidae	family
 39832	Oweniidae	family
 104742	Notomastus	genus
 195257	Phyllodocidae	family
-48271	Amphipholis squamata	species
 228466	Varicorbula gibba	species
 399303	Abra alba	species
 71505	Philine aperta	species
@@ -201,7 +212,6 @@ taxon_id	input	rank
 187159	Labulla thoracica	species
 247614	Erigone	genus
 74980	Pardosa	genus
-1698855	Eratigena atrica	species
 2850378	Eratigena saeva	species
 286075	Clubiona	genus
 187486	Xysticus	genus
@@ -247,15 +257,9 @@ taxon_id	input	rank
 1268897	Cryptops hortensis	species
 1569481	Stenotaenia linearis	species
 1073664	Thiotricha subocellea	species
-35052	Ophiopholis aculeata	species
-72673	Ophiura ophiura	species
-70180	Ophiothrix fragilis	species
-82377	Amphiura	genus
-72672	Ophiura albida	species
 27412	Cumacea	order
 315597	Melita	genus
 317510	Bathyporeia	genus
-51768	Alcyonium digitatum	species
 6579	Pecten maximus	species
 37541	Buccinum undatum	species
 100776	Aequipecten opercularis	species
@@ -279,8 +283,6 @@ taxon_id	input	rank
 1869483	Argyresthia trifasciata	species
 1100958	Crambus lathoniellus	species
 55617	Ophiocomina nigra	species
-2268661	Leptopentacta elongata	species
-290519	Echinocardium flavescens	species
 164414	Verruca stroemia	species
 2094516	Westwoodilla	genus
 181113	Oedicerotidae	family
@@ -306,7 +308,6 @@ taxon_id	input	rank
 135647	Barbatula barbatula	species
 134920	Pungitius pungitius	species
 69293	Gasterosteus aculeatus	species
-106738	Amphiuridae	family
 2844360	Alcyonidium hirsutum	species
 185833	Boreus hyemalis	species
 94033	Uloborus plumipes	species
@@ -365,7 +366,6 @@ taxon_id	input	rank
 36119	Nephtyidae	family
 39821	Glyceridae	family
 29065	Martes martes	species
-#qdMelScut	Melogona scutellaris	species
 2219560	Neobisium carcinoides	species
 1569506	Brachychaeteuma melanops	species
 #qdMacPali	Macrosternodesmus palicola	species
@@ -578,7 +578,6 @@ taxon_id	input	rank
 74977	Stephanostomum baccatum	species
 99408	Peracreadium idoneum	species
 572482	Microvelia reticulata	species
-6398	Lumbricus terrestris	species
 309576	Ecdyonurus	genus
 143722	Nemurella pictetii	species
 516502	Siphlonurus aestivalis	species
@@ -672,19 +671,15 @@ taxon_id	input	rank
 209694	Stenochironomus	genus
 472374	Pedicia	genus
 158437	Lepidostomatidae	family
-153587	Ancylus fluviatilis	species
-192233	Pisidium subtruncatum	species
 177922	Lype	genus
 626769	Hemerodromia	genus
 1822577	Eloeophila	genus
 #anc_Tonnoiriella	Tonnoiriella	genus
 280176	Cymatia bonsdorffii	species
 280203	Ilyocoris cimicoides	species
-54978	Viviparus viviparus	species
 700865	Helius	genus
 343652	Odontomyia	genus
 288845	Orthocladius	genus
-120472	Theodoxus fluviatilis	species
 2867113	Tetrix undulata	species
 92557	Empididae	family
 1869408	Adela croesella	species
@@ -927,16 +922,21 @@ taxon_id	input	rank
 #tzNolDila	Nolella dilatata	species
 991039	Fenestrulina malusii	species
 97259	Electra pilosa	species
-27804	Cyanea capillata	species
 560974	Schizomavella linearis	species
 560983	Escharella immersa	species
 626261	Alcyonidium mamillatum	species
+46689	Ficedula hypoleuca	species
+283886	Leuconia nivea	species
+261975	Pycnogonum litorale	species
+1725247	Leptopentacta	genus
 27876	Lepidapedon	genus
-2109640	Hyphalaster inermis	species
+2980517	Amperima rosea	species
 172134	Bathysaurus ferox	species
 619854	Colossendeis minor	species
+2980512	Oneirophanta mutabilis	species
+2980516	Molpadia blakei	species
 55639	Psychropotes longicauda	species
-#xcGriDisc	Grimpoteuthis discoveryi	species
+2980514	Grimpoteuthis discoveryi	species
 37710	Lepas anatifera	species
 94934	Scopeloberyx robustus	species
 473298	Argyropelecus olfersii	species
@@ -997,7 +997,7 @@ taxon_id	input	rank
 71319	Limacia clavigera	species
 1325891	Favorinus blianus	species
 44925	Parazoanthus axinellae	species
-#jhTamTama	Tamarisca tamarisca	species
+2980519	Tamarisca tamarisca	species
 2071655	Schizotricha frutescens	species
 401967	Antennella secundaria	species
 130051	Balanophyllia regia	species
@@ -1005,12 +1005,10 @@ taxon_id	input	rank
 36933	Onchidella celtica	species
 71382	Polycera quadrilineata	species
 71494	Elysia viridis	species
-283886	Leuconia nivea	species
 71309	Goniodoris nodosa	species
 176095	Adamsia palliata	species
 1933098	Thyone fusus	species
 1676543	Eubranchus tricolor	species
-261975	Pycnogonum litorale	species
 195873	Aeolidia papillosa	species
 71285	Acanthodoris pilosa	species
 71302	Dendronotus frondosus	species
@@ -1128,6 +1126,7 @@ taxon_id	input	rank
 1869859	Epinotia signatana	species
 1869773	Cydia coniferana	species
 2566309	Aproaerema taeniolella	species
+2979185	Argyresthia cupressella	species
 1869501	Blastobasis adustella	species
 2866284	Bimastos rubidus	species
 1872030	Brigittea civica	species
@@ -1156,7 +1155,7 @@ taxon_id	input	rank
 170843	Planococcus citri	species
 37518	Tubularia	genus
 2785017	Pawsonia saxicola	species
-82558	Acrocnida brachiata	species
+7618	Ophiuroidea	class
 2724384	Omalosecosa ramulosa	species
 2844363	Bugulina flabellata	species
 2844364	Cellaria fistulosa	species
@@ -1184,11 +1183,11 @@ taxon_id	input	rank
 94630	Semibalanus balanoides	species
 95550	Chthamalus stellatus	species
 95551	Chthamalus montagui	species
-264050	Candelabrum cocksii	species
-2785546	Edwardsia claparedii	species
+264049	Candelabrum	genus
 #ilNycObst	Nycterosea obstipata	species
 863632	Stigmatogaster souletina	species
 1569477	Leptoiulus belgicus	species
+2979189	Oligolophus hansenii	species
 1569493	Melogona gallica	species
 1569497	Propolydesmus testaceus	species
 722658	Biston stratarius	species
