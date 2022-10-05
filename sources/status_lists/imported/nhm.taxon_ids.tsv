@@ -1,4 +1,9 @@
 taxon_id	input	rank
+29979	Isopoda	order
+42113	Clitellata	class
+32261	Terebellidae	family
+57111	Erpobdella	genus
+1569490	Lithobius piceus	species
 82377	Amphiura	genus
 7625	Echinoidea	class
 6398	Lumbricus terrestris	species
@@ -9,7 +14,6 @@ taxon_id	input	rank
 120472	Theodoxus fluviatilis	species
 399045	Notodromas monacha	species
 1698855	Eratigena atrica	species
-29979	Isopoda	order
 6821	Amphipoda	order
 161569	Lekanesphaera	genus
 6341	Polychaeta	class
@@ -33,7 +37,6 @@ taxon_id	input	rank
 50417	Mimachlamys varia	species
 258330	Ammothea hilgendorfi	species
 6683	Decapoda	order
-32261	Terebellidae	family
 6373	Terebellida	order
 1443160	Saccoglossus horsti	species
 6448	Gastropoda	class
@@ -56,7 +59,6 @@ taxon_id	input	rank
 881470	Heterotoma planicornis	species
 1077841	Serratella ignita	species
 1504852	Micromus variegatus	species
-42113	Clitellata	class
 295196	Neophilaenus lineatus	species
 94026	Metellina segmentata	species
 7552	Lithobius forficatus	species
@@ -171,7 +173,6 @@ taxon_id	input	rank
 1008831	Allajulus nitidus	species
 62005	Glomeris	genus
 35069	Crinoidea	class
-57111	Erpobdella	genus
 1255755	Lithobius melanops	species
 126940	Lamyctes emarginatus	species
 1569485	Lithobius borealis	species
@@ -374,7 +375,6 @@ taxon_id	input	rank
 1264953	Sabacon viscayanus	species
 1915216	Hylebainosoma nontronensis	species
 1255758	Strigamia acuminata	species
-1569490	Lithobius piceus	species
 1871973	Marpissa muscosa	species
 121211	Nemastoma bimaculatum	species
 118473	Nemasoma varicorne	species
@@ -998,7 +998,6 @@ taxon_id	input	rank
 1325891	Favorinus blianus	species
 44925	Parazoanthus axinellae	species
 2980519	Tamarisca tamarisca	species
-2071655	Schizotricha frutescens	species
 401967	Antennella secundaria	species
 130051	Balanophyllia regia	species
 1336876	Ophlitaspongia papilla	species
@@ -1007,6 +1006,7 @@ taxon_id	input	rank
 71494	Elysia viridis	species
 71309	Goniodoris nodosa	species
 176095	Adamsia palliata	species
+10222	Saccoglossus	genus
 1933098	Thyone fusus	species
 1676543	Eubranchus tricolor	species
 195873	Aeolidia papillosa	species
@@ -1198,7 +1198,6 @@ taxon_id	input	rank
 192226	Euglesa casertana	species
 356141	Dilatata dilatata	species
 #ilDenPygm	Denticucullus pygmina	species
-6388	Enchytraeidae	family
 194188	Arion subfuscus	species
 138674	Microplana terrestris	species
 1302814	Tandonia sowerbyi	species
