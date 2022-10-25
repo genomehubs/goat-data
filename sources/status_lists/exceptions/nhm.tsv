@@ -1,8 +1,11 @@
 institutionCode	otherCatalogNumbers	preservative	phylum	class	order	family	genus	specificEpithet	year	sequencing_status	sample_collected	sample_collected_by
+NHMUK	NHMUK:ecatalogue:9254304	Liquid Nitrogen							2020	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9264512	Liquid Nitrogen							2020	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9473963	80% ethanol	Nemertea						2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9528238	IMS 80% (fixed in formalin)	Porifera						2019	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9169676	Ethanol					Physella		2018	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9588947	80% ethanol							2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9588981	80% ethanol	Nemertea						2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9473963	80% ethanol	Nemertea						2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248045	80% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248046	80% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248054	80% ethanol							2020	sample_collected	DTOL	NHM
@@ -32,11 +35,9 @@ NHMUK	NHMUK:ecatalogue:9528554	80% ethanol					Arion		2021	sample_collected	DTOL
 NHMUK	NHMUK:ecatalogue:9528257	IMS 80% (fixed in formalin)	Porifera						2019	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9528258	IMS 80% (fixed in formalin)	Porifera						2019	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9528255	IMS 80% (fixed in formalin)	Porifera						2019	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9528238	IMS 80% (fixed in formalin)	Porifera						2019	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9528223	IMS 80% (fixed in formalin)	Porifera						2019	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9264507	Liquid Nitrogen							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9264509	Liquid Nitrogen							2020	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9264512	Liquid Nitrogen							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9169952	Ethanol	Nematomorpha						2018	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248446	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248158	100% ethanol							2020	sample_collected	DTOL	NHM
@@ -60,7 +61,6 @@ NHMUK	NHMUK:ecatalogue:9248156	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248157	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248167	Liquid Nitrogen							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248444	100% ethanol							2020	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9254304	Liquid Nitrogen							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248441	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248442	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248443	100% ethanol							2020	sample_collected	DTOL	NHM
@@ -75,15 +75,35 @@ NHMUK	NHMUK:ecatalogue:9248454	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9169295	Ethanol	Platyhelminthes				Dugesia		2018	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9171011	Ethanol	Nematoda						2013	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9264563	70% ethanol							2020	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9968909	Dry frozen (-80°C)		Actinopterygii	Perciformes	Chiasmodontidae	Chiasmodon	sp	2022	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9968902	Dry frozen (-80°C)	Echinodermata	Holothuroidea	Persiculida	Molpadiodemidae	Molpadiodemas	villosus	2022	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9968875	Dry frozen (-80°C)	Echinodermata	Holothuroidea	Persiculida	Molpadiodemidae	Molpadiodemas	villosus	2022	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9968899	Dry frozen (-80°C)	Echinodermata	Holothuroidea	Persiculida	Gephyrothuriidae	Paroriza	prouhoi	2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9254406	Liquid Nitrogen	Arthropoda	Arachnida	Araneae	Linyphiidae	Megaleptyphantes		2020	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9254389	Liquid Nitrogen	Arthropoda	Arachnida	Araneae	Linyphiidae	Megaleptyphantes		2020	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9254405	Liquid Nitrogen	Arthropoda	Arachnida	Araneae	Linyphiidae	Megaleptyphantes		2020	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9254309	Liquid Nitrogen	Arthropoda	Arachnida	Araneae	Linyphiidae	Megaleptyphantes		2020	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9473939	80% ethanol	Arthropoda	Cirripedia					2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9474051	80% ethanol	Arthropoda	Cirripedia					2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9473852	Dry frozen (-80°C)	Arthropoda	Cirripedia					2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9470245	80% ethanol	Arthropoda	Myriapoda					2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9414854	70% ethanol	Arthropoda	Myriapoda					2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9422574	70% ethanol	Arthropoda	Arachnida	Araneae	Gnaphosidae	Trachyzelotes	spp.	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9968872	Dry frozen (-80°C)	Echinodermata	Holothuroidea	Persiculida	Gephyrothuriidae	Paroriza	prouhoi	2022	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9968891	Dry frozen (-80°C)	Arthropoda	Pycnogonida	Pantopoda	Colossendeidae	Colossendeis	c.f. cucurbita	2022	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9968878	Dry frozen (-80°C)	Annelida		Sipuncula	Golfingiidae			2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9968899	Dry frozen (-80°C)	Echinodermata	Holothuroidea	Persiculida	Gephyrothuriidae	Paroriza	prouhoi	2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9582317	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Vandeleumatidae	Psichrosoma	breuili	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9582318	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Vandeleumatidae	Psichrosoma	breuili	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9582316	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Vandeleumatidae	Psichrosoma	breuili	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9968852	Dry frozen (-80°C)	Cnidaria	Anthozoa	Pennatulacea	Pseudumbellulidae	Solumbellula	monocephalus	2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9582344	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Haplobainosomatidae	Turdulisoma	turdulorum	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9582343	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Haplobainosomatidae	Turdulisoma	turdulorum	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9777154	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Haplobainosomatidae	Turdulisoma	turdulorum	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9777155	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Haplobainosomatidae	Turdulisoma	turdulorum	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9528671	80% ethanol	Arthropoda	Diplopoda		Julidae	Ommatoiulus	moreleti	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9528672	80% ethanol	Arthropoda	Diplopoda		Julidae	Ommatoiulus	moreleti	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9968891	Dry frozen (-80°C)	Arthropoda	Pycnogonida	Pantopoda	Colossendeidae	Colossendeis	c.f. cucurbita	2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9968875	Dry frozen (-80°C)	Echinodermata	Holothuroidea	Persiculida	Molpadiodemidae	Molpadiodemas	villosus	2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9968902	Dry frozen (-80°C)	Echinodermata	Holothuroidea	Persiculida	Molpadiodemidae	Molpadiodemas	villosus	2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9968878	Dry frozen (-80°C)	Annelida		Sipuncula	Golfingiidae			2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9414866	Dry frozen (-80°C)	Arthropoda	Arachnida	Araneae	Philodromidae	Philodromus	spp.	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9968848	Dry frozen (-80°C)	Mollusca	Cephalopoda	Bathyteuthida	Bathyteuthidae	Bathyteuthis	sp.	2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9968909	Dry frozen (-80°C)		Actinopterygii	Perciformes	Chiasmodontidae	Chiasmodon	sp	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9865897	80% ethanol	Cnidaria	Anthozoa	Alcyonacea	Alcyoniidae	Alcyonium	glomeratum	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9865894	80% ethanol	Cnidaria	Hydrozoa	Leptothecata	Schizotrichidae	Schizotricha	frutescens	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9865857	80% ethanol					Acanthochiton	crinitus	2022	sample_collected	DTOL	NHM
@@ -93,33 +113,13 @@ NHMUK	NHMUK:ecatalogue:9614426	80% ethanol		Mollusca			Nucula	hanleyi	2020	sampl
 NHMUK	NHMUK:ecatalogue:9809655	Dry frozen (-80°C)	Chordata	Aves		Anatidae	Anser	anser?	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9802777	Dry - pinned	Arthropoda	Insecta	Lepidoptera	Pyralidae	Euzopherodes	vapidella	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9802773	Dry - pinned		Insecta	Lepidoptera	Gelechiidae	Monochroa	palustrella	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9254309	Liquid Nitrogen	Arthropoda	Arachnida	Araneae	Linyphiidae	Megaleptyphantes		2020	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9254389	Liquid Nitrogen	Arthropoda	Arachnida	Araneae	Linyphiidae	Megaleptyphantes		2020	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9254405	Liquid Nitrogen	Arthropoda	Arachnida	Araneae	Linyphiidae	Megaleptyphantes		2020	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9254406	Liquid Nitrogen	Arthropoda	Arachnida	Araneae	Linyphiidae	Megaleptyphantes		2020	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9474051	80% ethanol	Arthropoda	Cirripedia					2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9473939	80% ethanol	Arthropoda	Cirripedia					2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9473852	Dry frozen (-80°C)	Arthropoda	Cirripedia					2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9777156	80% ethanol	Arthropoda	Arachnida	Pseudoscorpiones	Neobisidae	Roncus	lubricus	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9777154	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Haplobainosomatidae	Turdulisoma	turdulorum	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9777155	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Haplobainosomatidae	Turdulisoma	turdulorum	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9582343	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Haplobainosomatidae	Turdulisoma	turdulorum	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9582344	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Haplobainosomatidae	Turdulisoma	turdulorum	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9777141	Dry frozen (-80°C)		Insecta	Lepidoptera	Noctuidae	Orthosia	munda	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9588962	80% ethanol				Semelidae	Abra	sp	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9588970	80% ethanol				Semelidae	Abra	sp	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9588971	80% ethanol				Semelidae	Abra	sp	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9346760	Dry frozen (-80°C)		Insecta	Lepidoptera	Hepialidae	Hepialus	lupulinus	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9414866	Dry frozen (-80°C)	Arthropoda	Arachnida	Araneae	Philodromidae	Philodromus	spp.	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9614238	100% ethanol	Bryozoa	Gymnolaemata	Cheilostomata	Candidae	Cradoscrupocellaria	ellisi	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9414854	70% ethanol	Arthropoda	Myriapoda					2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9470245	80% ethanol	Arthropoda	Myriapoda					2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9582316	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Vandeleumatidae	Psichrosoma	breuili	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9582317	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Vandeleumatidae	Psichrosoma	breuili	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9582318	80% ethanol	Arthropoda	Diplopoda	Chordeumatida	Vandeleumatidae	Psichrosoma	breuili	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9528671	80% ethanol	Arthropoda	Diplopoda		Julidae	Ommatoiulus	moreleti	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9528672	80% ethanol	Arthropoda	Diplopoda		Julidae	Ommatoiulus	moreleti	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9422574	70% ethanol	Arthropoda	Arachnida	Araneae	Gnaphosidae	Trachyzelotes	spp.	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9582430	Dry frozen (-80°C)	Arthropoda	Insecta	Hemiptera	Cicadellidae	Viridicerus	ustulatus	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9431737	Dry frozen (-80°C)	Arthropoda	Insecta	Hemiptera	Cicadellidae	Penestragania	apicalis	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9502227	80% ethanol	Platyhelminthes	Trematoda	Plagiorchiida	Bucephalidae	Rhipidocotyle	minima	1995	sample_collected	DTOL	NHM
