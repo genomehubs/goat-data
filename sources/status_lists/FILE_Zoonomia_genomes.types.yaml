@@ -3,8 +3,10 @@ file:
   header: true
   comment: "#"
   name: ZOONOMIA_expanded.tsv
-  source: Elinor Karlsson, Broad Institute
+  source: Declared Status List - Zoonomia
   source_date: 2020-11-11
+  source_description: Complete genomes in the Zoonomia Consortium Supplemental table 1 from Zoonomia publication on Nature 587, 240 - 245 (2020), Sourced in live google spreadsheet - final Supplemental tables
+  source_contact: Elinor Karlsson, Broad Institute
   source_url: https://www.nature.com/articles/s41586-020-2876-6
 attributes:
   long_list:

@@ -3,8 +3,10 @@ file:
   header: true
   comment: "#"
   name: EUROFISH_expanded.tsv
-  source: Gene Myers, mpi-cbg.de
+  source: Declared Status Lists - EUROFISH
   source_date: 2022-04-12
+  source_description:  Declared Status List - EUROFISH, live spreadsheet - eurofish_all.tsv
+  source_contact: Gene Myers, mpi-cbg.de
 attributes:
   long_list:
     header: long_list

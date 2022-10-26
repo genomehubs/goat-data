@@ -3,8 +3,10 @@ file:
   header: true
   comment: "#"
   name: sts.tsv
-  source: DTOL STS
+  source: Declared Status Lists - DTOL STS
   source_date: 2022-06-27
+  source_description: Declared Status Lists - DTOL Samples Tracking System
+  #source_contact: https://sts.tol.sanger.ac.uk
   source_url: https://sts.tol.sanger.ac.uk/api/v1/swagger
 attributes:
   family_representative:

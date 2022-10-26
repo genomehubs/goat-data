@@ -3,8 +3,10 @@ file:
   header: true
   comment: "#"
   name: EIN_expanded.tsv
-  source: ThankGod Ebenezer, European Bioinformatics Institute (EMBL-EBI), Hinxton, UK
+  source: Declared Target List - EIN
   source_date: 2022-06-22
+  source_description: Declared Target List - Euglena International Network - live spreadsheet - Euglenoids species sequencing ranking list
+  source_contact: ThankGod Ebenezer, European Bioinformatics Institute (EMBL-EBI), Hinxton, UK
 attributes:
   long_list:
     header: long_list
