@@ -3,8 +3,10 @@ file:
   header: true
   comment: "#"
   name: erga_expanded.tsv
-  source: ERGA Pilot Project Tracker Spreadsheet
+  source:  Declared Status Lists - ERGA Pilot
   source_date: 2022-06-22
+  source_description: Declared Status Lists - ERGA Pilot, live Spreadsheet - Pilot Project Tracker  
+  #source_contact:
 attributes:
   long_list:
     header: long_list

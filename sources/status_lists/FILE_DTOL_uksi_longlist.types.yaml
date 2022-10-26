@@ -3,8 +3,10 @@ file:
   header: true
   comment: "#"
   name: DTOL_uksi_longlist.csv
-  source: UKSI_2021-12-21
+  source: Declared Target List - DTOL UKSI
   source_date: 2021-12-21
+  source_description: United Kingdom Species Inventory - Download from  2021-12-21
+  source_contact: https://nbnatlas.org/contact-us/
   source_url: https://registry.nbnatlas.org/UKSI/UKSI_DwCA.zip
 attributes:
   long_list:

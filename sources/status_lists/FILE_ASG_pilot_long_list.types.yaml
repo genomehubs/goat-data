@@ -3,8 +3,10 @@ file:
   header: true
   comment: "#"
   name: ASG_pilot_long_list.tsv
-  source: Victoria McKenna, ASG
-  source_description: Victoria McKenna, Aquatic Symbiosis Genomics, Tree of Life, Wellcome Sanger Institute
+  source: Declared target list - ASG
+  source_description: ASG Species List for Partners live spreadsheet, Aquatic Symbiosis Genomics, Wellcome Sanger Institute
+  source_date: 2021-10-29
+  source_contact: Victoria McKenna, ASG
 attributes:
   long_list:
     header: long_list

@@ -3,9 +3,10 @@ file:
   header: true
   comment: "#"
   name: GIGA_expanded.tsv
-  source: Jeff Robinson, UMBC
-  source_description: Global Invertebrate Genomics Alliance (GIGA), List of Phyla 
+  source: Declared Status List - GIGA
+  source_description:  Declared Status List - Global Invertebrate Genomics Alliance (GIGA), Static file - GIGA-phylumlist_withClass
   source_date: 2020-06-21
+  source_contact: Jeff Robinson, UMBC
 attributes:
   long_list:
     header: long_list

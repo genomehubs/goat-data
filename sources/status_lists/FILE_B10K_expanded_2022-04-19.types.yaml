@@ -3,8 +3,10 @@ file:
   header: true
   comment: "#"
   name: B10K_expanded_2022-04-19.tsv
-  source: B10K Spreadsheet
+  source: Declared Status List - B10K
   source_date: 2021-10-26
+  source_description: B10K static spreadsheet - B10K Samples
+  #source_contact: 
 attributes:
   long_list:
     header: long_list
