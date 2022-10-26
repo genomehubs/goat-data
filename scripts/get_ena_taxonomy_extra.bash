@@ -2,7 +2,7 @@
 
 # get all taxids available on ftp taxonomy download
 
-cut -f1 /tmp/new_taxdump/nodes.dmp > ftp-taxonomy.taxids
+cut -f1 /tmp/new_taxdump/ncbi/nodes.dmp > ftp-taxonomy.taxids
 
 if [ $(stat -c %s ftp-taxonomy.taxids) -lt 10000000 ]; then exit 0; fi
 

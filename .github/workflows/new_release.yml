@@ -194,10 +194,8 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/production-'$RELEASE'" } }' || exit 0
 
-      - name: Clean taxdump folder and delete indices and snapshots for that release, except dev/analysis_file snapshot
+      - name: Delete indices and snapshots for that release, except dev/analysis_file snapshot
         run: |
-          mkdir -p resources/taxdump
-          rm -rf resources/taxdump/*
           curl -s -X DELETE "es1:9200/*"
           curl -s -X DELETE "es1:9200/_snapshot/dev/20*"
       - name: Restore and rename analysis_file snapshot to current RELEASE indices
