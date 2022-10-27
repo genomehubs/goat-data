@@ -154,7 +154,7 @@ taxon_id	input	rank
 4039	Daucus carota	species
 82086	Eryngium campestre	species
 455077	Eryngium maritimum	species
-2849586	Anethum foeniculum	species
+48038	Foeniculum vulgare	species
 99496	Helosciadium inundatum	species
 99497	Helosciadium nodiflorum	species
 254039	Helosciadium repens	species
@@ -323,7 +323,7 @@ taxon_id	input	rank
 128002	Tanacetum vulgare	species
 152001	Tephroseris palustris	species
 41653	Tragopogon pratensis	species
-#daTriInod	Tripleurospermum inodorum	species
+99108	Tripleurospermum inodorum	species
 669858	Tripleurospermum maritimum	species
 74787	Tripolium pannonicum	species
 118778	Tussilago farfara	species
@@ -479,6 +479,7 @@ taxon_id	input	rank
 1155358	Sagina nodosa	species
 230724	Sagina procumbens	species
 669803	Sagina saginoides	species
+1205715	Colobanthus subulatus	species
 3572	Saponaria officinalis	species
 230712	Scleranthus annuus	species
 39862	Silene acaulis	species
@@ -728,6 +729,7 @@ taxon_id	input	rank
 1155344	Melilotus altissimus	species
 3882	Onobrychis viciifolia	species
 798030	Ononis reclinata	species
+264192	Ononis repens	species
 58890	Ononis spinosa	species
 181291	Ornithopus perpusillus	species
 237897	Ornithopus pinnatus	species
@@ -1342,7 +1344,7 @@ taxon_id	input	rank
 46996	Helleborus foetidus	species
 171903	Helleborus viridis	species
 59993	Myosurus minimus	species
-445234	Anemone pulsatilla	species
+445234	Pulsatilla vulgaris	species
 3447	Ranunculus acris	species
 568530	Ranunculus aquatilis	species
 286858	Ranunculus arvensis	species
@@ -1447,7 +1449,7 @@ taxon_id	input	rank
 57947	Sibbaldia procumbens	species
 2695390	Karpatiosorbus admonitor	species
 746469	Hedlundia anglica	species
-2906878	Aria edulis	species
+186520	Sorbus aria	species
 1572684	Hedlundia arranensis	species
 #drSorArvo	Sorbus arvonicola	species
 36599	Sorbus aucuparia	species
@@ -1475,14 +1477,14 @@ taxon_id	input	rank
 1572687	Hedlundia pseudofennica	species
 1844645	Hedlundia pseudomeinichii	species
 #drSorRich	Sorbus richii	species
-2910179	Aria rupicola	species
+476181	Sorbus rupicola	species
 1844646	Aria rupicoloides	species
 1155375	Aria saxicola	species
 #drSorSpec	Sorbus spectans	species
 1155376	Aria stenophylla	species
 1155377	Aria stirtoniana	species
 1572688	Karpatiosorbus subcuneata	species
-2914000	Torminalis glaberrima	species
+106574	Sorbus torminalis	species
 1572689	Aria vexans	species
 746475	Aria whiteana	species
 746476	Aria wilmottiana	species
@@ -1559,7 +1561,7 @@ taxon_id	input	rank
 90364	Verbascum nigrum	species
 90366	Verbascum pulverulentum	species
 39388	Verbascum thapsus	species
-2768810	Ailanthus altissimus	species
+23810	Ailanthus altissima	species
 33113	Atropa belladonna	species
 4079	Hyoscyamus niger	species
 45834	Solanum dulcamara	species
@@ -1582,11 +1584,9 @@ taxon_id	input	rank
 473050	Urtica urens	species
 183948	Valeriana dioica	species
 19953	Valeriana officinalis	species
-368322	Valerianella carinata	species
 300936	Valerianella dentata	species
 245824	Valerianella eriocarpa	species
 59166	Valerianella locusta	species
-768053	Valerianella rimosa	species
 79772	Verbena officinalis	species
 105913	Chaenorhinum minus	species
 4164	Digitalis purpurea	species

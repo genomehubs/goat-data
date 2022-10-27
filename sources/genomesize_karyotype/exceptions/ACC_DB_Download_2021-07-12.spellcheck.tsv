@@ -7,7 +7,7 @@ taxon_id	input	rank	suggested
 	Philodromus roseus	species	ophiodromus roseus
 336685	Tibellus ablongus	species	Tibellus oblongus
 2527844	Sancassania berlesi	species	Sancassania berlesei
-1827023	Argas zumpti	species	Argas brumpti
+1827023	Argas zumpti	species	Ogadenus brumpti
 34620	Dermacentor anderson	species	Dermacentor andersoni
 224535	Ornithonysus	genus	Ornithonyssus
 224536	Ornithonysus sylviarum	species	Ornithonyssus sylviarum
@@ -187,6 +187,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
+2493403	Bembidion thetys	species	Bembidion tethys
 	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
@@ -800,7 +801,7 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 2611628	Gyndrobrotica variabilis	species	Gynandrobrotica variabilis
 1425620	Hypocassida subferruginea_	species	Hypocassida subferruginea
 1412126	Lema coromandelia	species	Lema praeusta
-	Leptinotarsa undecimlineata	species	leptinotarsa decimlineata	leptinotarsa undecemlineata
+	Leptinotarsa undecimlineata	species	leptinotarsa undecemlineata	leptinotarsa decimlineata
 88632	Lieidea aenea	species	Lecidea fuscoatra
 1845050	Longitarsus pellucides	species	Longitarsus pellucidus
 icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
@@ -915,7 +916,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2729884	Polydrusus viridicintus	species	Polydrusus viridicinctus
 2340076	Rhynchaenus niger	species	Tachyerges niger
 1206597	Ryssematus lineaticollis	species	Rhyssomatus lineaticollis
-	Ruteria	genus	rogeria	eutelia
+	Ruteria	genus	rogeria	rotaria
 1588459	Simo variegates	species	Simo variegatus
 202214	Strophosomus capitatus	species	Strophosoma capitatum
 527267	Sympiezomias cribicollis	species	Sympiezomias cribricollis
@@ -1019,6 +1020,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 1457043	Speonomus pyreeus	species	Speonomus pyreneus
 1457043	Speonomus pyrenaeus	species	Speonomus pyreneus
 	Troglocharinus ferreri_pallaresi	species	troglocharinus ferreri pallaresi
+273953	Cerchus ligrius	species	Ceruchus lignarius
 617909	Lamprima adolphie	species	Lamprima adolphinae
 231745	Lucanus maculifermoratus	species	Lucanus maculifemoratus
 1588445	Lytta picta	species	Scydmaenus tarsatus
@@ -1062,7 +1064,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
 	Homaloplia	species	homalomyia	homalopsis	homalopoma
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
-1207216	Mecynorrhi torquata	species	Mecynorrhina torquata
+2592933	Mecynorrhi torquata	species	Mecynorhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
 1541081	Onthophagus andalusicus_italicus	species	Onthophagus andalusicus
 206854	Onthophagus gazelle	species	Digitonthophagus gazella
@@ -1124,7 +1126,6 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 538617	Trachypachus slevini_	species	Trachypachus slevini
 1569671	Lophoceters pusillus	species	Lophocateres pusillus
 2966204	Cerodontha ireos	species	Cerodontha iraeos
-1333887	Phorbia brassica	species	Euphorbia alpina
 502513	Villa gayi	species	Viola grayi
 	Villa sinuosa	species	zilla spinosa	vella spinosa
 2726335	Villa velutina	species	Viola velutina
@@ -1208,7 +1209,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 987935	Sphrageidus similis	species	Euproctis similis
 211498	Plusia intermixta	species	Clusia intertexta
 	Aglais	genus	aglaia	agelas
-	Aphantopus	genus	aphanopus	aphaniops
 405033	Brenthis heate	species	Brenthis hecate
 2798323	Chazara bischoffi	species	Chazara bischoffii
 447839	Erebia nerine	species	Erebia neriene
@@ -1271,7 +1271,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 50526	Xenos pecki	species	Xenos peckii
 45055	Taeniothrips iconsequene	species	Taeniothrips inconsequens
 1875416	Halesus tesselatus	species	Halesus tessellatus
-6759	Carcinus menas	species	Carcinus maenas
 1124764	Macrocheira kampferi	species	Macrocheira kaempferi
 8090	Oryzias ltipes	species	Oryzias latipes
 930369	Roeboides microlepis	species	Phenagoniates macrolepis

@@ -267,7 +267,7 @@ taxon_id	input	rank
 352471	Segonzacia mesatlantica	species
 6799	Hepatus epheliticus	species
 306142	Cambarus bartonii	species
-306176	Orconectes immunis	species
+306176	Faxonius immunis	species
 6728	Procambarus clarkii	species
 39395	Cancer borealis	species
 6755	Cancer pagurus	species
@@ -1298,7 +1298,6 @@ taxon_id	input	rank
 1291227	Franklinothrips orizabensis	species
 161014	Thrips tabaci	species
 89055	Thermobia domestica	species
-270885	Zorotypus hubbardi	species
 1138474	Discradisca stella	species
 34515	Glottidia pyramidata	species
 7574	Lingula anatina	species
@@ -1798,7 +1797,6 @@ taxon_id	input	rank
 1053555	Astyanax lacustris	species
 223369	Psalidodon fasciatus	species
 126314	Brycon microlepis	species
-681890	Bryconamericus stramineus	species
 930236	Bryconops affinis	species
 42552	Chalceus macrolepidotus	species
 303993	Characidium fasciatum	species
@@ -1950,7 +1948,6 @@ taxon_id	input	rank
 374419	Megaerops kusnotoi	species
 77233	Megaerops niphanae	species
 58073	Megaloglossus woermanni	species
-77235	Micropteropus pusillus	species
 498220	Nanonycteris veldkampii	species
 326151	Penthetor lucasi	species
 328804	Pteropus conspicillatus	species
@@ -2132,7 +2129,6 @@ taxon_id	input	rank
 143401	Cobitis sinensis	species
 149980	Cobitis striata	species
 457520	Koreocobitis rotundicaudata	species
-1772035	Parabotia curta	species
 75329	Misgurnus anguillicaudatus	species
 7984	Misgurnus fossilis	species
 93600	Misgurnus mizolepis	species
@@ -3040,7 +3036,6 @@ taxon_id	input	rank
 50794	Cymatogaster aggregata	species
 100190	Embiotoca jacksoni	species
 100200	Phanerodon furcatus	species
-50905	Rhacochilus vacca	species
 100204	Zalembius rosaceus	species
 490875	Erythrocles schlegelii	species
 443804	Plagiogeneion macrolepis	species
@@ -4825,7 +4820,7 @@ taxon_id	input	rank
 37469	Glycera americana	species
 529209	Glycera lapidum	species
 359165	Hesiolyra bergi	species
-115846	Ophiodromus flexuosus	species
+115846	Oxydromus flexuosus	species
 492768	Nephtys incisa	species
 2815386	Nephtys sp.	species
 1859080	Laeonereis culveri	species
@@ -5026,7 +5021,6 @@ taxon_id	input	rank
 98998	Pimelia sparsa sparsa	subspecies
 37546	Glossina morsitans morsitans	subspecies
 66268	Glossina palpalis palpalis	subspecies
-1848118	Campsomeris plumipes fossulana	subspecies
 1677678	Reticulitermes speratus kyushuensis	subspecies
 64531	Heliconius erato petiverana	subspecies
 55092	Bacillus atticus atticus	subspecies
@@ -5174,11 +5168,10 @@ taxon_id	input	rank
 10092	Mus musculus domesticus	subspecies
 57486	Mus musculus molossinus	subspecies
 39442	Mus musculus musculus	subspecies
-189654	Phyllotis xanthopygus rupestris	subspecies
-189655	Phyllotis xanthopygus vaccarum	subspecies
+189654	Phyllotis rupestris	species
 327503	Phyllotis xanthopygus xanthopygus	subspecies
 183515	Octodon bridgesii	species
-30640	Neosciurus carolinensis	species
+30640	Sciurus carolinensis	species
 108097	Coregonus autumnalis autumnalis	subspecies
 857568	Oncorhynchus mykiss aguabonita	subspecies
 453925	Oncorhynchus clarkii bouvieri	subspecies
@@ -5218,7 +5211,7 @@ taxon_id	input	rank
 37770	Haliotis diversicolor aquatilis	subspecies
 80345	Tegula brunnea	species
 80350	Tegula funebralis	species
-140470	Owenia rubra	species
+411679	Hydra carnea	species
 146274	Ocenebra erinaceus	species
 707973	Callianax biplicata	species
 182094	Elimia catenaria dislocata	subspecies
@@ -5230,6 +5223,7 @@ taxon_id	input	rank
 282290	Rexithaerus secta	species
 189915	Pisaster giganteus	species
 2978784	Araneus sp.	species
+2950137	Pardosa sp.	species
 2975155	Philodromus sp.	species
 2978883	Thanatus sp.	species
 2978888	Uloborus sp.	species
@@ -5247,7 +5241,10 @@ taxon_id	input	rank
 703271	Rhyzobius lophanthae	species
 2987343	Trogoderma sp.	species
 2985582	Megapenthes insignis	species
+2939143	Cricotopus sp.	species
+2938678	Aphis sp.	species
 1082164	Aspidophorodon longicauda	species
+2939227	Uroleucon sp.	species
 69819	Habrobracon hebetor	species
 2952606	Praon sp.	species
 2079703	Lymeon bicinctus	species

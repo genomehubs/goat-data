@@ -61,7 +61,6 @@ taxon_id	input	rank	suggested
 3711	Brassica campestris	species	Brassica rapa
 93385	Brassica campestris subsp. chinensis	subspecies	Brassica rapa subsp. chinensis
 3728	Brassica hirta	species	Sinapis alba
-1176441	Briza humilis	species	Brizochloa humilis
 1415677	Callisia guerrerensis	species	Callisia soconuscensis
 136222	Curcuma zanthorrhiza	species	Curcuma xanthorrhiza
 45843	Cyphomandra betacea	species	Solanum betaceum
@@ -90,7 +89,7 @@ taxon_id	input	rank	suggested
 99038	Chrysanthemum spatiosum	species	Glebionis coronaria
 3654	Citrullus vulgaris	species	Citrullus lanatus
 1273688	Clarkia deflexa	species	Clarkia bottae
-4142	Coleus blumei	species	Plectranthus scutellarioides
+4142	Coleus blumei	species	Coleus scutellarioides
 41554	Coreopsis bicolor	species	Coreopsis tinctoria
 67920	Correa virens	species	Correa reflexa
 690322	Cotoneaster melanocarpa	species	Cotoneaster melanocarpus
@@ -109,7 +108,6 @@ taxon_id	input	rank	suggested
 296036	Emblica officinalis	species	Phyllanthus emblica
 81759	Endymion hispanicus	species	Hyacinthoides hispanica
 415159	Erechtites valerianaefolia	species	Erechtites valerianifolius
-2843217	Eriobotrya japonica	species	Rhaphiolepis bibas
 180536	Eruca sativa	species	Eruca vesicaria
 2099548	Fagara zanthoxyloides	species	Zanthoxylum zanthoxyloides
 37724	Festuca mairei	species	Lolium mairei
@@ -302,7 +300,6 @@ taxon_id	input	rank	suggested
 281397	Pennisetum mollissimum	species	Cenchrus violaceus
 281128	Pennisetum mezianum	species	Cenchrus mezianus
 281130	Pennisetum hohenackeri	species	Cenchrus hohenackeri
-79853	Pennisetum alopecuroides	species	Cenchrus compressus
 48735	Pennisetum setaceum	species	Cenchrus setaceus
 281131	Pennisetum orientale	species	Cenchrus orientalis
 29694	Pennisetum villosum	species	Cenchrus longisetus
@@ -493,7 +490,6 @@ taxon_id	input	rank	suggested
 348029	Titanoderma pustulatum	species	Lithophyllum pustulatum
 88410	Kappaphycus striatum	species	Kappaphycus striatus
 2572395	Gracilaria caudata	species	Crassa caudata
-2510791	Gracilaria firma	species	Crassa firma
 172978	Gracilaria bailinae	species	Gracilariopsis heteroclada
 338881	Hydropuntia dentata	species	Hydropuntia rangiferina
 448389	Hydropuntia fastigiata	species	Hydropuntia edulis
@@ -522,7 +518,6 @@ taxon_id	input	rank	suggested
 39554	Polianthes geminiflora	species	Agave coetocapnia
 82206	Polianthes tuberosa	species	Agave amica
 470566	Pulsatilla alpina	species	Anemone alpina
-445234	Pulsatilla vulgaris	species	Anemone pulsatilla
 168060	Tradescantia navicularis	species	Callisia navicularis
 49730	Poellnitzia rubriflora	species	Astroloba rubriflora
 38787	Betula alba	species	Betula pubescens
@@ -612,6 +607,7 @@ taxon_id	input	rank	suggested
 85679	Elytrigia intermedia	species	Thinopyrum intermedium
 4567	Triticum turgidum subsp. durum (Desf.) Husn.	subspecies	Triticum turgidum subsp. durum
 130460	Aegilops recta	species	Aegilops neglecta
+669775	Phleum commutatum	species	Phleum alpinum
 2583856	Polygala vayredae	species	Polygaloides vayredae
 2774162	Argyranthemum vincentii	species	Argyranthemum vincentii (nom. nud.)
 111162	Greenovia aizoon	species	Aeonium aizoon
@@ -665,7 +661,6 @@ taxon_id	input	rank	suggested
 209806	Barbilophozia floerkei	species	Neoorthocaulis floerkei
 40340	Pellia borealis	species	Pellia epiphylla
 304445	Pellia endiviifolia	species	Apopellia endiviifolia
-2729092	Preissia quadrata	species	Marchantia quadrata
 248352	Tritomaria quinquedentata	species	Trilophozia quinquedentata
 113273	Brachythecium velutinum	species	Brachytheciastrum velutinum
 3218	Physcomitrella patens	species	Physcomitrium patens
@@ -732,9 +727,7 @@ taxon_id	input	rank	suggested
 1209836	Teucrium arduini	species	Teucrium arduinoi
 82011	Chouardia litardierei	species	Scilla litardierei
 59340	Orchis morio	species	Anacamptis morio
-2906878	Sorbus aria	species	Aria edulis
 691236	Sorbus intermedia	species	Scandosorbus intermedia
-2914000	Sorbus torminalis	species	Torminalis glaberrima
 80863	Populus canescens	species	Populus tremula x Populus alba
 254122	Bromus valdivianus	species	Bromus cebadilla
 1755039	Bromus runssoroensis	species	Bromus leptoclados
@@ -780,7 +773,7 @@ taxon_id	input	rank	suggested
 93608	Podophyllum emodi	species	Sinopodophyllum hexandrum
 39535	Polygonatum latifolium	species	Polygonatum biflorum
 55634	Tamus communis	species	Dioscorea communis
-82069	Urginea hesperia	species	Drimia hesperia
+82069	Urginea hesperia	species	Squilla hesperia
 82070	Urginea maritima	species	Squilla maritima
 3617	Fagopyrum sagittatum	species	Fagopyrum esculentum
 214228	Actinostrobus pyramidalis	species	Callitris pyramidalis
@@ -796,7 +789,6 @@ taxon_id	input	rank	suggested
 698353	Acacia montana	species	Vachellia montana
 1844644	Sorbus parviloba	species	Aria parviloba
 746474	Sorbus porrigentiformis	species	Aria porrigentiformis
-2910179	Sorbus rupicola	species	Aria rupicola
 1844646	Sorbus rupicoloides	species	Aria rupicoloides
 1155375	Sorbus saxicola	species	Aria saxicola
 1155376	Sorbus stenophylla	species	Aria stenophylla
@@ -863,7 +855,6 @@ taxon_id	input	rank	suggested
 518624	Nymphaea minuta	species	Nymphaea dimorpha
 86307	Artemisia longiloba	species	Artemisia arbuscula
 64994	Cheirolophus ghomerythus	species	Cheirolophus gomerythus
-2768810	Ailanthus altissima	species	Ailanthus altissimus
 1366920	Alyssum markgrafii	species	Odontarrhena markgrafii
 260593	Calamintha officinalis	species	Clinopodium menthifolium
 33136	Chamaenerion dodonaei	species	Epilobium dodonaei
@@ -903,7 +894,6 @@ taxon_id	input	rank	suggested
 548863	Pinguicula jarmilae	species	Pinguicula chuquisacensis
 78372	Amorphophallus rivieri	species	Amorphophallus konjac
 354523	Evodia rutaecarpa	species	Tetradium ruticarpum
-2849586	Foeniculum vulgare	species	Anethum foeniculum
 161756	Isatis indigotica	species	Isatis tinctoria
 38860	Mentha rotundifolia	species	Mentha suaveolens
 116726	Sedum aizoon	species	Phedimus aizoon
@@ -965,6 +955,7 @@ taxon_id	input	rank	suggested
 204585	Gymnosphaera podophylla	species	Alsophila podophylla
 29636	Sphaeropteris lepifera	species	Cyathea lepifera
 745008	Asplenium viviparum	species	Asplenium daucifolium
+449893	Cyclosorus dentatus	species	Christella dentata
 1196204	Blechnum microphyllum	species	Austroblechnum microphyllum
 393581	Blechnum nudum	species	Lomaria nuda
 434694	Vernonanthura brasiliana	species	Vernonia brasiliana
@@ -1051,14 +1042,12 @@ taxon_id	input	rank	suggested
 629255	Centaurea triumfetti	species	Centaurea triumfettii
 702255	Filago minima	species	Logfia minima
 595332	Gnaphalium norvegicum	species	Omalotheca norvegica
-1754164	Gnaphalium sylvaticum	species	Omalotheca sylvatica
 119176	Inula britannica	species	Pentanema britannicum
 119177	Inula conyzae	species	Inula conyza
 221186	Pilosella floribunda	species	Pilosella x floribunda
 221209	Pilosella schultesii	species	Hieracium schultesii
 41526	Psephellus dealbatus	species	Centaurea dealbata
 38787	Betula carpatica	species	Betula pubescens
-203730	Buglossoides purpurocaerulea	species	Aegonychon purpurocaeruleum
 554546	Echium maculatum	species	Pontechium maculatum
 71346	Crambe tataria	species	Crambe tatarica
 208932	Draba muralis	species	Drabella muralis

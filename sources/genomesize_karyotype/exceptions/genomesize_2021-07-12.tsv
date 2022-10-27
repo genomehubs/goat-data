@@ -17,7 +17,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 709	NA	Arthropoda	Hexapoda	Insecta	Ephemeroptera	Ephemeridae	Unidentified sp.	Mayfly	0.69	NA	FCM	BR	DV	725
 1827	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Liphistiidae	Liphistius sp.	Trapdoor spider	2.8	NA	FD	HE	GD	732
 1831	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Lycosidae	Lycosa sp.	Wolf spider	3.45	NA	FD	HE	GD	732
-1834	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Lycosidae	Pardosa sp.	Thin-legged wolf spider	2.13	NA	FIA	HE	GD	176
 1837	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Lycosidae	Schizocosa sp.	Wolf spider	1.83	NA	FIA	HE	GD	176
 1855	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Salticidae	Habronattus viridepes	Jumping spider	5.54	NA	FIA	HE	GD	176
 1856	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Salticidae	Neon sp.	Jumping spider	2.52	NA	FIA	HE	GD	176
@@ -211,7 +210,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 304	NA	Arthropoda	Hexapoda	Insecta	Coleoptera	Tenebrionidae	Tentyria grossa	Darkling beetle	0.3	20	FD	S	TC	240
 317	NA	Arthropoda	Hexapoda	Insecta	Coleoptera	Tenebrionidae	Uytteenboogaartia punctipennis	Darkling beetle	0.25	20	FD	S	TC	241
 318	NA	Arthropoda	Hexapoda	Insecta	Coleoptera	Tenebrionidae	Zophosis bicarinata	Darkling beetle	0.23	20	FD	S	TC	241
-366	NA	Arthropoda	Hexapoda	Insecta	Diptera	Chironomidae	Cricotopus sp.	Midge	0.15	NA	FCM	BR	DM	808
 371	NA	Arthropoda	Hexapoda	Insecta	Diptera	Chironomidae	Hydrobaenus tsukubalatus	Midge	0.08	NA	FCM	BR	DM	808
 389	NA	Arthropoda	Hexapoda	Insecta	Diptera	Culicidae	Aedes alcasidi	Mosquito	0.97	6	FD	S	GD	410
 395	NA	Arthropoda	Hexapoda	Insecta	Diptera	Culicidae	Aedes cooki	Mosquito	0.59	6	FD	S	GD	410
@@ -247,7 +245,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 704	NA	Arthropoda	Hexapoda	Insecta	Diptera	Simuliidae	Prosimulium multidentatum	Blackfly	0.19	NA	BCA	WB	NS	471
 710	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Adelgidae	Adelges cooleyii	Aphid	0.38	22	FD	EP	V	128
 713	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Adelgidae	Pineus sp.	Aphid	0.37	NA	FD	EP	V	128
-722	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Aphis sp.	Aphid	0.67	NA	FD	EP	V	128
 724	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Chaitophorus sp.	Aphid	0.6	NA	FD	EP	V	128
 730	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Illinoia sp.	Aphid	0.29	NA	FD	EP	V	128
 731	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Macrosiphonella sp.	Aphid	0.62	NA	FD	EP	V	128
@@ -257,8 +254,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 742	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Rhopalosiphon cerasifoliae	Aphid	0.6	8	FD	EP	V	128
 743	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Rhopalosiphon padi	Aphid	0.65	8	FD	EP	V	128
 744	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Rhopalosiphon sp.	Aphid	0.73	NA	FD	EP	V	128
-749	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Uroleucon sp.	Aphid	0.68	NA	FD	EP	V	128
-750	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Uroleucon sp.	Aphid	0.74	NA	FD	EP	V	128
 764	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Pentatomidae	Brochymena cariosa	Rough stink bug	1.26	NA	FCM	BR	DM	725
 803	NA	Arthropoda	Hexapoda	Insecta	Hymenoptera	Aphelinidae	Aphelinus coreae	Aphid parasitoid wasp	0.45	NA	FCM	BR	DM	756
 805	NA	Arthropoda	Hexapoda	Insecta	Hymenoptera	Aphelinidae	Aphelinus glycinis	Aphid parasitoid wasp	0.44	NA	FCM	BR	DM	756

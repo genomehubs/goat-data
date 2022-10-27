@@ -230,7 +230,6 @@ taxon_id	input	rank
 173122	Peziza ampelina	species
 173123	Peziza ampliata	species
 90799	Peziza arvernensis	species
-40594	Peziza badia	species
 1033294	Peziza badioconfusa	species
 61495	Peziza echinospora	species
 173135	Peziza limnaea	species
@@ -239,7 +238,6 @@ taxon_id	input	rank
 #gpPezMora	Peziza moravecii	species
 1033322	Peziza moseri	species
 1033645	Peziza pseudoviolacea	species
-90805	Peziza repanda	species
 90806	Peziza varia	species
 #gpPezViol	Peziza violacea	species
 51149	Pithya cupressina	species
@@ -367,7 +365,7 @@ taxon_id	input	rank
 1243767	Hypoxylon pulicicidum	species
 2075082	Hypoxylon punctulatum	species
 110542	Hypoxylon rubiginosum	species
-110526	Kretzschmaria deusta	species
+110526	Ustulina deusta	species
 196109	Microdochium bolleyi	species
 561989	Nemania abortiva	species
 109381	Nemania serpens	species
@@ -618,7 +616,7 @@ taxon_id	input	rank
 5627	Grifola frondosa	species
 5319	Irpex lacteus	species
 5630	Laetiporus sulphureus	species
-2108230	Leiotrametes sp.	species
+2108230	Cubamyces sp.	species
 2498619	Lentinus brumalis	species
 292559	Lentinus polychrous	species
 5365	Lentinus tigrinus	species
@@ -630,7 +628,6 @@ taxon_id	input	rank
 5639	Polyporus arcularius	species
 104341	Postia placenta	species
 #gfPycCinn	Pycnoporus cinnabarinus	species
-#gfPycSang	Pycnoporus sanguineus	species
 1202976	Sparassis latifolia	species
 2696576	Taiwanofungus camphoratus	species
 158605	Trametes coccinea	species
@@ -779,7 +776,7 @@ taxon_id	input	rank
 1450529	Trichocladium antarcticum	species
 2587402	Parathielavia appendiculata	species
 2609790	Canariomyces arenarius	species
-2587410	Thermothielavioides terrestris	species
+35720	Thielavia terrestris	species
 326618	Annulohypoxylon cohaerens	species
 #gfCliGibb	Clitocybe gibba	species
 72119	Omphalotus japonicus	species
@@ -803,13 +800,14 @@ taxon_id	input	rank
 5383	Suillus spraguei	species
 37769	Cryptococcus gattii VGI	species
 89929	Naganishia vishniacii	species
-2282107	Pyrrhoderma noxium	species
-1333626	Adustoporia sinuosa	species
+418867	Phellinus noxius	species
+#gfAntSinu	Antrodia sinuosa	species
 526244	Trametes elegans	species
 483020	Lignosus rhinocerotis	species
 2822231	Phanerodontia chrysosporium	species
 98765	Hermanssonia centrifuga	species
-203908	Melampsora larici-populina	species
+2735509	Pilatotrama ljubarskyi	species
+203908	Melampsora laricis-populina	species
 65672	Serendipita indica	species
 #gkRhoMinu	Rhodotorula minuta	species
 #gfTreEnce	Tremella encephala	species
