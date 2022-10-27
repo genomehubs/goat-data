@@ -12,7 +12,6 @@ taxon_id	input	rank	suggested
 181044	Conidiobolus osmodes	species	Neoconidiobolus osmodes
 76012	Conidiobolus thromboides	species	Neoconidiobolus thromboides
 2589380	Monia patelliformis	species	Pododesmus patelliformis
-2849586	Foeniculum vulgare	species	Anethum foeniculum
 52477	Imperatoria ostruthium	species	Peucedanum ostruthium
 529820	Amastigomonas media	species	Amastigomonas sp. 6B/7c
 529821	Amastigomonas oxoniensis	species	Amastigomonas sp. IVY8c
@@ -38,7 +37,7 @@ taxon_id	input	rank	suggested
 161951	Erophila majuscula	species	Draba verna
 161951	Erophila verna	species	Draba verna
 200801	Bryum algovicum	species	Plagiobryum algovicum
-576376	Bryum apiculatum	species	Gemmabryum apiculatum
+576376	Bryum apiculatum	species	Anomobryum apiculatum
 200803	Bryum archangelicum	species	Ptychostomum archangelicum
 576377	Bryum arcticum	species	Ptychostomum arcticum
 388895	Bryum bornholmense	species	Rosulabryum bornholmense
@@ -68,6 +67,7 @@ taxon_id	input	rank	suggested
 66991	Bryum alpinum	species	Imbribryum alpinum
 67232	Bryum julaceum	species	Anomobryum julaceum
 1053389	Sagina filicaulis	species	Sagina apetala
+1205715	Sagina subulata	species	Colobanthus subulatus
 42042	Silene viscaria	species	Viscaria vulgaris
 163804	Velutarina rufo-olivacea	species	Velutarina rufoolivacea
 1527763	Cephalozia albescens	species	Fuscocephaloziopsis albescens
@@ -132,7 +132,6 @@ taxon_id	input	rank	suggested
 3910	Ervilia hirsuta	species	Vicia hirsuta
 1053407	Ervum gracile	species	Vicia parviflora
 154499	Ervum tetraspermum	species	Vicia tetrasperma
-58890	Ononis repens	species	Ononis spinosa
 40450	Piptoporus betulinus	species	Fomitopsis betulina
 33645	Fragilaria striatula	species	Grammonema striatula
 109457	Glomus coremioides	species	Sclerocystis coremioides
@@ -155,6 +154,7 @@ taxon_id	input	rank	suggested
 1358933	Hygrocybe pratensis	species	Cuphophyllus pratensis
 85337	Trichomanes speciosum	species	Vandenboschia speciosa
 58853	Hypocrea schweinitzii	species	Trichoderma citrinoviride
+259995	Hymenula cerealis	species	[Hymenula] cerealis
 240501	Sphaeronaemella betae	species	Gabarnaudia betae
 2184172	Nematogonum aurantiacum	species	Nematogonum ferrugineum
 1578314	Trullula melanochlora	species	Hormodochis melanochlora
@@ -185,7 +185,6 @@ taxon_id	input	rank	suggested
 138070	Polyommatus bellargus	species	Lysandra bellargus
 268709	Polyommatus coridon	species	Lysandra coridon
 13840	Lycopodium annotinum	species	Spinulum annotinum
-1960652	Macropus rufogriseus	species	Notamacropus rufogriseus
 2185227	Deightoniella arundinacea	species	Utrechtiana arundinacea
 529748	Margarites striatus	species	Margarites groenlandicus
 703492	Aglaospora profusa	species	Massaria anomia
@@ -288,7 +287,6 @@ taxon_id	input	rank	suggested
 1699702	Pseudomassaria corni	species	Pseudapiospora corni
 190636	Naohidemyces vacciniorum	species	Naohidemyces vaccinii
 1577608	Pyricularia juncicola	species	Macgarvieomyces juncicola
-445234	Pulsatilla vulgaris	species	Anemone pulsatilla
 190619	Triphragmium filipendulae	species	Triphragmium ulmariae
 300236	Lycogala terrestre	species	Lycogala epidendrum
 435428	Tubulifera arachnoidea	species	Tubifera ferruginosa
@@ -300,7 +298,6 @@ taxon_id	input	rank	suggested
 137456	Poterium sanguisorba	species	Sanguisorba minor
 2695390	Sorbus admonitor	species	Karpatiosorbus admonitor
 746469	Sorbus anglica	species	Hedlundia anglica
-2906878	Sorbus aria	species	Aria edulis
 1572684	Sorbus arranensis	species	Hedlundia arranensis
 746470	Sorbus bristoliensis	species	Karpatiosorbus bristoliensis
 1155367	Sorbus cambrensis	species	Aria cambrensis
@@ -322,13 +319,11 @@ taxon_id	input	rank	suggested
 746474	Sorbus porrigentiformis	species	Aria porrigentiformis
 1572687	Sorbus pseudofennica	species	Hedlundia pseudofennica
 1844645	Sorbus pseudomeinichii	species	Hedlundia pseudomeinichii
-2910179	Sorbus rupicola	species	Aria rupicola
 1844646	Sorbus rupicoloides	species	Aria rupicoloides
 1155375	Sorbus saxicola	species	Aria saxicola
 1155376	Sorbus stenophylla	species	Aria stenophylla
 1155377	Sorbus stirtoniana	species	Aria stirtoniana
 1572688	Sorbus subcuneata	species	Karpatiosorbus subcuneata
-2914000	Sorbus torminalis	species	Torminalis glaberrima
 1572689	Sorbus vexans	species	Aria vexans
 746475	Sorbus whiteana	species	Aria whiteana
 746476	Sorbus wilmottiana	species	Aria wilmottiana
@@ -339,10 +334,8 @@ taxon_id	input	rank	suggested
 97359	Schizophyllum amplum	species	Auriculariopsis ampla
 4896	Schizosaccharomyces malidevorans	species	Schizosaccharomyces pombe
 286617	Zygophiala jamaicensis	species	Schizothyrium pomi
-30640	Sciurus carolinensis	species	Neosciurus carolinensis
 262103	Ciboria batschiana	species	Sclerotinia pseudotuberosa
 414934	Silpha atrata	species	Phosphuga atrata
-2768810	Ailanthus altissima	species	Ailanthus altissimus
 40467	Sparassis simplex	species	Sparassis spathulata
 5537	Rhodotorula rubra	species	Rhodotorula mucilaginosa
 93984	Sporormiella minima	species	Preussia minima
@@ -355,12 +348,10 @@ taxon_id	input	rank	suggested
 2005601	Variospora flavescens	species	Klauderuiella flavescens
 929263	Tetraploa scheueri	species	Tetraplosphaeria tetraploa
 392537	Togninia vibratilis	species	Phaeoacremonium vibratile
-1138471	Boreochiton ruber	species	Tonicella rubra
 82515	Trichosporon dulcitum	species	Apiotrichum dulcitum
 82516	Trichosporon gracile	species	Apiotrichum gracile
 82526	Trichosporon sporotrichoides	species	Apiotrichum sporotrichoides
 2897369	Tubeufia paludosa	species	Parahelicomyces paludosus
-2200814	Troposporella monospora	species	Slimacomyces monosporus
 190648	Tranzschelia anemones	species	Tranzschelia fusca
 349358	Ustilago hypodytes	species	Tranzscheliella hypodytes
 257879	Lasiurus cinereus	species	Aeorestes cinereus

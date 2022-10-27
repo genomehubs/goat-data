@@ -92,13 +92,14 @@ taxon_id	input	rank	suggested
 398331	Stagonospora vexatula	species	Setoseptoria arundinacea
 1540147	Teretispora	genus	Tortispora
 	Acladium fuscum	species	aplidium fuscum	acridium fulvum
+	Agaricus adnatus	species	agaricus undatus
 	Agaricus carnosus	species	agaricus capnosus	agaricus cariosus
 	Agaricus lutosus	species	agaricus fumosus	agaricus luteolus
 	Agaricus nitens	species	agaricus nutans
 	Agaricus rigidus	species	agaricus lividus
 	Agaricus stipitis	species	agaricus stipatus
 36659	Agaricus violaceus	species	Volvariella volvacea
-1170499	Athelia scutellaris	species	Athalia scutellariae
+1170499	Athelia scutellaris	species	Dentathalia scutellariae
 85971	Boletus erubescens	species	Gyrodon lividus
 1384857	Boletus rubiginosus	species	Dolerus uliginosus
 	Boletus rugosus	species	boletus ramosus	dolerus fumosus
@@ -131,6 +132,7 @@ taxon_id	input	rank	suggested
 1245897	Cortinarius succineus	species	Cortinarius coccineus
 2732395	Cortinarius violaceovelatus	species	Cortinarius violaceovolvatus
 1987539	Crepidotus tubidulus	species	Crepidotus rufidulus
+941912	Cyphella fulva	species	Cymbella fulva
 1754158	Eccilia pusilla	species	Lucilia pusilla
 2487837	Entoloma corvinum	species	Inocephalus cervinus
 1473262	Entoloma griseoluridum	species	Entoloma indutoides
@@ -152,6 +154,7 @@ taxon_id	input	rank	suggested
 599325	Merismodes ochracea	species	Melissodes ochraea
 1117156	Moniliella acetoabutans	species	Moniliella acetoabutens
 91739	Mycena agrestis	species	Aricia agestis
+2569845	Mycena chlorantha	species	Mycena chloroxantha
 2820540	Mycena farrea	species	Ahlbergia ferrea
 1924115	Mycena nucicola	species	Mycena nivicola
 68801	Odontia sulphurea	species	Dentocorticium sulphurellum
@@ -213,14 +216,12 @@ taxon_id	input	rank	suggested
 47236	Arthrobotrys fusiformis	species	Arthrobotrys musiformis
 319061	Ascobolus macrosporus	species	Thelebolus microsporus
 2074948	Dicranidion gracile	species	Dicranidion fragile
-69890	Gymnoascus reessii	species	Gymnoascus reesii
 2055220	Helvella lutescens	species	Helvella pubescens
 47222	Microstoma protractum	species	Microstoma protracta
 33183	Onygenaless	order	Onygenales
 1053256	Neottiella microspora	species	Stylonectria purtonii
 2508950	Pachyphlodes conglomeratus	species	Pachyphlodes conglomerata
 1033672	Peziza indiscreta	species	Pezizella discreta
-44140	Peziza vacini	species	Peziza vacinii
 661323	Phialophora truncata	species	Coccotylus truncatus
 	Placidiopsis custnanii	species	placidiopsis custnani	placidiopsis custanii
 	Arnium apiculatum	species	allium paniculatum	allium auriculatum
@@ -385,6 +386,7 @@ taxon_id	input	rank	suggested
 2836843	Phytobia errans	species	Phytomia errans
 498689	Phytomyza ranunculicola	species	Phytomyza ranunculivora
 498688	Phytomyza rapunculi	species	Phytomyza ranunculi
+2882705	Platypalpus divisus	species	Platypalpus vividus
 1446193	Platypalpus ecalceatus	species	Platypalpus calceatus
 2725521	Polyodaspis sulcicolis	species	Polyodaspis sulcicollis
 2882739	Procladius simplicistylis	species	Procladius simplicistylus
@@ -403,6 +405,7 @@ taxon_id	input	rank	suggested
 1155462	Tethina grisea	species	Exorista rustica
 903472	Thalassomya frauenfeldi	species	Thalassomyia frauenfeldi
 1088292	Thereva inornata	species	Theretra inornata
+377534	Thrypticus divisus	species	Argyra argyria
 1285112	Trichonta fragilis	species	Columnea tenella
 316471	Villa venusta	species	Viola sacchalinensis
 2886778	Xenopelopia falcigera	species	Telopelopia fascigera
@@ -536,6 +539,7 @@ taxon_id	input	rank	suggested
 1031551	Clathria foliacea	species	Clathrina coriacea
 150190	Clathria gradalis	species	Ramaria gracilis
 	Clathria tenuissima	species	clavaria densissima	clavaria tenuissima
+253172	Halisarca metschnikovi	species	Halisarca dujardini
 1539398	Iophon piceum	species	Ophion luteus
 1005901	Phacus striatus	species	Placus striatus
 2576624	Trachelomonas granulosa	species	Trachelomonas granulata
@@ -620,7 +624,6 @@ taxon_id	input	rank	suggested
 52889	Solidosagitta zetesios	species	Sagitta zetesios
 187721	Amphiporus bioculatus	species	Nipponnemertes bimaculata
 1616941	Callinera monensis	species	Callicera montensis
-1522039	Nephasoma minutum	species	Nopoiulus kochii
 710157	Batillipes acaudatus	species	Batillipes mirus
 1453384	Euglena elongata	species	Eugenia oblongata
 	Euglena obtusa	species	eugenia obtusa	eugenia obtusata	eugenia retusa
@@ -862,7 +865,6 @@ taxon_id	input	rank	suggested
 381601	Bagous brevis	species	Puntius brevis
 298148	Bagous lutosus	species	Bagous limosus
 	Neliocarus	genus	heliocarpus	neocarus	nesiacarus
-1342067	Orchestes iota	species	Orchestes jota
 985837	Polydrusus prasinus	species	Polydrusus piliferus
 2584144	Pseudophloeophagus aeneopiceus	species	Pseudophloeophagus aenopiceus
 1553731	Scolytus ratzeburgi	species	Scolytus ratzeburgii
@@ -951,7 +953,6 @@ taxon_id	input	rank	suggested
 2067030	Colastes affinis	species	Polistes affinis
 934988	Colastes fragilis	species	Colastes braconius
 1045592	Cotesia risilis	species	Cotesia tibialis
-	Opiognathus	genus	leiognathus	opistognathus	oplegnathus
 54539	Trichomma intermedium	species	Tricholoma intermedium
 1667496	Eriborus dorsalis	species	Dolichomitus terebrans
 2651462	Olesicampe binotata	species	Cycasis rubiginosa
@@ -963,7 +964,6 @@ taxon_id	input	rank	suggested
 2421415	Platygaster tuberata	species	Platygaster tuberosula
 2421415	Platygaster tubulosa	species	Platygaster tuberosula
 103696	Scelio vulgaris	species	Stellagama stellio
-753186	Korscheltellus fusconebulosa	species	Hepialus fusconebulosus
 2566981	Mesophleps ochracella	species	Mesophleps ochraceella
 1594274	Diasemia reticularia	species	Diasemia reticularis
 279431	Kimminsia subnebulosus	species	Wesmaelius subnebulosus
@@ -1073,7 +1073,6 @@ taxon_id	input	rank	suggested
 93828	Agaricus fuscipes	species	Gymnopus fusipes
 	Agaricus gramineus	species	agaricus stramineus
 1843309	Agaricus graveolens	species	Agaricus gratolens
-117019	Agaricus laceratus	species	Connopus acervatus
 	Agaricus lateoalbus	species	agaricus luteoalbus
 	Agaricus latus	species	agaricus elatus	agaricus laetus
 181745	Agaricus ligatus	species	Phaeomarasmius erinaceus
@@ -1100,7 +1099,7 @@ taxon_id	input	rank	suggested
 	Clavaria cupressiforme	species	clavaria cupressiformis
 160944	Clavaria tuberculata	species	Sebacina incrustans
 1165967	Cortinarius periscelis	species	Thaxterogaster peristeris
-91645	Cortinarius versicolor	species	Cortinarius variicolor
+91645	Cortinarius versicolor	species	Phlegmacium variecolor
 	Hygrocybe olivaceoniger	species	hygrocybe olivaceonigra
 377552	Hygrophorus cinereus	species	Hydrophorus praecox
 2249448	Inocybe vatricosa	species	Inocybe ventricosa

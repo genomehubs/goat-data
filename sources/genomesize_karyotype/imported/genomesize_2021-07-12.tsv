@@ -7055,6 +7055,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2421	282290	Mollusca	NA	Bivavlia	Veneroida	Tellinidae	Macoma secta	White-sand macoma	2.4	NA	BFA	S	SP	217
 2641	NA	Echinodermata	Asterozoa	Stelleroidea	Forcipulatida	Asteriidae	Pisaster giganteus capitatus	Sea star	0.58	NA	BFA	S	SP	218
 1795	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Araneidae	Araneus sp.	Angulate orbweaver	2.63	NA	FIA	HE	GD	176
+1834	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Lycosidae	Pardosa sp.	Thin-legged wolf spider	2.13	NA	FIA	HE	GD	176
 1843	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Philodromidae	Philodromus sp.	Running crab spider	1.31	NA	FIA	HE	GD	176
 1845	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Philodromidae	Thanatus sp.	Running crab spider	2.15	NA	FIA	HE	GD	176
 1903	NA	Arthropoda	Chelicerata	Arachnida	Araneae	Uloboridae	Uloborus sp.	Hackled orbweaver	2.54	NA	FIA	HE	GD	176
@@ -7076,8 +7077,12 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 176	NA	Arthropoda	Hexapoda	Insecta	Coleoptera	Coccinellidae	Lindorus lophanthae	Scale destroyer	0.57	NA	FIA	S	DM	178
 202	NA	Arthropoda	Hexapoda	Insecta	Coleoptera	Dermestidae	Trogoderma sp.	Dermestid beetle	0.27	NA	FCM	BR	DM	725
 212	NA	Arthropoda	Hexapoda	Insecta	Coleoptera	Elateridae	Megapenthes insignis	Click beetle	1.45	NA	FCM	BR	DV	725
+366	NA	Arthropoda	Hexapoda	Insecta	Diptera	Chironomidae	Cricotopus sp.	Midge	0.15	NA	FCM	BR	DM	808
 546	NA	Arthropoda	Hexapoda	Insecta	Diptera	Drosophilidae	Drosophila nigrens	Fruit fly / Pomace fly / Vinegar fly	0.23	NA	FCM	BR	DM, TF	677
+722	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Aphis sp.	Aphid	0.67	NA	FD	EP	V	128
 727	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Eoessigia longicauda	Aphid	0.18	NA	FD	EP	V	128
+749	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Uroleucon sp.	Aphid	0.68	NA	FD	EP	V	128
+750	NA	Arthropoda	Hexapoda	Insecta	Hemiptera	Aphididae	Uroleucon sp.	Aphid	0.74	NA	FD	EP	V	128
 892	NA	Arthropoda	Hexapoda	Insecta	Hymenoptera	Braconidae	Habrobracon juglandis	Parasitic wasp	0.16	NA	FD	HE, S	DM, GD, XL	417, 420
 893	NA	Arthropoda	Hexapoda	Insecta	Hymenoptera	Braconidae	Habrobracon serinopae	Parasitic wasp	0.16	NA	FD	HE, S	DM, GD, OM	420, 423
 898	NA	Arthropoda	Hexapoda	Insecta	Hymenoptera	Braconidae	Praon sp.	Wasp	0.13	NA	FIA	S	DM	705
