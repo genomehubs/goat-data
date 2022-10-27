@@ -75,8 +75,8 @@ jobs:
           cd sources/ena-taxonomy
           bash ../../scripts/get_ena_taxonomy_extra.bash
           rm -f ena-taxonomy.extra.jsonl ftp-taxonomy.taxids \
-            resulttaxon.tax_tree2759.tsv ena-taxonomy.extra.prev.jsonl \
-            ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.tsv \
+            resulttaxon.tax_tree2759.taxids ena-taxonomy.extra.prev.jsonl \
+            ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree2759.extra.curr.taxids \
             ena-taxonomy.extra.curr.jsonl
           cd ../../
       - name: Get latest tolids
