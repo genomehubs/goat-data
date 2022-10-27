@@ -107,10 +107,11 @@ jobs:
       - get_dockers
       - update_ncbi_ena_tolids
     runs-on:  [ self-hosted ]
-      # - name: Install dependencies
-      #   run: |
-      #     python3 -m pip install --upgrade pip
-      #     pip install requests pyyaml
+    steps:
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install requests pyyaml
 
       # - name: Get bash release name
       #   run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
