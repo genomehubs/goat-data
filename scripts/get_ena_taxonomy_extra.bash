@@ -7,16 +7,15 @@ cut -f1 /tmp/new_taxdump/ncbi/nodes.dmp > ftp-taxonomy.taxids
 if [ $(stat -c %s ftp-taxonomy.taxids) -lt 10000000 ]; then exit 0; fi
 
 # get ALL ena taxids from ena api (these include the ones NOT in ncbi taxdump)
-curl -s "https://www.ebi.ac.uk/ena/portal/api/search?result=taxon&query=tax_tree(2759)&limit=5000000" > resulttaxon.tax_tree2759.tsv
+curl -s "https://www.ebi.ac.uk/ena/portal/api/search?result=taxon&query=tax_tree(2759)&limit=5000000" | cut -f1 > resulttaxon.tax_tree2759.taxids
 
-if [ $(stat -c %s resulttaxon.tax_tree2759.tsv) -lt 10000000 ]; then exit 0; fi
+if [ $(stat -c %s resulttaxon.tax_tree2759.taxids) -lt 10000000 ]; then exit 0; fi
 
 # if prev extra jsonl exists, gunzip it first
 gunzip ena-taxonomy.extra.jsonl.gz
 
 # then only keep those entries which are in current resulttaxon.tax_tree2759.tsv
-tail -n+2 resulttaxon.tax_tree2759.tsv \
-| cut -f1 \
+tail -n+2 resulttaxon.tax_tree2759.taxids \
 | perl -plne 's/(\d+)/"taxId" : "$1"/' \
 | fgrep -f - ena-taxonomy.extra.jsonl \
 > ena-taxonomy.extra.prev.jsonl
@@ -26,10 +25,10 @@ perl -plne 's/.*\"taxId\" : "(\d+)\".*/$1/' ena-taxonomy.extra.prev.jsonl > ena-
 
 # remove prev ena jsonl, ftp taxonomy download IDs, and extra.prev.taxids from the ena api tsv
 cat ena-taxonomy.extra.prev.taxids ftp-taxonomy.taxids \
-| fgrep -v -w -f - resulttaxon.tax_tree2759.tsv > resulttaxon.tax_tree2759.extra.curr.tsv
+| fgrep -v -w -f - resulttaxon.tax_tree2759.taxids > resulttaxon.tax_tree2759.extra.curr.taxids
 
 # download the extra ENA jsons
-tail -n+2 resulttaxon.tax_tree2759.extra.curr.tsv | cut -f 1 \
+tail -n+2 resulttaxon.tax_tree2759.extra.curr.taxids \
 | while read -r TAXID
 do
   curl -s https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/$TAXID \
