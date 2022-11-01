@@ -10136,7 +10136,6 @@ taxon_id	input	rank
 #icCryCren	Cryptopleurum crenatum	species
 877932	Cryptopleurum subtile	species
 1971324	Paracymus aeneus	species
-#icParScut	Paracymus scutellaris	species
 346696	Anacaena bipustulata	species
 346697	Anacaena globulus	species
 878049	Laccobius minutus	species
@@ -12188,7 +12187,6 @@ taxon_id	input	rank
 #idZygHume	Zygomyia humeralis	species
 1743458	Zygomyia notata	species
 2211634	Zygomyia pictipennis	species
-#idZygVali	Zygomyia valida	species
 2890781	Zygomyia vara	species
 #idSceConc	Sceptonia concolor	species
 #idSceCost	Sceptonia costata	species
@@ -23258,7 +23256,7 @@ taxon_id	input	rank
 707240	Crepidotus calolepis	species
 222022	Phlegmacium balteatocumatile	species
 304808	Cortinarius cinnabarinus	species
-2493877	Cortinarius emollitus	species
+2493877	Thaxterogaster emollitus	species
 2075318	Psathyrella bifrons	species
 2750294	Russula sericatula	species
 2764343	Cortinarius hillieri	species
@@ -29897,7 +29895,6 @@ taxon_id	input	rank
 1907077	Zodarion rubidum	species
 #qqZodVici	Zodarion vicinum	species
 #idZygKidd	Zygomyia kiddi	species
-#idZygPseu	Zygomyia pseudohumeralis	species
 #idZygVale	Zygomyia valeriae	species
 1920336	Zygoneura calthae	species
 #idEmpImpe	Empis impennis	species
@@ -32423,7 +32420,6 @@ taxon_id	input	rank
 #htNotPeta	Notocotyloides petasatus	species
 138570	Notocotylus attenuatus	species
 #htNotDubo	Notocotylus duboisi	species
-#htNotEphe	Notocotylus ephemera	species
 #htNotGibb	Notocotylus gibbus	species
 #htNotImbr	Notocotylus imbricatus	species
 #htNotNoye	Notocotylus noyeri	species
@@ -48657,7 +48653,6 @@ taxon_id	input	rank
 304204	Venturia saliciperda	species
 44608	Verpa conica	species
 #gpVerKrom	Verpa krombholzii	species
-#gpVerAcro	Verrucaria acrotella	species
 #gpVerAran	Verrucaria aranensis	species
 #gpVerBulg	Verrucaria bulgarica	species
 644158	Verrucaria ceuthocarpa	species
@@ -51711,7 +51706,6 @@ taxon_id	input	rank
 #qmDiaBace	Diastyloides bacescoi	species
 191522	Dikerogammarus villosus	species
 168636	Eisenia andrei	species
-#qmEudNana	Eudorella nana	species
 340430	Ferrissia fragilis	species
 515657	Gonionemus vertens	species
 #qmGouCool	Gourretia coolibah	species
@@ -54757,7 +54751,6 @@ taxon_id	input	rank
 7515	Ctenocephalides felis	species
 1658354	Doratopsylla dasycnema	species
 140718	Hystrichopsylla talpae	species
-#isOrcHowa	Orchopeas howardi	species
 2886790	Tarsopsylla octodecimdentata	species
 2766684	Typhloceras poppei	species
 1646251	Amphigerontia bifasciata	species
@@ -59390,7 +59383,6 @@ taxon_id	input	rank
 #uoFelPadi	Feldmannia padinae	species
 #uoFelPara	Feldmannia paradoxa	species
 43932	Feldmannia simplex	species
-#uoHerDesm	Herponema desmarestiae	species
 #uoHerSoli	Herponema solitarium	species
 #uoHerVali	Herponema valiantei	species
 717673	Herponema velutinum	species
@@ -59709,9 +59701,7 @@ taxon_id	input	rank
 1399940	Spongomorpha arcta	species
 1241584	Ulothrix flacca	species
 #ucUloImpl	Ulothrix implexa	species
-#ucUloPalu	Ulothrix palusalsa	species
 #ucUloSpec	Ulothrix speciosa	species
-#ucUloSubf	Ulothrix subflaccida	species
 #ucUroBang	Urospora bangioides	species
 264721	Urospora neglecta	species
 138169	Urospora penicilliformis	species
@@ -70361,6 +70351,7 @@ taxon_id	input	rank
 #ucTetTria	Tetrastrum triangulare	species
 159748	Conticribra guillardii	species
 385412	Thalassiosira mediterranea	species
+#ucUloPseu	Ulothrix pseudoflacca	species
 #ucUloRadi	Ulothrix radicans	species
 98068	Uroglenopsis americana	species
 195992	Vaucheria walzii	species
@@ -71272,6 +71263,7 @@ taxon_id	input	rank
 942654	Raspailia hispida	species
 942655	Raspailia ramosa	species
 942647	Mycale rotalis	species
+2991936	Celtodoryx ciocalyptoides	species
 1336820	Myxilla fimbriata	species
 #pyDinNasu	Dinophysis nasuta	species
 644173	Tripos hexacanthus	species
