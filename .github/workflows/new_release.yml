@@ -604,7 +604,7 @@ jobs:
           -e GH_NODE='http://es1:9200' \
           -e GH_RELEASE=$RELEASE \
           -e GH_REDIS='redis://redis:6379' \
-          -e GH_SOURCE=https://github.com/genomehubs/goat-data \
+          -e GH_SOURCE=https://github.com/genomehubs/goat-data/tree/$RELEASE \
           -e GH_ACCESS_LOG=/genomehubs/logs/access.log \
           -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
           -e GH_ERROR_LOG=/genomehubs/logs/error.log \
