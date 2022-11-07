@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# get all taxids available on ftp taxonomy download
-
-cut -f1 /tmp/new_taxdump/ncbi/nodes.dmp > ftp-taxonomy.taxids
+# get all taxids available on ena taxonomy download (these are the ones also in ncbi taxdump)
+curl -s ftp://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/taxonomy.xml.gz \
+| gunzip -c | grep "^<taxon" | perl -lne 'print $1 if /taxId="(\d+)"/' > ena-taxonomy.xml.taxids
 
 if [ $(stat -c %s ftp-taxonomy.taxids) -lt 10000000 ]; then exit 0; fi
 
@@ -24,7 +24,7 @@ tail -n+2 resulttaxon.tax_tree2759.taxids \
 perl -plne 's/.*\"taxId\" : "(\d+)\".*/$1/' ena-taxonomy.extra.prev.jsonl > ena-taxonomy.extra.prev.taxids
 
 # remove prev ena jsonl, ftp taxonomy download IDs, and extra.prev.taxids from the ena api tsv
-cat ena-taxonomy.extra.prev.taxids ftp-taxonomy.taxids \
+cat ena-taxonomy.extra.prev.taxids ena-taxonomy.xml.taxids \
 | fgrep -v -w -f - resulttaxon.tax_tree2759.taxids > resulttaxon.tax_tree2759.extra.curr.taxids
 
 # download the extra ENA jsons
