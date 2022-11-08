@@ -573,6 +573,8 @@ taxon_id	input	rank	suggested
 1155247	Alchemilla minima	species	Alchemilla filicaulis
 36606	Sorbus domestica	species	Cormus domestica
 691236	Sorbus intermedia	species	Scandosorbus intermedia
+2906878	Sorbus aria	species	Aria edulis
+2914000	Sorbus torminalis	species	Torminalis glaberrima
 203015	Sedum rosea	species	Rhodiola rosea
 91097	Sedum telephium	species	Hylotelephium telephium
 90614	Saxifraga stellaris	species	Micranthes stellaris
@@ -590,6 +592,7 @@ taxon_id	input	rank	suggested
 119177	Inula conyzae	species	Inula conyza
 119182	Inula crithmoides	species	Limbarda crithmoides
 125729	Filago gallica	species	Logfia gallica
+1754164	Gnaphalium sylvaticum	species	Omalotheca sylvatica
 261773	Gnaphalium supinum	species	Omalotheca supina
 59425	Gnaphalium luteoalbum	species	Pseudognaphalium luteoalbum
 72935	Solidago graminifolia	species	Euthamia graminifolia
@@ -600,6 +603,7 @@ taxon_id	input	rank	suggested
 112253	Escallonia macrantha	species	Escallonia rubra
 126820	Cassia occidentalis	species	Senna occidentalis
 240043	Chenopodium ambrosioides	species	Chenopodium acuminatum
+1680167	Dorycnium rectum	species	Lotus rectus
 564216	Nymphaea marliacea	species	Nymphaea x marliacea
 335999	Manduca quinquemaculatus	species	Manduca quinquemaculata
 689277	Pseudoplusia includens	species	Chrysodeixis includens
@@ -793,6 +797,7 @@ taxon_id	input	rank	suggested
 1661792	Melanospora fusispora	species	Microthecium fusisporum
 714525	Nitschkia confertula	species	Tympanopsis confertula
 1854472	Thielavia fimeti	species	Chaetomium fimeti
+2587410	Thielavia terrestris	species	Thermothielavioides terrestris
 201941	Corollospora cristata	species	Nereiospora cristata
 930017	Halosphaeria stellata	species	Remispora stellata
 930074	Halosphaeria torquata	species	Ondiniella torquata
@@ -1408,6 +1413,7 @@ taxon_id	input	rank	suggested
 344394	Rotylenchus fallorobustus	species	Rotylenchus robustus
 492100	Tylopharynx foetida	species	Tylopharynx foetidus
 1437085	Glossiphonia paludosa	species	Batracobdella paludosa
+1960652	Macropus rufogriseus	species	Notamacropus rufogriseus
 264118	Coryne filiformis	species	Coryne pintneri
 140012	Amblystegium confervoides	species	Platydictya confervoides
 622457	Amblystegium radicale	species	Pseudocampylium radicale
@@ -1501,6 +1507,7 @@ taxon_id	input	rank	suggested
 216028	Ulvaria fusca	species	Ulvaria splendens
 878076	Dropephylla devillei	species	Phyllodrepa devillei
 989471	Agrostis avenacea	species	Lachnagrostis filiformis
+2768810	Ailanthus altissima	species	Ailanthus altissimus
 106274	Alonsoa caulialata	species	Alonsoa meridionalis
 106274	Alonsoa incisifolia	species	Alonsoa meridionalis
 114193	Alopecurus macrostachyos	species	Alopecurus bulbosus
@@ -1545,6 +1552,7 @@ taxon_id	input	rank	suggested
 415160	Emilia javanica	species	Emilia sonchifolia
 208280	Eragrostis neomexicana	species	Eragrostis mexicana
 208280	Eragrostis virescens	species	Eragrostis mexicana
+2843217	Eriobotrya japonica	species	Rhaphiolepis bibas
 337410	Erodium hymenodes	species	Erodium trifolium
 161951	Erophila glabrescens	species	Draba verna
 161951	Erophila majuscula	species	Draba verna
@@ -1554,6 +1562,7 @@ taxon_id	input	rank	suggested
 1940273	Festuca buchtienii	species	Festuca humilior
 464074	Festuca trachylepis	species	Festuca purpurascens
 702255	Filago minima	species	Logfia minima
+2849586	Foeniculum vulgare	species	Anethum foeniculum
 3747	Fragaria ananassa	species	Fragaria x ananassa
 1981223	Fumaria reuteri	species	Fumaria martinii
 379944	Geranium herrerae	species	Geranium core-core
@@ -1638,6 +1647,7 @@ taxon_id	input	rank	suggested
 1155374	Sorbus minima	species	Hedlundia minima
 746474	Sorbus porrigentiformis	species	Aria porrigentiformis
 1572687	Sorbus pseudofennica	species	Hedlundia pseudofennica
+2910179	Sorbus rupicola	species	Aria rupicola
 1572688	Sorbus subcuneata	species	Karpatiosorbus subcuneata
 1572689	Sorbus vexans	species	Aria vexans
 746476	Sorbus wilmottiana	species	Aria wilmottiana
@@ -2119,6 +2129,7 @@ taxon_id	input	rank	suggested
 50981	Omphalina demissa	species	Omphalina pyxidata
 302556	Oudemansiella melanotricha	species	Xerula melanotricha
 139077	Oudemansiella mucida	species	Mucidula mucida
+34442	Panaeolina foenisecii	species	Panaeolus foenisecii
 330933	Panaeolus fimiputris	species	Panaeolus semiovatus
 5636	Panellus farinaceus	species	Panellus stipticus
 1709391	Parmelinopsis minarum	species	Hypotrachyna minarum
@@ -2664,6 +2675,7 @@ taxon_id	input	rank	suggested
 908971	Nemalion helminthoides	species	Nemalion multifidum
 2565733	Pantoneura angustissima	species	Membranoptera carpophylla
 2509026	Neosiphonia ferulacea	species	Melanothamnus ferulaceus
+2608613	Neosiphonia japonica	species	Melanothamnus japonicus
 2608611	Polysiphonia brodiei	species	Leptosiphonia brodiei
 2724436	Polysiphonia fibrillosa	species	Leptosiphonia fibrillosa
 2006944	Polysiphonia isogona	species	Vertebrata isogona
@@ -3024,6 +3036,7 @@ taxon_id	input	rank	suggested
 1750740	Pandava laminata (Thorell, 1878)	species	Pandava laminata
 157146	Duvaucelia odhneri	species	Tritonia nilsodhneri
 92078	Allothrombium aphidis	species	Allothrombium fuliginosum
+2872682	Bdella lignicola	species	Spinibdella lignicola
 503651	Trichoribates berlesei	species	Trichoribates trimaculatus
 1979947	Trimalaconothrus sculptus	species	Tyrphonothrus sculptus
 1869762	Oxyptilus tristis	species	Crombrugghia tristis
