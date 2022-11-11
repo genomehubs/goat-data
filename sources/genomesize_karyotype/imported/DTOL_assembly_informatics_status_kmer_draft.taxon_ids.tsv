@@ -1,10 +1,17 @@
 taxon_id	input	rank
 987862	Acronicta leporina	species
 1100951	Coleophora flavipennella	species
+<<<<<<< HEAD
 1457097	Leptodirus hochenwarti	species
+=======
+>>>>>>> 2022.11.10
 2567736	Yponomeuta cagnagella	species
 263928	Yponomeuta rorrellus	species
 1594356	Yponomeuta plumbellus	species
+2741127	Nephrotoma appendiculata	species
+1776473	Lypha dubia	species
+2567738	Yponomeuta padella	species
+1457097	Leptodirus hochenwarti	species
 988062	Antitype chi	species
 494138	Clistopyga incitator	species
 3213	Polytrichum commune	species
@@ -33,12 +40,11 @@ taxon_id	input	rank
 260537	Notonecta glauca	species
 1219160	Physocephala rufipes	species
 95463	Scathophaga stercoraria	species
+2026310	Closterotomus trivialis	species
 87960	Patella depressa	species
 28469	Hylocomiadelphus triquetrus	species
 46595	Harmothoe impar	species
 43337	Orthosia gothica	species
-2741127	Nephrotoma appendiculata	species
-1776473	Lypha dubia	species
 343700	Nemotelus nigrinus	species
 1594316	Nymphula nitidulata	species
 1101086	Athrips mouffetella	species
@@ -70,7 +76,6 @@ taxon_id	input	rank
 106386	Pterostichus niger	species
 987896	Caradrina kadenii	species
 987475	Charanyca ferruginea	species
-2026310	Closterotomus trivialis	species
 601523	Nomada flava	species
 2867103	Neoascia interrupta	species
 934896	Thera obeliscata	species
@@ -102,7 +107,6 @@ taxon_id	input	rank
 33397	Chironomus plumosus	species
 326963	Lycia hirtaria	species
 2690816	Empis trigramma	species
-2567738	Yponomeuta padella	species
 94029	Argiope bruennichi	species
 997542	Orthosia gracilis	species
 934938	Gandaritis pyraliata	species
@@ -133,17 +137,29 @@ taxon_id	input	rank
 7221	Drosophila funebris	species
 986977	Eupithecia insigniata	species
 988178	Drymonia ruficornis	species
+<<<<<<< HEAD
+=======
+988162	Tiliacea aurago	species
+1918187	Thelaira solivaga	species
+988011	Orthosia incerta	species
+8969	Haliaeetus albicilla	species
+>>>>>>> 2022.11.10
 2884235	Protonemura montana	species
 165100	Ricordea florida	species
 46745	Galaxea fascicularis	species
 37623	Ostrea edulis	species
 375517	Branchellion lobata	species
 1699438	Fragum whitleyi	species
+<<<<<<< HEAD
 1918187	Thelaira solivaga	species
 332931	Saturnia pavonia	species
 988011	Orthosia incerta	species
 988162	Tiliacea aurago	species
 8969	Haliaeetus albicilla	species
+=======
+332931	Saturnia pavonia	species
+41014	Tinea pellionella	species
+>>>>>>> 2022.11.10
 4202	Sambucus nigra	species
 66205	Acer campestre	species
 116138	Tortricodes alternella	species
@@ -153,8 +169,9 @@ taxon_id	input	rank
 285223	Dascillus cervinus	species
 50417	Mimachlamys varia	species
 795047	Clivina fossor	species
-1689122	Xylophagus ater	species
 78070	Platismatia glauca	species
+179666	Tyria jacobaeae	species
+1689122	Xylophagus ater	species
 41492	Bellis perennis	species
 36212	Trachurus trachurus	species
 473354	Borostomias antarcticus	species
@@ -185,11 +202,11 @@ taxon_id	input	rank
 601640	Nomada lathburiana	species
 1905387	Amblyjoppa proteus	species
 1446181	Empis tessellata	species
-41014	Tinea pellionella	species
 1053350	Fumaria muralis	species
 169223	Honckenya peploides	species
 2014018	Ecdyonurus torrentis	species
 2741129	Tipula vernalis	species
+56931	Lunularia cruciata	species
 38561	Ascidia mentula	species
 230516	Chaetoceros curvisetus	species
 374711	Lathraea squamaria	species
@@ -225,7 +242,9 @@ taxon_id	input	rank
 2922075	Rhorus exstirpatorius	species
 1889570	Trypoxylon attenuatum	species
 312760	Carex pendula	species
-56931	Lunularia cruciata	species
+2753613	Villa cingulata	species
+140242	Cruzella marina	species
+161584	Syngnathus acus	species
 146480	Ammodytes marinus	species
 100830	Tetrao urogallus	species
 2721265	Parastalita stygia	species
@@ -255,7 +274,6 @@ taxon_id	input	rank
 1917265	Pseudodiploria clivosa	species
 1282862	Oculina arbuscula	species
 72671	Axinella damicornis	species
-140242	Cruzella marina	species
 1009717	Sycon coactum	species
 472225	Rhabdocalyptus dawsoni	species
 2792841	Grypocoris stysi	species
@@ -509,7 +527,6 @@ taxon_id	input	rank
 1124511	Epistrophe eligans	species
 65466	Lucilia caesar	species
 559660	Muscina levida	species
-2753613	Villa cingulata	species
 446444	Heptagenia sulphurea	species
 249498	Balanococcus diminutus	species
 446526	Athripsodes cinereus	species
@@ -521,7 +538,6 @@ taxon_id	input	rank
 1101050	Scoparia basistrigalis	species
 753423	Stauropus fagi	species
 997289	Tethea ocularis	species
-179666	Tyria jacobaeae	species
 465493	Andrena cineraria	species
 30202	Bombus vestalis	species
 159417	Clavelina lepadiformis	species
