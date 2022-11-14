@@ -25,7 +25,7 @@ attributes:
   bioproject:
     constraint:
       len: 32
-    display_group: misc
+    display_group: general
     index: 5
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
@@ -35,7 +35,7 @@ attributes:
   biosample:
     constraint:
       len: 32
-    display_group: misc
+    display_group: general
     index: 6
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
@@ -67,7 +67,7 @@ attributes:
     type: 2dp
     units: '%'
   last_updated:
-    display_group: misc
+    display_group: general
     display_level: 2
     index: 11
     source: NCBI
@@ -84,8 +84,20 @@ attributes:
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
     type: 2dp
     units: '%'
+  organelle:
+    constraint:
+      enum:
+      - nucleus
+      - mitochondrion
+      - chloroplast
+      - plastid
+      - apicoplast
+    default: '{{organelle}}'
+    display_group: general
+    source: NCBI
+    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
   sample_location:
-    display_group: misc
+    display_group: general
     display_level: 2
     index: 12
     source: NCBI
@@ -98,7 +110,7 @@ attributes:
     taxon_summary: list
     type: geo_point
 file:
-  display_group: misc
+  display_group: general
   format: tsv
   header: true
   name: refseq_organelles.tsv.gz

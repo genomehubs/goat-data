@@ -1,9 +1,21 @@
 taxon_id	input	rank
+7041	Coleoptera	order
+394625	Brachycaudus lychnidis	species
+29997	Diplura	order
+#iaDilHibe	Dilta hibernica	species
+219450	Philonthus	genus
+7205	Tabanidae	family
+7147	Diptera	order
+1134731	Eurygaster testudinaria	species
+7399	Hymenoptera	order
+1545159	Megalonotus chiragra	species
+1810706	Dicranocephalus agilis	species
+69514	Australoplana sanguinea	species
+2725004	Caenoplana variegata	species
+29979	Isopoda	order
 60593	Celleporella hyalina	species
 95170	Membranipora membranacea	species
 7408	Ichneumonidae	family
-7399	Hymenoptera	order
-7041	Coleoptera	order
 32261	Terebellidae	family
 72672	Ophiura albida	species
 1268897	Cryptops hortensis	species
@@ -21,7 +33,6 @@ taxon_id	input	rank
 441507	Leuctra fusca	species
 466662	Chloroperla tripunctata	species
 987935	Euproctis similis	species
-7147	Diptera	order
 30263	Trichoptera	order
 265386	Polyommatus icarus	species
 1504852	Micromus variegatus	species
@@ -39,7 +50,6 @@ taxon_id	input	rank
 247614	Erigone	genus
 7713	Ascidiacea	class
 6821	Amphipoda	order
-29979	Isopoda	order
 195258	Eteone	genus
 61980	Nesticus cellulanus	species
 279441	Coniopterygidae	family
@@ -56,7 +66,6 @@ taxon_id	input	rank
 280361	Amaurobius	genus
 27474	Tachinidae	family
 389061	Zygiella x-notata	species
-1134731	Eurygaster testudinaria	species
 94031	Linyphia triangularis	species
 1443160	Saccoglossus horsti	species
 1073585	Endrosis sarcitrella	species
@@ -257,7 +266,6 @@ taxon_id	input	rank
 1871975	Megalepthyphantes collinus	species
 2884235	Protonemura montana	species
 1594445	Aspilapteryx tringipennella	species
-#iaDilHibe	Dilta hibernica	species
 1871997	Pseudeuophrys lanigera	species
 2560978	Aporophyla australis	species
 753195	Lyonetia clerkella	species
@@ -276,11 +284,9 @@ taxon_id	input	rank
 88022	Blaniulidae	family
 #qqRugInst	Rugathodes instabilis	species
 1178097	Epermenia chaerophyllella	species
-29997	Diplura	order
 347710	Batrachedra praeangusta	species
 1870252	Polymixis lichenea	species
 1858070	Scrobipalpa costella	species
-7205	Tabanidae	family
 #ilMomJura	Mompha jurassicella	species
 2448499	Nigma puella	species
 190331	Agriopis marginaria	species
@@ -289,7 +295,6 @@ taxon_id	input	rank
 #qdPorDigi	Poratia digitata	species
 145610	Deroceras reticulatum	species
 347754	Oegoconia quadripuncta	species
-394625	Brachycaudus lychnidis	species
 934877	Lomographa temerata	species
 #iaDilChat	Dilta chateri	species
 287380	Zygaena lonicerae	species
@@ -322,7 +327,6 @@ taxon_id	input	rank
 987869	Agrochola litura	species
 215162	Agrotis exclamationis	species
 473146	Metellina merianae	species
-219450	Philonthus	genus
 1008810	Julus scandinavius	species
 988118	Gortyna flavago	species
 92558	Dolichopodidae	family
@@ -414,7 +418,6 @@ taxon_id	input	rank
 97259	Electra pilosa	species
 560974	Schizomavella linearis	species
 27804	Cyanea capillata	species
-69514	Australoplana sanguinea	species
 10212	Bugula neritina	species
 50417	Mimachlamys varia	species
 258330	Ammothea hilgendorfi	species
@@ -429,7 +432,6 @@ taxon_id	input	rank
 296241	Poecilochirus	genus
 987918	Cybosia mesomella	species
 1008843	Brachyiulus pusillus	species
-1545159	Megalonotus chiragra	species
 1147033	Schendyla nemorensis	species
 1068628	Polydesmus angustus	species
 43823	Limoniidae	family
@@ -596,7 +598,6 @@ taxon_id	input	rank
 214030	Anaplectoides prasina	species
 721156	Ochropacha duplaris	species
 1101153	Salebriopsis albicilla	species
-1810706	Dicranocephalus agilis	species
 36119	Nephtyidae	family
 39821	Glyceridae	family
 29065	Martes martes	species
@@ -675,7 +676,6 @@ taxon_id	input	rank
 706294	Xylocoris cursitans	species
 1276743	Eupteryx aurata	species
 177674	Limnephilus	genus
-2725004	Caenoplana variegata	species
 48991	Ephydridae	family
 881763	Stephanitis takeyai	species
 27879	Lepidapedon rachion	species
@@ -924,6 +924,9 @@ taxon_id	input	rank
 1871992	Phylloneta sisyphia	species
 145417	Cochlodina laminata	species
 560983	Escharella immersa	species
+61998	Dilta	genus
+642069	Anthocoris nemorum	species
+138674	Microplana terrestris	species
 2844365	Cellaria sinuosa	species
 1655321	Cellepora pumicosa	species
 2844364	Cellaria fistulosa	species
@@ -931,7 +934,6 @@ taxon_id	input	rank
 1869501	Blastobasis adustella	species
 2979189	Oligolophus hansenii	species
 1872030	Brigittea civica	species
-642069	Anthocoris nemorum	species
 301037	Bembecia ichneumoniformis	species
 172515	Baetidae	family
 757356	Oeciacus hirundinis	species
@@ -941,7 +943,6 @@ taxon_id	input	rank
 1569497	Propolydesmus testaceus	species
 37518	Tubularia	genus
 863632	Stigmatogaster souletina	species
-138674	Microplana terrestris	species
 2871731	Ectobius vittiventris	species
 875881	Spilarctia lutea	species
 #ihHetUrti	Heterogaster urticae	species
@@ -1008,7 +1009,6 @@ taxon_id	input	rank
 1101054	Spilonota laricana	species
 934885	Parectropis similaria	species
 1869848	Ephestia unicolorella	species
-61998	Dilta	genus
 1046773	Chthonius ischnocheles	species
 483950	Acanthosoma haemorrhoidale	species
 988050	Xylena vetusta	species

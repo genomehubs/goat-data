@@ -6,7 +6,7 @@ attributes:
       - chromosome
       - scaffold
       - contig
-    display_group: misc
+    display_group: general
     display_level: 1
     display_name: Assembly level
     header: assemblyLevel
@@ -47,7 +47,7 @@ attributes:
     type: long
     units: bases
   assembly_type:
-    display_group: misc
+    display_group: general
     display_level: 2
     display_name: Assembly type
     header: assemblyType
@@ -58,7 +58,7 @@ attributes:
   bioproject:
     constraint:
       len: 32
-    display_group: misc
+    display_group: general
     header: bioProjectAccession
     organelle: nucleus
     separator:
@@ -77,7 +77,7 @@ attributes:
   biosample:
     constraint:
       len: 32
-    display_group: misc
+    display_group: general
     header: biosampleAccession
     organelle: nucleus
     separator:
@@ -157,7 +157,7 @@ attributes:
     type: long
     units: bases
   ebp_metric_date:
-    display_group: misc
+    display_group: general
     display_level: 2
     display_name: EBP metric date
     header: ebpMetricDate
@@ -196,7 +196,7 @@ attributes:
     - count
     type: integer
   isolate:
-    display_group: misc
+    display_group: general
     display_level: 2
     display_name: Isolate
     header: isolate
@@ -205,7 +205,7 @@ attributes:
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
     type: keyword
   last_updated:
-    display_group: misc
+    display_group: general
     display_level: 2
     display_name: Last updated
     header: submissionDate
@@ -232,6 +232,19 @@ attributes:
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
     type: integer
+  organelle:
+    constraint:
+      enum:
+      - nucleus
+      - mitochondrion
+      - chloroplast
+      - plastid
+      - apicoplast
+    default: nucleus
+    display_group: general
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   protein_count:
     constraint:
       min: 1
@@ -255,7 +268,7 @@ attributes:
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
     type: integer
   refseq_category:
-    display_group: misc
+    display_group: general
     display_level: 2
     display_name: RefSeq category
     header: refseqCategory
@@ -264,7 +277,7 @@ attributes:
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
     type: keyword
   sample_sex:
-    display_group: misc
+    display_group: general
     display_level: 2
     display_name: Sample sex
     header: sex
@@ -336,7 +349,7 @@ attributes:
     type: long
     units: bases
   submitter:
-    display_group: misc
+    display_group: general
     display_level: 2
     display_name: Submitter
     header: submitter
@@ -357,7 +370,15 @@ attributes:
     type: long
     units: bases
 file:
-  display_group: misc
+  display_group: general
+  exclusions:
+    attributes:
+    - bioproject
+    - biosample
+    identifiers:
+    - assembly_id
+    taxonomy:
+    - taxon_id
   format: tsv
   header: true
   name: ncbi_datasets_eukaryota.tsv.gz
