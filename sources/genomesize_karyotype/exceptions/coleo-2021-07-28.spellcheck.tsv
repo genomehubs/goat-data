@@ -32,6 +32,7 @@ taxon_id	input	rank	suggested
 869531	Cicindela bigemi	species	Cylindera bigemina
 1587494	Cicindela silvicola	species	Cicindela sylvicola
 1343317	Cicindela trisigta	species	Cylindera trisignata
+1163509	Colfax stevensi	species	Colias sieversi
 170253	Colliuris pennsylvanica	species	Cosnania pensylvanica
 1343317	Cylindera trisigta	species	Cylindera trisignata
 1343309	Cylindra germanica	species	Cylindera germanica
@@ -61,7 +62,6 @@ taxon_id	input	rank	suggested
 60758	Platynus extensicolle	species	Agonum extensicolle
 1588200	Platynus longiventre	species	Limodromus longiventris
 1708812	Poecilus decipens	species	Agenioideus decipiens
-1708820	Poecilus nitidus	species	Evagetes nitidulus
 1470290	Pogonus meridiolis	species	Pogonus meridionalis
 2060222	Pterostichus ghiliani	species	Pterostichus ghilianii
 2850094	Pterostichus muehlfeldi	species	Pterostichus muehlfeldii
@@ -149,7 +149,7 @@ taxon_id	input	rank	suggested
 	Chiridopsis bupunctata	species	chiridopsis bipunctata
 	Chrysoli affinis	species	chrysolina affinis	chrysopa affinis
 111535	Chrysoli aurichalcea	species	Chrysolina aurichalcea
-	Chrysoli banksi	species	chrysolina banksi	chrysolina bankii	chrysolina banksii
+	Chrysoli banksi	species	chrysolina bankii	chrysolina banksi	chrysolina banksii
 75508	Chrysoli bicolor	species	Chrysolina bicolor
 75509	Chrysoli carnifex	species	Chrysolina carnifex
 75510	Chrysoli cerealis	species	Chrysolina cerealis
@@ -333,7 +333,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalopsis	homalomyia	homalopoma
+	Homaloplia	species	homalomyia	homalopsis	homalopoma
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 1656640	Macraspis tristis	species	Macropsis tristis
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
@@ -369,7 +369,6 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 197344	Blaps mucrota	species	Blaps mucronata
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
-2005769	Gptor spinimanus	species	Gnaptor spinimanus
 466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
