@@ -593,6 +593,7 @@ jobs:
           mkdir -p /volumes/docker/logs/$RELEASE
           docker pull genomehubs/genomehubs-api:latest
           docker rm -f goat-api-$RELEASEDAY
+
           docker run -d \
           --restart=always \
           --net net-es \
@@ -615,12 +616,16 @@ jobs:
 
           docker pull genomehubs/goat:latest
           docker rm -f goat-ui-$RELEASEDAY
+
           docker run -d --restart always \
           --net net-es \
           -p 80$RELEASEDAY:8880 \
           --user \$UID:\$GROUPS \
           -e GH_CLIENT_PORT=8880 \
           -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
+          -e GH_BASENAME=/ \
+          -e GH_SITENAME=GoaT \
+          -e GH_ARCHIVE=latest \
           -e GH_SUGGESTED_TERM=Canidae \
           --name goat-ui-$RELEASEDAY \
           genomehubs/goat:latest
