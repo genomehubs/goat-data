@@ -10,6 +10,7 @@ taxon_id	input	rank	suggested
 108700	Entodon laetus	species	Chrysocharis nephereus
 2666473	Entodon micropodus	species	Entodon macropodus
 2894618	Fissidens hollianus	species	Fissidens hallianus
+91517	Gollania arisanensis	species	Microstegium nudum
 146591	Haplodon wormskioldii	species	Aplodon wormskioldii
 324239	Hylocomium flagellare	species	Hyocomium armoricum
 	Jungermannia fusiformis	species	jungermannia filiformis	jungermannia fuciformis
@@ -116,7 +117,6 @@ taxon_id	input	rank	suggested
 1177126	Artemisia wudanica	species	Artemisia turanica
 401941	Artemisia xanthochloa	species	Artemisia xanthochroa
 2837433	Arundinella khasiana	species	Arundinella khaseana
-272859	Asparagus brachyphyllus	species	Asparagus oligoclonos
 272863	Asparagus dumosus	species	Asparagus setaceus
 	Aster limonifolius	species	aster linifolius	aster limoniifolius
 713681	Astragalus albulus	species	Astragalus vesicarius
@@ -180,6 +180,7 @@ taxon_id	input	rank	suggested
 315920	Brachyscome oncocarpa	species	Brachyscome goniocarpa
 315927	Brachyscome radicata	species	Brachyscome radicans
 1550871	Brickellia veronicaefolia	species	Brickellia veronicifolia
+55769	Bromus bonariensis	species	Bromus lanceolatus
 1979679	Bufonia macrocarpa	species	Begonia macrocarpa
 426864	Bulbophyllum bisetum	species	Bulbophyllum longiflorum
 1463550	Bulbophyllum cornutum	species	Bulbophyllum ecornutum
@@ -195,7 +196,6 @@ taxon_id	input	rank	suggested
 310861	Caiophora buraeavi	species	Caiophora buraeavii
 184743	Cajanus rugosus	species	Cosmocalanus darwinii
 	Calamagrostis distantifolia	species	calamagrostis distantiflora
-2030670	Calamagrostis inexpansa	species	Greeneochloa expansa
 497297	Calamagrostis × acutiflora	species	Calamagrostis x acutiflora
 1128381	Calanthe hirsuta	species	Goeppertia villosa
 240967	Calceolaria adenanthera	species	Calceolaria pavonii
@@ -254,12 +254,11 @@ taxon_id	input	rank	suggested
 402110	Cephalaria media	species	Fuscocephaloziopsis lunulifolia
 2498276	Cephalopodum badachshanicum	species	Cephalopodum badachschanicum
 	Cerastium viscatum	species	cerastium viscosum	cerastium viscidum
-	Ceratocephalus testiculatus	species	ceratocephala testiculata
 72965	Chaetopappa bellidifolia	species	Pentachaeta aurea
 2848426	Chorizema ericifolium	species	Chorizema ilicifolium
 1721061	Chrysanthellum americanum	species	Oncosiphon africanus
 191239	Chrysocoma longifolia	species	Chrysocoma ciliata
-	Cinnamomum curvifolium	species	cinnamomum parvifolium	cinnamomum cordifolium
+	Cinnamomum curvifolium	species	cinnamomum cordifolium	cinnamomum parvifolium
 	Cirsium albescens	species	cardium pubescens	cardium rubescens
 2872291	Cirsium congestissimum	species	Cirsium confertissimum
 1338473	Cirsium flavispinum	species	Cirsium pyrenaicum
@@ -297,7 +296,7 @@ taxon_id	input	rank	suggested
 481064	Crocus suaveolens	species	Crocus graveolens
 	Crocus suworowianus	species	crocus suwarowianus
 197987	Crossotoma spinescens	species	Scaevola spinescens
-	Crotalaria formosa	species	crotalaria formosana	crotalaria foliosa
+	Crotalaria formosa	species	crotalaria foliosa	crotalaria formosana
 859320	Crotalaria lanata	species	Crotalaria lunata
 2896017	Croton grandivelum	species	Croton grandivelus
 158962	Crusea longiflora	species	Tovomita longifolia
@@ -318,7 +317,7 @@ taxon_id	input	rank	suggested
 	Cytisus elongatus	species	mytilus elongatus
 49805	Cytisus prolifer	species	Chamaecytisus prolifer
 457893	Dalea brachystachys	species	Dalea brachystachya
-	Dalea foliosa	species	dalea formosa	dalea foliolosa
+	Dalea foliosa	species	dalea foliolosa	dalea formosa
 116730	Dalzellia zeylandica	species	Dalzellia zeylanica
 1161789	Dampiera triloba	species	Dampiera trigona
 482935	Daphniphyllum himalense	species	Daphniphyllum himalaense
@@ -415,6 +414,7 @@ ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
 2732301	Erysimum graecum	species	Brosimum glaucum
 1370078	Erysimum jugicolum	species	Erysimum jugicola
 1924167	Erysimum pirinicum	species	Erysimum pieninicum
+452822	Eucalyptus × kirtoniana	species	Eucalyptus kitsoniana
 1620165	Eulophia cristata	species	Eulophia ecristata
 1130034	Euphorbia biaculeata	species	Euphorbia triaculeata
 457238	Euphorbia bourgeana	species	Euphorbia bourgaeana
@@ -500,7 +500,6 @@ daHieArra	Hieracium arragonense	species	Hieracium arranense
 268062	Hieracium sparsifolium	species	Hieracium sparsum
 1501549	Huernia thureti	species	Huernia thuretii
 180144	Hulsea brevifolia	species	Hessea breviflora
-200375	Hybanthus bicolor	species	Cyanophaia bicolor
 2582853	Hydrocotyle microphylla	species	Hydrocotyle macrophylla
 1817777	Hygrophila senegalensis	species	Dyschoriste erecta
 2057673	Hyparrhenia formosa	species	Hyparrhenia bracteata
@@ -571,6 +570,7 @@ dcLimTran	Limonium transwallisnum	species	Limonium transwallianum
 374417	Lysichitum americanum	species	Lysichiton americanus
 502323	Lythrum baeticum	species	Pythium sp. balticum
 	Machaerium mucronulatum	species	machaerium mucronatum
+1304318	Madia anomala	species	Xanthocercis madagascariensis
 86734	Magnolia pleiocarpa	species	Magnolia pterocarpa
 569831	Majidea forsteri	species	Majidea fosteri
 288286	Malva subovata	species	Malvastrum americanum
@@ -674,6 +674,7 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 136769	Phoradendron berteroanum	species	Phoradendron juniperinum
 328195	Phreatia elegans	species	Davallia denticulata
 283132	Phyllanthus axillaris	species	Phyllanthus nummulariifolius
+2708445	Phyllanthus eliae	species	Phyllanthus elsiae
 	Phyllanthus grandifolius	species	phialanthus grandifolius	phyllanthus grandiflorus
 2708450	Phyllanthus mieschii	species	Phyllanthus finschii
 319600	Phyllanthus orbiculatus	species	Phyllanthus orbicularis
@@ -754,7 +755,6 @@ drRubMile	Rubus silesiacus	species	Rubus milesianus
 68491	Salvia fluviatilis	species	Locustella fluviatilis
 	Saracha contorta	species	salacia conferta	salacca conferta
 403582	Sasa takizawana	species	Sasa hayatae
-2055104	Satyrium foliosum	species	Athyrium foliolosum
 2741400	Saussurea jadrinzevii	species	Saussurea jadrincevii
 238959	Saussurea thoroldi	species	Saussurea thoroldii
 1529533	Saxifraga manshuriensis	species	Micranthes manchuriensis
