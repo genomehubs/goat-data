@@ -10,6 +10,7 @@ taxon_id	input	rank	suggested
 1166940	Bembidion cribum	species	Sinechostictus cribrum
 2493287	Bembidion dahli	species	Sinechostictus dahlii
 	Bembidion fortutum	species	bembidion fortunatum
+1166747	Bembidion hasti	species	Bembidion hastii
 795071	Bembidion littorale	species	Bembidion litorale
 1944110	Bembidion operosum	species	Bembidion petrosum
 	Bembidion platum	species	bembidion planum
@@ -32,6 +33,7 @@ taxon_id	input	rank	suggested
 869531	Cicindela bigemi	species	Cylindera bigemina
 1587494	Cicindela silvicola	species	Cicindela sylvicola
 1343317	Cicindela trisigta	species	Cylindera trisignata
+1163509	Colfax stevensi	species	Colias sieversi
 170253	Colliuris pennsylvanica	species	Cosnania pensylvanica
 1343317	Cylindera trisigta	species	Cylindera trisignata
 1343309	Cylindra germanica	species	Cylindera germanica
@@ -61,6 +63,7 @@ taxon_id	input	rank	suggested
 60758	Platynus extensicolle	species	Agonum extensicolle
 1588200	Platynus longiventre	species	Limodromus longiventris
 1708812	Poecilus decipens	species	Agenioideus decipiens
+1708820	Poecilus nitidus	species	Evagetes nitidulus
 1470290	Pogonus meridiolis	species	Pogonus meridionalis
 2060222	Pterostichus ghiliani	species	Pterostichus ghilianii
 2850094	Pterostichus muehlfeldi	species	Pterostichus muehlfeldii
@@ -333,7 +336,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopsis	homalopoma
+	Homaloplia	species	homalopsis	homalomyia	homalopoma
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 1656640	Macraspis tristis	species	Macropsis tristis
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
@@ -342,6 +345,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 166349	Onthophagus hirculus	species	Onthophagus hirtus
 422247	Onthophagus lucidus	species	Onthophagus rectecornutus
 1675891	Onthophagus verticornis	species	Onthophagus dama
+465150	Oryctes sicornis	species	Oryctes nasicornis
 465331	Phyllogthus dionysius	species	Phyllognathus dionysius
 296037	Phyllogthus silensis	species	Phyllanthus reticulatus
 1142444	Propomacrus bimucrotus	species	Propomacrus bimucronatus
@@ -355,7 +359,6 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 77165	Dendroctonus murrayae	species	Dendroctonus murrayanae
 57062	Hypothenemus hamperi	species	Hypothenemus hampei
 55980	Ips acumitus	species	Ips acuminatus
-102825	Ips bonseai	species	Ips bonanseai
 102831	Ips emargitus	species	Ips emarginatus
 102845	Ips pertubatus	species	Ips perturbatus
 102857	Pityogenes crannulatus	species	Pityogenes carinulatus
