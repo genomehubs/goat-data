@@ -13184,7 +13184,6 @@ taxon_id	input	rank
 3888	Pisum sativum	species
 52299	Rudbeckia hirta	species
 568684	Quercus canariensis	species
-#drOenRubr	Oenothera rubricaulis	species
 41554	Coreopsis tinctoria	species
 199218	Colocasia antiquorum	species
 173841	Cenchrus echinatus	species
@@ -13413,7 +13412,6 @@ taxon_id	input	rank
 232854	Symphytocarpus impexus	species
 1450333	Badhamia dubia	species
 647245	Badhamia foliicola	species
-#pmBadPopu	Badhamia populina	species
 289938	Badhamia utricularis	species
 647246	Badhamia versicolor	species
 #pmBadViri	Badhamia viridescens	species
@@ -13426,7 +13424,6 @@ taxon_id	input	rank
 2421285	Fuligo megaspora	species
 947840	Fuligo muscorum	species
 289949	Physarum bivalve	species
-#pmPhyBrun	Physarum brunneolum	species
 #pmPhyCarn	Physarum carneum	species
 289951	Physarum cinereum	species
 2749594	Physarum citrinum	species
@@ -20006,7 +20003,6 @@ taxon_id	input	rank
 1890503	Phytomyza tenella	species
 498706	Phytomyza tetrasticha	species
 #idPhyThys	Phytomyza thysselini	species
-#idPhyTroi	Phytomyza trolliivora	species
 #idPhyTuss	Phytomyza tussilaginis	species
 2882673	Phytomyza varipes	species
 #idPhyVirg	Phytomyza virgaureae	species
@@ -26576,7 +26572,6 @@ taxon_id	input	rank
 #teLoxSalt	Loxosoma saltans	species
 #teLoxSign	Loxosoma significans	species
 #teLoxSing	Loxosoma singulare	species
-#teLoxArip	Loxosomella aripes	species
 #teLoxBruc	Loxosomella brucei	species
 #teLoxClav	Loxosomella claviformis	species
 #teLoxComp	Loxosomella compressa	species
@@ -33915,7 +33910,6 @@ taxon_id	input	rank
 565086	Mirapinna esau	species
 114866	Myctophum punctatum	species
 1263172	Nansenia groenlandica	species
-#fNanObl	Nansenia oblita	species
 882844	Neonesthes capensis	species
 189506	Nessorhamphus ingolfianus	species
 443646	Normichthys operosus	species
@@ -37182,7 +37176,6 @@ taxon_id	input	rank
 280176	Cymatia bonsdorffii	species
 280177	Cymatia coleoptrata	species
 2133933	Hesperocorixa castanea	species
-#ihHesMoes	Hesperocorixa moesta	species
 1545143	Hesperocorixa sahlbergi	species
 387776	Hydrometra gracilenta	species
 446445	Hydrometra stagnorum	species
@@ -47344,7 +47337,6 @@ taxon_id	input	rank
 #grPhyEmpe	Physalospora empetri	species
 #grPhyEuph	Physalospora euphorbiae	species
 186529	Physalospora vaccinii	species
-#pmPhyBeth	Physarum bethelii	species
 2116610	Physarum bitectum	species
 289953	Physarum conglomeratum	species
 218861	Physarum didermoides	species
@@ -49688,7 +49680,6 @@ taxon_id	input	rank
 1126216	Conocara salmoneum	species
 81640	Enchelyopus cimbrius	species
 473315	Guttigadus latifrons	species
-#fLycFla	Lycodonus flagellicauda	species
 13604	Makaira nigricans	species
 #fPacBul	Pachycara bulbiceps	species
 171736	Symphodus melops	species
@@ -54678,7 +54669,6 @@ taxon_id	input	rank
 #gaTriCrar	Triblidium craraense	species
 #gpTriLojk	Trichophaea lojkaeana	species
 #gpTubBonn	Tuber bonnetii	species
-#grXylGuep	Xylaria guepinii	species
 498169	Xylaria mellissii	species
 #gfAntCalc	Antrodia calceus	species
 108919	Aphanoascus reticulisporus	species
@@ -58524,7 +58514,6 @@ taxon_id	input	rank
 2911363	Colus sabini	species
 2831783	Colus turgidulus	species
 620391	Kryptos koehleri	species
-#xgLusAbys	Lusitromina abyssorum	species
 620418	Mohnia abyssorum	species
 620425	Mohnia danielsseni	species
 620489	Neptunea despecta	species
@@ -70009,8 +69998,8 @@ taxon_id	input	rank
 1155552	Morella pensylvanica	species
 181803	Nitella pseudoflabellata	species
 291678	Nonea echioides	species
-28932	Nothofagus x alpina	species
-28948	Lophozonia obliqua	species
+28932	Nothofagus alpina	species
+28948	Nothofagus obliqua	species
 1721064	Oncosiphon piluliferus	species
 #daOncSufr	Oncosiphon suffruticosum	species
 #lpPenAlop	Pennisetum alopecuroides	species
@@ -71008,7 +70997,7 @@ taxon_id	input	rank
 253502	Fuchsia splendens	species
 163756	Veronica speciosa	species
 258192	Berberis pinnata	species
-28945	Lophozonia menziesii	species
+28945	Nothofagus menziesii	species
 39884	Silene involucrata	species
 268104	Taraxacum erythrospermum	species
 196064	Calonectria pseudonaviculata	species
@@ -71216,7 +71205,7 @@ taxon_id	input	rank
 228475	Nausitora fusticula	species
 2268676	Pododesmus squama	species
 304923	Rissoa labiosa	species
-#xgLinCaud	Linatella caudata	species
+2994720	Linatella caudata	species
 1028678	Cyrillia aequalis	species
 177468	Jordaniella nivosa	species
 177464	Eulimella laevis	species
