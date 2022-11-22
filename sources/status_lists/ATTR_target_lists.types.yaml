@@ -25,8 +25,10 @@ attributes:
         - gbr
         - giga
         - ilebp
+        - loewe-tbg
         - metainvert
         - omg
+        - other
         - pgp
         - squalomix
         - tsi
@@ -62,8 +64,10 @@ attributes:
         - gbr
         - giga
         - ilebp
+        - loewe-tbg
         - metainvert
         - omg
+        - other
         - pgp
         - squalomix
         - tsi
@@ -99,8 +103,10 @@ attributes:
         - gbr
         - giga
         - ilebp
+        - loewe-tbg
         - metainvert
         - omg
+        - other
         - pgp
         - squalomix
         - tsi
@@ -110,3 +116,11 @@ attributes:
     traverse: list
     traverse_direction: up
     type: keyword
+  contributing_project_lab:
+    status: temporary
+    display_group: target_lists
+    display_level: 2
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword 

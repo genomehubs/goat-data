@@ -79,21 +79,21 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
-#   sequencing_status_africabp:
-#     display_group: sequencing_status
-#     display_level: 2
-#     constraint:
-#       enum:
-#         - published
-#         - insdc_open
-# #        - insdc_submitted
-#         - in_progress
-#         - sample_acquired
-#         - sample_collected
-#     summary: enum
-#     traverse: enum
-#     traverse_direction: up
-#     type: keyword
+  sequencing_status_africabp:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_ag100pest:
     display_group: sequencing_status
     display_level: 2
@@ -334,7 +334,37 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_loewe-tbg:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_metainvert:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
+  sequencing_status_other:
     display_group: sequencing_status
     display_level: 2
     constraint:

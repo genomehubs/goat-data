@@ -1,0 +1,40 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: Other_Projects_status.tsv
+  source: Declared Status List - Other Projects
+  source_date: 2022-11-22
+  source_description: Declared Status List - Other Projects, Multiple Contributing Labs, live spreadsheet - GoaT_OTHER_projects_subprojects
+  source_contact: Individual contributors - see https://github.com/genomehubs/goat-data/tree/main/sources/status_lists/GoaT_OTHER_projects_subprojects
+  source_url: https://github.com/genomehubs/goat-data/tree/main/sources/status_lists/GoaT_OTHER_projects_subprojects/
+attributes:
+  long_list:
+    header: target_list_status
+  other_priority:
+    header: target_list_status
+  contributing_project_lab:
+    header: contributing_project_lab
+  sequencing_status:
+    header: translate_status
+  sequencing_status_other:
+    header: translate_status
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family
+  synonym: 
+    header: synonym
