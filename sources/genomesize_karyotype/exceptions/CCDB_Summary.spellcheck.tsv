@@ -117,7 +117,6 @@ taxon_id	input	rank	suggested
 1177126	Artemisia wudanica	species	Artemisia turanica
 401941	Artemisia xanthochloa	species	Artemisia xanthochroa
 2837433	Arundinella khasiana	species	Arundinella khaseana
-272859	Asparagus brachyphyllus	species	Asparagus oligoclonos
 272863	Asparagus dumosus	species	Asparagus setaceus
 	Aster limonifolius	species	aster linifolius	aster limoniifolius
 713681	Astragalus albulus	species	Astragalus vesicarius
@@ -181,6 +180,7 @@ taxon_id	input	rank	suggested
 315920	Brachyscome oncocarpa	species	Brachyscome goniocarpa
 315927	Brachyscome radicata	species	Brachyscome radicans
 1550871	Brickellia veronicaefolia	species	Brickellia veronicifolia
+55769	Bromus bonariensis	species	Bromus lanceolatus
 1979679	Bufonia macrocarpa	species	Begonia macrocarpa
 426864	Bulbophyllum bisetum	species	Bulbophyllum longiflorum
 1463550	Bulbophyllum cornutum	species	Bulbophyllum ecornutum
@@ -258,7 +258,7 @@ taxon_id	input	rank	suggested
 2848426	Chorizema ericifolium	species	Chorizema ilicifolium
 1721061	Chrysanthellum americanum	species	Oncosiphon africanus
 191239	Chrysocoma longifolia	species	Chrysocoma ciliata
-	Cinnamomum curvifolium	species	cinnamomum parvifolium	cinnamomum cordifolium
+	Cinnamomum curvifolium	species	cinnamomum cordifolium	cinnamomum parvifolium
 	Cirsium albescens	species	cardium pubescens	cardium rubescens
 2872291	Cirsium congestissimum	species	Cirsium confertissimum
 1338473	Cirsium flavispinum	species	Cirsium pyrenaicum
@@ -296,7 +296,7 @@ taxon_id	input	rank	suggested
 481064	Crocus suaveolens	species	Crocus graveolens
 	Crocus suworowianus	species	crocus suwarowianus
 197987	Crossotoma spinescens	species	Scaevola spinescens
-	Crotalaria formosa	species	crotalaria formosana	crotalaria foliosa
+	Crotalaria formosa	species	crotalaria foliosa	crotalaria formosana
 859320	Crotalaria lanata	species	Crotalaria lunata
 2896017	Croton grandivelum	species	Croton grandivelus
 158962	Crusea longiflora	species	Tovomita longifolia
@@ -414,6 +414,7 @@ ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
 2732301	Erysimum graecum	species	Brosimum glaucum
 1370078	Erysimum jugicolum	species	Erysimum jugicola
 1924167	Erysimum pirinicum	species	Erysimum pieninicum
+452822	Eucalyptus × kirtoniana	species	Eucalyptus kitsoniana
 1620165	Eulophia cristata	species	Eulophia ecristata
 1130034	Euphorbia biaculeata	species	Euphorbia triaculeata
 457238	Euphorbia bourgeana	species	Euphorbia bourgaeana
@@ -499,6 +500,7 @@ daHieArra	Hieracium arragonense	species	Hieracium arranense
 268062	Hieracium sparsifolium	species	Hieracium sparsum
 1501549	Huernia thureti	species	Huernia thuretii
 180144	Hulsea brevifolia	species	Hessea breviflora
+200375	Hybanthus bicolor	species	Cyanophaia bicolor
 2582853	Hydrocotyle microphylla	species	Hydrocotyle macrophylla
 1817777	Hygrophila senegalensis	species	Dyschoriste erecta
 2057673	Hyparrhenia formosa	species	Hyparrhenia bracteata
@@ -842,7 +844,7 @@ drRubMile	Rubus silesiacus	species	Rubus milesianus
 90016	Taraxacum asiaticum	species	Taraxacum sp. 'adriaticum'
 	Taraxacum austrinum	species	taraxacum austriacum	taraxacum anserinum
 1522209	Taraxacum balearicum	species	Taraxacum bulgaricum
-90025	Taraxacum cognatum	species	Taraxacum coronatum
+	Taraxacum cognatum	species	taraxacum coronatum	taraxacum cornutum
 90025	Taraxacum cordatum	species	Taraxacum coronatum
 90052	Taraxacum crassum	species	Taraxacum serotinum
 	Taraxacum crocellum	species	taraxacum croceum
