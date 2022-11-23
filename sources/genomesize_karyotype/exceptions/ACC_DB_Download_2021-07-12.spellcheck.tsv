@@ -33,7 +33,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1661878	Euparius marmoreus_	species	Euparius marmoreus
 638814	Ptychoderes tricostifrons_	species	Ptychoderes tricostifrons
 	Acrossus	genus	dicrossus	acossus
-	Agolius	genus	aegolius	agorius	anolius
+	Agolius	genus	agorius	aegolius	anolius
 75361	Chilothorax	genus	Schizothorax
 	Colobopterus	genus	chloropterus	dilobopterus	colopterus
 1415215	Nimbus	genus	Niveus
@@ -282,7 +282,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 176381	Cicindela argentata_	species	Brasiella argentata
 176422	Cicindela aterrima_	species	Cicindela aterrima
 262318	Cicindela aurulenta_	species	Cicindela aurulenta
-869531	Cicindela bigemi	species	Cylindera bigemina
 150234	Cicindela campestris_	species	Cicindela campestris
 1485677	Cicindela deserticoloides_	species	Cephalota deserticoloides
 38653	Cicindela dorsalis_	species	Habroscelimorpha dorsalis
@@ -332,6 +331,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1499692	Galerita indica	species	Galerina indica
 247282	Harpalus aesculans_	species	Harpalus aesculanus
 247283	Harpalus affinis_	species	Harpalus affinis
+247283	Harpalus albanicus	species	Harpalus affinis
 1587330	Harpalus atratus_	species	Harpalus atratus
 247285	Harpalus attenuatus_	species	Harpalus attenuatus
 1127447	Harpalus compar_	species	Harpalus compar
@@ -937,7 +937,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2008391	Boreonectes ibericus_	species	Boreonectes ibericus
 1309560	Boreonectes multilineatus_	species	Boreonectes multilineatus
 1309561	Boreonectes riberae_	species	Boreonectes riberae
-	Colymbetes adpressus	species	corymbites impressus	colymbetes impressus
+	Colymbetes adpressus	species	colymbetes impressus	corymbites impressus
 1368183	Colymbetes bipustulatus	species	Calambus bipustulatus
 1509382	Colymbetes fuscus_	species	Colymbetes fuscus
 1610039	Colymbetes lapponicus	species	Calambus japonicus
@@ -1020,7 +1020,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 1457043	Speonomus pyreeus	species	Speonomus pyreneus
 1457043	Speonomus pyrenaeus	species	Speonomus pyreneus
 	Troglocharinus ferreri_pallaresi	species	troglocharinus ferreri pallaresi
-	Cerchus ligrius	species	ceruchus lignarius	trechus liguricus
+273953	Cerchus ligrius	species	Ceruchus lignarius
 617909	Lamprima adolphie	species	Lamprima adolphinae
 231745	Lucanus maculifermoratus	species	Lucanus maculifemoratus
 1588445	Lytta picta	species	Scydmaenus tarsatus
@@ -1062,7 +1062,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopsis	homalopoma
+	Homaloplia	species	homalomyia	homalopoma	homalopsis
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1126,7 +1126,6 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 538617	Trachypachus slevini_	species	Trachypachus slevini
 1569671	Lophoceters pusillus	species	Lophocateres pusillus
 2966204	Cerodontha ireos	species	Cerodontha iraeos
-1333887	Phorbia brassica	species	Euphorbia alpina
 502513	Villa gayi	species	Viola grayi
 	Villa sinuosa	species	zilla spinosa	vella spinosa
 2726335	Villa velutina	species	Viola velutina
@@ -1195,7 +1194,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 448099	Amitermes eucalipti	species	Amitermes eucalypti
 1934507	Microcerotermes fuscotibiatis	species	Microcerotermes fuscotibialis
 	Reticutitermes santonensis	species	reticulitermes santonensis
-179666	Hypocrita jocobaea	species	Tyria jacobaeae
 987980	Miltochrista zuiniata	species	Miltochrista miniata
 511340	Telphusa fluvuatillis	species	Potamon fluviatile
 942386	Euphyia luctuata	species	Enchoria lacteata
