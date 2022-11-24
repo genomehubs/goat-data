@@ -9,10 +9,10 @@ file:
   #source_contact: https://sts.tol.sanger.ac.uk
   source_url: https://sts.tol.sanger.ac.uk/api/v1/swagger
 attributes:
-  family_representative:
-    header: family_representative
-    separator:
-      - ","
+  # family_representative: this is coming from GoaT on STS, so its redundant to source from here
+  #   header: family_representative
+  #   separator:
+  #     - ","
   sequencing_status:
     header: sequencing_status_simple
     separator:
