@@ -1,0 +1,126 @@
+attributes:
+  long_list:
+    display_group: target_lists
+    display_level: 2
+    constraint:
+      enum:
+        - africabp
+        - ag100pest
+        - agi
+        - arg
+        - asg
+        - b10k
+        - canbp
+        - cbp
+        - ccgp
+        - cfgp
+        - dtol
+        - ebpn
+        - ein 
+        - endemixit
+        - erga
+        - eurofish
+        - gaga
+        - gap
+        - gbr
+        - giga
+        - ilebp
+        - loewe-tbg
+        - metainvert
+        - omg
+        - other
+        - pgp
+        - squalomix
+        - tsi
+        - vgp
+        - zoonomia
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  other_priority:
+    display_group: target_lists
+    display_level: 2
+    constraint:
+      enum:
+        - africabp
+        - ag100pest
+        - agi
+        - arg
+        - asg
+        - b10k
+        - canbp
+        - cbp
+        - ccgp
+        - cfgp
+        - dtol
+        - ebpn
+        - ein 
+        - endemixit
+        - erga
+        - eurofish
+        - gaga
+        - gap
+        - gbr
+        - giga
+        - ilebp
+        - loewe-tbg
+        - metainvert
+        - omg
+        - other
+        - pgp
+        - squalomix
+        - tsi
+        - vgp
+        - zoonomia
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  family_representative:
+    display_group: target_lists
+    display_level: 2
+    constraint:
+      enum:
+        - africabp
+        - ag100pest
+        - agi
+        - arg
+        - asg
+        - b10k
+        - canbp
+        - cbp
+        - ccgp
+        - cfgp
+        - dtol
+        - ebpn
+        - ein 
+        - endemixit
+        - erga
+        - eurofish
+        - gaga
+        - gap
+        - gbr
+        - giga
+        - ilebp
+        - loewe-tbg
+        - metainvert
+        - omg
+        - other
+        - pgp
+        - squalomix
+        - tsi
+        - vgp
+        - zoonomia
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  contributing_project_lab:
+    status: temporary
+    display_group: target_lists
+    display_level: 2
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword 
