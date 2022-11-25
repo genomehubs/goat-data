@@ -86,9 +86,10 @@ jobs:
 
       - name: restart dockers
         run: |
-          mkdir -p /volumes/docker/logs/${{ env.RELEASE }}
+          mkdir -p /volumes/docker/logs/$RELEASE
           docker pull genomehubs/genomehubs-api:latest
           docker rm -f goat-api
+
           docker run -d \
           --restart=always \
           --net net-es \
@@ -97,17 +98,19 @@ jobs:
           -e GH_ORIGINS="http://172.27.18.167:8010 http://172.27.18.167 null http://localhost:8010" \
           -e GH_HUBNAME=goat -e GH_HUBPATH="/genomehubs/resources/" \
           -e GH_NODE="http://es1:9200" \
-          -e GH_RELEASE=${{ env.RELEASE }} \
-          -e GH_SOURCE=https://github.com/genomehubs/goat-data \
+          -e GH_RELEASE=$RELEASE \
+          -e GH_SOURCE=https://github.com/genomehubs/goat-data/tree/$RELEASE \
           -e GH_ACCESS_LOG=/genomehubs/logs/access.log \
+          -e GH_API_URL=https://172.27.18.167:3010/api/v2 \
           -e GH_ERROR_LOG=/genomehubs/logs/error.log \
-          -v /volumes/docker/logs/${{ env.RELEASE }}:/genomehubs/logs \
+          -v /volumes/docker/logs/$RELEASE:/genomehubs/logs \
           -v /volumes/docker/resources:/genomehubs/resources \
           --name goat-api \
           genomehubs/genomehubs-api:latest
 
           docker pull genomehubs/goat:latest
           docker rm -f goat-ui
+
           docker run -d --restart always \
           --net net-es \
           -p 8010:8880 \

@@ -195,7 +195,7 @@ jobs:
 
       - name: Delete indices and snapshots for that release, except dev/analysis_file snapshot
         run: |
-          curl -s -X DELETE "es1:9200/*"
+          curl -s -X DELETE "es1:9200/*--20*"
           curl -s -X DELETE "es1:9200/_snapshot/dev/20*"
       - name: Restore and rename analysis_file snapshot to current RELEASE indices
         run: |
@@ -245,13 +245,13 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
       - name: Snapshot BACKUP initassembly
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/dev/initassembly" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/initassembly?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
   genomehubs_index_attributes:
     needs:
@@ -296,7 +296,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
       - name: genomehubs index taxon genomesizekaryotype
         run: |
@@ -314,7 +314,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
       - name: genomehubs index taxon regional_lists
         run: |
@@ -368,7 +368,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
       - name: genomehubs index taxon lineages
         run: |
@@ -407,7 +407,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
       - name: Commit files in branch
         run: |
@@ -517,14 +517,14 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
     
       - name: Snapshot final fill to production-$RELEASE
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
+            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
 
   rsync_to_edin_prod:
