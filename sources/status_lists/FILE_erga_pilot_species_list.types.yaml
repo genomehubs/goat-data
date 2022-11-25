@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: erga_expanded.tsv
   source:  Declared Status Lists - ERGA Pilot
-  source_date: 2022-06-22
+  source_date: 2022-11-23
   source_description: Declared Status Lists - ERGA Pilot, live Spreadsheet - Pilot Project Tracker  
   #source_contact:
 attributes:
@@ -14,6 +14,8 @@ attributes:
     header: other_priority
   family_representative:
     header: family_representative
+  contributing_project_lab:
+    header: contributing_project_lab
   sequencing_status:
     header: sequencing_status
   sequencing_status_erga:
@@ -30,4 +32,7 @@ attributes:
     header: published
 taxonomy:
   taxon_id:
-    header: NCBI_taxon_id
+    header: ncbi_taxon_id
+  species:
+    header: species
+

@@ -2,18 +2,30 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: VGP_Ordinal_Phase1_2022-06-07.tsv
+  name: VGP_Ordinal_Phase1_plus.tsv
   source: Declared Target List - VGP
   source_description: Declared Target List for the Ordinal Phase, Vertebrates Genome Project, live spreadsheet - VGP Ordinal Phase List
   #source_contact:
-  source_date: 2022-06-07
+  source_date: 2022-11-23
 attributes:
   long_list:
     header: phase1
   other_priority:
     header: phase1
+  sequencing_status:
+    header: status
+  sequencing_status_vgp:
+    header: status
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  insdc_open:
+    header: insdc_open
 taxonomy:
-  phylum:
-    header: phylum
+  order:
+    header: orders_latin_name
   species:
-    header: latin_name_1
+    header: species_sequenced

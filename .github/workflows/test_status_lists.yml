@@ -118,8 +118,8 @@ jobs:
           -e GH_CLIENT_PORT=8880 \
           -e GH_API_URL=http://172.27.18.167:3010/api/v2 \
           -e GH_SUGGESTED_TERM=Canidae \
-          -e GH_ARCHIVE=latest \
           -e GH_BASENAME=/ \
           -e GH_SITENAME=GoaT \
+          -e GH_ARCHIVE=latest \
           --name goat-ui \
           genomehubs/goat:latest

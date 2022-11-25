@@ -2,10 +2,10 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: CCGP_expanded_2022-07-06.tsv
+  name: CCGP_expanded.tsv
   source: Declared Status List - CCGP
   source_description: California Conservation Genomics Project live spreadsheet synced with CCGP tracking system - https://www.ccgproject.org/reference-genomes-tracking
-  source_date: 2022-06-28
+  source_date: 2022-11-08
   source_contact: Courtney Miller & Erin Toffelmier, University of California, Los Angeles - UCLA
 attributes:
   long_list:
