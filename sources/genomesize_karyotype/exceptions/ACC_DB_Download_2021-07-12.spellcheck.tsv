@@ -282,7 +282,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 176381	Cicindela argentata_	species	Brasiella argentata
 176422	Cicindela aterrima_	species	Cicindela aterrima
 262318	Cicindela aurulenta_	species	Cicindela aurulenta
-869531	Cicindela bigemi	species	Cylindera bigemina
 150234	Cicindela campestris_	species	Cicindela campestris
 1485677	Cicindela deserticoloides_	species	Cephalota deserticoloides
 38653	Cicindela dorsalis_	species	Habroscelimorpha dorsalis
@@ -531,6 +530,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1473609	Elaphidion villosum_	species	Anelaphus villosus
 558742	Epiglenea comes_	species	Epiglenea comes
 1554469	Ergates faber_	species	Ergates faber
+557795	Eutrapha ocelota_	species	Eutetrapha ocelota
 1586481	Exocentrus adspersus_	species	Exocentrus adspersus
 1553321	Exocentrus lusitanus_	species	Exocentrus lusitanus
 1586482	Exocentrus punctipennis_	species	Exocentrus punctipennis
@@ -937,7 +937,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2008391	Boreonectes ibericus_	species	Boreonectes ibericus
 1309560	Boreonectes multilineatus_	species	Boreonectes multilineatus
 1309561	Boreonectes riberae_	species	Boreonectes riberae
-	Colymbetes adpressus	species	corymbites impressus	colymbetes impressus
+	Colymbetes adpressus	species	colymbetes impressus	corymbites impressus
 1368183	Colymbetes bipustulatus	species	Calambus bipustulatus
 1509382	Colymbetes fuscus_	species	Colymbetes fuscus
 1610039	Colymbetes lapponicus	species	Calambus japonicus
@@ -1103,7 +1103,6 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
 icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
-466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata_	species	Isomira quadristriata
@@ -1196,7 +1195,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 448099	Amitermes eucalipti	species	Amitermes eucalypti
 1934507	Microcerotermes fuscotibiatis	species	Microcerotermes fuscotibialis
 	Reticutitermes santonensis	species	reticulitermes santonensis
-179666	Hypocrita jocobaea	species	Tyria jacobaeae
 987980	Miltochrista zuiniata	species	Miltochrista miniata
 511340	Telphusa fluvuatillis	species	Potamon fluviatile
 942386	Euphyia luctuata	species	Enchoria lacteata
@@ -1334,10 +1332,10 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 272250	Rampholeon marshalli	species	Rhampholeon marshalli
 179929	Rampholeon spectrum	species	Rhampholeon spectrum
 1481338	Alsophylax laevis	species	Cyathea surinamensis
-	Gekko gekko	species	germo germo	gekko gecko	gecko gecko
+	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
-	Natricidae	family	anthicidae	naticidae
+219442	Natricidae	family	Anthicidae
 	Cyclodina olivieri	species	cyclodina oliveri
 253933	Ameiva maynardii	species	Pholidoscelis maynardi
 2936315	Aspidoscelis neomexicana	species	Aspidoscelis neomexicanus
