@@ -28,18 +28,18 @@ NCBI_taxon_id	Genus	species	family	target_list_status	sequencing_status	synonym	
 156871	Rana	arvalis	Ranidae	ebpn_other_priority			EBPN		EBPN						
 8323	Triturus	cristatus	Salamandridae	ebpn_other_priority			EBPN		EBPN						
 371907	Bubo	scandiacus	Strigidae	ebpn_other_priority			EBPN		EBPN						
-127875	Cinclus	cinclus	Cinclidae	ebpn_other_priority			EBPN		EBPN						
+127875	Cinclus	cinclus	Cinclidae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 28701	Fratercula	arctica	Alcidae	ebpn_other_priority			EBPN		EBPN						
-52792	Luscinia	svecica	Turdidae	ebpn_other_priority			EBPN		EBPN						
-7748	Lampetra	fluviatilis	Petromyzontidae	ebpn_other_priority			EBPN		EBPN						
-7750	Lampetra	planeri	Petromyzontidae	ebpn_other_priority			EBPN		EBPN						
+52792	Luscinia	svecica	Turdidae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
+7748	Lampetra	fluviatilis	Petromyzontidae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
+7750	Lampetra	planeri	Petromyzontidae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 648166	Etmopterus	spinax	Etmopteridae	ebpn_other_priority			EBPN		EBPN						
 9852	Alces	alces	Cervidae	ebpn_other_priority			EBPN		EBPN						
 79949	Lemmus	lemmus	Cricetidae	ebpn_other_priority			EBPN		EBPN						
 13125	Lynx	lynx	Felidae	ebpn_other_priority			EBPN		EBPN						
 37176	Ovibos	moschatus	Bovidae	ebpn_other_priority			EBPN		EBPN						
 9720	Phoca	vitulina	Phocidae	ebpn_other_priority			EBPN		EBPN						
-228257	Rangifer	tarandus	Cervidae	ebpn_other_priority		Rangifer tarandus platyrhynchus	EBPN		EBPN						
+228257	Rangifer	tarandus	Cervidae	ebpn_other_priority		Rangifer tarandus platyrhyncus	EBPN		EBPN						
 9870	Rangifer	tarandus	Cervidae	ebpn_other_priority			EBPN		EBPN						
 8524	Zootoca	vivipara	Lacertidae	ebpn_other_priority			EBPN		EBPN						
 2697470	Synoicum	turgens	Polyclinidae	ebpn_other_priority			EBPN		EBPN						
@@ -85,6 +85,7 @@ NCBI_taxon_id	Genus	species	family	target_list_status	sequencing_status	synonym	
 42458	Lichtheimia	corymbifera	Lichtheimiaceae	ebpn_other_priority			EBPN		EBPN						
 64518	Mortierella	alpina	Mortierellaceae	ebpn_other_priority			EBPN		EBPN						
 64524	Mortierella	hyalina	Mortierellaceae	ebpn_other_priority			EBPN		EBPN						
+64524	Linnemannia	hyalina	Mortierellaceae	ebpn_other_priority			EBPN		EBPN						
 36080	Mucor	circinelloides	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
 4846	Rhizopus	stolonifer	Rhizopodaceae	ebpn_other_priority			EBPN		EBPN						
 44442	Umbelopsis	vinacea	Umbelopsidaceae	ebpn_other_priority			EBPN		EBPN						
@@ -96,7 +97,7 @@ NCBI_taxon_id	Genus	species	family	target_list_status	sequencing_status	synonym	
 128206	Sphagnum	jensenii	Sphagnaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 128247	Sphagnum	tenellum	Sphagnaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 128251	Sphagnum	troendelagicum	Sphagnaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
-13385	Calluna	vulgaris	Ericaceae	ebpn_other_priority			EBPN		EBPN						
+13385	Calluna	vulgaris	Ericaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 109591	Cardamine	bellidifolia	Brassicaceae	ebpn_other_priority			EBPN		EBPN						
 13447	Conium	maculatum	Apiaceae	ebpn_other_priority			EBPN		EBPN						
 90606	Micranthes	nivalis	Saxifragaceae	ebpn_other_priority		Saxifraga nivalis	EBPN		EBPN						
@@ -104,9 +105,9 @@ NCBI_taxon_id	Genus	species	family	target_list_status	sequencing_status	synonym	
 1891520	Potentilla	arenosa	Rosaceae	ebpn_other_priority		Potentilla arenosa chamissonis	EBPN		EBPN						
 97307	Prunus	padus	Rosaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 135518	Ribes	uva-crispa	Grossulariaceae	ebpn_other_priority			EBPN		EBPN						
-57936	Rubus	chamaemorus	Rosaceae	ebpn_other_priority			EBPN		EBPN						
+57936	Rubus	chamaemorus	Rosaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 406025	Saxifraga	adscendens	Saxifragaceae	ebpn_other_priority			EBPN		EBPN						
-102720	Saxifraga	cotyledon	Saxifragaceae	ebpn_other_priority			EBPN		EBPN						
+102720	Saxifraga	cotyledon	Saxifragaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 669826	Saxifraga	hyperborea	Saxifragaceae	ebpn_other_priority			EBPN		EBPN						
 102733	Saxifraga	osloensis	Saxifragaceae	ebpn_other_priority			EBPN		EBPN						
 406026	Saxifraga	tridactylites	Saxifragaceae	ebpn_other_priority			EBPN		EBPN						
@@ -115,13 +116,13 @@ NCBI_taxon_id	Genus	species	family	target_list_status	sequencing_status	synonym	
 114204	Narthecium	ossifragum	Nartheniaceae	ebpn_other_priority			EBPN		EBPN						
 1187000	Colura	calyptrifolia	Lejeuneaceae	ebpn_other_priority			EBPN		EBPN						
 1133313	Scapania	nimbosa	Scapaniaceae	ebpn_other_priority			EBPN		EBPN						
-147940	Asplenium	viride	Aspleniaceae	ebpn_other_priority			EBPN		EBPN						
+147940	Asplenium	viride	Aspleniaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 125796	Benthosema	glaciale	Myctophidae	ebpn_other_priority			EBPN		EBPN						
 76058	Somateria	mollissima	Anatidae	ebpn_other_priority			EBPN		EBPN						
-478208	Flustra	foliacea	Flustridae	ebpn_other_priority			EBPN		EBPN						
+478208	Flustra	foliacea	Flustridae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 860324	Melica	nutans	Poaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 879067	Xestobium	rufovillosum	Ptinidae	ebpn_other_priority			EBPN		EBPN						
-1425294	Anelasma	squalicola	Pollicipedidae	ebpn_other_priority			EBPN		EBPN						
+1425294	Anelasma	squalicola	Pollicipedidae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 9770	Balaenoptera	physalus	Balaenopteridae	ebpn_other_priority			EBPN		EBPN						
 84120	Anoplodium	stichopi	Umagillidae	ebpn_other_priority			EBPN		EBPN						
 1707561	Parastichopus	tremulus	Stichopodidae	ebpn_other_priority			EBPN		EBPN						
@@ -133,7 +134,22 @@ NCBI_taxon_id	Genus	species	family	target_list_status	sequencing_status	synonym	
 6715	Astacus	astacus	Astacidae	ebpn_other_priority			EBPN		EBPN						
 1553340	Gyrophaena	boleti	Staphylinidae	ebpn_other_priority			EBPN		EBPN						
 29687	Nardus	stricta	Poaceae	ebpn_other_priority			EBPN		EBPN						
-669863	Viola	epipsila	Violaceae	ebpn_other_priority			EBPN		EBPN						
+669863	Viola	epipsila	Violaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
+64522	Linnemannia	gamsii	Mortierellaceae	ebpn_other_priority			EBPN		EBPN						
+589210	Mortierella	globalpina	Mortierellaceae	ebpn_other_priority			EBPN		EBPN						
+64523	Podila	humilis	Mortierellaceae	ebpn_other_priority			EBPN		EBPN						
+213030	Absidia	cylindrospora	Cunninghamellaceae	ebpn_other_priority			EBPN		EBPN						
+76405	Cunninghamella	echinulata	Cunninghamellaceae	ebpn_other_priority			EBPN		EBPN						
+64495	Rhizopus	arrhizus	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
+439312	Mucor	flavus	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
+64491	Mucor	fragilis	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
+64493	Mucor	hiemalis	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
+1091291	Mucor	lanceolatus	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
+97098	Mucor	plumbeus	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
+4841	Mucor	racemosus	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
+58291	Rhizopus	microsporus	Mucoraceae	ebpn_other_priority			EBPN		EBPN						
+41833	Umbelopsis	ramanniana	Umbelopsidaceae	ebpn_other_priority			EBPN		EBPN						
+3752	Malus	sylvestris	Rosaceae	ebpn_other_priority	sample_acquired		EBPN		EBPN	EBPN	EBPN				
 	Antho	dichotoma	Microcionidae	ebpn_other_priority			EBPN		EBPN						
 	Tolypella	normaniana	Characeae	ebpn_other_priority			EBPN		EBPN						
 	Enteroxenos	oestergreni	Eulimidae	ebpn_other_priority			EBPN		EBPN						

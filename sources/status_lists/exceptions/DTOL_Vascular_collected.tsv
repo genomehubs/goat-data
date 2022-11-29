@@ -1,12 +1,12 @@
 Family	Genus	Species	NCBI name (if different)	Status	2020	lowest_priority	RBGE_2021	RBGK_2021	RBGE_2022	RBGK_2022	sample_collected	other_priority	family_representative	long_list
 Amaranthaceae	Salicornia	disarticulata		dtol										DTOL
 Apiaceae	Trocdaris	verticillata		dtol										DTOL
-Asteraceae	Artemisia	campestris		dtol										DTOL
+Asteraceae	Artemisia	campestris		dtol						yes	DTOL			DTOL
 Asteraceae	Aster	lanceolatus		dtol										DTOL
-Asteraceae	Filago	germanica	Filago vulgaris	dtol						yes	DTOL			DTOL
-Asteraceae	Hieracium	agg												DTOL
+Asteraceae	Filago	germanica		dtol										DTOL
+Asteraceae	Hieracium	agg								yes	DTOL			DTOL
 Asteraceae	Taraxacum	agg												DTOL
-Boraginaceae	Aegonychon	purpureocaeruleum		dtol										DTOL
+Boraginaceae	Aegonychon	purpureocaeruleum		dtol						yes	DTOL			DTOL
 Caryophyllaceae	Sabulina	stricta		dtol										DTOL
 Caryophyllaceae	Stellaria	aquatica		dtol										DTOL
 Cyperaceae	Carex	simpliciusulca		dtol										DTOL
@@ -14,7 +14,7 @@ Fabaceae	Ervilia	sylvatica		dtol										DTOL
 Geraniaceae	Erodium	aethiopicum		dtol										DTOL
 Phrymaceae	Mimulus	guttatus		dtol_family_representative		yes					DTOL		DTOL	DTOL
 Poaceae	Poa	humilis		dtol										DTOL
-Poaceae	Schedonorus	arundinaceus		dtol					yes		DTOL			DTOL
+Poaceae	Schedonorus	arundinaceus	Lolium arundinaceum	dtol					yes		DTOL			DTOL
 Poaceae	Schedonorus	pratensis		dtol										DTOL
 Rosaceae	Potentilla	rupestris		dtol										DTOL
 Rosaceae	Sorbus	scannelliana		dtol										DTOL

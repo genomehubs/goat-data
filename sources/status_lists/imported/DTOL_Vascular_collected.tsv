@@ -78,7 +78,7 @@ Woodsiaceae	Athyrium	filix-femina		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Woodsiaceae	Woodsia	alpina		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Woodsiaceae	Woodsia	ilvensis		dtol_family_representative	yes						DTOL		DTOL	DTOL
 Adoxaceae	Adoxa	moschatellina		dtol				yes			DTOL			DTOL
-Adoxaceae	Sambucus	ebulus		dtol										DTOL
+Adoxaceae	Sambucus	ebulus		dtol						yes	DTOL			DTOL
 Adoxaceae	Sambucus	nigra		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Adoxaceae	Viburnum	lantana		dtol_family_representative				yes			DTOL		DTOL	DTOL
 Adoxaceae	Viburnum	opulus		dtol										DTOL
@@ -87,7 +87,7 @@ Aizoaceae	Disphyma	crassifolium		dtol_family_representative						yes	DTOL		DTOL	
 Alismataceae	Alisma	gramineum		dtol										DTOL
 Alismataceae	Alisma	lanceolatum		dtol										DTOL
 Alismataceae	Alisma	plantago-aquatica		dtol_family_representative				yes			DTOL		DTOL	DTOL
-Alismataceae	Baldellia	ranunculoides		dtol										DTOL
+Alismataceae	Baldellia	ranunculoides		dtol						yes	DTOL			DTOL
 Alismataceae	Damasonium	alisma		dtol										DTOL
 Alismataceae	Luronium	natans		dtol										DTOL
 Alismataceae	Sagittaria	latifolia		dtol										DTOL
@@ -132,6 +132,7 @@ Amaryllidaceae	Allium	sphaerocephalon		dtol										DTOL
 Amaryllidaceae	Allium	triquetrum		dtol				yes			DTOL			DTOL
 Amaryllidaceae	Allium	ursinum		dtol				yes			DTOL			DTOL
 Amaryllidaceae	Allium	vineale		dtol						yes	DTOL			DTOL
+Amaryllidaceae	Galanthus	nivalis		dtol										DTOL
 Amaryllidaceae	Narcissus	pseudonarcissus		dtol_other_priority				yes			DTOL	DTOL		DTOL
 Apiaceae	Aegopodium	podagraria		dtol					yes		DTOL			DTOL
 Apiaceae	Aethusa	cynapium		dtol										DTOL
@@ -154,8 +155,8 @@ Apiaceae	Conopodium	majus		dtol						yes	DTOL			DTOL
 Apiaceae	Crithmum	maritimum		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Apiaceae	Daucus	carota		dtol_family_representative	yes			yes			DTOL		DTOL	DTOL
 Apiaceae	Eryngium	campestre		dtol				yes			DTOL			DTOL
-Apiaceae	Eryngium	maritimum		dtol										DTOL
-Apiaceae	Foeniculum	vulgare		dtol										DTOL
+Apiaceae	Eryngium	maritimum		dtol						yes	DTOL			DTOL
+Apiaceae	Foeniculum	vulgare		dtol						yes	DTOL			DTOL
 Apiaceae	Helosciadium	inundatum		dtol										DTOL
 Apiaceae	Helosciadium	nodiflorum		dtol				yes			DTOL			DTOL
 Apiaceae	Helosciadium	repens		dtol										DTOL
@@ -168,7 +169,7 @@ Apiaceae	Oenanthe	aquatica		dtol										DTOL
 Apiaceae	Oenanthe	crocata		dtol					yes		DTOL			DTOL
 Apiaceae	Oenanthe	fistulosa		dtol										DTOL
 Apiaceae	Oenanthe	fluviatilis		dtol										DTOL
-Apiaceae	Oenanthe	lachenalii		dtol										DTOL
+Apiaceae	Oenanthe	lachenalii		dtol					yes		DTOL			DTOL
 Apiaceae	Oenanthe	pimpinelloides		dtol						yes	DTOL			DTOL
 Apiaceae	Oenanthe	silaifolia		dtol										DTOL
 Apiaceae	Pastinaca	sativa		dtol										DTOL
@@ -180,11 +181,11 @@ Apiaceae	Pimpinella	saxifraga		dtol										DTOL
 Apiaceae	Sanicula	europaea		dtol			yes				DTOL			DTOL
 Apiaceae	Scandix	pecten-veneris		dtol										DTOL
 Apiaceae	Selinum	carvifolia		dtol										DTOL
-Apiaceae	Seseli	libanotis		dtol										DTOL
-Apiaceae	Silaum	silaus		dtol										DTOL
+Apiaceae	Seseli	libanotis		dtol						yes	DTOL			DTOL
+Apiaceae	Silaum	silaus		dtol						yes	DTOL			DTOL
 Apiaceae	Sison	amomum		dtol										DTOL
 Apiaceae	Sison	segetum		dtol										DTOL
-Apiaceae	Sium	latifolium		dtol										DTOL
+Apiaceae	Sium	latifolium		dtol				yes			DTOL			DTOL
 Apiaceae	Smyrnium	olusatrum		dtol				yes			DTOL			DTOL
 Apiaceae	Smyrnium	perfoliatum		dtol				yes			DTOL			DTOL
 Apiaceae	Thysselinum	palustre		dtol										DTOL
@@ -197,7 +198,7 @@ Aponogetonaceae	Aponogeton	distachyos		dtol_family_representative	yes						DTOL	
 Aquifoliaceae	Ilex	aquifolium		dtol_family_representative	yes		yes				DTOL		DTOL	DTOL
 Araceae	Arum	italicum		dtol						yes	DTOL			DTOL
 Araceae	Arum	maculatum	Arum italicum subsp. neglectum	dtol_family_representative				yes			DTOL		DTOL	DTOL
-Araceae	Lemna	gibba		dtol_other_priority				yes			DTOL	DTOL		DTOL
+Araceae	Lemna	gibba		dtol_other_priority								DTOL		DTOL
 Araceae	Lemna	minor		dtol										DTOL
 Araceae	Lemna	minuta		dtol				yes			DTOL			DTOL
 Araceae	Lemna	trisulca		dtol				yes			DTOL			DTOL
@@ -234,7 +235,7 @@ Asteraceae	Artemisia	maritima		dtol				yes			DTOL			DTOL
 Asteraceae	Artemisia	norvegica		dtol										DTOL
 Asteraceae	Artemisia	vulgaris		dtol				yes			DTOL			DTOL
 Asteraceae	Bellis	perennis		dtol_family_representative	yes						DTOL		DTOL	DTOL
-Asteraceae	Bidens	cernua		dtol										DTOL
+Asteraceae	Bidens	cernua		dtol						yes	DTOL			DTOL
 Asteraceae	Bidens	tripartita		dtol										DTOL
 Asteraceae	Calendula	officinalis		dtol_other_priority		yes		yes			DTOL	DTOL		DTOL
 Asteraceae	Carduus	crispus		dtol					yes		DTOL			DTOL
@@ -263,13 +264,13 @@ Asteraceae	Crepis	mollis		dtol										DTOL
 Asteraceae	Crepis	paludosa		dtol					yes		DTOL			DTOL
 Asteraceae	Crepis	praemorsa		dtol										DTOL
 Asteraceae	Erigeron	acris		dtol										DTOL
-Asteraceae	Erigeron	borealis		dtol										DTOL
+Asteraceae	Erigeron	borealis		dtol					yes		DTOL			DTOL
 Asteraceae	Eupatorium	cannabinum		dtol_other_priority	yes						DTOL	DTOL		DTOL
-Asteraceae	Filago	lutescens		dtol										DTOL
+Asteraceae	Filago	lutescens		dtol						yes	DTOL			DTOL
 Asteraceae	Filago	pyramidata		dtol				yes			DTOL			DTOL
-Asteraceae	Galatella	linosyris		dtol										DTOL
+Asteraceae	Galatella	linosyris		dtol						yes	DTOL			DTOL
 Asteraceae	Glebionis	segetum		dtol										DTOL
-Asteraceae	Gnaphalium	uliginosum		dtol										DTOL
+Asteraceae	Gnaphalium	uliginosum		dtol						yes	DTOL			DTOL
 Asteraceae	Helminthotheca	echioides		dtol				yes			DTOL			DTOL
 Asteraceae	Homogyne	alpina		dtol										DTOL
 Asteraceae	Hypochaeris	glabra		dtol										DTOL
@@ -281,7 +282,7 @@ Asteraceae	Inula	salicina		dtol										DTOL
 Asteraceae	Jacobaea	aquatica		dtol										DTOL
 Asteraceae	Jacobaea	erucifolia		dtol						yes	DTOL			DTOL
 Asteraceae	Jacobaea	paludosa		dtol										DTOL
-Asteraceae	Jacobaea	vulgaris		dtol						yes	DTOL			DTOL
+Asteraceae	Jacobaea	vulgaris		dtol					yes	yes	DTOL			DTOL
 Asteraceae	Lactuca	saligna		dtol_other_priority				yes			DTOL	DTOL		DTOL
 Asteraceae	Lactuca	serriola		dtol										DTOL
 Asteraceae	Lactuca	virosa		dtol										DTOL
@@ -291,7 +292,7 @@ Asteraceae	Leontodon	saxatilis		dtol						yes	DTOL			DTOL
 Asteraceae	Leucanthemum	vulgare		dtol						yes	DTOL			DTOL
 Asteraceae	Limbarda	crithmoides		dtol										DTOL
 Asteraceae	Logfia	gallica		dtol										DTOL
-Asteraceae	Logfia	minima		dtol										DTOL
+Asteraceae	Logfia	minima		dtol						yes	DTOL			DTOL
 Asteraceae	Matricaria	chamomilla	Matricaria recutita	dtol						yes	DTOL			DTOL
 Asteraceae	Mycelis	muralis		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Asteraceae	Omalotheca	norvegica		dtol										DTOL
@@ -306,9 +307,9 @@ Asteraceae	Picris	hieracioides		dtol										DTOL
 Asteraceae	Pilosella	officinarum		dtol					yes		DTOL			DTOL
 Asteraceae	Pilosella	peleteriana		dtol										DTOL
 Asteraceae	Pulicaria	dysenterica		dtol_other_priority	yes						DTOL	DTOL		DTOL
-Asteraceae	Pulicaria	vulgaris		dtol										DTOL
+Asteraceae	Pulicaria	vulgaris		dtol						yes	DTOL			DTOL
 Asteraceae	Saussurea	alpina		dtol										DTOL
-Asteraceae	Scorzonera	humilis		dtol										DTOL
+Asteraceae	Scorzonera	humilis		dtol						yes	DTOL			DTOL
 Asteraceae	Scorzoneroides	autumnalis		dtol			yes				DTOL			DTOL
 Asteraceae	Senecio	cambrensis		dtol										DTOL
 Asteraceae	Senecio	sylvaticus		dtol						yes	DTOL			DTOL
@@ -320,7 +321,7 @@ Asteraceae	Sonchus	arvensis		dtol			yes				DTOL			DTOL
 Asteraceae	Sonchus	asper		dtol			yes				DTOL			DTOL
 Asteraceae	Sonchus	oleraceus		dtol					yes		DTOL			DTOL
 Asteraceae	Sonchus	palustris		dtol										DTOL
-Asteraceae	Tanacetum	parthenium		dtol										DTOL
+Asteraceae	Tanacetum	parthenium		dtol						yes	DTOL			DTOL
 Asteraceae	Tanacetum	vulgare		dtol_family_representative	yes						DTOL		DTOL	DTOL
 Asteraceae	Tephroseris	palustris		dtol										DTOL
 Asteraceae	Tragopogon	pratensis	Tragopogon pratensis subsp. minus	dtol						yes	DTOL			DTOL
@@ -341,13 +342,13 @@ Betulaceae	Carpinus	betulus		dtol				yes			DTOL			DTOL
 Betulaceae	Corylus	avellana		dtol				yes			DTOL			DTOL
 Boraginaceae	Borago	officinalis		dtol	yes						DTOL			DTOL
 Boraginaceae	Buglossoides	arvensis		dtol										DTOL
-Boraginaceae	Cynoglossum	germanicum		dtol										DTOL
+Boraginaceae	Cynoglossum	germanicum		dtol						yes	DTOL			DTOL
 Boraginaceae	Cynoglossum	officinale		dtol										DTOL
 Boraginaceae	Echium	plantagineum		dtol										DTOL
 Boraginaceae	Echium	vulgare		dtol_family_representative			yes				DTOL		DTOL	DTOL
 Boraginaceae	Lithospermum	officinale		dtol										DTOL
 Boraginaceae	Mertensia	maritima		dtol										DTOL
-Boraginaceae	Myosotis	alpestris		dtol										DTOL
+Boraginaceae	Myosotis	alpestris		dtol					yes		DTOL			DTOL
 Boraginaceae	Myosotis	arvensis		dtol										DTOL
 Boraginaceae	Myosotis	discolor		dtol										DTOL
 Boraginaceae	Myosotis	laxa		dtol										DTOL
@@ -365,7 +366,7 @@ Boraginaceae	Symphytum	tuberosum							yes		DTOL			DTOL
 Brassicaceae	Alliaria	petiolata		dtol				yes			DTOL			DTOL
 Brassicaceae	Arabidopsis	petraea		dtol										DTOL
 Brassicaceae	Arabidopsis	thaliana		dtol_other_priority	yes						DTOL	DTOL		DTOL
-Brassicaceae	Arabis	alpina		dtol										DTOL
+Brassicaceae	Arabis	alpina		dtol						yes	DTOL			DTOL
 Brassicaceae	Arabis	hirsuta		dtol										DTOL
 Brassicaceae	Arabis	scabra		dtol										DTOL
 Brassicaceae	Armoracia	rusticana		dtol				yes			DTOL			DTOL
@@ -409,15 +410,15 @@ Brassicaceae	Lepidium	coronopus		dtol										DTOL
 Brassicaceae	Lepidium	heterophyllum		dtol										DTOL
 Brassicaceae	Lepidium	latifolium		dtol										DTOL
 Brassicaceae	Lepidium	ruderale		dtol										DTOL
-Brassicaceae	Matthiola	sinuata		dtol										DTOL
+Brassicaceae	Matthiola	sinuata		dtol						yes	DTOL			DTOL
 Brassicaceae	Microthlaspi	perfoliatum		dtol										DTOL
 Brassicaceae	Nasturtium	microphyllum		dtol										DTOL
 Brassicaceae	Nasturtium	officinale		dtol						yes	DTOL			DTOL
 Brassicaceae	Noccaea	caerulescens		dtol										DTOL
 Brassicaceae	Rorippa	amphibia		dtol										DTOL
 Brassicaceae	Rorippa	islandica		dtol										DTOL
-Brassicaceae	Rorippa	palustris		dtol										DTOL
-Brassicaceae	Rorippa	sylvestris		dtol						yes	DTOL			DTOL
+Brassicaceae	Rorippa	palustris		dtol					yes		DTOL			DTOL
+Brassicaceae	Rorippa	sylvestris		dtol										DTOL
 Brassicaceae	Sinapis	alba		dtol										DTOL
 Brassicaceae	Sinapis	arvensis		dtol					yes		DTOL			DTOL
 Brassicaceae	Sisymbrium	officinale		dtol						yes	DTOL			DTOL
@@ -425,7 +426,7 @@ Brassicaceae	Subularia	aquatica		dtol										DTOL
 Brassicaceae	Teesdalia	nudicaulis		dtol										DTOL
 Brassicaceae	Thlaspi	arvense		dtol										DTOL
 Brassicaceae	Thlaspi	caerulescens		dtol										DTOL
-Brassicaceae	Turritis	glabra		dtol										DTOL
+Brassicaceae	Turritis	glabra		dtol						yes	DTOL			DTOL
 Butomaceae	Butomus	umbellatus		dtol_family_representative	yes						DTOL		DTOL	DTOL
 Buxaceae	Buxus	sempervirens		dtol_family_representative	yes						DTOL		DTOL	DTOL
 Cabombaceae	Cabomba	caroliniana		dtol_family_representative									DTOL	DTOL
@@ -438,7 +439,7 @@ Campanulaceae	Campanula	trachelium		dtol										DTOL
 Campanulaceae	Jasione	montana		dtol_family_representative				yes			DTOL		DTOL	DTOL
 Campanulaceae	Legousia	hybrida		dtol										DTOL
 Campanulaceae	Lobelia	dortmanna		dtol				yes			DTOL			DTOL
-Campanulaceae	Lobelia	urens		dtol										DTOL
+Campanulaceae	Lobelia	urens		dtol						yes	DTOL			DTOL
 Campanulaceae	Phyteuma	orbiculare		dtol				yes			DTOL			DTOL
 Campanulaceae	Phyteuma	spicatum		dtol				yes			DTOL			DTOL
 Campanulaceae	Wahlenbergia	hederacea		dtol										DTOL
@@ -449,7 +450,7 @@ Caryophyllaceae	Agrostemma	githago		dtol				yes			DTOL			DTOL
 Caryophyllaceae	Arenaria	ciliata		dtol										DTOL
 Caryophyllaceae	Arenaria	leptoclados		dtol										DTOL
 Caryophyllaceae	Arenaria	serpyllifolia		dtol										DTOL
-Caryophyllaceae	Cerastium	alpinum		dtol										DTOL
+Caryophyllaceae	Cerastium	alpinum		dtol					yes		DTOL			DTOL
 Caryophyllaceae	Cerastium	arvense		dtol					yes		DTOL			DTOL
 Caryophyllaceae	Cerastium	cerastoides		dtol										DTOL
 Caryophyllaceae	Cerastium	diffusum		dtol										DTOL
@@ -466,7 +467,7 @@ Caryophyllaceae	Dianthus	gratianopolitanus		dtol										DTOL
 Caryophyllaceae	Herniaria	ciliolata		dtol						yes	DTOL			DTOL
 Caryophyllaceae	Herniaria	glabra		dtol										DTOL
 Caryophyllaceae	Honckenya	peploides		dtol_other_priority	yes						DTOL	DTOL		DTOL
-Caryophyllaceae	Illecebrum	verticillatum		dtol										DTOL
+Caryophyllaceae	Illecebrum	verticillatum		dtol						yes	DTOL			DTOL
 Caryophyllaceae	Minuartia	recurva		dtol										DTOL
 Caryophyllaceae	Moehringia	trinervia		dtol										DTOL
 Caryophyllaceae	Moenchia	erecta		dtol										DTOL
@@ -480,7 +481,7 @@ Caryophyllaceae	Sagina	apetala		dtol										DTOL
 Caryophyllaceae	Sagina	filicaulis		dtol										DTOL
 Caryophyllaceae	Sagina	maritima		dtol										DTOL
 Caryophyllaceae	Sagina	nivalis		dtol										DTOL
-Caryophyllaceae	Sagina	nodosa		dtol										DTOL
+Caryophyllaceae	Sagina	nodosa		dtol						yes	DTOL			DTOL
 Caryophyllaceae	Sagina	procumbens		dtol						yes	DTOL			DTOL
 Caryophyllaceae	Sagina	saginoides		dtol										DTOL
 Caryophyllaceae	Sagina	subulata		dtol										DTOL
@@ -497,7 +498,7 @@ Caryophyllaceae	Silene	nutans		dtol										DTOL
 Caryophyllaceae	Silene	otites		dtol										DTOL
 Caryophyllaceae	Silene	suecica		dtol										DTOL
 Caryophyllaceae	Silene	uniflora		dtol						yes	DTOL			DTOL
-Caryophyllaceae	Silene	viscaria		dtol										DTOL
+Caryophyllaceae	Silene	viscaria		dtol						yes	DTOL			DTOL
 Caryophyllaceae	Silene	vulgaris		dtol					yes		DTOL			DTOL
 Caryophyllaceae	Spergularia	marina		dtol_other_priority			yes				DTOL	DTOL		DTOL
 Caryophyllaceae	Spergularia	media		dtol					yes		DTOL			DTOL
@@ -542,7 +543,7 @@ Cucurbitaceae	Bryonia	dioica		dtol_family_representative	yes			yes			DTOL		DTOL	
 Cyperaceae	Blysmus	compressus		dtol										DTOL
 Cyperaceae	Blysmus	rufus		dtol										DTOL
 Cyperaceae	Bolboschoenus	laticarpus		dtol										DTOL
-Cyperaceae	Bolboschoenus	maritimus		dtol										DTOL
+Cyperaceae	Bolboschoenus	maritimus		dtol					yes		DTOL			DTOL
 Cyperaceae	Carex	acuta		dtol										DTOL
 Cyperaceae	Carex	acutiformis		dtol					yes		DTOL			DTOL
 Cyperaceae	Carex	appropinquata		dtol										DTOL
@@ -564,12 +565,12 @@ Cyperaceae	Carex	depauperata		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Cyperaceae	Carex	diandra		dtol										DTOL
 Cyperaceae	Carex	digitata		dtol										DTOL
 Cyperaceae	Carex	dioica		dtol										DTOL
-Cyperaceae	Carex	distans		dtol										DTOL
-Cyperaceae	Carex	disticha		dtol										DTOL
+Cyperaceae	Carex	distans		dtol						yes	DTOL			DTOL
+Cyperaceae	Carex	disticha		dtol						yes	DTOL			DTOL
 Cyperaceae	Carex	divisa		dtol										DTOL
 Cyperaceae	Carex	divulsa		dtol						yes	DTOL			DTOL
 Cyperaceae	Carex	echinata		dtol										DTOL
-Cyperaceae	Carex	elata		dtol										DTOL
+Cyperaceae	Carex	elata		dtol						yes	DTOL			DTOL
 Cyperaceae	Carex	elongata		dtol										DTOL
 Cyperaceae	Carex	ericetorum		dtol										DTOL
 Cyperaceae	Carex	extensa		dtol										DTOL
@@ -582,19 +583,19 @@ Cyperaceae	Carex	humilis		dtol										DTOL
 Cyperaceae	Carex	lachenalii		dtol										DTOL
 Cyperaceae	Carex	laevigata		dtol					yes		DTOL			DTOL
 Cyperaceae	Carex	lasiocarpa		dtol										DTOL
-Cyperaceae	Carex	lepidocarpa		dtol										DTOL
-Cyperaceae	Carex	leporina		dtol										DTOL
+Cyperaceae	Carex	lepidocarpa		dtol						yes	DTOL			DTOL
+Cyperaceae	Carex	leporina		dtol					yes		DTOL			DTOL
 Cyperaceae	Carex	limosa		dtol										DTOL
 Cyperaceae	Carex	magellanica		dtol										DTOL
 Cyperaceae	Carex	maritima		dtol										DTOL
 Cyperaceae	Carex	microglochin		dtol										DTOL
-Cyperaceae	Carex	montana		dtol										DTOL
+Cyperaceae	Carex	montana		dtol						yes	DTOL			DTOL
 Cyperaceae	Carex	muricata		dtol										DTOL
 Cyperaceae	Carex	nigra		dtol			yes				DTOL			DTOL
 Cyperaceae	Carex	norvegica		dtol										DTOL
 Cyperaceae	Carex	ornithopoda		dtol										DTOL
 Cyperaceae	Carex	otrubae		dtol					yes		DTOL			DTOL
-Cyperaceae	Carex	pallescens		dtol										DTOL
+Cyperaceae	Carex	pallescens		dtol						yes	DTOL			DTOL
 Cyperaceae	Carex	panicea		dtol_family_representative		yes					DTOL		DTOL	DTOL
 Cyperaceae	Carex	paniculata		dtol					yes		DTOL			DTOL
 Cyperaceae	Carex	pauciflora		dtol										DTOL
@@ -620,7 +621,7 @@ Cyperaceae	Carex	vesicaria		dtol										DTOL
 Cyperaceae	Carex	viridula		dtol										DTOL
 Cyperaceae	Carex	vulpina		dtol										DTOL
 Cyperaceae	Cladium	mariscus		dtol						yes	DTOL			DTOL
-Cyperaceae	Cyperus	fuscus		dtol										DTOL
+Cyperaceae	Cyperus	fuscus		dtol						yes	DTOL			DTOL
 Cyperaceae	Cyperus	longus		dtol										DTOL
 Cyperaceae	Eleocharis	acicularis		dtol										DTOL
 Cyperaceae	Eleocharis	mamillata		dtol										DTOL
@@ -636,7 +637,7 @@ Cyperaceae	Eriophorum	latifolium		dtol										DTOL
 Cyperaceae	Eriophorum	vaginatum		dtol					yes		DTOL			DTOL
 Cyperaceae	Isolepis	cernua		dtol						yes	DTOL			DTOL
 Cyperaceae	Isolepis	setacea		dtol										DTOL
-Cyperaceae	Rhynchospora	alba		dtol										DTOL
+Cyperaceae	Rhynchospora	alba		dtol					yes		DTOL			DTOL
 Cyperaceae	Rhynchospora	fusca		dtol										DTOL
 Cyperaceae	Schoenoplectus	lacustris		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Cyperaceae	Schoenoplectus	tabernaemontani		dtol			yes				DTOL			DTOL
@@ -663,13 +664,13 @@ Elatinaceae	Elatine	hexandra		dtol										DTOL
 Elatinaceae	Elatine	hydropiper		dtol										DTOL
 Ericaceae	Andromeda	polifolia		dtol			yes				DTOL			DTOL
 Ericaceae	Arbutus	unedo		dtol										DTOL
-Ericaceae	Arctostaphylos	alpinus		dtol										DTOL
+Ericaceae	Arctostaphylos	alpinus	Arctous alpina	dtol					yes		DTOL			DTOL
 Ericaceae	Arctostaphylos	uva-ursi		dtol			yes				DTOL			DTOL
 Ericaceae	Calluna	vulgaris		dtol_family_representative	yes		yes				DTOL		DTOL	DTOL
 Ericaceae	Empetrum	nigrum		dtol										DTOL
 Ericaceae	Erica	ciliaris		dtol_other_priority	yes			yes			DTOL	DTOL		DTOL
 Ericaceae	Erica	cinerea		dtol_family_representative			yes				DTOL		DTOL	DTOL
-Ericaceae	Erica	tetralix		dtol										DTOL
+Ericaceae	Erica	tetralix		dtol						yes	DTOL			DTOL
 Ericaceae	Erica	vagans		dtol						yes	DTOL			DTOL
 Ericaceae	Gaultheria	shallon		dtol										DTOL
 Ericaceae	Hypopitys	monotropa		dtol						yes	DTOL			DTOL
@@ -701,10 +702,10 @@ Euphorbiaceae	Mercurialis	annua		dtol_family_representative	yes						DTOL		DTOL	
 Euphorbiaceae	Mercurialis	perennis		dtol				yes			DTOL			DTOL
 Fabaceae	Anthyllis	vulneraria		dtol			yes				DTOL			DTOL
 Fabaceae	Astragalus	alpinus		dtol										DTOL
-Fabaceae	Astragalus	danicus		dtol					yes		DTOL			DTOL
+Fabaceae	Astragalus	danicus		dtol					yes	yes	DTOL			DTOL
 Fabaceae	Astragalus	glycyphyllos		dtol				yes			DTOL			DTOL
 Fabaceae	Cytisus	scoparius		dtol					yes	yes	DTOL			DTOL
-Fabaceae	Ervilia	hirsuta		dtol					yes		DTOL			DTOL
+Fabaceae	Ervilia	hirsuta	Vicia hirsuta	dtol					yes		DTOL			DTOL
 Fabaceae	Ervum	gracile		dtol										DTOL
 Fabaceae	Ervum	tetraspermum		dtol										DTOL
 Fabaceae	Genista	anglica		dtol						yes	DTOL			DTOL
@@ -732,7 +733,7 @@ Fabaceae	Medicago	polymorpha		dtol										DTOL
 Fabaceae	Medicago	sativa		dtol				yes			DTOL			DTOL
 Fabaceae	Melilotus	altissimus		dtol										DTOL
 Fabaceae	Onobrychis	viciifolia		dtol_other_priority	yes						DTOL	DTOL		DTOL
-Fabaceae	Ononis	reclinata		dtol										DTOL
+Fabaceae	Ononis	reclinata		dtol						yes	DTOL			DTOL
 Fabaceae	Ononis	repens		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Fabaceae	Ononis	spinosa		dtol										DTOL
 Fabaceae	Ornithopus	perpusillus		dtol				yes			DTOL			DTOL
@@ -785,11 +786,11 @@ Gentianaceae	Centaurium	tenuiflorum		dtol										DTOL
 Gentianaceae	Cicendia	filiformis		dtol										DTOL
 Gentianaceae	Exaculum	pusillum		dtol										DTOL
 Gentianaceae	Gentiana	nivalis		dtol										DTOL
-Gentianaceae	Gentiana	pneumonanthe		dtol										DTOL
+Gentianaceae	Gentiana	pneumonanthe		dtol						yes	DTOL			DTOL
 Gentianaceae	Gentiana	verna		dtol										DTOL
 Gentianaceae	Gentianella	amarella		dtol			yes				DTOL			DTOL
 Gentianaceae	Gentianella	anglica		dtol										DTOL
-Gentianaceae	Gentianella	campestris		dtol_family_representative			yes				DTOL		DTOL	DTOL
+Gentianaceae	Gentianella	campestris		dtol_family_representative			yes		yes		DTOL		DTOL	DTOL
 Gentianaceae	Gentianella	germanica		dtol										DTOL
 Gentianaceae	Gentianopsis	ciliata		dtol										DTOL
 Geraniaceae	Erodium	cicutarium		dtol					yes		DTOL			DTOL
@@ -845,15 +846,15 @@ Juglandaceae	Juglans	regia		dtol_family_representative			yes				DTOL		DTOL	DTOL
 Juncaceae	Juncus	acutiflorus		dtol										DTOL
 Juncaceae	Juncus	acutus		dtol										DTOL
 Juncaceae	Juncus	alpinoarticulatus		dtol										DTOL
-Juncaceae	Juncus	articulatus		dtol										DTOL
+Juncaceae	Juncus	articulatus		dtol					yes		DTOL			DTOL
 Juncaceae	Juncus	balticus		dtol										DTOL
 Juncaceae	Juncus	biglumis		dtol										DTOL
-Juncaceae	Juncus	bufonius		dtol										DTOL
+Juncaceae	Juncus	bufonius		dtol					yes		DTOL			DTOL
 Juncaceae	Juncus	bulbosus		dtol										DTOL
 Juncaceae	Juncus	capitatus		dtol										DTOL
 Juncaceae	Juncus	castaneus		dtol										DTOL
-Juncaceae	Juncus	compressus		dtol										DTOL
-Juncaceae	Juncus	conglomeratus		dtol										DTOL
+Juncaceae	Juncus	compressus		dtol						yes	DTOL			DTOL
+Juncaceae	Juncus	conglomeratus		dtol					yes		DTOL			DTOL
 Juncaceae	Juncus	effusus		dtol_family_representative	yes						DTOL		DTOL	DTOL
 Juncaceae	Juncus	filiformis		dtol										DTOL
 Juncaceae	Juncus	foliosus		dtol										DTOL
@@ -873,11 +874,11 @@ Juncaceae	Luzula	multiflora		dtol										DTOL
 Juncaceae	Luzula	pallescens		dtol										DTOL
 Juncaceae	Luzula	pallidula		dtol										DTOL
 Juncaceae	Luzula	pilosa		dtol										DTOL
-Juncaceae	Luzula	spicata		dtol										DTOL
+Juncaceae	Luzula	spicata		dtol						yes	DTOL			DTOL
 Juncaceae	Luzula	sylvatica		dtol_family_representative	yes						DTOL		DTOL	DTOL
 Juncaginaceae	Triglochin	maritima		dtol			yes				DTOL			DTOL
 Juncaginaceae	Triglochin	palustris		dtol_family_representative			yes				DTOL		DTOL	DTOL
-Lamiaceae	Ajuga	chamaepitys		dtol										DTOL
+Lamiaceae	Ajuga	chamaepitys		dtol						yes	DTOL			DTOL
 Lamiaceae	Ajuga	pyramidalis		dtol										DTOL
 Lamiaceae	Ajuga	reptans		dtol					yes		DTOL			DTOL
 Lamiaceae	Ballota	nigra		dtol_other_priority	yes						DTOL	DTOL		DTOL
@@ -887,11 +888,11 @@ Lamiaceae	Clinopodium	ascendens		dtol										DTOL
 Lamiaceae	Clinopodium	menthifolium		dtol										DTOL
 Lamiaceae	Clinopodium	nepeta		dtol										DTOL
 Lamiaceae	Clinopodium	vulgare		dtol						yes	DTOL			DTOL
-Lamiaceae	Galeopsis	angustifolia		dtol										DTOL
+Lamiaceae	Galeopsis	angustifolia		dtol						yes	DTOL			DTOL
 Lamiaceae	Galeopsis	bifida		dtol										DTOL
 Lamiaceae	Galeopsis	segetum		dtol										DTOL
 Lamiaceae	Galeopsis	speciosa		dtol										DTOL
-Lamiaceae	Galeopsis	tetrahit		dtol										DTOL
+Lamiaceae	Galeopsis	tetrahit		dtol					yes		DTOL			DTOL
 Lamiaceae	Glechoma	hederacea		dtol				yes			DTOL			DTOL
 Lamiaceae	Lamiastrum	galeobdolon								yes	DTOL			DTOL
 Lamiaceae	Lamium	album		dtol_family_representative	yes						DTOL		DTOL	DTOL
@@ -901,16 +902,16 @@ Lamiaceae	Lamium	hybridum		dtol										DTOL
 Lamiaceae	Lamium	purpureum		dtol				yes			DTOL			DTOL
 Lamiaceae	Lycopus	europaeus		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Lamiaceae	Marrubium	vulgare		dtol										DTOL
-Lamiaceae	Melittis	melissophyllum		dtol										DTOL
+Lamiaceae	Melittis	melissophyllum		dtol						yes	DTOL			DTOL
 Lamiaceae	Mentha	aquatica		dtol						yes	DTOL			DTOL
-Lamiaceae	Mentha	arvensis		dtol										DTOL
+Lamiaceae	Mentha	arvensis		dtol					yes		DTOL			DTOL
 Lamiaceae	Mentha	pulegium		dtol										DTOL
 Lamiaceae	Mentha	spicata		dtol										DTOL
 Lamiaceae	Mentha	suaveolens		dtol										DTOL
 Lamiaceae	Nepeta	cataria		dtol										DTOL
 Lamiaceae	Origanum	vulgare		dtol				yes			DTOL			DTOL
 Lamiaceae	Prunella	vulgaris		dtol_other_priority	yes			yes			DTOL	DTOL		DTOL
-Lamiaceae	Salvia	pratensis		dtol										DTOL
+Lamiaceae	Salvia	pratensis		dtol						yes	DTOL			DTOL
 Lamiaceae	Salvia	verbenaca		dtol				yes			DTOL			DTOL
 Lamiaceae	Scutellaria	galericulata		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Lamiaceae	Scutellaria	minor		dtol_other_priority	yes						DTOL	DTOL		DTOL
@@ -931,7 +932,7 @@ Lentibulariaceae	Pinguicula	vulgaris		dtol			yes				DTOL			DTOL
 Lentibulariaceae	Utricularia	australis		dtol										DTOL
 Lentibulariaceae	Utricularia	bremii		dtol										DTOL
 Lentibulariaceae	Utricularia	intermedia		dtol										DTOL
-Lentibulariaceae	Utricularia	minor		dtol										DTOL
+Lentibulariaceae	Utricularia	minor		dtol					yes		DTOL			DTOL
 Lentibulariaceae	Utricularia	ochroleuca		dtol										DTOL
 Lentibulariaceae	Utricularia	stygia		dtol										DTOL
 Lentibulariaceae	Utricularia	vulgaris		dtol_other_priority			yes				DTOL	DTOL		DTOL
@@ -943,7 +944,7 @@ Linaceae	Linum	bienne		dtol_other_priority				yes			DTOL	DTOL		DTOL
 Linaceae	Linum	catharticum		dtol_family_representative		yes		yes			DTOL		DTOL	DTOL
 Linaceae	Linum	perenne		dtol										DTOL
 Linaceae	Linum	radiola		dtol										DTOL
-Lythraceae	Lythrum	hyssopifolia		dtol										DTOL
+Lythraceae	Lythrum	hyssopifolia		dtol						yes	DTOL			DTOL
 Lythraceae	Lythrum	portula		dtol_family_representative			yes				DTOL		DTOL	DTOL
 Lythraceae	Lythrum	salicaria		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Malvaceae	Althaea	officinalis		dtol										DTOL
@@ -959,7 +960,7 @@ Menyanthaceae	Nymphoides	peltata		dtol_family_representative	yes						DTOL		DTOL
 Montiaceae	Claytonia	perfoliata		dtol				yes			DTOL			DTOL
 Montiaceae	Claytonia	sibirica		dtol				yes			DTOL			DTOL
 Montiaceae	Montia	fontana		dtol_family_representative				yes			DTOL		DTOL	DTOL
-Myricaceae	Myrica	gale		dtol_family_representative	yes						DTOL		DTOL	DTOL
+Myricaceae	Myrica	gale		dtol_family_representative	yes				yes		DTOL		DTOL	DTOL
 Nartheciaceae	Narthecium	ossifragum		dtol_family_representative			yes				DTOL		DTOL	DTOL
 Nymphaeaceae	Nuphar	lutea		dtol				yes			DTOL			DTOL
 Nymphaeaceae	Nuphar	pumila		dtol_family_representative				yes			DTOL		DTOL	DTOL
@@ -979,15 +980,15 @@ Onagraceae	Epilobium	palustre		dtol										DTOL
 Onagraceae	Epilobium	parviflorum		dtol										DTOL
 Onagraceae	Epilobium	roseum		dtol										DTOL
 Onagraceae	Epilobium	tetragonum		dtol										DTOL
-Onagraceae	Fuchsia	magellanica		dtol										DTOL
-Onagraceae	Ludwigia	grandiflora		dtol										DTOL
+Onagraceae	Fuchsia	magellanica		dtol						yes	DTOL			DTOL
+Onagraceae	Ludwigia	grandiflora		dtol						yes	DTOL			DTOL
 Onagraceae	Ludwigia	palustris		dtol										DTOL
 Orchidaceae	Anacamptis	morio		dtol										DTOL
 Orchidaceae	Anacamptis	pyramidalis		dtol				yes			DTOL			DTOL
 Orchidaceae	Cephalanthera	damasonium		dtol				yes			DTOL			DTOL
 Orchidaceae	Cephalanthera	longifolia		dtol						yes	DTOL			DTOL
 Orchidaceae	Cephalanthera	rubra		dtol										DTOL
-Orchidaceae	Coeloglossum	viride		dtol										DTOL
+Orchidaceae	Coeloglossum	viride		dtol					yes		DTOL			DTOL
 Orchidaceae	Corallorhiza	trifida		dtol										DTOL
 Orchidaceae	Cypripedium	calceolus		dtol_other_priority				yes			DTOL	DTOL		DTOL
 Orchidaceae	Dactylorhiza	fuchsii		dtol				yes			DTOL			DTOL
@@ -1175,7 +1176,7 @@ Poaceae	Catapodium	rigidum		dtol						yes	DTOL			DTOL
 Poaceae	Cortaderia	selloana		dtol										DTOL
 Poaceae	Corynephorus	canescens		dtol										DTOL
 Poaceae	Cynodon	dactylon		dtol										DTOL
-Poaceae	Cynosurus	cristatus		dtol										DTOL
+Poaceae	Cynosurus	cristatus		dtol						yes	DTOL			DTOL
 Poaceae	Dactylis	glomerata		dtol_other_priority		yes		yes			DTOL	DTOL		DTOL
 Poaceae	Danthonia	decumbens		dtol_other_priority	yes	yes					DTOL	DTOL		DTOL
 Poaceae	Deschampsia	cespitosa		dtol						yes	DTOL			DTOL
@@ -1192,7 +1193,7 @@ Poaceae	Festuca	lemanii		dtol										DTOL
 Poaceae	Festuca	longifolia		dtol										DTOL
 Poaceae	Festuca	ovina		dtol_other_priority		yes					DTOL	DTOL		DTOL
 Poaceae	Festuca	rubra		dtol						yes	DTOL			DTOL
-Poaceae	Festuca	vivipara		dtol										DTOL
+Poaceae	Festuca	vivipara		dtol					yes		DTOL			DTOL
 Poaceae	Gastridium	ventricosum		dtol										DTOL
 Poaceae	Gaudinia	fragilis		dtol										DTOL
 Poaceae	Glyceria	declinata		dtol										DTOL
@@ -1209,7 +1210,7 @@ Poaceae	Hordeum	murinum		dtol				yes			DTOL			DTOL
 Poaceae	Hordeum	secalinum		dtol										DTOL
 Poaceae	Koeleria	macrantha		dtol_other_priority		yes					DTOL	DTOL		DTOL
 Poaceae	Koeleria	vallesiana		dtol										DTOL
-Poaceae	Leersia	oryzoides		dtol										DTOL
+Poaceae	Leersia	oryzoides		dtol						yes	DTOL			DTOL
 Poaceae	Leymus	arenarius		dtol			yes				DTOL			DTOL
 Poaceae	Lolium	perenne		dtol				yes			DTOL			DTOL
 Poaceae	Lolium	temulentum		dtol										DTOL
@@ -1229,7 +1230,7 @@ Poaceae	Phleum	bertolonii		dtol				yes			DTOL			DTOL
 Poaceae	Phleum	phleoides		dtol										DTOL
 Poaceae	Phleum	pratense		dtol					yes		DTOL			DTOL
 Poaceae	Phragmites	australis		dtol				yes			DTOL			DTOL
-Poaceae	Poa	alpina		dtol										DTOL
+Poaceae	Poa	alpina		dtol					yes		DTOL			DTOL
 Poaceae	Poa	angustifolia		dtol										DTOL
 Poaceae	Poa	annua		dtol		yes					DTOL			DTOL
 Poaceae	Poa	bulbosa		dtol										DTOL
@@ -1272,7 +1273,7 @@ Polygonaceae	Koenigia	islandica		dtol										DTOL
 Polygonaceae	Koenigia	polystachya		dtol										DTOL
 Polygonaceae	Muehlenbeckia	complexa		dtol										DTOL
 Polygonaceae	Oxyria	digyna		dtol_family_representative				yes			DTOL		DTOL	DTOL
-Polygonaceae	Persicaria	amphibia		dtol										DTOL
+Polygonaceae	Persicaria	amphibia		dtol					yes		DTOL			DTOL
 Polygonaceae	Persicaria	hydropiper		dtol										DTOL
 Polygonaceae	Persicaria	lapathifolia		dtol										DTOL
 Polygonaceae	Persicaria	maculosa		dtol_other_priority	yes						DTOL	DTOL		DTOL
@@ -1281,7 +1282,7 @@ Polygonaceae	Persicaria	mitis		dtol										DTOL
 Polygonaceae	Polygonum	aviculare		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Polygonaceae	Polygonum	boreale		dtol										DTOL
 Polygonaceae	Polygonum	depressum		dtol										DTOL
-Polygonaceae	Polygonum	maritimum		dtol										DTOL
+Polygonaceae	Polygonum	maritimum		dtol						yes	DTOL			DTOL
 Polygonaceae	Polygonum	oxyspermum		dtol										DTOL
 Polygonaceae	Polygonum	rurivagum		dtol										DTOL
 Polygonaceae	Reynoutria	japonica	Fallopia japonica	dtol_other_priority	yes						DTOL	DTOL		DTOL
@@ -1295,7 +1296,7 @@ Polygonaceae	Rumex	crispus		dtol										DTOL
 Polygonaceae	Rumex	hydrolapathum		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Polygonaceae	Rumex	longifolius		dtol										DTOL
 Polygonaceae	Rumex	maritimus		dtol										DTOL
-Polygonaceae	Rumex	obtusifolius		dtol										DTOL
+Polygonaceae	Rumex	obtusifolius		dtol					yes		DTOL			DTOL
 Polygonaceae	Rumex	palustris		dtol										DTOL
 Polygonaceae	Rumex	pulcher		dtol										DTOL
 Polygonaceae	Rumex	rupestris		dtol										DTOL
@@ -1325,7 +1326,7 @@ Potamogetonaceae	Stuckenia	filiformis		dtol										DTOL
 Potamogetonaceae	Stuckenia	pectinata		dtol										DTOL
 Potamogetonaceae	Zannichellia	obtusifolia		dtol										DTOL
 Potamogetonaceae	Zannichellia	palustris		dtol_other_priority			yes				DTOL	DTOL		DTOL
-Primulaceae	Hottonia	palustris		dtol		yes					DTOL			DTOL
+Primulaceae	Hottonia	palustris		dtol		yes				yes	DTOL			DTOL
 Primulaceae	Lysimachia	arvensis		dtol				yes			DTOL			DTOL
 Primulaceae	Lysimachia	europaea		dtol										DTOL
 Primulaceae	Lysimachia	maritima		dtol			yes				DTOL			DTOL
@@ -1359,24 +1360,24 @@ Ranunculaceae	Ranunculus	auricomus		dtol					yes		DTOL			DTOL
 Ranunculaceae	Ranunculus	baudotii		dtol										DTOL
 Ranunculaceae	Ranunculus	bulbosus		dtol				yes			DTOL			DTOL
 Ranunculaceae	Ranunculus	circinatus		dtol										DTOL
-Ranunculaceae	Ranunculus	flammula		dtol										DTOL
+Ranunculaceae	Ranunculus	flammula		dtol						yes	DTOL			DTOL
 Ranunculaceae	Ranunculus	fluitans		dtol										DTOL
 Ranunculaceae	Ranunculus	hederaceus		dtol										DTOL
 Ranunculaceae	Ranunculus	lingua		dtol										DTOL
-Ranunculaceae	Ranunculus	omiophyllus		dtol										DTOL
+Ranunculaceae	Ranunculus	omiophyllus		dtol						yes	DTOL			DTOL
 Ranunculaceae	Ranunculus	ophioglossifolius		dtol										DTOL
 Ranunculaceae	Ranunculus	paludosus		dtol										DTOL
 Ranunculaceae	Ranunculus	parviflorus		dtol										DTOL
 Ranunculaceae	Ranunculus	peltatus		dtol										DTOL
-Ranunculaceae	Ranunculus	penicillatus		dtol										DTOL
+Ranunculaceae	Ranunculus	penicillatus		dtol					yes		DTOL			DTOL
 Ranunculaceae	Ranunculus	repens		dtol					yes		DTOL			DTOL
 Ranunculaceae	Ranunculus	reptans		dtol										DTOL
 Ranunculaceae	Ranunculus	sardous		dtol						yes	DTOL			DTOL
-Ranunculaceae	Ranunculus	sceleratus		dtol										DTOL
+Ranunculaceae	Ranunculus	sceleratus		dtol					yes		DTOL			DTOL
 Ranunculaceae	Ranunculus	trichophyllus		dtol										DTOL
 Ranunculaceae	Ranunculus	tripartitus		dtol										DTOL
 Ranunculaceae	Thalictrum	alpinum		dtol										DTOL
-Ranunculaceae	Thalictrum	flavum		dtol										DTOL
+Ranunculaceae	Thalictrum	flavum		dtol						yes	DTOL			DTOL
 Ranunculaceae	Thalictrum	minus		dtol			yes				DTOL			DTOL
 Ranunculaceae	Trollius	europaeus		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Resedaceae	Reseda	lutea		dtol_other_priority					yes		DTOL	DTOL		DTOL
@@ -1447,7 +1448,7 @@ Rosaceae	Rosa	stylosa		dtol										DTOL
 Rosaceae	Rosa	tomentella		dtol										DTOL
 Rosaceae	Rosa	tomentosa		dtol										DTOL
 Rosaceae	Rubus	arcticus		dtol										DTOL
-Rosaceae	Rubus	caesius		dtol										DTOL
+Rosaceae	Rubus	caesius		dtol						yes	DTOL			DTOL
 Rosaceae	Rubus	chamaemorus		dtol										DTOL
 Rosaceae	Rubus	fruticosus		dtol										DTOL
 Rosaceae	Rubus	idaeus		dtol			yes				DTOL			DTOL
@@ -1461,9 +1462,9 @@ Rosaceae	Sorbus	arranensis		dtol										DTOL
 Rosaceae	Sorbus	arvonicola		dtol										DTOL
 Rosaceae	Sorbus	aucuparia		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Rosaceae	Sorbus	bristoliensis		dtol						yes	DTOL			DTOL
-Rosaceae	Sorbus	cambrensis		dtol										DTOL
+Rosaceae	Sorbus	cambrensis		dtol						yes	DTOL			DTOL
 Rosaceae	Sorbus	cheddarensis		dtol										DTOL
-Rosaceae	Sorbus	cuneifolia		dtol										DTOL
+Rosaceae	Sorbus	cuneifolia		dtol						yes	DTOL			DTOL
 Rosaceae	Sorbus	devoniensis		dtol				yes			DTOL			DTOL
 Rosaceae	Sorbus	domestica		dtol										DTOL
 Rosaceae	Sorbus	eminens		dtol										DTOL
@@ -1475,10 +1476,10 @@ Rosaceae	Sorbus	herefordensis		dtol										DTOL
 Rosaceae	Sorbus	hibernica		dtol										DTOL
 Rosaceae	Sorbus	lancastriensis		dtol										DTOL
 Rosaceae	Sorbus	leighensis		dtol										DTOL
-Rosaceae	Sorbus	leptophylla		dtol										DTOL
-Rosaceae	Sorbus	leyana		dtol										DTOL
+Rosaceae	Sorbus	leptophylla		dtol						yes	DTOL			DTOL
+Rosaceae	Sorbus	leyana		dtol						yes	DTOL			DTOL
 Rosaceae	Sorbus	margaretae		dtol										DTOL
-Rosaceae	Sorbus	minima		dtol										DTOL
+Rosaceae	Sorbus	minima		dtol						yes	DTOL			DTOL
 Rosaceae	Sorbus	parviloba		dtol										DTOL
 Rosaceae	Sorbus	porrigentiformis		dtol										DTOL
 Rosaceae	Sorbus	pseudofennica		dtol										DTOL
@@ -1489,7 +1490,7 @@ Rosaceae	Sorbus	rupicoloides		dtol										DTOL
 Rosaceae	Sorbus	saxicola		dtol										DTOL
 Rosaceae	Sorbus	spectans		dtol										DTOL
 Rosaceae	Sorbus	stenophylla		dtol										DTOL
-Rosaceae	Sorbus	stirtoniana		dtol										DTOL
+Rosaceae	Sorbus	stirtoniana		dtol						yes	DTOL			DTOL
 Rosaceae	Sorbus	subcuneata		dtol										DTOL
 Rosaceae	Sorbus	torminalis		dtol										DTOL
 Rosaceae	Sorbus	vexans		dtol										DTOL
@@ -1507,10 +1508,10 @@ Rubiaceae	Galium	odoratum		dtol			yes				DTOL			DTOL
 Rubiaceae	Galium	palustre		dtol										DTOL
 Rubiaceae	Galium	parisiense		dtol										DTOL
 Rubiaceae	Galium	pumilum		dtol										DTOL
-Rubiaceae	Galium	saxatile		dtol										DTOL
+Rubiaceae	Galium	saxatile		dtol					yes		DTOL			DTOL
 Rubiaceae	Galium	sterneri		dtol										DTOL
 Rubiaceae	Galium	tricornutum		dtol										DTOL
-Rubiaceae	Galium	uliginosum		dtol										DTOL
+Rubiaceae	Galium	uliginosum		dtol						yes	DTOL			DTOL
 Rubiaceae	Galium	verum		dtol				yes			DTOL			DTOL
 Rubiaceae	Rubia	peregrina		dtol										DTOL
 Rubiaceae	Sherardia	arvensis		dtol_family_representative				yes			DTOL		DTOL	DTOL
@@ -1544,7 +1545,7 @@ Sarraceniaceae	Sarracenia	purpurea		dtol_family_representative	yes						DTOL		DT
 Saxifragaceae	Chrysosplenium	alternifolium		dtol					yes		DTOL			DTOL
 Saxifragaceae	Chrysosplenium	oppositifolium		dtol_family_representative				yes			DTOL		DTOL	DTOL
 Saxifragaceae	Micranthes	nivalis		dtol										DTOL
-Saxifragaceae	Micranthes	stellaris		dtol										DTOL
+Saxifragaceae	Micranthes	stellaris		dtol					yes		DTOL			DTOL
 Saxifragaceae	Saxifraga	aizoides		dtol			yes				DTOL			DTOL
 Saxifragaceae	Saxifraga	cernua		dtol										DTOL
 Saxifragaceae	Saxifraga	cespitosa		dtol										DTOL
@@ -1572,7 +1573,7 @@ Simaroubaceae	Ailanthus	altissima		dtol_family_representative	yes						DTOL		DTO
 Solanaceae	Atropa	belladonna		dtol_other_priority	yes						DTOL	DTOL		DTOL
 Solanaceae	Hyoscyamus	niger		dtol_other_priority								DTOL		DTOL
 Solanaceae	Solanum	dulcamara		dtol_family_representative	yes						DTOL		DTOL	DTOL
-Solanaceae	Solanum	nigrum		dtol										DTOL
+Solanaceae	Solanum	nigrum	Solanum nigrum subsp. nigrum	dtol						yes	DTOL			DTOL
 Thymelaeaceae	Daphne	laureola		dtol_family_representative			yes	yes			DTOL		DTOL	DTOL
 Thymelaeaceae	Daphne	mezereum		dtol_family_representative				yes			DTOL		DTOL	DTOL
 Tofieldiaceae	Tofieldia	pusilla		dtol_family_representative			yes				DTOL		DTOL	DTOL
@@ -1582,7 +1583,7 @@ Typhaceae	Sparganium	erectum		dtol_family_representative				yes			DTOL		DTOL	DTO
 Typhaceae	Sparganium	natans		dtol										DTOL
 Typhaceae	Typha	angustifolia		dtol										DTOL
 Typhaceae	Typha	latifolia		dtol_family_representative	yes						DTOL		DTOL	DTOL
-Ulmaceae	Ulmus	glabra		dtol_family_representative	yes						DTOL		DTOL	DTOL
+Ulmaceae	Ulmus	glabra		dtol_family_representative	yes				yes		DTOL		DTOL	DTOL
 Ulmaceae	Ulmus	minor		dtol_family_representative				yes			DTOL		DTOL	DTOL
 Ulmaceae	Ulmus	plotii		dtol_other_priority				yes			DTOL	DTOL		DTOL
 Ulmaceae	Ulmus	procera		dtol_other_priority						yes	DTOL	DTOL		DTOL
@@ -1604,7 +1605,7 @@ Veronicaceae	Misopates	orontium	Plantaginaceae	dtol_other_priority	yes						DTOL
 Veronicaceae	Sibthorpia	europaea	Plantaginaceae	dtol										DTOL
 Veronicaceae	Veronica	agrestis	Plantaginaceae	dtol										DTOL
 Veronicaceae	Veronica	alpina	Plantaginaceae	dtol										DTOL
-Veronicaceae	Veronica	anagallis-aquatica	Plantaginaceae	dtol										DTOL
+Veronicaceae	Veronica	anagallis-aquatica	Plantaginaceae	dtol					yes		DTOL			DTOL
 Veronicaceae	Veronica	arvensis	Plantaginaceae	dtol						yes	DTOL			DTOL
 Veronicaceae	Veronica	beccabunga	Plantaginaceae	dtol					yes		DTOL			DTOL
 Veronicaceae	Veronica	catenata	Plantaginaceae	dtol										DTOL
