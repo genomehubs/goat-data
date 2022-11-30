@@ -96,6 +96,7 @@ attributes:
     display_group: general
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
+    type: keyword
   sample_location:
     display_group: general
     display_level: 2
