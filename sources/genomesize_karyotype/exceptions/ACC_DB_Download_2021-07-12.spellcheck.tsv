@@ -21,7 +21,7 @@ taxon_id	input	rank	suggested
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
+	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -187,8 +187,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
-2493403	Bembidion thetys	species	Bembidion tethys
-	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
+	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
 1944111	Bembidion yukonoum	species	Bembidion yukonum
@@ -332,6 +331,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1499692	Galerita indica	species	Galerina indica
 247282	Harpalus aesculans_	species	Harpalus aesculanus
 247283	Harpalus affinis_	species	Harpalus affinis
+247283	Harpalus albanicus	species	Harpalus affinis
 1587330	Harpalus atratus_	species	Harpalus atratus
 247285	Harpalus attenuatus_	species	Harpalus attenuatus
 1127447	Harpalus compar_	species	Harpalus compar
@@ -937,7 +937,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2008391	Boreonectes ibericus_	species	Boreonectes ibericus
 1309560	Boreonectes multilineatus_	species	Boreonectes multilineatus
 1309561	Boreonectes riberae_	species	Boreonectes riberae
-	Colymbetes adpressus	species	corymbites impressus	colymbetes impressus
+	Colymbetes adpressus	species	colymbetes impressus	corymbites impressus
 1368183	Colymbetes bipustulatus	species	Calambus bipustulatus
 1509382	Colymbetes fuscus_	species	Colymbetes fuscus
 1610039	Colymbetes lapponicus	species	Calambus japonicus
@@ -1103,6 +1103,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
 icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
+466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata_	species	Isomira quadristriata
@@ -1195,7 +1196,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 448099	Amitermes eucalipti	species	Amitermes eucalypti
 1934507	Microcerotermes fuscotibiatis	species	Microcerotermes fuscotibialis
 	Reticutitermes santonensis	species	reticulitermes santonensis
-179666	Hypocrita jocobaea	species	Tyria jacobaeae
 987980	Miltochrista zuiniata	species	Miltochrista miniata
 511340	Telphusa fluvuatillis	species	Potamon fluviatile
 942386	Euphyia luctuata	species	Enchoria lacteata
@@ -1260,6 +1260,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 1882553	Isophya hospodat	species	Isophya hospodar
 1678041	Isophya krausii	species	Isophya kraussii
 910292	Isophya modesta_longicaudata	species	Isophya longicaudata
+910298	Isophya plevnensis	species	Isophya pienensis
 2420531	Elysiacris	genus	Lysacris
 202390	Orxines macklotti	species	Orxines macklottii
 202447	Tropiderus childrenii	species	Tropidoderus childrenii
@@ -1333,7 +1334,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 272250	Rampholeon marshalli	species	Rhampholeon marshalli
 179929	Rampholeon spectrum	species	Rhampholeon spectrum
 1481338	Alsophylax laevis	species	Cyathea surinamensis
-	Gekko gekko	species	germo germo	gekko gecko	gecko gecko
+	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
 	Natricidae	family	anthicidae	naticidae
@@ -1352,7 +1353,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 649077	Tiedemannia neopolitana	species	Gleba cordata
 87838	Euhadra smaliae	species	Euhadra amaliae
 225461	Monacha cathusiana	species	Monacha cartusiana
-	Polygyra appressa	species	polygala adpressa	polygala depressa
+	Polygyra appressa	species	polygala depressa	polygala adpressa
 52793	Lymnaea nuricularia	species	Radix auricularia
 1076771	Stenostomum grandi	species	Stenostomum grande
 	Hymenolepidae	family	hymenolepididae	hymenoceridae
