@@ -7068,6 +7068,8 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 1688	NA	Arthropoda	Crustacea	Malacostraca	Decapoda	Palinuridae	Jasus novaehollandiae	Southern rock lobster	5.33	NA	FCM	AG	AA	110
 1717	NA	Arthropoda	Crustacea	Malacostraca	Decapoda	Portunidae	Thalamita edwardsi	Crab	2	NA	FD	WB	NS (V)	17
 1728	NA	Arthropoda	Crustacea	Malacostraca	Decapoda	Xanthidae	Neopanope texana	Texas mud crab	2.87	NA	FD	WB	NS (V)	435
+1737	NA	Arthropoda	Crustacea	Malacostraca	Euphausiacea	Euphausiidae	Euphausia triacantha	Krill	27.56	NA	FIA	G	GD, OM	710
+1738	NA	Arthropoda	Crustacea	Malacostraca	Euphausiacea	Euphausiidae	Euphausia triacantha	Krill	30.06	NA	FCM	L	OM	710
 2662	NA	Echinodermata	Echinozoa	Echinoidea	Arbacioida	Arbaciidae	Arbacia aequituberculata	Sea urchin	0.67	NA	NS	S	NS	555
 2685	NA	Echinodermata	Echinozoa	Holothuroidea	Aspidochirotida	Stichopodidae	Stichopus californicus	Sea cucumber	0.79	NA	BFA	S	SP	218
 2682	NA	Echinodermata	Echinozoa	Echinoidea	Temnopleuroida	Toxopneustidae	Tripneustes esculentus	Sea urchin	1.1	NA	BFA	S	SP	218
@@ -7120,6 +7122,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 6610	NA	Chordata	Vertebrata	Osteichthyes	Cyprinodontiformes	Aplocheilidae	Aphyosemion coeruleum	Blue gularis	1.2	NA	BFA	RBC	SP	216
 6633	NA	Chordata	Vertebrata	Osteichthyes	Cyprinodontiformes	Fundulidae	Fundulus diaphanus diaphanus	Banded killifish	1.51	48	FCM	RBC	GD	104
 6728	NA	Chordata	Vertebrata	Osteichthyes	Gadiformes	Macrouridae	Caelorinchus innotabilis	Notable whiptail	0.79	NA	FIA	RBC	BS, GD, OM, RP	203, 204
+6729	NA	Chordata	Vertebrata	Osteichthyes	Gadiformes	Macrouridae	Caelorinchus maurofasciatus	Dark banded rattail	0.75	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 4260	NA	Chordata	Vertebrata	Aves	Galliformes	Phasianidae	Guttera edouardi	Crested (Kenyan) guineafowl	1.54	76	FCM	RBC	GD, HS, V	347, 502
 4275	NA	Chordata	Vertebrata	Aves	Gruiformes	Gruidae	Anthropoides paradisea	Stanley crane	1.5	80	FD	RBC	GD, XL	419, 632
 4276	NA	Chordata	Vertebrata	Aves	Gruiformes	Gruidae	Anthropoides paradisea	Stanley crane	1.52	NA	FCM	RBC	HS, OM	598
@@ -7138,6 +7141,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 5028	NA	Chordata	Vertebrata	Chondrichthyes	Rajiformes	Dasyatidae	Dasyatis gerrardi	Sharpnose stingray	4.65	NA	FCM	RBC	GD, HS	81
 5800	NA	Chordata	Vertebrata	Mammalia	Rodentia	Muridae	Bolomys obscurus	Grass mouse	2.99	34	FD	S	HS, GD, RN	49
 7521	NA	Chordata	Vertebrata	Osteichthyes	Salmoniformes	Salmonidae	Oncorhynchus masou macrostomus	Cherry salmon	2.96	66	FCM	RBC	MM	359
+7608	NA	Chordata	Vertebrata	Osteichthyes	Scorpaeniformes	Cyclopteridae	Cyclopteropsis jordani	Smooth lumpfish	0.85	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 7668	NA	Chordata	Vertebrata	Osteichthyes	Siluriformes	Bagridae	Pelteobagrus nudiceps	Catfish	0.92	56	FCM	RBC	MM	359
 7692	NA	Chordata	Vertebrata	Osteichthyes	Siluriformes	Callichthyidae	Corydoras myersi	Iridescent corydoras	2.3	56	BFA	RBC	SP	216
 7752	NA	Chordata	Vertebrata	Osteichthyes	Siluriformes	Pimelodidae	Pimelodus clarias clarias	Mandi	1.2	52	BFA	RBC	SP	216
