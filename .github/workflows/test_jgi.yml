@@ -1,5 +1,5 @@
-name: new_release
-on: push
+name: test_jgi
+on: workflow_dispatch
 
 jobs:
   update_api_googlesheets_data:
