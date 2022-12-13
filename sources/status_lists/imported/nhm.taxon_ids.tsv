@@ -1,4 +1,7 @@
 taxon_id	input	rank
+7384	Sarcophaga	genus
+997290	Thumatha senex	species
+997513	Macrochilo cribrumalis	species
 42113	Clitellata	class
 7041	Coleoptera	order
 92169	Talitridae	family
@@ -10,7 +13,6 @@ taxon_id	input	rank
 92558	Dolichopodidae	family
 1545162	Metatropis rufescens	species
 36150	Cicadella viridis	species
-7384	Sarcophaga	genus
 7149	Chironomidae	family
 27515	Pompilidae	family
 301036	Synanthedon formicaeformis	species
@@ -53,7 +55,6 @@ taxon_id	input	rank
 226174	Helophilus pendulus	species
 1107736	Tetragnatha extensa	species
 934888	Philereme vetulata	species
-997513	Macrochilo cribrumalis	species
 81834	Enoplognatha ovata	species
 1155755	Pisaura mirabilis	species
 1100908	Anania crocealis	species
@@ -78,7 +79,6 @@ taxon_id	input	rank
 881489	Leptopterna dolabrata	species
 107769	Agabus	genus
 177674	Limnephilus	genus
-997290	Thumatha senex	species
 187486	Xysticus	genus
 1870434	Ypsolopha parenthesella	species
 934875	Ligdia adustata	species
@@ -155,7 +155,6 @@ taxon_id	input	rank
 233289	Theridiosoma gemmosum	species
 394625	Brachycaudus lychnidis	species
 29997	Diplura	order
-#iaDilHibe	Dilta hibernica	species
 1545159	Megalonotus chiragra	species
 1810706	Dicranocephalus agilis	species
 69514	Australoplana sanguinea	species
@@ -381,7 +380,6 @@ taxon_id	input	rank
 145610	Deroceras reticulatum	species
 347754	Oegoconia quadripuncta	species
 934877	Lomographa temerata	species
-#iaDilChat	Dilta chateri	species
 287380	Zygaena lonicerae	species
 2153186	Bolothrips dentipes	species
 689280	Eupithecia intricata	species
@@ -390,7 +388,6 @@ taxon_id	input	rank
 1870131	Ochropleura leucogaster	species
 61986	Symphyla	class
 875879	Petrophora chlorosata	species
-#qdChoProx	Chordeuma proximum	species
 #ilMytLalb	Mythimna l-album	species
 475346	Poecilocampa populi	species
 1678910	Caloptilia rufipennella	species
@@ -889,6 +886,7 @@ taxon_id	input	rank
 934882	Opisthograptis luteolata	species
 879789	Macropelopia	genus
 646295	Zavrelimyia	genus
+6999	Gryllus bimaculatus	species
 403902	Himacerus major	species
 1150106	Goniodoma limoniella	species
 111912	Hipparchia semele	species
@@ -1252,6 +1250,7 @@ taxon_id	input	rank
 1594312	Sciota angustella	species
 172134	Bathysaurus ferox	species
 1871927	Anyphaena sabina	species
+1008864	Ommatoiulus moreleti	species
 145446	Lauria cylindracea	species
 55639	Psychropotes longicauda	species
 381128	Lehmannia marginata	species
@@ -1449,7 +1448,6 @@ taxon_id	input	rank
 1472003	Lauritrioza alacris	species
 1980407	Macomangulus tenuis	species
 1688435	Thanatus vulgaris	species
-6999	Gryllus bimaculatus	species
 170843	Planococcus citri	species
 2785017	Pawsonia saxicola	species
 7618	Ophiuroidea	class
