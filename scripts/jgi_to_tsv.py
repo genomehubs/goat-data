@@ -10,6 +10,13 @@ OFFLINE_TOKEN=sys.argv[1]
 ACCESS_TOKEN = requests.get(url + '/exchange?offlineToken=' + OFFLINE_TOKEN).content.decode()
 
 headers = {"Authorization": "Bearer " + ACCESS_TOKEN, "Accept": "application/json"}
+
+r = requests.get(url + '/api/v1/organisms?studyGoldId=Gs0000001', headers=headers).json()
+org2taxid = {}
+
+for organism in r:
+  org2taxid[organism['organismGoldId']] = organism['ncbiTaxId']
+
 r = requests.get(url + '/api/v1/projects?studyGoldId=Gs0000001', headers=headers).json()
 
 fieldnames = [
@@ -28,9 +35,9 @@ fieldnames = [
 output_file = sys.stdout
 
 writer = csv.writer(output_file, delimiter='\t', lineterminator='\n')
-writer.writerow(fieldnames)
+writer.writerow(fieldnames + ['ncbiTaxId'])
 
-for projects in r:
-  d = [projects.get(f) for f in fieldnames]
-  if projects["sequencingStrategy"]=="Whole Genome Sequencing":
-    writer.writerow(d)
+for project in r:
+  d = [project.get(f) for f in fieldnames]
+  if project["sequencingStrategy"]=="Whole Genome Sequencing":
+    writer.writerow(d + [org2taxid[project['organismGoldId']]])

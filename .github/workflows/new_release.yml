@@ -132,6 +132,9 @@ jobs:
       - name: Get from sts api
         run:  python3 ./scripts/sts_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} > ./sources/status_lists/sts.tsv
 
+      - name: Get from jgi api
+        run:  python3 ./scripts/jgi_to_tsv.py ${{ secrets.JGI_OFFLINE_TOKEN }} > ./sources/status_lists/jgi_1kfg.tsv
+
       - name: Get from vgp yaml
         run: |
           python3 ./scripts/vgp_to_tsv.py \
