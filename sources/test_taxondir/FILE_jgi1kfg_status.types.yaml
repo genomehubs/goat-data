@@ -15,32 +15,33 @@ attributes:
   sequencing_status:
     header: projectStatus
     translate:
+      Permanent Draft: in_progress
       incomplete: in_progress
-      Permanent Draft: insdc_open
+      targeted:
   sequencing_status_jgi1kfg:
     header: projectStatus
     translate:
+      Permanent Draft: in_progress
       incomplete: in_progress
-      Permanent Draft: insdc_open
+      targeted:
   sample_collected:
     header: projectStatus
     translate:
+      Permanent Draft: jgi1kfg
       incomplete: jgi1kfg
-      Permanent Draft: jgi1kg
+      targeted:
   sample_acquired:
     header: projectStatus
     translate:
+      Permanent Draft: jgi1kfg
       incomplete: jgi1kfg
-      Permanent Draft: jgi1kg
+      targeted:
   in_progress:
     header: projectStatus
     translate:
+      Permanent Draft: jgi1kfg
       incomplete: jgi1kfg
-      Permanent Draft: jgi1kg
-  insdc_open:
-    header: projectStatus
-    translate:
-      Permanent Draft: jgi1kg
+      targeted:
 taxonomy:
   taxon_id:
     header: ncbiTaxId
