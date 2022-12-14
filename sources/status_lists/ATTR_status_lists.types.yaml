@@ -529,3 +529,17 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_jgi1kfg:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
