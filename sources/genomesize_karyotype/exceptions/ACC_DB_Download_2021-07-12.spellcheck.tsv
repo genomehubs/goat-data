@@ -21,7 +21,7 @@ taxon_id	input	rank	suggested
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
+	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -588,7 +588,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 2823060	Rosalia btesi	species	Rosalia batesi
 2823060	Rosalia btesi_	species	Rosalia batesi
 1710435	Saperda calcarata_adspersa_	species	Saperda calcarata
-763904	Saperda moesta_	species	Saperda populnea
+	Saperda moesta_	species	saperda moesta
 1553725	Saperda perforata_	species	Saperda perforata
 763904	Saperda populnea_	species	Saperda populnea
 1483160	Saperda scalaris_	species	Saperda scalaris
@@ -1063,7 +1063,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopsis	homalopoma
+	Homaloplia	species	homalomyia	homalopoma	homalopsis
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1226,7 +1226,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 262188	Siederia alpicolella	species	Siederia rupicolella
 753433	Talaeporia lubulosa	species	Taleporia tubulosa
 1869861	Laurentia filigrammaria	species	Epirrita filigrammaria
-	Platysamia	genus	platylomia	platylabia
+678731	Platysamia	genus	Platylomia
 470732	Sphinx lingustri	species	Sphinx ligustri
 263944	Yponomeuta polistictus	species	Yponomeuta polystictus
 1430713	Elcysma westwoodi	species	Elcysma westwoodii
@@ -1262,6 +1262,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 1882553	Isophya hospodat	species	Isophya hospodar
 1678041	Isophya krausii	species	Isophya kraussii
 910292	Isophya modesta_longicaudata	species	Isophya longicaudata
+910298	Isophya plevnensis	species	Isophya pienensis
 2420531	Elysiacris	genus	Lysacris
 202390	Orxines macklotti	species	Orxines macklottii
 202447	Tropiderus childrenii	species	Tropidoderus childrenii
@@ -1335,10 +1336,10 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 272250	Rampholeon marshalli	species	Rhampholeon marshalli
 179929	Rampholeon spectrum	species	Rhampholeon spectrum
 1481338	Alsophylax laevis	species	Cyathea surinamensis
-	Gekko gekko	species	germo germo	gekko gecko	gecko gecko
+	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
-	Natricidae	family	anthicidae	naticidae
+219442	Natricidae	family	Anthicidae
 	Cyclodina olivieri	species	cyclodina oliveri
 253933	Ameiva maynardii	species	Pholidoscelis maynardi
 2936315	Aspidoscelis neomexicana	species	Aspidoscelis neomexicanus
