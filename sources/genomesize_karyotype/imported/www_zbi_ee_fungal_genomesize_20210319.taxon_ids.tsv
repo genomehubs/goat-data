@@ -1,6 +1,6 @@
 taxon_id	input	rank
 5105	Ascosphaera apis	species
-55169	Sphaeria dothidea	species
+55169	Botryosphaeria dothidea	species
 35725	Macrophomina phaseolina	species
 310453	Neofusicoccum parvum	species
 121624	Phyllosticta capitalensis	species
@@ -14,9 +14,9 @@ taxon_id	input	rank
 147573	Piedraia hortae	species
 705562	Polychaeton citri	species
 470096	Pseudovirgaria hyperparasitica	species
-85929	Septoria musiva	species
+85929	Sphaerulina musiva	species
 161662	Teratosphaeria nubilosa	species
-395010	Racodium cellare	species
+395010	Zasmidium cellare	species
 92950	Cladosporium sphaerospermum	species
 1868166	Thozetella sp.	species
 61459	Coniosporium apollinis	species
@@ -42,7 +42,7 @@ taxon_id	input	rank
 36630	Aspergillus fischeri	species
 5059	Aspergillus flavus	species
 63131	Aspergillus foetidus	species
-746128	Sartorya fumigata	species
+746128	Aspergillus fumigatus	species
 41413	Aspergillus glaucus	species
 319626	Aspergillus homomorphus	species
 5061	Aspergillus niger	species
@@ -91,7 +91,7 @@ taxon_id	input	rank
 5530	Metarhizium anisopliae	species
 568076	Metarhizium robertsii	species
 110576	Myrothecium inundatum	species
-29855	Sphaeria cinnabarina	species
+29855	Nectria cinnabarina	species
 #grNecHaem	Nectria haematococca	species
 64661	Nectria inventa	species
 796314	Nectriopsis exigua	species
@@ -131,7 +131,7 @@ taxon_id	input	rank
 53382	Orbilia delicatula	species
 392276	Orbilia sarraziniana	species
 47023	Orbilia vinosa	species
-1809273	Sphaeria pyriformis	species
+1809273	Rhamphoria pyriformis	species
 5606	Saitoella complicata	species
 1302862	Sodiomyces alkalinus	species
 74722	Stachybotrys chartarum	species
@@ -293,7 +293,7 @@ taxon_id	input	rank
 53485	Pyrenophora teres	species
 45151	Pyrenophora tritici-repentis	species
 718229	Sporormia fimetaria	species
-390896	Sphaeria pertusa	species
+390896	Trematosphaeria pertusa	species
 318751	Westerdykella ornata	species
 160035	Zopfia rhizophila	species
 4754	Pneumocystis carinii	species
@@ -310,19 +310,19 @@ taxon_id	input	rank
 5480	Candida parapsilosis	species
 5482	Candida tropicalis	species
 36911	Clavispora lusitaniae	species
-4959	Saccharomyces hansenii	species
+4959	Debaryomyces hansenii	species
 43964	Endomyces scopularum	species
 33169	Eremothecium gossypii	species
-34358	Saccharomyces exiguus	species
+34358	Kazachstania exigua	species
 27293	Kazachstania servazzii	species
 28985	Kluyveromyces lactis	species
 4911	Kluyveromyces marxianus	species
 4922	Komagataella pastoris	species
-4934	Saccharomyces kluyveri	species
+4934	Lachancea kluyveri	species
 381046	Lachancea thermotolerans	species
-36914	Saccharomyces elongisporus	species
+36914	Lodderomyces elongisporus	species
 4929	Meyerozyma guilliermondii	species
-4920	Saccharomyces farinosus	species
+4920	Millerozyma farinosa	species
 45786	Nadsonia fulvescens	species
 460523	Ogataea polymorpha	species
 4918	Pachysolen tannophilus	species
@@ -336,7 +336,7 @@ taxon_id	input	rank
 4924	Scheffersomyces stipitis	species
 340170	Spathaspora passalidarum	species
 36033	Vanderwaltozyma polyspora	species
-4927	Saccharomyces anomalus	species
+4927	Wickerhamomyces anomalus	species
 4952	Yarrowia lipolytica	species
 4956	Zygosaccharomyces rouxii	species
 866546	Schizosaccharomyces cryophilus	species
@@ -345,7 +345,7 @@ taxon_id	input	rank
 4896	Schizosaccharomyces pombe	species
 95314	Albertiniella polyporicola	species
 5116	Cryphonectria parasitica	species
-92902	Sphaeria ovina	species
+92902	Lasiosphaeria ovina	species
 5141	Neurospora crassa	species
 29879	Neurospora discreta	species
 588809	Neurospora hispaniola	species
@@ -359,19 +359,19 @@ taxon_id	input	rank
 110535	Biscogniauxia repanda	species
 292717	Daldinia eschscholtzii	species
 42366	Diatrype disciformis	species
-97380	Sphaeria mammata	species
-97096	Sphaeria lata	species
-109372	Sphaeria fusca	species
+97380	Entoleuca mammata	species
+97096	Eutypa lata	species
+109372	Hypoxylon fuscum	species
 1243767	Hypoxylon pulicicidum	species
 2075082	Hypoxylon punctulatum	species
-110542	Sphaeria rubiginosa	species
+110542	Hypoxylon rubiginosum	species
 110526	Ustulina deusta	species
 196109	Microdochium bolleyi	species
 561989	Nemania abortiva	species
-109381	Sphaeria serpens	species
+109381	Nemania serpens	species
 393283	Pestalotiopsis fici	species
 1141098	Pseudomassariella vexata	species
-42372	Sphaeria carpophila	species
+42372	Xylaria carpophila	species
 37992	Xylaria hypoxylon	species
 114818	Xylaria longipes	species
 743301	Xylaria striata	species
@@ -423,7 +423,7 @@ taxon_id	input	rank
 40482	Lentinula lateritia	species
 64659	Lepista nuda	species
 123925	Lepista sordida	species
-79220	Rozites gongylophorus	species
+79220	Leucoagaricus gongylophorus	species
 64660	Lyophyllum decastes	species
 47721	Lyophyllum shimeji	species
 182055	Macrocystidia cucumis	species
@@ -472,7 +472,7 @@ taxon_id	input	rank
 160860	Auricularia delicata	species
 1331295	Auricularia subglabra	species
 5219	Exidia glandulosa	species
-98232	Rhizopogon diplophloeus	species
+98232	Alpova diplophloeus	species
 80613	Alpova olivaceotinctus	species
 2170401	Aureoboletus auriflammeus	species
 388838	Austroboletus gracilis	species
@@ -583,7 +583,7 @@ taxon_id	input	rank
 5414	Erythrobasidium hasegawianum	species
 45228	Heterogastridium pycnidioideum	species
 5407	Exobasidium vaccinii	species
-5207	Saccharomyces neoformans	species
+5207	Cryptococcus neoformans	species
 68786	Sphaerobolus stellatus	species
 5281	Tilletiaria anomala	species
 104355	Gloeophyllum trabeum	species
@@ -711,7 +711,7 @@ taxon_id	input	rank
 1095379	Mucor bainieri	species
 36080	Mucor circinelloides	species
 64623	Mucor indicus	species
-713888	Rhizomucor variabilis	species
+713888	Mucor irregularis	species
 29922	Mucor mucedo	species
 97098	Mucor plumbeus	species
 4841	Mucor racemosus	species
@@ -733,7 +733,7 @@ taxon_id	input	rank
 245562	Acidomyces sp. 'richmondensis'	species
 1873960	Pseudocercospora fijiensis	species
 64363	Dothistroma septosporum	species
-215467	Septoria populicola	species
+215467	Sphaerulina populicola	species
 223192	Phaeoacremonium minimum	species
 495188	Gnomonia alnea	species
 1069201	Aspergillus luchuensis	species
@@ -748,7 +748,7 @@ taxon_id	input	rank
 29862	Protocrea pallida	species
 1491004	Trichoderma pulvinatum	species
 115235	Cosmospora coccinea	species
-1053090	Sphaeria episphaeria	species
+1053090	Dialonectria episphaeria	species
 #grNecBroo	Nectriopsis broomeana	species
 5047	Epichloe coenophiala	species
 112416	Letharia columbiana	species
@@ -809,7 +809,6 @@ taxon_id	input	rank
 2735509	Pilatotrama ljubarskyi	species
 203908	Melampsora laricis-populina	species
 65672	Serendipita indica	species
-109899	Sebacina vermifera	species
 #gkRhoMinu	Rhodotorula minuta	species
 #gfTreEnce	Tremella encephala	species
 879819	Cutaneotrichosporon oleaginosum	species
