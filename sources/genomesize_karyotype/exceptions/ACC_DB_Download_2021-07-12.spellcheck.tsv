@@ -21,7 +21,7 @@ taxon_id	input	rank	suggested
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
+	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -281,6 +281,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 176381	Cicindela argentata_	species	Brasiella argentata
 176422	Cicindela aterrima_	species	Cicindela aterrima
 262318	Cicindela aurulenta_	species	Cicindela aurulenta
+869531	Cicindela bigemi	species	Cylindera bigemina
 150234	Cicindela campestris_	species	Cicindela campestris
 1485677	Cicindela deserticoloides_	species	Cephalota deserticoloides
 38653	Cicindela dorsalis_	species	Habroscelimorpha dorsalis
@@ -766,7 +767,6 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1075297	Clytra laeviscula_	species	Clytra laeviuscula
 1075297	Clytra laeviuscula_	species	Clytra laeviuscula
 1425548	Clytra quadripunctata_	species	Clytra quadripunctata
-2484307	Clytra succinata	species	Cleora subcincta
 284335	Colasposoma auripenne_	species	Colasposoma auripenne
 1592289	Conicobruchus indicus_	species	Conicobruchus indicus
 1654395	Coptocephala unifasciata_	species	Coptocephala unifasciata
@@ -1020,7 +1020,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 1457043	Speonomus pyreeus	species	Speonomus pyreneus
 1457043	Speonomus pyrenaeus	species	Speonomus pyreneus
 	Troglocharinus ferreri_pallaresi	species	troglocharinus ferreri pallaresi
-273953	Cerchus ligrius	species	Ceruchus lignarius
+1407881	Cerchus ligrius	species	Trechus liguricus
 617909	Lamprima adolphie	species	Lamprima adolphinae
 231745	Lucanus maculifermoratus	species	Lucanus maculifemoratus
 1588445	Lytta picta	species	Scydmaenus tarsatus
@@ -1062,7 +1062,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopoma	homalopsis
+	Homaloplia	species	homalomyia	homalopsis	homalopoma
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1261,6 +1261,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 1882553	Isophya hospodat	species	Isophya hospodar
 1678041	Isophya krausii	species	Isophya kraussii
 910292	Isophya modesta_longicaudata	species	Isophya longicaudata
+910298	Isophya plevnensis	species	Isophya pienensis
 2420531	Elysiacris	genus	Lysacris
 202390	Orxines macklotti	species	Orxines macklottii
 202447	Tropiderus childrenii	species	Tropidoderus childrenii
@@ -1337,7 +1338,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
-219442	Natricidae	family	Anthicidae
+	Natricidae	family	anthicidae	naticidae
 	Cyclodina olivieri	species	cyclodina oliveri
 253933	Ameiva maynardii	species	Pholidoscelis maynardi
 2936315	Aspidoscelis neomexicana	species	Aspidoscelis neomexicanus
