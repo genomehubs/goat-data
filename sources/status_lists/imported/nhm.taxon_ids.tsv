@@ -1,4 +1,8 @@
 taxon_id	input	rank
+47131	Cylindroiulus	genus
+1569508	Brachydesmus superus	species
+1569488	Lithobius microps	species
+7552	Lithobius forficatus	species
 1443160	Saccoglossus horsti	species
 6544	Bivalvia	class
 39820	Nereididae	family
@@ -153,8 +157,6 @@ taxon_id	input	rank
 702679	Pediciidae	family
 1112440	Neoscona adianta	species
 94026	Metellina segmentata	species
-47131	Cylindroiulus	genus
-1569508	Brachydesmus superus	species
 #qdMacPali	Macrosternodesmus palicola	species
 400960	Philodromus aureolus	species
 2866285	Mesopsocus fuscifrons	species
@@ -182,11 +184,9 @@ taxon_id	input	rank
 72672	Ophiura albida	species
 1268897	Cryptops hortensis	species
 62803	Nemoura	genus
-1569488	Lithobius microps	species
 309576	Ecdyonurus	genus
 197150	Centroptilum luteolum	species
 295196	Neophilaenus lineatus	species
-7552	Lithobius forficatus	species
 7509	Siphonaptera	order
 85310	Nezara viridula	species
 441507	Leuctra fusca	species
@@ -888,6 +888,8 @@ taxon_id	input	rank
 934882	Opisthograptis luteolata	species
 879789	Macropelopia	genus
 646295	Zavrelimyia	genus
+#qdOphAlbo	Ophiodesmus albonanus	species
+118488	Polyzonium germanicum	species
 1555464	Blastobasis lignea	species
 #ilPraPere	Prays peregrina	species
 104476	Agriopis aurantiaria	species
@@ -1058,7 +1060,6 @@ taxon_id	input	rank
 9209	Phalacrocorax carbo	species
 75865	Tadorna tadorna	species
 287208	Adscita geryon	species
-#qdOphAlbo	Ophiodesmus albonanus	species
 #qpTraBrit	Trachypauropus britannicus	species
 #qpStyPedu	Stylopauropus pedunculatus	species
 27554	Ctenolepisma longicaudatum	species
@@ -1192,7 +1193,6 @@ taxon_id	input	rank
 1545306	Drymus brunneus	species
 236935	Plagiognathus chrysanthemi	species
 81835	Linyphiidae	family
-118488	Polyzonium germanicum	species
 997289	Tethea ocularis	species
 1100959	Crassa tinctella	species
 538890	Coccus hesperidum	species
