@@ -12,10 +12,6 @@ attributes:
   long_list:
     header: long_list
 taxonomy:
-  class:
-    header: Class
-  order:
-    header: nOrder
   species:
     index: [8, 9]
     join: " "
