@@ -1,0 +1,17 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: vgp_longlist.tsv
+  source: VGP SPECIES DATABASE
+  source_url: http://vgpdb.snu.ac.kr/splist/
+  source_description: List of ~70,000 vertebrate species maintained at Seoul National University
+  #source_contact:
+  source_date: 2022-12-16
+attributes:
+  long_list:
+    header: long_list
+taxonomy:
+  species:
+    index: [8, 9]
+    join: " "

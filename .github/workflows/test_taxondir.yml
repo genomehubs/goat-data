@@ -70,7 +70,7 @@ jobs:
                 --es-host http://es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
-                --traverse-root 4751 \
+                --traverse-root 7711 \
                 --traverse-infer-both"
 
       - name: restart dockers
