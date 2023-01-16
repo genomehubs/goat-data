@@ -443,8 +443,16 @@ jobs:
       - name: Collect extra analysis and files compared to main branch
         run: |
           mkdir -p sources/btk_files_extra/
-          git diff origin/main...origin/$RELEASE -- sources/btk/btk.files.yaml \
-          | grep -P "^\+" | grep -v -P "^\+\+\+" | perl -plne 's/^\+//' \
+          # git diff origin/main...origin/$RELEASE -- sources/btk/btk.files.yaml \
+          # | grep -P "^\+" | grep -v -P "^\+\+\+" | perl -plne 's/^\+//' \
+          # > sources/btk_files_extra/btk.files.yaml
+
+          git show origin/main:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.main
+          git show origin/${{ env.RELEASE }}:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.${{ env.RELEASE }}
+          diff \
+            <(cat btk.files.yaml.${{ env.RELEASE }} | paste - - - - - - - - - - - - - - -) \
+            <(cat btk.files.yaml.main | paste - - - - - - - - - - - - - - -) \
+          | perl -lne 'if (/^< /) { s/^< //; s/\t/\n/g; print}' \
           > sources/btk_files_extra/btk.files.yaml
       - name: genomehubs index extra btk files
         run: |
