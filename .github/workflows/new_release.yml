@@ -145,7 +145,7 @@ jobs:
             s/(.*8-NCBI.*)$/$1\tVGP\tVGP\tVGP\tVGP\tVGP\tVGP\t/;
           ' > ./sources/status_lists/vgp.tsv
 
-      - name: Get from googlesheets (Kew, DTOL Assembly Informatics)
+      - name: Get from googlesheets (Kew, DTOL Assembly Informatics, Aus Genome Status Bioplatforms)
         run: |
           docker pull genomehubs/r-ver:latest
           docker run --rm --user $UID:$GROUPS \
@@ -153,6 +153,17 @@ jobs:
             -w /goat-data \
             genomehubs/r-ver:latest \
             Rscript ./scripts/get_googlesheets.R
+
+      - name: Update source_date in yamls
+        run:  |
+          perl -i -plne 's/source_date: 202\d\.\d\d.\d\d/source_date: '$RELEASE'/g' sources/status_lists/FILE_DTOL_sts.types.yaml
+          perl -i -plne 's/source_date: 202\d\.\d\d.\d\d/source_date: '$RELEASE'/g' sources/status_lists/FILE_DTOL_nhm.types.yaml
+          perl -i -plne 's/source_date: 202\d\.\d\d.\d\d/source_date: '$RELEASE'/g' sources/status_lists/FILE_jgi1kfg_status.types.yaml
+          perl -i -plne 's/source_date: 202\d\.\d\d.\d\d/source_date: '$RELEASE'/g' sources/status_lists/FILE_vgp_table_tracker.types.yaml
+          perl -i -plne 's/source_date: 202\d\.\d\d.\d\d/source_date: '$RELEASE'/g' sources/status_lists/FILE_Aus_Genome_status_Bioplatforms.types.yaml
+          perl -i -plne 's/source_date: 202\d\.\d\d.\d\d/source_date: '$RELEASE'/g' sources/genomesize_karyotype/FILE_DTOL_Plant_Genome_Size_Estimates.types.yaml
+          perl -i -plne 's/source_date: 202\d\.\d\d.\d\d/source_date: '$RELEASE'/g' sources/genomesize_karyotype/FILE_DTOL_assembly_informatics_status_kmer_draft.types.yaml
+
       - name: Commit files in branch
         run: |
           git config --local user.email "sujaikumar@gmail.com"
