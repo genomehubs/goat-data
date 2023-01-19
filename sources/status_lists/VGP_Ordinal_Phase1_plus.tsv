@@ -1,5 +1,6 @@
 superorder	orders_latin_name	species_sequenced	status	main_project	second_project	phylum	phase1	sample_collected	sample_acquired	in_progress	insdc_submitted	insdc_open	published
 Afrotheria	Proboscidea	Elephas maximus indicus	in_progress	VGP	Collosal	Chordata	VGP	VGP	VGP	VGP			
+Afrotheria	Proboscidea	Loxodonta africana		Collosal	VGP	Chordata	VGP						
 Afrotheria	Hyracoidea	Heterohyrax brucei	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Afrotheria	Sirenia	Dugong dugon	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Afrotheria	Macroscelidea	Rhynchocyon cirnei	in_progress			Chordata	VGP	VGP	VGP	VGP			
@@ -46,11 +47,16 @@ Supraprimates (Euarchontoglires)	Scandentia (Ptilocercidae)	Ptilocercus lowii			
 Laurasiatheria	Cetartiodactyla (Cetacea, Phocoenidae)	Phocoena sinus	in_progress	VGP	Cetacean GP	Chordata	VGP	VGP	VGP	VGP			
 Laurasiatheria	Cetartiodactyla (Cetacea, Delphinidae)	Tursiops truncatus		VGP	Cetacean GP	Chordata	VGP						
 		Tursiops truncatus				Chordata	VGP						
+Laurasiatheria	Cetartiodactyla (Cetacea, Iniidae)	Inia geoffrensis				Chordata	VGP						
+Laurasiatheria	Cetartiodactyla (Cetacea, Delphinidae)	Peponocephala electra				Chordata	VGP						
 Laurasiatheria	Cetartiodactyla (Cetacea, Balaenopteridae)	Balaenoptera musculus				Chordata	VGP						
+Laurasiatheria	Cetartiodactyla (Cetacea, Balaenopteridae)	Eschrichtius robustus				Chordata	VGP						
+Laurasiatheria	Cetartiodactyla (Cetacea, Balaenopteridae)	Balaenoptera ricei		Cetacean GP		Chordata	VGP						
 Laurasiatheria	Cetartiodactyla (Cetacea, Delphinidae)	Orcinus orca		DToL	Cetacean GP	Chordata	VGP						
 Laurasiatheria	Cetartiodactyla (Cetacea, Ziphiidae)	Mesoplodon densirostris		Cetacean GP		Chordata	VGP						
-Laurasiatheria	Cetartiodactyla (Cetacea, Balaenopteridae)	Balaenoptera ricei		Cetacean GP		Chordata	VGP						
 Laurasiatheria	Cetartiodactyla (Cetacea, Kogiidae)	Kogia breviceps		Cetacean GP		Chordata	VGP						
+		Kogia breviceps				Chordata	VGP						
+Laurasiatheria	Cetartiodactyla (Cetacea, Balaenidae)	Eubalaena glacialis				Chordata	VGP						
 Laurasiatheria	Cetartiodactyla (Hippopotamidae)	Hippopotamus amphibius	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Laurasiatheria	Cetartiodactyla (non Cetacea ungulates, Bovidae)	Bos taurus	in_progress	Cattle		Chordata	VGP	VGP	VGP	VGP			
 Laurasiatheria	Cetartiodactyla (non Cetacea ungulates, Bovidae)	Bos indicus		Cattle		Chordata	VGP						
@@ -95,7 +101,8 @@ Monotremes	Monotremata	Ornithorhynchus anatinus	in_progress			Chordata	VGP	VGP	V
 Monotremes	Monotremata	Tachyglossus aculeatus		VGP		Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Estrildidae)	Taeniopygia guttata	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 		Taeniopygia guttata		VGP		Chordata	VGP						
-		Taeniopygia guttata				Chordata	VGP						
+		Taeniopygia guttata		VGP		Chordata	VGP						
+Core landbirds	Passeriformes Oscines (Viduidae)	Vidua chalybeata		VGP		Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Fringillidae)	Haemorhous mexicanus				Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Passerellidae)	Melospiza georgiana				Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Passerellidae)	Ammodramus caudacutus				Chordata	VGP						
@@ -106,10 +113,12 @@ Core landbirds	Passeriformes Oscines (Hirundinidae)	Hirundo rustica		VGP		Chorda
 Core landbirds	Passeriformes Oscines (Parulidae)	Geothlypis trichas		VGP		Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Turdidae)	Erithacus rubecula		Sanger 25G		Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Turdidae)	Catharus ustulatus		VGP		Chordata	VGP						
+Core landbirds	Passeriformes Oscines (Turdidae)	Poecile atricapillus		Vocal learning		Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Sturnidae)	Acridotheres tristis				Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Covidae)	Corvus hawaiiensis		VGP		Chordata	VGP						
 Core landbirds	Passeriformes Oscines (Covidae)	Corvus moneduloides		VGP		Chordata	VGP						
 Core landbirds	Passeriformes Suboscines	Chiroxiphia lanceolata	in_progress	VGP	RCN Manakin	Chordata	VGP	VGP	VGP	VGP			
+Core landbirds	Passeriformes Suboscines	Dixiphia pipra				Chordata	VGP						
 Core landbirds	Passeriformes Acanthisitti	Acanthisitta chloris	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Core landbirds	Psittaciformes (Strigopidae)	Strigops habroptilus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Core landbirds	Psittaciformes (Psittaculidae)	Melopsittacus undulatus				Chordata	VGP						
@@ -123,7 +132,7 @@ Core landbirds	Falconiformes (Falconidae)	Falco naumanni		Falcon		Chordata	VGP
 		Falco naumanni		Falcon		Chordata	VGP						
 Core landbirds	Cariamiformes	Cariama cristata	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Core landbirds	Piciformes (Picidae)	Picoides pubescens	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
-Core landbirds	Piciformes (Lybiidae)	Pogoniulus pusillus		VGP		Chordata	VGP						
+Core landbirds	Piciformes (Lybiidae)	Pogoniulus pusillus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Core landbirds	Coraciiformes	Merops nubicus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Core landbirds	Bucerotiformes	Bucorvus abyssinicus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Core landbirds	Trogoniformes	Trogon surrucura	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
@@ -132,7 +141,7 @@ Core landbirds	Coliiformes	Colius striatus	in_progress			Chordata	VGP	VGP	VGP	VG
 Core landbirds	Strigiformes	Tyto alba	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Core landbirds	Accipitriformes (Accipitridae)	Aquila chrysaetos	in_progress	Sanger 25G		Chordata	VGP	VGP	VGP	VGP			
 Core landbirds	Accipitriformes (Accipitridae)	Haliaeetus albicilla		ERGA		Chordata	VGP						
-Core landbirds	Accipitriformes (Accipitridae)	Harpia harpyja				Chordata	VGP						
+Core landbirds	Accipitriformes (Accipitridae)	Harpia harpyja		DToL		Chordata	VGP						
 Core landbirds	Accipitriformes (Accipitridae)	Accipiter gentilis		DToL		Chordata	VGP						
 Core landbirds	Accipitriformes (Accipitridae)	Gypaetus barbatus				Chordata	VGP						
 Core landbirds	Cathartiformes	Sarcoramphus papa				Chordata	VGP						
@@ -143,19 +152,22 @@ Core waterbirds	Pelicaniformes (Phalacrocoracidae)	Phalacrocorax carbo	in_progre
 Core waterbirds	Pelicaniformes (Phalacrocoracidae)	Gulosus aristotelis				Chordata	VGP						
 Core waterbirds	Suliformes	Morus bassanus	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Core waterbirds	Ciconiiformes	Ciconia maguari	in_progress			Chordata	VGP	VGP	VGP	VGP			
-Core waterbirds	Procellariiformes	Fulmarus glacialis	in_progress			Chordata	VGP	VGP	VGP	VGP			
+Core waterbirds	Procellariiformes	Calonectris borealis	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Core waterbirds	Sphenisciformes	Spheniscus humboldti	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Core waterbirds	Gaviiformes	Gavia stellata	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Core waterbirds	Phaethontiformes	"Phaethon	aethereus"	in_progress			Chordata	VGP	VGP	VGP	VGP			
-Core waterbirds	Eurypgiformes	Rhynochetos jubatus	in_progress			Chordata	VGP	VGP	VGP	VGP			
+Core waterbirds	Eurypgiformes	Rhynochetos jubatus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Core waterbirds	Charadriiformes (Charadriidae)	Pluvialis apricaria	in_progress	VGP	DToL	Chordata	VGP	VGP	VGP	VGP			
 Core waterbirds	Charadriiformes (Alcidae)	Alca Torda				Chordata	VGP						
 Core waterbirds	Charadriiformes (Laridae)	Sterna hirundo		VGP		Chordata	VGP						
+Core waterbirds	Charadriiformes (Laridae)	Rissa tridactyla				Chordata	VGP						
+		Rissa tridactyla				Chordata	VGP						
 Core waterbirds	Gruiformes (Gruidae)	Balearica regulorum gibbericeps	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Core waterbirds	Gruiformes (Gruidae)	Grus americana		VGP		Chordata	VGP						
 Core waterbirds	Cranes	Porphyrio hochstetteri		VGP		Chordata	VGP						
 Core waterbirds	Opisthocomiformes	Opisthocomus hoazin	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Caprimulgimorphae	Trochiliformes	Calypte anna	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
+Caprimulgimorphae	Trochiliformes	Phaethornis superciliosus		Self		Chordata	VGP						
 Caprimulgimorphae	Apodiformes	Apus apus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Caprimulgimorphae	Apodiformes (Hemiprocnidae)	Hemiprocne comata	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Caprimulgimorphae	Caprimulgiformes (Caprimulgidae)	Caprimulgus europaeus	in_progress	DToL	VGP	Chordata	VGP	VGP	VGP	VGP			
@@ -205,6 +217,7 @@ Testudines, Pleurodira	Chelidae	Mesoclemmys tuberculata	in_progress			Chordata	V
 Testudines, Pleurodira	Pelomedusidae	Pelusios castaneus	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Testudines, Pleurodira	Podocnemididae	Podocnemis expansa	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Squamata	Serpentes (Boidae)	Candoia aspera	in_progress			Chordata	VGP	VGP	VGP	VGP			
+Squamata	Serpentes (Pythonidae)	Liasis olivaceus		VGP		Chordata	VGP						
 Squamata	Serpentes (Elapidae/Crotalinae/Viperidae)	Vipera latastei	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Squamata	Serpentes (Viperidae)	Vipera ursinii		ERGA		Chordata	VGP						
 Squamata	Serpentes (Viperidae)	Erythrolamprus reginae				Chordata	VGP						
@@ -238,6 +251,7 @@ Anura	Neobatrachia > Heleophrynidae | Rhinodermatidae	Hadromophryne natalensis	i
 Anura	Neobatrachia > Hyloidea > Bufonidae	Bufo bufo	in_progress	DToL		Chordata	VGP	VGP	VGP	VGP			
 Anura	Neobatrachia > Hyloidea > Hylidae | Hemiphractidae	Dendropsophus ebraccatus	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Anura	Neobatrachia > Hyloidea > Hylidae | Hemiphractidae	Hyla sarda				Chordata	VGP						
+Anura	Neobatrachia > Hyloidea > Dendrobatidae | Aromobatidae	Ranitomeya imitator	in_progress	Hypothalamus		Chordata	VGP	VGP	VGP	VGP			
 Anura	Neobatrachia > Hyloidea > Leptodactylidae | Centrolenidae	Engystomops pustulosus	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Anura	Neobatrachia > Myobatrachidae | Calyptocephalellidae	Pseudophryne corroboree	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Anura	Neobatrachia > Ranoidea > Dicroglossidae	Nanorana pleskei				Chordata	VGP						
@@ -275,10 +289,12 @@ Actinopterygii (Ray-finned Fishes)	Cypriniformes (Cyprinidae)	Danio rerio		DToL	
 Actinopterygii (Ray-finned Fishes)	Cypriniformes (Nemacheilidae)	Barbatula barbatula		DToL		Chordata	VGP						
 Actinopterygii (Ray-finned Fishes)	Cypriniformes (Cyprinidae)	Barbus barbus		DToL		Chordata	VGP						
 Actinopterygii (Ray-finned Fishes)	Gymnotiformes	Electrophorus electricus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
-Actinopterygii (Ray-finned Fishes)	Characiformes	Pygocentrus nattereri	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
+Actinopterygii (Ray-finned Fishes)	Characiformes (Serrasalmidae)	Pygocentrus nattereri	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
+Actinopterygii (Ray-finned Fishes)	Characiformes (Erythrinidae)	Hoplias malabaricus				Chordata	VGP						
 Actinopterygii (Ray-finned Fishes)	Siluriformes (Siluridae)	Silurus aristotelis	in_progress	ERGA		Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Siluriformes (Ariidae)	Pangasianodon hypophthalmus				Chordata	VGP						
 Actinopterygii (Ray-finned Fishes)	Siluriformes (Ariidae)	Neoarius graeffei				Chordata	VGP						
+Actinopterygii (Ray-finned Fishes)	Siluriformes (Trichomycteridae)	Trichomycterus rosablanca				Chordata	VGP						
 Actinopterygii (Ray-finned Fishes)	Lepidogalaxiiformes	Lepidogalaxias salamandroides				Chordata	VGP						
 Actinopterygii (Ray-finned Fishes)	Argentiniformes	Nansenia antarctica	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Galaxiiformes	Aplochiton taeniatus	in_progress			Chordata	VGP	VGP	VGP	VGP			
@@ -307,7 +323,6 @@ Actinopterygii (Ray-finned Fishes)	Scombriformes (Scombridae)	Scomber japonicus	
 Actinopterygii (Ray-finned Fishes)	Synbranchiformes	Mastacembelus armatus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Anabantiformes (Anabantidae)	Anabas testudineus	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Anabantiformes (Osphronemidae)	Betta splendens		VGP		Chordata	VGP						
-Actinopterygii (Ray-finned Fishes)	Anabantiformes (Osphronemidae)	Telmatherina bonti		DToL		Chordata	VGP						
 Actinopterygii (Ray-finned Fishes)	incertae sedis in Carangimorphariae	Toxotes jaculatrix	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Pleuronectiformes (Pleuronectidae)	Hippoglossus hippoglossus	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Pleuronectiformes (Pleuronectidae)	Pleuronectes platessa		DToL		Chordata	VGP						
@@ -323,6 +338,7 @@ Actinopterygii (Ray-finned Fishes)	Cyprinodontiformes (Goodeidae)	Girardinichthy
 Actinopterygii (Ray-finned Fishes)	Mugiliformes	Chelon labrosus	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Atheriniformes (Melanotaeniidae)	Melanotaenia boesemani	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Atheriniformes (Atherinopsidae)	Odontesthes bonariensis				Chordata	VGP						
+Actinopterygii (Ray-finned Fishes)	Atheriniformes (Melanotaeniidae)	Telmatherina bonti		DToL		Chordata	VGP						
 Actinopterygii (Ray-finned Fishes)	Beloniformes	Xenentodon cancila	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Pholidichthyiformes	Pholidichthys leucotaenia	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Actinopterygii (Ray-finned Fishes)	Uranoscopiformes	Hyperoplus lanceolatus	in_progress			Chordata	VGP	VGP	VGP	VGP			
@@ -353,6 +369,7 @@ Chondrichthyes (Cartilaginous Fishes)	Chimaeriformes	Callorhinchus milii				Chor
 Chondrichthyes (Cartilaginous Fishes)	Heterodontiformes	Heterodontus francisci	in_progress			Chordata	VGP	VGP	VGP	VGP			
 Chondrichthyes (Cartilaginous Fishes)	Orectolobiformes	Hemiscyllium ocellatum	in_progress			Chordata	VGP	VGP	VGP	VGP			
 		Hemiscyllium ocellatum				Chordata	VGP						
+Chondrichthyes (Cartilaginous Fishes)	Orectolobiformes (Stegostomatidae)	Stegostoma tigrinum				Chordata	VGP						
 Chondrichthyes (Cartilaginous Fishes)	Lamniformes	Carcharodon carcharias	in_progress	VGP		Chordata	VGP	VGP	VGP	VGP			
 Chondrichthyes (Cartilaginous Fishes)	Carcharhiniformes	Scyliorhinus canicula	in_progress	Sanger 25G		Chordata	VGP	VGP	VGP	VGP			
 Chondrichthyes (Cartilaginous Fishes)	Hexanchiformes	Chlamydoselachus anguineus	in_progress			Chordata	VGP	VGP	VGP	VGP			
