@@ -109,6 +109,36 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_agi:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
+  sequencing_status_arg:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_asg:
     display_group: sequencing_status
     display_level: 2
@@ -304,6 +334,36 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_gap:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
+  sequencing_status_gbr:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_giga:
     display_group: sequencing_status
     display_level: 2
@@ -334,6 +394,20 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_jgi1kfg:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_loewe-tbg:
     display_group: sequencing_status
     display_level: 2
@@ -350,6 +424,21 @@ attributes:
     traverse_direction: up
     type: keyword
   sequencing_status_metainvert:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
+  sequencing_status_omg:
     display_group: sequencing_status
     display_level: 2
     constraint:
@@ -409,6 +498,21 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_tsi:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_vgp:
     display_group: sequencing_status
     display_level: 2
@@ -432,110 +536,6 @@ attributes:
         - published
         - insdc_open
 #        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_omg:
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_arg:
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_agi:
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_tsi:
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_gap:
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_gbr:
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_jgi1kfg:
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
         - in_progress
         - sample_acquired
         - sample_collected
