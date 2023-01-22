@@ -17,7 +17,6 @@ taxon_id	input	rank	suggested
 2796863	Neumania vemalis	species	Neumania vernalis
 478652	Branchipus vernalis	species	Eubranchipus vernalis
 4726	Pandarus sinuatus	species	Pandanus tectorius
-6982	Blaberus cranifer	species	Blaberus craniifer
 36959	Phortioica phoraspoides	species	Phortioeca phoraspoides
 	Lupparia	genus	lepraria	lutraria	lopharia
 63624	Blattella litoricollis	species	Blattella lituricollis
@@ -29,15 +28,14 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
 295656	Stegobium paniceum_	species	Stegobium paniceum
 2680750	Notoxus calcaratus_	species	Notoxus calcaratus
-	Notoxus constrictus_	species	notozus constrictus	notoxus constrictus
+	Notoxus constrictus_	species	notoxus constrictus	notozus constrictus
 1468588	Notoxus monodon_	species	Notoxus monodon
 251759	Araecerus fasciculatus_	species	Araecerus fasciculatus
 1661878	Euparius marmoreus_	species	Euparius marmoreus
 638814	Ptychoderes tricostifrons_	species	Ptychoderes tricostifrons
-284700	Acrossus	genus	Dicrossus
 	Agolius	genus	aegolius	agorius	anolius
 75361	Chilothorax	genus	Schizothorax
-	Colobopterus	genus	chloropterus	dilobopterus	colopterus
+	Colobopterus	genus	chloropterus	dilobopterus
 1415215	Nimbus	genus	Niveus
 201766	Apoderus coryli_	species	Apoderus coryli
 207440	Byctiscus congener	species	Agabus congener
@@ -334,7 +332,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1499692	Galerita indica	species	Galerina indica
 247282	Harpalus aesculans_	species	Harpalus aesculanus
 247283	Harpalus affinis_	species	Harpalus affinis
-247283	Harpalus albanicus	species	Harpalus affinis
 1587330	Harpalus atratus_	species	Harpalus atratus
 247285	Harpalus attenuatus_	species	Harpalus attenuatus
 1127447	Harpalus compar_	species	Harpalus compar
@@ -419,7 +416,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 	Poecilus kugelanni_	species	poecilus kugelanni
 1553678	Poecilus lepidus_	species	Poecilus lepidus
 331380	Poecilus lucublandus_	species	Poecilus lucublandus
-1708820	Poecilus nitidus	species	Evagetes nitidulus
 585996	Poecilus quadricollis_	species	Poecilus quadricollis
 2850091	Poecilus sericeus_	species	Poecilus sericeus
 293750	Poecilus versicolor_	species	Poecilus versicolor
@@ -728,7 +724,7 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 	Chrysoli affinis_	species	chrysolina affinis	chrysopa affinis
 75506	Chrysoli america_	species	Chrysolina americana
 111535	Chrysoli aurichalcea	species	Chrysolina aurichalcea
-	Chrysoli banksi_	species	chrysolina banksii	chrysolina banksi
+	Chrysoli banksi_	species	chrysolina banksi	chrysolina banksii
 75508	Chrysoli bicolor_	species	Chrysolina bicolor
 75509	Chrysoli carnifex_	species	Chrysolina carnifex
 75510	Chrysoli cerealis_	species	Chrysolina cerealis
@@ -952,6 +948,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 156939	Deronectes wewalai	species	Deronectes wewalkai
 253321	Dytiscus circumcinctus_	species	Dytiscus circumcinctus
 207422	Dytiscus dauricus_	species	Dytiscus dauricus
+107881	Dytiscus herrmanni	species	Hygrobia hermanni
 183365	Hydaticus fabricii_	species	Prodaticus fabricii
 107862	Hydaticus leander_	species	Prodaticus leander
 666459	Hydaticus luczonicus_	species	Prodaticus luczonicus
@@ -1223,7 +1220,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 262188	Siederia alpicolella	species	Siederia rupicolella
 753433	Talaeporia lubulosa	species	Taleporia tubulosa
 1869861	Laurentia filigrammaria	species	Epirrita filigrammaria
-	Platysamia	genus	platylomia	platylabia
+678731	Platysamia	genus	Platylomia
 470732	Sphinx lingustri	species	Sphinx ligustri
 263944	Yponomeuta polistictus	species	Yponomeuta polystictus
 1430713	Elcysma westwoodi	species	Elcysma westwoodii
