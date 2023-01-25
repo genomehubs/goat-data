@@ -46,6 +46,7 @@ taxon_id	input	rank	suggested
 207705	Rhaphidura leucopygialis	species	Raphidura leucopygialis
 1226242	Piezorina cinerea	species	Piezorhina cinerea
 156162	Megalampitta gigantea	species	Melampitta gigantea
+2153416	Dicaeum nitidum	species	Puccinia nitida
 165740	Leuconotopicus borealis	species	Picoides borealis
 372364	Leuconotopicus arizonae	species	Picoides arizonae
 165750	Leuconotopicus stricklandi	species	Picoides stricklandi
@@ -53,7 +54,6 @@ taxon_id	input	rank	suggested
 1226211	Sicalis uropigyalis	species	Sicalis uropygialis
 265644	Melanopareia bitorquata	species	Melanopareia torquata
 2039007	Dryocopus schulzii	species	Dryocopus schulzi
-288514	Xenicus longipes †	species	Xenopus longipes
 721887	Lanius borealis	species	Lanius dorsalis
 	Otus fuliginosus	species	lotus uliginosus
 240730	Tricholaema lacrymosa	species	Tricholaema lachrymosa
@@ -67,13 +67,12 @@ taxon_id	input	rank	suggested
 388994	Scleroptila streptophora	species	Scleroptila streptophorus
 65363	Atlapetes flaviceps	species	Atlapetes fulviceps
 476438	Sylviorthorhynchus desmurii	species	Sylviorthorhynchus desmursii
-145798	Psephotellus pulcherrimus †	species	Psephellus pulcherrimus
 2608421	Cephaloscyllium sarawakense	species	Cephaloscyllium sarawakensis
 2717101	Oxynotus japonicus	species	Oxyporus japonicus
 495824	Apristurus canutus	species	Apristurus platyrhynchus
 1455673	Chiloscyllium burmense	species	Chiloscyllium burmensis
 182853	Raja ocellifera	species	Raja miraletus
-	Raja pita	species	rana picta	raja picta
+	Raja pita	species	raja picta	rana picta
 393601	Rhinolophus yunanensis	species	Rhinolophus yunnanensis
 160451	Hydromys neobritannicus	species	Hydromys neobrittanicus
 10149	Hydrochoeris hydrochaeris	species	Hydrochoerus hydrochaeris
@@ -132,6 +131,7 @@ taxon_id	input	rank	suggested
 137034	Barbodes microps	species	Enteromius macrops
 60258	Fundulopanchax cinnamomeus	species	Fundulopanchax cinnamomeum
 2999882	Characidium japuhybense	species	Characidium japuhybensis
+1696906	Callionymus curvispinis	species	Repomucenus belcheri
 622434	Stonogobiops xanthorhinicus	species	Stonogobiops xanthorhinica
 2999392	Amblyceps yunnanense	species	Amblyceps yunnanensis
 2614514	Diaphus minax	species	Dianthus minae
@@ -269,6 +269,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 118145	Moringua macrochir	species	Moringua microchir
 3000024	Coelorinchus maculatus	species	Coelorhynchus maculatus
 3000025	Coelorinchus matsubarai	species	Coelorhynchus matsubarai
+3001802	Pareuchiloglanis nebulifera	species	Pareuchiloglanis nebulifer
 2999783	Coelorinchus maurofasciatus	species	Caelorinchus maurofasciatus
 412649	Rhynchactis microthrix	species	Rhynchactis macrothrix
 334374	Ancistrus fulvus	species	Diancistrus fuscus
