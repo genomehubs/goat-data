@@ -1,7 +1,7 @@
 taxon_id	input	rank	suggested
 105628	Aethopyga magnifica	species	Astropyga magnifica
 	Psophodidae	family	psychodidae	psophiidae
-	Viduidae	family	sididae	mideidae
+77654	Viduidae	family	Sididae
 8845	Anser cygnoid	species	Anser cygnoides
 	Remizidae	family	neminidae	zemiridae
 1246550	Aphrastura masafucrae	species	Aphrastura masafuerae
@@ -16,6 +16,7 @@ taxon_id	input	rank	suggested
 	Chionidae	family	clionidae	chitonidae	chronidae
 	Pipromorphidae	family	copromorphidae	mitromorphidae
 9145	Corcorax melanoramphos	species	Corcorax melanorhamphos
+2153416	Dicaeum nitidum	species	Puccinia nitida
 357742	Dicrurus annectens	species	Dicrurus annectans
 	Dulidae	family	julidae	dixidae
 	Emberizidae	family	emberizinae
@@ -26,7 +27,7 @@ taxon_id	input	rank	suggested
 39106	Glaucidium palmarum	species	Glaucidium palmatum
 	Grallariidae	family	gracillariidae	galleriidae
 9118	Grus carunculata	species	Grus carunculatus
-	Ifritidae	family	figitidae	neritidae	poritidae
+	Ifritidae	family	figitidae	neritidae
 	Tityridae	family	mitridae	sisyridae	mictyridae
 721887	Lanius borealis	species	Lanius dorsalis
 33589	Leptoptilos crumenifer	species	Leptoptilos crumeniferus
@@ -37,13 +38,14 @@ taxon_id	input	rank	suggested
 189527	Nicatoridae	family	Indicatoridae
 	Oenanthe heuglinii	species	oenanthe heuglini
 44144	Ophrysia superciliosa	species	Uranoscodon superciliosus
-	Oriolidae	family	oripodidae	triozidae	arionidae
+	Oriolidae	family	oripodidae	triozidae	oriolia
 	Otus fuliginosus	species	lotus uliginosus
 	Panuridae	family	neanuridae	paguridae	panorpidae
 	Peucedramidae	family	peucedraminae
 1226242	Piezorina cinerea	species	Piezorhina cinerea
 	Pipritidae	family	poritidae	pipridae	porpitidae
 30850	Pluvianidae	family	Lutjanidae
+198685	Pomarea fluxa	species	Bomarea boliviensis
 	Prunellidae	family	pennellidae	paronellidae	plutellidae
 329508	Pseudocolaptes boissonneauii	species	Pseudocolaptes boissonneautii
 583363	Ptiliogonys caudatus	species	Ptilogonys caudatus
@@ -55,6 +57,7 @@ taxon_id	input	rank	suggested
 274628	Seicercus emeiensis	species	Phylloscopus omeiensis
 1226211	Sicalis uropigyalis	species	Sicalis uropygialis
 988065	Sporophila funerea	species	Aporophyla nigra
+476438	Sylviorthorhynchus desmurii	species	Sylviorthorhynchus desmursii
 240730	Tricholaema lacrymosa	species	Tricholaema lachrymosa
 316358	Trogon caligatus	species	Jaydia carinatus
 352469	Pardilaparus venustulus	species	Pardaliparus venustulus
@@ -68,5 +71,5 @@ taxon_id	input	rank	suggested
 	Ceratopipra erythocephala	species	ceratopipra erythrocephala
 1094390	Certhiasomus stictolaema	species	Certhiasomus stictolaemus
 	Tickellia	species	brickellia	mickelia
-	Rhamphocorys	species	rhamphocoris	ramphocoris
+	Rhamphocorys	species	ramphocoris	rhamphocoris
 62234	Phaenicophilus palmarun	species	Phaenicophilus palmarum

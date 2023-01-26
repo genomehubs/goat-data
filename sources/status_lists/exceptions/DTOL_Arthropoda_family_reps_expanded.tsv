@@ -2,7 +2,7 @@
 5	Coleoptera	Aegialiidae	Psammoporus insularis	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 12	Coleoptera	Anthribidae	Platystomos albinus 	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 14	Coleoptera	Aphodiidae	Aphodius prodromus	Availability	NOT COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
-64	Coleoptera	Drilidae	Drilus flavescens	Monospecific family	NOT COLLECTED	NHM	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	DTOL
+64	Coleoptera	Drilidae	Drilus flavescens	Monospecific family	COLLECTED	NHM	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	DTOL
 65	Coleoptera	Dryophthoridae	Dryophthorus corticalis	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 66	Coleoptera	Dryophthoridae	Sitophilus oryzae	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 68	Coleoptera	Dryopidae	Dryops ernesti 	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
@@ -24,7 +24,7 @@
 455	Hemiptera	Gerridae	Gerris odontogaster 	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 513	Hemiptera	Ulopidae	Utecha trivia	Dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 524	Hymenoptera	Astatidae	Astata boops	dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
-525	Hymenoptera	Astatidae	Dryudella pinguis	dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
+525	Hymenoptera	Astatidae	Dryudella pinguis	dispecific family	NOT COLLECTED	NHM	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	DTOL
 528	Hymenoptera	Bembicidae	Nysson spinosus	Availability	COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
 529	Hymenoptera	Bembicidae	Gorytes quadrifasciatus	Availability	NOT COLLECTED	NHM	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	DTOL
 578	Hymenoptera	Heptamelidae	Heptamelus dahlbomi	dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
@@ -35,15 +35,15 @@
 595	Hymenoptera	Mellinidae	Mellinus crabroneus	dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 605	Hymenoptera	Pemphredonidae	Pemphredon lugubris	Availability	COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
 606	Hymenoptera	Pemphredonidae	Passaloecus gracilis	Availability	NOT COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
-609	Hymenoptera	Philanthidae	Cerceris rybyensis	Availability	COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
-610	Hymenoptera	Philanthidae	Philanthus triangulum	Community survey	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
+609	Hymenoptera	Philanthidae	Cerceris rybyensis	Availability	COLLECTED	NHM	WW	NOT COLLECTED	DTOL	DTOL	DTOL
+610	Hymenoptera	Philanthidae	Philanthus triangulum	Community survey	NOT COLLECTED	NHM	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	DTOL
 617	Hymenoptera	Psenidae	Mimumesa dahlbomi	Availability	COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
 618	Hymenoptera	Psenidae	Mimesa equestris	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 629	Hymenoptera	Sparasionidae	Sparasion cephalotes	dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 630	Hymenoptera	Sparasionidae	Sparasion rugulosum	dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 664	Lepidoptera	Chimabachidae	Diurnea fagella	Availability	COLLECTED	NHM	WW	NOT COLLECTED	DTOL	DTOL	DTOL
 665	Lepidoptera	Chimabachidae	Diurnea lipsiella	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
-691	Lepidoptera	Ethmiidae	Ethmia dodecea	Availability	COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
+691	Lepidoptera	Ethmiidae	Ethmia dodecea	Availability	COLLECTED	NHM	WW	NOT COLLECTED	DTOL	DTOL	DTOL
 692	Lepidoptera	Ethmiidae	Ethmia quadrillella	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 782	Lepidoptera	Parametriotidae	Blastodacna hellerella	Availability	NOT COLLECTED	NHM	WW	NOT COLLECTED	DTOL	DTOL	DTOL
 783	Lepidoptera	Parametriotidae	Spuleria flavicaput	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
@@ -67,7 +67,7 @@
 902	Psocodea	Caeciliusidae	Valenzuela flavidus	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 903	Psocodea	Caeciliusidae	Valenzuela burmeisteri 	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 904	Psocodea	Ectopsocidae	Ectopsocus briggsi	Availability	NOT COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
-905	Psocodea	Ectopsocidae	Ectopsocus petersi	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
+905	Psocodea	Ectopsocidae	Ectopsocus petersi	Availability	NOT COLLECTED	NHM	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	DTOL
 906	Psocodea	Elipsocidae	Elipsocus hyalinus	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 907	Psocodea	Elipsocidae	Elipsocus pumilis	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 908	Psocodea	Epipsocidae	Bertkauia lucifuga	Monospecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
@@ -82,16 +82,16 @@
 918	Psocodea	Paracaeciliidae	Chilenocaecilius ornatipennis	Monospecific family	COLLECTED	NOT COLLECTED	NOT COLLECTED	Sanger	DTOL	DTOL	DTOL
 919	Psocodea	Peripsocidae	Peripsocus subfasciatus	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 920	Psocodea	Peripsocidae	Peripsocus phaeopterus	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
-921	Psocodea	Philotarsidae	Philotarsus parviceps	Dispecific family	COLLECTED	NOT COLLECTED	NOT COLLECTED	Sanger	DTOL	DTOL	DTOL
+921	Psocodea	Philotarsidae	Philotarsus parviceps	Dispecific family	COLLECTED	NHM	NOT COLLECTED	Sanger	DTOL	DTOL	DTOL
 922	Psocodea	Philotarsidae	Philotarsus picicornis	Dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 923	Psocodea	Psocidae	Metylophorus nebulosus	Availability	COLLECTED	NOT COLLECTED	NOT COLLECTED	Sanger	DTOL	DTOL	DTOL
-924	Psocodea	Psocidae	Psococerastis gibbosa	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
+924	Psocodea	Psocidae	Psococerastis gibbosa	Availability	COLLECTED	NHM	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	DTOL
 927	Psocodea	Psyllipsocidae	Psyllipsocus ramburii	Dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 928	Psocodea	Psyllipsocidae	Dorypteryx domestica	Dispecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 929	Psocodea	Sphaeropsocidae	Badonnelia titei	Monospecific family	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 930	Psocodea	Stenopsocidae	Stenopsocus immaculatus	Availability	COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
 931	Psocodea	Stenopsocidae	Graphopsocus cruciatus	Availability	COLLECTED	NOT COLLECTED	WW	NOT COLLECTED	DTOL	DTOL	DTOL
-932	Psocodea	Trichopsocidae	Trichopsocus brincki	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
+932	Psocodea	Trichopsocidae	Trichopsocus brincki	Availability	COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	DTOL
 933	Psocodea	Trichopsocidae	Trichopsocus dalii	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 934	Psocodea	Trogiidae	Cerobasis guestfalica	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	
 935	Psocodea	Trogiidae	Lepinotus patruelis	Availability	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	NOT COLLECTED	DTOL	DTOL	

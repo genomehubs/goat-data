@@ -1,53 +1,5 @@
-bioplatforms_initiative	genus	species	subspecies	taxonomic_family_example_hominidae	ncbi_taxon_id	sequencing_status	in_progress	sample_acquired	sample_collected	target_status	long_list	other_priority	sequencing_status_omg	sequencing_status_arg	sequencing_status_tsi	sequencing_status_gap	sequencing_status_gbr	sequencing_status_agi
-ARG	Platyplectrum	ornatum	moonsonal	Limnodynastidae	NA					other_priority	ARG	ARG						
-ARG	Gehyra	paranana	nana	Gekkonidae	NA	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG		in_progress				
-ARG	Phyllurus	nephtys	NA	Pygopoidae	NA					other_priority	ARG	ARG						
-ARG	Cophixalus	australis	NA	Microhylidae	NA					other_priority	ARG	ARG						
-ARG	Rheobatrachus	vitellinus	NA	Rheobatrachidae	NA	in_progress	ARG	ARG	ARG	other_priority	ARG	ARG		in_progress				
-GAP	NA	NA	NA	NA	NA					other_priority	GAP	GAP						
-TSI	NA	NA	NA	NA	NA	in_progress	TSI	TSI	TSI	other_priority	TSI	TSI			in_progress			
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-ARG	NA	NA	NA	NA	NA					other_priority	ARG	ARG						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
-TSI	NA	NA	NA	NA	NA					other_priority	TSI	TSI						
+NCBI_taxon_id	Genus	Species	Subspecies	Family	Bioplatforms_initiative	sequencing_status	translated_status	sample_collected	sample_acquired	in_progress	insdc_open	published	sequencing_status_arg	sequencing_status_agi	sequencing_status_gap	sequencing_status_gbr	sequencing_status_omg	sequencing_status_tsi
+	Platyplectrum	ornatum	moonsonal	Limnodynastidae	ARG	planned												
+	Gehyra	paranana	nana	Gekkonidae	ARG	complete	in_progress	ARG	ARG	ARG			in_progress					
+	Phyllurus	nephtys		Pygopoidae	ARG	planned												
+	Rheobatrachus	vitellinus		Rheobatrachidae	ARG	complete	in_progress	ARG	ARG	ARG			in_progress					
