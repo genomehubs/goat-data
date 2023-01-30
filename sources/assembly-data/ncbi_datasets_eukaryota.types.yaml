@@ -245,6 +245,7 @@ attributes:
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    type: keyword
   protein_count:
     constraint:
       min: 1

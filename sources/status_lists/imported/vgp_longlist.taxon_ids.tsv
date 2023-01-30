@@ -52018,6 +52018,7 @@ taxon_id	input	rank
 2861862	Hypotaenidia woodfordi	species
 634320	Paradoxornis verreauxi	species
 201371	Paradoxornis davidianus	species
+196524	Chrysococcyx minutillus	species
 28714	Epimachus fastuosus	species
 1071643	Paradoxornis atrosuperciliaris	species
 237418	Cincloramphus mathewsi	species
@@ -52252,7 +52253,7 @@ taxon_id	input	rank
 1149633	Leioptila annectens	species
 2071562	Edolisoma melas	species
 195328	Rhina ancylostoma	species
-990637	Rhinobatos leucospilus	species
+3023859	Acroteriobatus leucospilus	species
 334996	Himantura toshi	species
 529109	Dasyatis microps	species
 651724	Taeniura meyeni	species
@@ -52268,8 +52269,10 @@ taxon_id	input	rank
 170815	Centroscymnus owstoni	species
 335028	Centroscymnus crepidater	species
 1443581	Zameus ichiharai	species
+3023860	Carcharhinus humani	species
 556024	Proscymnodon plunketi	species
 1213701	Okamejei jensenae	species
+3023861	Raja ocellifera	species
 658171	Bathyraja simoterus	species
 1213689	Himantura oxyrhyncha	species
 87132	Himantura signifer	species
@@ -52455,7 +52458,9 @@ taxon_id	input	rank
 2891205	Plectroglyphidodon obreptus	species
 274777	Sarritor frenatus	species
 57816	Labrisomus striatus	species
+3023855	Hemiculter varpachovskii	species
 316127	Ariomma brevimanus	species
+3021970	Neolebias axelrodi	species
 60304	Nothobranchius thierryi	species
 555490	Haemulon macrostomum	species
 2859054	Ariomma indica	species
@@ -52499,6 +52504,7 @@ taxon_id	input	rank
 1042425	Alestes grandisquamis	species
 1482980	Anaecypris punica	species
 42547	Myleus schomburgkii	species
+3021024	Garra koladynensis	species
 2809725	Heteromormyrus pappenheimi	species
 129059	Platybelone argala	species
 722643	Adinia xenica	species
@@ -52609,18 +52615,22 @@ taxon_id	input	rank
 500714	Leptobotia zebra	species
 441536	Pseudotropheus fainzilberi	species
 1931381	Jupiaba anterior	species
+3022963	Chiloglanis camarabounyi	species
 2099957	Rivulus montium	species
 2578356	Synchiropus rameus	species
 342865	Tomocichla sieboldii	species
+3022964	Chiloglanis carnosus	species
 1735002	Cambeva davisi	species
 201704	Sebastes matsubarae	species
 135311	Gnatholebias hoignei	species
 130427	Bathyclarias nyasensis	species
+3022968	Chiloglanis dialloi	species
 2023038	Cambeva diatropoporos	species
 762044	Callionymus beniteguri	species
 1141927	Rhencus macracanthus	species
 435160	Leiognathus ruconius	species
 1003715	Coelorinchus flabellispinnis	species
+3022969	Chiloglanis elisabethianus	species
 303998	Micralestes pabrensis	species
 857722	Opsarius shacra	species
 545689	Cheilopogon antoncichi	species
@@ -52633,10 +52643,12 @@ taxon_id	input	rank
 152542	Microlipophrys adriaticus	species
 91654	Nannobrachium regale	species
 471640	Osteochilus melanopleurus	species
+3022970	Chiloglanis kabaensis	species
 #fSalGry	Salvelinus grayi	species
 381629	Carassioides sp. 'phongnhaensis'	species
 407115	Cichlasoma grammodes	species
 319541	Nannobrachium ritteri	species
+3021527	Encheloclarias tapeinopterus	species
 2813870	Typhlachirus elongatus	species
 241331	Halichoeres californicus	species
 #fPhyMic	Phyllorhinichthys micractis	species
@@ -52671,6 +52683,8 @@ taxon_id	input	rank
 #fBajCal	Bajacalifornia calcarata	species
 333424	Carapus boraborensis	species
 337654	Brochis multiradiatus	species
+3024101	Lasiancistrus guacharote	species
+3022972	Chiloglanis nzerekore	species
 #fSalPer	Salvelinus perisii	species
 753915	Hypoatherina harringtonensis	species
 2107523	Tetragonopterus daguae	species
@@ -52723,7 +52737,9 @@ taxon_id	input	rank
 2821898	Leptorhamdia aspredinoides	species
 1147744	Neosynchiropus moyeri	species
 1137594	Pseudancistrus orinoco	species
+3022973	Chiloglanis waterloti	species
 588770	Arius jella	species
+3023583	Euchilichthys astatodon	species
 #fConMic	Conocara microlepis	species
 3019497	Aulotrachichthys latus	species
 343526	Schizopyge nukiangensis	species
@@ -52732,6 +52748,7 @@ taxon_id	input	rank
 1705614	Deuterodon giton	species
 195826	Anatolichthys anatoliae	species
 979683	Oreinus oligolepis	species
+3023584	Euchilichthys guentheri	species
 497986	Salmostoma bacalia	species
 566409	Synodontis membranacea	species
 559347	Xenotilapia rotundiventralis	species
@@ -52744,6 +52761,7 @@ taxon_id	input	rank
 591274	Notarius luniscutis	species
 195836	Anatolichthys danfordii	species
 224716	Etrumeus teres	species
+3023585	Microsynodontis christyi	species
 2712758	Cambeva naipi	species
 1365531	Amoya gracilis	species
 28747	Aplocheilichthys kassenjiensis	species
@@ -52780,6 +52798,7 @@ taxon_id	input	rank
 445525	Pseudotropheus microstoma	species
 260978	Telestes montenegrinus	species
 1476532	Catostomus bondi	species
+3024105	Ostorhinchus hartzfeldii	species
 2841739	Lythrichthys longimanus	species
 2579950	Andromakhe latens	species
 7970	Catostomus clarkii	species
@@ -52808,8 +52827,10 @@ taxon_id	input	rank
 681758	Catostomus santaanae	species
 240828	Leucosoma reevesii	species
 1476541	Catostomus virescens	species
+3024195	Beaufortia leveretti	species
 195832	Anatolichthys sureyanus	species
 1931394	Psalidodon marionae	species
+3024196	Beaufortia niulanensis	species
 3020508	Microphysogobio vietnamica	species
 195841	Anatolichthys villwocki	species
 3020509	Microphysogobio wulonghensis	species
@@ -52829,6 +52850,7 @@ taxon_id	input	rank
 400073	Hara horai	species
 91970	Gonostoma elongatum	species
 369635	Cyprinus multitaeniata	species
+3024198	Beaufortia zebroida	species
 909845	Duringlanis perugiae	species
 184438	Serranus dewegeri	species
 1357723	Paramonacanthus filicauda	species
@@ -52913,6 +52935,7 @@ taxon_id	input	rank
 2712761	Cambeva tupinamba	species
 1204575	Profundulus portillorum	species
 1040953	Squalomugil nasutus	species
+3022026	Cymatognathus aureolateralis	species
 1133803	Deuterodon ribeirae	species
 304016	Hemistichodus vaillanti	species
 51189	Neochromis nigricans	species
@@ -52961,6 +52984,7 @@ taxon_id	input	rank
 2602797	Diploderma dymondi	species
 2683218	Diploderma fasciatum	species
 1591008	Hebius bitaeniatus	species
+3024143	Siagonodon cupinensis	species
 52218	Diploderma flaviceps	species
 2653784	Ctenonotus caudalis	species
 2795852	Diploderma iadinum	species
@@ -52995,6 +53019,7 @@ taxon_id	input	rank
 2602794	Diploderma yulongense	species
 2202156	Panolopus costatus	species
 2748925	Herpetoreas pealii	species
+3024145	Trilepida salgueiroi	species
 2602798	Diploderma zhaoermii	species
 2706464	Chlorosoma viridissima	species
 2202157	Siderolamprus cyanochloris	species
@@ -53029,6 +53054,7 @@ taxon_id	input	rank
 3019167	Erythrolamprus mossoroensis	species
 2571096	Subdoluseps herberti	species
 103705	Tropicagama temporalis	species
+3023461	Sibynophis bivittatus	species
 3019171	Cyclodomorphus melanops	species
 2571097	Subdoluseps pruthi	species
 2571098	Subdoluseps samajaya	species
@@ -53094,6 +53120,7 @@ taxon_id	input	rank
 2259164	Limaformosa savorgnani	species
 1212737	Tropidodipsas annuliferus	species
 1545006	Hydrophis annandalei	species
+3023460	Tantilla taeniata	species
 2743350	Fowlea flavipunctatus	species
 2879141	Fowlea piscator	species
 2762607	Suta dwyeri	species
@@ -53113,3 +53140,4 @@ taxon_id	input	rank
 1798873	Diploderma brevipes	species
 2116602	Diploderma chapaense	species
 1591023	Hebius atemporalis	species
+3024142	Siagonodon acutirostris	species
