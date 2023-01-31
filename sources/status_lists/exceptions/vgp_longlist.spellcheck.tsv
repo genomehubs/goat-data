@@ -53,7 +53,6 @@ taxon_id	input	rank	suggested
 1226211	Sicalis uropigyalis	species	Sicalis uropygialis
 265644	Melanopareia bitorquata	species	Melanopareia torquata
 2039007	Dryocopus schulzii	species	Dryocopus schulzi
-288514	Xenicus longipes †	species	Xenopus longipes
 721887	Lanius borealis	species	Lanius dorsalis
 	Otus fuliginosus	species	lotus uliginosus
 240730	Tricholaema lacrymosa	species	Tricholaema lachrymosa
@@ -71,7 +70,7 @@ taxon_id	input	rank	suggested
 2717101	Oxynotus japonicus	species	Oxyporus japonicus
 495824	Apristurus canutus	species	Apristurus platyrhynchus
 1455673	Chiloscyllium burmense	species	Chiloscyllium burmensis
-	Raja pita	species	rana picta	raja picta
+	Raja pita	species	raja picta	rana picta
 393601	Rhinolophus yunanensis	species	Rhinolophus yunnanensis
 160451	Hydromys neobritannicus	species	Hydromys neobrittanicus
 10149	Hydrochoeris hydrochaeris	species	Hydrochoerus hydrochaeris
@@ -130,6 +129,7 @@ taxon_id	input	rank	suggested
 137034	Barbodes microps	species	Enteromius macrops
 60258	Fundulopanchax cinnamomeus	species	Fundulopanchax cinnamomeum
 2999882	Characidium japuhybense	species	Characidium japuhybensis
+1696906	Callionymus curvispinis	species	Repomucenus belcheri
 622434	Stonogobiops xanthorhinicus	species	Stonogobiops xanthorhinica
 2999392	Amblyceps yunnanense	species	Amblyceps yunnanensis
 2614514	Diaphus minax	species	Dianthus minae
@@ -266,6 +266,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 118145	Moringua macrochir	species	Moringua microchir
 3000024	Coelorinchus maculatus	species	Coelorhynchus maculatus
 3000025	Coelorinchus matsubarai	species	Coelorhynchus matsubarai
+3001802	Pareuchiloglanis nebulifera	species	Pareuchiloglanis nebulifer
 2999783	Coelorinchus maurofasciatus	species	Caelorinchus maurofasciatus
 412649	Rhynchactis microthrix	species	Rhynchactis macrothrix
 334374	Ancistrus fulvus	species	Diancistrus fuscus
@@ -313,7 +314,6 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 	Pomacentrus emarginatus	species	eupomacentrus marginatus	pomacentrus marginatus
 209205	Betta breviobesa	species	Betta breviobesus
 214659	Girella tricuspidatus	species	Girella tricuspidata
-3001151	Moenkhausia latissima	species	Moenkhausia latissimus
 	Leporinus punctatus	species	lethrinus punctulatus
 2303447	Beaufortia yunnanensis	species	Beaumontia khasiana
 1907135	Schistura xhatensis	species	Physoschistura shanensis
@@ -370,6 +370,7 @@ fLycAlb	Lycenchelys alta	species	Lycenchelys alba
 57313	Sceloporus unicanthalis	species	Sceloporus bicanthalis
 256095	Celestus montanus	species	Gymnosporia senegalensis
 1917336	Pseudoboa serrana	species	Pseudopoda serrata
+55266	Elapsoidea guentherii	species	Elapsoidea semiannulata
 1127713	Lygodactylus inexpectatus	species	Lygodactylus expectatus
 983886	Lygodactylus insularis	species	Lygodactylus angularis
 1544892	Gongylosoma baliodeirus	species	Gongylosoma baliodeirum
