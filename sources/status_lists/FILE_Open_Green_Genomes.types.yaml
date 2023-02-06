@@ -1,0 +1,46 @@
+file:
+  format: tsv
+  header: true
+  name: Open_Green_Genomes_expanded.tsv
+  source: Declared Status List - OGG
+  source_date: 2021-02-06
+  source_description:  Declared Status List - Open Green Genomes Project, static spreadsheet - Open_Green_Genomes_GoaT_2023-02-06
+  source_contact:  Jim Leebens-Mack, Department of Plant Biology, University of Georgia
+attributes:
+  long_list:
+    header: target_list
+  sequencing_status:
+    header: sequencing_status
+  sequencing_status_ogg:
+    header: sequencing_status
+  sample_collected:
+    header: sequencing_status
+    translate:
+      open: OGG
+      in_progress: OGG
+  sample_acquired:
+    header: sequencing_status
+    translate:
+      open: OGG
+      in_progress: OGG
+  in_progress:
+    header: sequencing_status
+    translate:
+      open: OGG
+      in_progress: OGG
+  insdc_open:
+    header: sequencing_status
+    translate:
+      open: ""
+      in_progress: ""
+  open:
+    header: sequencing_status
+    translate:
+      open: OGG
+      in_progress: ""
+taxonomy:
+  genus:
+    header: genus
+  species:
+    header: [genus, species]
+    join: " "
