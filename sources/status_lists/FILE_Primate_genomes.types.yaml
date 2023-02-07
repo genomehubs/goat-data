@@ -3,7 +3,7 @@ file:
   header: true
   name: PrimateGP_expanded.tsv
   source: Declared Status List - PRGP
-  source_date: 2021-02-06
+  source_date: 2023-02-06
   source_description:  Declared Status List - Primate Genomes Project, static spreadsheet - Primate_Genomes_2023-02-06
   source_contact:  Guojie Zhang
 attributes:
@@ -19,16 +19,16 @@ attributes:
     header: project
   in_progress:
     header: project
-  insdc_open:
-    header: sequencing_status
-    translate:
-      insdc_open: PRGP
-      open: ""
   open:
     header: sequencing_status
     translate:
       insdc_open: PRGP
       open: PRGP
+  insdc_open:
+    header: sequencing_status
+    translate:
+      insdc_open: PRGP
+      open: ""
 taxonomy:
   order:
     header: order
