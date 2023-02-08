@@ -1,0 +1,28 @@
+file:
+  format: tsv
+  header: true
+  name: i5k_without_umbrella.tsv
+  source: Declared Status List - i5K
+  source_date: 2023-02-07
+  source_description:  Declared Status List - i5K initiative, Sequencing Five Thousand Arthropod Genomes, static spreadsheet - i5k_without_umbrella
+  source_contact:  Monica Poelchau, USDA-ARS
+attributes:
+  long_list:
+    header: project
+  sequencing_status:
+    header: sequencing_status
+  sequencing_status_i5k:
+    header: sequencing_status
+  sample_collected:
+    header: project
+  sample_acquired:
+    header: project
+  in_progress:
+    header: project
+  open:
+    header: project
+  insdc_open:
+    header: project
+taxonomy:
+  species:
+    header: organism_name

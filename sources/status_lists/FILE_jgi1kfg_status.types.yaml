@@ -3,22 +3,22 @@ file:
   header: true
   comment: "#"
   name: jgi_1kfg.tsv
-  source: JGI GOLD API
-  source_date: 2023-02-07
-  source_description: JGI GOLD API StudyId Gs000001
+  source: Declared Status List - 1KFG
+  source_date: 2023-02-06
+  source_description: Declared Status List - 1KFG, JGI GOLD API StudyId Gs000001
   source_url: https://gold.jgi.doe.gov/projects?page=1&Study.GOLD+Study+ID=Gs0000001&Project.Sequencing+Strategy=Whole+Genome+Sequencing
 attributes:
   long_list:
     header: studyGoldId
     translate:
-      Gs0000001: jgi1kfg
+      Gs0000001: 1KFG
   sequencing_status:
     header: projectStatus
     translate:
       Permanent Draft: in_progress
       incomplete: in_progress
       targeted:
-  sequencing_status_jgi1kfg:
+  sequencing_status_1kfg:
     header: projectStatus
     translate:
       Permanent Draft: in_progress
@@ -27,20 +27,20 @@ attributes:
   sample_collected:
     header: projectStatus
     translate:
-      Permanent Draft: jgi1kfg
-      incomplete: jgi1kfg
+      Permanent Draft: 1KFG
+      incomplete: 1KFG
       targeted:
   sample_acquired:
     header: projectStatus
     translate:
-      Permanent Draft: jgi1kfg
-      incomplete: jgi1kfg
+      Permanent Draft: 1KFG
+      incomplete: 1KFG
       targeted:
   in_progress:
     header: projectStatus
     translate:
-      Permanent Draft: jgi1kfg
-      incomplete: jgi1kfg
+      Permanent Draft: 1KFG
+      incomplete: 1KFG
       targeted:
 taxonomy:
   taxon_id:

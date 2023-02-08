@@ -24,6 +24,7 @@ attributes:
       PRJNA758215: METAINVERT
       PRJNA707598: SQUALOMIX
       PRJNA489243: VGP
+      PRJNA163993: i5K
 
   sequencing_status_ebp:
     display_group: sequencing_status
@@ -81,6 +82,13 @@ attributes:
       - ;
     translate:
       PRJNA393850: insdc_open
+  sequencing_status_i5k:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA163993: insdc_open
   sequencing_status_metainvert:
     display_group: sequencing_status
     header: bioProjectAccession
