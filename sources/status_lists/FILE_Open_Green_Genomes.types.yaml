@@ -31,13 +31,13 @@ attributes:
   insdc_open:
     header: sequencing_status
     translate:
-      open:
-      in_progress:
+      open: None
+      in_progress: None
   open:
     header: sequencing_status
     translate:
       open: OGG
-      in_progress:
+      in_progress: None
 taxonomy:
   genus:
     header: genus
