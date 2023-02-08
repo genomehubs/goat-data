@@ -28,7 +28,7 @@ attributes:
     header: sequencing_status
     translate:
       insdc_open: PRGP
-      open: None
+      open:
 taxonomy:
   order:
     header: order
