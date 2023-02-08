@@ -1,6 +1,12 @@
 taxon_id	input	rank
-7399	Hymenoptera	order
+65288	Netelia	genus
 42113	Clitellata	class
+70849	Nudibranchia	order
+6544	Bivalvia	class
+1418174	Cryptops anomalans	species
+856749	Geophilus flavus	species
+7552	Lithobius forficatus	species
+7399	Hymenoptera	order
 7147	Diptera	order
 7041	Coleoptera	order
 446512	Mystacides	genus
@@ -29,9 +35,6 @@ taxon_id	input	rank
 1569488	Lithobius microps	species
 1569489	Lithobius muticus	species
 126936	Henia vesuviana	species
-1418174	Cryptops anomalans	species
-856749	Geophilus flavus	species
-7552	Lithobius forficatus	species
 1871975	Megalepthyphantes collinus	species
 126940	Lamyctes emarginatus	species
 88022	Blaniulidae	family
@@ -111,7 +114,6 @@ taxon_id	input	rank
 7509	Siphonaptera	order
 1569508	Brachydesmus superus	species
 1443160	Saccoglossus horsti	species
-6544	Bivalvia	class
 39820	Nereididae	family
 6821	Amphipoda	order
 6103	Actiniaria	order
@@ -166,7 +168,6 @@ taxon_id	input	rank
 214286	Oligia	genus
 987935	Euproctis similis	species
 104428	Drepana falcataria	species
-65288	Netelia	genus
 987925	Diarsia rubi	species
 326959	Eulithis testata	species
 753177	Elophila nymphaeata	species
@@ -516,7 +517,6 @@ taxon_id	input	rank
 128749	Steringophorus thulini	species
 1173315	Leuctra geniculata	species
 6670	Ostracoda	class
-70849	Nudibranchia	order
 296241	Poecilochirus	genus
 987918	Cybosia mesomella	species
 1008843	Brachyiulus pusillus	species
@@ -865,6 +865,9 @@ taxon_id	input	rank
 283834	Deilephila elpenor	species
 524111	Kerabistus	genus
 934882	Opisthograptis luteolata	species
+195873	Aeolidia papillosa	species
+71285	Acanthodoris pilosa	species
+987004	Scopula immutata	species
 76058	Somateria mollissima	species
 8853	Branta canadensis	species
 110926	Cygnus columbianus	species
@@ -968,7 +971,6 @@ taxon_id	input	rank
 1858079	Synanthedon flaviventris	species
 1660703	Synanthedon vespiformis	species
 753230	Stathmopoda pedella	species
-987004	Scopula immutata	species
 722659	Cabera pusaria	species
 1594245	Cataclysta lemnata	species
 78633	Pieris napi	species
@@ -1349,8 +1351,6 @@ taxon_id	input	rank
 1336876	Ophlitaspongia papilla	species
 10222	Saccoglossus	genus
 1933098	Thyone fusus	species
-195873	Aeolidia papillosa	species
-71285	Acanthodoris pilosa	species
 51650	Sacculina carcini	species
 1732093	Austrominius modestus	species
 2589376	Gari tellinella	species
@@ -1399,7 +1399,7 @@ taxon_id	input	rank
 254363	Autographa gamma	species
 315910	Elachista	genus
 1869933	Evergestis limbata	species
-1101100	Eulamprotes wilkella	species
+#ilOxyWilk	Oxypteryx wilkella	species
 1101084	Assara terebrella	species
 198963	Acrocercops brongniardella	species
 685409	Monopis	genus

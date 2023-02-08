@@ -44,7 +44,7 @@ taxon_id	input	rank	suggested
 710017	Ageratina brevipes	species	Ceratina breviceps
 58936	Agropyron dasyanthum	species	Eremopyrum distans
 282262	Agrostis atlantica	species	Noctua atlantica
-	Agrostis densiflora	species	eragrostis tenuiflora	agrostis tenuiflora
+	Agrostis densiflora	species	eragrostis tenuiflora	agrostis tenuiflora	eragrostis densiflora
 165094	Agrostis infirma	species	Poa infirma
 1685705	Agrostis juressii	species	Linkagrostis juressi
 751652	Agrostis parviflora	species	Eragrostis parviflora
@@ -185,6 +185,7 @@ taxon_id	input	rank	suggested
 315927	Brachyscome radicata	species	Brachyscome radicans
 102754	Brickellia schaffneri	species	Brickellia eupatorioides
 1550871	Brickellia veronicaefolia	species	Brickellia veronicifolia
+55769	Bromus bonariensis	species	Bromus lanceolatus
 1979679	Bufonia macrocarpa	species	Begonia macrocarpa
 426864	Bulbophyllum bisetum	species	Bulbophyllum longiflorum
 1463550	Bulbophyllum cornutum	species	Bulbophyllum ecornutum
@@ -590,6 +591,7 @@ dcLimTran	Limonium transwallisnum	species	Limonium transwallianum
 128313	Matthiola obovata	species	Guettarda odorata
 3878	Medicago difalcata	species	Medicago falcata
 47084	Medicago polychroa	species	Medicago polymorpha
+	Medicago × varia	species	medicago x varia
 73756	Melaleuca ciliosa	species	Melaleuca diosmifolia
 73832	Melaleuca pauciflora	species	Melaleuca decussata
 73763	Melaleuca striata	species	Melaleuca linariifolia
@@ -845,6 +847,7 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 90025	Taraxacum cordatum	species	Taraxacum coronatum
 90052	Taraxacum crassum	species	Taraxacum serotinum
 	Taraxacum crocellum	species	taraxacum croceum
+90054	Taraxacum dentatum	species	Taraxacum sonchoides
 669847	Taraxacum eriopodum	species	Taraxacum ceratophorum
 1204311	Taraxacum euranum	species	Taraxacum antungense
 2835584	Taraxacum exiguum	species	Taraxacum eximium
