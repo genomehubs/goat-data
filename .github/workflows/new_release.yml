@@ -29,7 +29,7 @@ jobs:
           clean: true
       - name: checkout RELEASE, or create a new branch
         run:  |
-          git checkout -B $RELEASE
+          git checkout -b $RELEASE
           git push -u origin $RELEASE
       - name: Download NCBI datasets executable
         run: |
