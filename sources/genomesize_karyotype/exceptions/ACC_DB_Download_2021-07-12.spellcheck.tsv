@@ -33,7 +33,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1661878	Euparius marmoreus_	species	Euparius marmoreus
 638814	Ptychoderes tricostifrons_	species	Ptychoderes tricostifrons
 	Acrossus	genus	dicrossus	acossus
-	Agolius	genus	agorius	aegolius	anolius
+	Agolius	genus	aegolius	agorius	anolius
 75361	Chilothorax	genus	Schizothorax
 	Colobopterus	genus	chloropterus	dilobopterus	colopterus
 1415215	Nimbus	genus	Niveus
@@ -187,7 +187,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
-	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
+	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
 1944111	Bembidion yukonoum	species	Bembidion yukonum
@@ -916,7 +916,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2729884	Polydrusus viridicintus	species	Polydrusus viridicinctus
 2340076	Rhynchaenus niger	species	Tachyerges niger
 1206597	Ryssematus lineaticollis	species	Rhyssomatus lineaticollis
-	Ruteria	genus	rogeria	rotaria
+	Ruteria	genus	rogeria	eutelia
 1588459	Simo variegates	species	Simo variegatus
 202214	Strophosomus capitatus	species	Strophosoma capitatum
 527267	Sympiezomias cribicollis	species	Sympiezomias cribricollis
@@ -1062,7 +1062,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopsis	homalopoma
+	Homaloplia	species	homalomyia	homalopoma	homalopsis
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1145,7 +1145,7 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 1096038	Tetanocera loewiE	species	Tetanocera loewi
 	Eusimulium vernum	species	simulium vernum	simulium varium
 2890591	Leptocera frontinalis	species	Leptocera fontinalis
-	Cheilosia aenea	species	cheilosia aerea	cheilosia ahenea
+273426	Cheilosia aenea	species	Cheilosia aerea
 2663930	Criorhina coquilIetti	species	Criorhina coquilletti
 198635	Eristalis lenax	species	Eristalis tenax
 1738121	Lejota cyanea	species	Leucocoprinus cygneus
@@ -1225,7 +1225,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 262188	Siederia alpicolella	species	Siederia rupicolella
 753433	Talaeporia lubulosa	species	Taleporia tubulosa
 1869861	Laurentia filigrammaria	species	Epirrita filigrammaria
-	Platysamia	genus	platylomia	platylabia
+678731	Platysamia	genus	Platylomia
 470732	Sphinx lingustri	species	Sphinx ligustri
 263944	Yponomeuta polistictus	species	Yponomeuta polystictus
 1430713	Elcysma westwoodi	species	Elcysma westwoodii
@@ -1261,6 +1261,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 1882553	Isophya hospodat	species	Isophya hospodar
 1678041	Isophya krausii	species	Isophya kraussii
 910292	Isophya modesta_longicaudata	species	Isophya longicaudata
+910298	Isophya plevnensis	species	Isophya pienensis
 2420531	Elysiacris	genus	Lysacris
 202390	Orxines macklotti	species	Orxines macklottii
 202447	Tropiderus childrenii	species	Tropidoderus childrenii
@@ -1335,10 +1336,10 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 272250	Rampholeon marshalli	species	Rhampholeon marshalli
 179929	Rampholeon spectrum	species	Rhampholeon spectrum
 1481338	Alsophylax laevis	species	Cyathea surinamensis
-	Gekko gekko	species	germo germo	gekko gecko	gecko gecko
+	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
-	Natricidae	family	anthicidae	naticidae
+219442	Natricidae	family	Anthicidae
 	Cyclodina olivieri	species	cyclodina oliveri
 253933	Ameiva maynardii	species	Pholidoscelis maynardi
 2936315	Aspidoscelis neomexicana	species	Aspidoscelis neomexicanus

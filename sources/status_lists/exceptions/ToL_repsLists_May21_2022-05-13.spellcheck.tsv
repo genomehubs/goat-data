@@ -6,12 +6,12 @@ taxon_id	input	rank	suggested
 2231537	Atractophoraceae	family	Atractosporaceae
 	Bembicidae	family	bombycidae	bembicinae	cimbicidae
 	Borboropsidae	family	borboropsinae
-	Cadlinidae	family	chalinidae	carlininae	candeinidae
+	Cadlinidae	family	chalinidae	candeinidae	carlininae
 	Calcariidae	family	calviriidae	halcuriidae	calcarinidae
 	Carteriaceae	family	cafeteriaceae	armeriaceae	baxteriaceae
 668547	Ceratosphaeriaceae	family	Teratosphaeriaceae
 	Chimabachidae	family	chimabachinae
-	Conocephalidae	family	conocephalinae	cybocephalidae	loxocephalidae
+	Conocephalidae	family	conocephalinae	loxocephalidae	cybocephalidae
 38747	Coscinodiscacaeae	family	Coscinodiscaceae
 203015	Rhodolia rosea	species	Rhodiola rosea
 46331	Carex simpliciusulca	species	Carex simpliciuscula
@@ -22,7 +22,7 @@ taxon_id	input	rank	suggested
 	Drilidae	family	dryinidae	asilidae	psilidae
 	Dryophthoridae	family	dryophthorinae
 	Echinostelidae	family	echinasteridae	echinoptilidae	echinosteliidae
-	Eledonidae	family	epedanidae	erodonidae
+118589	Eledonidae	family	Epedanidae
 	Emberizidae	family	emberizinae
 1115082	Endogemmaceae	family	Endogemmataceae
 	Ethmiidae	family	stomiidae	ethmiinae	etheriidae
@@ -48,11 +48,11 @@ taxon_id	input	rank	suggested
 	Ismaridae	family	mymaridae	osmeridae	samaridae
 280830	Jungermannia eucordifolia	species	Jungermannia exsertifolia
 137615	Lamprodermatidae	family	Stemonitidae
-	Lentariaceae	family	venturiaceae	lanariaceae	tectariaceae
+	Lentariaceae	family	venturiaceae	lanariaceae	lomentariaceae
 45147	Lopadostomataceae	family	Lophiostomataceae
 	Meridermatidae	family	megadermatidae	perodermatidae
-	Microphoridae	family	microphorinae	licnophoridae	microphysidae
-	Natricidae	family	anthicidae	naticidae
+	Microphoridae	family	microphorinae	sicuophoridae	licnophoridae
+219442	Natricidae	family	Anthicidae
 	Aglais	genus	aglaia
 	Aphantopus	genus	aphanopus	aphaniops
 	Opetiidae	family	oweniidae	opheliidae	oplitidae
@@ -78,6 +78,6 @@ urHarSamo	Harveylithon samoënse	species	Harveylithon samoinse
 210587	Tricertatiaceae	family	Triceratiaceae
 	Trixoscelididae	family	trixoscelidinae
 	Troglodytidae	family	troglodytinae
-	Vannellida	family	annelida	vannella	vandellia
+	Vannellida	family	vannella	annelida	vandellia
 281109	Xylographaceae	family	Aulographaceae
 	Ziphidae	family	tiphiidae	ziphiidae
