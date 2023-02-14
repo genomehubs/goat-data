@@ -2024,6 +2024,7 @@ taxon_id	input	rank
 197683	Acis trichophylla	species
 197684	Acis valentina	species
 1160517	Acisanthera quadrata	species
+3026879	Acmella alba	species
 468510	Acmella brachyglossa	species
 1478186	Acmella calva	species
 2511950	Acmella caulirhiza	species
@@ -5427,9 +5428,11 @@ taxon_id	input	rank
 2774029	Argyranthemum gracile	species
 159703	Argyranthemum haouarytheum	species
 314055	Argyranthemum hierrense	species
+3027709	Argyranthemum lemsii	species
 2769826	Argyranthemum lidii	species
 2339049	Argyranthemum maderense	species
 113639	Argyranthemum pinnatifidum	species
+3027710	Argyranthemum sundingii	species
 2339044	Argyranthemum sventenii	species
 113641	Argyranthemum tenerifae	species
 159704	Argyranthemum thalassophilum	species
@@ -7177,6 +7180,7 @@ taxon_id	input	rank
 2707473	Baccharis nitida	species
 2707475	Baccharis notosergila	species
 2707478	Baccharis oblongifolia	species
+3027731	Baccharis obovata	species
 2707484	Baccharis oxyodonta	species
 1654447	Baccharis patagonica	species
 1123534	Baccharis pedunculata	species
@@ -7192,6 +7196,7 @@ taxon_id	input	rank
 2707518	Baccharis regnellii	species
 2707519	Baccharis retamoides	species
 2707523	Baccharis revoluta	species
+3027732	Baccharis rhomboidalis	species
 2707808	Baccharis riograndensis	species
 2707809	Baccharis rivularis	species
 2707811	Baccharis rupicola	species
@@ -9375,12 +9380,15 @@ taxon_id	input	rank
 660131	Calceolaria glacialis	species
 240947	Calceolaria gossypina	species
 240948	Calceolaria helianthemoides	species
+3027735	Calceolaria hypericina	species
 240950	Calceolaria integrifolia	species
 240951	Calceolaria lamiifolia	species
 240952	Calceolaria lanata	species
 240954	Calceolaria lehmanniana	species
 240956	Calceolaria lobata	species
 133540	Calceolaria mexicana	species
+3027736	Calceolaria meyeniana	species
+3027737	Calceolaria morisii	species
 240963	Calceolaria nivalis	species
 240965	Calceolaria obtusa	species
 2024447	Calceolaria paralia	species
@@ -9389,7 +9397,7 @@ taxon_id	input	rank
 240969	Calceolaria penlandii	species
 660138	Calceolaria petiolaris	species
 240974	Calceolaria pinifolia	species
-240996	Calceolaria tripartita	species
+3026885	Calceolaria pinnata	species
 240976	Calceolaria polifolia	species
 240977	Calceolaria polyclada	species
 240978	Calceolaria polyrrhiza	species
@@ -9404,6 +9412,7 @@ taxon_id	input	rank
 240993	Calceolaria teucrioides	species
 240994	Calceolaria thyrsiflora	species
 240995	Calceolaria tomentosa	species
+240996	Calceolaria tripartita	species
 240998	Calceolaria umbellata	species
 240999	Calceolaria uniflora	species
 241000	Calceolaria utricularioides	species
@@ -10969,7 +10978,7 @@ taxon_id	input	rank
 111423	Carex xerantica	species
 1249725	Carex xiphium	species
 79559	Careya arborea	species
-262676	Vasconcellea candicans	species
+3026886	Carica candicans	species
 3649	Carica papaya	species
 194871	Vasconcellea quercifolia	species
 79561	Cariniana estrellensis	species
@@ -14202,6 +14211,7 @@ taxon_id	input	rank
 87660	Corymbia maculata	species
 360304	Corymbia torelliana	species
 256354	Corymborkis veratrifolia	species
+3027738	Corynabutilon bicolor	species
 108451	Corynabutilon vitifolium	species
 388701	Corynephorus canescens	species
 2822524	Corynephorus divaricatus	species
@@ -15512,6 +15522,7 @@ taxon_id	input	rank
 2023087	Cyclopogon elegans	species
 2018338	Cyclopogon polyaden	species
 496667	Cyclorhiza waltonii	species
+3026891	Cyclospermum laciniatum	species
 48034	Cyclospermum leptophyllum	species
 1704166	Bouteloua stolonifera	species
 1735047	Cycnoches chlorochilon	species
@@ -20482,6 +20493,7 @@ taxon_id	input	rank
 133206	Exochorda racemosa	species
 32225	Exochorda giraldii	species
 329225	Exochorda serratifolia	species
+3026898	Exodeconus prostratus	species
 85725	Exostema lineatum	species
 85726	Exostema longiflorum	species
 85729	Solenandra myrtifolia	species
@@ -22595,7 +22607,7 @@ taxon_id	input	rank
 1754165	Pseudognaphalium attenuatum	species
 702247	Gnaphalium uliginosum	species
 857092	Gamochaeta coarctata	species
-1754167	Pseudognaphalium dombeyanum	species
+3026903	Gnaphalium dombeyanum	species
 595331	Gnaphalium hoppeanum	species
 1754173	Pseudognaphalium melanosphaeroides	species
 595332	Omalotheca norvegica	species
@@ -22969,6 +22981,7 @@ taxon_id	input	rank
 691048	Gutierrezia californica	species
 1873157	Gutierrezia microcephala	species
 199516	Gutierrezia sarothrae	species
+3027739	Gutierrezia resinosa	species
 71048	Gutierrezia texana	species
 1573924	Gutierrezia wrightii	species
 1160561	Guyonia ciliata	species
@@ -23300,13 +23313,21 @@ taxon_id	input	rank
 176539	Haploesthes greggii	species
 1085433	Haplolobus floribundus	species
 1114767	Haplopappus anthylloides	species
+3027740	Haplopappus cerberoanus	species
 147773	Haplopappus foliosus	species
 71052	Haplopappus glutinosus	species
+3027741	Haplopappus integerrimus	species
 147774	Haplopappus macrocephalus	species
 147775	Noticastrum marginatum	species
+3027742	Haplopappus mucronatus	species
+3027744	Haplopappus pinnatifidus	species
+3027745	Haplopappus poeppigianus	species
 1114753	Grindelia pulchella	species
+3027746	Haplopappus remyanus	species
 433490	Inulopsis scaposa	species
 2304423	Haplopappus schumannii	species
+3027747	Haplopappus stolpii	species
+3027748	Haplopappus taeda	species
 1114770	Haplopappus uncinatus	species
 1114772	Haplopappus velutinus	species
 452773	Haplophyllum dauricum	species
@@ -26606,6 +26627,7 @@ taxon_id	input	rank
 1400661	Lactuca inermis	species
 1941377	Lactuca intricata	species
 487750	Lactuca lessertiana	species
+3027713	Lactuca longidentata	species
 1552228	Lactuca ludoviciana	species
 2268976	Lactuca macrophylla	species
 1400644	Melanoseris macrorhiza	species
@@ -26942,7 +26964,7 @@ taxon_id	input	rank
 2201912	Launaea cervicornis	species
 381723	Launaea cornuta	species
 2894263	Launaea fragilis	species
-50206	Sonchus maritimus	species
+3026941	Launaea intybacea	species
 519269	Launaea lanifera	species
 1423391	Launaea mucronata	species
 43200	Launaea nudicaulis	species
@@ -28229,6 +28251,7 @@ taxon_id	input	rank
 537172	Litwinowia tenuissima	species
 115491	Livistona australis	species
 115492	Livistona chinensis	species
+3027751	Llagunoa glandulosa	species
 193477	Loasa acanthifolia	species
 230026	Loasa bergii	species
 256721	Loasa elongata	species
@@ -32021,6 +32044,7 @@ taxon_id	input	rank
 690531	Oenothera acaulis	species
 238279	Oenothera acutissima	species
 238280	Oenothera affinis	species
+3026914	Oenothera arequipensis	species
 3940	Oenothera argillicola	species
 44480	Oenothera atrovirens	species
 690532	Oenothera bahia-blancae	species
@@ -32347,6 +32371,7 @@ taxon_id	input	rank
 313534	Onopordum nervosum	species
 314014	Onopordum tauricum	species
 41616	Onoseris hyssopifolia	species
+3026915	Onoseris odorata	species
 860122	Onosma arenaria	species
 554542	Onosma echioides	species
 925430	Onosma erecta	species
@@ -36366,6 +36391,7 @@ taxon_id	input	rank
 58874	Podalyria sericea	species
 310242	Podandrogyne macrophylla	species
 339012	Podangis dactyloceras	species
+3027755	Podanthus ovatifolius	species
 206651	Podistera macounii	species
 206653	Podistera yukonensis	species
 78834	Podochilus cultratus	species
@@ -38391,21 +38417,20 @@ taxon_id	input	rank
 115514	Rhapis excelsa	species
 29657	Rhapis humilis	species
 145708	Rhapis subtilis	species
-41639	Rhaponticum acaule	species
-313549	Rhaponticum australe	species
-362629	Rhaponticum canariense	species
-362630	Rhaponticum carthamoides	species
-1284457	Rhaponticum centauroides	species
-145817	Rhaponticum coniferum	species
-362633	Rhaponticum exaltatum	species
-362634	Rhaponticum heleniifolium	species
-362636	Rhaponticum integrifolium	species
-362638	Rhaponticum longifolium	species
-362643	Rhaponticum pulchrum	species
-41466	Rhaponticum repens	species
+2741397	Leuzea acaulis	species
+313549	Leuzea australis	species
+3028061	Leuzea cynaroides	species
+362630	Leuzea carthamoides	species
+1284457	Leuzea centauroides	species
+145817	Leuzea conifera	species
+362633	Leuzea exaltata	species
+362636	Leuzea integrifolia	species
+362638	Leuzea longifolia	species
+362643	Leuzea pulchra	species
+41466	Leuzea repens	species
 362644	Rhaponticum scariosum	species
-362645	Rhaponticum serratuloides	species
-362646	Rhaponticum uniflorum	species
+3028044	Leuzea altaica	species
+362646	Leuzea uniflora	species
 372765	Rhaptopetalum beguei	species
 396313	Rhazya stricta	species
 284362	Rheum alexandrae	species
@@ -41207,6 +41232,7 @@ taxon_id	input	rank
 405107	Curio citriformis	species
 1707491	Telanthophora cobanensis	species
 462517	Senecio culcitioides	species
+3027760	Senecio coquimbensis	species
 317283	Senecio cordifolius	species
 98719	Senecio costaricensis	species
 405110	Curio crassulifolius	species
@@ -41234,6 +41260,7 @@ taxon_id	input	rank
 344070	Senecio flaccidus	species
 479928	Tephroseris flammea	species
 121542	Senecio flavus	species
+3027761	Senecio francisci	species
 2065933	Senecio fremontii	species
 2874245	Tephroseris furusei	species
 121545	Senecio gallicus	species
@@ -41470,7 +41497,7 @@ taxon_id	input	rank
 354313	Klasea marginata	species
 305365	Klasea boetica	species
 305367	Klasea centauroides	species
-129118	Serratula chinensis	species
+129118	Leuzea chinensis	species
 2555429	Serratula coriacea	species
 143210	Serratula coronata	species
 2782242	Serratula kirghisorum	species
@@ -42743,6 +42770,7 @@ taxon_id	input	rank
 50204	Sonchus kirkii	species
 50223	Sonchus leptocephalus	species
 2984305	Sonchus macrocarpus	species
+50206	Sonchus maritimus	species
 381733	Sonchus masguindalii	species
 329331	Sonchus microcarpus	species
 381735	Sonchus microcephalus	species
@@ -43026,6 +43054,7 @@ taxon_id	input	rank
 61950	Spigelia anthelmia	species
 28544	Spigelia marilandica	species
 1051513	Spigelia splendens	species
+3026922	Spilanthes leiocarpa	species
 183081	Spilanthes urens	species
 3562	Spinacia oleracea	species
 1072236	Spinacia turkestanica	species
@@ -44485,7 +44514,7 @@ taxon_id	input	rank
 1094617	Tetraena fontanesii	species
 2499693	Tetraena simplex	species
 2024727	Tetraglochin alata	species
-#dcTetCrys	Tetragonia crystallina	species
+3026925	Tetragonia crystallina	species
 1884296	Tetragonia echinata	species
 1881861	Tetragonia implexicoma	species
 45318	Tetragonia tetragonoides	species
@@ -46922,6 +46951,7 @@ taxon_id	input	rank
 2489223	Villadia painteri	species
 665399	Villadia pringlei	species
 665400	Villadia recurva	species
+3026928	Villanova oppositifolia	species
 435384	Villarsia capensis	species
 661180	Villarsia goldblattiana	species
 482973	Villarsia umbricola	species
