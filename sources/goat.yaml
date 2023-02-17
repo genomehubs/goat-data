@@ -11,6 +11,11 @@ common:
     file:
       - names.dmp
       - nodes.dmp
+    batch: 10000
+  log:
+    es: false
+    fetch: true
+    interval: 10
 fill: {}
 index: {}
 init: {}
