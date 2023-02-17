@@ -18,7 +18,6 @@ taxon_id	input	rank	suggested
 2249821	Xenophrys caudoprocta	species	Megophrys caudoprocta
 402886	Xenophrys lekaguli	species	Xenophrys legkaguli
 2759542	Theloderma baibengense	species	Theloderma baibungense
-110110	Rana johni	species	Rana johnsi
 197005	Litoria scabra	species	Tectarius antonii
 2133923	Rana luanchuanensis	species	Rana luanchanensis
 2153452	Xenophrys parallela	species	Megophrys parallela
@@ -47,7 +46,6 @@ taxon_id	input	rank	suggested
 207705	Rhaphidura leucopygialis	species	Raphidura leucopygialis
 1226242	Piezorina cinerea	species	Piezorhina cinerea
 156162	Megalampitta gigantea	species	Melampitta gigantea
-2153416	Dicaeum nitidum	species	Puccinia nitida
 165740	Leuconotopicus borealis	species	Picoides borealis
 372364	Leuconotopicus arizonae	species	Picoides arizonae
 165750	Leuconotopicus stricklandi	species	Picoides stricklandi
@@ -68,11 +66,12 @@ taxon_id	input	rank	suggested
 388994	Scleroptila streptophora	species	Scleroptila streptophorus
 65363	Atlapetes flaviceps	species	Atlapetes fulviceps
 476438	Sylviorthorhynchus desmurii	species	Sylviorthorhynchus desmursii
+145798	Psephotellus pulcherrimus †	species	Psephellus pulcherrimus
 3025900	Neotrygon moluccensis	species	Neotrygon malaccensis
 2717101	Oxynotus japonicus	species	Oxyporus japonicus
 495824	Apristurus canutus	species	Apristurus platyrhynchus
 1455673	Chiloscyllium burmense	species	Chiloscyllium burmensis
-	Raja pita	species	rana picta	raja picta
+	Raja pita	species	raja picta	rana picta
 393601	Rhinolophus yunanensis	species	Rhinolophus yunnanensis
 160451	Hydromys neobritannicus	species	Hydromys neobrittanicus
 10149	Hydrochoeris hydrochaeris	species	Hydrochoerus hydrochaeris
@@ -89,6 +88,7 @@ taxon_id	input	rank	suggested
 160399	Oryzomys auriventer	species	Oryzomys couesi
 141975	Sylvilagus cunicularius	species	Sylvilagus cunicularis
 1100084	Gerbillus hoogstraali	species	Gerbillus hoogstrali
+61406	Leopardus colocola	species	Leopardus colocolo
 	Iomys horsfieldii	species	iomys horsfieldi	iodes horsfieldii
 113357	Sorex bairdii	species	Sorex bairdi
 9523	Callicebus regulus	species	Plecturocebus moloch
@@ -178,7 +178,7 @@ taxon_id	input	rank	suggested
 334912	Polyprion oxygeneiosus	species	Polyprion oxygeneios
 1843429	Bryconamericus charalae	species	Knodus chapadae
 137743	Discotrema zonatum	species	Abortiporus biennis
-	Calamus taurinus	species	calamus tigrinus	calamus caurinus
+1202428	Calamus taurinus	species	Calamus longisetus
 1821187	Lamnostoma orientale	species	Lamnostoma orientalis
 1676938	Schilbe angolensis	species	Schilbe marmoratus
 1529631	Awaous pallidus	species	Agabus pallidus
@@ -213,7 +213,6 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 360502	Plectorhinchus pictum	species	Plectorhinchus pictus
 1849271	Atractoscion macrolepis	species	Atractoscion microlepis
 227275	Rohteichthys microlepis	species	Cyclocheilichthys apogon
-2259658	Ilisha sirishae	species	Ilisha sirishai
 211658	Corythoichthys isigakius	species	Corythoichthys haematopterus
 585236	Hemibagrus imbrifer	species	Hemibarbus umbrifer
 1127486	Astronesthes micropogon	species	Astronesthes macropogon
@@ -264,7 +263,6 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 2202362	Gymnocypris firmispinata	species	Gymnocypris firmispinatus
 327704	Schizothorax labiatius	species	Schizothorax labiatus
 111834	Notropis buccula	species	Notropis buccata
-341107	Schistura pumatensis	species	Schistura putaoensis
 196075	Sprattus spratus	species	Sprattus sprattus
 2653402	Trichomycterus latidens	species	Ituglanis laticeps
 118145	Moringua macrochir	species	Moringua microchir
@@ -289,7 +287,6 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 2739717	Laciris pelagica	species	Laciris pelagicus
 1463042	Creagrutus gephyrus	species	Creagrutus zephyrus
 984443	Hisonotus brunneus	species	Pissonotus brunneus
-3001820	Microsynodontis laevigata	species	Microsynodontis laevigatus
 1123872	Leporinus guttatus	species	Leporellus vittatus
 2999740	Bovichtus veneris	species	Bovichthys veneris
 1776112	Acrossocheilus longispinnis	species	Acrossocheilus longipinnis
@@ -375,6 +372,7 @@ fLycAlb	Lycenchelys alta	species	Lycenchelys alba
 57313	Sceloporus unicanthalis	species	Sceloporus bicanthalis
 256095	Celestus montanus	species	Gymnosporia senegalensis
 1917336	Pseudoboa serrana	species	Pseudopoda serrata
+55266	Elapsoidea guentherii	species	Elapsoidea semiannulata
 1127713	Lygodactylus inexpectatus	species	Lygodactylus expectatus
 983886	Lygodactylus insularis	species	Lygodactylus angularis
 1544892	Gongylosoma baliodeirus	species	Gongylosoma baliodeirum
