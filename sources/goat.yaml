@@ -13,7 +13,7 @@ common:
       - names.dmp
       - nodes.dmp
   log:
-    es: false
+    es: true
     fetch: true
     interval: 10
 fill: {}
