@@ -18,6 +18,7 @@ taxon_id	input	rank	suggested
 2249821	Xenophrys caudoprocta	species	Megophrys caudoprocta
 402886	Xenophrys lekaguli	species	Xenophrys legkaguli
 2759542	Theloderma baibengense	species	Theloderma baibungense
+110110	Rana johni	species	Rana johnsi
 197005	Litoria scabra	species	Tectarius antonii
 2133923	Rana luanchuanensis	species	Rana luanchanensis
 2153452	Xenophrys parallela	species	Megophrys parallela
@@ -46,6 +47,7 @@ taxon_id	input	rank	suggested
 207705	Rhaphidura leucopygialis	species	Raphidura leucopygialis
 1226242	Piezorina cinerea	species	Piezorhina cinerea
 156162	Megalampitta gigantea	species	Melampitta gigantea
+2153416	Dicaeum nitidum	species	Puccinia nitida
 165740	Leuconotopicus borealis	species	Picoides borealis
 372364	Leuconotopicus arizonae	species	Picoides arizonae
 165750	Leuconotopicus stricklandi	species	Picoides stricklandi
@@ -70,7 +72,7 @@ taxon_id	input	rank	suggested
 2717101	Oxynotus japonicus	species	Oxyporus japonicus
 495824	Apristurus canutus	species	Apristurus platyrhynchus
 1455673	Chiloscyllium burmense	species	Chiloscyllium burmensis
-	Raja pita	species	raja picta	rana picta
+	Raja pita	species	rana picta	raja picta
 393601	Rhinolophus yunanensis	species	Rhinolophus yunnanensis
 160451	Hydromys neobritannicus	species	Hydromys neobrittanicus
 10149	Hydrochoeris hydrochaeris	species	Hydrochoerus hydrochaeris
@@ -129,7 +131,6 @@ taxon_id	input	rank	suggested
 137034	Barbodes microps	species	Enteromius macrops
 60258	Fundulopanchax cinnamomeus	species	Fundulopanchax cinnamomeum
 2999882	Characidium japuhybense	species	Characidium japuhybensis
-1696906	Callionymus curvispinis	species	Repomucenus belcheri
 622434	Stonogobiops xanthorhinicus	species	Stonogobiops xanthorhinica
 2999392	Amblyceps yunnanense	species	Amblyceps yunnanensis
 2614514	Diaphus minax	species	Dianthus minae
@@ -262,6 +263,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 2202362	Gymnocypris firmispinata	species	Gymnocypris firmispinatus
 327704	Schizothorax labiatius	species	Schizothorax labiatus
 111834	Notropis buccula	species	Notropis buccata
+341107	Schistura pumatensis	species	Schistura putaoensis
 196075	Sprattus spratus	species	Sprattus sprattus
 2653402	Trichomycterus latidens	species	Ituglanis laticeps
 118145	Moringua macrochir	species	Moringua microchir
@@ -275,7 +277,6 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 1503185	Haludaria afasciata	species	Haludaria fasciata
 2999784	Coelorinchus multifasciatus	species	Caelorinchus multifasciatus
 1396872	Leporinus bimaculatus	species	Leporinus trimaculatus
-1336271	Leptachirus darwinensis	species	Leptacinus harbinensis
 2017741	Astroblepus unifasciatus	species	Astroblepus trifasciatus
 2699159	Thymallus brevicephalis	species	Thymallus brevicephalus
 2012925	Liparis punctatus	species	Liparis punctulatus
@@ -319,7 +320,6 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 	Leporinus punctatus	species	lethrinus punctulatus
 2303447	Beaufortia yunnanensis	species	Beaumontia khasiana
 1907135	Schistura xhatensis	species	Physoschistura shanensis
-1676996	Enteromius urostigma	species	Enteromius eurostigma
 292300	Diplectrum eumelum	species	Satyrium pumilum
 fLycAlb	Lycenchelys alta	species	Lycenchelys alba
 59416	Apogon americanus	species	Trogon mexicanus

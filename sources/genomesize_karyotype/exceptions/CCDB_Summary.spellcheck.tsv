@@ -10,6 +10,7 @@ taxon_id	input	rank	suggested
 108700	Entodon laetus	species	Chrysocharis nephereus
 2666473	Entodon micropodus	species	Entodon macropodus
 2894618	Fissidens hollianus	species	Fissidens hallianus
+91517	Gollania arisanensis	species	Microstegium nudum
 146591	Haplodon wormskioldii	species	Aplodon wormskioldii
 324239	Hylocomium flagellare	species	Hyocomium armoricum
 	Jungermannia fusiformis	species	jungermannia filiformis	jungermannia fuciformis
@@ -116,7 +117,7 @@ taxon_id	input	rank	suggested
 401941	Artemisia xanthochloa	species	Artemisia xanthochroa
 2837433	Arundinella khasiana	species	Arundinella khaseana
 272863	Asparagus dumosus	species	Asparagus setaceus
-	Aster limonifolius	species	aster limoniifolius	aster linifolius
+	Aster limonifolius	species	aster linifolius	aster limoniifolius
 713681	Astragalus albulus	species	Astragalus vesicarius
 1302566	Astragalus angustiflorus	species	Astragalus angustifolius
 486702	Astragalus beckerianus	species	Astragalus berteroanus
@@ -163,7 +164,7 @@ taxon_id	input	rank	suggested
 873023	Bartsia pumila	species	Mentzelia pumila
 	Begonia hirsuta	species	betonica hirsuta	begonia hirsutula
 1977215	Begonia huegelii	species	Begonia hugelii
-	Begonia paranaensis	species	begonia paranensis	begonia padangensis
+	Begonia paranaensis	species	begonia padangensis	begonia paranensis
 172092	Begonia pinglinensis	species	Begonia alveolata
 1979703	Begonia princeae	species	Begonia princeps
 	Begonia rostrata	species	begonia prostrata
@@ -245,7 +246,6 @@ taxon_id	input	rank	suggested
 145511	Centaurea prolongoi	species	Centaurea prolongi
 146595	Centaurea simplicaulis	species	Psephellus bellus
 1048535	Centaurea ustulata	species	Centaurea cuneifolia
-1042300	Centaurea × moncktonii	species	Centaurea x moncktonii
 947100	Centranthus longiflorus	species	Centranthus longifolius
 435778	Centropodia forsskalii	species	Centropodia forskalii
 871998	Centropogon gesneriformis	species	Centropogon gesneriiformis
@@ -294,7 +294,7 @@ taxon_id	input	rank	suggested
 481064	Crocus suaveolens	species	Crocus graveolens
 	Crocus suworowianus	species	crocus suwarowianus
 197987	Crossotoma spinescens	species	Scaevola spinescens
-	Crotalaria formosa	species	crotalaria foliosa	crotalaria formosana
+	Crotalaria formosa	species	crotalaria formosana	crotalaria foliosa
 859320	Crotalaria lanata	species	Crotalaria lunata
 2896017	Croton grandivelum	species	Croton grandivelus
 158962	Crusea longiflora	species	Tovomita longifolia
@@ -566,7 +566,6 @@ dcLimTran	Limonium transwallisnum	species	Limonium transwallianum
 374417	Lysichitum americanum	species	Lysichiton americanus
 502323	Lythrum baeticum	species	Pythium sp. balticum
 	Machaerium mucronulatum	species	machaerium mucronatum
-1304318	Madia anomala	species	Xanthocercis madagascariensis
 86734	Magnolia pleiocarpa	species	Magnolia pterocarpa
 569831	Majidea forsteri	species	Majidea fosteri
 288286	Malva subovata	species	Malvastrum americanum
@@ -664,6 +663,7 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 257004	Pennisetum distachyum	species	Cenchrus tristachyus
 584874	Pennisetum trisetum	species	Cenchrus unisetus
 427941	Peucedanum munbyi	species	Lomatium canbyi
+1213334	Phacelia floribunda	species	Hackelia floribunda
 861273	Pholidota recurva	species	Coelogyne articulata
 136769	Phoradendron berteroanum	species	Phoradendron juniperinum
 328195	Phreatia elegans	species	Davallia denticulata
@@ -721,7 +721,6 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 2741399	Psephellus mucronifer	species	Psephellus mucroniferus
 41626	Psilostrophe gnaphalioides	species	Psilostrophe gnaphalodes
 1419247	Psychotria bisulcata	species	Psychotria trisulcata
-692092	Psychotria flavida	species	Psychomyia flavida
 76151	Psylliostachys suworowi	species	Psylliostachys suworowii
 	Pultenaea viscosa	species	pultenaea villosa
 1487832	Pyrrocoma lucida	species	Pycnocoma chevalieri
@@ -861,7 +860,7 @@ drRubMile	Rubus silesiacus	species	Rubus milesianus
 1244033	Thorella verticillatoinundata	species	Caropsis verticillatoinundata
 1885666	Thymus cimicinus	species	Thymus cilicicus
 354420	Tigridia durangense	species	Tigridia durangensis
-	Tithonia tagetifolia	species	tithonia tagetiflora	tritonia teretifolia
+	Tithonia tagetifolia	species	tritonia teretifolia	tithonia tagetiflora
 63538	Tolumnia × cubense	species	Columnea sanguinea
 1905278	Toricellia angulata	species	Torricellia angulata
 428213	Tradescantia × andersoniana	species	Tradescantia x andersoniana
