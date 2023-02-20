@@ -117,8 +117,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1483809	Amara laevipennis	species	Amara torrida
 1587011	Anisodactylus sigtus	species	Anisodactylus signatus
 1529884	Apenes marginalis	species	Ateles marginatus
-1166910	Bembidion anchonoderum_	species	Bembidion anchonoderum
-1166910	Bembidion anchonoderus	species	Bembidion anchonoderum
+	Bembidion anchonoderum_	species	bembidion anchonoderum	bembidion anchonoderus
 447301	Bembidion antiquum_	species	Bembidion antiquum
 1944104	Bembidion arcticum_	species	Bembidion arcticum
 447302	Bembidion arenobile	species	Bembidion arenobilis
@@ -187,7 +186,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
-	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
+	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
 1944111	Bembidion yukonoum	species	Bembidion yukonum
@@ -315,7 +314,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1343316	Cicindela suturalis_	species	Cylindera suturalis
 176377	Cicindela tranquebarica_	species	Cicindela tranquebarica
 1343317	Cicindela trisigta	species	Cylindera trisignata
-1163509	Colfax stevensi	species	Colias sieversi
 2611535	Craspedophorus angulatus_	species	Craspedophorus angulatus
 247365	Cryptophonus tenebrosus_	species	Cryptophonus tenebrosus
 	Ctenostoma ornatum	species	chaenostoma cordatum
@@ -1021,6 +1019,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 1457043	Speonomus pyreeus	species	Speonomus pyreneus
 1457043	Speonomus pyrenaeus	species	Speonomus pyreneus
 	Troglocharinus ferreri_pallaresi	species	troglocharinus ferreri pallaresi
+1407881	Cerchus ligrius	species	Trechus liguricus
 617909	Lamprima adolphie	species	Lamprima adolphinae
 231745	Lucanus maculifermoratus	species	Lucanus maculifemoratus
 1588445	Lytta picta	species	Scydmaenus tarsatus
@@ -1195,6 +1194,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 448099	Amitermes eucalipti	species	Amitermes eucalypti
 1934507	Microcerotermes fuscotibiatis	species	Microcerotermes fuscotibialis
 	Reticutitermes santonensis	species	reticulitermes santonensis
+	Seudyra	genus	seddera	semyra
 179666	Hypocrita jocobaea	species	Tyria jacobaeae
 987980	Miltochrista zuiniata	species	Miltochrista miniata
 511340	Telphusa fluvuatillis	species	Potamon fluviatile
@@ -1261,7 +1261,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 1882553	Isophya hospodat	species	Isophya hospodar
 1678041	Isophya krausii	species	Isophya kraussii
 910292	Isophya modesta_longicaudata	species	Isophya longicaudata
-910298	Isophya plevnensis	species	Isophya pienensis
 2420531	Elysiacris	genus	Lysacris
 202390	Orxines macklotti	species	Orxines macklottii
 202447	Tropiderus childrenii	species	Tropidoderus childrenii
