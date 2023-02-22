@@ -388,6 +388,7 @@ taxon_id	input	rank	suggested
 2836843	Phytobia errans	species	Phytomia errans
 498689	Phytomyza ranunculicola	species	Phytomyza ranunculivora
 498688	Phytomyza rapunculi	species	Phytomyza ranunculi
+2882705	Platypalpus divisus	species	Platypalpus vividus
 1446193	Platypalpus ecalceatus	species	Platypalpus calceatus
 2725521	Polyodaspis sulcicolis	species	Polyodaspis sulcicollis
 2882739	Procladius simplicistylis	species	Procladius simplicistylus
@@ -395,7 +396,7 @@ taxon_id	input	rank	suggested
 511112	Rhaphium auctum	species	Pesotum aureum
 	Rhamphomyia tarsata	species	rhamphomyia barbata
 1231557	Rymosia acta	species	Ormosia arborea
-	Rymosia affinis	species	ormosia affinis	drymonia affinis
+	Rymosia affinis	species	drymonia affinis	ormosia affinis
 1231565	Rymosia bifida	species	Ormosia nitida
 1824977	Scaptomyza vittata	species	Poecilolycia vittata
 1918184	Smittia amoena	species	Smidtia amoena
@@ -406,6 +407,7 @@ taxon_id	input	rank	suggested
 1155462	Tethina grisea	species	Exorista rustica
 903472	Thalassomya frauenfeldi	species	Thalassomyia frauenfeldi
 1088292	Thereva inornata	species	Theretra inornata
+377534	Thrypticus divisus	species	Argyra argyria
 1285112	Trichonta fragilis	species	Columnea tenella
 316471	Villa venusta	species	Viola sacchalinensis
 2886778	Xenopelopia falcigera	species	Telopelopia fascigera
@@ -564,7 +566,7 @@ taxon_id	input	rank	suggested
 48718	Isotomurus trifasciatus	species	Isotomurus unifasciatus
 2926732	Protaphorura bicampata	species	Protaphorura tricampata
 1817608	Bradya furcata	species	Bradysia nervosa
-656152	Caligus minimus	species	Calcinus minutus
+114070	Caligus minimus	species	Calanus sinicus
 862522	Caligus tenuis	species	Calamus tenuis
 1765884	Centropages kroeyeri	species	Centropages kroyeri
 422159	Cletodes spinulatus	species	Aleiodes apiculatus
@@ -606,6 +608,7 @@ taxon_id	input	rank	suggested
 691542	Feltria subterranea	species	Agrotis subterranea
 119153	Harpactea hombergi	species	Harpactea hombergii
 	Lauroppia	genus	lucoppia	aeroppia	lauroia
+280703	Lebertia dubia	species	Pichonia dubia
 1907025	Opilio canestrini	species	Opilio canestrinii
 926819	Piona carnea	species	Pinna carnea
 1264953	Sabacon viscayanum	species	Sabacon viscayanus
@@ -715,7 +718,6 @@ taxon_id	input	rank	suggested
 	Ochromonas variabilis	species	ochroconis variabilis
 	Ochromonas verrucosa	species	ochroconis verrucosa	ochroconis verruculosa
 	Octactis	genus	oulactis	ostiactis
-2497848	Pinnularia acoricola	species	Pinnularia acidicola
 1089217	Pinnularia carminata	species	Pinnularia acuminata
 500174	Pinnularia minuta	species	Pilularia minuta
 265560	Pleurosigma planktonica	species	Pleurosigma planktonicum
@@ -1169,7 +1171,6 @@ taxon_id	input	rank	suggested
 43166	Citrus auriantium	species	Citrus aurantium
 682156	Crassula intricata	species	Crassula muscosa
 28979	Sciadopitys verticullata	species	Sciadopitys verticillata
-435424	Protostelium irregulare	species	Soliformovum irregulare
 167850	Euglena contabrica	species	Euglena cantabrica
 1453384	Euglena oblonga	species	Eugenia oblongata
 1131320	Euglenalese	family	Euglenaceae
