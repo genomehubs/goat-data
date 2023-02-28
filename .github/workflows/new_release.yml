@@ -648,7 +648,7 @@ jobs:
           -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
           -e GH_BASENAME= \
           -e GH_SITENAME=GoaT \
-          -e GH_ARCHIVE=2022.11.16 \
+          -e GH_ARCHIVE='2023.02.20 2022.11.16' \
           -e GH_SUGGESTED_TERM=Canidae \
           --name goat-ui-$RELEASEDAY \
           genomehubs/goat:latest
