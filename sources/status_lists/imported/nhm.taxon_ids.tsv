@@ -1,4 +1,8 @@
 taxon_id	input	rank
+7399	Hymenoptera	order
+7205	Tabanidae	family
+27474	Tachinidae	family
+92558	Dolichopodidae	family
 336591	Larinioides cornutus	species
 1112515	Ero	genus
 1926211	Philodromus buxi	species
@@ -99,7 +103,6 @@ taxon_id	input	rank
 65288	Netelia	genus
 70849	Nudibranchia	order
 6544	Bivalvia	class
-7399	Hymenoptera	order
 7147	Diptera	order
 7041	Coleoptera	order
 446512	Mystacides	genus
@@ -109,7 +112,6 @@ taxon_id	input	rank
 987865	Acronicta psi	species
 107870	Hydroporus	genus
 7197	Psychodidae	family
-27474	Tachinidae	family
 1100958	Crambus lathoniellus	species
 48991	Ephydridae	family
 41043	Tipula	genus
@@ -175,8 +177,6 @@ taxon_id	input	rank
 997290	Thumatha senex	species
 997513	Macrochilo cribrumalis	species
 92169	Talitridae	family
-7205	Tabanidae	family
-92558	Dolichopodidae	family
 1545162	Metatropis rufescens	species
 36150	Cicadella viridis	species
 27515	Pompilidae	family
@@ -865,6 +865,11 @@ taxon_id	input	rank
 283834	Deilephila elpenor	species
 524111	Kerabistus	genus
 934882	Opisthograptis luteolata	species
+987949	Hadena compta	species
+758718	Acleris umbrana	species
+45623	Pelophylax lessonae	species
+9209	Phalacrocorax carbo	species
+75865	Tadorna tadorna	species
 210797	Golfingia vulgaris	species
 81835	Linyphiidae	family
 2979189	Oligolophus hansenii	species
@@ -908,7 +913,6 @@ taxon_id	input	rank
 219595	Cygnus cygnus	species
 8839	Anas platyrhynchos	species
 1630617	Vanellus armatus	species
-9209	Phalacrocorax carbo	species
 37610	Erithacus rubecula	species
 219594	Aythya fuligula	species
 1926224	Sibianor aurocinctus	species
@@ -1092,7 +1096,6 @@ taxon_id	input	rank
 988038	Simyra albovenosa	species
 1073588	Metzneria metzneriella	species
 320033	Diarsia	genus
-75865	Tadorna tadorna	species
 287208	Adscita geryon	species
 #qpTraBrit	Trachypauropus britannicus	species
 #qpStyPedu	Stylopauropus pedunculatus	species
@@ -1376,7 +1379,6 @@ taxon_id	input	rank
 132585	Anser brachyrhynchus	species
 219593	Aythya ferina	species
 28680	Anas acuta	species
-45623	Pelophylax lessonae	species
 75861	Mareca strepera	species
 184711	Branta leucopsis	species
 287198	Cacoecimorpha pronubana	species
