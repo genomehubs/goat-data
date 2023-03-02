@@ -2,7 +2,7 @@ common:
   hub:
     name: goat
     path: /genomehubs/resources
-    version: 2023.03.01
+    version: 2023.03.02
   es:
     path: /genomehubs/resources/es
     batch: 10000
