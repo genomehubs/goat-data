@@ -1,5 +1,13 @@
 taxon_id	input	rank
+7147	Diptera	order
+7041	Coleoptera	order
+7408	Ichneumonidae	family
 7399	Hymenoptera	order
+6968	Sympetrum	genus
+42113	Clitellata	class
+7190	Simuliidae	family
+219548	Heleomyzidae	family
+43823	Limoniidae	family
 7205	Tabanidae	family
 27474	Tachinidae	family
 92558	Dolichopodidae	family
@@ -99,12 +107,9 @@ taxon_id	input	rank
 62005	Glomeris	genus
 173284	Geophilus truncorum	species
 1915216	Hylebainosoma nontronensis	species
-42113	Clitellata	class
 65288	Netelia	genus
 70849	Nudibranchia	order
 6544	Bivalvia	class
-7147	Diptera	order
-7041	Coleoptera	order
 446512	Mystacides	genus
 96822	Sphaeromatidae	family
 6448	Gastropoda	class
@@ -116,11 +121,9 @@ taxon_id	input	rank
 48991	Ephydridae	family
 41043	Tipula	genus
 702679	Pediciidae	family
-7408	Ichneumonidae	family
 156914	Nebrioporus	genus
 107769	Agabus	genus
 107852	Haliplus	genus
-43823	Limoniidae	family
 1594371	Mompha subbistrigella	species
 987896	Caradrina kadenii	species
 1920660	Geomitridae	family
@@ -260,13 +263,10 @@ taxon_id	input	rank
 420843	Conocephalus fuscus	species
 494438	Meconema thalassinum	species
 863834	Stenodema calcarata	species
-6968	Sympetrum	genus
 336648	Cyclosa conica	species
 988044	Xestia baja	species
-219548	Heleomyzidae	family
 721156	Ochropacha duplaris	species
 1804828	Diarsia dahlii	species
-7190	Simuliidae	family
 94026	Metellina segmentata	species
 #qdMacPali	Macrosternodesmus palicola	species
 400960	Philodromus aureolus	species
@@ -865,10 +865,16 @@ taxon_id	input	rank
 283834	Deilephila elpenor	species
 524111	Kerabistus	genus
 934882	Opisthograptis luteolata	species
+#ilMesDidm	Mesotype didymata	species
+139497	Ulopa reticulata	species
+9209	Phalacrocorax carbo	species
+30387	Netta rufina	species
+107026	Mergellus albellus	species
+75839	Anas crecca	species
+257867	Platalea leucorodia	species
 987949	Hadena compta	species
 758718	Acleris umbrana	species
 45623	Pelophylax lessonae	species
-9209	Phalacrocorax carbo	species
 75865	Tadorna tadorna	species
 210797	Golfingia vulgaris	species
 81835	Linyphiidae	family
@@ -903,7 +909,6 @@ taxon_id	input	rank
 54496	Rallus aquaticus	species
 1192867	Chroicocephalus ridibundus	species
 8843	Anser anser	species
-30387	Netta rufina	species
 8869	Cygnus olor	species
 8879	Mergus serrator	species
 132587	Anser fabalis	species
@@ -1217,11 +1222,9 @@ taxon_id	input	rank
 461685	Hemerobius humulinus	species
 572911	Venusia cambrica	species
 2561510	Mirificarma mulinella	species
-#ilMesDidm	Mesotype didymata	species
 199066	Phyllonorycter rajella	species
 881420	Blepharidopterus angulatus	species
 #iuEctPete	Ectopsocus petersi	species
-139497	Ulopa reticulata	species
 881751	Psallus falleni	species
 1545306	Drymus brunneus	species
 236935	Plagiognathus chrysanthemi	species
