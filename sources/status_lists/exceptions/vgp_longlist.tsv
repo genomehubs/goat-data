@@ -2139,7 +2139,6 @@ Charadriiformes		Neoaves	Rostratulidae		bRosAus	Aves	Australian Painted-snipe	Ro
 Passeriformes		Neoaves	Icteridae		bIctPyr	Aves	Variable Oriole	Icterus	pyrrhopterus	VGP
 Galliformes		Galloanserae	Cracidae		bOrtSqu	Aves	Scaled Chachalaca	Ortalis	squamata	VGP
 Gruiformes		Neoaves	Rallidae		bDiaHaw	Aves	Hawkins's Rail	Diaphorapteryx ††	hawkinsi ††	VGP
-Cuculiformes		Neoaves	Cuculidae		bSurVel	Aves	Philippine Drongo-Cuckoo	Surniculus	velutinus	VGP
 Passeriformes		Neoaves	Platysteiridae		bPlaBli	Aves	Red-cheeked Wattle-eye	Platysteira	blissetti	VGP
 Passeriformes		Neoaves	Pachycephalidae		bPacVan	Aves	Temotu Whistler	Pachycephala	vanikorensis	VGP
 Passeriformes		Neoaves	Pellorneidae		bNapMar	Aves	Marbled Wren-Babbler	Napothera	marmorata	VGP
@@ -3065,7 +3064,6 @@ Carcharhiniformes		Selachimorpha	Scyliorhinidae		sCepZeb	Elasmobranchii	-	Cephal
 Rajiformes		Batoidea	Gurgesiellidae		sCruCad	Elasmobranchii	-	Cruriraja	cadenati	VGP
 Rajiformes		Batoidea	Gurgesiellidae		sCruDur	Elasmobranchii	-	Cruriraja	durbanensis	VGP
 Squaliformes		Selachimorpha	Etmopteridae		sCenExc	Elasmobranchii	-	Centroscyllium	excelsum	VGP
-Myliobatiformes		Batoidea	Myliobatidae		sAetAsp	Elasmobranchii	-	Aetomylaeus	asperrimus	VGP
 Myliobatiformes		Batoidea	Myliobatidae		sAetCae	Elasmobranchii	-	Aetomylaeus	caeruleofasciatus	VGP
 Rajiformes		Batoidea	Gurgesiellidae		sFenAtr	Elasmobranchii	-	Fenestraja	atripinna	VGP
 Rajiformes		Batoidea	Gurgesiellidae		sFenCub	Elasmobranchii	-	Fenestraja	cubensis	VGP
@@ -4385,7 +4383,6 @@ Soricomorpha		Laurasiatheria	Soricidae		mSorVer	Mammalia	-	Sorex	veraecrucis	VGP
 Chiroptera		Laurasiatheria	Rhinolophidae		mRhiGui	Mammalia	Guinean Horseshoe Bat	Rhinolophus	guineensis	VGP
 Artiodactyla		Laurasiatheria	Cervidae		mAxiCal	Mammalia	Calamian Deer	Axis	calamianensis	VGP
 Rodentia		Euarchontoglires	Cricetidae		mMicNeb	Mammalia	-	Microtus	nebrodensis	VGP
-Primates		Euarchontoglires	Lorisidae		mNycBor	Mammalia	-	Nycticebus	borneanus	VGP
 Rodentia		Euarchontoglires	Nesomyidae		mVoaAnt	Mammalia	Eastern Voalavo	Voalavo	antsahabensis	VGP
 Rodentia		Euarchontoglires	Cricetidae		mKunFro	Mammalia	-	Kunsia	fronto	VGP
 Rodentia		Euarchontoglires	Cricetidae		mTylMir	Mammalia	Mira Climbing Rat	Tylomys	mirae	VGP
@@ -4401,7 +4398,6 @@ Rodentia		Euarchontoglires	Muridae		mParNas	Mammalia	Long-Nosed Paramelomys	Para
 Rodentia		Euarchontoglires	Capromyidae		mIsoPor	Mammalia	Puerto Rican Hutia	Isolobodon	portoricensis	VGP
 Soricomorpha		Laurasiatheria	Soricidae		mCroPer	Mammalia	Pale Grey Shrew	Crocidura	pergrisea	VGP
 Artiodactyla		Laurasiatheria	Hippopotamidae		mHipLem	Mammalia	Madagascan Dwarf Hippopotamus	Hippopotamus	lemerlei	VGP
-Primates		Euarchontoglires	Lorisidae		mNycKay	Mammalia	-	Nycticebus	kayan	VGP
 Primates		Euarchontoglires	Galagidae		mGalZan	Mammalia	-	Galago	zanzibaricus	VGP
 Rodentia		Euarchontoglires	Cricetidae		mTylPan	Mammalia	Panam?Climbing Rat	Tylomys	panamensis	VGP
 Rodentia		Euarchontoglires	Muridae		mDasFox	Mammalia	Fox's Shaggy Rat	Dasymys	foxi	VGP
@@ -4436,7 +4432,6 @@ Rodentia		Euarchontoglires	Muridae		mPauNas	Mammalia	Paula_x0019_s Long-Nosed Ra
 Rodentia		Euarchontoglires	Hystricidae		mHysSum	Mammalia	Sumatran Porcupine	Hystrix	sumatrae	VGP
 Rodentia		Euarchontoglires	Heptaxodontidae		mCliOsb	Mammalia	-	Clidomys	osborni	VGP
 Chiroptera		Laurasiatheria	Rhinolophidae		mRhiKey	Mammalia	Kai Horseshoe Bat	Rhinolophus	keyensis	VGP
-Chiroptera		Laurasiatheria	Hipposideridae		mHipEin	Mammalia	-	Hipposideros	einnaythu	VGP
 Chiroptera		Laurasiatheria	Miniopteridae		mMinBle	Mammalia	-	Miniopterus	blepotis	VGP
 Chiroptera		Laurasiatheria	Vespertilionidae		mNycShe	Mammalia	Tasmanian Long-Eared Bat	Nyctophilus	sherrini	VGP
 Chiroptera		Laurasiatheria	Rhinolophidae		mRhiCoh	Mammalia	-	Rhinolophus	cohenae	VGP
@@ -8706,7 +8701,6 @@ Perciformes		Acanthopterygii	Opistognathidae		fLonLem	Actinopterygii	-	Lonchopis
 Scorpaeniformes		Acanthopterygii	Aploactinidae		fPtaGal	Actinopterygii	-	Ptarmus	gallus	VGP
 Scorpaeniformes		Acanthopterygii	Liparidae		fEknChi	Actinopterygii	-	Eknomoliparis	chirichignoae	VGP
 Scorpaeniformes		Acanthopterygii	Liparidae		fPseMic	Actinopterygii	-	Psednos	microps	VGP
-Scorpaeniformes		Acanthopterygii	Scorpaenidae		fNeoBuc	Actinopterygii	-	Neomerinthe	bucephalus	VGP
 Blenniiformes		Acanthopterygii	Blenniidae		fHypRob	Actinopterygii	-	Hypsoblennius	robustus	VGP
 Cichliformes		Acanthopterygii	Cichlidae		fAllWel	Actinopterygii	-	Allochromis	welcommei	VGP
 Ophidiiformes		Acanthopterygii	Bythitidae		fPseAcu	Actinopterygii	-	Pseudonus	acutus	VGP
