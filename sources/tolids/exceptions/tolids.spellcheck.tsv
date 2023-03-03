@@ -357,7 +357,7 @@ taxon_id	input	rank	suggested
 	Delia kullensis	species	delias muliensis
 376020	Dixa nebulosa	species	Disa sabulosa
 13485	Dixella obscura	species	Dianella ensifolia
-356869	Empis rufiventris	species	Limnius intermedius
+1287513	Empis punctata	species	Facelina annulicornis
 1713892	Empis vitripennis	species	Empis pennipes
 2714785	Eristalis abusivus	species	Eristalis abusiva
 209015	Erioptera vicina	species	Eneoptera surinamensis
@@ -538,7 +538,6 @@ taxon_id	input	rank	suggested
 150190	Clathria gradalis	species	Ramaria gracilis
 	Clathria tenuissima	species	clavaria densissima	clavaria tenuissima
 1539398	Iophon piceum	species	Ophion luteus
-1005901	Phacus striatus	species	Placus striatus
 2576624	Trachelomonas granulosa	species	Trachelomonas granulata
 51294	Caspiella similis	species	Capitella capitata
 1607841	Oxytricha pellionella	species	Tachysoma pellionellum
@@ -637,6 +636,7 @@ taxon_id	input	rank	suggested
 1521732	Halochlorococcum dilitatum	species	Halochlorococcum dilatatum
 1461598	Lobocystis planctonica	species	Chlamydocapsa planctonica
 321588	Oedogonium crassum	species	Oedogonium crispum
+337027	Oedogonium macrosporum	species	Oedogonium acrosporum
 415189	Oocystis apicurvata	species	Oocystis apiculata
 1207352	Tetrastrum staurogeniaeforme	species	Tetrastrum staurogeniiforme
 43941	Ulothrix aequalis	species	Ulothrix zonata
@@ -716,7 +716,6 @@ taxon_id	input	rank	suggested
 	Ochromonas variabilis	species	ochroconis variabilis
 	Ochromonas verrucosa	species	ochroconis verrucosa	ochroconis verruculosa
 	Octactis	genus	oulactis	ostiactis
-2497848	Pinnularia acoricola	species	Pinnularia acidicola
 1089217	Pinnularia carminata	species	Pinnularia acuminata
 500174	Pinnularia minuta	species	Pilularia minuta
 265560	Pleurosigma planktonica	species	Pleurosigma planktonicum
@@ -817,7 +816,7 @@ taxon_id	input	rank	suggested
 2796199	Laelaspis astronomica	species	Laelaspis astronomicus
 195221	Macronyssus	genus	Macronychus
 645005	Phytoseius macropilis	species	Phytoseiulus macropilis
-	Seiulus	genus	suillus	sciurus	seiurus
+	Seiulus	genus	suillus	sciurus
 347913	Exopalpiger trianguliceps	species	Ixodes trianguliceps
 87361	Cepheus tuberculatus	species	Alpheus malleator
 453146	Hermannia scabra	species	Hermania scabra
@@ -1063,6 +1062,7 @@ taxon_id	input	rank	suggested
 	Agaricus fulvosus	species	agaricus bulbosus
 93828	Agaricus fuscipes	species	Gymnopus fusipes
 	Agaricus gramineus	species	agaricus stramineus
+1843309	Agaricus graveolens	species	Agaricus gratolens
 	Agaricus lateoalbus	species	agaricus luteoalbus
 	Agaricus latus	species	agaricus elatus	agaricus laetus
 181745	Agaricus ligatus	species	Phaeomarasmius erinaceus

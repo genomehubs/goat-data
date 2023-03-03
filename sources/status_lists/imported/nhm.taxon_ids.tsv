@@ -1,4 +1,6 @@
 taxon_id	input	rank
+70849	Nudibranchia	order
+6544	Bivalvia	class
 7147	Diptera	order
 7041	Coleoptera	order
 7408	Ichneumonidae	family
@@ -108,8 +110,6 @@ taxon_id	input	rank
 173284	Geophilus truncorum	species
 1915216	Hylebainosoma nontronensis	species
 65288	Netelia	genus
-70849	Nudibranchia	order
-6544	Bivalvia	class
 446512	Mystacides	genus
 96822	Sphaeromatidae	family
 6448	Gastropoda	class
@@ -865,6 +865,8 @@ taxon_id	input	rank
 283834	Deilephila elpenor	species
 524111	Kerabistus	genus
 934882	Opisthograptis luteolata	species
+195873	Aeolidia papillosa	species
+71285	Acanthodoris pilosa	species
 #ilMesDidm	Mesotype didymata	species
 139497	Ulopa reticulata	species
 9209	Phalacrocorax carbo	species
@@ -895,8 +897,6 @@ taxon_id	input	rank
 1569497	Propolydesmus testaceus	species
 863632	Stigmatogaster souletina	species
 1569477	Leptoiulus belgicus	species
-195873	Aeolidia papillosa	species
-71285	Acanthodoris pilosa	species
 987004	Scopula immutata	species
 76058	Somateria mollissima	species
 8853	Branta canadensis	species
