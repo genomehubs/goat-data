@@ -44,7 +44,7 @@ taxon_id	input	rank	suggested
 710017	Ageratina brevipes	species	Ceratina breviceps
 58936	Agropyron dasyanthum	species	Eremopyrum distans
 282262	Agrostis atlantica	species	Noctua atlantica
-	Agrostis densiflora	species	eragrostis tenuiflora	agrostis tenuiflora
+	Agrostis densiflora	species	eragrostis tenuiflora	agrostis tenuiflora	eragrostis densiflora
 165094	Agrostis infirma	species	Poa infirma
 1685705	Agrostis juressii	species	Linkagrostis juressi
 751652	Agrostis parviflora	species	Eragrostis parviflora
@@ -125,6 +125,7 @@ taxon_id	input	rank	suggested
 1460044	Astragalus chuskanus	species	Astragalus clusii
 1460044	Astragalus clarianus	species	Astragalus clusii
 	Astragalus cottonii	species	astragalus wootonii	astragalus mortonii
+1851656	Astragalus crypticus	species	Astragalus croaticus
 	Astragalus densiflorus	species	astragalus densifolius
 90203	Astragalus eugenii	species	Astragalus palenae
 1080389	Astragalus graecus	species	Astragalus albicaulis
@@ -151,6 +152,7 @@ taxon_id	input	rank	suggested
 553836	Astragalus siliceus	species	Oxytropis halleri
 144124	Astragalus skorniakowi	species	Astragalus masanderanus
 2014734	Astragalus tugarinovii	species	Astragalus tugarinovi
+174552	Ateleia ovata	species	Asemeia violacea
 490642	Atriplex billardieri	species	Atriplex billardierei
 880644	Atriplex cordobensis	species	Atriplex cordubensis
 	Atriplex linifolia	species	atriplex latifolia
@@ -171,6 +173,7 @@ taxon_id	input	rank	suggested
 	Begonia rostrata	species	begonia prostrata
 1684012	Begonia viscida	species	Begonia hispida
 191233	Bellidastrum michelii	species	Aster bellidiastrum
+2115954	Betula × aurata	species	Betula x atrata
 316915	Beyeria lechenaultii	species	Beyeria leschenaultii
 1352176	Biophytum nudum	species	Oophytum nanum
 	Blumenbachia hierorymi	species	blumenbachia hieronymi	blumenbachia hieronymii
@@ -179,6 +182,7 @@ taxon_id	input	rank	suggested
 52140	Brachypodium arbusculum	species	Brachypodium arbuscula
 315920	Brachyscome oncocarpa	species	Brachyscome goniocarpa
 315927	Brachyscome radicata	species	Brachyscome radicans
+102754	Brickellia schaffneri	species	Brickellia eupatorioides
 1550871	Brickellia veronicaefolia	species	Brickellia veronicifolia
 1979679	Bufonia macrocarpa	species	Begonia macrocarpa
 426864	Bulbophyllum bisetum	species	Bulbophyllum longiflorum
@@ -195,6 +199,7 @@ taxon_id	input	rank	suggested
 310861	Caiophora buraeavi	species	Caiophora buraeavii
 184743	Cajanus rugosus	species	Cosmocalanus darwinii
 	Calamagrostis distantifolia	species	calamagrostis distantiflora
+2030670	Calamagrostis inexpansa	species	Greeneochloa expansa
 497297	Calamagrostis × acutiflora	species	Calamagrostis x acutiflora
 1128381	Calanthe hirsuta	species	Goeppertia villosa
 240967	Calceolaria adenanthera	species	Calceolaria pavonii
@@ -204,7 +209,6 @@ taxon_id	input	rank	suggested
 660143	Calceolaria volckmannii	species	Calceolaria volckmanni
 655496	Calligonum alatum	species	Calligonum microcarpum
 655497	Calligonum gracile	species	Calligonum molle
-1892313	Callitriche ×vigens	species	Callitriche x vigens
 255005	Calochortus invenustus	species	Calochortus venustus
 254966	Calochortus longibarbatus	species	Calochortus longebarbatus
 	Camellia × maliflora	species	capellia multiflora	carallia multiflora
@@ -244,6 +248,7 @@ taxon_id	input	rank	suggested
 1486530	Centaurea incompta	species	Centaurea incompleta
 1436104	Centaurea janerii	species	Centaurea janeri
 145511	Centaurea prolongoi	species	Centaurea prolongi
+363423	Centaurea reflexa	species	Centaurea deflexa
 146595	Centaurea simplicaulis	species	Psephellus bellus
 1048535	Centaurea ustulata	species	Centaurea cuneifolia
 1042300	Centaurea × moncktonii	species	Centaurea x moncktonii
@@ -306,8 +311,7 @@ taxon_id	input	rank	suggested
 2922917	Cryptocoryne × timahensis	species	Cryptocoryne x timahensis
 396993	Cucumis humofructus	species	Cucumis humifructus
 312583	Cuphea viscosa	species	Cuphea lutescens
-866908	Cylindropuntia × tetracantha	species	Cylindropuntia x tetracantha
-	Cyperus alulatus	species	cyperus angulatus	cychrus angulatus
+	Cyperus alulatus	species	cychrus angulatus	cyperus angulatus
 1234203	Cyperus eglobosus	species	Cyperus flavidus
 330166	Cyperus erythrorrhizos	species	Cyperus erythrorhizos
 	Cyperus microcephalus	species	cyperus macrocephalus
@@ -497,6 +501,7 @@ daHieArra	Hieracium arragonense	species	Hieracium arranense
 268062	Hieracium sparsifolium	species	Hieracium sparsum
 1501549	Huernia thureti	species	Huernia thuretii
 180144	Hulsea brevifolia	species	Hessea breviflora
+200375	Hybanthus bicolor	species	Riccordia bicolor
 2582853	Hydrocotyle microphylla	species	Hydrocotyle macrophylla
 1817777	Hygrophila senegalensis	species	Dyschoriste erecta
 2057673	Hyparrhenia formosa	species	Hyparrhenia bracteata
@@ -567,7 +572,6 @@ dcLimTran	Limonium transwallisnum	species	Limonium transwallianum
 374417	Lysichitum americanum	species	Lysichiton americanus
 502323	Lythrum baeticum	species	Pythium sp. balticum
 	Machaerium mucronulatum	species	machaerium mucronatum
-1304318	Madia anomala	species	Xanthocercis madagascariensis
 86734	Magnolia pleiocarpa	species	Magnolia pterocarpa
 569831	Majidea forsteri	species	Majidea fosteri
 288286	Malva subovata	species	Malvastrum americanum
@@ -660,7 +664,7 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 253195	Pelargonium rubignosum	species	Pelargonium sublignosum
 2023259	Pelargonium sidifolium	species	Pelargonium filifolium
 163050	Pelargonium trifoliolatum	species	Pelargonium ternifolium
-	Pelargonium viciifolium	species	pelargonium variifolium	pelargonium siccifolium
+	Pelargonium viciifolium	species	pelargonium siccifolium	pelargonium variifolium
 4031	Pelargonium × hortorum	species	Pelargonium x hortorum
 257004	Pennisetum distachyum	species	Cenchrus tristachyus
 584874	Pennisetum trisetum	species	Cenchrus unisetus
@@ -669,7 +673,6 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 136769	Phoradendron berteroanum	species	Phoradendron juniperinum
 328195	Phreatia elegans	species	Davallia denticulata
 283132	Phyllanthus axillaris	species	Phyllanthus nummulariifolius
-2708445	Phyllanthus eliae	species	Phyllanthus elsiae
 	Phyllanthus grandifolius	species	phialanthus grandifolius	phyllanthus grandiflorus
 2708450	Phyllanthus mieschii	species	Phyllanthus finschii
 319600	Phyllanthus orbiculatus	species	Phyllanthus orbicularis
@@ -740,7 +743,6 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 74647	Rosa watsoniana	species	Rosa multiflora
 655866	Rubus echinatus	species	Rubus rudis
 2527792	Rubus schnedleri	species	Rubus missouricus
-drRubMile	Rubus silesiacus	species	Rubus milesianus
 1234504	Rumex hesperius	species	Rumex salicifolius
 120877	Rumex rossicus	species	Ochlerotatus rusticus
 500263	Rytidosperma telematicum	species	Rytidosperma telmaticum
@@ -749,6 +751,7 @@ drRubMile	Rubus silesiacus	species	Rubus milesianus
 68491	Salvia fluviatilis	species	Locustella fluviatilis
 	Saracha contorta	species	salacia conferta	salacca conferta
 403582	Sasa takizawana	species	Sasa hayatae
+2055104	Satyrium foliosum	species	Athyrium foliolosum
 2741400	Saussurea jadrinzevii	species	Saussurea jadrincevii
 238959	Saussurea thoroldi	species	Saussurea thoroldii
 1529533	Saxifraga manshuriensis	species	Micranthes manchuriensis
@@ -866,6 +869,7 @@ drRubMile	Rubus silesiacus	species	Rubus milesianus
 428213	Tradescantia × andersoniana	species	Tradescantia x andersoniana
 300977	Trevia nudiflora	species	Mallotus nudiflorus
 590345	Trichocentrum nudum	species	Trichocentrum nanum
+1745175	Trichogonia prancii	species	Trichogonia prancei
 115524	Tridax mexicana	species	Thrinax radiata
 97023	Trifolium bonanni	species	Trifolium fragiferum
 70973	Trigonella schischkinii	species	Medicago ruthenica
@@ -891,7 +895,7 @@ daVerEleg	Verbesina elegans	species	Verbena elegans
 1483385	Vernonia jucunda	species	Veronica michauxii
 434702	Vernonia lindheimeri	species	Vernonia lindheimerii
 99384	Vernonia pulchella	species	Veronica agrestis
-	Vernonia pusilla	species	veronica pusilla	vernonia pumilla
+	Vernonia pusilla	species	veronica pusilla
 557651	Veronica mannii	species	Inula mannii
 153962	Vicia bijuga	species	Vicia unijuga
 	Vicia macrantha	species	vicia micrantha

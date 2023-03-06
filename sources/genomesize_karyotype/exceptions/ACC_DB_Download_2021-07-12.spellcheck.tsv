@@ -21,7 +21,7 @@ taxon_id	input	rank	suggested
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
+	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -186,7 +186,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
-	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
+	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
 1944111	Bembidion yukonoum	species	Bembidion yukonum
@@ -755,6 +755,7 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1553210	Chrysoli staphylea_	species	Chrysolina staphylaea
 75532	Chrysoli timarchoides_	species	Chrysolina timarchoides
 75533	Chrysoli varians_	species	Chrysolina varians
+97483	Chrysomela elongata	species	Pleurochrysis elongata
 153782	Chrysomela interrupta_	species	Chrysomela interrupta
 153811	Chrysomela lapponica_	species	Chrysomela lapponica
 63697	Chrysomela oleracea	species	Gonioctena olivacea
@@ -863,7 +864,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 574154	Ceutorrhynchus punctiger	species	Glocianus punctiger
 877912	Cionus hortulans	species	Cionus hortulanus
 201897	Cryptorrhynchus lapathi	species	Cryptorhynchus lapathi
-	Curculio pictus	species	curculio piceus	curculio picatus
+	Curculio pictus	species	curculio piceus
 13040	Diaprepres abbreviata	species	Diaprepes abbreviatus
 2729800	Donus oxalidis	species	Donus oxalis
 1679453	Ectatorhinus adamsi	species	Ectatorhinus adamsii
@@ -933,7 +934,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2008391	Boreonectes ibericus_	species	Boreonectes ibericus
 1309560	Boreonectes multilineatus_	species	Boreonectes multilineatus
 1309561	Boreonectes riberae_	species	Boreonectes riberae
-	Colymbetes adpressus	species	corymbites impressus	colymbetes impressus
+	Colymbetes adpressus	species	colymbetes impressus	corymbites impressus
 1368183	Colymbetes bipustulatus	species	Calambus bipustulatus
 1509382	Colymbetes fuscus_	species	Colymbetes fuscus
 1610039	Colymbetes lapponicus	species	Calambus japonicus
@@ -1058,7 +1059,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopoma	homalopsis
+	Homaloplia	species	homalomyia	homalopsis	homalopoma
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1123,7 +1124,6 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 538617	Trachypachus slevini_	species	Trachypachus slevini
 1569671	Lophoceters pusillus	species	Lophocateres pusillus
 2966204	Cerodontha ireos	species	Cerodontha iraeos
-1333887	Phorbia brassica	species	Euphorbia alpina
 502513	Villa gayi	species	Viola grayi
 	Villa sinuosa	species	zilla spinosa	vella spinosa
 2726335	Villa velutina	species	Viola velutina
@@ -1259,7 +1259,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 1882553	Isophya hospodat	species	Isophya hospodar
 1678041	Isophya krausii	species	Isophya kraussii
 910292	Isophya modesta_longicaudata	species	Isophya longicaudata
-910298	Isophya plevnensis	species	Isophya pienensis
 2420531	Elysiacris	genus	Lysacris
 202390	Orxines macklotti	species	Orxines macklottii
 202447	Tropiderus childrenii	species	Tropidoderus childrenii
@@ -1353,7 +1352,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 649077	Tiedemannia neopolitana	species	Gleba cordata
 87838	Euhadra smaliae	species	Euhadra amaliae
 225461	Monacha cathusiana	species	Monacha cartusiana
-	Polygyra appressa	species	polygala depressa	polygala adpressa
+	Polygyra appressa	species	polygala adpressa	polygala depressa
 52793	Lymnaea nuricularia	species	Radix auricularia
 1076771	Stenostomum grandi	species	Stenostomum grande
 	Hymenolepidae	family	hymenolepididae	hymenoceridae
