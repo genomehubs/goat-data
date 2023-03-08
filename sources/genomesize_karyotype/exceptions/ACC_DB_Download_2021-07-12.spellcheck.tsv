@@ -1182,6 +1182,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 	Andricus punctatus	species	agaricus punctatus
 2962976	Diprion nipponica	species	Diprion nipponicus
 256662	Polistes fadwigae	species	Polistes jokahamae
+103372	Acromyrmex echinator	species	Acromyrmex echinatior
 	Temnothorax spinosius	species	temnothorax spinosior	temnothorax spinosus
 1835302	Aptesis gravipes	species	Sinarachna pallipes
 1422849	Aglaostigma occipitosa	species	Aglaostigma occipitosum
@@ -1205,7 +1206,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 282014	Lysandra osmarr	species	Lysandra ossmar
 764587	Narathura japonica	species	Paranthura japonica
 282003	Polyommatus medon	species	Polyommatus aedon
-987935	Sphrageidus similis	species	Euproctis similis
 211498	Plusia intermixta	species	Clusia intertexta
 	Aglais	genus	aglaia	agelas
 	Aphantopus	genus	aphanopus	aphaniops
@@ -1334,10 +1334,10 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 272250	Rampholeon marshalli	species	Rhampholeon marshalli
 179929	Rampholeon spectrum	species	Rhampholeon spectrum
 1481338	Alsophylax laevis	species	Cyathea surinamensis
-	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
+	Gekko gekko	species	germo germo	gekko gecko	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
-219442	Natricidae	family	Anthicidae
+	Natricidae	family	anthicidae	naticidae
 	Cyclodina olivieri	species	cyclodina oliveri
 253933	Ameiva maynardii	species	Pholidoscelis maynardi
 2936315	Aspidoscelis neomexicana	species	Aspidoscelis neomexicanus
@@ -1369,7 +1369,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 412860	Neodendeocoelum maculatum	species	Dendrocoelum maculatum
 69521	Cura pingus	species	Cura pinguis
 391271	Cura shubarti	species	Girardia schubarti
-659321	Dugesia ivana	species	Dugesia ilvana
 6182	Schistosomum japonicum	species	Schistosoma japonicum
 38741	Schistosomatium dounthitti	species	Schistosomatium douthitti
 596246	Trichobiharzia physellae	species	Trichobilharzia physellae

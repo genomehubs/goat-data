@@ -11,13 +11,13 @@ taxon_id	input	rank	suggested
 333685	Petropedetes newtonii	species	Petropedetes newtoni
 1267581	Tylototriton lizhengchangi	species	Tylototriton lizhenchangi
 2420076	Scinax atratus	species	Scinax auratus
-544672	Aubria occidentalis	species	Sacoglottis gabonensis
 1967703	Nymphargus armatus	species	Niphargus armatus
 926301	Philautus dubius	species	Philanthus politus
 745276	Phrynobatrachus hylaios	species	Phrynobatrachus hylaois
 2249821	Xenophrys caudoprocta	species	Megophrys caudoprocta
 402886	Xenophrys lekaguli	species	Xenophrys legkaguli
 2759542	Theloderma baibengense	species	Theloderma baibungense
+110110	Rana johni	species	Rana johnsi
 197005	Litoria scabra	species	Tectarius antonii
 2133923	Rana luanchuanensis	species	Rana luanchanensis
 2153452	Xenophrys parallela	species	Megophrys parallela
@@ -52,6 +52,7 @@ taxon_id	input	rank	suggested
 165750	Leuconotopicus stricklandi	species	Picoides stricklandi
 33589	Leptoptilos crumenifer	species	Leptoptilos crumeniferus
 1226211	Sicalis uropigyalis	species	Sicalis uropygialis
+198685	Pomarea fluxa †	species	Bomarea boliviensis
 265644	Melanopareia bitorquata	species	Melanopareia torquata
 2039007	Dryocopus schulzii	species	Dryocopus schulzi
 721887	Lanius borealis	species	Lanius dorsalis
@@ -67,6 +68,7 @@ taxon_id	input	rank	suggested
 388994	Scleroptila streptophora	species	Scleroptila streptophorus
 65363	Atlapetes flaviceps	species	Atlapetes fulviceps
 476438	Sylviorthorhynchus desmurii	species	Sylviorthorhynchus desmursii
+57402	Centropus menbeki	species	Centropus sinensis
 3025900	Neotrygon moluccensis	species	Neotrygon malaccensis
 2717101	Oxynotus japonicus	species	Oxyporus japonicus
 495824	Apristurus canutus	species	Apristurus platyrhynchus
@@ -94,7 +96,9 @@ taxon_id	input	rank	suggested
 9523	Callicebus regulus	species	Plecturocebus moloch
 2678870	Alticola strelzowi	species	Alticola strelzovi
 77229	Balioncyteris maculata	species	Balionycteris maculata
+146134	Eospalax baileyi	species	Eospalax fontanierii
 187019	Murina ryukyuana	species	Murina ryukyuna
+	Eospalax cansus	species	myospalax cansus
 112021	Lepus mandschuricus	species	Lepus mandshuricus
 77149	Mustela eversmanii	species	Mustela eversmannii
 9666	Mustela lutreolina	species	Mustela lutreola
@@ -122,7 +126,6 @@ taxon_id	input	rank	suggested
 354189	Vulpes rueppelli	species	Vulpes rueppellii
 561559	Crocidura raineyi	species	Crocidura baileyi
 666515	Pelomys minor	species	Praomys minor
-1567507	Neacomys pictus	species	Callistomys pictus
 	Neotoma martinensis	species	geonoma martinicensis
 43872	Cavia intermedia	species	Aesculus pavia
 504413	Conger jordani	species	Cancer jordani
@@ -177,7 +180,7 @@ taxon_id	input	rank	suggested
 334912	Polyprion oxygeneiosus	species	Polyprion oxygeneios
 1843429	Bryconamericus charalae	species	Knodus chapadae
 137743	Discotrema zonatum	species	Abortiporus biennis
-1202428	Calamus taurinus	species	Calamus longisetus
+	Calamus taurinus	species	calamus tigrinus	calamus caurinus
 1821187	Lamnostoma orientale	species	Lamnostoma orientalis
 1676938	Schilbe angolensis	species	Schilbe marmoratus
 1529631	Awaous pallidus	species	Agabus pallidus
@@ -220,6 +223,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 341125	Triplophysa stolickai	species	Triplophysa stoliczkai
 630657	Coelorinchus caelorinchus	species	Coelorinchus caelorhincus
 207299	Diplodus striatus	species	Pterostylis alata
+357286	Parabotia mantschuricus	species	Leptobotia mantschurica
 1856686	Nuchequula gerroides	species	Nuchequula gerreoides
 1519980	Lampanyctus gibbsi	species	Lampanyctus hubbsi
 642547	Curimatopsis microlepis	species	Curimatopsis macrolepis
@@ -262,6 +266,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 2202362	Gymnocypris firmispinata	species	Gymnocypris firmispinatus
 327704	Schizothorax labiatius	species	Schizothorax labiatus
 111834	Notropis buccula	species	Notropis buccata
+341107	Schistura pumatensis	species	Schistura putaoensis
 196075	Sprattus spratus	species	Sprattus sprattus
 2653402	Trichomycterus latidens	species	Ituglanis laticeps
 118145	Moringua macrochir	species	Moringua microchir
@@ -275,6 +280,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 1503185	Haludaria afasciata	species	Haludaria fasciata
 2999784	Coelorinchus multifasciatus	species	Caelorinchus multifasciatus
 1396872	Leporinus bimaculatus	species	Leporinus trimaculatus
+1336271	Leptachirus darwinensis	species	Leptacinus harbinensis
 2017741	Astroblepus unifasciatus	species	Astroblepus trifasciatus
 2699159	Thymallus brevicephalis	species	Thymallus brevicephalus
 2012925	Liparis punctatus	species	Liparis punctulatus
@@ -310,6 +316,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 1053594	Pterygoplichthys undecimalis	species	Pterygoplichthys etentaculatus
 2833474	Hyphessobrycon dorsalis	species	Hyphessobrycon borealis
 479862	Aluterus monocerus	species	Aluterus monoceros
+136867	Tylochromis labrodon	species	Mylochromis labidodon
 30532	Rama rama	species	Dama dama
 	Pomacentrus emarginatus	species	eupomacentrus marginatus	pomacentrus marginatus
 209205	Betta breviobesa	species	Betta breviobesus
@@ -318,11 +325,9 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 	Leporinus punctatus	species	lethrinus punctulatus
 2303447	Beaufortia yunnanensis	species	Beaumontia khasiana
 1907135	Schistura xhatensis	species	Physoschistura shanensis
-1676996	Enteromius urostigma	species	Enteromius eurostigma
 292300	Diplectrum eumelum	species	Satyrium pumilum
 fLycAlb	Lycenchelys alta	species	Lycenchelys alba
 59416	Apogon americanus	species	Trogon mexicanus
-628468	Gymnothorax atolli	species	Temnothorax stollii
 1001947	Oreoleuciscus dsapchynenis	species	Oreoleuciscus potanini
 2589304	Eviota geminata	species	Eviota deminuta
 129061	Scomberesox scombroides	species	Scomberesox saurus
@@ -370,7 +375,6 @@ fLycAlb	Lycenchelys alta	species	Lycenchelys alba
 57313	Sceloporus unicanthalis	species	Sceloporus bicanthalis
 256095	Celestus montanus	species	Gymnosporia senegalensis
 1917336	Pseudoboa serrana	species	Pseudopoda serrata
-55266	Elapsoidea guentherii	species	Elapsoidea semiannulata
 1127713	Lygodactylus inexpectatus	species	Lygodactylus expectatus
 983886	Lygodactylus insularis	species	Lygodactylus angularis
 1544892	Gongylosoma baliodeirus	species	Gongylosoma baliodeirum
