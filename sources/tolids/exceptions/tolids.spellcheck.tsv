@@ -44,7 +44,6 @@ taxon_id	input	rank	suggested
 2033203	Helicofilia	genus	Heliconilla
 745532	Monosporium olivaceum	species	Sirodesmium olivaceum
 	Myxosporium	genus	zygosporium	monosporium
-	Naemospora crocea	species	nemaspora crocea
 	Naemaspora microspora	species	naemospora microspora
 512020	Septoria podagraria	species	Mycosphaerella podagrariae
 382529	Rhizophydium gibbosum	species	Rhizophydium globosum
@@ -54,7 +53,7 @@ taxon_id	input	rank	suggested
 2754649	Cercidospora macrospora	species	Cercospora macrospora
 29911	Cercospora moravica	species	Alternaria brassicae
 1160532	Chaetomastia canescens	species	Brachyotum ledifolium
-38650	Dematium	genus	Lomatium
+	Dematium	genus	lomatium	ceratium
 1940661	Diplodia castaneae	species	Sirococcus castaneae
 38941	Diplodia hederae	species	Diplodus sargus
 	Diplodia ulicis	species	diplodia ilicis	diplodina salicis	diplodia salicis
@@ -101,8 +100,9 @@ taxon_id	input	rank	suggested
 36659	Agaricus violaceus	species	Volvariella volvacea
 1170499	Athelia scutellaris	species	Dentathalia scutellariae
 85971	Boletus erubescens	species	Gyrodon lividus
+1384844	Boletus niveus	species	Dolerus nitens
 1384857	Boletus rubiginosus	species	Dolerus uliginosus
-	Boletus rugosus	species	boletus ramosus	dolerus fumosus
+	Boletus rugosus	species	boletus ramosus	dolerus fumosus	boletus fumosus
 	Clavaria spathula	species	clavaria spathulata
 	Clitocybe concava	species	clitocybe connata
 1657918	Clitopilus daamsii	species	Clitopilus davisii
@@ -121,7 +121,6 @@ taxon_id	input	rank	suggested
 183873	Cortinarius badiolilaceus	species	Cortinarius badiovinaceus
 2785897	Cortinarius duramarus	species	Thaxterogaster dulcamarus
 1638299	Cortinarius epipoleus	species	Cortinarius epiphaeus
-165399	Cortinarius latus	species	Cortinarius laetus
 	Cortinarius milvinus	species	cortinarius miltinus
 	Cortinarius muricinus	species	cortinarius duracinus
 	Cortinarius nitidus	species	cortinarius rigidus	cortinarius lividus
@@ -141,7 +140,6 @@ taxon_id	input	rank	suggested
 181160	Entoloma tortipes	species	Entoloma hirtipes
 	Erastia	genus	erastria	ernstia	erasmia
 38945	Flammula veluticeps	species	Flammulina velutipes
-2585376	Hebeloma sordidum	species	Hebeloma sordidulum
 	Hygrophorus hyacinthus	species	hygrophorus hyacinthinus
 	Hygrophorus irriguus	species	hygrophorus irrigatus
 1304263	Inocybe duriuscula	species	Inocybe nudiuscula
@@ -565,7 +563,7 @@ taxon_id	input	rank	suggested
 48718	Isotomurus trifasciatus	species	Isotomurus unifasciatus
 2926732	Protaphorura bicampata	species	Protaphorura tricampata
 1817608	Bradya furcata	species	Bradysia nervosa
-656152	Caligus minimus	species	Calcinus minutus
+114070	Caligus minimus	species	Calanus sinicus
 862522	Caligus tenuis	species	Calamus tenuis
 1765884	Centropages kroeyeri	species	Centropages kroyeri
 422159	Cletodes spinulatus	species	Aleiodes apiculatus
@@ -817,7 +815,7 @@ taxon_id	input	rank	suggested
 2796199	Laelaspis astronomica	species	Laelaspis astronomicus
 195221	Macronyssus	genus	Macronychus
 645005	Phytoseius macropilis	species	Phytoseiulus macropilis
-	Seiulus	genus	suillus	sciurus
+	Seiulus	genus	suillus	sciurus	seiurus
 347913	Exopalpiger trianguliceps	species	Ixodes trianguliceps
 87361	Cepheus tuberculatus	species	Alpheus malleator
 453146	Hermannia scabra	species	Hermania scabra
@@ -863,7 +861,7 @@ taxon_id	input	rank	suggested
 1321702	Dinarda maerkeli	species	Dinarda maerkelii
 878188	Ochthephilum jacquelini	species	Ochthephilum jacquelinii
 	Quedius assimilis	species	bledius dissimilis	quercus assimilis
-108629	Velleius	genus	Bellerus
+	Velleius	genus	bellerus	vellodius
 607022	Mycetophila occultans	species	Mycetophylax occultus
 2890663	Phronia forcipula	species	Phronia forcipata
 253432	Phronia signata	species	Phaonia tuguriorum
@@ -920,7 +918,7 @@ taxon_id	input	rank	suggested
 1567043	Elachertus gallicus	species	Hyssopus pallidus
 2931509	Aprostocetus femoralis	species	Tetrastichus temporalis
 1566858	Eupelmus martelli	species	Eupelmus martellii
-	Mangoma	genus	maniola	mangora
+	Mangoma	genus	maniola	langona
 634056	Alaptus antennatus	species	Araptus attenuatus
 316456	Anagrus similis	species	Anabrus simplex
 2921236	Gastrancistrus flavicornis	species	Gastrancistrus fulvicornis
@@ -947,6 +945,7 @@ taxon_id	input	rank	suggested
 54539	Trichomma intermedium	species	Tricholoma intermedium
 1667496	Eriborus dorsalis	species	Dolichomitus terebrans
 2651462	Olesicampe binotata	species	Cycasis rubiginosa
+904094	Cryptus minator	species	Ischnus inquisitorius
 1550550	Gambrus ornatus	species	Parthenope longimanus
 1045616	Mesoleptidea stallii	species	Mesoleptidea stalii
 605254	Campodorus flavescens	species	Camponotus flavescens
