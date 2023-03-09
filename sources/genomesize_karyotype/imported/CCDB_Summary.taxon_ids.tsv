@@ -1299,6 +1299,7 @@ taxon_id	input	rank
 122646	Riccia sorocarpa	species
 122647	Riccia tomentosa	species
 122648	Riccia trichocarpa	species
+3031467	Riccia warnstorfii	species
 53035	Ricciocarpos natans	species
 53013	Riella helicophylla	species
 2983785	Riella notarisii	species
@@ -27771,7 +27772,7 @@ taxon_id	input	rank
 496670	Ligusticopsis daucoides	species
 496671	Hymenidium delavayi	species
 54728	Paraligusticum discolor	species
-2448747	Ligusticum elatum	species
+154761	Miscanthus floridulus	species
 105275	Ligusticum ferulaceum	species
 2561885	Ligusticum filicinum	species
 2944863	Ligusticum glaucifolium	species
@@ -30617,7 +30618,6 @@ taxon_id	input	rank
 308351	Miricacalia makineana	species
 422336	Misbrookea strigosissima	species
 200567	Miscanthus ecklonii	species
-154761	Miscanthus floridulus	species
 200568	Miscanthus fuscus	species
 106893	Miscanthus junceus	species
 200569	Miscanthus nepalensis	species
@@ -30632,15 +30632,15 @@ taxon_id	input	rank
 102599	Misopates orontium	species
 45181	Mitchella repens	species
 83646	Mitchella undulata	species
-370426	Pectiantia breweri	species
+370426	Brewerimitella breweri	species
 40795	Mitellastra caulescens	species
 40796	Mitella diphylla	species
 40797	Ozomelis diversifolia	species
-242209	Mitella formosana	species
+242209	Asimitellaria formosana	species
 40798	Mitella nuda	species
-370363	Pectiantia ovalis	species
+370363	Brewerimitella ovalis	species
 40799	Pectiantia pentandra	species
-40800	Mitella stauropetala	species
+40800	Ozomelis stauropetala	species
 370364	Ozomelis trifida	species
 1620150	Mitracarpus hirtus	species
 1288021	Mitragyna parvifolia	species
@@ -39799,6 +39799,7 @@ taxon_id	input	rank
 669819	Salix sphenophylla	species
 470268	Salix starkeana	species
 1301451	Salix stolonifera	species
+3031262	Salix subopposita	species
 1114882	Salix taraikensis	species
 75722	Salix tetrasperma	species
 77069	Salix triandra	species
@@ -40494,7 +40495,7 @@ taxon_id	input	rank
 83407	Saxifraga spathularis	species
 1616341	Saxifraga spruneri	species
 102737	Saxifraga squarrosa	species
-90614	Micranthes stellaris	species
+#drSaxStel	Saxifraga stellaris	species
 182070	Saxifraga stolonifera	species
 1616345	Saxifraga stribrnyi	species
 442466	Saxifraga strigosa	species
