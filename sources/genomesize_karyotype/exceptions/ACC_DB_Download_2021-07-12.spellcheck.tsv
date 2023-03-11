@@ -21,7 +21,7 @@ taxon_id	input	rank	suggested
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
+	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -32,10 +32,10 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 251759	Araecerus fasciculatus_	species	Araecerus fasciculatus
 1661878	Euparius marmoreus_	species	Euparius marmoreus
 638814	Ptychoderes tricostifrons_	species	Ptychoderes tricostifrons
-284700	Acrossus	genus	Dicrossus
+	Acrossus	genus	dicrossus	acossus
 	Agolius	genus	aegolius	agorius	anolius
 75361	Chilothorax	genus	Schizothorax
-	Colobopterus	genus	chloropterus	dilobopterus
+	Colobopterus	genus	chloropterus	dilobopterus	colopterus
 1415215	Nimbus	genus	Niveus
 201766	Apoderus coryli_	species	Apoderus coryli
 207440	Byctiscus congener	species	Agabus congener
@@ -186,7 +186,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
-	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
+	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
 1944111	Bembidion yukonoum	species	Bembidion yukonum
@@ -314,6 +314,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1343316	Cicindela suturalis_	species	Cylindera suturalis
 176377	Cicindela tranquebarica_	species	Cicindela tranquebarica
 1343317	Cicindela trisigta	species	Cylindera trisignata
+1163509	Colfax stevensi	species	Colias sieversi
 2611535	Craspedophorus angulatus_	species	Craspedophorus angulatus
 247365	Cryptophonus tenebrosus_	species	Cryptophonus tenebrosus
 	Ctenostoma ornatum	species	chaenostoma cordatum
@@ -755,6 +756,7 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1553210	Chrysoli staphylea_	species	Chrysolina staphylaea
 75532	Chrysoli timarchoides_	species	Chrysolina timarchoides
 75533	Chrysoli varians_	species	Chrysolina varians
+97483	Chrysomela elongata	species	Pleurochrysis elongata
 153782	Chrysomela interrupta_	species	Chrysomela interrupta
 153811	Chrysomela lapponica_	species	Chrysomela lapponica
 63697	Chrysomela oleracea	species	Gonioctena olivacea
@@ -764,7 +766,6 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1075297	Clytra laeviscula_	species	Clytra laeviuscula
 1075297	Clytra laeviuscula_	species	Clytra laeviuscula
 1425548	Clytra quadripunctata_	species	Clytra quadripunctata
-2484307	Clytra succinata	species	Cleora subcincta
 284335	Colasposoma auripenne_	species	Colasposoma auripenne
 1592289	Conicobruchus indicus_	species	Conicobruchus indicus
 1654395	Coptocephala unifasciata_	species	Coptocephala unifasciata
@@ -1059,7 +1060,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopoma	homalopsis
+	Homaloplia	species	homalomyia	homalopsis	homalopoma
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1100,6 +1101,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
 icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
+466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata_	species	Isomira quadristriata
@@ -1353,7 +1355,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 649077	Tiedemannia neopolitana	species	Gleba cordata
 87838	Euhadra smaliae	species	Euhadra amaliae
 225461	Monacha cathusiana	species	Monacha cartusiana
-	Polygyra appressa	species	polygala adpressa	polygala depressa
+	Polygyra appressa	species	polygala depressa	polygala adpressa
 52793	Lymnaea nuricularia	species	Radix auricularia
 1076771	Stenostomum grandi	species	Stenostomum grande
 	Hymenolepidae	family	hymenolepididae	hymenoceridae
