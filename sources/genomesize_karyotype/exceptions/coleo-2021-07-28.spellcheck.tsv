@@ -10,13 +10,12 @@ taxon_id	input	rank	suggested
 1166940	Bembidion cribum	species	Sinechostictus cribrum
 2493287	Bembidion dahli	species	Sinechostictus dahlii
 	Bembidion fortutum	species	bembidion fortunatum
-1166747	Bembidion hasti	species	Bembidion hastii
 795071	Bembidion littorale	species	Bembidion litorale
 1944110	Bembidion operosum	species	Bembidion petrosum
 	Bembidion platum	species	bembidion planum
 1553803	Bembidion rivulare	species	Trechus rivularis
 1166858	Bembidion stephensi	species	Bembidion stephensii
-	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
+	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
 1944111	Bembidion yukonoum	species	Bembidion yukonum
 60828	Blethsia multipunctata	species	Blethisa multipunctata
 1343429	Calachroa sexpunctata	species	Cicindela sexpunctata
@@ -29,7 +28,6 @@ taxon_id	input	rank	suggested
 	Carabus pyreeus pyreeus	species	carabus pyrenaeus pyrenaeus
 109858	Chlaenius aestivus	species	Chlaenius vestitus
 2611518	Chlaenius laetiusculus	species	Chlaenius laeviusculus
-869531	Cicindela bigemi	species	Cylindera bigemina
 1587494	Cicindela silvicola	species	Cicindela sylvicola
 1343317	Cicindela trisigta	species	Cylindera trisignata
 170253	Colliuris pennsylvanica	species	Cosnania pensylvanica
@@ -61,6 +59,7 @@ taxon_id	input	rank	suggested
 60758	Platynus extensicolle	species	Agonum extensicolle
 1588200	Platynus longiventre	species	Limodromus longiventris
 1708812	Poecilus decipens	species	Agenioideus decipiens
+1708820	Poecilus nitidus	species	Evagetes nitidulus
 1470290	Pogonus meridiolis	species	Pogonus meridionalis
 2060222	Pterostichus ghiliani	species	Pterostichus ghilianii
 2850094	Pterostichus muehlfeldi	species	Pterostichus muehlfeldii
@@ -73,18 +72,16 @@ taxon_id	input	rank	suggested
 202587	Zabrus crassus	species	Labrus merula
 272045	Zabrus urbionensis	species	Zabrus urbionesis
 207462	Agabus sturmi	species	Agabus sturmii
-	Colymbetes adpressus	species	colymbetes impressus	corymbites impressus
+	Colymbetes adpressus	species	corymbites impressus	colymbetes impressus
 1368183	Colymbetes bipustulatus	species	Calambus bipustulatus
 1610039	Colymbetes lapponicus	species	Calambus japonicus
 156939	Deronectes wewalai	species	Deronectes wewalkai
-156950	Ilybius chalcotus	species	Ilybius chalconatus
 207480	Ilybius wasastjere	species	Ilybius wasastjernae
 1309509	Nebrioporus caliculatus	species	Nebrioporus canaliculatus
 224508	Stictotarsus bertandi	species	Stictotarsus bertrandi
 	Dineutes americanus	species	dineutus americanus	dineutus mexicanus
 1564125	Dineutes horni	species	Dineutus hornii
 1563984	Gyrinus uritor	species	Gyrinus urinator
-110017	Haliplus lamitus	species	Haliplus laminatus
 107854	Haliplus mucrotus	species	Haliplus mucronatus
 1553471	Haliplus sibricus	species	Haliplus sibiricus
 292448	Micromalthus deblis	species	Micromalthus debilis
@@ -160,7 +157,7 @@ taxon_id	input	rank	suggested
 380051	Chrysoli exanthematica	species	Chrysolina exanthematica
 75514	Chrysoli fastuosa	species	Chrysolina fastuosa
 75515	Chrysoli femoralis	species	Chrysolina femoralis
-	Chrysoli gemita	species	chrysolina geminata	chrysolina gemina
+	Chrysoli gemita	species	chrysolina gemina	chrysolina geminata
 	Chrysoli graminis	species	chrysolina graminis	chrysopa gracilis
 111538	Chrysoli grossa	species	Chrysolina grossa
 75519	Chrysoli haemoptera	species	Chrysolina haemoptera
@@ -298,6 +295,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2485418	Melanotus leordi	species	Melanotus leonardi
 1490104	Prosternon tesselatum	species	Prosternon tessellatum
 295533	Lichnthe rathvoni	species	Lichnanthe rathvoni
+39501	Anacaena lutescens 	species	Cordyline fruticosa
 1176499	Bicellonycha lividipennis	species	Bicellonychia lividipennis
 1710587	Photuris pennsylvanica	species	Photuris pensylvanica
 454443	Pyractome angulata	species	Pyractomena angulata
@@ -343,7 +341,6 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 166349	Onthophagus hirculus	species	Onthophagus hirtus
 422247	Onthophagus lucidus	species	Onthophagus rectecornutus
 1675891	Onthophagus verticornis	species	Onthophagus dama
-465150	Oryctes sicornis	species	Oryctes nasicornis
 465331	Phyllogthus dionysius	species	Phyllognathus dionysius
 296037	Phyllogthus silensis	species	Phyllanthus reticulatus
 1142444	Propomacrus bimucrotus	species	Propomacrus bimucronatus
@@ -371,8 +368,6 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 197344	Blaps mucrota	species	Blaps mucronata
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
-2005769	Gptor spinimanus	species	Gnaptor spinimanus
-466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata	species	Isomira quadristriata
