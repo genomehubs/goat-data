@@ -20,6 +20,10 @@ jobs:
       - get_dockers
     runs-on: self-hosted
     steps:
+      - name: Cleanup build folder
+        run: |
+          rm -rf ./* || true
+          rm -rf ./.??* || true
       - name: Get release name from date
         run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       - name: checkout first
@@ -182,7 +186,7 @@ jobs:
       - update_ncbi_ena_tolids
     runs-on:  self-hosted
     steps:
-
+    
       - name: Get bash release name
         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
