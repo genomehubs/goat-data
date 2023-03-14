@@ -17,8 +17,6 @@ taxon_id	input	rank
 126420	Acanthochitona crinita	species
 71285	Acanthodoris pilosa	species
 483950	Acanthosoma haemorrhoidale	species
-81343	Acarichthys heckelii	species
-74119	Acaronia nassa	species
 934820	Acasis viretata	species
 8957	Accipiter gentilis	species
 1666818	Acentria ephemerella	species
@@ -88,7 +86,6 @@ taxon_id	input	rank
 1511221	Aelia acuminata	species
 195873	Aeolidia papillosa	species
 2890202	Aeolosoma venustum	species
-2478851	Aequidens pallidus	species
 2268625	Aequorea vitrina	species
 43364	Aesculus hippocastanum	species
 197113	Aeshna juncea	species
@@ -412,7 +409,6 @@ taxon_id	input	rank
 1587043	Aphthona herbigrada	species
 2795268	Apiculatamorpha spiralis	species
 201764	Apion frumentarium	species
-2873648	Apistogramma sp. 'Cuieiras'	species
 2771288	Aplidium turbinatum	species
 934917	Aplocera efformata	species
 71498	Aplysia punctata	species
@@ -527,8 +523,6 @@ taxon_id	input	rank
 934920	Asthena albulata	species
 512688	Astragalus danicus	species
 83862	Astragalus glycyphyllos	species
-50733	Astronotus ocellatus	species
-2873649	Astronotus sp. 'Cuieiras'	species
 55651	Astropecten irregularis	species
 223987	Asymmetron lucayanum	species
 555450	Atelecyclus rotundatus	species
@@ -575,7 +569,6 @@ taxon_id	input	rank
 237398	Aurelia sp. 3 sensu Dawson et al. (2005)	species
 2790877	Aurelia sp. 4 Dawson et al 2005	species
 388837	Aureoboletus gentilis	species
-2562561	Australoheros barbosae	species
 2998518	Austrolimnophila ochracea	species
 1732093	Austrominius modestus	species
 254363	Autographa gamma	species
@@ -661,7 +654,6 @@ taxon_id	input	rank
 2866284	Bimastos rubidus	species
 6526	Biomphalaria glabrata	species
 75178	Biorhiza pallida	species
-284691	Biotodoma cupido	species
 197003	Biphyllus lunatus	species
 2930579	Bispira polyomma	species
 82595	Biston betularia	species
@@ -747,6 +739,9 @@ taxon_id	input	rank
 305562	Braula coeca	species
 1588651	Braunia imberbis	species
 203204	Breutelia chrysocoma	species
+331288	Brevioleria aelia	species
+331309	Brevioleria arzalia	species
+471023	Brevioleria seba	species
 2518962	Breviolum psygmophilum	species
 2813484	Breviolum sp. 1 TL-2021	species
 86543	Briareum asbestinum	species
@@ -1000,8 +995,6 @@ taxon_id	input	rank
 307131	Ceutorhynchus obstrictus	species
 105913	Chaenorhinum minus	species
 105274	Chaerophyllum temulum	species
-74108	Chaetobranchopsis orbicularis	species
-74106	Chaetobranchus flavescens	species
 230516	Chaetoceros curvisetus	species
 122233	Chaetoceros debilis	species
 2923476	Chaetoceros sp. PLY 617	species
@@ -1125,10 +1118,6 @@ taxon_id	input	rank
 2998524	Cicadula persimilis	species
 75961	Cicerbita alpina	species
 75960	Cicerbita muralis	species
-81334	Cichla monoculus	species
-74115	Cichlasoma amazonarum	species
-113515	Cichlasoma bimaculatum	species
-81336	Cichla temensis	species
 13427	Cichorium intybus	species
 1235707	Cilea silphoides	species
 348443	Ciliata mustela	species
@@ -1318,12 +1307,6 @@ taxon_id	input	rank
 1830361	Cratichneumon culex	species
 2881774	Cratichneumon versator	species
 99398	Cratoneuron filicinum	species
-762754	Crenicichla lenticulata	species
-81337	Crenicichla lugubris	species
-745333	Crenicichla macrophthalma	species
-1077074	Crenicichla marmorata	species
-745337	Crenicichla notophthalmus	species
-2873785	Crenicichla sp. 'Catalao'	species
 699426	Crenosoma striatum	species
 200911	Crepidodera aurata	species
 346762	Crepidodera aurea	species
@@ -2056,7 +2039,6 @@ taxon_id	input	rank
 722665	Geometra papilionaria	species
 2955227	Geomonhystera antarcticola	species
 500269	Geomyza tripunctata	species
-284751	Geophagus dicrozoster	species
 173286	Geophilus easoni	species
 173287	Geophilus insculptus	species
 295525	Geotrupes spiniger	species
@@ -2155,8 +2137,6 @@ taxon_id	input	rank
 983334	Gymnocarpium robertianum	species
 631317	Gymnocheta viridis	species
 2848972	Gymnodinium sp. CCAP1117/9	species
-81349	Gymnogeophagus labiatus	species
-284720	Gymnogeophagus rhabdotus	species
 38545	Gymnogongrus crenulatus	species
 1527723	Gymnomitrion obtusum	species
 231916	Gymnopilus dilepis	species
@@ -2236,6 +2216,7 @@ taxon_id	input	rank
 33432	Heliconius eleuchia	species
 33419	Heliconius numata	species
 33433	Heliconius sapho	species
+33443	Heliconius sara	species
 49770	Helictochloa pratensis	species
 6339	Heligmosomoides polygyrus	species
 559645	Helina celsa	species
@@ -2279,8 +2260,6 @@ taxon_id	input	rank
 987440	Herminia tarsipennalis	species
 259844	Hermodice carunculata	species
 1572678	Herniaria ciliolata	species
-745802	Heros efasciatus	species
-2873647	Heros notatus	species
 2742795	Herpetocypris reptans	species
 359165	Hesiolyra bergi	species
 291688	Hesperia comma	species
@@ -2413,10 +2392,17 @@ taxon_id	input	rank
 58656	Hypochaeris radicata	species
 439567	Hypomecis punctinalis	species
 1908648	Hypomenitis libethris	species
+304521	Hyposcada anchiala	species
+344647	Hyposcada illinissa	species
+345027	Hyposcada kena	species
 2884228	Hyposoter dolosus	species
+331318	Hypothyris anastasia	species
+331295	Hypothyris euclea	species
+331320	Hypothyris fluonia	species
+471053	Hypothyris mamercus	species
+471055	Hypothyris moebiusi	species
 286325	Hypotrachyna taylorensis	species
 987961	Hyppa rectilinea	species
-172532	Hypselecara temporalis	species
 2883152	Hypsibius sp. PL.016	species
 1101110	Hypsopygia costalis	species
 1101111	Hypsopygia glaucinalis	species
@@ -2907,6 +2893,7 @@ taxon_id	input	rank
 561864	Mayorella gemmifera	species
 51056	Meandrina meandrites	species
 471061	Mechanitis mazaeus	species
+651059	Mechanitis menapis	species
 2578229	Mechanitis messenoides	species
 127245	Mechanitis polymnia	species
 1342047	Mecinus circulatus	species
@@ -2944,9 +2931,10 @@ taxon_id	input	rank
 9662	Meles meles	species
 29686	Melica uniflora	species
 878143	Meligethes incanus	species
+331327	Melinaea isocomma	species
 331329	Melinaea ludovica	species
-331299	Melinaea marsaeus	species
 304554	Melinaea menophilus	species
+331331	Melinaea mothone	species
 2163047	Melinda gentilis	species
 170908	Melinda viridicyanea	species
 27393	Melinna palmata	species
@@ -2975,7 +2963,6 @@ taxon_id	input	rank
 2795681	Merzomyia westermanni	species
 116148	Mesembrina meridiana	species
 997551	Mesoligia furuncula	species
-350777	Mesonauta festivus	species
 2558907	Mesonerilla armoricana	species
 2704366	Mesonerilla cf. luederitzi kw247	species
 2937986	Mesoniscus graniger	species
@@ -3341,8 +3328,15 @@ taxon_id	input	rank
 52485	Oenanthe pimpinelloides	species
 231370	Oerstedia dorsalis	species
 188229	Olavius algarvensis	species
+345037	Oleria amalda	species
+304527	Oleria assimilis	species
 345047	Oleria estella	species
+304557	Oleria gunilla	species
 331350	Oleria ilerdina	species
+304530	Oleria onega	species
+471079	Oleria sexmaculata	species
+672573	Oleria tigilla	species
+345062	Oleria zelica	species
 878168	Olibrus affinis	species
 1588290	Olibrus corticalis	species
 1870138	Oligia fasciuncula	species
@@ -4041,7 +4035,6 @@ taxon_id	input	rank
 1607761	Pterogorgia guadalupensis	species
 77548	Pteromonas angulosa	species
 1572507	Pterophorus pentadactyla	species
-74131	Pterophyllum scalare	species
 884089	Pterosiphonia complanata	species
 767470	Pterostichus madidus	species
 346836	Pterostichus minor	species
@@ -4302,8 +4295,6 @@ taxon_id	input	rank
 294397	Sarmentypnum sarmentosum	species
 2888325	Sarocladium junci	species
 45176	Sarracenia purpurea	species
-81341	Satanoperca jurupari	species
-745803	Satanoperca lilith	species
 1150272	Satchellius mammalis	species
 332931	Saturnia pavonia	species
 876055	Satyrium w-album	species
@@ -4664,7 +4655,6 @@ taxon_id	input	rank
 197176	Sympetrum sanguineum	species
 6969	Sympetrum striolatum	species
 171736	Symphodus melops	species
-306559	Symphysodon discus	species
 278672	Symphytum officinale	species
 256504	Symphytum tuberosum	species
 108804	Sympiesis sericeicornis	species
@@ -4926,7 +4916,6 @@ taxon_id	input	rank
 4733	Typha latifolia	species
 179666	Tyria jacobaeae	species
 347477	Tytthaspis sedecimpunctata	species
-74137	Uaru amphiacanthoides	species
 1002954	Udea ferrugalis	species
 1002971	Udea olivalis	species
 1002972	Udea prunalis	species
