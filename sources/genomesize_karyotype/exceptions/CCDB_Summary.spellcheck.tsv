@@ -44,7 +44,7 @@ taxon_id	input	rank	suggested
 710017	Ageratina brevipes	species	Ceratina breviceps
 58936	Agropyron dasyanthum	species	Eremopyrum distans
 282262	Agrostis atlantica	species	Noctua atlantica
-	Agrostis densiflora	species	eragrostis tenuiflora	agrostis tenuiflora	eragrostis densiflora
+	Agrostis densiflora	species	eragrostis tenuiflora	agrostis tenuiflora
 165094	Agrostis infirma	species	Poa infirma
 1685705	Agrostis juressii	species	Linkagrostis juressi
 751652	Agrostis parviflora	species	Eragrostis parviflora
@@ -211,7 +211,7 @@ taxon_id	input	rank	suggested
 655497	Calligonum gracile	species	Calligonum molle
 255005	Calochortus invenustus	species	Calochortus venustus
 254966	Calochortus longibarbatus	species	Calochortus longebarbatus
-1504408	Camellia × maliflora	species	Dillenia excelsa
+	Camellia × maliflora	species	capellia multiflora	carallia multiflora
 361373	Campanula bechiana	species	Campanula beckiana
 239422	Campanula postii	species	Campanula rotundifolia
 2770813	Cancrinia maximowiczi	species	Cancrinia maximowiczii
@@ -248,7 +248,6 @@ taxon_id	input	rank	suggested
 1486530	Centaurea incompta	species	Centaurea incompleta
 1436104	Centaurea janerii	species	Centaurea janeri
 145511	Centaurea prolongoi	species	Centaurea prolongi
-363423	Centaurea reflexa	species	Centaurea deflexa
 146595	Centaurea simplicaulis	species	Psephellus bellus
 1048535	Centaurea ustulata	species	Centaurea cuneifolia
 1042300	Centaurea × moncktonii	species	Centaurea x moncktonii
@@ -262,7 +261,7 @@ taxon_id	input	rank	suggested
 2848426	Chorizema ericifolium	species	Chorizema ilicifolium
 1721061	Chrysanthellum americanum	species	Oncosiphon africanus
 191239	Chrysocoma longifolia	species	Chrysocoma ciliata
-	Cinnamomum curvifolium	species	cinnamomum parvifolium	cinnamomum cordifolium
+	Cinnamomum curvifolium	species	cinnamomum cordifolium	cinnamomum parvifolium
 	Cirsium albescens	species	cardium pubescens	cardium rubescens
 2872291	Cirsium congestissimum	species	Cirsium confertissimum
 1338473	Cirsium flavispinum	species	Cirsium pyrenaicum
@@ -433,7 +432,6 @@ ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
 375857	Festuca degenii	species	Scolochloa festucacea
 2056070	Festuca dinirica	species	Festuca sibirica
 2056049	Festuca eggleri	species	Festuca engleri
-98750	Festuca guestfalica	species	Festuca ovina
 	Festuca parciflora	species	festuca pauciflora	festuca parviflora
 464081	Festuca subulifolia	species	Festuca subuliflora
 	Ficus odorata	species	ficus obovata	ficus moderata
@@ -668,7 +666,7 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 253195	Pelargonium rubignosum	species	Pelargonium sublignosum
 2023259	Pelargonium sidifolium	species	Pelargonium filifolium
 163050	Pelargonium trifoliolatum	species	Pelargonium ternifolium
-	Pelargonium viciifolium	species	pelargonium siccifolium	pelargonium variifolium
+	Pelargonium viciifolium	species	pelargonium variifolium	pelargonium siccifolium
 4031	Pelargonium × hortorum	species	Pelargonium x hortorum
 257004	Pennisetum distachyum	species	Cenchrus tristachyus
 584874	Pennisetum trisetum	species	Cenchrus unisetus
@@ -778,10 +776,10 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 2976804	Senecio conzattii	species	Senecio conrathii
 98721	Senecio cremnophilus	species	Senecio eremophilus
 	Senecio doratophyllus	species	senecio ceratophyllus
-	Senecio dryophyllus	species	senecio caryophyllus	senecio eriophyllus
+	Senecio dryophyllus	species	senecio eriophyllus	senecio caryophyllus
 1268578	Senecio gerrardii	species	Senecio provincialis
 	Senecio hydrophilus	species	senecio hygrophilus
-	Senecio laricifolius	species	senecio caricifolius	senecio myricifolius	senecio lancifolius
+	Senecio laricifolius	species	senecio caricifolius	senecio lancifolius
 1346282	Senecio lorentzii	species	Iranecio lorentii
 34225	Senecio powellii	species	Packera cana
 422353	Senecio rapifolius	species	Senecio latifolius
@@ -846,7 +844,6 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 90025	Taraxacum cordatum	species	Taraxacum coronatum
 90052	Taraxacum crassum	species	Taraxacum serotinum
 	Taraxacum crocellum	species	taraxacum croceum
-90054	Taraxacum dentatum	species	Taraxacum sonchoides
 669847	Taraxacum eriopodum	species	Taraxacum ceratophorum
 1204311	Taraxacum euranum	species	Taraxacum antungense
 2835584	Taraxacum exiguum	species	Taraxacum eximium
