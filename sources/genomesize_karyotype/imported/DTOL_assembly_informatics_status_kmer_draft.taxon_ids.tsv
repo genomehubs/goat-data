@@ -1,12 +1,12 @@
 taxon_id	input	rank
+298138	Platypus cylindrus	species
+2881975	Eustalomyia histrio	species
 249532	Icerya purchasi	species
+1091424	Melanostigma gelatinosum	species
 226178	Baccha elongata	species
 6116	Metridium senile	species
 478167	Anthophora plumipes	species
-298138	Platypus cylindrus	species
 289389	Aplysina aerophoba	species
-1091424	Melanostigma gelatinosum	species
-2881975	Eustalomyia histrio	species
 92598	Melanostoma scalare	species
 938182	Callimorpha dominula	species
 875924	Hoplodrina ambigua	species
@@ -177,6 +177,9 @@ taxon_id	input	rank
 987425	Eurois occulta	species
 75519	Chrysolina haemoptera	species
 9767	Balaenoptera acutorostrata	species
+9737	Stenella coeruleoalba	species
+2866285	Mesopsocus fuscifrons	species
+215162	Agrotis exclamationis	species
 336583	Amaurobius ferox	species
 169445	Dryomyza anilis	species
 108914	Gerris lacustris	species
@@ -184,13 +187,10 @@ taxon_id	input	rank
 55777	Bromus sterilis	species
 170843	Planococcus citri	species
 27610	Lagenorhynchus albirostris	species
-9737	Stenella coeruleoalba	species
 9728	Delphinus delphis	species
 9365	Erinaceus europaeus	species
 146480	Ammodytes marinus	species
 2882575	Pedicia rivosa	species
-2866285	Mesopsocus fuscifrons	species
-215162	Agrotis exclamationis	species
 70131	Climacium dendroides	species
 2867249	Amblyjoppa fuscipennis	species
 2884233	Ophion confusus	species
@@ -201,6 +201,10 @@ taxon_id	input	rank
 88504	Lasioglossum calceatum	species
 988009	Oligia strigilis	species
 258209	Berberis vulgaris	species
+877886	Cantharis lateralis	species
+1858070	Scrobipalpa costella	species
+1002954	Udea ferrugalis	species
+988043	Xestia ashworthii	species
 310442	Cyclophora punctaria	species
 2567736	Yponomeuta cagnagella	species
 2567738	Yponomeuta padella	species
@@ -324,10 +328,6 @@ taxon_id	input	rank
 57933	Potentilla reptans	species
 398450	Lepidium didymum	species
 3580	Cerastium glomeratum	species
-877886	Cantharis lateralis	species
-1858070	Scrobipalpa costella	species
-1002954	Udea ferrugalis	species
-988043	Xestia ashworthii	species
 2776077	Paraperithous gnathaulax	species
 1667470	Apechthis compunctor	species
 1045598	Dyspetes luteomarginatus	species
@@ -343,6 +343,8 @@ taxon_id	input	rank
 400014	Coincya wrightii	species
 46056	Bellardia viscosa	species
 2777158	Steromphala umbilicalis	species
+154017	Plagiodera versicolora	species
+880653	Atriplex glabriuscula	species
 322843	Didemnum molle	species
 2961	Amphidinium carterae	species
 50207	Sonchus oleraceus	species
@@ -350,7 +352,6 @@ taxon_id	input	rank
 219664	Facelina auriculata	species
 1676545	Coryphella gracilis	species
 2773495	Lomanotus genei	species
-128161	Teleogryllus oceanicus	species
 1507109	Cerceris arenaria	species
 90069	Solea solea	species
 196075	Sprattus sprattus	species
@@ -547,7 +548,6 @@ taxon_id	input	rank
 96050	Phalaris arundinacea	species
 94722	Cerastoderma glaucum	species
 55634	Dioscorea communis	species
-880653	Atriplex glabriuscula	species
 160511	Veronica officinalis	species
 1545100	Closterotomus norwegicus	species
 192233	Pisidium subtruncatum	species
