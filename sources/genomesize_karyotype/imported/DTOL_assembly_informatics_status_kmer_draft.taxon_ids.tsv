@@ -1,16 +1,20 @@
 taxon_id	input	rank
-298138	Platypus cylindrus	species
-2881975	Eustalomyia histrio	species
+92598	Melanostoma scalare	species
+938182	Callimorpha dominula	species
+151304	Dendrolimus pini	species
+2484550	Empis stercorea	species
+283834	Deilephila elpenor	species
+2823188	Conops quadrifasciatus	species
+6398	Lumbricus terrestris	species
+48744	Hyperoodon ampullatus	species
 249532	Icerya purchasi	species
-1091424	Melanostigma gelatinosum	species
+289389	Aplysina aerophoba	species
+2886755	Protula sp. h YS-2021	species
 226178	Baccha elongata	species
 6116	Metridium senile	species
 478167	Anthophora plumipes	species
-289389	Aplysina aerophoba	species
-92598	Melanostoma scalare	species
-938182	Callimorpha dominula	species
 875924	Hoplodrina ambigua	species
-2886755	Protula sp. h YS-2021	species
+97021	Trifolium dubium	species
 1387116	Dicyrtomina minuta	species
 3213	Polytrichum commune	species
 2578229	Mechanitis messenoides	species
@@ -72,7 +76,6 @@ taxon_id	input	rank
 468752	Leptogaster cylindrica	species
 199064	Phyllonorycter quercifoliella	species
 100830	Tetrao urogallus	species
-2484550	Empis stercorea	species
 285223	Dascillus cervinus	species
 50603	Panorpa germanica	species
 3501	Urtica dioica	species
@@ -90,7 +93,6 @@ taxon_id	input	rank
 1301332	Flavoplaca marina	species
 75506	Chrysolina americana	species
 248243	Siphlonurus alternatus	species
-2823188	Conops quadrifasciatus	species
 594017	Sphenella marginata	species
 362106	Phymatocera aterrima	species
 601849	Nomada ruficornis	species
@@ -131,7 +133,6 @@ taxon_id	input	rank
 572725	Argyresthia goedartella	species
 601583	Nomada hirtipes	species
 105251	Taphrorychus bicolor	species
-283834	Deilephila elpenor	species
 878397	Pycnomerus fuliginosus	species
 72669	Antedon bifida	species
 876078	Thymelicus acteon	species
@@ -140,7 +141,6 @@ taxon_id	input	rank
 7373	Calliphora vicina	species
 473354	Borostomias antarcticus	species
 908347	Volvariella surrecta	species
-6398	Lumbricus terrestris	species
 2723838	Luidia sarsii	species
 431183	Corella eumyota	species
 446452	Odontocerum albicorne	species
@@ -150,10 +150,8 @@ taxon_id	input	rank
 247442	Harpalus rufipes	species
 327083	Dolichopus griseipennis	species
 446415	Argentina silus	species
-97021	Trifolium dubium	species
 307131	Ceutorhynchus obstrictus	species
 269649	Chionomys nivalis	species
-48744	Hyperoodon ampullatus	species
 197176	Sympetrum sanguineum	species
 264083	Clavaria fumosa	species
 65311	Diplazon laetatorius	species
@@ -172,7 +170,6 @@ taxon_id	input	rank
 2922075	Rhorus exstirpatorius	species
 1824988	Tricholauxania praeusta	species
 1553174	Cantharis nigra	species
-151304	Dendrolimus pini	species
 987923	Diarsia brunnea	species
 987425	Eurois occulta	species
 75519	Chrysolina haemoptera	species
@@ -180,31 +177,32 @@ taxon_id	input	rank
 9737	Stenella coeruleoalba	species
 2866285	Mesopsocus fuscifrons	species
 215162	Agrotis exclamationis	species
+2867249	Amblyjoppa fuscipennis	species
+2884233	Ophion confusus	species
+27610	Lagenorhynchus albirostris	species
 336583	Amaurobius ferox	species
 169445	Dryomyza anilis	species
 108914	Gerris lacustris	species
 333879	Denticollis linearis	species
 55777	Bromus sterilis	species
 170843	Planococcus citri	species
-27610	Lagenorhynchus albirostris	species
 9728	Delphinus delphis	species
 9365	Erinaceus europaeus	species
 146480	Ammodytes marinus	species
 2882575	Pedicia rivosa	species
 70131	Climacium dendroides	species
-2867249	Amblyjoppa fuscipennis	species
-2884233	Ophion confusus	species
+988009	Oligia strigilis	species
 418785	Entoloma clypeatum	species
 2741129	Tipula vernalis	species
 3900	Trifolium subterraneum	species
 271774	Alentia gelatinosa	species
 88504	Lasioglossum calceatum	species
-988009	Oligia strigilis	species
 258209	Berberis vulgaris	species
 877886	Cantharis lateralis	species
 1858070	Scrobipalpa costella	species
 1002954	Udea ferrugalis	species
 988043	Xestia ashworthii	species
+346868	Uleiota planata	species
 310442	Cyclophora punctaria	species
 2567736	Yponomeuta cagnagella	species
 2567738	Yponomeuta padella	species
@@ -230,7 +228,6 @@ taxon_id	input	rank
 601640	Nomada lathburiana	species
 1905387	Amblyjoppa proteus	species
 2881813	Cylloceria caligata	species
-346868	Uleiota planata	species
 1779456	Tricholoma hemisulphureum	species
 82525	Tausonia pullulans	species
 2054275	Durinskia oculata	species
@@ -325,6 +322,7 @@ taxon_id	input	rank
 148596	Falco punctatus	species
 88708	Poromitra crassiceps	species
 47085	Medicago lupulina	species
+1090481	Gymnoscopelus microlampas	species
 57933	Potentilla reptans	species
 398450	Lepidium didymum	species
 3580	Cerastium glomeratum	species
@@ -384,6 +382,7 @@ taxon_id	input	rank
 91661	Eunapius fragilis	species
 281041	Ircinia ramosa	species
 121492	Corticium candelabrum	species
+1917265	Pseudodiploria clivosa	species
 72671	Axinella damicornis	species
 2705341	Freudenthalidium endolithicum	species
 2952	Symbiodinium pilosum	species
@@ -393,7 +392,6 @@ taxon_id	input	rank
 1128088	Trididemnum miniatum	species
 641091	Trididemnum clinides	species
 644239	Trididemnum nubilum	species
-1917265	Pseudodiploria clivosa	species
 1009717	Sycon coactum	species
 472225	Rhabdocalyptus dawsoni	species
 67444	Thamnobryum alopecurum	species
