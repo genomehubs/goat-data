@@ -1,7 +1,7 @@
 taxon_id	input	rank	suggested
 105628	Aethopyga magnifica	species	Astropyga magnifica
 	Psophodidae	family	psychodidae	psophiidae
-77654	Viduidae	family	Sididae
+	Viduidae	family	sididae	mideidae
 8845	Anser cygnoid	species	Anser cygnoides
 	Remizidae	family	neminidae	zemiridae
 1246550	Aphrastura masafucrae	species	Aphrastura masafuerae
@@ -12,7 +12,7 @@ taxon_id	input	rank	suggested
 72210	Calendulauda erythrochlamys	species	Calendulauda erythroclamys
 63910	Calyptomenidae	family	Clambidae
 	Troglodytidae	family	troglodytinae
-	Eupetidae	family	eupodidae	eupelmidae	euretidae
+	Eupetidae	family	eupodidae	eupelmidae	cupedidae
 	Chionidae	family	clionidae	chitonidae	chronidae
 	Pipromorphidae	family	copromorphidae	mitromorphidae
 9145	Corcorax melanoramphos	species	Corcorax melanorhamphos
@@ -27,7 +27,7 @@ taxon_id	input	rank	suggested
 39106	Glaucidium palmarum	species	Glaucidium palmatum
 	Grallariidae	family	gracillariidae	galleriidae
 9118	Grus carunculata	species	Grus carunculatus
-	Ifritidae	family	figitidae	neritidae
+	Ifritidae	family	figitidae	neritidae	poritidae
 	Tityridae	family	mitridae	sisyridae	mictyridae
 721887	Lanius borealis	species	Lanius dorsalis
 33589	Leptoptilos crumenifer	species	Leptoptilos crumeniferus
@@ -45,7 +45,6 @@ taxon_id	input	rank	suggested
 1226242	Piezorina cinerea	species	Piezorhina cinerea
 	Pipritidae	family	poritidae	pipridae	porpitidae
 30850	Pluvianidae	family	Lutjanidae
-198685	Pomarea fluxa	species	Bomarea boliviensis
 	Prunellidae	family	pennellidae	paronellidae	plutellidae
 329508	Pseudocolaptes boissonneauii	species	Pseudocolaptes boissonneautii
 583363	Ptiliogonys caudatus	species	Ptilogonys caudatus
@@ -71,5 +70,5 @@ taxon_id	input	rank	suggested
 	Ceratopipra erythocephala	species	ceratopipra erythrocephala
 1094390	Certhiasomus stictolaema	species	Certhiasomus stictolaemus
 	Tickellia	species	brickellia	mickelia
-	Rhamphocorys	species	ramphocoris	rhamphocoris
+	Rhamphocorys	species	rhamphocoris	ramphocoris
 62234	Phaenicophilus palmarun	species	Phaenicophilus palmarum
