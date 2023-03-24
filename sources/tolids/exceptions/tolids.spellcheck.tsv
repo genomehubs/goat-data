@@ -276,7 +276,7 @@ taxon_id	input	rank	suggested
 1196199	Lachnum rehmii	species	Parablechnum cordatum
 393584	Lachnum roridum	species	Blechnum punctulatum
 1507911	Llimoniella fuscatae	species	Rhymbocarpus fuscoatrae
-	Micropodia	genus	macropodia	microxydia	microgovia
+	Micropodia	genus	macropodia	microxydia
 2055183	Mollisia tigri	species	Mollisia ligni
 2321203	Niptera lacustris	species	Mollisia palustris
 	Oidium chartarum	species	oncidium chartarum
@@ -435,6 +435,7 @@ taxon_id	input	rank	suggested
 1734866	Catocala coniuncta	species	Catocala conjuncta
 2561110	Coleophora adjectella	species	Coleophora adjunctella
 2561217	Dichrorampha senectana	species	Dichrorampha plumbana
+1256319	Earias biplaga	species	Earias uniplaga
 987419	Eilema depressa	species	Eilema depressum
 987421	Eilema lurideola	species	Eilema lurideolum
 687084	Elachista geminatella	species	Chrysoclista linneella
@@ -637,7 +638,6 @@ taxon_id	input	rank	suggested
 1521732	Halochlorococcum dilitatum	species	Halochlorococcum dilatatum
 1461598	Lobocystis planctonica	species	Chlamydocapsa planctonica
 321588	Oedogonium crassum	species	Oedogonium crispum
-337027	Oedogonium macrosporum	species	Oedogonium acrosporum
 415189	Oocystis apicurvata	species	Oocystis apiculata
 1207352	Tetrastrum staurogeniaeforme	species	Tetrastrum staurogeniiforme
 43941	Ulothrix aequalis	species	Ulothrix zonata
@@ -863,7 +863,7 @@ taxon_id	input	rank	suggested
 1321702	Dinarda maerkeli	species	Dinarda maerkelii
 878188	Ochthephilum jacquelini	species	Ochthephilum jacquelinii
 	Quedius assimilis	species	bledius dissimilis	quercus assimilis
-	Velleius	genus	bellerus	vellodius
+108629	Velleius	genus	Bellerus
 607022	Mycetophila occultans	species	Mycetophylax occultus
 2890663	Phronia forcipula	species	Phronia forcipata
 253432	Phronia signata	species	Phaonia tuguriorum
@@ -920,7 +920,7 @@ taxon_id	input	rank	suggested
 1567043	Elachertus gallicus	species	Hyssopus pallidus
 2931509	Aprostocetus femoralis	species	Tetrastichus temporalis
 1566858	Eupelmus martelli	species	Eupelmus martellii
-	Mangoma	genus	maniola	mangora
+	Mangoma	genus	maniola	langona
 634056	Alaptus antennatus	species	Araptus attenuatus
 316456	Anagrus similis	species	Anabrus simplex
 2921236	Gastrancistrus flavicornis	species	Gastrancistrus fulvicornis
@@ -947,7 +947,6 @@ taxon_id	input	rank	suggested
 54539	Trichomma intermedium	species	Tricholoma intermedium
 1667496	Eriborus dorsalis	species	Dolichomitus terebrans
 2651462	Olesicampe binotata	species	Cycasis rubiginosa
-904094	Cryptus minator	species	Ischnus inquisitorius
 1550550	Gambrus ornatus	species	Parthenope longimanus
 1045616	Mesoleptidea stallii	species	Mesoleptidea stalii
 605254	Campodorus flavescens	species	Camponotus flavescens
@@ -1004,7 +1003,7 @@ taxon_id	input	rank	suggested
 1514137	Rhizosolenia stolterforthii	species	Guinardia striata
 	Amphora coffeaefomis	species	amphora coffeaeformis
 83371	Detonula confervacaea	species	Detonula confervacea
-63969	Coscinosira	genus	Coscinocera
+	Coscinosira	genus	coscinocera	coscinospira
 655750	Plagiogramma brockmanni	species	Brockmanniella brockmannii
 	Eupodiscus	genus	hypodiscus	herpodiscus
 88167	Poteriochromonas malhamensis	species	Poterioochromonas malhamensis
@@ -1035,7 +1034,7 @@ taxon_id	input	rank	suggested
 2184021	Loxospora christinae	species	Loxospora cristinae
 746836	Hymenoscyphus fagineus	species	Hymenoscyphus fraxineus
 253098	Hymenoscyphus immutablis	species	Hymenoscyphus immutabilis
-	Pithyella	genus	pachyella	bithynella
+	Pithyella	genus	pachyella	bithynella	patsyella
 397617	Lachnum brevipilum	species	Lachnum brevipilosum
 1244010	Lachnum salicis	species	Cinara laricis
 	Phacidium pusillum	species	placodium pusillum
@@ -1064,6 +1063,7 @@ taxon_id	input	rank	suggested
 	Agaricus fulvosus	species	agaricus bulbosus
 93828	Agaricus fuscipes	species	Gymnopus fusipes
 	Agaricus gramineus	species	agaricus stramineus
+1843309	Agaricus graveolens	species	Agaricus gratolens
 	Agaricus lateoalbus	species	agaricus luteoalbus
 	Agaricus latus	species	agaricus elatus	agaricus laetus
 181745	Agaricus ligatus	species	Phaeomarasmius erinaceus
@@ -1109,6 +1109,7 @@ taxon_id	input	rank	suggested
 985011	Boletus alneus	species	Dolerus aeneus
 1350006	Boletus fagineus	species	Perenniporia fraxinea
 196228	Boletus fuligineus	species	Ischnoderma resinosum
+119080	Boletus radicatus	species	Mensularia radiata
 71150	Paxillus revolutus	species	Paxillus involutus
 	Hydnum lutescens	species	hypnum pubescens	hypnum lutescens
 319549	Hydnum molle	species	Platyhypnum molle
