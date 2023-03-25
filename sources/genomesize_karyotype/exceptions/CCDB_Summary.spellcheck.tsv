@@ -44,7 +44,7 @@ taxon_id	input	rank	suggested
 710017	Ageratina brevipes	species	Ceratina breviceps
 58936	Agropyron dasyanthum	species	Eremopyrum distans
 282262	Agrostis atlantica	species	Noctua atlantica
-	Agrostis densiflora	species	eragrostis tenuiflora	agrostis tenuiflora
+	Agrostis densiflora	species	eragrostis tenuiflora	agrostis tenuiflora	eragrostis densiflora
 165094	Agrostis infirma	species	Poa infirma
 1685705	Agrostis juressii	species	Linkagrostis juressi
 751652	Agrostis parviflora	species	Eragrostis parviflora
@@ -180,6 +180,7 @@ taxon_id	input	rank	suggested
 315920	Brachyscome oncocarpa	species	Brachyscome goniocarpa
 315927	Brachyscome radicata	species	Brachyscome radicans
 1550871	Brickellia veronicaefolia	species	Brickellia veronicifolia
+55769	Bromus bonariensis	species	Bromus lanceolatus
 1979679	Bufonia macrocarpa	species	Begonia macrocarpa
 426864	Bulbophyllum bisetum	species	Bulbophyllum longiflorum
 1463550	Bulbophyllum cornutum	species	Bulbophyllum ecornutum
@@ -403,7 +404,6 @@ taxon_id	input	rank	suggested
 337344	Erodium microphyllum	species	California macrophylla
 337393	Erodium moureti	species	Erodium mouretii
 ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
-393521	Eryngium falcatum	species	Eryngium palmatum
 477885	Eryngium luzulifolium	species	Eryngium luzulaefolium
 1370084	Erysimum adcumbens	species	Erysimum ochroleucum
 1492194	Erysimum altaicum	species	Erysimum alaicum
@@ -468,7 +468,7 @@ ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
 2732730	Helenium scorzoneraefolium	species	Helenium scorzonerifolium
 1442666	Helichrysum oocephalum	species	Helichrysum herbaceum
 590136	Helictotrichon × krischae	species	Helictotrichon x krischae
-	Heliotropium leiocarpum	species	heliotropium lasiocarpum	heliotropium eriocarpum
+203738	Heliotropium leiocarpum	species	Heliotropium lasiocarpum
 171899	Helleborus bocconei	species	Helleborus purpurascens
 1406308	Helleborus ×hybridus	species	Helleborus x hybridus
 1891368	Helleborus ×nigercors	species	Helleborus x nigercors
@@ -568,6 +568,7 @@ dcLimTran	Limonium transwallisnum	species	Limonium transwallianum
 374417	Lysichitum americanum	species	Lysichiton americanus
 502323	Lythrum baeticum	species	Pythium sp. balticum
 	Machaerium mucronulatum	species	machaerium mucronatum
+1304318	Madia anomala	species	Xanthocercis madagascariensis
 86734	Magnolia pleiocarpa	species	Magnolia pterocarpa
 569831	Majidea forsteri	species	Majidea fosteri
 288286	Malva subovata	species	Malvastrum americanum
@@ -739,6 +740,7 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 74647	Rosa watsoniana	species	Rosa multiflora
 655866	Rubus echinatus	species	Rubus rudis
 2527792	Rubus schnedleri	species	Rubus missouricus
+drRubMile	Rubus silesiacus	species	Rubus milesianus
 1234504	Rumex hesperius	species	Rumex salicifolius
 120877	Rumex rossicus	species	Ochlerotatus rusticus
 500263	Rytidosperma telematicum	species	Rytidosperma telmaticum
@@ -891,7 +893,7 @@ daVerEleg	Verbesina elegans	species	Verbena elegans
 1483385	Vernonia jucunda	species	Veronica michauxii
 434702	Vernonia lindheimeri	species	Vernonia lindheimerii
 99384	Vernonia pulchella	species	Veronica agrestis
-	Vernonia pusilla	species	veronica pusilla
+	Vernonia pusilla	species	veronica pusilla	vernonia pumilla
 557651	Veronica mannii	species	Inula mannii
 153962	Vicia bijuga	species	Vicia unijuga
 	Vicia macrantha	species	vicia micrantha
