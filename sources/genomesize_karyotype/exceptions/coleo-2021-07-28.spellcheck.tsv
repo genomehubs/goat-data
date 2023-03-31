@@ -10,6 +10,7 @@ taxon_id	input	rank	suggested
 1166940	Bembidion cribum	species	Sinechostictus cribrum
 2493287	Bembidion dahli	species	Sinechostictus dahlii
 	Bembidion fortutum	species	bembidion fortunatum
+1166747	Bembidion hasti	species	Bembidion hastii
 795071	Bembidion littorale	species	Bembidion litorale
 1944110	Bembidion operosum	species	Bembidion petrosum
 	Bembidion platum	species	bembidion planum
@@ -60,7 +61,6 @@ taxon_id	input	rank	suggested
 60758	Platynus extensicolle	species	Agonum extensicolle
 1588200	Platynus longiventre	species	Limodromus longiventris
 1708812	Poecilus decipens	species	Agenioideus decipiens
-1708820	Poecilus nitidus	species	Evagetes nitidulus
 1470290	Pogonus meridiolis	species	Pogonus meridionalis
 2060222	Pterostichus ghiliani	species	Pterostichus ghilianii
 2850094	Pterostichus muehlfeldi	species	Pterostichus muehlfeldii
@@ -149,7 +149,7 @@ taxon_id	input	rank	suggested
 	Chiridopsis bupunctata	species	chiridopsis bipunctata
 	Chrysoli affinis	species	chrysolina affinis	chrysopa affinis
 111535	Chrysoli aurichalcea	species	Chrysolina aurichalcea
-	Chrysoli banksi	species	chrysolina banksi	chrysolina bankii	chrysolina banksii
+	Chrysoli banksi	species	chrysolina bankii	chrysolina banksi	chrysolina banksii
 75508	Chrysoli bicolor	species	Chrysolina bicolor
 75509	Chrysoli carnifex	species	Chrysolina carnifex
 75510	Chrysoli cerealis	species	Chrysolina cerealis
