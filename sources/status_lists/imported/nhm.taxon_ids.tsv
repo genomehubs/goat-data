@@ -1,6 +1,7 @@
 taxon_id	input	rank
-7147	Diptera	order
 7041	Coleoptera	order
+2725004	Caenoplana variegata	species
+7147	Diptera	order
 29065	Martes martes	species
 92169	Talitridae	family
 7399	Hymenoptera	order
@@ -308,7 +309,6 @@ taxon_id	input	rank
 1545159	Megalonotus chiragra	species
 1810706	Dicranocephalus agilis	species
 69514	Australoplana sanguinea	species
-2725004	Caenoplana variegata	species
 60593	Celleporella hyalina	species
 95170	Membranipora membranacea	species
 72672	Ophiura albida	species
@@ -861,7 +861,11 @@ taxon_id	input	rank
 1545103	Corixa punctata	species
 242267	Plebejus argus	species
 107851	Haliplidae	family
+997538	Lithophane socia	species
+934940	Gymnoscelis rufifasciata	species
+887762	Xanthostigma xanthostigma	species
 934824	Anticlea derivata	species
+2562035	Protarchanara brevilinea	species
 987969	Leucania obsoleta	species
 34634	Mesostigmata	order
 2882799	Rhysodromus histrio	species
@@ -1081,7 +1085,6 @@ taxon_id	input	rank
 988176	Drymonia dodonaea	species
 411963	Schrankia costaestrigalis	species
 721163	Thyatira batis	species
-2562035	Protarchanara brevilinea	species
 987436	Sphinx pinastri	species
 722673	Hylaea fasciaria	species
 1594332	Phtheochroa inopiana	species
@@ -1400,8 +1403,6 @@ taxon_id	input	rank
 43337	Orthosia gothica	species
 1594366	Nematopogon schwarziellus	species
 7516	Neuroptera	order
-934940	Gymnoscelis rufifasciata	species
-997538	Lithophane socia	species
 242269	Callophrys rubi	species
 934840	Eupithecia abbreviata	species
 280090	Saldula saltatoria	species
