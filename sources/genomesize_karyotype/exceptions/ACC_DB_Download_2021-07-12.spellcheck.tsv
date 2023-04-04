@@ -21,7 +21,7 @@ taxon_id	input	rank	suggested
 63624	Blattella litoricollis	species	Blattella lituricollis
 1507048	Kalotermes convexus	species	Neotermes connexus
 878088	Ernobius mollis_	species	Ernobius mollis
-	Gibbium psylloides_	species	gibbium psylloides	gibbium psylliodes
+	Gibbium psylloides_	species	gibbium psylliodes	gibbium psylloides
 295660	Lasioderma serricorne_	species	Lasioderma serricorne
 icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1553692	Ptinus villiger_	species	Ptinus villiger
@@ -314,6 +314,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1343316	Cicindela suturalis_	species	Cylindera suturalis
 176377	Cicindela tranquebarica_	species	Cicindela tranquebarica
 1343317	Cicindela trisigta	species	Cylindera trisignata
+1163509	Colfax stevensi	species	Colias sieversi
 2611535	Craspedophorus angulatus_	species	Craspedophorus angulatus
 247365	Cryptophonus tenebrosus_	species	Cryptophonus tenebrosus
 	Ctenostoma ornatum	species	chaenostoma cordatum
@@ -765,7 +766,6 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1075297	Clytra laeviscula_	species	Clytra laeviuscula
 1075297	Clytra laeviuscula_	species	Clytra laeviuscula
 1425548	Clytra quadripunctata_	species	Clytra quadripunctata
-2484307	Clytra succinata	species	Cleora subcincta
 284335	Colasposoma auripenne_	species	Colasposoma auripenne
 1592289	Conicobruchus indicus_	species	Conicobruchus indicus
 1654395	Coptocephala unifasciata_	species	Coptocephala unifasciata
@@ -866,7 +866,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 574154	Ceutorrhynchus punctiger	species	Glocianus punctiger
 877912	Cionus hortulans	species	Cionus hortulanus
 201897	Cryptorrhynchus lapathi	species	Cryptorhynchus lapathi
-	Curculio pictus	species	curculio piceus
+	Curculio pictus	species	curculio piceus	curculio picatus
 13040	Diaprepres abbreviata	species	Diaprepes abbreviatus
 2729800	Donus oxalidis	species	Donus oxalis
 1679453	Ectatorhinus adamsi	species	Ectatorhinus adamsii
@@ -1102,7 +1102,6 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
 icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
-466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata_	species	Isomira quadristriata
@@ -1356,7 +1355,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 649077	Tiedemannia neopolitana	species	Gleba cordata
 87838	Euhadra smaliae	species	Euhadra amaliae
 225461	Monacha cathusiana	species	Monacha cartusiana
-	Polygyra appressa	species	polygala depressa	polygala adpressa
+	Polygyra appressa	species	polygala adpressa	polygala depressa
 52793	Lymnaea nuricularia	species	Radix auricularia
 1076771	Stenostomum grandi	species	Stenostomum grande
 	Hymenolepidae	family	hymenolepididae	hymenoceridae
