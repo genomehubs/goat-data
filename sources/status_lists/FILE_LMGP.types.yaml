@@ -1,0 +1,44 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: LMGP_expanded.tsv
+  source: Declared Status List - LMGP
+  source_date: 2023-02-10
+  source_description: Status List - Lilioid Monocots Core Group Genome Project, Static Spreadsheet 
+  source_contact: Dr. Jing Cai, School of ecological environment, Northwestern Polytechnical University, China
+attributes:
+  long_list:
+    header: project
+    type: keyword
+  sequencing_status:
+    header: status
+    type: keyword
+  sequencing_status_lmgp:
+    header: status
+    type: keyword
+  sample_collected:
+    header: status
+    translate:
+      in_progress: LMGP
+    type: keyword
+  # sample_collected_by:
+  #   header: collected_by
+  #   translate:
+  #     "BMS,RBGK": KEW
+    # type: keyword
+  sample_acquired:
+    header: status
+    translate:
+      in_progress: LMGP
+    type: keyword
+  in_progress:
+    header: status
+    translate:
+      in_progress: LMGP
+    type: keyword
+taxonomy:
+  taxon_id:
+    header: taxon_id
+  species:
+    header: species

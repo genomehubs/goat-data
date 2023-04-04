@@ -1,0 +1,49 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: BAT1K_expanded.tsv
+  source: Declared Status List - BAT1K
+  source_date: 2023-03-01
+  source_description: Declared Status Lists -BAT1K - live spreadsheet - genomes complete - in pipeline 
+  source_contact: Meike Mei - https://bat1k.com/contact-us/
+attributes:
+  long_list:
+    header: project
+    type: keyword
+  family_representative:
+    header: family_representative
+    type: keyword
+  sequencing_status:
+    header: sequencing_status
+    type: keyword
+  sequencing_status_bat1k:
+    header: sequencing_status
+    type: keyword
+  sample_collected:
+    header: collected
+    translate:
+      sample_collected: BAT1K
+    type: keyword
+  # sample_collected_by:
+  #   header: collected_by
+  #   translate:
+  #     "BMS,RBGK": KEW
+    # type: keyword
+  sample_acquired:
+    header: received
+    translate:
+      sample_acquired: BAT1K
+    type: keyword
+  in_progress:
+    header: sequencing_status
+    translate:
+      in_progress: BAT1K
+      sample_collected:
+      sample_acquired:
+    type: keyword
+taxonomy:
+  species:
+    header: species
+  family:
+    header: Family    
