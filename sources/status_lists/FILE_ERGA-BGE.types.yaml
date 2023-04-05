@@ -1,0 +1,39 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: ERGA-BGE_expanded.tsv
+  source: Declared Status List - ERGA-BGE Hotspots
+  source_date: 2023-04-05
+  source_description: ERGA-BGE Biodiversity Hotspots Status List, live spreadsheet
+  source_contact: Javier Palma, Instituto de Biologia Evolutiva - CSIC, Barcelona, Spain
+attributes:
+  long_list:
+    header: long_list
+  other_priority:
+    header: other_priority
+  family_representative:
+    header: family_representative
+  contributing_project_lab:
+    header: Source Hotspot
+  sequencing_status_erga-bge:
+    header: goat_status
+  sequencing_status:
+    header: goat_status
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+taxonomy:
+  taxon_id:
+    header: NCBI taxon ID
+  species:
+    header: Species
+  phylum:
+    header: Phylum
