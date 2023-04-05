@@ -2,6 +2,7 @@ taxon_id	input	rank	suggested
 	Silobia	genus	spelobia	sycobia
 	Amaurochaetidae	family	amaurochaetae
 	Amphidiaceae	family	gomphidiaceae	amphifilaceae
+7986	Anatomidae	family	Anostomidae
 	Astatidae	family	diastatidae	asteiidae	astacidae
 2231537	Atractophoraceae	family	Atractosporaceae
 	Bembicidae	family	bombycidae	bembicinae	cimbicidae
@@ -9,7 +10,9 @@ taxon_id	input	rank	suggested
 	Cadlinidae	family	chalinidae	carlininae	candeinidae
 	Calcariidae	family	calviriidae	halcuriidae	calcarinidae
 	Carteriaceae	family	cafeteriaceae	armeriaceae	baxteriaceae
+88746	Caryosporaceae	family	Acarosporaceae
 668547	Ceratosphaeriaceae	family	Teratosphaeriaceae
+	Chilodontaidae	family	chilodontidae
 	Chimabachidae	family	chimabachinae
 	Conocephalidae	family	conocephalinae	cybocephalidae	loxocephalidae
 38747	Coscinodiscacaeae	family	Coscinodiscaceae
@@ -22,7 +25,7 @@ taxon_id	input	rank	suggested
 	Drilidae	family	dryinidae	asilidae	psilidae
 	Dryophthoridae	family	dryophthorinae
 	Echinostelidae	family	echinasteridae	echinoptilidae	echinosteliidae
-	Eledonidae	family	epedanidae	erodonidae
+	Eledonidae	family	epedanidae	elonidae	erodonidae
 	Emberizidae	family	emberizinae
 1115082	Endogemmaceae	family	Endogemmataceae
 	Ethmiidae	family	stomiidae	ethmiinae	etheriidae
@@ -31,6 +34,7 @@ taxon_id	input	rank	suggested
 4883	Fenestellaceae	family	Legeriomycetaceae
 	Gayraliaceae	family	araliaceae	paraliaceae
 5389	Gomphillaceae	family	Gomphidiaceae
+6296	Gonocercidae	family	Onchocercidae
 33834	Gonyaulaceae	family	Gonyaulacaceae
 232754	Gyalecta flotovii	species	Gyalecta flotowii
 	Haplopomidae	family	haploporidae	hypopomidae	haplostomidae
@@ -47,13 +51,15 @@ taxon_id	input	rank	suggested
 385471	Diachea leucopoda	species	Diachea leucopodia
 	Ismaridae	family	mymaridae	osmeridae	samaridae
 280830	Jungermannia eucordifolia	species	Jungermannia exsertifolia
+40678	Lacydoniidae	family	Alcyoniidae
 137615	Lamprodermatidae	family	Stemonitidae
 	Lentariaceae	family	venturiaceae	lanariaceae	tectariaceae
 45147	Lopadostomataceae	family	Lophiostomataceae
 	Meridermatidae	family	megadermatidae	perodermatidae
 	Microphoridae	family	microphorinae	licnophoridae	microphysidae
+	Mycetobiidae	family	mycetobiinae
 	Natricidae	family	anthicidae	naticidae
-	Aglais	genus	aglaia	agelas
+	Aglais	genus	aglaia
 	Aphantopus	genus	aphanopus	aphaniops
 	Opetiidae	family	oweniidae	opheliidae	oplitidae
 	Oxyporaceae	family	polyporaceae	oxytoxaceae

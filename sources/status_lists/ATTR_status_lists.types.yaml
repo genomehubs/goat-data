@@ -183,6 +183,22 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_bat1k:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_canbp:
     display_group: sequencing_status
     display_level: 2
@@ -327,6 +343,38 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
+  sequencing_status_erga-pil:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
+  sequencing_status_erga-bge:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_eurofish:
     display_group: sequencing_status
     display_level: 2
@@ -448,6 +496,22 @@ attributes:
         - insdc_open
         - open
 #        - insdc_submitted        
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
+  sequencing_status_lmgp:
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - open
+#        - insdc_submitted
         - in_progress
         - sample_acquired
         - sample_collected
