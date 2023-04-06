@@ -44,6 +44,7 @@ taxon_id	input	rank	suggested
 2033203	Helicofilia	genus	Heliconilla
 745532	Monosporium olivaceum	species	Sirodesmium olivaceum
 	Myxosporium	genus	zygosporium	monosporium
+	Naemospora crocea	species	nemaspora crocea
 	Naemaspora microspora	species	naemospora microspora
 512020	Septoria podagraria	species	Mycosphaerella podagrariae
 382529	Rhizophydium gibbosum	species	Rhizophydium globosum
@@ -292,7 +293,7 @@ taxon_id	input	rank	suggested
 128745	Steringophorus dorsolineatus	species	Steringophorus dorsolineatum
 1553030	Acrotrichis montandoni	species	Acrotrichis montandonii
 346862	Aleochara ruficornis	species	Tachyporus nitidulus
-1202164	Astenus immaculatus	species	Stenus bimaculatus
+	Astenus immaculatus	species	stenus bimaculatus	astacus bimaculatus
 1971779	Atheta divisa	species	Atheta europaea
 1553385	Atheta nidicola	species	Cephalocousya nivicola
 1587077	Atomaria fimetarii	species	Atomaria nigriventris
@@ -388,7 +389,6 @@ taxon_id	input	rank	suggested
 2836843	Phytobia errans	species	Phytomia errans
 498689	Phytomyza ranunculicola	species	Phytomyza ranunculivora
 498688	Phytomyza rapunculi	species	Phytomyza ranunculi
-2882705	Platypalpus divisus	species	Platypalpus vividus
 1446193	Platypalpus ecalceatus	species	Platypalpus calceatus
 2725521	Polyodaspis sulcicolis	species	Polyodaspis sulcicollis
 2882739	Procladius simplicistylis	species	Procladius simplicistylus
@@ -407,7 +407,6 @@ taxon_id	input	rank	suggested
 1155462	Tethina grisea	species	Exorista rustica
 903472	Thalassomya frauenfeldi	species	Thalassomyia frauenfeldi
 1088292	Thereva inornata	species	Theretra inornata
-377534	Thrypticus divisus	species	Argyra argyria
 1285112	Trichonta fragilis	species	Columnea tenella
 316471	Villa venusta	species	Viola sacchalinensis
 2886778	Xenopelopia falcigera	species	Telopelopia fascigera
@@ -608,7 +607,6 @@ taxon_id	input	rank	suggested
 691542	Feltria subterranea	species	Agrotis subterranea
 119153	Harpactea hombergi	species	Harpactea hombergii
 	Lauroppia	genus	lucoppia	aeroppia	lauroia
-280703	Lebertia dubia	species	Pichonia dubia
 1907025	Opilio canestrini	species	Opilio canestrinii
 926819	Piona carnea	species	Pinna carnea
 1264953	Sabacon viscayanum	species	Sabacon viscayanus
@@ -1006,7 +1004,7 @@ taxon_id	input	rank	suggested
 1514137	Rhizosolenia stolterforthii	species	Guinardia striata
 	Amphora coffeaefomis	species	amphora coffeaeformis
 83371	Detonula confervacaea	species	Detonula confervacea
-	Coscinosira	genus	coscinocera	coscinospira
+63969	Coscinosira	genus	Coscinocera
 655750	Plagiogramma brockmanni	species	Brockmanniella brockmannii
 	Eupodiscus	genus	hypodiscus	herpodiscus
 88167	Poteriochromonas malhamensis	species	Poterioochromonas malhamensis
@@ -1066,7 +1064,6 @@ taxon_id	input	rank	suggested
 	Agaricus fulvosus	species	agaricus bulbosus
 93828	Agaricus fuscipes	species	Gymnopus fusipes
 	Agaricus gramineus	species	agaricus stramineus
-1843309	Agaricus graveolens	species	Agaricus gratolens
 	Agaricus lateoalbus	species	agaricus luteoalbus
 	Agaricus latus	species	agaricus elatus	agaricus laetus
 181745	Agaricus ligatus	species	Phaeomarasmius erinaceus

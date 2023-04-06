@@ -165,7 +165,7 @@ taxon_id	input	rank	suggested
 873023	Bartsia pumila	species	Mentzelia pumila
 	Begonia hirsuta	species	betonica hirsuta	begonia hirsutula
 1977215	Begonia huegelii	species	Begonia hugelii
-	Begonia paranaensis	species	begonia padangensis	begonia paranensis
+	Begonia paranaensis	species	begonia paranensis	begonia padangensis
 172092	Begonia pinglinensis	species	Begonia alveolata
 1979703	Begonia princeae	species	Begonia princeps
 	Begonia rostrata	species	begonia prostrata
@@ -182,6 +182,7 @@ taxon_id	input	rank	suggested
 315927	Brachyscome radicata	species	Brachyscome radicans
 102754	Brickellia schaffneri	species	Brickellia eupatorioides
 1550871	Brickellia veronicaefolia	species	Brickellia veronicifolia
+55769	Bromus bonariensis	species	Bromus lanceolatus
 1979679	Bufonia macrocarpa	species	Begonia macrocarpa
 426864	Bulbophyllum bisetum	species	Bulbophyllum longiflorum
 1463550	Bulbophyllum cornutum	species	Bulbophyllum ecornutum
@@ -360,7 +361,7 @@ taxon_id	input	rank	suggested
 71127	Drymaria grandiflora	species	Kohleria tigridia
 1289434	Dudleya blochmanae	species	Dudleya blochmaniae
 1311268	Dudleya traskae	species	Dudleya traskiae
-	Duvalia gracilis	species	davallia gracilis	eulalia gracilis
+	Duvalia gracilis	species	eulalia gracilis	davallia gracilis
 1895424	Duvalia pubescens	species	Odontomyia pubescens
 	Duvalia vestita	species	davallia vestita
 2489271	Echeveria difractens	species	Echeveria diffractens
@@ -413,6 +414,7 @@ ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
 2732301	Erysimum graecum	species	Brosimum glaucum
 1370078	Erysimum jugicolum	species	Erysimum jugicola
 1924167	Erysimum pirinicum	species	Erysimum pieninicum
+452822	Eucalyptus × kirtoniana	species	Eucalyptus kitsoniana
 1620165	Eulophia cristata	species	Eulophia ecristata
 1130034	Euphorbia biaculeata	species	Euphorbia triaculeata
 457238	Euphorbia bourgeana	species	Euphorbia bourgaeana
@@ -429,6 +431,7 @@ ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
 375857	Festuca degenii	species	Scolochloa festucacea
 2056070	Festuca dinirica	species	Festuca sibirica
 2056049	Festuca eggleri	species	Festuca engleri
+98750	Festuca guestfalica	species	Festuca ovina
 	Festuca parciflora	species	festuca pauciflora	festuca parviflora
 464081	Festuca subulifolia	species	Festuca subuliflora
 	Ficus odorata	species	ficus obovata	ficus moderata
@@ -566,7 +569,6 @@ dcLimTran	Limonium transwallisnum	species	Limonium transwallianum
 1588656	Ludwigia stricta	species	Hedwigia striata
 3874	Lupinus holmgrenianus	species	Lupinus polyphyllus
 384416	Lupinus parviflorus	species	Lupinus parvifolius
-61075	Lupinus saxosus	species	Lupinus sericeus
 374417	Lysichitum americanum	species	Lysichiton americanus
 199164	Lysiloma tergemina	species	Lysiloma tergeminum
 502323	Lythrum baeticum	species	Pythium sp. balticum
@@ -585,7 +587,6 @@ dcLimTran	Limonium transwallisnum	species	Limonium transwallianum
 128313	Matthiola obovata	species	Guettarda odorata
 3878	Medicago difalcata	species	Medicago falcata
 47084	Medicago polychroa	species	Medicago polymorpha
-	Medicago × varia	species	medicago x varia
 73756	Melaleuca ciliosa	species	Melaleuca diosmifolia
 73832	Melaleuca pauciflora	species	Melaleuca decussata
 73763	Melaleuca striata	species	Melaleuca linariifolia
@@ -745,7 +746,6 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 120877	Rumex rossicus	species	Ochlerotatus rusticus
 500263	Rytidosperma telematicum	species	Rytidosperma telmaticum
 236220	Sabazia palmeri	species	Sabatia stellaris
-2862462	Salvia brachyodon	species	Salvia brachyodonta
 68491	Salvia fluviatilis	species	Locustella fluviatilis
 	Saracha contorta	species	salacia conferta	salacca conferta
 403582	Sasa takizawana	species	Sasa hayatae
@@ -841,7 +841,6 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 90025	Taraxacum cordatum	species	Taraxacum coronatum
 90052	Taraxacum crassum	species	Taraxacum serotinum
 	Taraxacum crocellum	species	taraxacum croceum
-90054	Taraxacum dentatum	species	Taraxacum sonchoides
 669847	Taraxacum eriopodum	species	Taraxacum ceratophorum
 1204311	Taraxacum euranum	species	Taraxacum antungense
 2835584	Taraxacum exiguum	species	Taraxacum eximium
@@ -914,7 +913,7 @@ daVerEleg	Verbesina elegans	species	Verbena elegans
 1641253	Watsonia vanderspuyae	species	Watsonia vanderspuyiae
 208134	Watsonia zeyheri	species	Daubenya zeyheri
 1785158	Xenophyllum digitatum	species	Pneophyllum limitatum
-	Zoysia pauciflora	species	zornia parviflora	voyria parviflora
+	Zoysia pauciflora	species	voyria parviflora	zornia parviflora
 2499693	Zygophyllum macrophyllum	species	Tetraena simplex
 3390	Ephedra tweedieana	species	Ephedra tweediana
 	Larix × maritima	species	carex maritima
