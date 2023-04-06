@@ -3,18 +3,18 @@ taxon_id	input	rank	suggested
 	Amaurochaetidae	family	amaurochaetae
 	Amphidiaceae	family	gomphidiaceae	amphifilaceae
 7986	Anatomidae	family	Anostomidae
-	Astatidae	family	diastatidae	asteiidae	astacidae
+	Astatidae	family	diastatidae	asteiidae
 2231537	Atractophoraceae	family	Atractosporaceae
 	Bembicidae	family	bombycidae	bembicinae	cimbicidae
 	Borboropsidae	family	borboropsinae
-	Cadlinidae	family	chalinidae	carlininae	candeinidae
+	Cadlinidae	family	chalinidae	candeinidae	carlininae
 	Calcariidae	family	calviriidae	halcuriidae	calcarinidae
 	Carteriaceae	family	cafeteriaceae	armeriaceae	baxteriaceae
 88746	Caryosporaceae	family	Acarosporaceae
 668547	Ceratosphaeriaceae	family	Teratosphaeriaceae
 	Chilodontaidae	family	chilodontidae
 	Chimabachidae	family	chimabachinae
-	Conocephalidae	family	conocephalinae	cybocephalidae	loxocephalidae
+	Conocephalidae	family	conocephalinae	loxocephalidae	cybocephalidae
 38747	Coscinodiscacaeae	family	Coscinodiscaceae
 203015	Rhodolia rosea	species	Rhodiola rosea
 46331	Carex simpliciusulca	species	Carex simpliciuscula
@@ -25,7 +25,7 @@ taxon_id	input	rank	suggested
 	Drilidae	family	dryinidae	asilidae	psilidae
 	Dryophthoridae	family	dryophthorinae
 	Echinostelidae	family	echinasteridae	echinoptilidae	echinosteliidae
-	Eledonidae	family	epedanidae	elonidae	erodonidae
+118589	Eledonidae	family	Epedanidae
 	Emberizidae	family	emberizinae
 1115082	Endogemmaceae	family	Endogemmataceae
 	Ethmiidae	family	stomiidae	ethmiinae	etheriidae
@@ -53,13 +53,13 @@ taxon_id	input	rank	suggested
 280830	Jungermannia eucordifolia	species	Jungermannia exsertifolia
 40678	Lacydoniidae	family	Alcyoniidae
 137615	Lamprodermatidae	family	Stemonitidae
-	Lentariaceae	family	venturiaceae	lanariaceae	tectariaceae
+	Lentariaceae	family	venturiaceae	lanariaceae	lomentariaceae
 45147	Lopadostomataceae	family	Lophiostomataceae
 	Meridermatidae	family	megadermatidae	perodermatidae
-	Microphoridae	family	microphorinae	licnophoridae	microphysidae
+	Microphoridae	family	microphorinae	microporidae	sicuophoridae
 	Mycetobiidae	family	mycetobiinae
-	Natricidae	family	anthicidae	naticidae
-	Aglais	genus	aglaia
+219442	Natricidae	family	Anthicidae
+	Aglais	genus	aglaia	agelas
 	Aphantopus	genus	aphanopus	aphaniops
 	Opetiidae	family	oweniidae	opheliidae	oplitidae
 	Oxyporaceae	family	polyporaceae	oxytoxaceae
@@ -84,6 +84,6 @@ urHarSamo	Harveylithon samoënse	species	Harveylithon samoinse
 210587	Tricertatiaceae	family	Triceratiaceae
 	Trixoscelididae	family	trixoscelidinae
 	Troglodytidae	family	troglodytinae
-	Vannellida	family	annelida	vannella	vandellia
+	Vannellida	family	vannella	annelida	vandellia
 281109	Xylographaceae	family	Aulographaceae
 	Ziphidae	family	tiphiidae	ziphiidae
