@@ -1,0 +1,21 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: 1kfg_manual_bioprojects.tsv
+attributes:
+  sequencing_status:
+    header: project
+    translate:
+      1KFG: insdc_open
+    type: keyword
+  sequencing_status_1kfg:
+    header: project
+    translate:
+      1KFG: insdc_open
+    type: keyword
+  insdc_open:
+  header: project
+taxonomy:
+  taxon_id:
+    header: taxId

@@ -1,0 +1,21 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: prgp_manual_expanded.tsv
+attributes:
+  sequencing_status:
+    header: project
+    translate:
+      PRGP: insdc_open
+    type: keyword
+  sequencing_status_prgp:
+    header: project
+    translate:
+      PRGP: insdc_open
+    type: keyword
+  insdc_open:
+  header: project
+taxonomy:
+  taxon_id:
+    header: taxId
