@@ -28,7 +28,7 @@ attributes:
     header: sample_collected
     type: keyword
   sample_collected_by:
-    header: [NHM,	WYTHAM,	TOL_SCOTLAND]
+    header: [NHM,WYTHAM,TOL_SCOTLAND]
     join: ","
     translate:
       NOT COLLECTED: ""
