@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: DTOL_Arthropoda_family_reps_expanded.tsv
   source: DTOL Arthropod Family Representatives List
-  source_date: 2023-01-17
+  source_date: 2023-01-24
   source_description: DTOL Arthropod Samples Working Group and NHM, live spreadsheet - DToL - Arthropod Family Representatives List
   source_contact: DTOL Arthropod SWG
 attributes:
@@ -28,7 +28,7 @@ attributes:
     header: sample_collected
     type: keyword
   sample_collected_by:
-    index: [6, 7, 8]
+    header: [NHM,	WYTHAM,	TOL_SCOTLAND]
     join: ","
     translate:
       NOT COLLECTED: ""

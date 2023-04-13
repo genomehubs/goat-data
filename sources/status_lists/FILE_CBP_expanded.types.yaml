@@ -2,9 +2,9 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: CBP_expanded_2022-05-13.tsv
+  name: CBP_expanded.tsv
   source: Declared Status List - CBP 
-  source_date: 2021-07-22
+  source_date: 2023-03-21
   source_description: CBP Status List - Live Spreadsheet - CBP_GOAT
   source_contact: Montserrat Corominas
 attributes:
@@ -15,13 +15,9 @@ attributes:
   family_representative:
     header: family_representative
   sequencing_status:
-    header: sequencing_status
-    translate:
-      insdc_submitted: in_progress
+    header: goat_status
   sequencing_status_cbp:
-    header: sequencing_status
-    translate:
-      insdc_submitted: in_progress
+    header: goat_status
   sample_collected:
     header: sample_collected
   sample_acquired:
@@ -34,11 +30,8 @@ attributes:
     header: published
 taxonomy:
   taxon_id:
-    header: NCBI_taxon_id
-  genus:
-    header: Genus
+    header: ncbi_taxon_id
   species:
-    index: [2, 3]
-    join: " "
+    header: species
   family:
     header: family
