@@ -5078,7 +5078,6 @@ taxon_id	input	rank
 467833	Inocybe giacomi	species
 2864439	Inocybe mycenoides	species
 1148788	Inocybe mytiliodora	species
-#gfInoObsc	Inocybe obscura	species
 #gfInoOlid	Inocybe olida	species
 #gfInoPsed	Inocybe pseudocookei	species
 165594	Inocybe stellatospora	species
@@ -13411,7 +13410,6 @@ taxon_id	input	rank
 1115743	Elaeomyxa cerifera	species
 289993	Diachea subsessilis	species
 2569090	Diderma cinereum	species
-#pmDidCing	Diderma cingulatum	species
 385441	Diderma deplanatum	species
 #pmDidDonk	Diderma donkii	species
 523813	Diderma floriforme	species
@@ -19644,7 +19642,6 @@ taxon_id	input	rank
 2882583	Pelina aenea	species
 #idPelAens	Pelina aenescens	species
 #idPelNite	Pelina nitens	species
-#idOchMani	Ochthera manicata	species
 1890532	Ochthera mantis	species
 #idOchSche	Ochthera schembrii	species
 745172	Ephydra riparia	species
@@ -23407,7 +23404,6 @@ taxon_id	input	rank
 #grSarCyli	Sarcopyrenia cylindrospora	species
 150796	Scleroderma areolatum	species
 1604705	Lepista caespitosa	species
-#gfMycNuci	Mycena nucicola	species
 1246524	Russula alnetorum	species
 355755	Geastrum pectinatum	species
 #gfPanSemg	Panaeolus semiglobatus	species
@@ -48253,7 +48249,6 @@ taxon_id	input	rank
 #gfTreHyal	Tremella hyalina	species
 #gfTreObsc	Tremella obscura	species
 #gfTreSarn	Tremella sarniensis	species
-#gfTreVers	Tremella versicolor	species
 208158	Trentepohlia jolithus	species
 #gaTriOcto	Triblidium octosporum	species
 2008363	Trichaptum fuscoviolaceum	species
@@ -53293,7 +53288,6 @@ taxon_id	input	rank
 #ihKelGutt	Kelisia guttula	species
 #ihKelGutu	Kelisia guttulifera	species
 #ihKelPall	Kelisia pallidula	species
-#ihKelPunc	Kelisia punctulum	species
 166215	Kelisia sabulicola	species
 2882180	Kelisia vittipennis	species
 #ihKleTrun	Kleidocerys truncatulus	species
@@ -57363,7 +57357,6 @@ taxon_id	input	rank
 #qhRhoRugo	Rhodinicola rugosa	species
 1954390	Agetus flaccus	species
 #qhAgeLimb	Agetus limbatus	species
-#qhAgeTypi	Agetus typicus	species
 1582896	Ditrichocorycaeus anglicus	species
 #qhDitBreh	Ditrichocorycaeus brehmi	species
 1124504	Farranula rostrata	species
@@ -60970,7 +60963,6 @@ taxon_id	input	rank
 1100902	Acrobasis repandana	species
 1100900	Acrobasis consociella	species
 1870673	Myelois circumvoluta	species
-#ilGymCane	Gymnancyla canella	species
 687150	Zophodia grossulariella	species
 660291	Homoeosoma nebulella	species
 1932632	Homoeosoma nimbella	species
@@ -65039,12 +65031,10 @@ taxon_id	input	rank
 #iyBraTria	Bracon triangularis	species
 #iyBraTruc	Bracon trucidator	species
 #iyBraVare	Bracon variegator	species
-#iyBraVirg	Bracon virgatus	species
 #iyBraWols	Bracon wolschrijni	species
 #iyCoeAbdo	Coeloides abdominalis	species
 #iyCoeFili	Coeloides filiformis	species
 #iyCoeMela	Coeloides melanostigma	species
-#iyCoeMeln	Coeloides melanotus	species
 #iyCoeScol	Coeloides scolyticida	species
 #iyCenAart	Cenocoelius aartseni	species
 55930	Cenocoelius analis	species
@@ -69029,7 +69019,7 @@ taxon_id	input	rank
 1161021	Satchelliella mutua	species
 1161024	Satchelliella trivialis	species
 1161013	Jungiella consors	species
-370411	Culicoides deltus	species
+3040366	Culicoides delta	species
 2578602	Potthastia longimanus	species
 #idDasAbie	Dasineura abietiperda	species
 1701712	Megaselia impolluta	species
@@ -70823,6 +70813,7 @@ taxon_id	input	rank
 104256	Ionopsidium acaule	species
 118904	Anthyllis circinnata	species
 520770	Chaerophyllum nodosum	species
+3040972	Scilla sardensis	species
 37499	Petrocoptis glaucifolia	species
 #daSpeVert	Spermacoce verticillata	species
 4463	Sauromatum venosum	species
@@ -71105,6 +71096,7 @@ taxon_id	input	rank
 1920051	Catriona gymnota	species
 #ilMesDidm	Mesotype didymata	species
 997543	Sideridis reticulatus	species
+3040206	Artioposthia exulans	species
 #iyAscArma	Ascogaster armata	species
 #uoAmpSemp	Amphora semperpalorum	species
 1415748	Licmosphenia peragallioides	species
@@ -71117,6 +71109,7 @@ taxon_id	input	rank
 1210412	Malmgreniella mcintoshi	species
 1097674	Torrentaria lusitanica	species
 98942	Rhynchostegium riparioides	species
+3040208	Marionfyfea adventor	species
 1008864	Ommatoiulus moreleti	species
 3003709	Cylindroiulus pyrenaicus	species
 626267	Diplosolen obelia	species
