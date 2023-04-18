@@ -377,39 +377,59 @@ taxon_id	input	rank
 204638	Woodwardia radicans	species
 160988	Zelkova abelicea	species
 2945698	Encalypta mutica	species
+#dmAcoNapeCorsicum	Aconitum napellus subsp. corsicum	subspecies
 1630287	Hormathophylla pyrenaica	species
+#dmAneChinGotlandica	Anemone pulsatilla subsp. gotlandica	subspecies
 #drApiRepe	Apium repens	species
+#dmAquPyreCazorlensis	Aquilegia pyrenaica subsp. cazorlensis	subspecies
+#dcAreCiliPseudofrigida	Arenaria ciliata subsp. pseudofrigida	subspecies
+#daArtCampBottnica	Artemisia campestris subsp. bottnica	subspecies
 3015030	Artemisia pancicii	species
 468249	Asplenium x adulterinum	species
 1219493	Astragalus alopecurus	species
+#drAstMacaLefkarensis	Astragalus macrocarpus subsp. lefkarensis	subspecies
 267522	Eokochia saxicola	species
 127601	Vella aspera	species
 197134	Dioscorea chouardii	species
 3034263	Bupleurum kakiskalae	species
 481184	Apteranthes burchardii	species
 372274	Carex lowei	species
+#daCenAlbaHeldreichii	Centaurea alba subsp. heldreichii	subspecies
+#daCenAlbaPrinceps	Centaurea alba subsp. princeps	subspecies
+#daCenAttiMegarensis	Centaurea attica subsp. megarensis	subspecies
 40592	Femeniasia balearica	species
 2969727	Centaurea immanuelis-loewii	species
+#daChaSerpLusitanicum	Chaenorhinum serpyllifolium subsp. lusitanicum	subspecies
 400013	Coincya monensis subsp. recurvata	subspecies
 267571	Convolvulus argyrothamnos	species
 537156	Lepidium navasii	species
 71346	Crambe tatarica	species
 880708	Atriplex lanfrancoi	species
+#daCreNigrNigrescens	Crepis tectorum subsp. nigrescens	subspecies
 3021020	Daphne arbuscula	species
+#dcDiaArenArenarius	Dianthus arenarius subsp. arenarius	subspecies
+#dcDiaCharCintranus	Dianthus cintranus subsp. cintranus	subspecies
 2978628	Goodyera macrophylla	species
+#dcHerLatiLitardierei	Herniaria latifolia subsp. litardierei	subspecies
 632932	Hyacinthoides mauritanica	species
 359854	Iberis sempervirens	species
+#ddIbeProcMicrocarpa	Iberis procumbens subsp. microcarpa	subspecies
+#lsIriAphyHungarica	Iris aphylla subsp. hungarica	subspecies
+#lsIriHumiArenaria	Iris humilis subsp. arenaria	subspecies
 2918684	Isoetes boryana	species
 2769829	Digitalis chalcantha	species
 2769830	Digitalis isabelliana	species
+#daJasCrisSerpentinica	Jasione crispa subsp. serpentinica	subspecies
 104256	Ionopsidium acaule	species
 463661	Thesium subsucculentum	species
 379627	Scorzoneroides microcephala	species
 197680	Acis nicaeensis	species
 362638	Leuzea longifolia	species
+#dcLimDodrLusitanicum	Limonium dodartii subsp. lusitanicum	subspecies
 586386	Linum maritimum	species
 475894	Glandora nitida	species
 92057	Daucus decipiens	species
+#drMelSegeFallax	Melilotus segetalis subsp. fallax	subspecies
 2925227	Monanthes wildpretii	species
 92059	Daucus edulis	species
 262752	Morella rivas-martinezii	species
@@ -417,16 +437,23 @@ taxon_id	input	rank
 317961	Iberodes littoralis	species
 798011	Ononis maweana	species
 64992	Cheirolophus crassifolius	species
+#dmPapRadiHyperboreum	Papaver radicatum subsp. hyperboreum	subspecies
 52490	Petagnaea gussonei	species
+#lsPlaObtuOligantha	Platanthera obtusata subsp. oligantha	subspecies
+#lpPoaGranDisparilis	Poa granitica subsp. disparilis	subspecies
 1440520	Helictotrichon pallens	species
 370734	Puccinellia fasciculata	species
 168013	Pulsatilla grandis	species
 387931	Anemone patens	species
 445231	Anemone slavica	species
 571641	Daucus rouyi	species
+#ddSalSalvAustralis	Salix salvifolia subsp. australis	subspecies
+#daSauAlpiEsthonica	Saussurea alpina subsp. esthonica	subspecies
 354312	Klasea lycopifolia	species
 2928672	Seseli leucospermum	species
+#daSidSeriGlauca	Sideritis incana subsp. glauca	subspecies
 155258	Sideritis pungens	species
+#dcSilInvoAngustiflora	Silene involucrata subsp. angustiflora	subspecies
 50217	Sonchus bupleuroides	species
 128001	Gonospermum ptarmiciflorum	species
 373872	Crassiphyllum fernandesii	species
@@ -435,30 +462,3 @@ taxon_id	input	rank
 85337	Vandenboschia speciosa	species
 566275	Tuberaria globulariifolia	species
 1276821	Vicia filicaulis	species
-#dmAcoNapeCorsicum	Aconitum napellus subsp. corsicum	subspecies
-#dmAneChinGotlandica	Anemone pulsatilla subsp. gotlandica	subspecies
-#dmAquPyreCazorlensis	Aquilegia pyrenaica subsp. cazorlensis	subspecies
-#dcAreCiliPseudofrigida	Arenaria ciliata subsp. pseudofrigida	subspecies
-#daArtCampBottnica	Artemisia campestris subsp. bottnica	subspecies
-#drAstMacaLefkarensis	Astragalus macrocarpus subsp. lefkarensis	subspecies
-#daCenAlbaHeldreichii	Centaurea alba subsp. heldreichii	subspecies
-#daCenAlbaPrinceps	Centaurea alba subsp. princeps	subspecies
-#daCenAttiMegarensis	Centaurea attica subsp. megarensis	subspecies
-#daChaSerpLusitanicum	Chaenorhinum serpyllifolium subsp. lusitanicum	subspecies
-#daCreNigrNigrescens	Crepis tectorum subsp. nigrescens	subspecies
-#dcDiaArenArenarius	Dianthus arenarius subsp. arenarius	subspecies
-#dcDiaCharCintranus	Dianthus cintranus subsp. cintranus	subspecies
-#dcHerLatiLitardierei	Herniaria latifolia subsp. litardierei	subspecies
-#ddIbeProcMicrocarpa	Iberis procumbens subsp. microcarpa	subspecies
-#lsIriAphyHungarica	Iris aphylla subsp. hungarica	subspecies
-#lsIriHumiArenaria	Iris humilis subsp. arenaria	subspecies
-#daJasCrisSerpentinica	Jasione crispa subsp. serpentinica	subspecies
-#dcLimDodrLusitanicum	Limonium dodartii subsp. lusitanicum	subspecies
-#drMelSegeFallax	Melilotus segetalis subsp. fallax	subspecies
-#dmPapRadiHyperboreum	Papaver radicatum subsp. hyperboreum	subspecies
-#lsPlaObtuOligantha	Platanthera obtusata subsp. oligantha	subspecies
-#lpPoaGranDisparilis	Poa granitica subsp. disparilis	subspecies
-#ddSalSalvAustralis	Salix salvifolia subsp. australis	subspecies
-#daSauAlpiEsthonica	Saussurea alpina subsp. esthonica	subspecies
-#daSidSeriGlauca	Sideritis incana subsp. glauca	subspecies
-#dcSilInvoAngustiflora	Silene involucrata subsp. angustiflora	subspecies

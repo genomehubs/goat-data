@@ -587,7 +587,7 @@ taxon_id	input	rank
 2831901	Chaetotyphula actiniceps	species
 112114	Calycina affinis	species
 #grChaAote	Chalara aotearoa	species
-112110	Chalara aurea	species
+112110	Cylindrocephalum aureum	species
 #grChaBrev	Chalara brevipes	species
 #grChaBulb	Chalara bulbosa	species
 112116	Calycina crassipes	species
@@ -596,10 +596,10 @@ taxon_id	input	rank
 #grChaDenn	Chalara dennisii	species
 112120	Calycina fungorum	species
 132167	Chalara fusidioides	species
-610136	Chalara hughesii	species
+610136	Cylindrocephalum hughesii	species
 #grChaInfl	Chalara inflatipes	species
 2787785	Chalara insignis	species
-112125	Chalara microspora	species
+112125	Minichalara microspora	species
 112127	Calycina parvispora	species
 112129	Chalara sessilis	species
 #grChaSpia	Chalara spiralis	species
@@ -4453,6 +4453,7 @@ taxon_id	input	rank
 230764	Clitocybe agrestis	species
 #gfCliAlpi	Clitocybe alpina	species
 #gfCliCaca	Clitocybe cacabus	species
+#gfCliLoba	Clitocybe lobata	species
 1032551	Clitocybe metachroides	species
 870629	Clitocybula lacerata	species
 684092	Clitopilus cystidiatus	species
@@ -44506,7 +44507,7 @@ taxon_id	input	rank
 139949	Chaetosphaeria innumera	species
 139951	Gongromeriza myriocarpa	species
 139952	Chaetosphaeria preussii	species
-112123	Chalara longipes	species
+112123	Stipitochalara longipes	species
 #grChaPter	Chalara pteridina	species
 #grChaRhyn	Chalara rhynchophialis	species
 222931	Chamaemyces fracidus	species
@@ -46798,6 +46799,7 @@ taxon_id	input	rank
 #gpNanOssi	Nannizzia ossicola	species
 #gfNauEchi	Naucoria echinospora	species
 #gfNauGram	Naucoria graminicola	species
+#gfNauMeli	Naucoria melinoides	species
 #gfNauSale	Naucoria saliceti	species
 171467	Naucoria scolecina	species
 #gfNauSobr	Naucoria sobria	species
@@ -52054,7 +52056,7 @@ taxon_id	input	rank
 #grChaToru	Chaetomium torulosum	species
 #grChaVene	Chaetomium venezuelense	species
 #grChaAtrb	Chaetosphaeria atrobarba	species
-112122	Chalara kendrickii	species
+112122	Cylindrocephalum kendrickii	species
 #grChaNigr	Chalara nigricollis	species
 108922	Chrysosporium merdarium	species
 108925	Chrysosporium sulfureum	species
@@ -68168,6 +68170,7 @@ taxon_id	input	rank
 #grMelJugl	Melanconium juglandinum	species
 #guMelNepa	Melanopsichium nepalense	species
 186337	Acaulium albonigrescens	species
+#gaMicSpur	Micropera spuria	species
 1777758	Phialocephala heterosperma	species
 #gyMolNerv	Mollisia nervicola	species
 1814910	Orbilia bembicodes	species
