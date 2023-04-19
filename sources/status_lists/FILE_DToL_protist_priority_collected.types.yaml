@@ -4,37 +4,31 @@ file:
   comment: "#"
   name: DToL_protist_priority_collected.tsv
   source: DToL Protists in Culture List
-  source_date: 2023-01-18
+  source_date: 2023-04-14
   source_description: DTOL Protists Collection List from DTOL Protist SWG, live spreadsheet - DToL Protists in Culture List...
   source_contact: DTOL Protist Samples Working Group
 attributes:
   long_list:
-    header: project
+    header: other_priority
     type: keyword
   other_priority:
     header: other_priority
     type: keyword
   sample_collected:
-    header: Status
+    header: goat_status
     translate:
       sample_collected: DTOL
     type: keyword
   sequencing_status:
-    header: Status
+    header: goat_status
     type: keyword
   sequencing_status_dtol:
-    header: Status
+    header: goat_status
     type: keyword
 taxonomy:
   taxon_id:
-    header: Prefix_Tolid
+    header: TAX_ID
   species:
-    header: Species
+    header: SPECIES
   family:
-    header: Family
-  order:
-    header: Order
-  class:
-    header: Class
-  phylum:
-    header: Phylum
+    header: FAMILY

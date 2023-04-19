@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: ERGA-PIL_expanded.tsv
   source:  Declared Status Lists - ERGA Pilot Project
-  source_date: 2023-04-05
+  source_date: 2023-04-18
   source_description: Declared Status Lists - ERGA Pilot, live Spreadsheet - Pilot Project Tracker  
   #source_contact:
 attributes:
@@ -15,7 +15,7 @@ attributes:
   family_representative:
     header: family_representative
   contributing_project_lab:
-    header: long_list
+    header: contributing_project_lab
   sequencing_status:
     header: sequencing_status
   sequencing_status_erga-pil:
@@ -26,6 +26,8 @@ attributes:
     header: sample_acquired
   in_progress:
     header: in_progress
+  open:
+    header: insdc_open
   insdc_open:
     header: insdc_open
   published:

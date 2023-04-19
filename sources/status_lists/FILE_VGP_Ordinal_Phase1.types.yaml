@@ -6,12 +6,18 @@ file:
   source: Declared Target List - VGP
   source_description: Declared Target List for the Ordinal Phase, Vertebrates Genome Project, live spreadsheet - VGP Ordinal Phase List
   #source_contact:
-  source_date: 2023-01-19
+  source_date: 2023-04-14
 attributes:
   long_list:
     header: phase1
   other_priority:
     header: phase1
+  contributing_project_lab:
+    header: [main_project,second_project]
+    join: ","
+    separator:
+      - ","
+    type: keyword
   sequencing_status:
     header: status
   sequencing_status_vgp:
@@ -22,10 +28,14 @@ attributes:
     header: sample_acquired
   in_progress:
     header: in_progress
+  open:
+    header: open
   insdc_open:
     header: insdc_open
 taxonomy:
-  order:
-    header: orders_latin_name
   species:
     header: species_sequenced
+  order:
+    header: orders_latin_name
+  phylum:
+    header: phylum
