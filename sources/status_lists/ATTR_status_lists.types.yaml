@@ -29,6 +29,14 @@ attributes:
         - DERB
         - OXF
         - VIEN
+  resampling_required:
+    status: temporary
+    display_group: sequencing_status
+    display_level: 2
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword 
   sample_acquired:
     display_group: sequencing_status
     display_level: 2
@@ -36,6 +44,19 @@ attributes:
     traverse: list
     traverse_direction: up
     type: keyword
+  number_acquired:
+    description: Count of samples received by the sequencing center
+    display_group: sequencing_status
+    display_level: 2
+    summary:
+      - sum
+      - max
+      - min
+      - mode
+      - mean
+    traverse: sum
+    traverse_direction: up
+    type: short
   in_progress:
     display_group: sequencing_status
     display_level: 2

@@ -92,6 +92,14 @@ attributes:
       UNIVERSITY OF VIENNA (MOLLUSC): VIEN
     header: submitted_gals
     separator: ","
+  resampling_required:
+    header: material_status
+    translate:
+      RECOLLECTION_REQUIRED: 'DTOL'
+      WAITING_FOR_NEW_SEQUENCING: ""
+      OVERRIDE_DATA_COMPLETION: ""
+  number_acquired:
+    header: sample_count
 taxonomy:
   taxon_id:
     header: taxon_id
