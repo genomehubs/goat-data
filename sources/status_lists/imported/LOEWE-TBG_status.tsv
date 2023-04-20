@@ -1,32 +1,35 @@
-ncbi_taxon_id	species	subspecies	family	target_list_status	sequencing_status	synonym	publication_id	long_list	other_priority	translate_status	in_progress	published	insdc_open	sample_acquired	sample_collected
-1963915	Antrostomus arizonae		Caprimulgidae	long_list	data_generation			LOEWE-TBG		in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-48437	Phalaenoptilus nuttallii		Caprimulgidae	long_list	data_generation			LOEWE-TBG		in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
+ncbi_taxon_id	species	subspecies	family	target_list_status	sequencing_status	synonym	publication_id	long_list	other_priority	translate_status	sample_collected	sample_acquired	in_progress	insdc_open	published
+1963915	Antrostomus arizonae		Caprimulgidae	long_list	data_generation			LOEWE-TBG		in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+48437	Phalaenoptilus nuttallii		Caprimulgidae	long_list	data_generation			LOEWE-TBG		in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
 43179	Ictidomys tridecemlineatus		Sciuridae	other_priority		Citellus tridecemlineatus		LOEWE-TBG	LOEWE-TBG						
-208972	Craseonycteris thonglongyai		Craseonycteridae	other_priority	data_generation			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
+208972	Craseonycteris thonglongyai		Craseonycteridae	other_priority	data_generation			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
 102178	Anguis fragilis		Anguidae	other_priority				LOEWE-TBG	LOEWE-TBG						
-700936	Leptonycteris yerbabuenae		Phyllostomidae	long_list	in_assembly			LOEWE-TBG		in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-9725	Inia geoffrensis		Iniidae	long_list	in_assembly			LOEWE-TBG		in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-6398	Lumbricus terrestris		Lumbricidae	long_list	data_generation			LOEWE-TBG		in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
+700936	Leptonycteris yerbabuenae		Phyllostomidae	long_list	in_assembly			LOEWE-TBG		in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+9725	Inia geoffrensis		Iniidae	long_list	in_assembly			LOEWE-TBG		in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+6398	Lumbricus terrestris		Lumbricidae	long_list	data_generation			LOEWE-TBG		in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
 7819	Galeocerdo cuvier		Carcharhinidae	long_list				LOEWE-TBG							
 58323	Leucaspius delineatus		Cyprinidae	long_list				LOEWE-TBG							
-2012539	Acrobeloides tricornis		Cephalobidae	other_priority	data_generation			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-358040	Pristionchus entomophagus		Diplogastridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-2528157	Rhomborhabditis regina			other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-73405	Diplolepis rosae		Cynipidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-288516	Diploscapter coronatus		Rhabditidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-2012544	Paroigolaimella bernensis		Secernentea	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-1538710	Acrostichus nudicapitatus		Diplogastridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-178770	Haematopota pluvialis		Tabanidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-135692	Xylocopa violacea		Apidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-186250	Lepidocyrtus lanuginosus		Entomobryidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-136168	Onychiurus sp.		Onychiuridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-187682	Parisotoma notabilis		Isotomidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-281420	Folsomia quadrioculata		Isotomidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-2714226	Protaphorura cf. cancellata		Onychiuridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-2041949	Protaphorura cf. campata		Onychiuridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-2673671	Punctoribates sp		Punctoribatidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-508405	Tectocepheus sarekensis		Tectocepheidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-140966	Ceratozetes mediocris		Ceratozetoidea	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-1979925	Acrotritia duplicata		Euphthiracaridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-	Protaphorura subuliginata		Onychiuridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
-	Mesaphorura krausbaueri		Tullbergiidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG			LOEWE-TBG	LOEWE-TBG
+2012539	Acrobeloides tricornis		Cephalobidae	other_priority	data_generation			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+358040	Pristionchus entomophagus		Diplogastridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+2528157	Rhomborhabditis regina			other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+73405	Diplolepis rosae		Cynipidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+288516	Diploscapter coronatus		Rhabditidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+2012544	Paroigolaimella bernensis		Secernentea	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+1538710	Acrostichus nudicapitatus		Diplogastridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+178770	Haematopota pluvialis		Tabanidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+135692	Xylocopa violacea		Apidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+186250	Lepidocyrtus lanuginosus		Entomobryidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+136168	Onychiurus sp.		Onychiuridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+187682	Parisotoma notabilis		Isotomidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+281420	Folsomia quadrioculata		Isotomidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+2714226	Protaphorura cf. cancellata		Onychiuridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+2041949	Protaphorura cf. campata		Onychiuridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+2673671	Punctoribates sp		Punctoribatidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+508405	Tectocepheus sarekensis		Tectocepheidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+140966	Ceratozetes mediocris		Ceratozetoidea	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+1979925	Acrotritia duplicata		Euphthiracaridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+753177	Elophila nymphaeata		Crambidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+286770	Aporcelaimellus obtusicaudatus		Aporcelaimidae 	other_priority	data_generation			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+53277	Eliomys quercinus		Gliridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+	Protaphorura subuliginata		Onychiuridae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		
+	Mesaphorura krausbaueri		Tullbergiidae	other_priority	in_assembly			LOEWE-TBG	LOEWE-TBG	in_progress	LOEWE-TBG	LOEWE-TBG	LOEWE-TBG		

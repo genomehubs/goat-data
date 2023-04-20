@@ -1,37 +1,14 @@
-Species	Prefix_Tolid	Phylum	Class	Order	Family	Genus	other_priority	Status	project
-Ectocarpoides piscinalis nom. prov.		Stramenopiles/Ochrophyta	Phaeophyceae	Ectocarpales	Ectocarpaceae	Ectocarpos	DTOL	sample_collected	DTOL
-Caulonema contortum		Chlorophyta	Ulvophyceae	Ulotrichales		Caulonema	DTOL	sample_collected	DTOL
-Asterococcus limneticus		Chlorophyta	Chlorophyceae	Tetrasporales/Chlamydomonadales	Palmellopsidaceae	Asterococcus			DTOL
-Nutomonas kenti		Apusozoa		Acryomonadida		Nutomonas			DTOL
-Sporotetras  polydermatica		Chlorophyta		Sphaeropleales	Radiococcaceae	Sporotetras		sample_collected	DTOL
-Echinamoeba silvestris		Amoebozoa	Tubulinea	Euamoebida	Echinamoebidae	Echinamoeba		sample_collected	DTOL
-Neoparamoeba pemaquidensis		Amoebozoa	Discosea			Neoparamoeba		sample_collected	DTOL
-Rhizamoeba saxonica		Amoebozoa	Tubulinea	Trichosida	Trichosidae	Rhizamoeba		sample_collected	DTOL
-Rosculus ithacus		Amoebozoa/Discoba	Heterolobosea	Schizopyrenida		Rosculus		sample_collected	DTOL
-Tetramitus aberdonicus		Amoebozoa/Discoba	Heterolobosea	Schizopyrenida	Vahlkampfiidae	Tetramitus		sample_collected	DTOL
-Vannella anglica		Amoebozoa	Discosea	Flabellinia	Vannellida	Vannella		sample_collected	DTOL
-Achnanthes sp.		Stramenopiles/Ochrophyta	Bacillariophyceae	Mastogloiales/Achnanthales	Achnanthaceae	Achnanthes	DTOL	sample_collected	DTOL
-Characium sp.		Chlorophyta	Chlorophyceae	Chlamydomonadales/Sphaeropleales	Chlorococcaceae	Characium	DTOL	sample_collected	DTOL
-Stichococcus sp.		Chlorophyta	Trebouxiophyceae	Microthamniales/Prasiolales		Stichococcus	DTOL	sample_collected	DTOL
-Poterioochromonas malhamensis		Stramenopiles/Ochrophyta	Synurophyceae/Chrysophycaeae	Ochromonadales/Chromulinales	Ochromonadaceae	Poterioochromonas		sample_collected	DTOL
-Amoeba proteus		Amoebozoa	Tubulinea	Tubulinida	Amoebidae	Amoeba	DTOL		DTOL
-Gruberella flavescens		Amoebozoa	Discosea			Gruberella	DTOL	sample_collected	DTOL
-Allantion tachyploon		Cercozoa		Glissomonadida		Allantion	DTOL	sample_collected	DTOL
-Hormidiopsis crenulata		Chlorophyta	Ulvophyceae	Ulotrichales		Hormidiopsis	DTOL	sample_collected	DTOL
-Developayella elegans		Stramenopiles	Incerta sedis		Developea	Developayella			DTOL
-Chaetoceros debilis		Stramenopiles/Ochrophyta	Coscinodiscophyceae	Chaetocertales	Chaetocerotaceae	Chaetoceros		sample_collected	DTOL
-Trieres chinensis		Stramenopiles/Ochrophyta	Mediophyceae	Tricertatiales/Eupodiscales	Tricertatiaceae	Trieres		sample_collected	DTOL
-Nephroselmis rotunda		Chlorophyta	Nephrophyceae	Nephroselmidales		Nephropselmis		sample_collected	DTOL
-Rhogostoma micra		Cercozoa	Thecofilosea	Cryomonadida	Rhogostomidae	Rhogostoma		sample_collected	DTOL
-Keratococcus bicaudatus		Chlorophyta	Chlorophyceae	Sphaeropleales	Selenastraceae	Keratococcus 		sample_collected	DTOL
-Gloeocystis sp.		Chlorophyta	Chlorophyceae	Sphaeropleales	Radiococcaceae	Gloeocystis		sample_collected	DTOL
-Nolandella abertawensis		Amoebozoa	Tubulinea	Tubulinida	Hartmannellidae	Nolandella		sample_collected	DTOL
-Pascherina tetras		Chlorophyta	Chlorophyceae	Chlamydomonadales	Spondylimoraceae	Pascherina		sample_collected	DTOL
-Allovahlkampfia minuta		Amoebozoa/Discoba	Heterolobosea	Schizopyrenida	Vahlkampfiidae	Allovahlkampfia		sample_collected	DTOL
-Mayorella cantabrigiensis		Amoebozoa	Discosea	Longamoebia	Dermamoebida	Mayorella		sample_collected	DTOL
-Allas oxoniensis		Cercozoa	Imbricatea	Silicofilosea	Thaumatomonadida	Allas		sample_collected	DTOL
-Neoheteromita globosa		Chlorophyta	Nephrophyceae	Nephroselmidales		Nephropselmis			DTOL
-Tetrastrum staurogeniiforme		Chlorophyta	Trebouxiophyceae/Chlorophycaeae	Chlorellales/Sphaeropleales	Oocystaceae	Tetrastrum		sample_collected	DTOL
-Geminella sp.		Chlorophyta	Trebouxiophyceae	Chlorellales	Chlorellaceae	Geminella		sample_collected	DTOL
-Raphidonema sp.		Chlorophyta	Trebouxiophyceae	Prasiolales/Chlorellales	Koliellaceae	Raphidonema		sample_collected	DTOL
-Cyanophora paradoxa		Glaucophyta	Glaucocystophyceae/Glaucophyceae	Glaucocystales	Cyanophoraceae	Cyanophora		sample_collected	DTOL
+Prefix_TOLID	SPECIES	STRAIN_ID	STATUS	TAX_ID	PHYLUM	FAMILY	GENUS	TAXONOMIC NOTES	other_priority	goat_status
+	Ectocarpoides piscinalis nom. prov.	1307-1	COLLECTED			Ectocarpaceae	Ectocarpoides		DTOL	sample_collected
+	Caulonema contortum	312-1	COLLECTED		Chlorophyta		Caulonema	Caulonema contortum Uncertain ID	DTOL	sample_collected
+	Nutomonas kenti	1953-1	DEAD		Apusozoa		Nutomonas		DTOL	
+	Characium sp.	209-2	COLLECTED		Chlorophyta	Chlorococcaceae	Characium		DTOL	sample_collected
+	Allantion tachyploon	1906-1	COLLECTED		Cercozoa		Allantion 		DTOL	sample_collected
+	Developayella elegans	1917-1	DEAD		Stramenopiles	Developea	Developayella		DTOL	
+	Rhogostoma micra	1966-2	GROWING		Cercozoa	Rhogostomidae	Rhogostoma		DTOL	sample_collected
+	Keratococcus bicaudatus	202-21	COLLECTED		Chlorophyta	Selenastraceae	Keratococcus		DTOL	sample_collected
+	Gloeocystis sp.	31-4	COLLECTED		Chlorophyta	Radiococcaceae	Gloeocystis		DTOL	sample_collected
+	Pascherina tetras	159-2	COLLECTED		Chlorophyta	Spondylimoraceae	Pascherina		DTOL	sample_collected
+	Allas oxoniensis	1903-2	GROWING		Cercozoa	Thaumatomonadida	Allas		DTOL	sample_collected
+	Geminella sp.	384-3	GROWING		Chlorophyta	Chlorellaceae	Geminella		DTOL	sample_collected
+	Raphidonema sp.	470-3	COLLECTED		Chlorophyta	Koliellaceae	Raphidonema		DTOL	sample_collected
