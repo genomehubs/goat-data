@@ -1,8 +1,11 @@
 taxon_id	input	rank
+70895	Coenagrionidae	family
+6961	Odonata	order
+6968	Sympetrum	genus
+7147	Diptera	order
 7399	Hymenoptera	order
 42113	Clitellata	class
 7041	Coleoptera	order
-7147	Diptera	order
 2725004	Caenoplana variegata	species
 29065	Martes martes	species
 92169	Talitridae	family
@@ -43,7 +46,6 @@ taxon_id	input	rank
 6366	Sabellidae	family
 195257	Phyllodocidae	family
 6373	Terebellida	order
-6968	Sympetrum	genus
 7190	Simuliidae	family
 219548	Heleomyzidae	family
 43823	Limoniidae	family
@@ -177,8 +179,6 @@ taxon_id	input	rank
 2803879	Zyginidia scutellaris	species
 2794000	Canthophorus impressus	species
 62794	Tettigonia viridissima	species
-70895	Coenagrionidae	family
-6961	Odonata	order
 79454	Coenagrion	genus
 320102	Conistra rubiginea	species
 287375	Zygaena filipendulae	species
@@ -862,6 +862,7 @@ taxon_id	input	rank
 1545103	Corixa punctata	species
 242267	Plebejus argus	species
 107851	Haliplidae	family
+295195	Neophilaenus	genus
 36239	Mustela nivalis	species
 36723	Mustela erminea	species
 9627	Vulpes vulpes	species
@@ -1288,7 +1289,6 @@ taxon_id	input	rank
 56096	Gerris	genus
 50435	Hemerobiidae	family
 58593	Tetrix	genus
-295195	Neophilaenus	genus
 347979	Himacerus mirmicoides	species
 1100924	Autographa jota	species
 326949	Eupithecia icterata	species
