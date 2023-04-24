@@ -1,15 +1,18 @@
 taxon_id	input	rank
+7041	Coleoptera	order
+7408	Ichneumonidae	family
+7399	Hymenoptera	order
+753177	Elophila nymphaeata	species
+2560943	Amblyptilia acanthadactyla	species
+279441	Coniopterygidae	family
 70895	Coenagrionidae	family
 6961	Odonata	order
 6968	Sympetrum	genus
 7147	Diptera	order
-7399	Hymenoptera	order
 42113	Clitellata	class
-7041	Coleoptera	order
 2725004	Caenoplana variegata	species
 29065	Martes martes	species
 92169	Talitridae	family
-7408	Ichneumonidae	family
 500646	Metellina mengei	species
 1594371	Mompha subbistrigella	species
 925783	Idiocerus	genus
@@ -238,7 +241,6 @@ taxon_id	input	rank
 104428	Drepana falcataria	species
 987925	Diarsia rubi	species
 326959	Eulithis testata	species
-753177	Elophila nymphaeata	species
 294303	Chorthippus albomarginatus	species
 #ilEilLuri	Eilema lurideola	species
 1323534	Conocephalus dorsalis	species
@@ -327,7 +329,6 @@ taxon_id	input	rank
 191418	Maniola jurtina	species
 247614	Erigone	genus
 195258	Eteone	genus
-279441	Coniopterygidae	family
 934869	Horisme vitalbata	species
 1279098	Kageronia fuscogrisea	species
 1545127	Empicoris vagabundus	species
@@ -393,7 +394,6 @@ taxon_id	input	rank
 987932	Euplagia quadripunctaria	species
 197147	Caenis	genus
 988156	Rhizedra lutosa	species
-2560943	Amblyptilia acanthadactyla	species
 1449015	Helcystogramma rufescens	species
 #ilOxyAtre	Oxypteryx atrella	species
 406638	Ectobius pallidus	species
@@ -861,7 +861,23 @@ taxon_id	input	rank
 423268	Pleuroxus truncatus	species
 1545103	Corixa punctata	species
 242267	Plebejus argus	species
-107851	Haliplidae	family
+189513	Chrysoperla carnea	species
+758707	Acleris ferrugana	species
+687019	Caloptilia stigmatella	species
+997537	Lithophane semibrunnea	species
+214277	Noctua pronuba	species
+214139	Eupithecia assimilata	species
+988015	Papestra biren	species
+93883	Tineola bisselliella	species
+687129	Schreckensteinia festaliella	species
+988014	Orthosia populeti	species
+1869848	Ephestia unicolorella	species
+332931	Saturnia pavonia	species
+572747	Ectropis crepuscularia	species
+934852	Eupithecia indigata	species
+988050	Xylena vetusta	species
+1101034	Platyptilia gonodactyla	species
+753375	Nematopogon swammerdamellus	species
 295195	Neophilaenus	genus
 36239	Mustela nivalis	species
 36723	Mustela erminea	species
@@ -886,7 +902,6 @@ taxon_id	input	rank
 455298	Liocoris tripustulatus	species
 642069	Anthocoris nemorum	species
 1511241	Pantilius tunicatus	species
-988050	Xylena vetusta	species
 209521	Textrix denticulata	species
 269049	Cliona celata	species
 387443	Aporrhais pespelecani	species
@@ -1092,7 +1107,6 @@ taxon_id	input	rank
 439567	Hypomecis punctinalis	species
 254365	Abrostola triplasia	species
 #ilPerFlav	Perizoma flavofasciata	species
-572747	Ectropis crepuscularia	species
 938238	Laspeyria flexula	species
 988176	Drymonia dodonaea	species
 411963	Schrankia costaestrigalis	species
@@ -1121,7 +1135,6 @@ taxon_id	input	rank
 988079	Bena bicolorana	species
 1594281	Donacaula mucronella	species
 1858040	Mompha ochraceella	species
-214277	Noctua pronuba	species
 393392	Macaria	genus
 104447	Idaea aversata	species
 522836	Laothoe populi	species
@@ -1211,7 +1224,6 @@ taxon_id	input	rank
 1870269	Psychoides filicivora	species
 1482597	Phyllocnistis xenia	species
 79782	Cimex lectularius	species
-93883	Tineola bisselliella	species
 997515	Polypogon plumigeralis	species
 96551	Tuberolachnus salignus	species
 685678	Drapetisca socialis	species
@@ -1248,7 +1260,6 @@ taxon_id	input	rank
 758711	Acleris logiana	species
 1594360	Zelleria hepariella	species
 1100929	Bucculatrix thoracella	species
-687129	Schreckensteinia festaliella	species
 987960	Hypena rostralis	species
 1869947	Gillmeria ochrodactyla	species
 1100998	Glyphipterix thrasonella	species
@@ -1359,7 +1370,6 @@ taxon_id	input	rank
 236346	Adelphocoris lineolatus	species
 988064	Aporophyla lutulenta	species
 722658	Biston stratarius	species
-687019	Caloptilia stigmatella	species
 1399337	Solumbellula monocephalus	species
 1594312	Sciota angustella	species
 172134	Bathysaurus ferox	species
@@ -1400,13 +1410,11 @@ taxon_id	input	rank
 2561217	Dichrorampha plumbana	species
 1101054	Spilonota laricana	species
 934885	Parectropis similaria	species
-1869848	Ephestia unicolorella	species
 1046773	Chthonius ischnocheles	species
 505408	Trichopteryx carpinata	species
 132600	Scoliopteryx libatrix	species
 688490	Plagodis pulveraria	species
 1858058	Philedonides lunana	species
-988015	Papestra biren	species
 988011	Orthosia incerta	species
 1869865	Eriocrania cicatricella	species
 997542	Orthosia gracilis	species
@@ -1416,7 +1424,6 @@ taxon_id	input	rank
 242269	Callophrys rubi	species
 934840	Eupithecia abbreviata	species
 280090	Saldula saltatoria	species
-934852	Eupithecia indigata	species
 2876618	Hypomecis atomaria	species
 1869728	Colostygia multistrigaria	species
 987903	Colocasia coryli	species
