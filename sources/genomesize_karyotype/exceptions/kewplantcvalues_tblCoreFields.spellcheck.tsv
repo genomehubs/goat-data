@@ -45,6 +45,7 @@ taxon_id	input	rank	suggested
 357476	Papaver ruprifragum	species	Papaver rupifragum
 53089	Paphiopedilum godefroye	species	Paphiopedilum godefroyae
 364694	Peraxilla tetrasepala	species	Peraxilla tetrapetala
+999236	Petunia parodii	species	Peronia peronii
 82020	Scilla pushkinioides	species	Fessia puschkinioides
 82021	Scilla vvendenskyi	species	Fessia vvedenskyi
 409907	Phaseolus geophillus	species	Macroptilium panduratum
@@ -82,7 +83,6 @@ taxon_id	input	rank	suggested
 154734	Trichoceros antennifera	species	Trichoceros antennifer
 154929	Oncidium ornithorynchum	species	Oncidium ornithorhynchum
 lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
-122533	Hieracium brachiatum	species	Crepis pyrenaica
 1664177	Carex curviollis	species	Carex curvicollis
 	Digitaria ascendens	species	digitaria adscendens
 	Selaginella caulescans	species	selaginella caulescens
@@ -123,7 +123,8 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 85370	Lilium euxanthum	species	Lilium leucanthum
 	Paeonia broteroi	species	paeonia broteri	pavonia berteroi
 400870	Philodendron pinnatafidum 	species	Philodendron pinnatifidum
-	Trillium rivale 	species	trillium nivale	trifolium nivale	trifolium rivale
+361561	Trillium luteum         	species	Trifolium aureum
+82491	Trillium rivale 	species	Trillium nivale
 378697	Passiflora giberti	species	Passiflora gibertii
 295152	Gasteria pendulifolia	species	Guatteria australis
 434238	Pistacia therebinthus	species	Pistacia terebinthus
@@ -148,7 +149,6 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 165363	Teesdalia nudicalis	species	Teesdalia nudicaulis
 159435	Passiflora marifloia	species	Passiflora morifolia
 38785	Arabidopsis arensosa	species	Arabidopsis arenosa
-2862462	Salvia brachyodon	species	Salvia brachyodonta
 585829	Iris nelsonii	species	Iris wilsonii
 91067	Aeonium tabulaeforme	species	Aeonium tabuliforme
 91093	Greenovia dodrendalis	species	Aeonium dodrantale
@@ -287,7 +287,7 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 1417448	Restio scaberulous	species	Restio scaberulus
 1417457	Restio triteceus	species	Restio triticeus
 2067289	Lessingianthus pusillus	species	Lessingianthus pumillus
-	Trillium parviflorum	species	trifolium pauciflorum	trifolium parviflorum	tripolium pauciflorum
+	Trillium parviflorum	species	trifolium pauciflorum	trifolium parviflorum
 155756	Erysimum heiracifolium	species	Erysimum hieraciifolium
 152135	Soldanella rhodopea	species	Soldanella rhodopaea
 152123	Soldanella marmarossensis	species	Soldanella marmarossiensis
@@ -326,4 +326,5 @@ lpHorHalo	Hordeum haplophilum	species	Hordeum halophilum
 4451	Sagittaria saggittifolia	species	Sagittaria sagittifolia
 199755	Bupleurum tennuissimum	species	Bupleurum tenuissimum
 268015	Crepis convzifolia	species	Crepis conyzifolia
+221190	Hieracium sudeticum	species	Pilosella caespitosa
 203592	Sisymbrium strictissumum	species	Sisymbrium strictissimum
