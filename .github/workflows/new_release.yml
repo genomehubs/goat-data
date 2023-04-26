@@ -213,7 +213,7 @@ jobs:
 
       - name: Delete indices and snapshots for that release, except dev/analysis_file snapshot
         run: |
-          # curl -s -X DELETE "es1:9200/*--20*"
+          curl -s -X DELETE "es1:9200/*--20*"
           curl -s -X DELETE "es1:9200/_snapshot/dev/20*"
       - name: Restore and rename analysis_file snapshot to current RELEASE indices
         run: |
