@@ -1,12 +1,9 @@
 taxon_id	input	rank
+722658	Biston stratarius	species
+572809	Agriphila straminella	species
+131577	Agelastica alni	species
 247947	Epirrita christyi	species
 249532	Icerya purchasi	species
-1002954	Udea ferrugalis	species
-988043	Xestia ashworthii	species
-55777	Bromus sterilis	species
-170843	Planococcus citri	species
-271774	Alentia gelatinosa	species
-987425	Eurois occulta	species
 3025909	Choricystis sp. odSpoLacu1	species
 1803847	Protoeuglena noctilucae	species
 226178	Baccha elongata	species
@@ -15,9 +12,6 @@ taxon_id	input	rank
 1053395	Scutellaria minor	species
 97023	Trifolium fragiferum	species
 143172	Arctium minus	species
-722658	Biston stratarius	species
-572809	Agriphila straminella	species
-131577	Agelastica alni	species
 70131	Climacium dendroides	species
 195224	Malthinus flaveolus	species
 876078	Thymelicus acteon	species
@@ -202,31 +196,31 @@ taxon_id	input	rank
 495374	Oxytorus armatus	species
 721173	Tetheella fluctuosa	species
 1124559	Eupeodes luniger	species
-103414	Anomoia purmunda	species
-347394	Lordithon lunulatus	species
 869179	Hemicrepidius niger	species
 721156	Ochropacha duplaris	species
 1637456	Criorhina ranunculi	species
-878348	Pediacus dermestoides	species
 988154	Polyploca ridens	species
-115343	Adalia decempunctata	species
 267548	Salicornia ramosissima	species
+347394	Lordithon lunulatus	species
+115343	Adalia decempunctata	species
+103414	Anomoia purmunda	species
+878348	Pediacus dermestoides	species
+154017	Plagiodera versicolora	species
 2741129	Tipula vernalis	species
 3900	Trifolium subterraneum	species
 2867252	Heteromyza rotundicornis	species
-154017	Plagiodera versicolora	species
 320963	Tetanocera ferruginea	species
 258209	Berberis vulgaris	species
-310442	Cyclophora punctaria	species
-2776077	Paraperithous gnathaulax	species
-3034176	Nitzschia sp. pyKryTriq1	species
-3034142	Perkinsela sp. pyNocScin1	species
-2054278	Endosymbiont of Durinskia occulata	species
 511117	Merodon equestris	species
 223862	Raja brachyura	species
 320235	Leptophobia aripa	species
 422171	Aleiodes testaceus	species
 1398758	Porpolomopsis calyptriformis	species
+310442	Cyclophora punctaria	species
+2776077	Paraperithous gnathaulax	species
+3034176	Nitzschia sp. pyKryTriq1	species
+3034142	Perkinsela sp. pyNocScin1	species
+2054278	Endosymbiont of Durinskia occulata	species
 48668	Rutilus rutilus	species
 2567736	Yponomeuta cagnagella	species
 2567738	Yponomeuta padella	species
@@ -258,6 +252,7 @@ taxon_id	input	rank
 205924	Entomortierella parvispora	species
 2268375	Leptographium flavum	species
 114497	Cordyceps fumosorosea	species
+709496	Peniophora laeta	species
 2054275	Durinskia oculata	species
 2864184	Kryptoperidinium triquetrum	species
 2966	Noctiluca scintillans	species
@@ -269,7 +264,6 @@ taxon_id	input	rank
 186058	Cuscuta epithymum	species
 4166	Cymbalaria muralis	species
 475003	Euphrasia confusa	species
-119177	Inula conyza	species
 374711	Lathraea squamaria	species
 13597	Ligustrum vulgare	species
 60093	Vinca minor	species
@@ -381,7 +375,6 @@ taxon_id	input	rank
 2922079	Netelia melanura	species
 351686	Schizotus pectinicornis	species
 212925	Euphorbia lathyris	species
-709496	Peniophora laeta	species
 1077153	Paramoeba atlantica	species
 334708	Patella ulyssiponensis	species
 34253	Echium vulgare	species
@@ -389,6 +382,8 @@ taxon_id	input	rank
 4470	Lemna gibba	species
 702255	Logfia minima	species
 76438	Eriophorum vaginatum	species
+35570	Stomoxys calcitrans	species
+119177	Inula conyza	species
 1518534	Anopheles coluzzii	species
 62324	Anopheles funestus	species
 7165	Anopheles gambiae	species
