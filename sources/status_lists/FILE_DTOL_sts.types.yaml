@@ -25,7 +25,7 @@ attributes:
     header: sequencing_status_dtol
     separator:
       - ","
-  sequencing_status_erga:
+  sequencing_status_erga-pil:
     header: sequencing_status_ergapi
     separator:
       - ","
@@ -65,14 +65,20 @@ attributes:
     header: sample_collected
     separator:
       - ","
+    translate:
+      ERGAPI: ERGA-PIL
   sample_acquired:
     header: sample_acquired
     separator:
       - ","
+    translate:
+      ERGAPI: ERGA-PIL
   in_progress:
     header: in_progress
     separator:
       - ","
+    translate:
+      ERGAPI: ERGA-PIL
   sample_collected_by:
     translate:
       DALHOUSIE UNIVERSITY: DALU
