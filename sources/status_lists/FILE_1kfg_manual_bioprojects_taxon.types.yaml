@@ -3,6 +3,10 @@ file:
   header: true
   comment: "#"
   name: 1kfg_manual_bioprojects.tsv
+  source: Declared Status List in INSDC- 1KFG
+  source_date: 2023-04-27
+  source_description: Declared Status List - 1KFG, JGI GOLD API StudyId Gs000001 with Bioproject IDs on INSDC
+  source_url: https://github.com/genomehubs/goat-data/blob/main/sources/status_lists/1kfg_manual_bioprojects.tsv
 attributes:
   sequencing_status:
     header: project
