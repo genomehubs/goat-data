@@ -1,5 +1,8 @@
 name: test_api
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - feature-autoimport
 
 jobs:
   update_api_googlesheets_data:
