@@ -37,11 +37,16 @@ def nhm_api_count_handler(r_text):
 def nhm_row_handler(_, result_count, fieldnames):
     page_size = 200
     result = []
+    result_count = 10000
     for page in range(0, result_count, page_size):
         # does this need to be somewhere else??
         url = f"https://data.nhm.ac.uk/api/action/datastore_search?filters=%7B%22project%22%3A+%5B%22darwin+tree+of+life%22%5D%7D&resource_id=05ff2255-c38a-40c9-b657-4ccb55ab2feb&offset={page}&limit={page_size}"
         r   = requests.get(url).json()
-        dl  = r['result']['records']
+        try:
+          dl  = r['result']['records']
+        except:
+          print(url,r)
         d = [[species.get(f) for f in fieldnames] for species in dl]
         result.extend(d)
     return result
+
