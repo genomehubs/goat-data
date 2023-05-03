@@ -1,0 +1,34 @@
+name: test_api
+on:
+  push:
+    branches:
+      - feature-autoimport
+
+jobs:
+  update_api_googlesheets_data:
+    runs-on:  [ self-hosted ]
+    steps:
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install requests pyyaml
+
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+
+      - name: Get from nhm and vgl APIs
+        run: |
+          python3 ./scripts/api_to_tsv.py
+
+      - name: Commit files in branch
+        run: |
+          git config --local user.email "sujaikumar@gmail.com"
+          git config --local user.name "sujaikumar"
+          git add -A
+          git commit -m "Add changes from workflow running"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
