@@ -11,6 +11,10 @@ taxon_id	input	rank
 143172	Arctium minus	species
 721156	Ochropacha duplaris	species
 721173	Tetheella fluctuosa	species
+206093	Electrona antarctica	species
+1431430	Andrena trimmerana	species
+336583	Amaurobius ferox	species
+104449	Idaea straminata	species
 876078	Thymelicus acteon	species
 4298	Ilex aquifolium	species
 97021	Trifolium dubium	species
@@ -45,7 +49,6 @@ taxon_id	input	rank
 1587206	Cryptocephalus primarius	species
 2690816	Empis trigramma	species
 77129	Drosophila helvetica	species
-1431430	Andrena trimmerana	species
 1190801	Andrena helvola	species
 347362	Hermaeophaga mercurialis	species
 198718	Drosophila histrio	species
@@ -127,7 +130,6 @@ taxon_id	input	rank
 65311	Diplazon laetatorius	species
 346801	Melanotus villosus	species
 2884234	Ophion ellenae	species
-206093	Electrona antarctica	species
 2494894	Crossocerus cetratus	species
 1032817	Inocybe grammopodia	species
 1169566	Inocybe tigrina	species
@@ -139,7 +141,6 @@ taxon_id	input	rank
 2867249	Amblyjoppa fuscipennis	species
 2884233	Ophion confusus	species
 108914	Gerris lacustris	species
-336583	Amaurobius ferox	species
 2882575	Pedicia rivosa	species
 333879	Denticollis linearis	species
 88504	Lasioglossum calceatum	species
@@ -169,7 +170,6 @@ taxon_id	input	rank
 988024	Polia nebulosa	species
 934838	Epirrhoe tristata	species
 505411	Falcaria lacertinaria	species
-104449	Idaea straminata	species
 1143099	Pogonocherus hispidulus	species
 295940	Silvanus unidentatus	species
 245335	Isothecium myosuroides	species
@@ -198,20 +198,20 @@ taxon_id	input	rank
 875879	Petrophora chlorosata	species
 1398758	Porpolomopsis calyptriformis	species
 2776077	Paraperithous gnathaulax	species
+310442	Cyclophora punctaria	species
+351686	Schizotus pectinicornis	species
 878348	Pediacus dermestoides	species
 511117	Merodon equestris	species
 223862	Raja brachyura	species
 422171	Aleiodes testaceus	species
 31202	Spisula subtruncata	species
-310442	Cyclophora punctaria	species
-351686	Schizotus pectinicornis	species
-2741129	Tipula vernalis	species
-3900	Trifolium subterraneum	species
-2867252	Heteromyza rotundicornis	species
-320963	Tetanocera ferruginea	species
 703265	Myrrha octodecimguttata	species
 347424	Othius punctulatus	species
 1851132	Neria commutata	species
+2867252	Heteromyza rotundicornis	species
+2741129	Tipula vernalis	species
+3900	Trifolium subterraneum	species
+320963	Tetanocera ferruginea	species
 258209	Berberis vulgaris	species
 320235	Leptophobia aripa	species
 3034176	Nitzschia sp. pyKryTriq1	species
@@ -412,6 +412,16 @@ taxon_id	input	rank
 687026	Coleophora deauratella	species
 4164	Digitalis purpurea	species
 871386	Xiphydria camelus	species
+53176	Teucrium chamaedrys	species
+1053393	Scrophularia auriculata	species
+35712	Leersia oryzoides	species
+196703	Carduus tenuiflorus	species
+581250	Stellaria holostea	species
+542982	Heliothis peltigera	species
+347188	Vicia sepium	species
+172267	Salix caprea	species
+39082	Muscardinus avellanarius	species
+360071	Amphimallon solstitiale	species
 1518534	Anopheles coluzzii	species
 62324	Anopheles funestus	species
 7165	Anopheles gambiae	species
