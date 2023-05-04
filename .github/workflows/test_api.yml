@@ -20,7 +20,7 @@ jobs:
 
       - name: Get from nhm and vgl APIs
         run: |
-          python3 ./scripts/api_to_tsv.py
+          python3 ./scripts/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }}
 
       - name: Commit files in branch
         run: |
