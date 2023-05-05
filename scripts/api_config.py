@@ -2,10 +2,12 @@ import json
 import yaml
 import requests
 
-# FOR VGL
+#####################################################################
+# VGL
+#####################################################################
 
 vgl_fieldnames = ['common_name', 'family', 'order', 'scientific_name', 'status', 'taxon_id', 'vgp_phase']
-vgl_output_filename = './sources/status_lists/vgl.tsv'
+vgl_output_filename = './sources/status_lists/vgp.tsv'
 
 def vgl_url_opener(**kwargs):
   vgl_url = 'https://raw.githubusercontent.com/vgl-hub/genome-portal/master/_data/table_tracker.yml'
@@ -24,8 +26,9 @@ def vgl_row_handler(r_text, fieldnames, **kwargs):
     result.append(d)
   return result
   
-  
-# FOR NHM
+#####################################################################  
+# NHM
+#####################################################################
 
 nhm_fieldnames = ["institutionCode","otherCatalogNumbers","preservative","phylum","class","order","family","genus","specificEpithet","year"]
 nhm_output_filename = './sources/status_lists/nhm.tsv'
@@ -75,7 +78,9 @@ def nhm_row_handler(fieldnames, **kwargs):
 
   return result
 
-# FROM STS
+#####################################################################
+# STS
+#####################################################################
 
 sts_url = 'https://sts.tol.sanger.ac.uk/api/v1/species'
 sts_output_filename = './sources/status_lists/sts.tsv'
@@ -105,7 +110,6 @@ def sts_row_handler(result_count, fieldnames, token, **kwargs):
   result = []
 
   for page in range(1,int(result_count / page_size) + 2):
-  # for page in range(1,3):
     print(page)
 
     url = f"{sts_url}?page={page}&page_size={page_size}"
@@ -145,3 +149,33 @@ def sts_row_handler(result_count, fieldnames, token, **kwargs):
       result.extend(d)
 
   return result
+
+#####################################################################
+# JGI 
+#####################################################################
+
+# jgi_fieldnames = [
+#   "projectGoldId", "projectName", "legacyGoldId", "studyGoldId",
+#   "biosampleGoldId", "organismGoldId", "itsProposalId", "itsSpid",
+#   "itsSampleId", "pmoProjectId", "gptsProposalId",
+#   "ncbiBioProjectAccession", "ncbiBioSampleAccession",
+#   "projectStatus", "sequencingStatus",
+#   "jgiFundingProgram", "jgiFundingYear", "hmpId",
+#   "modDate", "addDate", "sequencingStrategy",
+#   "sequencingCenters", "seqMethod",
+#   "genomePublications", "otherPublications",
+#   "sraExperimentIds"
+#   ]
+# jgi_output_filename = './sources/status_lists/jgi_1kfg.tsv'
+# jgi_url='https://gold-ws.jgi.doe.gov'
+# jgi_headers = {'content-type': 'application/json'}
+
+# def jgi_get_access_token(offline_token):
+#   access_token = requests.get(jgi_url + '/exchange?offlineToken=' + offline_token).content.decode()
+#   return access_token
+
+# def jgi_url_opener(offline_token):
+
+# def jgi_api_count_handler(r_text):
+
+# def jgi_row_handler(fieldnames, **kwargs):

@@ -20,15 +20,4 @@ jobs:
 
       - name: Get from nhm and vgl APIs
         run: |
-          python3 ./scripts/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }}
-
-      - name: Commit files in branch
-        run: |
-          git config --local user.email "sujaikumar@gmail.com"
-          git config --local user.name "sujaikumar"
-          git add -A
-          git commit -m "Add changes from workflow running"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          python3 ./scripts/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} ${{ secrets.JGI_OFFLINE_TOKEN }}
