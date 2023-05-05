@@ -1,14 +1,30 @@
 taxon_id	input	rank
-7408	Ichneumonidae	family
 7041	Coleoptera	order
+7408	Ichneumonidae	family
+30263	Trichoptera	order
+7147	Diptera	order
+6961	Odonata	order
+309576	Ecdyonurus	genus
+6683	Decapoda	order
+177632	Rhyacophila	genus
+1077841	Serratella ignita	species
+6968	Sympetrum	genus
+79454	Coenagrion	genus
+70895	Coenagrionidae	family
+688415	Leucoma salicis	species
+286670	Pentatoma rufipes	species
+34687	Stratiomyidae	family
+446444	Heptagenia sulphurea	species
+191418	Maniola jurtina	species
+295201	Aphrophora alni	species
+57111	Erpobdella	genus
+247614	Erigone	genus
+187486	Xysticus	genus
+45920	Araneus diadematus	species
 7399	Hymenoptera	order
 753177	Elophila nymphaeata	species
 2560943	Amblyptilia acanthadactyla	species
 279441	Coniopterygidae	family
-70895	Coenagrionidae	family
-6961	Odonata	order
-6968	Sympetrum	genus
-7147	Diptera	order
 42113	Clitellata	class
 2725004	Caenoplana variegata	species
 29065	Martes martes	species
@@ -20,7 +36,6 @@ taxon_id	input	rank
 1511259	Corizus hyoscyami	species
 1511249	Rhopalus subrufus	species
 27515	Pompilidae	family
-34687	Stratiomyidae	family
 7205	Tabanidae	family
 41043	Tipula	genus
 7713	Ascidiacea	class
@@ -38,7 +53,6 @@ taxon_id	input	rank
 7625	Echinoidea	class
 106738	Amphiuridae	family
 55617	Ophiocomina nigra	species
-6683	Decapoda	order
 6745	Paguridae	family
 6821	Amphipoda	order
 51768	Alcyonium digitatum	species
@@ -124,7 +138,6 @@ taxon_id	input	rank
 #qqHarHomb	Harpactea hombergi	species
 286075	Clubiona	genus
 537451	Leiobunum rotundum	species
-187486	Xysticus	genus
 336569	Philodromus cespitum	species
 1569508	Brachydesmus superus	species
 1915218	Ceratosphys amoena	species
@@ -175,14 +188,12 @@ taxon_id	input	rank
 7149	Chironomidae	family
 50603	Panorpa germanica	species
 381127	Tandonia budapestensis	species
-1077841	Serratella ignita	species
 355390	Stenobothrus lineatus	species
 58560	Gomphocerippus rufus	species
 166131	Asiraca clavicornis	species
 2803879	Zyginidia scutellaris	species
 2794000	Canthophorus impressus	species
 62794	Tettigonia viridissima	species
-79454	Coenagrion	genus
 320102	Conistra rubiginea	species
 287375	Zygaena filipendulae	species
 1857961	Agrotis puta	species
@@ -216,7 +227,6 @@ taxon_id	input	rank
 41098	Cantharis	genus
 295677	Leiopus	genus
 999308	Anthophila fabriciana	species
-30263	Trichoptera	order
 50645	Limnephilidae	family
 77572	Halictidae	family
 1134731	Eurygaster testudinaria	species
@@ -228,7 +238,6 @@ taxon_id	input	rank
 572725	Argyresthia goedartella	species
 1101029	Pandemis corylana	species
 172486	Gelis	genus
-286670	Pentatoma rufipes	species
 1511221	Aelia acuminata	species
 226174	Helophilus pendulus	species
 1107736	Tetragnatha extensa	species
@@ -315,7 +324,6 @@ taxon_id	input	rank
 95170	Membranipora membranacea	species
 72672	Ophiura albida	species
 62803	Nemoura	genus
-309576	Ecdyonurus	genus
 197150	Centroptilum luteolum	species
 295196	Neophilaenus lineatus	species
 85310	Nezara viridula	species
@@ -326,8 +334,6 @@ taxon_id	input	rank
 1870035	Lithophane leautieri	species
 1870628	Eremobia ochroleuca	species
 1008866	Ommatoiulus sabulosus	species
-191418	Maniola jurtina	species
-247614	Erigone	genus
 195258	Eteone	genus
 934869	Horisme vitalbata	species
 1279098	Kageronia fuscogrisea	species
@@ -357,7 +363,6 @@ taxon_id	input	rank
 #ilPtePali	Pterostoma palpina	species
 51987	Alcyonidium gelatinosum	species
 #ilEilGrie	Eilema griseola	species
-295201	Aphrophora alni	species
 446485	Sigara	genus
 560967	Callopora lineata	species
 987956	Hoplodrina blanda	species
@@ -370,7 +375,6 @@ taxon_id	input	rank
 307890	Rhithrogena	genus
 29151	Osmerus eperlanus	species
 214073	Calophasia lunula	species
-45920	Araneus diadematus	species
 90069	Solea solea	species
 27412	Cumacea	order
 317545	Urothoe	genus
@@ -517,10 +521,8 @@ taxon_id	input	rank
 1594276	Dichrorampha alpinana	species
 934904	Xanthorhoe spadicearia	species
 987968	Leucania comma	species
-688415	Leucoma salicis	species
 934891	Scopula floslactata	species
 689108	Thera juniperata	species
-57111	Erpobdella	genus
 6398	Lumbricus terrestris	species
 153587	Ancylus fluviatilis	species
 120472	Theodoxus fluviatilis	species
@@ -732,7 +734,6 @@ taxon_id	input	rank
 2069595	Isogenus nubecula	species
 2566911	Leuctra moselyi	species
 941815	Xanthoperla apicalis	species
-177632	Rhyacophila	genus
 143724	Amphinemura sulcicollis	species
 2065413	Brachyptera putata	species
 #ieArtCong	Arthroplea congener	species
@@ -771,7 +772,6 @@ taxon_id	input	rank
 2717726	Ephemera lineata	species
 446453	Osmylus fulvicephalus	species
 195269	Oulimnius	genus
-446444	Heptagenia sulphurea	species
 280219	Plea minutissima	species
 209694	Stenochironomus	genus
 158437	Lepidostomatidae	family
@@ -860,7 +860,27 @@ taxon_id	input	rank
 301280	Hebrus ruficeps	species
 423268	Pleuroxus truncatus	species
 1545103	Corixa punctata	species
-242267	Plebejus argus	species
+#ilMytLito	Mythimna litoralis	species
+287402	Zygaena trifolii	species
+6932	Pholcus phalangioides	species
+13068	Forficula auricularia	species
+78633	Pieris napi	species
+116150	Pararge aegeria	species
+305969	Rhodometra sacraria	species
+179666	Tyria jacobaeae	species
+405010	Argynnis aglaja	species
+27394	Tetragnathidae	family
+27395	Tetragnatha	genus
+34643	Theridiidae	family
+81835	Linyphiidae	family
+94016	Thomisidae	family
+74973	Lycosidae	family
+94017	Salticidae	family
+43271	Opiliones	order
+6893	Araneae	order
+6913	Araneidae	family
+336629	Araniella	genus
+483950	Acanthosoma haemorrhoidale	species
 934880	Macaria wauaria	species
 189513	Chrysoperla carnea	species
 758707	Acleris ferrugana	species
@@ -980,7 +1000,6 @@ taxon_id	input	rank
 45623	Pelophylax lessonae	species
 75865	Tadorna tadorna	species
 210797	Golfingia vulgaris	species
-81835	Linyphiidae	family
 2979189	Oligolophus hansenii	species
 1810957	Araniella cucurbitina	species
 #qdOphAlbo	Ophiodesmus albonanus	species
@@ -1093,7 +1112,6 @@ taxon_id	input	rank
 753230	Stathmopoda pedella	species
 722659	Cabera pusaria	species
 1594245	Cataclysta lemnata	species
-78633	Pieris napi	species
 987881	Apamea lithoxylaea	species
 1178059	Argyresthia brockeella	species
 190359	Scopula imitaria	species
@@ -1201,7 +1219,6 @@ taxon_id	input	rank
 287208	Adscita geryon	species
 #qpTraBrit	Trachypauropus britannicus	species
 27554	Ctenolepisma longicaudatum	species
-13068	Forficula auricularia	species
 326953	Euchoeca nebulata	species
 1660574	Aethes tesserana	species
 1070333	Ectoedemia decentella	species
@@ -1235,9 +1252,7 @@ taxon_id	input	rank
 706706	Allygus	genus
 1437213	Iassus lanio	species
 1926223	Scotophaeus blackwalli	species
-483950	Acanthosoma haemorrhoidale	species
 1155754	Philodromus dispar	species
-27395	Tetragnatha	genus
 #ihHetUrti	Heterogaster urticae	species
 50483	Raphidiidae	family
 881521	Alydus calcaratus	species
@@ -1328,7 +1343,6 @@ taxon_id	input	rank
 52816	Panorpa communis	species
 1267525	Mitopus morio	species
 2747077	Kochiura aulica	species
-336629	Araniella	genus
 1871991	Phrurolithus minimus	species
 1871950	Episinus maculipes	species
 1907075	Zelotes longipes	species
@@ -1397,7 +1411,6 @@ taxon_id	input	rank
 283886	Leuconia nivea	species
 27876	Lepidapedon	genus
 143734	Leuctra	genus
-6893	Araneae	order
 1560625	Sisyra terminalis	species
 1504853	Nineta flava	species
 1504870	Sympherobius pygmaeus	species
