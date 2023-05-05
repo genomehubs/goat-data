@@ -2,6 +2,12 @@ taxon_id	input	rank
 247947	Epirrita christyi	species
 249532	Icerya purchasi	species
 226178	Baccha elongata	species
+721173	Tetheella fluctuosa	species
+1431430	Andrena trimmerana	species
+336583	Amaurobius ferox	species
+104449	Idaea straminata	species
+108914	Gerris lacustris	species
+206093	Electrona antarctica	species
 3025909	Choricystis sp. odSpoLacu1	species
 1803847	Protoeuglena noctilucae	species
 478167	Anthophora plumipes	species
@@ -10,11 +16,7 @@ taxon_id	input	rank
 97023	Trifolium fragiferum	species
 143172	Arctium minus	species
 721156	Ochropacha duplaris	species
-721173	Tetheella fluctuosa	species
-206093	Electrona antarctica	species
-1431430	Andrena trimmerana	species
-336583	Amaurobius ferox	species
-104449	Idaea straminata	species
+2054278	Endosymbiont of Durinskia occulata	species
 876078	Thymelicus acteon	species
 4298	Ilex aquifolium	species
 97021	Trifolium dubium	species
@@ -31,7 +33,7 @@ taxon_id	input	rank
 331344	Napeogenes sylphis	species
 471061	Mechanitis mazaeus	species
 331285	Napeogenes inachia	species
-351486	Grammoptera ruficornis	species
+1553597	Oedemera lurida	species
 178772	Empis livida	species
 260537	Notonecta glauca	species
 1219160	Physocephala rufipes	species
@@ -140,7 +142,6 @@ taxon_id	input	rank
 9737	Stenella coeruleoalba	species
 2867249	Amblyjoppa fuscipennis	species
 2884233	Ophion confusus	species
-108914	Gerris lacustris	species
 2882575	Pedicia rivosa	species
 333879	Denticollis linearis	species
 88504	Lasioglossum calceatum	species
@@ -202,24 +203,31 @@ taxon_id	input	rank
 351686	Schizotus pectinicornis	species
 878348	Pediacus dermestoides	species
 511117	Merodon equestris	species
-223862	Raja brachyura	species
 422171	Aleiodes testaceus	species
-31202	Spisula subtruncata	species
 703265	Myrrha octodecimguttata	species
 347424	Othius punctulatus	species
 1851132	Neria commutata	species
 2867252	Heteromyza rotundicornis	species
+223862	Raja brachyura	species
+31202	Spisula subtruncata	species
+3034176	Nitzschia sp. pyKryTriq1	species
+3034142	Perkinsela sp. pyNocScin1	species
+320235	Leptophobia aripa	species
 2741129	Tipula vernalis	species
 3900	Trifolium subterraneum	species
 320963	Tetanocera ferruginea	species
-258209	Berberis vulgaris	species
-320235	Leptophobia aripa	species
-3034176	Nitzschia sp. pyKryTriq1	species
-3034142	Perkinsela sp. pyNocScin1	species
-2054278	Endosymbiont of Durinskia occulata	species
-878362	Philonthus spinipes	species
+475003	Euphrasia confusa	species
 1330250	Podarcis cretensis	species
 48668	Rutilus rutilus	species
+258209	Berberis vulgaris	species
+631317	Gymnocheta viridis	species
+878362	Philonthus spinipes	species
+405023	Boloria euphrosyne	species
+207157	Aphodius granarius	species
+1902997	Ptychoptera albimana	species
+997526	Apamea anceps	species
+1545263	Tingis ampliata	species
+59451	Eptesicus nilssonii	species
 2567736	Yponomeuta cagnagella	species
 2567738	Yponomeuta padella	species
 98922	Myotis daubentonii	species
@@ -259,7 +267,6 @@ taxon_id	input	rank
 155530	Calliostoma zizyphinum	species
 140242	Cruzella marina	species
 2848973	Dinobryon sp. CCAP917/5	species
-475003	Euphrasia confusa	species
 2862204	Hibiscus tridactylites	species
 487684	Inga laurina	species
 3691	Populus nigra	species
@@ -315,6 +322,7 @@ taxon_id	input	rank
 878440	Pterostichus vernalis	species
 1971315	Melinopterus prodromus	species
 146840	Labia minor	species
+334708	Patella ulyssiponensis	species
 1088609	Ammophila pubescens	species
 2884248	Netelia thomsonii	species
 601518	Nomada ferruginata	species
@@ -352,42 +360,41 @@ taxon_id	input	rank
 1220549	Amphibalanus improvisus	species
 1954227	Arcuatula senhousia	species
 559701	Pegoplata infirma	species
-207157	Aphodius granarius	species
 2902216	Cleonymus obscurus	species
 92596	Lonchoptera lutea	species
 61981	Cylindroiulus punctatus	species
-1902997	Ptychoptera albimana	species
 878103	Hemicoelus fulvicornis	species
 80831	Tridacna derasa	species
-1545263	Tingis ampliata	species
-1522478	Buglossoporus quercinus	species
 103936	Bombus monticola	species
 196075	Sprattus sprattus	species
 2725500	Anthrax anthrax	species
 118470	Ophyiulus pilosus	species
 630703	Rhynchopus euleeides	species
 52816	Panorpa communis	species
-997526	Apamea anceps	species
 37598	Fringilla coelebs	species
 442081	Brachypterus glaber	species
 2922079	Netelia melanura	species
 212925	Euphorbia lathyris	species
 1077153	Paramoeba atlantica	species
-334708	Patella ulyssiponensis	species
 119177	Inula conyza	species
-631317	Gymnocheta viridis	species
 494149	Cryptus armator	species
 273764	Cryptus viduatorius	species
 475394	Euphrasia tetraquetra	species
-405023	Boloria euphrosyne	species
 114206	Tofieldia pusilla	species
-59451	Eptesicus nilssonii	species
 313220	Montia fontana	species
 767568	Sparganium erectum	species
 1473635	Dusona minor	species
 2171618	Magallana gigas	species
 39848	Agrostemma githago	species
 41653	Tragopogon pratensis	species
+360071	Amphimallon solstitiale	species
+127875	Cinclus cinclus	species
+1053393	Scrophularia auriculata	species
+347188	Vicia sepium	species
+172267	Salix caprea	species
+32247	Rubus idaeus	species
+1149847	Salix arbuscula	species
+85417	Gobius niger	species
 61862	Plecotus auritus	species
 34253	Echium vulgare	species
 560974	Schizomavella linearis	species
@@ -413,15 +420,19 @@ taxon_id	input	rank
 4164	Digitalis purpurea	species
 871386	Xiphydria camelus	species
 53176	Teucrium chamaedrys	species
-1053393	Scrophularia auriculata	species
 35712	Leersia oryzoides	species
 196703	Carduus tenuiflorus	species
 581250	Stellaria holostea	species
 542982	Heliothis peltigera	species
-347188	Vicia sepium	species
-172267	Salix caprea	species
 39082	Muscardinus avellanarius	species
-360071	Amphimallon solstitiale	species
+2017640	Eristalinus aeneus	species
+267229	Rosa agrestis	species
+2998517	Allygidius commutatus	species
+111401	Chrysolina graminis	species
+59485	Vespertilio murinus	species
+2848974	Navicula sp. CCAP1050/13	species
+1918153	Phorocera assimilis	species
+997525	Agrotis clavis	species
 1518534	Anopheles coluzzii	species
 62324	Anopheles funestus	species
 7165	Anopheles gambiae	species
@@ -512,7 +523,6 @@ taxon_id	input	rank
 447135	Myodes glareolus	species
 42254	Sorex araneus	species
 56720	Lipophrys pholis	species
-127875	Cinclus cinclus	species
 1091426	Protomyctophum parallelum	species
 27697	Sardina pilchardus	species
 7748	Lampetra fluviatilis	species
