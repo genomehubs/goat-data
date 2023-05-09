@@ -1,15 +1,15 @@
 taxon_id	input	rank
 7041	Coleoptera	order
 7408	Ichneumonidae	family
-30263	Trichoptera	order
 7147	Diptera	order
-6961	Odonata	order
 309576	Ecdyonurus	genus
+30263	Trichoptera	order
+6961	Odonata	order
 6683	Decapoda	order
+79454	Coenagrion	genus
 177632	Rhyacophila	genus
 1077841	Serratella ignita	species
 6968	Sympetrum	genus
-79454	Coenagrion	genus
 70895	Coenagrionidae	family
 688415	Leucoma salicis	species
 286670	Pentatoma rufipes	species
@@ -862,9 +862,9 @@ taxon_id	input	rank
 1545103	Corixa punctata	species
 #ilMytLito	Mythimna litoralis	species
 287402	Zygaena trifolii	species
-6932	Pholcus phalangioides	species
 13068	Forficula auricularia	species
 78633	Pieris napi	species
+6932	Pholcus phalangioides	species
 116150	Pararge aegeria	species
 305969	Rhodometra sacraria	species
 179666	Tyria jacobaeae	species
@@ -875,12 +875,12 @@ taxon_id	input	rank
 81835	Linyphiidae	family
 94016	Thomisidae	family
 74973	Lycosidae	family
-94017	Salticidae	family
-43271	Opiliones	order
 6893	Araneae	order
+43271	Opiliones	order
+94017	Salticidae	family
+483950	Acanthosoma haemorrhoidale	species
 6913	Araneidae	family
 336629	Araniella	genus
-483950	Acanthosoma haemorrhoidale	species
 934880	Macaria wauaria	species
 189513	Chrysoperla carnea	species
 758707	Acleris ferrugana	species
