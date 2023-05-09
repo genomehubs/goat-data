@@ -1,8 +1,8 @@
 import import_status_lib as isl
 import sys
 
-from imp import reload 
-reload(isl)
+# from imp import reload
+# reload(isl)
 
 private_tsv = isl.open_private_tsv(sys.argv[1])
 private_tsv = private_tsv.reset_index()  # make sure indexes pair with number of rows

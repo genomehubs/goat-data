@@ -11,16 +11,16 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install requests pyyaml
+          pip install requests pyyaml pandas numpy
 
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
 
-      - name: Get from nhm and vgl APIs
-        run: |
-          python3 ./scripts/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} ${{ secrets.JGI_OFFLINE_TOKEN }}
+      # - name: Get from nhm and vgl and STS APIs
+      #   run: |
+      #     python3 ./scripts/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} ${{ secrets.JGI_OFFLINE_TOKEN }}
 
       - name: Get Schema 2.5  status files
         run: |

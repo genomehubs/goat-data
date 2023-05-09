@@ -107,7 +107,7 @@ def expand_sequencing_status(project_table, acronym):
 # Export tsv:
 
 def export_expanded_tsv(project_table, acronym):
-    file_name = acronym + '_expanded.tsv'
+    file_name = './sources/status_lists/' + acronym + '_expanded.tsv'
     final_tsv = project_table.to_csv(file_name, sep="\t", index=False)
     return final_tsv
 
