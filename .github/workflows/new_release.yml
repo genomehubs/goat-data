@@ -157,12 +157,14 @@ jobs:
       - name: Update source_date in yamls
         run:  |
           RELEASEDATE=${RELEASE//./-}
-          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_DTOL_sts.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_assembly_informatics_status_kmer_draft.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_Plant_Genome_Size_Estimates.types.yaml
           perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_DTOL_nhm.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_DTOL_sts.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_EBP_Nor_long_list.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_eurofish.types.yaml
           perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_jgi1kfg_status.types.yaml
           perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_vgp_table_tracker.types.yaml
-          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_Plant_Genome_Size_Estimates.types.yaml
-          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_assembly_informatics_status_kmer_draft.types.yaml
 
       - name: Commit files in branch
         run: |
