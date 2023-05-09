@@ -115,7 +115,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install requests pyyaml
+          pip install requests pyyaml pandas numpy
 
       - name: Get bash release name
         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
@@ -125,30 +125,33 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
           ref: ${{ env.RELEASE }}
 
-      - name: Get from nhm api
+      - name: Get from nhm and vgl and STS APIs
         run: |
-          python3 ./scripts/nhm_to_tsv.py \
-          | perl -plne '
+          python3 ./scripts/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} ${{ secrets.JGI_OFFLINE_TOKEN }}
+
+      - name: Get Schema 2.5 status files
+        run: |
+          python3 ./scripts/import_status.py "${{ secrets.ORIGINAL2_5_SCHEMA }}"
+
+      - name: process nhm tsv
+        run: |
+          perl -i -plne '
             s/(.*institutionCode.*)/$1\tsequencing_status\tsample_collected\tsample_collected_by/ and next;
             s/$/\tsample_collected\tDTOL\tNHM/;
-          ' > ./sources/status_lists/nhm.tsv
+          ' ./sources/status_lists/nhm.tsv
 
-      - name: Get from sts api
-        run:  python3 ./scripts/sts_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} > ./sources/status_lists/sts.tsv
-
-      - name: Get from jgi api
-        run:  python3 ./scripts/jgi_to_tsv.py ${{ secrets.JGI_OFFLINE_TOKEN }} > ./sources/status_lists/jgi_1kfg.tsv
-
-      - name: Get from vgp yaml
+      - name: process vgp tsv
         run: |
-          python3 ./scripts/vgp_to_tsv.py \
-          | perl -plne '
+          perl -i -plne '
             s/(.*taxon_id.*)$/$1\tlong_list\tsample_collected\tsample_acquired\tin_progress\tinsdc_submitted\tinsdc_open\tpublished/;
             s/(.*0-data_queued.*)$/$1\tVGP\tVGP\tVGP\t\t\t\t/;
             s/(.(1-DNA_isolation|2-data_progress|3-data_done|4-asm_progress|5-asm_done|6-asm_curation|7-asm_curated).*)$/$1\tVGP\tVGP\tVGP\tVGP\t\t\t/;
             s/(.*8-NCBI.*)$/$1\tVGP\tVGP\tVGP\tVGP\tVGP\tVGP\t/;
-          ' > ./sources/status_lists/vgp.tsv
+          ' ./sources/status_lists/vgp.tsv
 
+      - name: Get from jgi api
+        run:  python3 ./scripts/jgi_to_tsv.py ${{ secrets.JGI_OFFLINE_TOKEN }} > ./sources/status_lists/jgi_1kfg.tsv
+  
       - name: Get from googlesheets (Kew, DTOL Assembly Informatics, Aus Genome Status Bioplatforms)
         run: |
           docker pull genomehubs/r-ver:latest
@@ -161,12 +164,14 @@ jobs:
       - name: Update source_date in yamls
         run:  |
           RELEASEDATE=${RELEASE//./-}
-          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_DTOL_sts.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_assembly_informatics_status_kmer_draft.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_Plant_Genome_Size_Estimates.types.yaml
           perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_DTOL_nhm.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_DTOL_sts.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_EBP_Nor_long_list.types.yaml
+          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_eurofish.types.yaml
           perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_jgi1kfg_status.types.yaml
           perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/status_lists/FILE_vgp_table_tracker.types.yaml
-          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_Plant_Genome_Size_Estimates.types.yaml
-          perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_assembly_informatics_status_kmer_draft.types.yaml
 
       - name: Commit files in branch
         run: |
