@@ -24,4 +24,4 @@ jobs:
 
       - name: Get Schema 2.5  status files
         run: |
-          python3 ./scripts/import_status.py ${{ secrets.ORIGINAL2_5_SCHEMA }}
+          python3 ./scripts/import_status.py "${{ secrets.ORIGINAL2_5_SCHEMA }}"
