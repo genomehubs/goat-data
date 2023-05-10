@@ -56,7 +56,7 @@ attributes:
       - mean
     traverse: sum
     traverse_direction: up
-    type: short
+    type: long
   in_progress:
     display_group: sequencing_status
     display_level: 2
