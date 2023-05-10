@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: EBPN_expanded.tsv
   source: Declared Status Lists - EBPN
-  source_date: 2023-01-23
+  source_date: 2023-05-10
   source_description: Declared Status Lists - Earth Biogenome Project Norway (EBP-Nor) - live spreadsheet - EBP-Nor_all_goat
   source_contact: Ole K. Tørresen - University of Oslo
 attributes:
@@ -30,11 +30,11 @@ attributes:
     header: published
 taxonomy:
   taxon_id:
-    header: NCBI_taxon_id
+    header: ncbi_taxon_id
   genus:
-    header: Genus
+    header: genus
   species:
-    header: [Genus, species]
+    header: [genus, species]
     join: " "
   family:
     header: family

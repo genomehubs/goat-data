@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: EUROFISH_expanded.tsv
   source: Declared Status Lists - EUROFISH
-  source_date: 2023-01-18
+  source_date: 2023-05-10
   source_description:  Declared Status List - EUROFISH, live spreadsheet - eurofish_all.tsv
   source_contact: Gene Myers, mpi-cbg.de
 attributes:
@@ -38,11 +38,11 @@ attributes:
     header: published
 taxonomy:
   taxon_id:
-    header: NCBI_taxon_id
+    header: ncbi_taxon_id
   genus:
-    header: Genus
+    header: genus
   species:
-    header: [Genus, species]
+    header: [genus, species]
     join: " "
   family:
     header: family
