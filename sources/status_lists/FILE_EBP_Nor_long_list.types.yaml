@@ -30,9 +30,9 @@ attributes:
     header: published
 taxonomy:
   taxon_id:
-    header: NCBI_taxon_id
+    header: ncbi_taxon_id
   genus:
-    header: Genus
+    header: genus
   species:
     header: [Genus, species]
     join: " "
