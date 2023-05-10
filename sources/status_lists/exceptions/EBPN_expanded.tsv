@@ -1,4 +1,3 @@
-NCBI_taxon_id	Genus	species	family	target_list_status	sequencing_status	synonym	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	insdc_submitted	open	insdc_open	published
-	Cortinarius	cordatae	Cortinariaceae	ebpn_other_priority			EBPN		EBPN							
-	Schistidium	bryhnii	Grimmiaceae	ebpn_other_priority			EBPN		EBPN							
-	Dasya	adela	Dasyaceae	ebpn_other_priority			EBPN		EBPN							
+ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	synonym	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
+	Dasya	adela	Dasyaceae	ebpn_other_priority			EBPN	EBPN											
+	Schistidium	bryhnii	Grimmiaceae	ebpn_other_priority	sample_acquired		EBPN	EBPN			EBPN	EBPN							
