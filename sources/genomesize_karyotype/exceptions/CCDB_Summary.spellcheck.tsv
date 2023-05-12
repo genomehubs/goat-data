@@ -10,7 +10,6 @@ taxon_id	input	rank	suggested
 108700	Entodon laetus	species	Chrysocharis nephereus
 2666473	Entodon micropodus	species	Entodon macropodus
 2894618	Fissidens hollianus	species	Fissidens hallianus
-91517	Gollania arisanensis	species	Microstegium nudum
 146591	Haplodon wormskioldii	species	Aplodon wormskioldii
 1906819	Helodium sachalinense	species	Echinophyllum sachalinense
 324239	Hylocomium flagellare	species	Hyocomium armoricum
@@ -398,7 +397,6 @@ taxon_id	input	rank	suggested
 337344	Erodium microphyllum	species	California macrophylla
 337393	Erodium moureti	species	Erodium mouretii
 ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
-393521	Eryngium falcatum	species	Eryngium palmatum
 477885	Eryngium luzulifolium	species	Eryngium luzulaefolium
 1370084	Erysimum adcumbens	species	Erysimum ochroleucum
 1492194	Erysimum altaicum	species	Erysimum alaicum
@@ -463,7 +461,7 @@ ukEuaLacu	Erucastrum palustre	species	Euastrum lacustre
 2732730	Helenium scorzoneraefolium	species	Helenium scorzonerifolium
 1442666	Helichrysum oocephalum	species	Helichrysum herbaceum
 590136	Helictotrichon × krischae	species	Helictotrichon x krischae
-	Heliotropium leiocarpum	species	heliotropium lasiocarpum	heliotropium eriocarpum
+203738	Heliotropium leiocarpum	species	Heliotropium lasiocarpum
 171899	Helleborus bocconei	species	Helleborus purpurascens
 1406308	Helleborus ×hybridus	species	Helleborus x hybridus
 1891368	Helleborus ×nigercors	species	Helleborus x nigercors
@@ -667,6 +665,7 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 136769	Phoradendron berteroanum	species	Phoradendron juniperinum
 328195	Phreatia elegans	species	Davallia denticulata
 283132	Phyllanthus axillaris	species	Phyllanthus nummulariifolius
+2708445	Phyllanthus eliae	species	Phyllanthus elsiae
 	Phyllanthus grandifolius	species	phialanthus grandifolius	phyllanthus grandiflorus
 2708450	Phyllanthus mieschii	species	Phyllanthus finschii
 319600	Phyllanthus orbiculatus	species	Phyllanthus orbicularis
@@ -736,6 +735,7 @@ qhMesAnom	Melochia anomala	species	Mesochra anomala
 74647	Rosa watsoniana	species	Rosa multiflora
 655866	Rubus echinatus	species	Rubus rudis
 2527792	Rubus schnedleri	species	Rubus missouricus
+drRubMile	Rubus silesiacus	species	Rubus milesianus
 1234504	Rumex hesperius	species	Rumex salicifolius
 120877	Rumex rossicus	species	Ochlerotatus rusticus
 500263	Rytidosperma telematicum	species	Rytidosperma telmaticum
@@ -889,7 +889,7 @@ daVerEleg	Verbesina elegans	species	Verbena elegans
 1483385	Vernonia jucunda	species	Veronica michauxii
 434702	Vernonia lindheimeri	species	Vernonia lindheimerii
 99384	Vernonia pulchella	species	Veronica agrestis
-	Vernonia pusilla	species	veronica pusilla
+	Vernonia pusilla	species	veronica pusilla	vernonia pumilla
 557651	Veronica mannii	species	Inula mannii
 153962	Vicia bijuga	species	Vicia unijuga
 	Vicia macrantha	species	vicia micrantha
