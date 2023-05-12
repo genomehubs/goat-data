@@ -15,7 +15,7 @@ attributes:
       PRGP: insdc_open
     type: keyword
   insdc_open:
-  header: project
+    header: project
 taxonomy:
   taxon_id:
     header: taxId
