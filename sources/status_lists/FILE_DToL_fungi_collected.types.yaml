@@ -4,37 +4,29 @@ file:
   comment: "#"
   name: DToL_fungi_collected.tsv
   source: DTOL Fungi Collections List
-  source_date: 2023-02-17
-  source_description: DTOL Fungi Working Group, Static Spreadsheet - DToL_Fungi_Collected_17Feb2023 
-  source_contact: DTOL Plant SWG
+  source_date: 2023-04-24
+  source_description: DTOL Fungi Working Group, Static Spreadsheet - DToL_Fungi_Collected_24Apr2023 
+  source_contact: DTOL Fungi SWG
 attributes:
   long_list:
-    header: project
+    header: sample_collected
     type: keyword
   sequencing_status:
-    header: sample_collected
-    translate:
-      collected: sample_collected
+    header: sequencing_status
     type: keyword
   sequencing_status_dtol:
-    header: sample_collected
-    translate:
-      collected: sample_collected
+    header: sequencing_status
     type: keyword
   sample_collected:
     header: sample_collected
-    translate:
-      collected: DTOL
     type: keyword
   sample_collected_by:
-    header: collected_by
+    header: sample_collected
     translate:
-      "BMS,RBGK": KEW
+      DTOL: KEW
     type: keyword
 taxonomy:
-  taxon_id:
-    header: taxon_ID
   species:
-    header: species
+    header: SPECIES_IF_SF
   family:
-    header: family
+    header: FAMILY_IF_SF

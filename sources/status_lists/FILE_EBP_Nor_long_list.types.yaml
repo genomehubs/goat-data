@@ -22,6 +22,8 @@ attributes:
     header: sample_collected
   sample_acquired:
     header: sample_acquired
+  in_progress:
+    header: in_progress
   open:
     header: insdc_open
   insdc_open:
