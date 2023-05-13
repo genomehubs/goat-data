@@ -14,7 +14,7 @@ attributes:
     type: half_float
 taxonomy:
   species:
-    index: [5, 6]
+    header: [Genus, Species]
     join: " "
   family:
     header: "higher_group"
