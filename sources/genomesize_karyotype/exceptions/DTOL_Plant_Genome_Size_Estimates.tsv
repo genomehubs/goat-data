@@ -141,6 +141,7 @@ RBGK	MC9311	DTOL	Angiosperm	Papaveraceae	Pseudofumaria	lutea	<Petro	GPB3%PVP	107
 RBGK	MC9314	DTOL	Angiosperm	Boraginaceae	Symphytum	officinale	<Petro	GPB3%PVP	189.60	449.57	4.7	2.25	2.371	195.55	460.91	1.91	0.95	0.93	4.67	2.42	0.014	Sahr Mian	NA	NA	3.89 (poly plod prev est?)	NA	NA	NA	NA	1
 RBGK	MC9312	DTOL	Angiosperm	Asparagales	Hyacinthoides	hispanica	>Allium	GBP3%PVP	215.41	315.92	4.33	4.77	1.461	313.8	216.14	50.65	25.33	24.77	4.69	4.56	0.012	Sahr Mian	NA	NA	50	NA	NA	NA	NA	1
 RBGK	MC9312	DTOL	Angiosperm	Asteraceae	Senecio	squalidus	<Petro	GPB3%PVP	142.10	345.86	3.72	2.62	2.434	148.66	362.01	1.85	0.92	0.9	3.36	2.43	0.028	Sahr Mian	NA	NA	1.80	NA	NA	NA	NA	1
+RBGE	DMR295	DTOL	Angiosperm	NA	Senecio	squalidus	>Oryza	OXPRO	213.36	385.43	2.69	2.32	1.806	387.07	215.25	1.8	0.9	0.88	2.17	2.75	0.008	Nacho	NA	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9315	DTOL	Angiosperm	Asteraceae	Filago	vulgaris	<Petro	GPB3%PVP	156.15	326.09	3.83	3.01	2.088	160.53	332.29	2.17	1.09	1.06	3.81	2.98	0.025	Sahr Mian	NA	NA	1.41	polyploid? Triploid	NA	NA	NA	1
 RBGE	DMR159	DTOL	Angiosperm	Betulaceae	Prunus	laurocerasus	>Petro	GPB3%PVP	224.29	405.34	2.85	2.98	1.807	421.61	235.16	8.07	4.03	3.95	3.09	2.87	0.015	Sahr Mian	NA	NA	7.30	NA	NA	NA	NA	1
 RBGE	DMR160-1	DTOL	Angiosperm	Rosaceae	Potentilla	sterilis	<Petro	LB01,1%PVP	205.16	482.77	4.83	3.79	2.353	210.67	488.14	1.94	0.97	0.95	4.98	3.56	0.028	Sahr Mian	NA	NA	(0.46 - 3.5)	NA	NA	NA	NA	1
@@ -551,3 +552,9 @@ RBGE	DMR287	DTOL	Angiosperm	Grossulariaceae	Ribes	uva-crispa	<Petro	GPB3%PVP	229
 RBGE	DMR289	DTOL	Angiosperm	Caryophyllaceae	Cerastium	semidecandrum	<Solanum	GPB3%PVP	233.45	359.38	3.99	4	1.539	239.58	371.2	1.28	0.64	0.62	3.6	3.21	0.010	Nacho	NA	NA	NA	NA	NA	NA	NA	1
 RBGE	DMR288	DTOL	Angiosperm	Violaceae	Viola	hirta	<Petro	GPB3%PVP	228.97	589.59	6.96	3.3	2.575	243.18	604.06	1.81	0.91	0.89	5.32	3.37	0.082	Nacho	NA	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9498	DTOL	Angiosperm	Rosaceae	Fragaria	moschata	<Solanum	GPB3%PVP	219.37	766.52	4.76	2.96	3.494	216.08	777.01	0.55	0.28	0.27	4.25	2.98	0.101	Nacho	05/05/2023	KDTOL10787	NA	NA	NA	NA	NA	1
+RBGE	DMR293	DTOL	Angiosperm	NA	Arenaria	serpylifolia	<Solanum	GPB3%PVP	282.94	325.25	2.73	2.76	1.15	300.02	346.01	1.72	0.86	0.84	3.36	3.02	0.005	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR293	DTOL	Angiosperm	NA	Arenaria	serpylifolia	<Petro	GPB3%PVP	226.61	517.15	4.41	2.73	2.282	234.29	546.67	1.93	0.96	0.94	3.71	2.52	0.044	Nacho	NA	NA	NA	Same as above, using Petro as standard. Similar results	NA	NA	NA	1
+RBGE	DMR294	DTOL	Angiosperm	NA	Aira	praecox	>Petro	GPB3%PVP	229.50	350.13	2.36	2.09	1.526	356.12	234.45	6.84	3.42	3.34	2.2	2.45	0.008	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR296	DTOL	Angiosperm	NA	Lamium	hybridum	<Petro	GPB3%PVP	229.15	365.09	3.66	2.9	1.593	239.37	382.85	2.81	1.41	1.38	3.52	2.63	0.010	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR297	DTOL	Angiosperm	NA	Sedum	album	<Solanum	OXPRO	213.10	408.64	4.44	3.32	1.918	220.59	426.04	1.03	0.51	0.5	4.38	3.3	0.014	Nacho	NA	NA	NA	I tried with rice, but couln't find any peak below it	NA	NA	NA	1
+RBGK	NA	DTOL	Angiosperm	NA	Xerophyllum	tenax	>Petro	GPB3%PVP	205.58	280.12	2.98	3.51	1.363	285.39	208.17	6.17	3.08	3.02	2.94	2.66	0.007	Nacho	NA	NA	NA	Individual grown in the Alpine garden	NA	NA	NA	1
