@@ -18,9 +18,11 @@ taxon_id	input	rank	suggested
 2249821	Xenophrys caudoprocta	species	Megophrys caudoprocta
 402886	Xenophrys lekaguli	species	Xenophrys legkaguli
 2759542	Theloderma baibengense	species	Theloderma baibungense
+110110	Rana johni	species	Rana johnsi
 197005	Litoria scabra	species	Tectarius antonii
 2133923	Rana luanchuanensis	species	Rana luanchanensis
 2153452	Xenophrys parallela	species	Megophrys parallela
+448800	Pristimantis peramerus	species	Pristimantis paramerus
 2898653	Xenophrys tuberogranulatus	species	Panophrys tuberogranulata
 1903879	Xenophrys wuliangshanensis	species	Megophrys wuliangshanensis
 1903880	Xenophrys wushanensis	species	Megophrys wushanensis
@@ -41,6 +43,7 @@ taxon_id	input	rank	suggested
 44144	Ophrysia † superciliosa †	species	Uranoscodon superciliosus
 1638936	Dendrocoptes dorae	species	Dendrocopos dorae
 1517829	Dendrocoptes auriceps	species	Leiopicus auriceps
+72210	Calendulauda erythrochlamys	species	Calendulauda erythroclamys
 245048	Buphagus erythrorynchus	species	Buphagus erythrorhynchus
 39106	Glaucidium palmarum	species	Glaucidium palmatum
 	Sylvia deserti	species	salvia deserta	salvia deserti
@@ -73,7 +76,7 @@ taxon_id	input	rank	suggested
 2717101	Oxynotus japonicus	species	Oxyporus japonicus
 495824	Apristurus canutus	species	Apristurus platyrhynchus
 1455673	Chiloscyllium burmense	species	Chiloscyllium burmensis
-	Raja pita	species	raja picta	rana picta
+	Raja pita	species	rana picta	raja picta
 393601	Rhinolophus yunanensis	species	Rhinolophus yunnanensis
 160451	Hydromys neobritannicus	species	Hydromys neobrittanicus
 10149	Hydrochoeris hydrochaeris	species	Hydrochoerus hydrochaeris
@@ -90,12 +93,12 @@ taxon_id	input	rank	suggested
 160399	Oryzomys auriventer	species	Oryzomys couesi
 141975	Sylvilagus cunicularius	species	Sylvilagus cunicularis
 1100084	Gerbillus hoogstraali	species	Gerbillus hoogstrali
+61406	Leopardus colocola	species	Leopardus colocolo
 	Iomys horsfieldii	species	iomys horsfieldi	iodes horsfieldii
 113357	Sorex bairdii	species	Sorex bairdi
 9523	Callicebus regulus	species	Plecturocebus moloch
 2678870	Alticola strelzowi	species	Alticola strelzovi
 77229	Balioncyteris maculata	species	Balionycteris maculata
-146134	Eospalax baileyi	species	Eospalax fontanierii
 187019	Murina ryukyuana	species	Murina ryukyuna
 	Eospalax cansus	species	myospalax cansus
 112021	Lepus mandschuricus	species	Lepus mandshuricus
@@ -122,8 +125,10 @@ taxon_id	input	rank	suggested
 1488330	Crocidura abscondita	species	Crocidura absconditus
 	Urva fusca	species	ulva fusca
 354189	Vulpes rueppelli	species	Vulpes rueppellii
+2986393	Myotis findleyi	species	Myotis handleyi
 561559	Crocidura raineyi	species	Crocidura baileyi
 666515	Pelomys minor	species	Praomys minor
+1567507	Neacomys pictus	species	Callistomys pictus
 745256	Huetia leucorhina	species	Huetia leucorhinus
 	Neotoma martinensis	species	geonoma martinicensis
 43872	Cavia intermedia	species	Aesculus pavia
@@ -132,6 +137,7 @@ taxon_id	input	rank	suggested
 137034	Barbodes microps	species	Enteromius macrops
 60258	Fundulopanchax cinnamomeus	species	Fundulopanchax cinnamomeum
 2999882	Characidium japuhybense	species	Characidium japuhybensis
+1696906	Callionymus curvispinis	species	Repomucenus belcheri
 622434	Stonogobiops xanthorhinicus	species	Stonogobiops xanthorhinica
 2999392	Amblyceps yunnanense	species	Amblyceps yunnanensis
 2614514	Diaphus minax	species	Dianthus minae
@@ -204,7 +210,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 435999	Trichonotus blochii	species	Trachinotus blochii
 447833	Kribia uellensis	species	Erebia aethiops
 1821188	Parachela hypoththalmus	species	Parachela hypophthalmus
-	Coelorinchus acutirostris	species	coelorinchus anatirostris	caelorinchus anatirostris	coelorhynchus acutirostris
+390686	Coelorinchus acutirostris	species	Coelorinchus anatirostris
 2999781	Coelorinchus amydrozosterus	species	Caelorinchus amydrozosterus
 2923461	Centropyge nigriocelus	species	Centropyge nigriocellus
 3000017	Coelorinchus aratrum	species	Coelorhynchus aratrum
@@ -212,6 +218,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 360502	Plectorhinchus pictum	species	Plectorhinchus pictus
 1849271	Atractoscion macrolepis	species	Atractoscion microlepis
 227275	Rohteichthys microlepis	species	Cyclocheilichthys apogon
+2259658	Ilisha sirishae	species	Ilisha sirishai
 211658	Corythoichthys isigakius	species	Corythoichthys haematopterus
 585236	Hemibagrus imbrifer	species	Hemibarbus umbrifer
 1127486	Astronesthes micropogon	species	Astronesthes macropogon
@@ -263,7 +270,6 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 2202362	Gymnocypris firmispinata	species	Gymnocypris firmispinatus
 327704	Schizothorax labiatius	species	Schizothorax labiatus
 111834	Notropis buccula	species	Notropis buccata
-341107	Schistura pumatensis	species	Schistura putaoensis
 196075	Sprattus spratus	species	Sprattus sprattus
 2653402	Trichomycterus latidens	species	Ituglanis laticeps
 118145	Moringua macrochir	species	Moringua microchir
@@ -288,6 +294,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 2739717	Laciris pelagica	species	Laciris pelagicus
 1463042	Creagrutus gephyrus	species	Creagrutus zephyrus
 984443	Hisonotus brunneus	species	Pissonotus brunneus
+3001820	Microsynodontis laevigata	species	Microsynodontis laevigatus
 1123872	Leporinus guttatus	species	Leporellus vittatus
 2999740	Bovichtus veneris	species	Bovichthys veneris
 1776112	Acrossocheilus longispinnis	species	Acrossocheilus longipinnis
@@ -300,7 +307,7 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 3000807	Gymnelopsis brevifenestrata	species	Gymnelopsis brevifenestratus
 665694	Owstonia crassa	species	Polyscias crassa
 2083628	Loricaria pumila	species	Melanophthalma pumila
-	Bagarius rutilus	species	agaricus mutilus	agaricus rutilus
+	Bagarius rutilus	species	agaricus rutilus	agaricus mutilus
 2910012	Satyrichthys moluccense	species	Satyrichthys moluccensis
 577623	Synodontis angelica	species	Synodontis angelicus
 13692	Sphyraena sphryaena	species	Sphyraena sphyraena
@@ -313,20 +320,19 @@ iyMyiNige	Myoxocephalus niger	species	Myiocephalus niger
 1053594	Pterygoplichthys undecimalis	species	Pterygoplichthys etentaculatus
 2833474	Hyphessobrycon dorsalis	species	Hyphessobrycon borealis
 479862	Aluterus monocerus	species	Aluterus monoceros
-136867	Tylochromis labrodon	species	Mylochromis labidodon
 30532	Rama rama	species	Dama dama
 	Pomacentrus emarginatus	species	eupomacentrus marginatus	pomacentrus marginatus
 209205	Betta breviobesa	species	Betta breviobesus
 214659	Girella tricuspidatus	species	Girella tricuspidata
-3001151	Moenkhausia latissima	species	Moenkhausia latissimus
 	Leporinus punctatus	species	lethrinus punctulatus
 2303447	Beaufortia yunnanensis	species	Beaumontia khasiana
 1907135	Schistura xhatensis	species	Physoschistura shanensis
-1104261	Enteromius urostigma	species	Enteromius rubrostigma
+1676996	Enteromius urostigma	species	Enteromius eurostigma
 292300	Diplectrum eumelum	species	Satyrium pumilum
 fLycAlb	Lycenchelys alta	species	Lycenchelys alba
 59416	Apogon americanus	species	Trogon mexicanus
 1001947	Oreoleuciscus dsapchynenis	species	Oreoleuciscus potanini
+617726	Dipulus caecus	species	Figulus caecus
 129061	Scomberesox scombroides	species	Scomberesox saurus
 1628151	Coptodon cameronensis	species	Coptodon camerunensis
 990610	Dasyscopelus spinosus	species	Myctophum spinosum
