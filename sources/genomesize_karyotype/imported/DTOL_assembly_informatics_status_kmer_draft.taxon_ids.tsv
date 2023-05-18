@@ -1,8 +1,4 @@
 taxon_id	input	rank
-2758353	Pseudoips prasinana	species
-875879	Petrophora chlorosata	species
-1398758	Porpolomopsis calyptriformis	species
-59451	Eptesicus nilssonii	species
 249532	Icerya purchasi	species
 3025909	Choricystis sp. odSpoLacu1	species
 1803847	Protoeuglena noctilucae	species
@@ -12,9 +8,9 @@ taxon_id	input	rank
 97023	Trifolium fragiferum	species
 143172	Arctium minus	species
 495374	Oxytorus armatus	species
-264083	Clavaria fumosa	species
 33397	Chironomus plumosus	species
 1271715	Agapetus fuscipes	species
+264083	Clavaria fumosa	species
 82525	Tausonia pullulans	species
 908347	Volvariella surrecta	species
 245335	Isothecium myosuroides	species
@@ -194,14 +190,16 @@ taxon_id	input	rank
 1330250	Podarcis cretensis	species
 3034176	Nitzschia sp. pyKryTriq1	species
 878362	Philonthus spinipes	species
-223862	Raja brachyura	species
-3034142	Perkinsela sp. pyNocScin1	species
 127875	Cinclus cinclus	species
-2867109	Rhamphomyia laevipes	species
 114497	Cordyceps fumosorosea	species
 207157	Aphodius granarius	species
-1902997	Ptychoptera albimana	species
 247297	Harpalus rubripes	species
+223862	Raja brachyura	species
+3034142	Perkinsela sp. pyNocScin1	species
+2867109	Rhamphomyia laevipes	species
+1902997	Ptychoptera albimana	species
+273429	Cheilosia scutellata	species
+1101143	Phycita roborella	species
 39848	Agrostemma githago	species
 442081	Brachypterus glaber	species
 931494	Beris morrisii	species
@@ -214,11 +212,9 @@ taxon_id	input	rank
 295833	Endomychus coccineus	species
 687026	Coleophora deauratella	species
 542982	Heliothis peltigera	species
-273429	Cheilosia scutellata	species
 997525	Agrotis clavis	species
 881489	Leptopterna dolabrata	species
 881727	Pilophorus perplexus	species
-1101143	Phycita roborella	species
 258209	Berberis vulgaris	species
 934860	Eupithecia tripunctaria	species
 1822507	Chrysopilus asiliformis	species
@@ -393,6 +389,8 @@ taxon_id	input	rank
 1101044	Pyrausta purpuralis	species
 433179	Litargus connexus	species
 1178141	Parornix anglicella	species
+1100992	Eudonia mercurella	species
+13805	Sphagnum palustre	species
 1545217	Pithanus maerkelii	species
 310247	Crepis paludosa	species
 65948	Nasturtium officinale	species
@@ -455,6 +453,8 @@ taxon_id	input	rank
 2886803	Acrosathe annulata	species
 1594309	Hedya pruniana	species
 2561392	Homoeosoma sinuella	species
+1863080	Sonronius dahlbomi	species
+2590762	Neoamphitrite figulus	species
 1518534	Anopheles coluzzii	species
 62324	Anopheles funestus	species
 7165	Anopheles gambiae	species
@@ -505,7 +505,6 @@ taxon_id	input	rank
 207148	Aphodius fimetarius	species
 220483	Cakile maritima	species
 446528	Anabolia nervosa	species
-55313	Elodea nuttallii	species
 559684	Hebecnema umbratica	species
 86092	Melampyrum sylvaticum	species
 113139	Cordilura albipes	species
@@ -791,7 +790,6 @@ taxon_id	input	rank
 878065	Longitarsus flavicornis	species
 116146	Oedemera nobilis	species
 3652	Bryonia dioica	species
-204401	Pedicularis sylvatica	species
 160936	Stropharia albonitens	species
 2867262	Tipula helvola	species
 281178	Petasites fragrans	species

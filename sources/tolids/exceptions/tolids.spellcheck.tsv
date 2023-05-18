@@ -205,6 +205,7 @@ taxon_id	input	rank	suggested
 2126609	Rimularia mullensis	species	Ligularia muliensis
 267812	Rinodina occulta	species	Pertusaria oculata
 192176	Usnea dasypoga	species	Usnea dasopoga
+2973954	Xerotrema megalospora	species	Xerotrema megalosporum
 162099	Peronospora corollae	species	Peronospora coronillae
 115418	Pythium papillatum	species	Globisporangium mamillatum
 473046	Pythium tenue	species	Lythrum flagellare
@@ -223,7 +224,6 @@ taxon_id	input	rank	suggested
 3024346	Sphinctrina tubiformis	species	Sphinctrina tubaeformis
 	Arnium apiculatum	species	allium paniculatum	allium auriculatum
 2719424	Ascochyta microspora	species	Ascochyta macrospora
-1677696	Ascochyta vincae	species	Ascochyta viciae
 1677696	Ascochyta violae	species	Ascochyta viciae
 2498248	Ceratosphaeria fragilis	species	Teratosphaeria gracilis
 	Ceriospora	genus	cercospora	caryospora	myriospora
@@ -288,7 +288,7 @@ taxon_id	input	rank	suggested
 128745	Steringophorus dorsolineatus	species	Steringophorus dorsolineatum
 1553030	Acrotrichis montandoni	species	Acrotrichis montandonii
 346862	Aleochara ruficornis	species	Tachyporus nitidulus
-1202164	Astenus immaculatus	species	Stenus bimaculatus
+	Astenus immaculatus	species	stenus bimaculatus	astacus bimaculatus
 1971779	Atheta divisa	species	Atheta europaea
 1553385	Atheta nidicola	species	Cephalocousya nivicola
 1587077	Atomaria fimetarii	species	Atomaria nigriventris
@@ -554,6 +554,7 @@ taxon_id	input	rank	suggested
 2893593	Gyrodinium fusus	species	Pseliodinium fusus
 	Gyrodinium pellucidum	species	gymnodinium pellucidum
 763930	Kofoidinium velelloides	species	Kofoidinium velleloides
+1193135	Peridinium africanum	species	Protoperidinium americanum
 376358	Preperidinium meunierii	species	Preperidinium meunieri
 77757	Macrotricidae	family	Macrotrichidae
 77752	Ofryoxus gracilis	species	Ophryoxus gracilis
@@ -859,7 +860,6 @@ taxon_id	input	rank	suggested
 1588514	Trachyphloeus scabricul	species	Trachyphloeus scabriculus
 	Ampedus elongantulus	species	ampedus elegantulus	ampedus elongatulus
 558052	Meligethes erichsonii	species	Meligethes erichsoni
-1321701	Dinarda hagensi	species	Dinarda hagensii
 1321702	Dinarda maerkeli	species	Dinarda maerkelii
 878188	Ochthephilum jacquelini	species	Ochthephilum jacquelinii
 	Quedius assimilis	species	bledius dissimilis	quercus assimilis
@@ -920,7 +920,7 @@ taxon_id	input	rank	suggested
 1567043	Elachertus gallicus	species	Hyssopus pallidus
 2931509	Aprostocetus femoralis	species	Tetrastichus temporalis
 1566858	Eupelmus martelli	species	Eupelmus martellii
-	Mangoma	genus	maniola	mangora
+	Mangoma	genus	maniola	langona
 634056	Alaptus antennatus	species	Araptus attenuatus
 316456	Anagrus similis	species	Anabrus simplex
 2921236	Gastrancistrus flavicornis	species	Gastrancistrus fulvicornis
@@ -1065,7 +1065,6 @@ taxon_id	input	rank	suggested
 	Agaricus fulvosus	species	agaricus bulbosus
 93828	Agaricus fuscipes	species	Gymnopus fusipes
 	Agaricus gramineus	species	agaricus stramineus
-1843309	Agaricus graveolens	species	Agaricus gratolens
 	Agaricus lateoalbus	species	agaricus luteoalbus
 	Agaricus latus	species	agaricus elatus	agaricus laetus
 181745	Agaricus ligatus	species	Phaeomarasmius erinaceus

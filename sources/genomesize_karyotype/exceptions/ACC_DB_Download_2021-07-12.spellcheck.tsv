@@ -30,7 +30,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 251759	Araecerus fasciculatus_	species	Araecerus fasciculatus
 1661878	Euparius marmoreus_	species	Euparius marmoreus
 638814	Ptychoderes tricostifrons_	species	Ptychoderes tricostifrons
-284700	Acrossus	genus	Dicrossus
+	Acrossus	genus	dicrossus	acossus
 	Agolius	genus	aegolius	agorius	anolius
 75361	Chilothorax	genus	Schizothorax
 	Colobopterus	genus	chloropterus	dilobopterus	colopterus
@@ -313,7 +313,6 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1343316	Cicindela suturalis_	species	Cylindera suturalis
 176377	Cicindela tranquebarica_	species	Cicindela tranquebarica
 1343317	Cicindela trisigta	species	Cylindera trisignata
-1163509	Colfax stevensi	species	Colias sieversi
 2611535	Craspedophorus angulatus_	species	Craspedophorus angulatus
 247365	Cryptophonus tenebrosus_	species	Cryptophonus tenebrosus
 	Ctenostoma ornatum	species	chaenostoma cordatum
@@ -766,6 +765,7 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1075297	Clytra laeviscula_	species	Clytra laeviuscula
 1075297	Clytra laeviuscula_	species	Clytra laeviuscula
 1425548	Clytra quadripunctata_	species	Clytra quadripunctata
+2484307	Clytra succinata	species	Cleora subcincta
 284335	Colasposoma auripenne_	species	Colasposoma auripenne
 1592289	Conicobruchus indicus_	species	Conicobruchus indicus
 1654395	Coptocephala unifasciata_	species	Coptocephala unifasciata
@@ -1061,7 +1061,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 	Geotrupes stercocarius	species	geotrupes stercorarius
 1885608	Glycypha fulvistemma	species	Glycyphana fulvistemma
 887744	Haplidia etrusca	species	Ornatoraphidia flavilabris
-	Homaloplia	species	homalomyia	homalopsis	homalopoma
+	Homaloplia	species	homalomyia	homalopoma	homalopsis
 1207195	Jumnos ruckieri	species	Jumnos ruckeri
 2592933	Mecynorrhi torquata	species	Mecynorhina torquata
 166343	Oniticellus pallipes	species	Euoniticellus pallipes
@@ -1339,7 +1339,7 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
-	Natricidae	family	anthicidae	naticidae
+219442	Natricidae	family	Anthicidae
 	Cyclodina olivieri	species	cyclodina oliveri
 253933	Ameiva maynardii	species	Pholidoscelis maynardi
 2936315	Aspidoscelis neomexicana	species	Aspidoscelis neomexicanus
