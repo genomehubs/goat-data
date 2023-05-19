@@ -184,7 +184,7 @@ icPtiClav	Ptinus clavipes_	species	Ptinus clavipes
 1166858	Bembidion stephensi	species	Bembidion stephensii
 	Bembidion sulcipenne_hyperboroides_	species	bembidion sulcipenne hyperboroides
 931416	Bembidion tairuense_	species	Bembidion tairuense
-	Bembidion tricolor	species	bembidion iricolor	bembidion varicolor	bembidion unicolor
+	Bembidion tricolor	species	bembidion varicolor	bembidion iricolor	bembidion unicolor
 	Bembidion vandykei_	species	bembidion vandykei
 1166944	Bembidion wickhami_	species	Bembidion wickhami
 1944111	Bembidion yukonoum	species	Bembidion yukonum
@@ -765,7 +765,6 @@ icCasHemi	Cassida hemisphaerica_	species	Cassida hemisphaerica
 1075297	Clytra laeviscula_	species	Clytra laeviuscula
 1075297	Clytra laeviuscula_	species	Clytra laeviuscula
 1425548	Clytra quadripunctata_	species	Clytra quadripunctata
-2484307	Clytra succinata	species	Cleora subcincta
 284335	Colasposoma auripenne_	species	Colasposoma auripenne
 1592289	Conicobruchus indicus_	species	Conicobruchus indicus
 1654395	Coptocephala unifasciata_	species	Coptocephala unifasciata
@@ -936,7 +935,7 @@ icLonAeru	Longitarus aeruginosus	species	Longitarsus aeruginosus
 2008391	Boreonectes ibericus_	species	Boreonectes ibericus
 1309560	Boreonectes multilineatus_	species	Boreonectes multilineatus
 1309561	Boreonectes riberae_	species	Boreonectes riberae
-	Colymbetes adpressus	species	corymbites impressus	colymbetes impressus
+	Colymbetes adpressus	species	colymbetes impressus	corymbites impressus
 1368183	Colymbetes bipustulatus	species	Calambus bipustulatus
 1509382	Colymbetes fuscus_	species	Colymbetes fuscus
 1610039	Colymbetes lapponicus	species	Calambus japonicus
@@ -1102,6 +1101,7 @@ icGyrDist	Gyrinus distinctus_	species	Gyrinus distinctus
 683890	Bolitopherus cornutus	species	Bolitotherus cornutus
 1470678	Cryptycus gibbulus	species	Crypticus gibbulus
 icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
+466958	Gthocerus cornutus	species	Gnathocerus cornutus
 48176	Hegeter ferndezi	species	Hegeter fernandezi
 48179	Hegeter grancariensis	species	Hegeter grancanariensis
 1710561	Isomira quadrastriata_	species	Isomira quadristriata
@@ -1125,7 +1125,6 @@ icGnaMaxi	Gnathocerus maxillosus	species	Gnatocerus maxillosus
 538617	Trachypachus slevini_	species	Trachypachus slevini
 1569671	Lophoceters pusillus	species	Lophocateres pusillus
 2966204	Cerodontha ireos	species	Cerodontha iraeos
-1333887	Phorbia brassica	species	Euphorbia alpina
 502513	Villa gayi	species	Viola grayi
 	Villa sinuosa	species	zilla spinosa	vella spinosa
 2726335	Villa velutina	species	Viola velutina
@@ -1275,7 +1274,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 50526	Xenos pecki	species	Xenos peckii
 45055	Taeniothrips iconsequene	species	Taeniothrips inconsequens
 1875416	Halesus tesselatus	species	Halesus tessellatus
-6759	Carcinus menas	species	Carcinus maenas
 1124764	Macrocheira kampferi	species	Macrocheira kaempferi
 366393	Sagitta inflata	species	Flaccisagitta enflata
 8090	Oryzias ltipes	species	Oryzias latipes
@@ -1336,10 +1334,10 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 272250	Rampholeon marshalli	species	Rhampholeon marshalli
 179929	Rampholeon spectrum	species	Rhampholeon spectrum
 1481338	Alsophylax laevis	species	Cyathea surinamensis
-	Gekko gekko	species	gekko gecko	germo germo	gecko gecko
+	Gekko gekko	species	germo germo	gekko gecko	gecko gecko
 174728	Neusticurus ecleopus	species	Potamites ecpleopus
 2484728	Liolaemus christiani	species	Liolaemus cristiani
-219442	Natricidae	family	Anthicidae
+	Natricidae	family	anthicidae	naticidae
 	Cyclodina olivieri	species	cyclodina oliveri
 253933	Ameiva maynardii	species	Pholidoscelis maynardi
 2936315	Aspidoscelis neomexicana	species	Aspidoscelis neomexicanus
@@ -1371,7 +1369,6 @@ idBibHort	Bibio bortulanus	species	Bibio hortulanus
 412860	Neodendeocoelum maculatum	species	Dendrocoelum maculatum
 69521	Cura pingus	species	Cura pinguis
 391271	Cura shubarti	species	Girardia schubarti
-659321	Dugesia ivana	species	Dugesia ilvana
 6182	Schistosomum japonicum	species	Schistosoma japonicum
 38741	Schistosomatium dounthitti	species	Schistosomatium douthitti
 596246	Trichobiharzia physellae	species	Trichobilharzia physellae
