@@ -1,4 +1,11 @@
 taxon_id	input	rank
+6448	Gastropoda	class
+6544	Bivalvia	class
+32261	Terebellidae	family
+6745	Paguridae	family
+29979	Isopoda	order
+6821	Amphipoda	order
+987925	Diarsia rubi	species
 88022	Blaniulidae	family
 1268897	Cryptops hortensis	species
 1068628	Polydesmus angustus	species
@@ -7,14 +14,12 @@ taxon_id	input	rank
 52428	Polyxenus lagurus	species
 61986	Symphyla	class
 291247	Oxidus gracilis	species
-29979	Isopoda	order
 161569	Lekanesphaera	genus
 62152	Polydesmus coriaceus	species
 1147026	Lithobius calcaratus	species
 173286	Geophilus easoni	species
 #qqHarHomb	Harpactea hombergi	species
 475616	Rilaena triangularis	species
-6821	Amphipoda	order
 1008866	Ommatoiulus sabulosus	species
 7399	Hymenoptera	order
 7041	Coleoptera	order
@@ -74,14 +79,11 @@ taxon_id	input	rank
 96822	Sphaeromatidae	family
 6650	Polyplacophora	class
 70849	Nudibranchia	order
-6448	Gastropoda	class
 69676	Lottiidae	family
-6544	Bivalvia	class
 47127	Nuculidae	family
 7625	Echinoidea	class
 106738	Amphiuridae	family
 55617	Ophiocomina nigra	species
-6745	Paguridae	family
 51768	Alcyonium digitatum	species
 6103	Actiniaria	order
 136195	Nymphon gracile	species
@@ -220,7 +222,6 @@ taxon_id	input	rank
 39820	Nereididae	family
 51258	Sabella	genus
 258330	Ammothea hilgendorfi	species
-32261	Terebellidae	family
 136194	Endeis spinosa	species
 71505	Philine aperta	species
 2922058	Azorinus chamasolen	species
@@ -259,7 +260,6 @@ taxon_id	input	rank
 214286	Oligia	genus
 987935	Euproctis similis	species
 104428	Drepana falcataria	species
-987925	Diarsia rubi	species
 326959	Eulithis testata	species
 294303	Chorthippus albomarginatus	species
 #ilEilLuri	Eilema lurideola	species
@@ -301,7 +301,6 @@ taxon_id	input	rank
 1101014	Leucoptera laburnella	species
 1889886	Electrogena affinis	species
 2566270	Anarsia innoxiella	species
-753179	Eudonia truncicolella	species
 420843	Conocephalus fuscus	species
 494438	Meconema thalassinum	species
 863834	Stenodema calcarata	species
@@ -698,6 +697,7 @@ taxon_id	input	rank
 271029	Anisus leucostoma	species
 572746	Dysstroma citrata	species
 987875	Amphipoea lucens	species
+753179	Eudonia truncicolella	species
 758709	Acleris laterana	species
 104719	Lumbrineridae	family
 1545131	Eysarcoris venustissimus	species
@@ -894,6 +894,13 @@ taxon_id	input	rank
 1872065	Nuctenea umbratica	species
 1100095	Misumena vatia	species
 560983	Escharella immersa	species
+2724381	Cradoscrupocellaria	genus
+216125	Steromphala cineraria	species
+193289	Watersipora	genus
+987989	Mythimna straminea	species
+1594341	Scoparia ambigualis	species
+1594243	Caloptilia elongella	species
+1545336	Neolygus contaminatus	species
 863632	Stigmatogaster souletina	species
 #qdEnaArma	Enantiulus armatus	species
 1155752	Dictyna latens	species
@@ -1289,7 +1296,6 @@ taxon_id	input	rank
 1870092	Monochroa conspersella	species
 988038	Simyra albovenosa	species
 1073588	Metzneria metzneriella	species
-320033	Diarsia	genus
 287208	Adscita geryon	species
 #qpTraBrit	Trachypauropus britannicus	species
 27554	Ctenolepisma longicaudatum	species
@@ -1618,7 +1624,6 @@ taxon_id	input	rank
 460386	Tethya citrina	species
 37623	Ostrea edulis	species
 71498	Aplysia punctata	species
-216125	Steromphala cineraria	species
 88944	Tubulanus annulatus	species
 88926	Lineus ruber	species
 187594	Amphiporus lactifloreus	species
