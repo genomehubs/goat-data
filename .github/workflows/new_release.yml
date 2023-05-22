@@ -204,7 +204,7 @@ jobs:
           ref: ${{ env.RELEASE }}
 
       - name: Check es health
-        run:  curl -s "http://es1:9200/_cat/health"
+        run:  curl -s "es1:9200/_cat/health"
 
       - name: Create dev snapshot repo if it doesn't exist
         run: |
@@ -239,7 +239,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs init \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
@@ -251,7 +251,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --assembly-dir sources/assembly-data"
@@ -261,7 +261,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --sample-dir sources/assembly-data-sample"
@@ -301,7 +301,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/ott3.3"
@@ -311,7 +311,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/tolids \
@@ -329,7 +329,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/genomesize_karyotype \
@@ -347,7 +347,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/regional_lists \
@@ -358,7 +358,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/uk_legislation \
@@ -384,7 +384,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --assembly-dir sources/btk"
@@ -401,7 +401,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/lineages"
@@ -412,7 +412,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/status_lists \
@@ -423,7 +423,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/assembly-data-taxon"
@@ -484,7 +484,7 @@ jobs:
             -v /volumes/docker/resources:/genomehubs/resources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs index \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --file-metadata sources/btk_files_extra/btk.files.yaml"
@@ -495,7 +495,7 @@ jobs:
       #       -v /volumes/docker/resources:/genomehubs/resources \
       #       genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
       #         "genomehubs index \
-      #           --es-host http://es1:9200 \
+      #           --es-host es1:9200 \
       #           --taxonomy-source ncbi \
       #           --config-file sources/goat.yaml \
       #           --file-metadata sources/btk/btk.files.yaml"
@@ -541,7 +541,7 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs fill \
-                --es-host http://es1:9200 \
+                --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --traverse-root 2759 \
@@ -636,7 +636,7 @@ jobs:
           -e GH_ORIGINS='https://goat.genomehubs.org null' \
           -e GH_HUBNAME=goat \
           -e GH_HUBPATH='/genomehubs/resources/' \
-          -e GH_NODE='http://es1:9200' \
+          -e GH_NODE='es1:9200' \
           -e GH_RELEASE=$RELEASE \
           -e GH_REDIS='redis://redis:6379' \
           -e GH_SOURCE=https://github.com/genomehubs/goat-data/tree/$RELEASE \
