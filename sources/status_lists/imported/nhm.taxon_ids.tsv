@@ -1,9 +1,20 @@
 taxon_id	input	rank
+29979	Isopoda	order
+#qqHarHomb	Harpactea hombergi	species
+52428	Polyxenus lagurus	species
+7041	Coleoptera	order
+41160	Phyllobius	genus
+79500	Bruchus	genus
+7147	Diptera	order
+7399	Hymenoptera	order
+1081820	Ischnodemus sabuleti	species
+166131	Asiraca clavicornis	species
+2026310	Closterotomus trivialis	species
+92169	Talitridae	family
 6448	Gastropoda	class
 6544	Bivalvia	class
 32261	Terebellidae	family
 6745	Paguridae	family
-29979	Isopoda	order
 6821	Amphipoda	order
 987925	Diarsia rubi	species
 88022	Blaniulidae	family
@@ -11,27 +22,18 @@ taxon_id	input	rank
 1068628	Polydesmus angustus	species
 47131	Cylindroiulus	genus
 118470	Ophyiulus pilosus	species
-52428	Polyxenus lagurus	species
 61986	Symphyla	class
 291247	Oxidus gracilis	species
 161569	Lekanesphaera	genus
 62152	Polydesmus coriaceus	species
 1147026	Lithobius calcaratus	species
 173286	Geophilus easoni	species
-#qqHarHomb	Harpactea hombergi	species
 475616	Rilaena triangularis	species
 1008866	Ommatoiulus sabulosus	species
-7399	Hymenoptera	order
-7041	Coleoptera	order
-1081820	Ischnodemus sabuleti	species
 6341	Polychaeta	class
 513583	Coleophora	genus
-79500	Bruchus	genus
 934904	Xanthorhoe spadicearia	species
 934875	Ligdia adustata	species
-41160	Phyllobius	genus
-7147	Diptera	order
-166131	Asiraca clavicornis	species
 7408	Ichneumonidae	family
 6683	Decapoda	order
 51292	Capitellidae	family
@@ -63,7 +65,6 @@ taxon_id	input	rank
 42113	Clitellata	class
 2725004	Caenoplana variegata	species
 29065	Martes martes	species
-92169	Talitridae	family
 500646	Metellina mengei	species
 1594371	Mompha subbistrigella	species
 925783	Idiocerus	genus
@@ -317,7 +318,6 @@ taxon_id	input	rank
 881763	Stephanitis takeyai	species
 680436	Kleidocerys resedae	species
 1897835	Issus coleoptratus	species
-2026310	Closterotomus trivialis	species
 1869483	Argyresthia trifasciata	species
 #ilComAene	Commophila aeneana	species
 581588	Pammene	genus
@@ -894,6 +894,13 @@ taxon_id	input	rank
 1872065	Nuctenea umbratica	species
 1100095	Misumena vatia	species
 560983	Escharella immersa	species
+34613	Ixodes ricinus	species
+655052	Tinea columbariella	species
+753371	Musotima nitidalis	species
+199060	Phyllonorycter platani	species
+500459	Microlophium carnosum	species
+1046773	Chthonius ischnocheles	species
+987033	Theria primaria	species
 2724381	Cradoscrupocellaria	genus
 216125	Steromphala cineraria	species
 193289	Watersipora	genus
@@ -905,8 +912,6 @@ taxon_id	input	rank
 #qdEnaArma	Enantiulus armatus	species
 1155752	Dictyna latens	species
 534865	Lamprochernes	genus
-1046773	Chthonius ischnocheles	species
-34613	Ixodes ricinus	species
 174260	Desmophyllum pertusum	species
 41179	Eriocrania	genus
 199087	Phyllonorycter ulmifoliella	species
@@ -919,7 +924,6 @@ taxon_id	input	rank
 2017626	Aethes deaurana	species
 572880	Prays fraxinella	species
 1073582	Chrysoesthia drurella	species
-500459	Microlophium carnosum	species
 1545314	Eremocoris podagricus	species
 1101025	Ocnerostoma friesei	species
 2997259	Simacauda dicommatias	species
@@ -931,16 +935,13 @@ taxon_id	input	rank
 1660701	Stigmella tityrella	species
 683971	Tischeria ekebladella	species
 2903269	Parakontikia atrata	species
-753371	Musotima nitidalis	species
 146833	Euborellia annulipes	species
 69519	Caenoplana coerulea	species
 749629	Chrysoesthia sexguttella	species
 934820	Acasis viretata	species
-987033	Theria primaria	species
 1545353	Podops inunctus	species
 987997	Nola confusalis	species
 1150818	Antispila metallella	species
-655052	Tinea columbariella	species
 10222	Saccoglossus	genus
 1545165	Micronecta poweri	species
 #ilMytLito	Mythimna litoralis	species
