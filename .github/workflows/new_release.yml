@@ -1,11 +1,11 @@
 name: new_release
 # on: push
-on: workflow_dispatch
-# on:
-#   schedule:
-#     - cron: '5 0 * * 1,2,3,4,5,6' # At 00:05 every MTWTFS
+# on: workflow_dispatch
+on:
+  schedule:
+    - cron: '5 0 * * 1,2,3,4,5,6' # At 00:05 every MTWTFS
 env:
-  GENOMEHUBS_TAG: develop
+  GENOMEHUBS_TAG: latest
 
 jobs:
 
@@ -462,33 +462,22 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
           ref: ${{ env.RELEASE }}
 
-      - name: Collect extra analysis and files compared to main branch
-        run: |
-          mkdir -p sources/btk_files_extra/
-          # git diff origin/main...origin/$RELEASE -- sources/btk/btk.files.yaml \
-          # | grep -P "^\+" | grep -v -P "^\+\+\+" | perl -plne 's/^\+//' \
-          # > sources/btk_files_extra/btk.files.yaml
+      # - name: Collect extra analysis and files compared to main branch
+      #   run: |
+      #     mkdir -p sources/btk_files_extra/
+      #     # git diff origin/main...origin/$RELEASE -- sources/btk/btk.files.yaml \
+      #     # | grep -P "^\+" | grep -v -P "^\+\+\+" | perl -plne 's/^\+//' \
+      #     # > sources/btk_files_extra/btk.files.yaml
 
-          git show origin/main:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.main
-          git show origin/${{ env.RELEASE }}:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.${{ env.RELEASE }}
-          diff \
-            <(cat btk.files.yaml.${{ env.RELEASE }} | paste - - - - - - - - - - - - - - -) \
-            <(cat btk.files.yaml.main | paste - - - - - - - - - - - - - - -) \
-          | perl -lne 'if (/^< /) { s/^< //; s/\t/\n/g; print}' \
-          > sources/btk_files_extra/btk.files.yaml
+      #     git show origin/main:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.main
+      #     git show origin/${{ env.RELEASE }}:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.${{ env.RELEASE }}
+      #     diff \
+      #       <(cat btk.files.yaml.${{ env.RELEASE }} | paste - - - - - - - - - - - - - - -) \
+      #       <(cat btk.files.yaml.main | paste - - - - - - - - - - - - - - -) \
+      #     | perl -lne 'if (/^< /) { s/^< //; s/\t/\n/g; print}' \
+      #     > sources/btk_files_extra/btk.files.yaml
           
-      - name: genomehubs index extra btk files
-        run: |
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            -v /volumes/docker/resources:/genomehubs/resources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
-              "genomehubs index \
-                --es-host es1:9200 \
-                --taxonomy-source ncbi \
-                --config-file sources/goat.yaml \
-                --file-metadata sources/btk_files_extra/btk.files.yaml"
-      # - name: genomehubs index all btk files
+      # - name: genomehubs index extra btk files
       #   run: |
       #     docker run --rm --network=host \
       #       -v `pwd`/sources:/genomehubs/sources \
@@ -498,7 +487,18 @@ jobs:
       #           --es-host es1:9200 \
       #           --taxonomy-source ncbi \
       #           --config-file sources/goat.yaml \
-      #           --file-metadata sources/btk/btk.files.yaml"
+      #           --file-metadata sources/btk_files_extra/btk.files.yaml"
+      - name: genomehubs index all btk files
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v /volumes/docker/resources:/genomehubs/resources \
+            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+              "genomehubs index \
+                --es-host es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --file-metadata sources/btk/btk.files.yaml"
       - name: Snapshot RELEASE analysis_file
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_analysis_file" || exit 0
@@ -561,7 +561,7 @@ jobs:
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
 
-  rsync_to_edin_prod:
+  rsync_to_prod:
     needs:
       - genomehubs_index_files
       - genomehubs_fill
@@ -591,18 +591,18 @@ jobs:
           rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE f:/lustre/scratch123/tol/share/goat/dev/
           rsync -av --delete /volumes/docker/resources/files/                         f:/lustre/scratch123/tol/share/goat/dev/files/
 
-  restore_on_edin_prod:
+  restore_on_prod:
     needs:
-      - rsync_to_edin_prod
+      - rsync_to_prod
     runs-on:  self-hosted
     steps:
 
       - name: Get bash release name
         run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
-      - name: ssh edin prod and restore
+      - name: ssh prod and restore
         run: |
-          ssh goat "
+          ssh tol-goat-prod-run1 "
           curl -s -X DELETE 'es1:9200/*--$RELEASE'
           curl -s -X PUT 'es1:9200/_snapshot/production-$RELEASE' \
             -H 'Content-Type: application/json' \
@@ -615,52 +615,52 @@ jobs:
             -d' { \"indices\": \"*--$RELEASE\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
           "
 
-      - name: get release day number
-        run: |
-          if [[ $RELEASE =~ ([0-3][0-9])$ ]]; then 
-            echo "RELEASEDAY=${BASH_REMATCH[1]}" | tee -a /tmp/CURRENT_RELEASE >> $GITHUB_ENV
-          fi
+      # - name: get release day number
+      #   run: |
+      #     if [[ $RELEASE =~ ([0-3][0-9])$ ]]; then 
+      #       echo "RELEASEDAY=${BASH_REMATCH[1]}" | tee -a /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+      #     fi
 
-      - name: ssh edin prod and start dockers
-        run: |
-          ssh goat "
-          mkdir -p /volumes/docker/logs/$RELEASE
-          docker pull genomehubs/genomehubs-api:latest
-          docker rm -f goat-api-$RELEASEDAY
+      # - name: ssh prod and start dockers
+      #   run: |
+      #     ssh goat "
+      #     mkdir -p /volumes/docker/logs/$RELEASE
+      #     docker pull genomehubs/genomehubs-api:latest
+      #     docker rm -f goat-api-$RELEASEDAY
 
-          docker run -d \
-          --restart=always \
-          --net net-es \
-          -p 30$RELEASEDAY:3000 \
-          --user \$UID:\$GROUPS \
-          -e GH_ORIGINS='https://goat.genomehubs.org null' \
-          -e GH_HUBNAME=goat \
-          -e GH_HUBPATH='/genomehubs/resources/' \
-          -e GH_NODE='es1:9200' \
-          -e GH_RELEASE=$RELEASE \
-          -e GH_REDIS='redis://redis:6379' \
-          -e GH_SOURCE=https://github.com/genomehubs/goat-data/tree/$RELEASE \
-          -e GH_ACCESS_LOG=/genomehubs/logs/access.log \
-          -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
-          -e GH_ERROR_LOG=/genomehubs/logs/error.log \
-          -v /volumes/docker/logs/$RELEASE:/genomehubs/logs \
-          -v /volumes/docker/resources:/genomehubs/resources \
-          --name goat-api-$RELEASEDAY \
-          genomehubs/genomehubs-api:latest
+      #     docker run -d \
+      #     --restart=always \
+      #     --net net-es \
+      #     -p 30$RELEASEDAY:3000 \
+      #     --user \$UID:\$GROUPS \
+      #     -e GH_ORIGINS='https://goat.genomehubs.org null' \
+      #     -e GH_HUBNAME=goat \
+      #     -e GH_HUBPATH='/genomehubs/resources/' \
+      #     -e GH_NODE='es1:9200' \
+      #     -e GH_RELEASE=$RELEASE \
+      #     -e GH_REDIS='redis://redis:6379' \
+      #     -e GH_SOURCE=https://github.com/genomehubs/goat-data/tree/$RELEASE \
+      #     -e GH_ACCESS_LOG=/genomehubs/logs/access.log \
+      #     -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
+      #     -e GH_ERROR_LOG=/genomehubs/logs/error.log \
+      #     -v /volumes/docker/logs/$RELEASE:/genomehubs/logs \
+      #     -v /volumes/docker/resources:/genomehubs/resources \
+      #     --name goat-api-$RELEASEDAY \
+      #     genomehubs/genomehubs-api:latest
 
-          docker pull genomehubs/goat:latest
-          docker rm -f goat-ui-$RELEASEDAY
+      #     docker pull genomehubs/goat:latest
+      #     docker rm -f goat-ui-$RELEASEDAY
 
-          docker run -d --restart always \
-          --net net-es \
-          -p 80$RELEASEDAY:8880 \
-          --user \$UID:\$GROUPS \
-          -e GH_CLIENT_PORT=8880 \
-          -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
-          -e GH_BASENAME= \
-          -e GH_SITENAME=GoaT \
-          -e GH_ARCHIVE='2023.05.18 2023.02.20 2022.11.16' \
-          -e GH_SUGGESTED_TERM=Canidae \
-          --name goat-ui-$RELEASEDAY \
-          genomehubs/goat:latest
-          "
+      #     docker run -d --restart always \
+      #     --net net-es \
+      #     -p 80$RELEASEDAY:8880 \
+      #     --user \$UID:\$GROUPS \
+      #     -e GH_CLIENT_PORT=8880 \
+      #     -e GH_API_URL=https://goat.genomehubs.org/api/v2 \
+      #     -e GH_BASENAME= \
+      #     -e GH_SITENAME=GoaT \
+      #     -e GH_ARCHIVE='2023.05.18 2023.02.20 2022.11.16' \
+      #     -e GH_SUGGESTED_TERM=Canidae \
+      #     --name goat-ui-$RELEASEDAY \
+      #     genomehubs/goat:latest
+      #     "
