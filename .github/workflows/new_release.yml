@@ -245,6 +245,13 @@ jobs:
                 --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
+
+      - name: Add ES index.mapping.nested_objects.limit 1000000
+        run:  |
+          curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
+          -H 'Content-Type: application/json' \
+          -d '{ "index.mapping.nested_objects.limit" : 1000000 }'
+      
       - name: genomehubs index assembly assembly-data
         run: |
           docker run --rm --network=host \
@@ -371,12 +378,6 @@ jobs:
             genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
               "genomehubs parse \
                 --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
-
-      - name: Add ES index.mapping.nested_objects.limit 1000000
-        run:  |
-          curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
-            -H 'Content-Type: application/json' \
-            -d '{ "index.mapping.nested_objects.limit" : 1000000 }'
 
       - name: genomehubs index assembly btk assemblies
         run: |
