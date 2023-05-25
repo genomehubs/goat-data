@@ -372,11 +372,11 @@ jobs:
               "genomehubs parse \
                 --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
 
-      - name: Add ES index.mapping.nested_objects.limit 100000
+      - name: Add ES index.mapping.nested_objects.limit 1000000
         run:  |
           curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
             -H 'Content-Type: application/json' \
-            -d '{ "index.mapping.nested_objects.limit" : 100000 }'
+            -d '{ "index.mapping.nested_objects.limit" : 1000000 }'
 
       - name: genomehubs index assembly btk assemblies
         run: |
