@@ -1,4 +1,5 @@
 taxon_id	input	rank
+7399	Hymenoptera	order
 29979	Isopoda	order
 #qqHarHomb	Harpactea hombergi	species
 52428	Polyxenus lagurus	species
@@ -6,7 +7,6 @@ taxon_id	input	rank
 41160	Phyllobius	genus
 79500	Bruchus	genus
 7147	Diptera	order
-7399	Hymenoptera	order
 1081820	Ischnodemus sabuleti	species
 166131	Asiraca clavicornis	species
 2026310	Closterotomus trivialis	species
@@ -894,13 +894,17 @@ taxon_id	input	rank
 1872065	Nuctenea umbratica	species
 1100095	Misumena vatia	species
 560983	Escharella immersa	species
+1101045	Rhopobota ustomaculana	species
+572880	Prays fraxinella	species
+1073582	Chrysoesthia drurella	species
+500459	Microlophium carnosum	species
+1545314	Eremocoris podagricus	species
+987033	Theria primaria	species
 34613	Ixodes ricinus	species
 655052	Tinea columbariella	species
 753371	Musotima nitidalis	species
 199060	Phyllonorycter platani	species
-500459	Microlophium carnosum	species
 1046773	Chthonius ischnocheles	species
-987033	Theria primaria	species
 2724381	Cradoscrupocellaria	genus
 216125	Steromphala cineraria	species
 193289	Watersipora	genus
@@ -922,9 +926,6 @@ taxon_id	input	rank
 1545363	Syromastus rhombeus	species
 1869957	Glyphipterix fuscoviridella	species
 2017626	Aethes deaurana	species
-572880	Prays fraxinella	species
-1073582	Chrysoesthia drurella	species
-1545314	Eremocoris podagricus	species
 1101025	Ocnerostoma friesei	species
 2997259	Simacauda dicommatias	species
 347735	Sitotroga cerealella	species
@@ -1132,7 +1133,6 @@ taxon_id	input	rank
 1870710	Rhodophaea formosa	species
 1100900	Acrobasis consociella	species
 987979	Melanchra persicariae	species
-1101045	Rhopobota ustomaculana	species
 311328	Tortrix viridana	species
 934850	Eupithecia haworthiata	species
 987862	Acronicta leporina	species
