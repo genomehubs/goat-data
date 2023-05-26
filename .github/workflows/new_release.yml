@@ -1,11 +1,11 @@
 name: new_release
 # on: push
-on: workflow_dispatch
-# on:
-#   schedule:
-#     - cron: '5 0 * * 1,2,3,4,5,6' # At 00:05 every MTWTFS
+# on: workflow_dispatch
+on:
+  schedule:
+    - cron: '5 0 * * 1,2,3,4,5,6' # At 00:05 every MTWTFS
 env:
-  GENOMEHUBS_TAG: develop
+  DOCKERVERSION: develop
 
 jobs:
 
@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Get dockers
         run:  |
-          docker pull genomehubs/genomehubs:$GENOMEHUBS_TAG
+          docker pull genomehubs/genomehubs:$DOCKERVERSION
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
     
   update_ncbi_ena_tolids:
@@ -51,7 +51,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
             "genomehubs parse --ncbi-datasets-genome sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
           cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
       - name: genomehubs parse --ncbi-datasets-sample
@@ -59,7 +59,7 @@ jobs:
           mkdir -p sources/assembly-data-sample
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
             "genomehubs parse --ncbi-datasets-sample sources/assembly-data --outfile sources/assembly-data-sample/ncbi_datasets_eukaryota_sample.tsv.gz"
       - name: Clean up expanded ncbi datasets zip
         run:  rm -rf sources/assembly-data/ncbi_dataset datasets
@@ -67,7 +67,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
       - name: Get latest NCBI taxdump
         run: |
@@ -237,7 +237,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs init \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -245,11 +245,18 @@ jobs:
                 --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
+
+      - name: Add ES index.mapping.nested_objects.limit 1000000
+        run:  |
+          curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
+          -H 'Content-Type: application/json' \
+          -d '{ "index.mapping.nested_objects.limit" : 1000000 }'
+      
       - name: genomehubs index assembly assembly-data
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -259,7 +266,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -299,7 +306,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -309,7 +316,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -327,7 +334,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -345,7 +352,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -356,7 +363,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -368,21 +375,15 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs parse \
                 --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
-
-      - name: Add ES index.mapping.nested_objects.limit 100000
-        run:  |
-          curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
-            -H 'Content-Type: application/json' \
-            -d '{ "index.mapping.nested_objects.limit" : 100000 }'
 
       - name: genomehubs index assembly btk assemblies
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -399,7 +400,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -410,7 +411,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -421,7 +422,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -482,7 +483,7 @@ jobs:
       #     docker run --rm --network=host \
       #       -v `pwd`/sources:/genomehubs/sources \
       #       -v /volumes/docker/resources:/genomehubs/resources \
-      #       genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+      #       genomehubs/genomehubs:$DOCKERVERSION bash -c \
       #         "genomehubs index \
       #           --es-host es1:9200 \
       #           --taxonomy-source ncbi \
@@ -493,7 +494,7 @@ jobs:
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             -v /volumes/docker/resources:/genomehubs/resources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -539,7 +540,7 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$GENOMEHUBS_TAG bash -c \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs fill \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
@@ -561,20 +562,20 @@ jobs:
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
 
-  rsync_to_prod:
-    needs:
-      - genomehubs_index_files
-      - genomehubs_fill
-    runs-on:  self-hosted
-    steps:
+  # rsync_to_prod:
+  #   needs:
+  #     - genomehubs_index_files
+  #     - genomehubs_fill
+  #   runs-on:  self-hosted
+  #   steps:
 
-      - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+  #     - name: Get bash release name
+  #       run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
-      - name: rsync production snapshot to prod
-        run: |
-          rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE tol-goat-prod-run1:/volumes/docker/snapshots/production/
-          rsync -av --delete /volumes/docker/resources/files                          tol-goat-prod-run1:/volumes/docker/resources/
+  #     - name: rsync production snapshot to prod
+  #       run: |
+  #         rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE tol-goat-prod-run1:/volumes/docker/snapshots/production/
+  #         rsync -av --delete /volumes/docker/resources/files                          tol-goat-prod-run1:/volumes/docker/resources/
 
   rsync_to_lustre:
     needs:
@@ -593,7 +594,8 @@ jobs:
 
   restore_on_prod:
     needs:
-      - rsync_to_prod
+      - genomehubs_fill
+      - genomehubs_index_files
     runs-on:  self-hosted
     steps:
 
