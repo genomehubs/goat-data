@@ -1,9 +1,9 @@
 name: new_release
 # on: push
-on: workflow_dispatch
-# on:
-#   schedule:
-#     - cron: '5 0 * * 1,2,3,4,5,6' # At 00:05 every MTWTFS
+# on: workflow_dispatch
+on:
+  schedule:
+    - cron: '5 0 * * 1,2,3,4,5,6' # At 00:05 every MTWTFS
 env:
   GENOMEHUBS_TAG: develop
 
@@ -562,20 +562,20 @@ jobs:
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
 
-  rsync_to_prod:
-    needs:
-      - genomehubs_index_files
-      - genomehubs_fill
-    runs-on:  self-hosted
-    steps:
+  # rsync_to_prod:
+  #   needs:
+  #     - genomehubs_index_files
+  #     - genomehubs_fill
+  #   runs-on:  self-hosted
+  #   steps:
 
-      - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+  #     - name: Get bash release name
+  #       run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
-      - name: rsync production snapshot to prod
-        run: |
-          rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE tol-goat-prod-run1:/volumes/docker/snapshots/production/
-          rsync -av --delete /volumes/docker/resources/files                          tol-goat-prod-run1:/volumes/docker/resources/
+  #     - name: rsync production snapshot to prod
+  #       run: |
+  #         rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE tol-goat-prod-run1:/volumes/docker/snapshots/production/
+  #         rsync -av --delete /volumes/docker/resources/files                          tol-goat-prod-run1:/volumes/docker/resources/
 
   rsync_to_lustre:
     needs:
@@ -594,7 +594,8 @@ jobs:
 
   restore_on_prod:
     needs:
-      - rsync_to_prod
+      - genomehubs_fill
+      - genomehubs_index_files
     runs-on:  self-hosted
     steps:
 
