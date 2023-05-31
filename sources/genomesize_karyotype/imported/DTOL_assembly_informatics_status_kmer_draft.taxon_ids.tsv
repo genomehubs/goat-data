@@ -1,4 +1,5 @@
 taxon_id	input	rank
+97021	Trifolium dubium	species
 249532	Icerya purchasi	species
 3025909	Choricystis sp. odSpoLacu1	species
 1803847	Protoeuglena noctilucae	species
@@ -11,10 +12,11 @@ taxon_id	input	rank
 638464	Ceriagrion tenellum	species
 347424	Othius punctulatus	species
 934869	Horisme vitalbata	species
+169445	Dryomyza anilis	species
+1330250	Podarcis cretensis	species
 495374	Oxytorus armatus	species
 33397	Chironomus plumosus	species
 876078	Thymelicus acteon	species
-97021	Trifolium dubium	species
 260603	Lycopus europaeus	species
 29695	Phragmites australis	species
 33127	Parietaria judaica	species
@@ -120,7 +122,6 @@ taxon_id	input	rank
 148596	Falco punctatus	species
 1542598	Andrena marginata	species
 418785	Entoloma clypeatum	species
-169445	Dryomyza anilis	species
 1859540	Eristalis intricaria	species
 30202	Bombus vestalis	species
 346868	Uleiota planata	species
@@ -162,7 +163,6 @@ taxon_id	input	rank
 37598	Fringilla coelebs	species
 360071	Amphimallon solstitiale	species
 69293	Gasterosteus aculeatus	species
-1330250	Podarcis cretensis	species
 878362	Philonthus spinipes	species
 127875	Cinclus cinclus	species
 114497	Cordyceps fumosorosea	species
@@ -190,11 +190,11 @@ taxon_id	input	rank
 881727	Pilophorus perplexus	species
 987968	Leucania comma	species
 542982	Heliothis peltigera	species
+687026	Coleophora deauratella	species
+987986	Mythimna pallens	species
 3034142	Perkinsela sp. pyNocScin1	species
 929971	Nymphalis c-album	species
 2589382	Watersipora subatra	species
-687026	Coleophora deauratella	species
-987986	Mythimna pallens	species
 503482	Urophora cardui	species
 39848	Agrostemma githago	species
 49984	Ajuga chamaepitys	species
@@ -209,7 +209,9 @@ taxon_id	input	rank
 74645	Rosa rugosa	species
 80831	Tridacna derasa	species
 258209	Berberis vulgaris	species
+1080930	Zele albiditarsus	species
 468783	Philonicus albiceps	species
+1132042	Ctenicera cuprea	species
 1940097	Ocys tachysoides	species
 346812	Notiophilus biguttatus	species
 2725500	Anthrax anthrax	species
@@ -352,6 +354,7 @@ taxon_id	input	rank
 2902216	Cleonymus obscurus	species
 1603211	Pygostolus sticticus	species
 65146	Ophion ventricosus	species
+2998544	Perithous albicinctus	species
 334708	Patella ulyssiponensis	species
 1028563	Venerupis corrugata	species
 878440	Pterostichus vernalis	species
@@ -404,10 +407,8 @@ taxon_id	input	rank
 119177	Inula conyza	species
 241234	Carex sylvatica	species
 234471	Carex pulicaris	species
-2998544	Perithous albicinctus	species
-1132042	Ctenicera cuprea	species
-1080930	Zele albiditarsus	species
 249498	Balanococcus diminutus	species
+96551	Tuberolachnus salignus	species
 1000418	Galeopsis tetrahit	species
 52153	Festuca rubra	species
 75065	Rubus caesius	species
@@ -431,6 +432,8 @@ taxon_id	input	rank
 572874	Pasiphila rectangulata	species
 242715	Diploria labyrinthiformis	species
 1845063	Orchestes fagi	species
+934816	Perizoma affinitatum	species
+1870131	Ochropleura leucogaster	species
 1053393	Scrophularia auriculata	species
 702255	Logfia minima	species
 76438	Eriophorum vaginatum	species
@@ -902,7 +905,6 @@ taxon_id	input	rank
 126245	Chalcolestes viridis	species
 28540	Buddleja davidii	species
 191068	Lysimachia vulgaris	species
-58048	Polypodium vulgare	species
 1191083	Elasmostethus interstinctus	species
 1190789	Sphecodes hyalinatus	species
 475346	Poecilocampa populi	species
