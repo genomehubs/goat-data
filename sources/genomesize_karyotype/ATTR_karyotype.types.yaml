@@ -13,11 +13,13 @@ attributes:
     display_level: 1
     display_name: Chromosome number
     summary:
+      - mode_high
+      - mode_list
       - median_high
       - mode
       - max
       - min
-    traverse: median_high
+    traverse: mode
     traverse_direction: both
     type: short
   haploid_number:
@@ -34,11 +36,13 @@ attributes:
     display_level: 1
     display_name: Haploid number
     summary:
+      - mode_low
+      - mode_list
       - median_high
       - mode
       - max
       - min
-    traverse: median_high
+    traverse: mode_low
     traverse_direction: both
     type: short
   sex_determination:
@@ -64,10 +68,11 @@ attributes:
     display_level: 2
     display_name: Ploidy
     summary:
-      - median_high
+      - mode_list
       - mode
+      - median_high
       - max
       - min
-    traverse: median_high
+    traverse: mode
     traverse_direction: both
     type: short
