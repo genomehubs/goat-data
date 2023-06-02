@@ -1,6 +1,9 @@
 taxon_id	input	rank
-7399	Hymenoptera	order
+69514	Australoplana sanguinea	species
 7041	Coleoptera	order
+107852	Haliplus	genus
+107769	Agabus	genus
+7399	Hymenoptera	order
 214286	Oligia	genus
 1869483	Argyresthia trifasciata	species
 987860	Acronicta alni	species
@@ -47,8 +50,6 @@ taxon_id	input	rank
 6683	Decapoda	order
 51292	Capitellidae	family
 156914	Nebrioporus	genus
-107769	Agabus	genus
-107852	Haliplus	genus
 65288	Netelia	genus
 6961	Odonata	order
 30263	Trichoptera	order
@@ -328,7 +329,6 @@ taxon_id	input	rank
 394625	Brachycaudus lychnidis	species
 1545159	Megalonotus chiragra	species
 1810706	Dicranocephalus agilis	species
-69514	Australoplana sanguinea	species
 60593	Celleporella hyalina	species
 95170	Membranipora membranacea	species
 72672	Ophiura albida	species
@@ -894,6 +894,10 @@ taxon_id	input	rank
 1872065	Nuctenea umbratica	species
 1100095	Misumena vatia	species
 560983	Escharella immersa	species
+1520503	Rhynchodemus sylvaticus	species
+391273	Microplana scharffi	species
+138674	Microplana terrestris	species
+1155754	Philodromus dispar	species
 30083	Miridae	family
 237356	Dicyphus	genus
 567386	Orthops	genus
@@ -911,7 +915,6 @@ taxon_id	input	rank
 198987	Callisto denticulella	species
 1660718	Platyedra subcinerea	species
 97051	Cinara	genus
-1155754	Philodromus dispar	species
 1545128	Eurydema oleracea	species
 #xgAegPura	Aegopinella pura	species
 1101045	Rhopobota ustomaculana	species
@@ -1454,7 +1457,6 @@ taxon_id	input	rank
 132421	Arthurdendyus triangulatus	species
 326963	Lycia hirtaria	species
 61998	Dilta	genus
-138674	Microplana terrestris	species
 2844365	Cellaria sinuosa	species
 1655321	Cellepora pumicosa	species
 2844364	Cellaria fistulosa	species
