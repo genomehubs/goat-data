@@ -16152,7 +16152,6 @@ taxon_id	input	rank
 468196	Polyplax serrata	species
 468197	Polyplax spinulosa	species
 511941	Linognathus ovillus	species
-#iuLinSeto	Linognathus setosus	species
 #iuSolBurm	Solenopotes burmeisteri	species
 #itDenSalt	Dendrothrips saltator	species
 #itBalKroe	Baliothrips kroeli	species
@@ -20712,7 +20711,6 @@ taxon_id	input	rank
 352856	Ornithomya chloropus	species
 352855	Ornithomya fringillina	species
 #idIcoMino	Icosta minor	species
-#idIcoArde	Icosta ardeae	species
 1333312	Olfersia spinifera	species
 452746	Hippobosca equina	species
 170903	Lipoptena cervi	species
@@ -51293,7 +51291,6 @@ taxon_id	input	rank
 2883040	Zygina rubrovittata	species
 #xpAcaDisc	Acanthochitona discrepans	species
 1045396	Amblyosyllis madeirensis	species
-#wdAurBany	Aurospio banyulensis	species
 195543	Branchiura sowerbyi	species
 #wtCirCaud	Cirratulus caudatus	species
 #hrFecEryt	Fecampia erythrocephala	species
@@ -52820,7 +52817,6 @@ taxon_id	input	rank
 222004	Melinna cristata	species
 427286	Pareurythoe borealis	species
 1818039	Praxillella gracilis	species
-#wdPriPlum	Prionospio plumosa	species
 380447	Rhyacodrilus coccineus	species
 1131446	Samytha sexcirrata	species
 #wjSpiArct	Spinther arcticus	species
@@ -54842,7 +54838,6 @@ taxon_id	input	rank
 2796844	Brachypoda versicolor	species
 188206	Buchholzia fallax	species
 290884	Atypopenaeus stenodactylus	species
-2563754	Typhlotanais mixtus	species
 #qmParAbys	Parapseudotanais abyssalis	species
 #iyAcaHete	Acanopsilus heterocerus	species
 #iyAcaClav	Acanopsilus clavatus	species
@@ -55845,9 +55840,7 @@ taxon_id	input	rank
 1495204	Polydora hoplura	species
 #wdPriCasp	Prionospio caspersi	species
 516004	Prionospio dubia	species
-#wdPriFall	Prionospio fallax	species
 #wdPriMalm	Prionospio malmgreni	species
-#wdPriMult	Prionospio multibranchiata	species
 997032	Pseudopolydora antennata	species
 997042	Pseudopolydora paucibranchiata	species
 997045	Pseudopolydora pulchra	species
@@ -59443,8 +59436,8 @@ taxon_id	input	rank
 1628732	Clathromorphum circumscriptum	species
 #urExiParv	Exilicrusta parva	species
 1277934	Lithothamnion corallioides	species
-48599	Lithothamnion glaciale	species
-1628730	Lithothamnion lemoineae	species
+48599	Boreolithothamnion glaciale	species
+1628730	Boreolithothamnion lemoineae	species
 #urLitNorv	Lithothamnion norvegicum	species
 #urLitSond	Lithothamnion sonderi	species
 1497743	Melobesia membranacea	species
@@ -67031,7 +67024,6 @@ taxon_id	input	rank
 #qqPteGrai	Pteronyssus gracilis	species
 #qqPteRobi	Pteronyssus robini	species
 #qqPteStrc	Pterophagus strictus	species
-#qqPtiHirs	Ptilonyssus hirsti	species
 #qqPtiNudu	Ptilonyssus nudus	species
 #qqPtiBuch	Ptiloxenus bucholzii	species
 #qqPtiColy	Ptiloxenus colymbi	species
@@ -70315,6 +70307,7 @@ taxon_id	input	rank
 288738	Phaeoclavulina longicaulis	species
 288749	Phaeoclavulina mutabilis	species
 2055174	Resupinatus kavinae	species
+3050523	Rhizocarpon infernulum	species
 117059	Clitocella fallax	species
 693844	Clitopilus hirneolus	species
 1317061	Rhodophana melleopallens	species
@@ -70454,6 +70447,7 @@ taxon_id	input	rank
 #gfPenAvel	Peniophora avellanea	species
 #gfAgaCana	Agaricus canaliculatus	species
 2968757	Cryptops sp.	species
+3050849	Cotoneaster glabratus	species
 487927	Amelichloa brachychaeta	species
 1844645	Hedlundia pseudomeinichii	species
 746475	Aria whiteana	species
