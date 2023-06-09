@@ -1,0 +1,32 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: PhyloAlps_expanded.tsv
+  source: Declared Status List - PhyloAlps
+  source_date: 2023-03-14
+  source_description: Declared Status Lists -PhyloAlps - static spreadsheet - samples collected for low-coverage sequencing 
+  source_contact: "Sébastien Lavergne - info@phyloalps.org"
+attributes:
+  long_list:
+    header: long_list
+  sequencing_status:
+    header: sequencing_status_phyloalps
+  sequencing_status_phyloalps:
+    header: sequencing_status_phyloalps
+  sample_collected:
+    header: long_list
+  # sample_collected_by:
+  #   header: collected_by
+  #   translate:
+  #     "BMS,RBGK": KEW
+    # type: keyword
+  sample_acquired:
+    header: long_list
+taxonomy:
+  taxon_id:
+    header: ncbi_id
+  species:
+    header: provider_name
+  family:
+    header: taxon_family
