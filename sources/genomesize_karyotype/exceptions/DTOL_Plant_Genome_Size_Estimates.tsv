@@ -386,6 +386,7 @@ RBGE	DMR256	DTOL	Angiosperm	Orchidaceae	Coeloglossum	viride	>Pisum	GPB3%PVP	249.
 RBGK	MC9413	DTOL	Angiosperm	Caryophyllaceae	Sagina	nodosa	<Solanum	GPB3%PVP	186.27	318.12	3.89	3.64	1.708	192.03	326.63	NA	1.16	0.58	0.57	3.59	3.25	0.006	NA	Sahr Mian	NA	NA	-	NA	NA	NA	NA	1
 RBGK	MC9411	DTOL	Angiosperm	Asteraceae	Filago	minima	<Solanum	GPB3%PVP	137.49	219.72	4.06	2.57	1.598	137.02	219.77	NA	1.23	0.62	0.6	4.23	2.41	0.008	NA	Sahr Mian	NA	NA	-	NA	NA	NA	NA	1
 RBGK	MC9414	DTOL	Angiosperm	Onagraceae	Epilobium	brunnescens	<Solanum	GPB3%PVP	116.56	315.46	5.01	3.57	2.706	119.32	321.73	NA	0.73	0.37	0.36	4.84	3.36	0.014	NA	Sahr Mian	NA	NA	-	NA	NA	NA	NA	1
+RBGK	MC9527	DTOL	Angiosperm	NA	Epilobium	brunnescens	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9415	DTOL	Angiosperm	Lythraceae	Lythrum	hyssopifolia	<Solanum	GPB3%PVP	364.03	449.29	4.49	4.02	1.234	373.48	460.08	NA	1.61	0.8	0.79	3.76	3.46	0.003	NA	Sahr Mian	NA	NA	-	NA	NA	NA	NA	1
 RBGK	MC9416	DTOL	Angiosperm	Cyperaceae	Cyperus	fuscus	<Solanum	GPB3%PVP	125.94	476.60	4.45	3.01	3.784	129.2	484.24	NA	0.53	0.26	0.26	4.21	2.84	0.031	NA	Sahr Mian	NA	NA	-	NA	NA	NA	NA	1
 RBGK	MC9417	DTOL	Angiosperm	Asteraceae	Filago	lutescens	<Solanum	GPB3%PVP	314.19	417.22	2.71	2.53	1.328	321.83	424.47	NA	1.5	0.75	0.73	2.39	2.63	0.008	NA	Sahr Mian	NA	NA	1.39	NA	NA	NA	NA	1
@@ -604,4 +605,43 @@ RBGE	DMR314	DTOL	Angiosperm	NA	Schoenus	ferrugineus	<Petro	Galbraith	245.89	498.
 RBGE	DMR315	DTOL	Angiosperm	NA	Oxytropis	halleri	>Solanum	Galbraith	215.81	510.40	3.64	2.92	2.365	515.24	218.56	4.68	4.67	2.33	2.28	2.82	3.62	0.007	0.013	Nacho	02/05/2023	NA	NA	NA	NA	NA	NA	1
 RBGE	DMR316	DTOL	Angiosperm	NA	Potentilla	crantzii	<Petro	Galbraith	198.59	419.10	4.64	2.99	2.11	207.2	433.01	2.13	2.15	1.08	1.05	4.44	2.85	0.017	0.018	Nacho	02/05/2023	NA	NA	NA	NA	NA	NA	1
 RBGE	DMR317	DTOL	Angiosperm	NA	Lycopsis	arvensis	>Pisum	GPB3%PVP	214.71	785.31	4.34	4.8	3.657	814.38	226.04	33.25	32.77	16.38	16.02	3.83	4.18	0.061	0.558	Nacho	02/05/2023	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR317	DTOL	Angiosperm	NA	Lycopsis	arvensis	>Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
 RBGE	DMR318	DTOL	Angiosperm	NA	Alnus	cordata	<Petro	Galbraith	213.69	749.00	4.41	1.97	3.505	216.2	759.09	1.28	1.28	0.64	0.63	4.82	2.15	0.007	0.002	Nacho	02/05/2023	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR318	DTOL	Angiosperm	NA	Alnus	cordata	<Solanum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR319	DTOL	Angiosperm	NA	Silene	viscaria	>Solanum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR320	DTOL	Angiosperm	NA	Anthriscus	caucalis	>Solanum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR321	DTOL	Angiosperm	NA	Geranium	pyrenaicum	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR322	DTOL	Angiosperm	NA	Cerastium	tomentosum	Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR323	DTOL	Angiosperm	NA	Linaria	purpurea	<Solanum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR324	DTOL	Angiosperm	NA	Milium	effusum	>Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR325	DTOL	Angiosperm	NA	Viburnum	opulus	>Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR326	DTOL	Angiosperm	NA	Thalictrum	alpinum	<Solanum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR327	DTOL	Angiosperm	NA	Rubus	chamaemorus	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DMR328	DTOL	Angiosperm	NA	Alopecurus	geniculatus	<Allium	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9517	DTOL	Angiosperm	NA	Saxifraga	hirsuta	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9518	DTOL	Angiosperm	NA	Saxifraga	spathularis	Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9519	DTOL	Angiosperm	NA	Euphorbia	hyberna	Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9520	DTOL	Angiosperm	NA	Rubia	peregrina	Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9521	DTOL	Angiosperm	NA	Arbutus	unedo	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9522	DTOL	Angiosperm	NA	Cotoneaster	integrifolius	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9523	DTOL	Angiosperm	NA	Allium	scorodoprasum	Allium	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9524	DTOL	Angiosperm	NA	Pinguicula	grandiflora	<Solanum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9525	DTOL	Angiosperm	NA	Sisyrinchium	bermudiana	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9526	DTOL	Poales	Cyperaceae	Carex	viridula	<Solanum	Galbraith	225.99	529.65	3.9	2.45	2.344	221.17	519.31	0.84	0.84	0.42	0.41	3.8	2.59	0.006	0.002	Nacho	09/06/2023	NA	2C = 0.72pg	NA	NA	NA	NA	1
+RBGK	MC9528	DTOL	Angiosperm	NA	Erica	mackayana	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9529	DTOL	Angiosperm	NA	Galium	boreale	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9530	DTOL	Angiosperm	NA	Inula	salicina	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9531	DTOL	Angiosperm	NA	Leucojum	aestivum	>Allium	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9533	DTOL	Angiosperm	NA	Erica	erigena	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9534	DTOL	Angiosperm	NA	Sorbus	hibernica	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9535	DTOL	Fern	NA	Cystopteris	fragilis	<Allium	Ebihara	204.04	316.36	3.96	3.08	1.55	206.73	318.52	22.5	22.64	11.32	11.07	4.25	3.24	0.009	0.131	Nacho	09/06/2023	NA	(agg.) 2C = 16.57pg	NA	NA	NA	NA	1
+RBGK	MC9536	DTOL	Angiosperm	NA	Dactylorhiza	kerryensis	Petro	Galbraith	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9537	DTOL	Angiosperm	NA	Viola	persicifolia	<Petro	Galbraith	194.16	621.68	8.67	5.51	3.202	192.41	613.42	1.41	1.41	0.71	0.69	8.24	6.06	0.023	0.009	Nacho	09/06/2023	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9538	DTOL	Angiosperm	NA	Achillea	maritima	>Solanum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9539	DTOL	Angiosperm	NA	Daboecia	cantabrica	Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9540	DTOL	Angiosperm	NA	Saxifraga	hartii	>Solanum	Galbraith	221.32	445.56	3.65	4.82	2.013	457.05	225.23	3.99	4.02	2.01	1.96	5.39	3.25	0.023	0.044	Nacho	09/06/2023	NA	NA	Rough estimate. Few nuclei, but confirmed with the sample on its own	NA	NA	NA	1
+RBGK	MC9541	DTOL	Poales	Cyperaceae	Carex	buxbaumii	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9542	DTOL	Angiosperm	NA	Groenlandia	densa	<Solanum	Galbraith	237.55	682.37	9.06	2.77	2.873	237.56	678.34	0.69	0.69	0.35	0.34	8.64	2.66	0.025	0.006	Nacho	09/06/2023	NA	NA	Rough estimate. Few nuclei. There was another peak in ca. half of the used peak but wasn´t perfectly half, so probably a fungi	NA	NA	NA	1
+RBGK	MC9543	DTOL	Angiosperm	NA	Vaccinium	oxycoccus	<Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9544	DTOL	Angiosperm	NA	Cirsium	dissectum	Petro?	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9545	DTOL	Ferm	NA	Trichomanes	speciosum	<Allium	Ebihara	COULDNT GET ANYTHING. Not enough material	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	2C = 21.47pg	NA	NA	NA	NA	1
