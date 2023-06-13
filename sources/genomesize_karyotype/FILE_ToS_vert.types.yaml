@@ -1,0 +1,35 @@
+file:
+  format: tsv
+  header: true
+  name: ToS_vert.tsv
+  source: Tree of Sex Database
+  source_url: http://treeofsex.org/  
+  source_description: Vertebrate database by the 2014 Tree of Sex Consortium
+attributes:
+  chromosome_number: 
+    header: ["chr_num_female", "chr_num_male"]
+    join: "," 
+    separator:
+      - "/"
+      - ","
+      - "-"
+      - "|"
+  sex_determination:
+    header: "karyotype"
+    separator:
+      - ","
+      - "/"
+      - "-"
+      - "|"
+    type: keyword
+  ploidy:
+    header: "predicted_ploidy"
+    separator:
+      -","
+taxonomy:
+  species:
+    header: Species
+  genus:
+    header: Genus
+  family:
+    header: Family

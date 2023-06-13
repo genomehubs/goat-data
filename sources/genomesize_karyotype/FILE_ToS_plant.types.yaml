@@ -1,0 +1,41 @@
+file:
+  format: tsv
+  header: true
+  name: ToS_plant.tsv
+  source: Tree of Sex Database
+  source_url: http://treeofsex.org/  
+  source_description: Plant database by the 2014 Tree of Sex Consortium; only min values were reported for chromosome numbers
+attributes:
+  chromosome_number: 
+    header: sporophytic_min 
+    separator:
+      - ";"
+      - "/"
+      - ","
+      - "-"
+      - "|"
+  haploid_number:
+    header: gametophytic_min
+    separator:
+      - ";"
+      - "/"
+      - ","
+      - "-"
+      - "|"
+  sex_determination:
+    header: "karyotype"
+    separator:
+      - ";"
+      - ","
+      - "/"
+      - "-"
+      - "|"
+    type: keyword
+taxonomy:
+  species:
+    header: ["Genus", "Species"]
+    join: " "
+  genus:
+    header: Genus
+  family:
+    header: Family

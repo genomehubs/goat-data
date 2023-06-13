@@ -1,0 +1,41 @@
+file:
+  format: tsv
+  header: true
+  name: ToS_invert.tsv
+  source: Tree of Sex Database
+  source_url: http://treeofsex.org/  
+  source_description: Invertebrate database by the 2014 Tree of Sex Consortium
+attributes:
+  chromosome_number: 
+    header: ["Chromosome_number_female_2N", "Chromosome_number_male_2N"]
+    join: "," 
+    separator:
+      - "/"
+      - ","
+      - "-"
+      - "|"
+  sex_determination:
+    header: ["Karyotype", "Haplodiploidy"]
+    join: ","
+    translate:
+      arrhenotoky: "haplodiploid"
+      other: "haplodiploid"
+      paternal genome elimination: "haplodiploid"
+    separator:
+      - ","
+      - "/"
+      - "-"
+      - "|"
+    type: keyword
+  ploidy:
+    header: "Predicted ploidy"
+    separator:
+      -","
+taxonomy:
+  species:
+    header: ["Genus", "species"]
+    join: " "
+  genus:
+    header: Genus
+  family:
+    header: Family
