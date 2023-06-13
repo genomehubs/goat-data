@@ -1,0 +1,32 @@
+file:
+  format: tsv
+  header: true
+  name: mammal_ktp_db.tsv
+  source: Mammal Karyotype Database
+  source_date: 2023-06-13
+  source_url: https://evobir.shinyapps.io/mammals/
+  source_description: The Mammal Karyotype database contains 1471 mammalian karyotypes which we have compiled from 418 publications.
+attributes:
+  chromosome_number: 
+    header: ["Female2n","Male2n","Notes_diploid_num"]
+    join: "," 
+    separator:
+      - "/"
+      - ","
+      - "-"
+      - "|"
+  sex_determination:
+    header: "Sex_chromosome_system"
+    separator:
+      - ","
+      - "/"
+      - "-"
+      - "|"
+    type: keyword
+taxonomy:
+  species:
+    header: Binomial
+  genus:
+    header: Genus
+  family:
+    header: Family
