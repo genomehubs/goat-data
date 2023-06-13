@@ -1,4 +1,5 @@
 taxon_id	input	rank
+7041	Coleoptera	order
 7408	Ichneumonidae	family
 7399	Hymenoptera	order
 1073585	Endrosis sarcitrella	species
@@ -7,7 +8,6 @@ taxon_id	input	rank
 172486	Gelis	genus
 173635	Dyseriocrania subpurpurella	species
 753308	Diurnea fagella	species
-7041	Coleoptera	order
 34687	Stratiomyidae	family
 236939	Capsus ater	species
 43823	Limoniidae	family
@@ -894,6 +894,8 @@ taxon_id	input	rank
 1872065	Nuctenea umbratica	species
 1100095	Misumena vatia	species
 560983	Escharella immersa	species
+2753612	Cydia ulicetana	species
+34613	Ixodes ricinus	species
 1101020	Mompha epilobiella	species
 1870165	Parornix scoticella	species
 1869957	Glyphipterix fuscoviridella	species
@@ -916,7 +918,6 @@ taxon_id	input	rank
 41179	Eriocrania	genus
 199087	Phyllonorycter ulmifoliella	species
 1448912	Parornix betulae	species
-2753612	Cydia ulicetana	species
 1545242	Sciocoris cursitans	species
 1545363	Syromastus rhombeus	species
 2017626	Aethes deaurana	species
@@ -961,7 +962,6 @@ taxon_id	input	rank
 500459	Microlophium carnosum	species
 1545314	Eremocoris podagricus	species
 987033	Theria primaria	species
-34613	Ixodes ricinus	species
 655052	Tinea columbariella	species
 753371	Musotima nitidalis	species
 199060	Phyllonorycter platani	species
