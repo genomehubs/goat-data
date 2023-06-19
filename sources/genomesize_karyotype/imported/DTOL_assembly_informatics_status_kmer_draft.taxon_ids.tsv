@@ -1,23 +1,22 @@
 taxon_id	input	rank
-249532	Icerya purchasi	species
-3025909	Choricystis sp. odSpoLacu1	species
-1803847	Protoeuglena noctilucae	species
+475003	Euphrasia confusa	species
+511597	Stratiomys singularior	species
+997525	Agrotis clavis	species
 66205	Acer campestre	species
 1053395	Scutellaria minor	species
 97023	Trifolium fragiferum	species
 143172	Arctium minus	species
-29695	Phragmites australis	species
 33127	Parietaria judaica	species
+881489	Leptopterna dolabrata	species
+722659	Cabera pusaria	species
+3025909	Choricystis sp. odSpoLacu1	species
+1803847	Protoeuglena noctilucae	species
+29695	Phragmites australis	species
 473050	Urtica urens	species
 3034176	Nitzschia sp. pyKryTriq1	species
 638464	Ceriagrion tenellum	species
-475003	Euphrasia confusa	species
-511597	Stratiomys singularior	species
-997525	Agrotis clavis	species
-881489	Leptopterna dolabrata	species
 881727	Pilophorus perplexus	species
 934860	Eupithecia tripunctaria	species
-722659	Cabera pusaria	species
 273429	Cheilosia scutellata	species
 495374	Oxytorus armatus	species
 33397	Chironomus plumosus	species
@@ -188,6 +187,8 @@ taxon_id	input	rank
 47085	Medicago lupulina	species
 2268375	Leptographium flavum	species
 3034142	Perkinsela sp. pyNocScin1	species
+2862204	Hibiscus tridactylites	species
+630703	Rhynchopus euleeides	species
 929971	Nymphalis c-album	species
 2589382	Watersipora subatra	species
 80831	Tridacna derasa	species
@@ -197,13 +198,11 @@ taxon_id	input	rank
 96551	Tuberolachnus salignus	species
 494149	Cryptus armator	species
 205924	Entomortierella parvispora	species
-630703	Rhynchopus euleeides	species
 39848	Agrostemma githago	species
-2862204	Hibiscus tridactylites	species
 1230162	Sialis fuliginosa	species
 71668	Agrocybe praecox	species
-1606788	Melanophora roralis	species
 1202164	Stenus bimaculatus	species
+1606788	Melanophora roralis	species
 1940097	Ocys tachysoides	species
 346812	Notiophilus biguttatus	species
 2725500	Anthrax anthrax	species
@@ -232,7 +231,6 @@ taxon_id	input	rank
 709496	Peniophora laeta	species
 181985	Clitocybe odora	species
 146840	Labia minor	species
-2054275	Durinskia oculata	species
 2864184	Kryptoperidinium triquetrum	species
 2966	Noctiluca scintillans	species
 155530	Calliostoma zizyphinum	species
@@ -406,6 +404,21 @@ taxon_id	input	rank
 48171	Chelon labrosus	species
 102642	Abax parallelepipedus	species
 1870728	Subacronicta megacephala	species
+94688	Leucobryum glaucum	species
+109996	Raphanus raphanistrum	species
+320977	Bimastos eiseni	species
+63597	Heteramoeba clara	species
+154990	Euphorbia helioscopia	species
+1830358	Chorinaeus subcarinatus	species
+2054275	Durinskia oculata	species
+1553381	Calodromius spilotus	species
+1218166	Therophilus tumidulus	species
+1091426	Protomyctophum parallelum	species
+1913514	Rhamphomyia atrata	species
+3486	Humulus lupulus	species
+347477	Tytthaspis sedecimpunctata	species
+756629	Euphorbia paralias	species
+210355	Epilobium hirsutum	species
 39082	Muscardinus avellanarius	species
 1000418	Galeopsis tetrahit	species
 52153	Festuca rubra	species
@@ -431,7 +444,6 @@ taxon_id	input	rank
 934816	Perizoma affinitatum	species
 1870131	Ochropleura leucogaster	species
 295679	Rhagium mordax	species
-15000	Alisma plantago-aquatica	species
 147940	Asplenium viride	species
 641091	Trididemnum clinides	species
 96050	Phalaris arundinacea	species
@@ -443,10 +455,8 @@ taxon_id	input	rank
 1436028	Magelona johnstoni	species
 881212	Ctena decussata	species
 1128088	Trididemnum miniatum	species
-756629	Euphorbia paralias	species
 4686	Asparagus officinalis	species
 121826	Trioza urticae	species
-210355	Epilobium hirsutum	species
 97441	Viola odorata	species
 122183	Geranium robertianum	species
 904458	Petasites albus	species
@@ -454,24 +464,28 @@ taxon_id	input	rank
 165339	Veronica montana	species
 74635	Rosa canina	species
 37490	Clematis vitalba	species
-220462	Leymus arenarius	species
 81762	Hyacinthoides non-scripta	species
 37723	Deschampsia cespitosa	species
 254149	Bromus ramosus	species
 105271	Knautia arvensis	species
 1155256	Callitriche obtusangula	species
-109996	Raphanus raphanistrum	species
-320977	Bimastos eiseni	species
-63597	Heteramoeba clara	species
-154990	Euphorbia helioscopia	species
-94688	Leucobryum glaucum	species
 75150	Andricus lignicolus	species
-183561	Dipsacus fullonum	species
 4509	Dactylis glomerata	species
 568533	Ranunculus auricomus	species
 2885082	Symbiodinium sp. 221-229	species
 1810706	Dicranocephalus agilis	species
-1830358	Chorinaeus subcarinatus	species
+295815	Subcoccinella vigintiquattuorpunctata	species
+123330	Krefftichthys anderssoni	species
+107026	Mergellus albellus	species
+1472349	Alviniconcha strummeri	species
+160936	Stropharia albonitens	species
+878987	Sitona lepidus	species
+204401	Pedicularis sylvatica	species
+74828	Ranunculus bulbosus	species
+107022	Bucephala clangula	species
+24957	Gunnera manicata	species
+15000	Alisma plantago-aquatica	species
+220462	Leymus arenarius	species
 1053393	Scrophularia auriculata	species
 702255	Logfia minima	species
 76438	Eriophorum vaginatum	species
@@ -622,7 +636,6 @@ taxon_id	input	rank
 447135	Myodes glareolus	species
 42254	Sorex araneus	species
 56720	Lipophrys pholis	species
-1091426	Protomyctophum parallelum	species
 27697	Sardina pilchardus	species
 7748	Lampetra fluviatilis	species
 187126	Nesoenas mayeri	species
@@ -859,8 +872,6 @@ taxon_id	input	rank
 47247	Lotus corniculatus	species
 116146	Oedemera nobilis	species
 3652	Bryonia dioica	species
-160936	Stropharia albonitens	species
-281178	Petasites fragrans	species
 2794000	Canthophorus impressus	species
 279269	Cercopis vulnerata	species
 1511259	Corizus hyoscyami	species
@@ -996,7 +1007,6 @@ taxon_id	input	rank
 2724438	Metacallophyllis laciniata	species
 758714	Acleris rhombana	species
 484362	Pterostichus strenuus	species
-295815	Subcoccinella vigintiquattuorpunctata	species
 226174	Helophilus pendulus	species
 1124549	Syrphus ribesii	species
 1511241	Pantilius tunicatus	species
@@ -1055,7 +1065,6 @@ taxon_id	input	rank
 312236	Tipula oleracea	species
 65147	Ophion obscuratus	species
 189839	Baetis rhodani	species
-347477	Tytthaspis sedecimpunctata	species
 1869417	Agonopterix alstromeriana	species
 3116	Ulva intestinalis	species
 87149	Fucus spiralis	species

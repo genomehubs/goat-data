@@ -2280,7 +2280,6 @@ taxon_id	input	rank
 172945	Gracilaria multipartita	species
 753336	Gracillaria syringella	species
 146298	Diploschistes scruposus	species
-2938920	Graphis elegans	species
 996908	Phaeographis dendritica	species
 209281	Thelotrema lepadinum	species
 71600	Graphis scripta	species
@@ -2673,7 +2672,6 @@ taxon_id	input	rank
 2074798	Asterosporium hoffmannii	species
 2016431	Bactrodesmium pallidum	species
 50969	Loreleia marchantiae	species
-2926474	Triscelophorus acuminatus	species
 2780569	Selenosporella curvispora	species
 2674984	Bactrodesmium spilomeum	species
 2081326	Rutola graminis	species
@@ -2856,7 +2854,6 @@ taxon_id	input	rank
 1776022	Incrucipulum ciliare	species
 215460	Lachnellula occidentalis	species
 47828	Lachnum virgineum	species
-2940978	Lachnum apalum	species
 1586609	Notolaemus unifasciatus	species
 5630	Laetiporus sulphureus	species
 1489789	Lagena radicicola	species
@@ -4820,7 +4817,6 @@ taxon_id	input	rank
 264144	Rickenella fibula	species
 328891	Hamearis lucina	species
 433052	Metoecus paradoxus	species
-2930574	Rissoella diaphana	species
 707137	Onoba semicostata	species
 195039	Rissoa parva	species
 40113	Lecanactis abietina	species
@@ -6086,7 +6082,7 @@ taxon_id	input	rank
 #gyPhaVent	Phaeangella ventosa	species
 #grIsaFari	Isaria farinosa	species
 #grGibAran	Gibellula aranearum	species
-2980201	Corella parallelogramma	species
+#kaCorPara	Corella parallelogramma	species
 #grCorAngu	Coronophora angustata	species
 #grCorAnne	Coronophora annexa	species
 #gfCorMuci	Cortinarius mucifluoides	species
@@ -6099,7 +6095,7 @@ taxon_id	input	rank
 #gkEndPini	Endocronartium pini	species
 1268066	Cruoria cruoriaeformis	species
 #hrCryEqut	Cryptocelis equiteni	species
-3037861	Micrambe ulicis	species
+295831	Micrambe vini	species
 #isCteBiso	Ctenophthalmus bisoctodentatus	species
 #isPalSori	Palaeopsylla soricis	species
 #gdCucObdu	Cucurbitaria obducens	species
@@ -6396,7 +6392,6 @@ taxon_id	input	rank
 #gaXylFerr	Xylohypha ferruginosa	species
 #gaArtStil	Arthrobotryum stilboideum	species
 #gaXylPini	Xylohypha pinicola	species
-#gaLinHyal	Linodochium hyalinum	species
 #gaCorQuer	Corynesporopsis quercicola	species
 #gaHapThal	Haplobasidion thalictri	species
 #gaXylOrtm	Xylohypha ortmansiae	species
@@ -6574,7 +6569,6 @@ taxon_id	input	rank
 #xbHemNiti	Hemilepton nitidum	species
 #gyLabNoti	Laboulbenia notiophili	species
 2170747	Dasyscyphella nivea	species
-#wpLacMira	Lacydonia miranda	species
 53161	Lamium galeobdolon	species
 #daCliAsce	Clinopodium ascendens	species
 #daStaOffi	Stachys officinalis	species
@@ -6630,7 +6624,7 @@ taxon_id	input	rank
 1331045	Lophoziopsis excisa	species
 1331084	Lophoziopsis longidens	species
 248352	Trilophozia quinquedentata	species
-2998115	Lulworthia floridana	species
+#grLulFlor	Lulworthia floridana	species
 #grLulPurp	Lulworthia purpurea	species
 #grLulRufa	Lulworthia rufa	species
 #grLulOpac	Lulworthia opaca	species
@@ -6677,7 +6671,7 @@ taxon_id	input	rank
 #grMelElli	Meliola ellisii	species
 139123	Sarcodontia uda	species
 #urLepBorn	Leptophytum bornetii	species
-2964686	Mesopsocus immunis	species
+#iuMesImmu	Mesopsocus immunis	species
 #gdCapDing	Capnobotrys dingleyae	species
 #gdCapSple	Capnobotrys splendens	species
 #gdCapPino	Capnophialophora pinophila	species
@@ -6727,7 +6721,7 @@ taxon_id	input	rank
 431182	Palaeomymar anomalum	species
 #idCyrMarg	Cyrtosia marginata	species
 #gdMytGemm	Mytilinidion gemmigenum	species
-3001186	Myxine ios	species
+#kmMyxIosx	Myxine ios	species
 #goProSubu	Protascus subuliformis	species
 #goChlSpha	Chlamydomyzium sphaericum	species
 #goMyzBola	Myzocytiopsis bolata	species
@@ -6752,7 +6746,6 @@ taxon_id	input	rank
 #gcNowDeli	Nowakowskiella delica	species
 #gcNowProf	Nowakowskiella profusa	species
 113330	Mellicta athalia	species
-2973954	Xerotrema megalosporum	species
 #wjNotScot	Notocirrus scoticus	species
 #gfOliCitr	Oliveonia citrispora	species
 #gfOliNodo	Oliveonia nodosa	species
@@ -6838,7 +6831,7 @@ taxon_id	input	rank
 #grPhoAren	Phomatospora arenaria	species
 #grPhoCopr	Phomatospora coprophila	species
 #grPhoDine	Phomatospora dinemasporium	species
-3047113	Phomatospora endopteris	species
+#grPhoEndo	Phomatospora endopteris	species
 #grPhoBerk	Phomatospora berkeleyi	species
 #gfPhrMyco	Phragmoxenidium mycophilum	species
 #gzSpiChal	Spinellus chalybeus	species
@@ -6917,7 +6910,7 @@ taxon_id	input	rank
 #kaAplOcel	Aplidium ocellatum	species
 2980188	Aplidium pallidum	species
 #kaAplProl	Aplidium proliferum	species
-2980507	Aplidium punctum	species
+#kaAplPunc	Aplidium punctum	species
 #kaSynBeau	Synoicum beauchampi	species
 #kaSynIncr	Synoicum incrustatum	species
 #kaSynPulm	Synoicum pulmonaria	species
@@ -6975,7 +6968,7 @@ taxon_id	input	rank
 #kaBolPren	Bolteniopsis prenanti	species
 #kaHetRept	Heterostigma reptans	species
 #kaHetSepa	Heterostigma separ	species
-2980202	Pyura tessellata	species
+#kaPyuTess	Pyura tessellata	species
 #gyPyxPetc	Pyxidiophora petchii	species
 #gyPyxSpin	Pyxidiophora spinulorostrata	species
 #gyPyxAste	Pyxidiophora asterophora	species
