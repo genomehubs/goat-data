@@ -528,6 +528,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 4222	NA	Chordata	Vertebrata	Aves	Falconiformes	Accipitridae	Aguila chrysaetos	Golden eagle	1.32	NA	FD	RBC	GD	529
 4223	NA	Chordata	Vertebrata	Aves	Falconiformes	Accipitridae	Aguila chrysaetos	Golden eagle	1.48	62	FCM	RBC	GD, HS, V	347, 502
 4229	NA	Chordata	Vertebrata	Aves	Falconiformes	Accipitridae	Elanus caerulens	Black-winged kite	1.55	68	FCM	RBC	GD, HS	38
+6729	NA	Chordata	Vertebrata	Osteichthyes	Gadiformes	Macrouridae	Caelorinchus maurofasciatus	Dark banded rattail	0.75	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 4249	NA	Chordata	Vertebrata	Aves	Galliformes	Cracidae	Penelope sp.	Guan	1.23	NA	FD	RBC	GD	529
 4286	NA	Chordata	Vertebrata	Aves	Gruiformes	Gruidae	Bugeranus carunculus	Wattled crane	1.4	80	FD	RBC	GD, XL	419, 632
 6755	NA	Chordata	Vertebrata	Osteichthyes	Lepidosireniformes	Protopteridae	Protopterus aethiopicus congicus	Marbled lungfish	40.08	NA	FD	RBC	GD	531
@@ -651,6 +652,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 7505	NA	Chordata	Vertebrata	Osteichthyes	Salmoniformes	Salmonidae	Coregonus reighardi	Shortnose cisco	3.01	80	FD	CE	TH	57
 7561	NA	Chordata	Vertebrata	Osteichthyes	Salmoniformes	Salmonidae	Salmo salar (3x)	Atlantic salmon	4.9	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 7605	NA	Chordata	Vertebrata	Osteichthyes	Scorpaeniformes	Cottidae	Triglops murrayii	Moustache sculpin	0.68	NA	FIA	RBC	BS, GD, OM, RP	204
+7608	NA	Chordata	Vertebrata	Osteichthyes	Scorpaeniformes	Cyclopteridae	Cyclopteropsis jordani	Smooth lumpfish	0.85	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 7628	NA	Chordata	Vertebrata	Osteichthyes	Scorpaeniformes	Psychrolutidae	Psychrolutes marcidus	Blobfish	0.9	NA	FIA	RBC	BS, GD, OM, RP	204
 7637	NA	Chordata	Vertebrata	Osteichthyes	Scorpaeniformes	Scorpaenidae	Scorpaenopsis oxycepgus	Tassled scorpionfish	1.2	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 7641	NA	Chordata	Vertebrata	Osteichthyes	Scorpaeniformes	Sebastidae	Sebastes atlanticus	Ocean perch	1.01	NA	FIA	RBC	BS, GD, OM, RP	203, 204
@@ -797,8 +799,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 3022	NA	Annelida	NA	Polychaeta	Eunicida	Dorvilleidae	Ophrytrocha puerilis	Polychaete	0.4	8	FD	WB	MM	460, 472
 2873	NA	Annelida	NA	Polychaeta	Eunicida	Dorvilleidae	Ophrytrocha robusta	Polychaete	0.34	10	FD	WB	MM	460, 472
 3023	NA	Annelida	NA	Polychaeta	Eunicida	Dorvilleidae	Ophrytrocha robusta	Polychaete	0.34	10	FD	WB	MM	460, 472
-2876	NA	Annelida	NA	Polychaeta	Eunicida	Lumbrineridae	Lumbrineris tenuis	Polychaete	2.4	NA	FD	WB	V	95
-3026	NA	Annelida	NA	Polychaeta	Eunicida	Lumbrineridae	Lumbrineris tenuis	Polychaete	2.4	NA	FD	WB	V	95
 2879	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Diopatra cuprea cuprea	Polychaete	2	NA	FD	WB	V	95
 3029	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Diopatra cuprea cuprea	Polychaete	2	NA	FD	WB	V	95
 2880	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Onuphis eremita oculata	Polychaete	1.7	NA	FD	WB	V	95
@@ -809,6 +809,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 2096	NA	Porifera	NA	Demospongiae	Hadromerida	Suberitidae	Suberites sp.	Demosponge	0.09	NA	FIA	WB	GD	703
 2106	NA	Porifera	NA	Demospongiae	Halisarcida	Halisarcidae	"Halisarca n.sp. ""restingiensis"""	Demosponge	0.15	NA	FIA	WB	GD	703
 2107	NA	Porifera	NA	Demospongiae	Halisarcida	Halisarcidae	"Halisarca n.sp. ""restingiensis"""	Demosponge	0.19	NA	FCM	WB	GD	703
+2108	NA	Porifera	NA	Demospongiae	Haplosclerida	Callyspongiidae	Callyspongia sp.	Demosponge	0.13	NA	FIA	WB	GD	703
 2817	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Allolobophora chloritica	Green earthworm	1.02	32	FIA	C	EF	175
 2967	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Allolobophora chloritica	Green earthworm	1.02	32	FIA	C	EF	175
 2821	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Dendrobaena rubida	European bark worm	1.24	34	FIA	C	EF	175

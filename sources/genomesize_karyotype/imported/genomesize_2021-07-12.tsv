@@ -7123,7 +7123,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 6610	NA	Chordata	Vertebrata	Osteichthyes	Cyprinodontiformes	Aplocheilidae	Aphyosemion coeruleum	Blue gularis	1.2	NA	BFA	RBC	SP	216
 6633	NA	Chordata	Vertebrata	Osteichthyes	Cyprinodontiformes	Fundulidae	Fundulus diaphanus diaphanus	Banded killifish	1.51	48	FCM	RBC	GD	104
 6728	NA	Chordata	Vertebrata	Osteichthyes	Gadiformes	Macrouridae	Caelorinchus innotabilis	Notable whiptail	0.79	NA	FIA	RBC	BS, GD, OM, RP	203, 204
-6729	NA	Chordata	Vertebrata	Osteichthyes	Gadiformes	Macrouridae	Caelorinchus maurofasciatus	Dark banded rattail	0.75	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 4260	NA	Chordata	Vertebrata	Aves	Galliformes	Phasianidae	Guttera edouardi	Crested (Kenyan) guineafowl	1.54	76	FCM	RBC	GD, HS, V	347, 502
 4275	NA	Chordata	Vertebrata	Aves	Gruiformes	Gruidae	Anthropoides paradisea	Stanley crane	1.5	80	FD	RBC	GD, XL	419, 632
 4276	NA	Chordata	Vertebrata	Aves	Gruiformes	Gruidae	Anthropoides paradisea	Stanley crane	1.52	NA	FCM	RBC	HS, OM	598
@@ -7142,7 +7141,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 5028	NA	Chordata	Vertebrata	Chondrichthyes	Rajiformes	Dasyatidae	Dasyatis gerrardi	Sharpnose stingray	4.65	NA	FCM	RBC	GD, HS	81
 5800	NA	Chordata	Vertebrata	Mammalia	Rodentia	Muridae	Bolomys obscurus	Grass mouse	2.99	34	FD	S	HS, GD, RN	49
 7521	NA	Chordata	Vertebrata	Osteichthyes	Salmoniformes	Salmonidae	Oncorhynchus masou macrostomus	Cherry salmon	2.96	66	FCM	RBC	MM	359
-7608	NA	Chordata	Vertebrata	Osteichthyes	Scorpaeniformes	Cyclopteridae	Cyclopteropsis jordani	Smooth lumpfish	0.85	NA	FIA	RBC	BS, GD, OM, RP	203, 204
 7668	NA	Chordata	Vertebrata	Osteichthyes	Siluriformes	Bagridae	Pelteobagrus nudiceps	Catfish	0.92	56	FCM	RBC	MM	359
 7692	NA	Chordata	Vertebrata	Osteichthyes	Siluriformes	Callichthyidae	Corydoras myersi	Iridescent corydoras	2.3	56	BFA	RBC	SP	216
 7752	NA	Chordata	Vertebrata	Osteichthyes	Siluriformes	Pimelodidae	Pimelodus clarias clarias	Mandi	1.2	52	BFA	RBC	SP	216
@@ -7163,8 +7161,9 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 3942	NA	Chordata	Vertebrata	Amphibia	Urodela	Salamandridae	Taricha granulosa granulosa	Roughskin newt	41.56	NA	FCM	RBC	PW	652
 2469	NA	Mollusca	NA	Gastropoda	Basommatophora	Lymnaeidae	Lymnaea fontinalis	Pond snail	1.32	NA	FCM	LV	RT	540
 1948	NA	Platyhelminthes	NA	Turbellaria	Catenulida	Stenostomidae	Stenostomum unicolor	Flatworm	0.2	NA	FD	WB	V	174
+2876	NA	Annelida	NA	Polychaeta	Eunicida	Lumbrineridae	Lumbrineris tenuis	Polychaete	2.4	NA	FD	WB	V	95
+3026	NA	Annelida	NA	Polychaeta	Eunicida	Lumbrineridae	Lumbrineris tenuis	Polychaete	2.4	NA	FD	WB	V	95
 2585	NA	Mollusca	NA	Scaphopoda	Gadilida	Gadilidae	Siphonodentalium dalli	Tusk shell	2.41	NA	FIA	MC	SP	717
-2108	NA	Porifera	NA	Demospongiae	Haplosclerida	Callyspongiidae	Callyspongia sp.	Demosponge	0.13	NA	FIA	WB	GD	703
 2825	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Eisenia rosea	Pink soil earthworm	1.1	54	FIA	C	EF	175
 2975	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Eisenia rosea	Pink soil earthworm	1.1	54	FIA	C	EF	175
 2346	NA	Mollusca	NA	Bivavlia	Limoida	Limidae	Lima scabra	Rough fileclam	1.6	NA	BFA	S	SP	217
