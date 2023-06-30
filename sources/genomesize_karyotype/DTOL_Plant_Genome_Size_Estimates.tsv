@@ -1312,7 +1312,7 @@ RBGK	MC9522	DTOL	Angiosperm	Rosaceae	Cotoneaster	integrifolius	<Petro	Galbraith	
 RBGK	MC9523	DTOL	Angiosperm	Amaryllidaceae	Allium	scorodoprasum	>Petro	GPB3%PVP	124.25	842.06	4.38	3.75	6.777	847.48	125.43	30.5	30.41	15.2	14.87	4.06	4.8	0.033	0.148	Nacho	12/06/2023	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9524	DTOL	Angiosperm	Lentibulariaceae	Pinguicula	grandiflora	<Solanum	Galbraith	217.89	384.69	5.34	3.58	1.765	216.15	383.39	1.12	1.12	0.56	0.55	4.9	3.25	0.009	0.006	Nacho	12/06/2023	NA	2C = 0.87pg	NA	NA	NA	NA	1
 RBGK	MC9525	DTOL	Angiosperm	Iridaceae	Sisyrinchium	bermudiana	<Petro	Galbraith	219.01	330.14	2.99	5.21	1.507	218.44	329.09	2.99	2.99	1.49	1.46	3.09	5.49	0.004	0.007	Nacho	12/06/2023	NA	2C = 2.5pg	NA	NA	NA	NA	1
-RBGK	MC9526	DTOL	Poales	Cyperaceae	Carex	viridula	<Solanum	Galbraith	225.99	529.65	3.9	2.45	2.344	221.17	519.31	0.84	0.84	0.42	0.41	3.8	2.59	0.006	0.002	Nacho	09/06/2023	NA	2C = 0.72pg	NA	NA	NA	NA	1
+RBGK	MC9526	DTOL	Angiosperm	Cyperaceae	Carex	viridula	<Solanum	Galbraith	225.99	529.65	3.9	2.45	2.344	221.17	519.31	0.84	0.84	0.42	0.41	3.8	2.59	0.006	0.002	Nacho	09/06/2023	NA	2C = 0.72pg	NA	NA	NA	NA	1
 RBGK	MC9527	DTOL	Angiosperm	Onagraceae	Epilobium	brunnescens	<Solanum	GPB3%PVP	197.55	560.77	5.33	3.82	2.839	199.78	567.98	0.7	0.7	0.35	0.34	5.13	3.72	0.007	0.002	Nacho	24/06/2023	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9528	DTOL	Angiosperm	Ericaceae	Erica	mackayana	<Petro	Galbraith	182.09	786.54	5.39	2.72	4.32	181.13	780.75	1.04	1.04	0.52	0.51	4.91	2.71	0.012	0.003	Nacho	12/06/2023	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9529	DTOL	Angiosperm	Rubiaceae	Galium	boreale	<Petro	Galbraith	211.61	371.94	4.81	2.76	1.758	211.4	371.86	2.56	2.56	1.28	1.25	4.53	2.38	0.002	0.002	Nacho	12/06/2023	NA	2C = 3.2pg	NA	NA	NA	NA	1
@@ -1396,3 +1396,19 @@ RBGK	MC9585	DTOL	Angiosperm	Asteraceae	Hieracium	attenboroughianum	>Petro	GPB3%P
 RBGK	MC9586	DTOL	Angiosperm	Asteraceae	Taraxacum	amarellum	<Secale	GPB3%PVP	229.24	631.36	5.22	3.24	2.754	228.84	643.36	6.03	5.91	2.95	2.89	4.86	2.55	0.050	0.106	Nacho	24/06/2023	NA	NA	NA	NA	NA	NA	1
 RBGK	TCRich 2021-080	DTOL	Angiosperm	Gentianaceae	Centaurium	intermedium	<Petro	GPB3%PVP	191.68	240.97	4.03	3.79	1.257	194.29	243.43	3.58	3.59	1.8	1.76	3.91	3.77	0.004	0.012	Nacho	24/06/2023	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9587	DTOL	Angiosperm	Caryophyllaceae	Polycarpon	tetraphyllum	<Petro	GPB3%PVP	205.25	298.17	3.72	2.53	1.453	208.24	302.13	3.1	3.1	1.55	1.52	3.54	2.42	0.003	0.005	Nacho	24/06/2023	NA	NA	NA	NA	NA	NA	1
+RBGE	DAG02	DTOL	Angiosperm	Poaceae	Festuca	arenaria	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DAG03	DTOL	Angiosperm	Poaceae	Corynephorus	canescens	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DAG04	DTOL	Angiosperm	Poaceae	Elymus	junceiformis	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DAG05	DTOL	Angiosperm	Cyperaceae	Carex	extensa	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1803	DTOL	Bryophyte	Dicranellaceae	Dicranella	heteromalla	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1807	DTOL	Bryophyte	Polytrichaceae	Polytrichum	longisetum	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1808	DTOL	Bryophyte	Aulacomniaceae	Aulacomnium	androgynum	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1809	DTOL	Bryophyte	Ricciaceae	Riccia	fluitans	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1810	DTOL	Bryophyte	Calypogeiaceae	Calypogeia	sphagnicola	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1811	DTOL	Bryophyte	Sphagnaceae	Sphagnum	squarrosum	NA	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9588	DTOL	NA	NA	Platanus	hispanicus	>Petro	Galbraith	186.68	358.76	2.92	2.65	1.922	363.14	189.19	8.65	8.64	4.32	4.22	2.57	3.12	0.003	0.01	Sahr Mian	28/06/2023	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9593	DTOL	NA	NA	Calystegia	silvatica	<Solanum	Galbraith	205.47	304.23	4.13	5.04	1.481	198.97	293.45	1.34	1.34	0.67	0.66	4.42	4.67	0.006	0.005	Sahr Mian	28/06/2023	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9589	DTOL	NA	NA	Solanum	crispum	>Petro	Galbraith	213.37	414.94	3.66	3.13	1.945	426.06	219.03	8.75	8.75	4.38	4.28	2.56	2.89	0.008	0.034	Sahr Mian	28/06/2023	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9591	DTOL	NA	NA	Platanus	orientalis	>Solanum	Galbraith	154.04	309.08	5.92	4.14	2.007	317.83	159.89	3.97	3.94	1.97	1.93	3.72	5.41	0.026	0.05	Sahr Mian	28/06/2023	NA	NA	Rough estimate	NA	NA	NA	1
+RBGK	MC9592	DTOL	NA	NA	Sorbus	cuneifolia	<Petro	Galbraith	200.55	302.65	4.86	4.1	1.509	201.59	305.45	2.98	2.97	1.48	1.45	6.14	5.27	0.008	0.017	Sahr Mian	28/06/2023	NA	NA	Mucilaginous / Rough estimate	NA	NA	NA	1
+RBGK	MC9590	DTOL	NA	NA	Ginkgo	biloba	>Pisum	Galbraith	182.59	463.48	3.23	3.85	2.538	458.25	180.28	23.07	23.1	11.55	11.3	4.26	4.05	0.012	0.109	Sahr Mian	28/06/2023	NA	NA	NA	NA	NA	NA	1

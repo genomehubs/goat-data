@@ -1,53 +1,27 @@
 attributes:
   assembly_span:
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 1
+    display_group: general
     index: 8
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    taxon_bins:
-      count: 10
-      max: 8
-      min: 3
-      scale: log10
     taxon_display_group: '{{organelle}}_assembly'
     taxon_display_level: 2
     taxon_display_name: '{{organelle}} span'
     taxon_key: '{{organelle}}_assembly_span'
     taxon_name: '{{organelle}}_assembly_span'
-    taxon_summary: median
-    taxon_traverse: median
     taxon_traverse_limit: phylum
-    type: long
-    units: bases
   bioproject:
-    constraint:
-      len: 32
     display_group: general
     index: 5
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    synonyms:
-    - bioproject_accession
-    type: keyword
   biosample:
-    constraint:
-      len: 32
     display_group: general
     index: 6
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    synonyms:
-    - biosample_accession
-    type: keyword
   gc_percent:
-    constraint:
-      max: 100
-      min: 0
-    display_group: metrics
-    display_level: 1
+    display_group: general
     index: 9
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
@@ -64,34 +38,17 @@ attributes:
     taxon_summary: median
     taxon_traverse: median
     taxon_traverse_limit: phylum
-    type: 2dp
-    units: '%'
   last_updated:
     display_group: general
-    display_level: 2
     index: 11
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    type: date
   n_percent:
-    constraint:
-      max: 100
-      min: 0
-    display_group: metrics
-    display_level: 1
+    display_group: general
     index: 10
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    type: 2dp
-    units: '%'
   organelle:
-    constraint:
-      enum:
-      - nucleus
-      - mitochondrion
-      - chloroplast
-      - plastid
-      - apicoplast
     default: '{{organelle}}'
     display_group: general
     source: NCBI
@@ -99,40 +56,29 @@ attributes:
     type: keyword
   sample_location:
     display_group: general
-    display_level: 2
     index: 12
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
     taxon_display_group: '{{organelle}}_assembly'
-    taxon_display_level: 2
     taxon_display_name: '{{organelle}} sample location'
     taxon_key: '{{organelle}}_sample_location'
     taxon_name: '{{organelle}}_sample_location'
-    taxon_summary: list
-    type: geo_point
 file:
   display_group: general
   format: tsv
   header: true
   name: refseq_organelles.tsv.gz
+  needs:
+  - ATTR_assembly.types.yaml
   source: NCBI
   source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
 identifiers:
   assembly_id:
-    constraint:
-      len: 32
     index: 3
-    type: keyword
   genbank_accession:
-    constraint:
-      len: 32
     index: 4
-    type: keyword
   refseq_accession:
-    constraint:
-      len: 32
     index: 3
-    type: keyword
 metadata:
   organelle:
     index: 7

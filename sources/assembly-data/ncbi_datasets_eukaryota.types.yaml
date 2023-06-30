@@ -1,64 +1,23 @@
 attributes:
   assembly_level:
-    constraint:
-      enum:
-      - complete genome
-      - chromosome
-      - scaffold
-      - contig
     display_group: general
-    display_level: 1
-    display_name: Assembly level
     header: assemblyLevel
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    taxon_display_group: assembly
-    taxon_summary:
-    - primary
-    - enum
-    taxon_traverse: enum
-    taxon_traverse_direction: up
-    type: keyword
   assembly_span:
-    bins:
-      count: 10
-      max: 11
-      min: 6
-      scale: log10
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 1
-    display_name: Assembly span
+    display_group: general
     header: totalSequenceLength
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    taxon_display_group: assembly
-    taxon_summary:
-    - primary
-    - median
-    - min
-    - max
-    - count
-    taxon_traverse: median
-    taxon_traverse_direction: both
-    type: long
-    units: bases
   assembly_type:
     display_group: general
-    display_level: 2
-    display_name: Assembly type
     header: assemblyType
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: keyword
   bioproject:
-    constraint:
-      len: 32
-    description: INSDC bioproject ID or assembly collection name
     display_group: general
     header: bioProjectAccession
     organelle: nucleus
@@ -66,70 +25,7 @@ attributes:
     - ;
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    synonyms:
-    - bioproject_accession
-    taxon_display_group: assembly
-    taxon_display_level: 2
-    taxon_summary:
-    - list
-    taxon_traverse: list
-    taxon_traverse_direction: up
-    type: keyword
-    value_metadata:
-      default:
-        description: Click to view BioProject record on ENA
-        link: https://www.ebi.ac.uk/ena/browser/view/{}
-      prjeb40665:
-        description: Darwin Tree of Life (click to view on ENA)
-      prjeb43510:
-        description: European Reference Genome Atlas (click to view on ENA)
-      prjeb43743:
-        description: Aquatic Symbiosis Genomics Project (click to view on ENA)
-      prjeb47820:
-        description: ERGA Pilot (click to view on ENA)
-      prjeb49670:
-        description: Catalan Biogenome Project (click to view on ENA)
-      prjeb61747:
-        description: ERGA Biodiversity Genomics Europe (click to view on ENA)
-      prjna163993:
-        description: i5K (click to view on ENA)
-      prjna393850:
-        description: EUROFISH (click to view on ENA)
-      prjna489243:
-        description: Vertebrate Genomes Project (click to view on ENA)
-      prjna489245:
-        description: Bat 1K (click to view on ENA)
-      prjna533106:
-        description: Earth Biogenome Project (click to view on ENA)
-      prjna545868:
-        description: Bird 10K (click to view on ENA)
-      prjna555319:
-        description: Ag100Pest (click to view on ENA)
-      prjna649812:
-        description: Global Invertebrate Genomics Alliance (click to view on ENA)
-      prjna706923:
-        description: LOEWE Centre for Translational Biodiversity Genomics (click to
-          view on ENA)
-      prjna707598:
-        description: Squalomix (click to view on ENA)
-      prjna712951:
-        description: ENDEMIXIT (click to view on ENA)
-      prjna720569:
-        description: California Conservation Genomics Project (click to view on ENA)
-      prjna758215:
-        description: MetaInvert (click to view on ENA)
-      prjna811786:
-        description: Africa Biogenome Project (click to view on ENA)
-      prjna813333:
-        description: Canada Biogenome Project (click to view on ENA)
-      prjna844590:
-        description: Illinois EBP Pilot (click to view on ENA)
-      prjna948806:
-        description: Lilioid Monocots Core Group Genome Project (click to view on
-          ENA)
   biosample:
-    constraint:
-      len: 32
     display_group: general
     header: biosampleAccession
     organelle: nucleus
@@ -137,296 +33,120 @@ attributes:
     - ;
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    synonyms:
-    - biosample_accession
-    taxon_display_group: assembly
-    taxon_display_level: 2
-    taxon_summary:
-    - list
-    taxon_traverse: list
-    taxon_traverse_direction: up
-    type: keyword
-    value_metadata:
-      default:
-        description: Click to view BioSample record on ENA
-        link: https://www.ebi.ac.uk/ena/browser/view/{}
   chromosome_count:
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 1
-    display_name: Chromosome count
+    display_group: general
     header: totalNumberOfChromosomes
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: long
-    units: bases
   contig_count:
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 1
-    display_name: Contig count
+    display_group: general
     header: numberOfContigs
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: long
-    units: bases
   contig_l50:
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 2
-    display_name: Contig L50
+    display_group: general
     header: contigL50
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: long
-    units: bases
   contig_n50:
-    bins:
-      count: 10
-      max: 9
-      min: 4
-      scale: log10
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 1
-    display_name: Contig N50
+    display_group: general
     header: contigN50
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    taxon_display_group: assembly
-    taxon_display_level: 2
-    taxon_summary:
-    - primary
-    - max
-    - median
-    - min
-    - count
-    taxon_traverse: median
-    taxon_traverse_direction: up
-    type: long
-    units: bases
   ebp_metric_date:
     display_group: general
-    display_level: 2
-    display_name: EBP metric date
     header: ebpMetricDate
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    taxon_display_group: assembly
-    taxon_summary:
-    - min
-    - max
-    taxon_traverse: min
-    taxon_traverse_direction: up
-    type: date
   gene_count:
-    bins:
-      count: 10
-      max: 5
-      min: 0
-      scale: log10
-    constraint:
-      min: 1
-    display_group: annotation
-    display_level: 1
-    display_name: Gene count
+    display_group: general
     header: geneCountTotal
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    taxon_display_group: assembly
-    taxon_display_level: 2
-    taxon_summary:
-    - primary
-    - median
-    - min
-    - max
-    - count
-    type: integer
   isolate:
     display_group: general
-    display_level: 2
-    display_name: Isolate
     header: isolate
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: keyword
   last_updated:
     display_group: general
-    display_level: 2
-    display_name: Last updated
     header: submissionDate
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    taxon_display_group: assembly
-    taxon_name: assembly_date
-    taxon_summary:
-    - primary
-    - max
-    - min
-    taxon_traverse: min
-    taxon_traverse_direction: up
-    type: date
   noncoding_gene_count:
-    constraint:
-      min: 1
-    display_group: annotation
-    display_level: 2
-    display_name: Non-coding gene count
+    display_group: general
     header: geneCountNoncoding
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: integer
-  organelle:
-    constraint:
-      enum:
-      - nucleus
-      - mitochondrion
-      - chloroplast
-      - plastid
-      - apicoplast
-    default: nucleus
-    display_group: general
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: keyword
   protein_count:
-    constraint:
-      min: 1
-    display_group: annotation
-    display_level: 2
-    display_name: Protein count
+    display_group: general
     header: geneCountProteincoding
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: integer
   pseudogene_count:
-    constraint:
-      min: 1
-    display_group: annotation
-    display_level: 2
-    display_name: Pseudogene count
+    display_group: general
     header: geneCountPseudogene
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: integer
   refseq_category:
     display_group: general
-    display_level: 2
-    display_name: RefSeq category
     header: refseqCategory
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: keyword
   sample_sex:
     display_group: general
-    display_level: 2
-    display_name: Sample sex
     header: sex
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: keyword
   scaffold_count:
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 1
-    display_name: Scaffold count
+    display_group: general
     header: numberOfScaffolds
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: long
-    units: bases
   scaffold_l50:
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 2
-    display_name: Scaffold L50
+    display_group: general
     header: scaffoldL50
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: long
-    units: bases
   scaffold_n50:
-    bins:
-      count: 10
-      max: 9
-      min: 4
-      scale: log10
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 1
-    display_name: Scaffold N50
+    display_group: general
     header: scaffoldN50
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    taxon_display_group: assembly
-    taxon_display_level: 2
-    taxon_summary:
-    - primary
-    - max
-    - median
-    - min
-    - count
-    taxon_traverse: median
-    taxon_traverse_direction: up
-    type: long
-    units: bases
   sequence_count:
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 2
-    display_name: Sequence count
+    display_group: general
     header: numberOfComponentSequences
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: long
-    units: bases
   submitter:
     display_group: general
-    display_level: 2
-    display_name: Submitter
     header: submitter
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: keyword
   ungapped_span:
-    constraint:
-      min: 1
-    display_group: metrics
-    display_level: 2
+    display_group: general
     display_name: Ungapped span
-    header: totalUngappedLength
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-    type: long
-    units: bases
 file:
   display_group: general
   exclusions:
@@ -440,35 +160,23 @@ file:
   format: tsv
   header: true
   name: ncbi_datasets_eukaryota.tsv.gz
+  needs:
+  - ATTR_assembly.types.yaml
+  - TAXON_assembly.types.yaml
   organelle: nucleus
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
 identifiers:
   assembly_id:
-    constraint:
-      len: 32
     header: genbankAssmAccession
-    type: keyword
   assembly_name:
-    constraint:
-      len: 64
     header: assemblyName
-    type: keyword
   genbank_accession:
-    constraint:
-      len: 32
     header: genbankAssmAccession
-    type: keyword
   refseq_accession:
-    constraint:
-      len: 32
     header: refseqAssmAccession
-    type: keyword
   wgs_accession:
-    constraint:
-      len: 16
     header: wgsProjectAccession
-    type: keyword
 metadata:
   is_primary_value:
     header: primaryValue
