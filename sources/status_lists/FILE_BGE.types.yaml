@@ -1,0 +1,50 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: BGE_expanded.tsv
+  source: Declared Status List - ERGA-BGE Community Sampling
+  source_date: 2023-06-23
+  source_description: ERGA-BGE Community Sampling Status List, live spreadsheet
+  source_contact: Thomas Marcussen, University of Oslo, Norway
+attributes:
+  long_list:
+    header: long_list
+    translate:
+      BGE: ERGA-BGE
+  other_priority:
+    header: other_priority
+    translate:
+      BGE: ERGA-BGE
+  family_representative:
+    header: family_representative
+    translate:
+      BGE: ERGA-BGE
+  contributing_project_lab:
+    header: project
+    translate:
+      BGE: SSP Community Sampling
+  sequencing_status_erga-bge:
+    header: sequencing_status
+  sequencing_status:
+    header: sequencing_status
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  open:
+    header: open
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: [genus , species]
+    join: " "
+  family:
+    header: family

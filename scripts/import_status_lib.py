@@ -45,8 +45,8 @@ def expand_target_status(project_table, acronym):
         if item not in project_table:
          project_table[item] = np.nan
     project_table['long_list'] = acronym
-    project_table.loc[project_table['target_list_status'] == acronym + '_family_representative', 'family_representative'] = acronym
-    project_table.loc[project_table['target_list_status'] == acronym + '_other_priority', 'other_priority'] = acronym
+    project_table.loc[project_table['target_list_status'] == acronym.lower() + '_family_representative', 'family_representative'] = acronym
+    project_table.loc[project_table['target_list_status'] == acronym.lower() + '_other_priority', 'other_priority'] = acronym
     return project_table
 
 
