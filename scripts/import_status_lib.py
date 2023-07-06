@@ -47,6 +47,8 @@ def expand_target_status(project_table, acronym):
     project_table['long_list'] = acronym
     project_table.loc[project_table['target_list_status'] == acronym.lower() + '_family_representative', 'family_representative'] = acronym
     project_table.loc[project_table['target_list_status'] == acronym.lower() + '_other_priority', 'other_priority'] = acronym
+    project_table.loc[project_table['target_list_status'] == 'family_representative', 'family_representative'] = acronym
+    project_table.loc[project_table['target_list_status'] == 'other_priority', 'other_priority'] = acronym
     return project_table
 
 
