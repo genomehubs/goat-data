@@ -41,12 +41,12 @@ jobs:
           curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v1/linux-amd64/datasets > datasets
           chmod a+x datasets
           sudo ip link set ens3 mtu 1500
-      - name: Download NCBI eukaryota datasets zip
+      - name: Download NCBI TAXROOT datasets zip
         run: |
           mkdir -p sources/assembly-data
-          ./datasets download genome taxon "Eukaryota" --no-progressbar --dehydrated --filename sources/assembly-data/eukaryota.zip
+          ./datasets download genome taxon "$TAXROOT" --no-progressbar --dehydrated --filename sources/assembly-data/$TAXROOT.zip
       - name: Unzip NCBI eukaryota datasets zip
-        run: unzip -o -d sources/assembly-data sources/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
+        run: unzip -o -d sources/assembly-data sources/assembly-data/$TAXROOT.zip ncbi_dataset/data/assembly_data_report.jsonl
       - name: genomehubs parse --ncbi-datasets-genome
         run: |
           docker run --rm --network=host \
@@ -79,7 +79,7 @@ jobs:
         run:  |
           mkdir -p sources/ena-taxonomy
           cd sources/ena-taxonomy
-          bash ../../scripts/get_ena_taxonomy_extra.bash
+          bash ../../scripts/get_ena_taxonomy_extra.bash $TAXROOT
           rm -f ena-taxonomy.extra.jsonl ena-taxonomy.xml.taxids \
             resulttaxon.tax_tree$TAXROOT.taxids ena-taxonomy.extra.prev.jsonl \
             ena-taxonomy.extra.prev.taxids resulttaxon.tax_tree$TAXROOT.extra.curr.taxids \
