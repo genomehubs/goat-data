@@ -1,24 +1,24 @@
-species	phylum/class/family	kingdom	source	ncbi_taxon_id	proposed_sequencing_centre	target_list_status	sequencing_status	goat_stimated_genome_size_gb	phase	notes	comments	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
-Coronilla viminalis	Fabaceae	Viridiplantae	SpainHSp	347984	SCILIFE	other_priority	sample_acquired	0,39	1A		CSC: I think we should use sample_acquired so it fits perfectly with the goat automation script. I have changed all Samples submitted to sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Obama nungara	Platyhelminthes	Metazoa	SpainHSp	1826298	SCILIFE	other_priority	sample_acquired	1,60	1A	in DTOL long_list		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Ophryotrocha puerilis	Annelida	Metazoa	SpainHSp	169124	SCILIFE	long_list	sample_acquired	0,36	1A	Excluded from first batch because of spinach in digestive tract. Being in progress by ASG/DTOL		SPAIN-HSP	SPAIN-HSP			SPAIN-HSP	SPAIN-HSP							
-Pinna rudis	Mollusca	Metazoa	SpainHSp	1380992	SCILIFE	other_priority	sample_acquired	1,08	1A	in ASG and DTOL long_lists		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Siphonaria pectinata	Mollusca	Metazoa	SpainHSp	57642	SCILIFE	other_priority	sample_acquired	2,00	1A	in DTOL long_list		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Tetrastemma melanocephalum	Nemertea	Metazoa	SpainHSp	307678	SCILIFE	other_priority	sample_acquired	1,37	1A	in DTOL long_list	Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Valencia hispanica	Chordata	Metazoa	Spain	195855	CNAG	other_priority	sample_collected	1,50	1B		Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Allolobophora molleri	Annelida	Metazoa	Spain	647718	SANGER	other_priority	sample_collected	0,65	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Conus guanche	Mollusca	Metazoa	Spain	308503	SANGER	other_priority	sample_collected	3,11	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Gyrocaryum oppositifolium	Magnoliopsida	Plantae	Spain	1929230	SANGER	other_priority	sample_collected	0,56	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Munidopsis polymorpha	Arthropoda	Metazoa	Spain	395596	SANGER	other_priority	sample_collected	6,00	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Ophryotrocha puerilis	Annelida	Metazoa	Spain	169124	SANGER	long_list	sample_collected	0,36	1B	Excluded from BGE. In ASG as in progress		SPAIN-HSP	SPAIN-HSP			SPAIN-HSP								
-Tarphius canariensis	Arthropoda	Metazoa	Spain	124803	SANGER	other_priority	sample_collected	0,45	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Picoeukaryotes single amplified genomes	30 SAGs	Varied Eurkaryotic phyla	SpainHSp		TBD	other_priority		0,05-0,1	TBD	To be resequenced by Nanopore to test the performance of nanopore long reads with SAGs and compare it to Illumina		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Pyrgus cinarae	Arthropoda	Metazoa	SpainHSp	983592	TBD	other_priority		0,56	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Harmothoe imbricata	Annelida	Metazoa	SpainHSp	61848	TBD	other_priority		2,29	TBD	in DTOL long list, coordinating with them already		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Leuzea centauroides	Viridiplantae	Plantae	SpainHSp	1284457	TBD	other_priority		1,05	TBD	Also called Rhaponticum centauroides but the latest genus name is Leuzea		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Loboptera canariensis	Arthropoda	Metazoa	SpainHSp	3054493	TBD	other_priority		1,49	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Loboptera troglobia	Arthropoda	Metazoa	SpainHSp	3054492	TBD	other_priority		1,49	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Hyalomma lusitanicum	Arthropoda	Metazoa	SpainHSp	49205	TBD	other_priority		2,79	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Mesochaetopterus rogeri	Annelida	Metazoa	SpainHSp	326179	TBD	other_priority		0,98	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Graellsia isabellae	Arthropoda	Metazoa	SpainHSp	63975	TBD	other_priority		0,65	TBD	In collaboration with community sampling		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Malpolon monspessulanus	Chordata	Metazoa	SpainHSp	184164	TBD	other_priority		1,48	TBD	in VGP long list, already agreed with them that we will sequence it by BGE	Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+species	family	phylum	kingdom	source	ncbi_taxon_id	proposed_sequencing_centre	target_list_status	sequencing_status	goat_stimated_genome_size_(gb)	phase	notes	comments	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
+Coronilla viminalis	Fabaceae	Streptophyta	Viridiplantae	SpainHSp	347984	SCILIFE	other_priority	sample_acquired	0,39	1A		CSC: I think we should use sample_acquired so it fits perfectly with the goat automation script. I have changed all Samples submitted to sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Obama nungara	Geoplanidae	 Platyhelminthes	Metazoa	SpainHSp	1826298	SCILIFE	other_priority	sample_acquired	1,60	1A	in DTOL long_list		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Ophryotrocha puerilis	Dorvilleidae	 Annelida	Metazoa	SpainHSp	169124	SCILIFE	long_list	sample_acquired	0,36	1A	Excluded from first batch because of spinach in digestive tract. Being in progress by ASG/DTOL		SPAIN-HSP	SPAIN-HSP			SPAIN-HSP	SPAIN-HSP							
+Pinna rudis	Pinnidae	 Mollusca	Metazoa	SpainHSp	1380992	SCILIFE	other_priority	sample_acquired	1,08	1A	in ASG and DTOL long_lists		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Siphonaria pectinata	Siphonariidae	 Mollusca	Metazoa	SpainHSp	57642	SCILIFE	other_priority	sample_acquired	2,00	1A	in DTOL long_list		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Tetrastemma melanocephalum	Tetrastemmatidae	 Nemertea	Metazoa	SpainHSp	307678	SCILIFE	other_priority	sample_acquired	1,37	1A	in DTOL long_list	Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Valencia hispanica	Valenciidae	Chordata	Metazoa	Spain	195855	CNAG	other_priority	sample_collected	1,50	1B		Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Allolobophora molleri 	Lumbricidae	Annelida	Metazoa	Spain	647718	SANGER	other_priority	sample_collected	0,65	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Conus guanche	Conidae	Mollusca	Metazoa	Spain	308503	SANGER	other_priority	sample_collected	3,11	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Gyrocaryum oppositifolium	Boraginaceae	Magnoliopsida	Plantae	Spain	1929230	SANGER	other_priority	sample_collected	0,56	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Munidopsis polymorpha	Munidopsidae	Arthropoda	Metazoa	Spain	395596	SANGER	other_priority	sample_collected	6,00	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Ophryotrocha puerilis	Dorvilleidae	Annelida	Metazoa	Spain	169124	SANGER	long_list	sample_collected	0,36	1B	Excluded from BGE. In ASG as in progress		SPAIN-HSP	SPAIN-HSP			SPAIN-HSP								
+Tarphius canariensis	Zopheridae	Arthropoda	Metazoa	Spain	124803	SANGER	other_priority	sample_collected	0,45	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Picoeukaryotes single amplified genomes		30 SAGs	Varied Eurkaryotic phyla	SpainHSp		TBD	other_priority		0,05-0,1	TBD	To be resequenced by Nanopore to test the performance of nanopore long reads with SAGs and compare it to Illumina		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Pyrgus cinarae	Hesperiidae	Arthropoda	Metazoa	SpainHSp	983592	TBD	other_priority		0,56	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Harmothoe imbricata	Polynoidae	Annelida	Metazoa	SpainHSp	61848	TBD	other_priority		2,29	TBD	in DTOL long list, coordinating with them already		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Leuzea centauroides	Asteraceae	Viridiplantae	Plantae	SpainHSp	1284457	TBD	other_priority		1,05	TBD	Also called Rhaponticum centauroides but the latest genus name is Leuzea		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Loboptera canariensis	Ectobiidae	Arthropoda	Metazoa	SpainHSp	3054493	TBD	other_priority		1,49	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Loboptera troglobia	Ectobiidae	Arthropoda	Metazoa	SpainHSp	3054492	TBD	other_priority		1,49	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Hyalomma lusitanicum	Ixodidae	Arthropoda	Metazoa	SpainHSp	49205	TBD	other_priority		2,79	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Mesochaetopterus rogeri	Chaetopteridae	Annelida	Metazoa	SpainHSp	326179	TBD	other_priority		0,98	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Graellsia isabellae	Saturniidae	Arthropoda	Metazoa	SpainHSp	63975	TBD	other_priority		0,65	TBD	In collaboration with community sampling		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Malpolon monspessulanus	Psammophiidae	Chordata	Metazoa	SpainHSp	184164	TBD	other_priority		1,48	TBD	in VGP long list, already agreed with them that we will sequence it by BGE	Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
