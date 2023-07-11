@@ -1,5 +1,6 @@
 library(tidyverse)
 library(janitor)
+library(googlesheets4)
 
 # dtol plant c values Sahr Mian
 read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSt0R1T3MpoOM6UFNMaT_Q9gR5TYyUZC1wgLqW_6_cH9zzII8ehadrbHX8bpktjTv2_yt_KHaj3x_e1/pub?output=tsv",
@@ -24,6 +25,14 @@ read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTU-En_URbYPtfyjBueQhn
   filter(!is.na(est_size_mb) | !is.na(length_mb)) -> tolqc
 
 write_tsv(tolqc, "./sources/genomesize_karyotype/DTOL_assembly_informatics_status_kmer_draft.tsv")
+
+# CNGB
+gs4_deauth()
+read_sheet("https://docs.google.com/spreadsheets/d/1ERQz4ecG5Y-C28V-sEyUSc6vu-3_z5usUKvxZkI-25Y/edit?usp=sharing",
+    na = c("NA", "missing","","NULL")) %>%
+  clean_names() %>% remove_empty() -> cngb
+
+write_tsv(cngb, "./sources/assembly_data/cngb.tsv")
 
 # australian bioportal
 # read_tsv("https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vS4iAxznp7djwBZE-m00ggKoVw8TZgxn19Lz1nYU20h_gYBARFd9ZS1zAjRpQlPE-68XK6zHKFfe4UA/pub?gid=890267489&output=tsv") %>%
