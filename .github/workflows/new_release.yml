@@ -162,6 +162,7 @@ jobs:
             -w /goat-data \
             genomehubs/r-ver:latest \
             Rscript ./scripts/get_googlesheets.R
+            cp sources/assembly-data/cngb.tsv sources/assembly-data-taxon/cngb.tsv
 
       - name: Update source_date in yamls
         run:  |
