@@ -27,12 +27,11 @@ read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTU-En_URbYPtfyjBueQhn
 write_tsv(tolqc, "./sources/genomesize_karyotype/DTOL_assembly_informatics_status_kmer_draft.tsv")
 
 # CNGB
-gs4_deauth()
-read_sheet("https://docs.google.com/spreadsheets/d/1ERQz4ecG5Y-C28V-sEyUSc6vu-3_z5usUKvxZkI-25Y/edit?usp=sharing",
+read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQeTqi-qnoNgNl58gWDBT4CcR8nF9SmFOkC82KC6pkH42CoEi94yInhBE25SfxBqNeMBeVbpeEVs9GI/pub?gid=1726876704&single=true&output=tsv",
     na = c("NA", "missing","","NULL")) %>%
-  clean_names() %>% remove_empty() -> cngb
+  remove_empty() -> cngb
 
-write_tsv(cngb, "./sources/assembly_data/cngb.tsv")
+write_tsv(cngb, "./sources/assembly-data/cngb.tsv")
 
 # australian bioportal
 # read_tsv("https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vS4iAxznp7djwBZE-m00ggKoVw8TZgxn19Lz1nYU20h_gYBARFd9ZS1zAjRpQlPE-68XK6zHKFfe4UA/pub?gid=890267489&output=tsv") %>%
