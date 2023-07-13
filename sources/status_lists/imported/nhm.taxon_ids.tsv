@@ -1,4 +1,7 @@
 taxon_id	input	rank
+7399	Hymenoptera	order
+69514	Australoplana sanguinea	species
+2725004	Caenoplana variegata	species
 2866285	Mesopsocus fuscifrons	species
 1068628	Polydesmus angustus	species
 7588	Asteroidea	class
@@ -233,7 +236,6 @@ taxon_id	input	rank
 336591	Larinioides cornutus	species
 6448	Gastropoda	class
 6670	Ostracoda	class
-7399	Hymenoptera	order
 7408	Ichneumonidae	family
 7205	Tabanidae	family
 27515	Pompilidae	family
@@ -315,7 +317,6 @@ taxon_id	input	rank
 41043	Tipula	genus
 79454	Coenagrion	genus
 472374	Pedicia	genus
-69514	Australoplana sanguinea	species
 107852	Haliplus	genus
 107769	Agabus	genus
 50603	Panorpa germanica	species
@@ -356,7 +357,6 @@ taxon_id	input	rank
 247614	Erigone	genus
 187486	Xysticus	genus
 45920	Araneus diadematus	species
-2725004	Caenoplana variegata	species
 29065	Martes martes	species
 500646	Metellina mengei	species
 1594371	Mompha subbistrigella	species
@@ -893,6 +893,13 @@ taxon_id	input	rank
 1872065	Nuctenea umbratica	species
 1100095	Misumena vatia	species
 560983	Escharella immersa	species
+1520503	Rhynchodemus sylvaticus	species
+391273	Microplana scharffi	species
+138674	Microplana terrestris	species
+69519	Caenoplana coerulea	species
+132421	Arthurdendyus triangulatus	species
+1520482	Parakontikia ventrolineata	species
+2903269	Parakontikia atrata	species
 438492	Dicyrtomina saundersi	species
 1519116	Tomocerus vulgaris	species
 48709	Orchesella cincta	species
@@ -1163,9 +1170,6 @@ taxon_id	input	rank
 988014	Orthosia populeti	species
 146833	Euborellia annulipes	species
 1545353	Podops inunctus	species
-1520503	Rhynchodemus sylvaticus	species
-391273	Microplana scharffi	species
-138674	Microplana terrestris	species
 1155754	Philodromus dispar	species
 254365	Abrostola triplasia	species
 328891	Hamearis lucina	species
@@ -1207,8 +1211,6 @@ taxon_id	input	rank
 1405625	Phyllonorycter klemannella	species
 1660658	Menophra abruptaria	species
 1660701	Stigmella tityrella	species
-2903269	Parakontikia atrata	species
-69519	Caenoplana coerulea	species
 749629	Chrysoesthia sexguttella	species
 934820	Acasis viretata	species
 987997	Nola confusalis	species
@@ -1559,7 +1561,6 @@ taxon_id	input	rank
 2591987	Synophropsis lauri	species
 763218	Lygocoris pabulinus	species
 2882810	Satilatlas britteni	species
-132421	Arthurdendyus triangulatus	species
 326963	Lycia hirtaria	species
 61998	Dilta	genus
 2844365	Cellaria sinuosa	species
@@ -1665,6 +1666,5 @@ taxon_id	input	rank
 #ilDenPygm	Denticucullus pygmina	species
 194188	Arion subfuscus	species
 2857466	Apertochrysa prasina	species
-1520482	Parakontikia ventrolineata	species
 1807724	Brachyphallus	genus
 #ilPhiPilo	Phigalia pilosaria	species
