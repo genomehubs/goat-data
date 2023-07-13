@@ -3,6 +3,10 @@ taxon_id	input	rank
 74645	Rosa rugosa	species
 39848	Agrostemma githago	species
 7373	Calliphora vicina	species
+224256	Syrphus vitripennis	species
+41107	Dorcus parallelipipedus	species
+1132042	Ctenicera cuprea	species
+52734	Dilophus febrilis	species
 2862204	Hibiscus tridactylites	species
 638464	Ceriagrion tenellum	species
 360071	Amphimallon solstitiale	species
@@ -40,7 +44,6 @@ taxon_id	input	rank
 795047	Clivina fossor	species
 78070	Platismatia glauca	species
 1190803	Andrena praecox	species
-224256	Syrphus vitripennis	species
 468752	Leptogaster cylindrica	species
 199064	Phyllonorycter quercifoliella	species
 50603	Panorpa germanica	species
@@ -66,14 +69,12 @@ taxon_id	input	rank
 203813	Bombus muscorum	species
 1553715	Rhagonycha lutea	species
 1446181	Empis tessellata	species
-52734	Dilophus febrilis	species
 2803876	Odiellus spinosus	species
 2881124	Tipula confusa	species
 270614	Poecilus cupreus	species
 218773	Thymelicus lineola	species
 5804	Eimeria maxima	species
 446425	Brachyptera risi	species
-41107	Dorcus parallelipipedus	species
 877844	Neocrepidodera transversa	species
 878397	Pycnomerus fuliginosus	species
 72669	Antedon bifida	species
@@ -145,7 +146,6 @@ taxon_id	input	rank
 542982	Heliothis peltigera	species
 987986	Mythimna pallens	species
 503482	Urophora cardui	species
-1132042	Ctenicera cuprea	species
 878341	Orchestes rusci	species
 1080930	Zele albiditarsus	species
 468783	Philonicus albiceps	species
@@ -226,11 +226,10 @@ taxon_id	input	rank
 1202164	Stenus bimaculatus	species
 878065	Longitarsus flavicornis	species
 1091426	Protomyctophum parallelum	species
-207148	Aphodius fimetarius	species
-2715158	Diogma glabrata	species
 1717392	Dioctria linearis	species
 1244581	Dasysyrphus tricinctus	species
-443705	Nansenia antarctica	species
+207148	Aphodius fimetarius	species
+2715158	Diogma glabrata	species
 2867262	Tipula helvola	species
 997530	Cerastis leucographa	species
 202117	Philopedon plagiatum	species
@@ -244,6 +243,8 @@ taxon_id	input	rank
 331329	Melinaea ludovica	species
 344647	Hyposcada illinissa	species
 471053	Hypothyris mamercus	species
+121492	Corticium candelabrum	species
+443705	Nansenia antarctica	species
 948063	Notolepis coatsorum	species
 115342	Chilocorus renipustulatus	species
 1545100	Closterotomus norwegicus	species
@@ -424,18 +425,18 @@ taxon_id	input	rank
 908970	Scinaia interrupta	species
 6396	Eisenia fetida	species
 39305	Erpobdella octoculata	species
+199129	Cameraria ohridella	species
+249563	Pseudococcus viburni	species
 1545263	Tingis ampliata	species
 92596	Lonchoptera lutea	species
 61981	Cylindroiulus punctatus	species
 878103	Hemicoelus fulvicornis	species
 118470	Ophyiulus pilosus	species
 52816	Panorpa communis	species
-199129	Cameraria ohridella	species
 433179	Litargus connexus	species
 1178141	Parornix anglicella	species
 49290	Carabus nemoralis	species
 753282	Bedellia somnulentella	species
-249563	Pseudococcus viburni	species
 1545217	Pithanus maerkelii	species
 98853	Plagioecia patina	species
 863632	Stigmatogaster souletina	species
@@ -453,6 +454,8 @@ taxon_id	input	rank
 127129	Impatiens noli-tangere	species
 880217	Cassiopea ornata	species
 2969	Oxyrrhis marina	species
+220392	Bathymodiolus septemdierum	species
+243486	Salticus scenicus	species
 304557	Oleria gunilla	species
 331309	Brevioleria arzalia	species
 471079	Oleria sexmaculata	species
@@ -546,9 +549,7 @@ taxon_id	input	rank
 119191	Pulicaria vulgaris	species
 414120	Codium adhaerens	species
 51315	Eimeria necatrix	species
-220392	Bathymodiolus septemdierum	species
 55311	Aponogeton distachyos	species
-243486	Salticus scenicus	species
 1053393	Scrophularia auriculata	species
 76438	Eriophorum vaginatum	species
 153785	Phratora vitellinae	species
@@ -688,7 +689,6 @@ taxon_id	input	rank
 2883163	Echiniscus sp. ZA.555	species
 434416	Tharsalea arota	species
 398365	Aphrocallistes beatrix	species
-121492	Corticium candelabrum	species
 1088795	Sarcotragus spinosulus	species
 89882	Agaricia agaricites	species
 51056	Meandrina meandrites	species
