@@ -44,7 +44,6 @@ taxonomy:
   taxon_id:
     header: ncbi_taxon_id
   species:
-    header: [genus , species]
-    join: " "
+    header: species
   family:
     header: family
