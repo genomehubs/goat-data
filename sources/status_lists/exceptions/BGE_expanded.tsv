@@ -1,6 +1,6 @@
-ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
-	Herpes	porcellus	Curculionidae	bge_other_priority		BGE	BGE		BGE									
-	Hydroglyphus	hamulatus	Dytiscidae	bge_other_priority		BGE	BGE		BGE									
-	Protonethes	ocellatus	Trichoniscidae	bge_other_priority		BGE	BGE		BGE									
-	Cedrorum	azoricus	Carabidae	bge_other_priority		BGE	BGE		BGE									
-	Rupicapra	ornata	Bovidae	bge_other_priority		BGE	BGE		BGE									
+species	family	phylum	source	ncbi_taxon_id	proposed_sequencing_centre	target_list_status	sequencing_status	goat_estimated_genome_size_(gb)	phase	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
+Herpes porcellus	Curculionidae	Arthropoda	Hungary		UNIFI	other_priority		2010	2	BGE	BGE		BGE									
+Hydroglyphus hamulatus	Dytiscidae	Arthropoda	Sweden		SCILIFE	other_priority		1090	2	BGE	BGE		BGE									
+Protonethes ocellatus	Trichoniscidae	Arthropoda	Montenegro		SANGER	other_priority		3790	2	BGE	BGE		BGE									
+Cedrorum azoricus	Carabidae	Arthropoda	Portugal		GENOSCOPE	other_priority		639	2	BGE	BGE		BGE									
+Rupicapra ornata	Bovidae	Chordata	Italy		UNIFI	other_priority		3200	2	BGE	BGE		BGE									

@@ -1,4 +1,6 @@
 taxon_id	input	rank
+104428	Drepana falcataria	species
+7041	Coleoptera	order
 7399	Hymenoptera	order
 69514	Australoplana sanguinea	species
 2725004	Caenoplana variegata	species
@@ -6,7 +8,9 @@ taxon_id	input	rank
 1068628	Polydesmus angustus	species
 7588	Asteroidea	class
 6341	Polychaeta	class
-7041	Coleoptera	order
+7147	Diptera	order
+48991	Ephydridae	family
+41160	Phyllobius	genus
 997513	Macrochilo cribrumalis	species
 279420	Sialis lutaria	species
 1209556	Nomophila noctuella	species
@@ -162,7 +166,6 @@ taxon_id	input	rank
 #ilEudLine	Eudonia lineola	species
 687152	Phylloporia bistrigella	species
 753208	Oecophora bractella	species
-7147	Diptera	order
 7384	Sarcophaga	genus
 27474	Tachinidae	family
 1481754	Oncocera semirubella	species
@@ -178,6 +181,7 @@ taxon_id	input	rank
 2561799	Tachystola acroxantha	species
 572746	Dysstroma citrata	species
 242267	Plebejus argus	species
+43823	Limoniidae	family
 62803	Nemoura	genus
 177674	Limnephilus	genus
 254380	Macdunnoughia confusa	species
@@ -247,10 +251,8 @@ taxon_id	input	rank
 1134731	Eurygaster testudinaria	species
 7149	Chironomidae	family
 608843	Zwicknia bifrons	species
-41160	Phyllobius	genus
 41098	Cantharis	genus
 925783	Idiocerus	genus
-43823	Limoniidae	family
 219548	Heleomyzidae	family
 42113	Clitellata	class
 381127	Tandonia budapestensis	species
@@ -461,7 +463,6 @@ taxon_id	input	rank
 2803876	Odiellus spinosus	species
 107870	Hydroporus	genus
 7197	Psychodidae	family
-48991	Ephydridae	family
 702679	Pediciidae	family
 987896	Caradrina kadenii	species
 1920660	Geomitridae	family
@@ -497,7 +498,6 @@ taxon_id	input	rank
 77572	Halictidae	family
 1511221	Aelia acuminata	species
 226174	Helophilus pendulus	species
-104428	Drepana falcataria	species
 294303	Chorthippus albomarginatus	species
 #ilEilLuri	Eilema lurideola	species
 1323534	Conocephalus dorsalis	species

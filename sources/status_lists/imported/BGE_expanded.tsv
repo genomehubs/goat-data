@@ -1,33 +1,33 @@
-ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
-669229	Wirenia	argentea	Gymnomeniidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-2996	Hydrurus	foetidus	Hydruraceae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-488418	Marifugia	cavatica	Serpulidae	bge_other_priority		BGE	BGE		BGE									
-1366552	Proasellus	anophtalmus dalmatinus	Asellidae	bge_other_priority		BGE	BGE		BGE									
-39455	Alexandrium	minutum	Pyrocystaceae	bge_other_priority		BGE	BGE		BGE									
-2725171	Tritomurus	scutellatus	Tomoceridae	bge_other_priority		BGE	BGE		BGE									
-350094	Omalisus	fontisbellaquei	Elateridae	bge_other_priority		BGE	BGE		BGE									
-43341	Phorcus	turbinatus	Trochidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-1233057	Alpioniscus	balthasari	Trichoniscidae	bge_other_priority		BGE	BGE		BGE									
-314080	Gammarus	oceanicus	Gammaridae	bge_other_priority		BGE	BGE		BGE									
-62148	Gluvia	dorsalis	Daesiidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-2934182	Phyllidia	flava	Phyllidiidae	bge_other_priority		BGE	BGE		BGE									
-1526741	Xylophaga	dorsalis	Xylophagaidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-317547	Eunicella	cavolini	Eunicellidae	bge_other_priority		BGE	BGE		BGE									
-56557	Triaenophorus	nodulosus	Triaenophoridae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-1917237	Distaplia	bermudensis	Holozoidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-335185	Cistus	crispus	Cistaceae	bge_other_priority		BGE	BGE		BGE									
-45971	Mytilopsis	leucophaeata	Dreissenidae	bge_other_priority		BGE	BGE		BGE									
-928672	Pyrrhula	murina	Fringillidae	bge_other_priority		BGE	BGE		BGE									
-436207	Arnica	montana	Asteraceae	bge_other_priority		BGE	BGE		BGE									
-63975	Graellsia	isabellae	Saturniidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-1046305	Ailoscolex	lacteospumosus	Hormogastridae	bge_other_priority		BGE	BGE		BGE									
-2057147	Botrylloides	israeliense	Styelidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-191414	Erebia	palarica	Nymphalidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-47528	Anodonta	cygnea	Unionidae	bge_other_priority		BGE	BGE		BGE									
-119148	Dysdera	unguimmanis	Dysderidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-1400418	Rosalia	alpina	Cerambycidae	bge_other_priority		BGE	BGE		BGE									
-549142	Trachusa	byssina	Megachilidae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-457762	Alyssoides	utriculata	Brassicaceae	bge_other_priority	sample_collected	BGE	BGE		BGE	BGE								
-1445830	Platypeza	hirticeps	Platypezidae	bge_other_priority		BGE	BGE		BGE									
-	Androsace	saussurei	Primulaceae	bge_other_priority		BGE	BGE		BGE									
-	Anisus	vorticulus	Planorbidae	bge_other_priority		BGE	BGE		BGE									
+species	family	phylum	source	ncbi_taxon_id	proposed_sequencing_centre	target_list_status	sequencing_status	goat_estimated_genome_size_(gb)	phase	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
+Wirenia argentea	Gymnomeniidae	Mollusca	Norway	669229	SCILIFE	other_priority	sample_collected	743	2	BGE	BGE		BGE	BGE								
+Hydrurus foetidus	Hydruraceae	Ochrophyta	Norway	2996	SCILIFE	other_priority	sample_collected	116	2	BGE	BGE		BGE	BGE								
+Marifugia cavatica	Serpulidae	Annelida	Croatia	488418	SANGER	other_priority		734	2	BGE	BGE		BGE									
+Proasellus anophtalmus dalmatinus	Asellidae	Arthropoda	Croatia	1366552	SANGER	other_priority		1860	2	BGE	BGE		BGE									
+Alexandrium minutum	Pyrocystaceae	Miozoa	France	39455	GENOSCOPE	other_priority		116	2	BGE	BGE		BGE									
+Tritomurus scutellatus	Tomoceridae	Arthropoda	Slovenia	2725171	SANGER	other_priority		225	2	BGE	BGE		BGE									
+Omalisus fontisbellaquei	Elateridae	Arthropoda	Czechia	350094	SCILIFE	other_priority		1006	2	BGE	BGE		BGE									
+Phorcus turbinatus	Trochidae	Mollusca	Spain	43341	CNAG	other_priority	sample_collected	1910	2	BGE	BGE		BGE	BGE								
+Alpioniscus balthasari	Trichoniscidae	Arthropoda	Croatia	1233057	SANGER	other_priority		3790	2	BGE	BGE		BGE									
+Gammarus oceanicus	Gammaridae	Arthropoda	Poland	314080	GENOSCOPE	other_priority		3500	2	BGE	BGE		BGE									
+Gluvia dorsalis	Daesiidae	Arthropoda	Spain	62148	CNAG	other_priority	sample_collected	1100	2	BGE	BGE		BGE	BGE								
+Phyllidia flava	Phyllidiidae	Mollusca	Spain	2934182	CNAG	other_priority		1960	2	BGE	BGE		BGE									
+Xylophaga dorsalis	Xylophagaidae	Mollusca	Spain	1526741	CNAG	other_priority	sample_collected	685	2	BGE	BGE		BGE	BGE								
+Eunicella cavolini	Eunicellidae	Cnidaria	France	317547	GENOSCOPE	other_priority		626	2	BGE	BGE		BGE									
+Triaenophorus nodulosus	Triaenophoridae	Platyhelminthes	Finland	56557	SCILIFE	other_priority	sample_collected	323	2	BGE	BGE		BGE	BGE								
+Distaplia bermudensis	Holozoidae	Chordata	Italy	1917237	UNIFI	other_priority	sample_collected	438	2	BGE	BGE		BGE	BGE								
+Cistus crispus	Cistaceae	Spermatophyta	France	335185	GENOSCOPE	other_priority		1920	2	BGE	BGE		BGE									
+Mytilopsis leucophaeata	Dreissenidae	Mollusca	France	45971	GENOSCOPE	other_priority		1660	2	BGE	BGE		BGE									
+Pyrrhula murina	Fringillidae	Chordata	Portugal	928672	GENOSCOPE	other_priority		1330	2	BGE	BGE		BGE									
+Arnica montana	Asteraceae	Spermatophyta	Germany	436207	SANGER	other_priority		1440	2	BGE	BGE		BGE									
+Graellsia isabellae	Saturniidae	Arthropoda	Spain	63975	CNAG	other_priority	sample_collected	650	2	BGE	BGE		BGE	BGE								
+Ailoscolex lacteospumosus	Hormogastridae	Annelida	Spain	1046305	CNAG	other_priority		724	2	BGE	BGE		BGE									
+Botrylloides israeliense	Styelidae	Chordata	Italy	2057147	UNIFI	other_priority	sample_collected	724	2	BGE	BGE		BGE	BGE								
+Erebia palarica	Nymphalidae	Arthropoda	Spain	191414	CNAG	other_priority	sample_collected	479	2	BGE	BGE		BGE	BGE								
+Anodonta cygnea	Unionidae	Mollusca	Switzerland	47528	UNIFI	other_priority		2000	2	BGE	BGE		BGE									
+Dysdera unguimmanis	Dysderidae	Arthropoda	Spain	119148	CNAG	other_priority	sample_collected	2930	2	BGE	BGE		BGE	BGE								
+Trachusa byssina	Megachilidae	Arthropoda	Germany	549142	SANGER	other_priority	sample_collected	812	2	BGE	BGE		BGE	BGE								
+Alyssoides utriculata	Brassicaceae	Spermatophyta	Switzerland	457762	UNIFI	other_priority	sample_collected	880	2	BGE	BGE		BGE	BGE								
+Platypeza hirticeps	Platypezidae	Arthropoda	Finland	1445830	SCILIFE	other_priority		594	2	BGE	BGE		BGE									
+Ulmus laevis	Ulmaceae	Spermatophyta	Italy	233204		other_priority		2020	2	BGE	BGE		BGE									
+Androsace saussurei	Primulaceae	Spermatophyta	France		GENOSCOPE	other_priority		1840	2	BGE	BGE		BGE									
+Anisus vorticulus	Planorbidae	Mollusca	Germany		SANGER	other_priority		1310	2	BGE	BGE		BGE									
