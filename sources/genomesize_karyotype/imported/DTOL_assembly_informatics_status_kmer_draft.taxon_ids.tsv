@@ -1,10 +1,9 @@
 taxon_id	input	rank
-3517	Alnus glutinosa	species
+320977	Bimastos eiseni	species
 2578229	Mechanitis messenoides	species
 331344	Napeogenes sylphis	species
 471061	Mechanitis mazaeus	species
 331285	Napeogenes inachia	species
-320977	Bimastos eiseni	species
 638464	Ceriagrion tenellum	species
 360071	Amphimallon solstitiale	species
 3486	Humulus lupulus	species
@@ -216,6 +215,7 @@ taxon_id	input	rank
 345047	Oleria estella	species
 344647	Hyposcada illinissa	species
 471053	Hypothyris mamercus	species
+398365	Aphrocallistes beatrix	species
 443705	Nansenia antarctica	species
 948063	Notolepis coatsorum	species
 115342	Chilocorus renipustulatus	species
@@ -252,7 +252,6 @@ taxon_id	input	rank
 2848974	Navicula sp. CCAP1050/13	species
 75065	Rubus caesius	species
 457147	Melittis melissophyllum	species
-767568	Sparganium erectum	species
 487684	Inga laurina	species
 39468	Quercus cerris	species
 77065	Salix purpurea	species
@@ -291,7 +290,6 @@ taxon_id	input	rank
 69996	Selaginella selaginoides	species
 41492	Bellis perennis	species
 4123	Convolvulus arvensis	species
-310247	Crepis paludosa	species
 186058	Cuscuta epithymum	species
 119177	Inula conyza	species
 53159	Lamium album	species
@@ -416,21 +414,31 @@ taxon_id	input	rank
 863632	Stigmatogaster souletina	species
 1487353	Adna anglica	species
 878198	Mordellochroa abdominalis	species
-133487	Marvania coccoides	species
 426094	Chelidonichthys cuculus	species
 63597	Heteramoeba clara	species
 2447973	Inocybe cf. posterula	species
 230827	Ripartites tricholoma	species
 173376	Trentepohlia aurea	species
 557324	Hygrocybe punicea	species
-206348	Bathymodiolus brooksi	species
-666329	Cinachyrella alloclada	species
 880217	Cassiopea ornata	species
 2969	Oxyrrhis marina	species
 1649312	Leucozona glaucia	species
 113538	Equisetum palustre	species
 39879	Silene dioica	species
 59425	Pseudognaphalium luteoalbum	species
+76438	Eriophorum vaginatum	species
+51316	Eimeria praecox	species
+75521	Chrysolina herbacea	species
+55651	Astropecten irregularis	species
+948025	Gymnoscopelus braueri	species
+28680	Anas acuta	species
+310628	Dolichopus trivialis	species
+323314	Chrysotoxum festivum	species
+878018	Gastrophysa polygoni	species
+318605	Inocybe fraudans	species
+2822767	Inocybe obscuroides	species
+1918022	Actia lamia	species
+1572538	Ptychoptera contaminata	species
 304557	Oleria gunilla	species
 331309	Brevioleria arzalia	species
 471079	Oleria sexmaculata	species
@@ -456,7 +464,6 @@ taxon_id	input	rank
 82213	Iris pseudacorus	species
 442101	Trixagus carinifrons	species
 1845063	Orchestes fagi	species
-147940	Asplenium viride	species
 96050	Phalaris arundinacea	species
 445234	Pulsatilla vulgaris	species
 664630	Synisoma lancifer	species
@@ -524,7 +531,6 @@ taxon_id	input	rank
 55311	Aponogeton distachyos	species
 256425	Lissotriton helveticus	species
 1053393	Scrophularia auriculata	species
-76438	Eriophorum vaginatum	species
 153785	Phratora vitellinae	species
 560974	Schizomavella linearis	species
 4470	Lemna gibba	species
@@ -532,7 +538,6 @@ taxon_id	input	rank
 2719107	Tipula fascipennis	species
 487788	Geranium pratense	species
 51265	Bidens cernua	species
-473660	Leptophyes punctatissima	species
 81491	Lumbricus castaneus	species
 2998527	Ditropis pteridis	species
 4164	Digitalis purpurea	species
@@ -577,11 +582,9 @@ taxon_id	input	rank
 1511665	Phaonia angelicae	species
 113139	Cordilura albipes	species
 1425550	Crepidodera fulvicornis	species
-323314	Chrysotoxum festivum	species
 154015	Gastrophysa viridula	species
 29656	Spirodela polyrhiza	species
 292458	Agriotes lineatus	species
-433595	Tachypodoiulus niger	species
 1235707	Cilea silphoides	species
 167799	Sclerolinum brattstromi	species
 1249516	Chaetophora lobata	species
@@ -623,6 +626,51 @@ taxon_id	input	rank
 219664	Facelina auriculata	species
 1676545	Coryphella gracilis	species
 2773495	Lomanotus genei	species
+70192	Sepiola affinis	species
+206348	Bathymodiolus brooksi	species
+1491185	Alviniconcha kojimai	species
+666329	Cinachyrella alloclada	species
+753195	Lyonetia clerkella	species
+173286	Geophilus easoni	species
+208863	Myriophyllum aquaticum	species
+133487	Marvania coccoides	species
+2747131	Steatoda nobilis	species
+31467	Sphaerococcus coronopifolius	species
+49614	Nymphoides peltata	species
+305562	Braula coeca	species
+561864	Mayorella gemmifera	species
+197013	Curculio glandium	species
+47519	Calystegia sepium	species
+379955	Geranium rotundifolium	species
+311941	Draba incana	species
+203015	Rhodiola rosea	species
+433595	Tachypodoiulus niger	species
+413988	Gloeotila scopulina	species
+37490	Clematis vitalba	species
+181291	Ornithopus perpusillus	species
+473660	Leptophyes punctatissima	species
+584776	Polititapes rhomboides	species
+6344	Arenicola marina	species
+302032	Aporrectodea caliginosa	species
+1008855	Haplopodoiulus spathifer	species
+219593	Aythya ferina	species
+1192867	Chroicocephalus ridibundus	species
+8915	Larus fuscus	species
+197941	Clangula hyemalis	species
+39448	Prorocentrum lima	species
+154638	Crimora papillata	species
+268080	Lapsana communis	species
+2047258	Pleurochrysis sp. (in: haptophytes)	species
+2081491	Diacronema lutheri	species
+2508993	Vertebrata byssoides	species
+218141	Luzula campestris	species
+216479	Euphorbia maculata	species
+1824600	Salix euxina	species
+339964	Salix myrsinifolia	species
+310247	Crepis paludosa	species
+767568	Sparganium erectum	species
+147940	Asplenium viride	species
+33642	Coscinodiscus radiatus	species
 2777158	Steromphala umbilicalis	species
 8348	Bombina variegata	species
 6550	Mytilus edulis	species
@@ -647,7 +695,6 @@ taxon_id	input	rank
 443714	Protomyctophum bolini	species
 7769	Myxine glutinosa	species
 8524	Zootoca vivipara	species
-948025	Gymnoscopelus braueri	species
 447135	Myodes glareolus	species
 42254	Sorex araneus	species
 56720	Lipophrys pholis	species
@@ -661,7 +708,6 @@ taxon_id	input	rank
 1353343	Echiniscus quadrispinosus	species
 2883163	Echiniscus sp. ZA.555	species
 434416	Tharsalea arota	species
-398365	Aphrocallistes beatrix	species
 1088795	Sarcotragus spinosulus	species
 89882	Agaricia agaricites	species
 51056	Meandrina meandrites	species
@@ -749,7 +795,6 @@ taxon_id	input	rank
 1352472	Platycheirus rosarum	species
 5801	Eimeria acervulina	species
 44415	Eimeria mitis	species
-51316	Eimeria praecox	species
 908350	Volvopluteus gloiocephalus	species
 346746	Bitoma crenata	species
 1042629	Micropterix tunbergella	species
@@ -855,7 +900,6 @@ taxon_id	input	rank
 1545330	Legnotus limbosus	species
 158538	Aristolochia clematitis	species
 1101036	Prays ruficeps	species
-6344	Arenicola marina	species
 1545368	Troilus luridus	species
 70395	Libellula quadrimaculata	species
 1226583	Dichetophora obliterata	species
@@ -869,7 +913,6 @@ taxon_id	input	rank
 670626	Rhinophora lepida	species
 688176	Terellia tussilaginis	species
 1553210	Chrysolina staphylaea	species
-2081491	Diacronema lutheri	species
 47247	Lotus corniculatus	species
 116146	Oedemera nobilis	species
 3652	Bryonia dioica	species
@@ -889,8 +932,6 @@ taxon_id	input	rank
 7725	Styela clava	species
 4733	Typha latifolia	species
 874270	Pisidia longicornis	species
-584776	Polititapes rhomboides	species
-302032	Aporrectodea caliginosa	species
 2082999	Spirobranchus lamarcki	species
 2722873	Bithynia leachii	species
 156283	Anthophora furcata	species
