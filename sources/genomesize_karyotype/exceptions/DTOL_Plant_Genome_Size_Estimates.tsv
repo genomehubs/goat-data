@@ -782,14 +782,14 @@ RBGE	DAG18	DTOL	Angiosperm	Juncaceae	Luzula	cf. spicata	<Solanum	GPB3%PVP	192.52
 RBGE	DAG19	DTOL	Angiosperm	Cyperaceae	Carex	lachenalii	<Solanum	GPB3%PVP	199.46	426.64	4.32	3.77	2.139	198.86	429.68	0.93	0.92	0.46	0.45	4.06	3.31	0.019	0.008	Nacho	21/07/2023	NA	2C = 0.80pg	NA	NA	NA	1
 RBGE	DAG20	DTOL	Angiosperm	Rosaceae	Sibbaldia	procumbens	<Solanum	GPB3%PVP	218.47	454.06	4.89	3.59	2.078	215.81	453.49	0.95	0.94	0.47	0.46	5.4	3.92	0.021	0.009	Nacho	21/07/2023	NA	NA	NA	NA	NA	1
 RBGE	DAG21	DTOL	Angiosperm	Asteraceae	Omalotheca	supina	<Petro	OXPRO	216.45	396.77	3.5	2.24	1.833	219.41	399.63	2.45	2.47	1.24	1.21	3.02	2.18	0.011	0.015	Nacho	21/07/2023	NA	NA	Weird kind of second peak, prob from contamination	NA	NA	1
-RBGK	MC9635	DTOL	Angiosperm	Gentianaceae	Centaurium	litorale	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9636	DTOL	Angiosperm	Violaceae	Viola	curtisii	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9637	DTOL	Angiosperm	Euphorbiaceae	Euphorbia	portlandica	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9638	DTOL	Angiosperm	Solanaceae	Nicotiana	alata	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9639	DTOL	Angiosperm	Solanaceae	Nicotiana	gossei	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9640	DTOL	Angiosperm	Solanaceae	Nicotiana	excelsior	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9641	DTOL	Angiosperm	Solanaceae	Datura	stramonium	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9642	DTOL	Angiosperm	Fabaceae	Ulex	gallii	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9643	DTOL	Angiosperm	Apiaceae	Daucus	carota subsp. gummifer	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9644	DTOL	Angiosperm	Asteraceae	Limbarda	crithmoides	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
-RBGK	MC9645	DTOL	Angiosperm	Plumbaginaceae	Limonium	britannicum subsp. celticum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9635	DTOL	Angiosperm	Gentianaceae	Centaurium	litorale	<Petro	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9636	DTOL	Angiosperm	Violaceae	Viola	curtisii	Petro	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9637	DTOL	Angiosperm	Euphorbiaceae	Euphorbia	portlandica	Petro, Pisum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9638	DTOL	Angiosperm	Solanaceae	Nicotiana	alata	<Pisum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9639	DTOL	Angiosperm	Solanaceae	Nicotiana	gossei	<Pisum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9640	DTOL	Angiosperm	Solanaceae	Nicotiana	excelsior	<Pisum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9641	DTOL	Angiosperm	Solanaceae	Datura	stramonium	<Pisum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9642	DTOL	Angiosperm	Fabaceae	Ulex	gallii	<Pisum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9643	DTOL	Angiosperm	Apiaceae	Daucus	carota subsp. gummifer	<Solanum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9644	DTOL	Angiosperm	Asteraceae	Limbarda	crithmoides	Petro	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+RBGK	MC9645	DTOL	Angiosperm	Plumbaginaceae	Limonium	britannicum subsp. celticum	Pisum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
