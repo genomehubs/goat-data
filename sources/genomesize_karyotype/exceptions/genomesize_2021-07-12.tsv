@@ -621,7 +621,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 4853	NA	Chordata	Vertebrata	Aves	Psittaciformes	Psittacidae	Chalcopsitta sp.	Lory	1.25	NA	FD	RBC	GD	529
 4857	NA	Chordata	Vertebrata	Aves	Psittaciformes	Psittacidae	Deroptyus accitrinus	Hawk-headed parrot	1.64	NA	FCM	RBC	GD, HS, V	502
 5041	NA	Chordata	Vertebrata	Chondrichthyes	Rajiformes	Gymnuridae	Gymnura bimaculata	N/A	5.02	NA	FCM	RBC	GD, HS	81
-5058	NA	Chordata	Vertebrata	Chondrichthyes	Rajiformes	Myliobatidae	Rhinoptera sp.	Cownose ray	5.2	NA	BFA	RBC	SP	219
 5713	NA	Chordata	Vertebrata	Mammalia	Rodentia	Bathyergidae	Georhychus capensis	African mole-rat	3.2	54	FCM	KC	GD	145
 5744	NA	Chordata	Vertebrata	Mammalia	Rodentia	Echimyidae	Proechimys guairae guairae	Venezuelan spiny-rat	6.25	48	FD	LK	GD, MM	150
 5753	NA	Chordata	Vertebrata	Mammalia	Rodentia	Geomyidae	Thomomys bottae alienus	Western pocket gopher	4.71	76	FCM	SP	MM	466
@@ -801,8 +800,6 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 3029	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Diopatra cuprea cuprea	Polychaete	2	NA	FD	WB	V	95
 2880	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Onuphis eremita oculata	Polychaete	1.7	NA	FD	WB	V	95
 3030	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Onuphis eremita oculata	Polychaete	1.7	NA	FD	WB	V	95
-2881	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Onuphis sp.	Polychaete	1.7	NA	FD	WB	V	95
-3031	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Onuphis sp.	Polychaete	1.7	NA	FD	WB	V	95
 2221	NA	Sipuncula	NA	Sipunculidea	Golfingiiformes	Themistidae	Themiste langeniformis	Peanut worm	1.28	NA	FIA	C	GD	575
 2096	NA	Porifera	NA	Demospongiae	Hadromerida	Suberitidae	Suberites sp.	Demosponge	0.09	NA	FIA	WB	GD	703
 2106	NA	Porifera	NA	Demospongiae	Halisarcida	Halisarcidae	"Halisarca n.sp. ""restingiensis"""	Demosponge	0.15	NA	FIA	WB	GD	703

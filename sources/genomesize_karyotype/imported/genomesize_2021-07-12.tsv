@@ -7139,6 +7139,7 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 7473	NA	Chordata	Vertebrata	Osteichthyes	Pleuronectiformes	Pleuronectidae	Pleuronectes platessus	English plaice	0.39	48	SCF	RBC	HS	106
 5027	NA	Chordata	Vertebrata	Chondrichthyes	Rajiformes	Dasyatidae	Dasyatis chrysonota marmorata	Marbled stingray	5.8	NA	FD	RBC	SC	479, 480
 5028	NA	Chordata	Vertebrata	Chondrichthyes	Rajiformes	Dasyatidae	Dasyatis gerrardi	Sharpnose stingray	4.65	NA	FCM	RBC	GD, HS	81
+5058	NA	Chordata	Vertebrata	Chondrichthyes	Rajiformes	Myliobatidae	Rhinoptera sp.	Cownose ray	5.2	NA	BFA	RBC	SP	219
 5800	NA	Chordata	Vertebrata	Mammalia	Rodentia	Muridae	Bolomys obscurus	Grass mouse	2.99	34	FD	S	HS, GD, RN	49
 7521	NA	Chordata	Vertebrata	Osteichthyes	Salmoniformes	Salmonidae	Oncorhynchus masou macrostomus	Cherry salmon	2.96	66	FCM	RBC	MM	359
 7608	NA	Chordata	Vertebrata	Osteichthyes	Scorpaeniformes	Cyclopteridae	Cyclopteropsis jordani	Smooth lumpfish	0.85	NA	FIA	RBC	BS, GD, OM, RP	203, 204
@@ -7165,6 +7166,8 @@ row_number	ncbi_taxid	phylum	subphylum	class	order	family	genus_species	common_n
 1948	NA	Platyhelminthes	NA	Turbellaria	Catenulida	Stenostomidae	Stenostomum unicolor	Flatworm	0.2	NA	FD	WB	V	174
 2876	NA	Annelida	NA	Polychaeta	Eunicida	Lumbrineridae	Lumbrineris tenuis	Polychaete	2.4	NA	FD	WB	V	95
 3026	NA	Annelida	NA	Polychaeta	Eunicida	Lumbrineridae	Lumbrineris tenuis	Polychaete	2.4	NA	FD	WB	V	95
+2881	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Onuphis sp.	Polychaete	1.7	NA	FD	WB	V	95
+3031	NA	Annelida	NA	Polychaeta	Eunicida	Onuphidae	Onuphis sp.	Polychaete	1.7	NA	FD	WB	V	95
 2585	NA	Mollusca	NA	Scaphopoda	Gadilida	Gadilidae	Siphonodentalium dalli	Tusk shell	2.41	NA	FIA	MC	SP	717
 2108	NA	Porifera	NA	Demospongiae	Haplosclerida	Callyspongiidae	Callyspongia sp.	Demosponge	0.13	NA	FIA	WB	GD	703
 2825	NA	Annelida	NA	Oligochaeta	Haplotaxida	Lumbricidae	Eisenia rosea	Pink soil earthworm	1.1	54	FIA	C	EF	175
