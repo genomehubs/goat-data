@@ -38,7 +38,7 @@ jobs:
           git checkout -b $RELEASE
       - name: Download NCBI datasets executable
         run: |
-          curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v1/linux-amd64/datasets > datasets
+          curl https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets
           chmod a+x datasets
           sudo ip link set ens3 mtu 1500
       - name: Download NCBI TAXROOT datasets zip
