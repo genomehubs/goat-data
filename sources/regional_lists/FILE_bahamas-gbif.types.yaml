@@ -8,7 +8,11 @@ file:
   source_url: https://www.gbif.org/occurrence/download/0115683-230530130749713
 attributes:
   country_list:
-    header: region
+    header: taxonomicStatus
+    translate:
+      ACCEPTED: Bahamas
+      SYNONYM: Bahamas
+      DOUBTFUL: Null
     type: keyword
 taxonomy:
   species:
