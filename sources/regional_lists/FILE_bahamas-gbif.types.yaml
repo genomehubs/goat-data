@@ -1,0 +1,21 @@
+file:
+  format: tsv
+  header: true
+  name: Bahamas-gbif.tsv
+  source: GBIF.org (26 July 2023) GBIF Occurrence Download  https://doi.org/10.15468/dl.uyupzd
+  source_date: 2023-07-27
+  description: Bahamian list of species according to GBIF search
+  source_url: https://www.gbif.org/occurrence/download/0115683-230530130749713
+attributes:
+  country_list:
+    header: taxonomicStatus
+    translate:
+      ACCEPTED: BS
+      SYNONYM: BS
+      DOUBTFUL: Null
+    type: keyword
+taxonomy:
+  species:
+    header: species
+  family:
+    header: family
