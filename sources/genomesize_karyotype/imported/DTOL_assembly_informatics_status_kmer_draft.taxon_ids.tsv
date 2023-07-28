@@ -1,13 +1,14 @@
 taxon_id	input	rank
-1902997	Ptychoptera albimana	species
-987986	Mythimna pallens	species
-1230162	Sialis fuliginosa	species
+934816	Perizoma affinitatum	species
 7153	Chironomus tentans	species
 638464	Ceriagrion tenellum	species
 360071	Amphimallon solstitiale	species
 3486	Humulus lupulus	species
 78070	Platismatia glauca	species
-934816	Perizoma affinitatum	species
+468752	Leptogaster cylindrica	species
+1184610	Malus x robusta	species
+273442	Cheilosia grossa	species
+997530	Cerastis leucographa	species
 3972	Viscum album	species
 260603	Lycopus europaeus	species
 38846	Euphorbia peplus	species
@@ -36,7 +37,6 @@ taxon_id	input	rank
 1689122	Xylophagus ater	species
 795047	Clivina fossor	species
 1190803	Andrena praecox	species
-468752	Leptogaster cylindrica	species
 199064	Phyllonorycter quercifoliella	species
 50603	Panorpa germanica	species
 3501	Urtica dioica	species
@@ -171,11 +171,9 @@ taxon_id	input	rank
 29151	Osmerus eperlanus	species
 877730	Aspidapion aeneum	species
 987992	Noctua comes	species
-1184610	Malus x robusta	species
 187126	Nesoenas mayeri	species
 80831	Tridacna derasa	species
 2021473	Metopia argyrocephala	species
-273442	Cheilosia grossa	species
 102642	Abax parallelepipedus	species
 877990	Stenurella melanura	species
 1816463	Hydrotaea diabolus	species
@@ -187,7 +185,6 @@ taxon_id	input	rank
 1244581	Dasysyrphus tricinctus	species
 202117	Philopedon plagiatum	species
 2867262	Tipula helvola	species
-997530	Cerastis leucographa	species
 398365	Aphrocallistes beatrix	species
 878018	Gastrophysa polygoni	species
 207148	Aphodius fimetarius	species
@@ -200,8 +197,12 @@ taxon_id	input	rank
 311328	Tortrix viridana	species
 2725500	Anthrax anthrax	species
 59425	Pseudognaphalium luteoalbum	species
+181985	Clitocybe odora	species
+98922	Myotis daubentonii	species
+265386	Polyommatus icarus	species
+268662	Polyommatus iphigenia	species
+268694	Polyommatus surakovi	species
 91661	Eunapius fragilis	species
-243486	Salticus scenicus	species
 331327	Melinaea isocomma	species
 722279	Tithorea tarricina	species
 344636	Godyris duillia	species
@@ -234,10 +235,12 @@ taxon_id	input	rank
 2881813	Cylloceria caligata	species
 1779456	Tricholoma hemisulphureum	species
 709496	Peniophora laeta	species
-181985	Clitocybe odora	species
 1101044	Pyrausta purpuralis	species
 318605	Inocybe fraudans	species
 2822767	Inocybe obscuroides	species
+230827	Ripartites tricholoma	species
+2447973	Inocybe cf. posterula	species
+557324	Hygrocybe punicea	species
 2864184	Kryptoperidinium triquetrum	species
 2966	Noctiluca scintillans	species
 155530	Calliostoma zizyphinum	species
@@ -414,10 +417,7 @@ taxon_id	input	rank
 878198	Mordellochroa abdominalis	species
 426094	Chelidonichthys cuculus	species
 63597	Heteramoeba clara	species
-2447973	Inocybe cf. posterula	species
-230827	Ripartites tricholoma	species
 173376	Trentepohlia aurea	species
-557324	Hygrocybe punicea	species
 880217	Cassiopea ornata	species
 2969	Oxyrrhis marina	species
 1649312	Leucozona glaucia	species
@@ -430,9 +430,7 @@ taxon_id	input	rank
 323314	Chrysotoxum festivum	species
 1918022	Actia lamia	species
 1572538	Ptychoptera contaminata	species
-265386	Polyommatus icarus	species
 344637	Greta andromica	species
-268662	Polyommatus iphigenia	species
 344624	Ceratinia tutia	species
 304557	Oleria gunilla	species
 331309	Brevioleria arzalia	species
@@ -538,7 +536,18 @@ taxon_id	input	rank
 286032	Agelena labyrinthica	species
 287380	Zygaena lonicerae	species
 311941	Draba incana	species
-98922	Myotis daubentonii	species
+243486	Salticus scenicus	species
+282397	Polyommatus eros	species
+265388	Polyommatus thersites	species
+190902	Mentha aquatica	species
+669858	Tripleurospermum maritimum	species
+878967	Ablattaria laevigata	species
+7282	Drosophila obscura	species
+241230	Carex rostrata	species
+2881718	Chrysops relictus	species
+2592077	Hierochloe odorata	species
+2810139	Bathynomus doederleinii	species
+987932	Euplagia quadripunctaria	species
 1053393	Scrophularia auriculata	species
 153785	Phratora vitellinae	species
 560974	Schizomavella linearis	species
