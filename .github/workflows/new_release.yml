@@ -467,10 +467,6 @@ jobs:
       - name: Collect extra analysis and files compared to main branch
         run: |
           mkdir -p sources/btk_files_extra/
-          # git diff origin/main...origin/$RELEASE -- sources/btk/btk.files.yaml \
-          # | grep -P "^\+" | grep -v -P "^\+\+\+" | perl -plne 's/^\+//' \
-          # > sources/btk_files_extra/btk.files.yaml
-
           git show origin/main:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.main
           git show origin/${{ env.RELEASE }}:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.${{ env.RELEASE }}
           diff \
@@ -478,8 +474,19 @@ jobs:
             <(cat btk.files.yaml.main | paste - - - - - - - - - - - - - - -) \
           | perl -lne 'if (/^< /) { s/^< //; s/\t/\n/g; print}' \
           > sources/btk_files_extra/btk.files.yaml
-          
-      - name: genomehubs index extra btk files
+
+#       - name: genomehubs index extra btk files
+#         run: |
+#           docker run --rm --network=host \
+#             -v `pwd`/sources:/genomehubs/sources \
+#             -v /volumes/docker/resources:/genomehubs/resources \
+#             genomehubs/genomehubs:$DOCKERVERSION bash -c \
+#               "genomehubs index \
+#                 --es-host es1:9200 \
+#                 --taxonomy-source ncbi \
+#                 --config-file sources/goat.yaml \
+#                 --file-metadata sources/btk_files_extra/btk.files.yaml"
+      - name: genomehubs index all btk files
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
@@ -489,18 +496,7 @@ jobs:
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
-                --file-metadata sources/btk_files_extra/btk.files.yaml"
-      # - name: genomehubs index all btk files
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       -v /volumes/docker/resources:/genomehubs/resources \
-      #       genomehubs/genomehubs:$DOCKERVERSION bash -c \
-      #         "genomehubs index \
-      #           --es-host es1:9200 \
-      #           --taxonomy-source ncbi \
-      #           --config-file sources/goat.yaml \
-      #           --file-metadata sources/btk/btk.files.yaml"
+                --file-metadata sources/btk/btk.files.yaml"
       - name: Snapshot RELEASE analysis_file
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_analysis_file" || exit 0
