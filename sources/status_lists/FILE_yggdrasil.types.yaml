@@ -21,15 +21,15 @@ attributes:
     translate:
       in_assembly: in_progress
   sample_collected:
-    header: sample_collected
+    header: sequencing_status
     translate:
       in_assembly: ygg
   sample_acquired:
-    header: sample_acquired
+    header: sequencing_status
     translate:
       in_assembly: ygg
   in_progress:
-    header: in_progress
+    header: sequencing_status
     translate:
       in_assembly: ygg
 taxonomy:
