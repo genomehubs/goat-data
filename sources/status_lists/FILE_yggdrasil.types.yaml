@@ -1,0 +1,41 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: yggdrasil.tsv
+  source: Declared Status List - yggdrasil
+  source_date: 2023-07-28
+  source_description: Declared Status List - yggdrasil
+  source_contact: Sergei Kliver
+attributes:
+  long_list:
+    header: target_list_status
+    translate:
+      long_list: ygg
+  sequencing_status:
+    header: sequencing_status
+    translate:
+      in_assembly: in_progress
+  sequencing_status_ygg:
+    header: sequencing_status
+    translate:
+      in_assembly: in_progress
+  sample_collected:
+    header: sequencing_status
+    translate:
+      in_assembly: ygg
+  sample_acquired:
+    header: sequencing_status
+    translate:
+      in_assembly: ygg
+  in_progress:
+    header: sequencing_status
+    translate:
+      in_assembly: ygg
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family
