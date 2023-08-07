@@ -225,10 +225,11 @@ RBGE	DB1700	DTOL	Bryophyte	Frullaniaceae	Frullania	teneriffae	<Oryza	GPB3%PVP	26
 RBGE	DB1675	DTOL	Bryophyte	Cephaloziaceae	Odonotoschisma	sphagnii	<Oryza	GPB3%PVP	268.71	407.81	3.67	2.8	1.518	278.66	422.76	NA	1.32	0.66	0.64	3.63	2.75	0.018	NA	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1676	DTOL	Bryophyte	Hylocomiaceae	Loeskeobryum	brevirostre	<Oryza	GPB3%PVP	192.11	384.18	3.49	3.75	2	199.32	404.45	NA	0.99	0.49	0.48	3.58	3.9	0.025	NA	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1686	DTOL	Bryophyte	Rhabdoweisiaceae	Kiaeria	falcata	<Oryza	GPB3%PVP	301.53	422.90	4	3.55	1.403	311.39	445.17	NA	0.7	0.35	0.34	3.79	3.65	0.023	NA	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DBELL1838	DTOL	Bryophyte	Rhabdoweisiaceae	Kiaeria	falcata	<Oryza	GPB3%PVP	203.91	618.12	3.1	3.13	3.031	202.95	569	0.66	0.65	0.32	0.32	3.86	3.05	0.460	0.012	Nacho	03/08/2023	NA	NA	1C measured, endopolyploid	NA	NA	1
 RBGE	DB1678	DTOL	Bryophyte	Lepidoziaceae	Kurzia	Trichoclados	<Oryza	GPB3%PVP	260.23	402.27	4	3.05	1.546	264.23	413.06	NA	1.28	0.64	0.63	3.89	2.77	0.015	NA	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1677	DTOL	Bryophyte	Solenostomataceae	Solenostoma	paoicum	<Solanum	GPB3%PVP	255.72	459.89	5.17	3.3	1.798	266.04	480.22	NA	2.22	1.11	1.08	5.05	3.14	0.007	NA	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1685	DTOL	Bryophyte	Pelliaceae	Pellia	neesiana	>Solanum	GPB3%PVP	193.96	413.49	3.9	3.5	2.132	420.98	199.81	NA	8.43	4.21	4.12	3.59	3.77	0.023	NA	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DBELL1812	DTOL	Bryophyte	Pelliaceae	Pellia	neesiana	Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
+RBGE	DBELL1812	DTOL	Bryophyte	Pelliaceae	Pellia	neesiana	>Petro	GPB3%PVP	193.91	364.52	3.61	3.04	1.88	360.43	192.19	16.92	16.88	8.44	8.25	3.02	3.07	0.009	0.081	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
 RBGE	DGL47392	DTOL	Bryophyte	Aneuraceae	Aneura	miribilis	>Petro	GPB3%PVP	225.13	496.80	3	3.02	2.207	502.53	228.48	NA	19.79	9.9	9.68	3.11	3.01	0.007	NA	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DMR188	DTOL	Angiosperm	Caryophyllaceae	Silene	vulgaris	<Petro	GPB3%PVP	318.87	426.94	3.74	2.49	1.339	328.86	436.81	NA	3.39	1.69	1.66	3.82	2.46	0.011	NA	Sahr Mian	NA	NA	2.25	NA	NA	NA	1
 RBGE	DMR191	DTOL	Angiosperm	Caryophyllaceae	Sabulina	verna	<Petro	GPB3%PVP	152.84	294.88	2.95	3.64	1.929	155.45	298.21	NA	2.35	1.17	1.15	2.82	3.73	0.012	NA	Sahr Mian	NA	NA	-	NA	NA	NA	1
@@ -390,7 +391,7 @@ RBGE	DMR256	DTOL	Angiosperm	Orchidaceae	Coeloglossum	viride	>Pisum	GPB3%PVP	249.
 RBGK	MC9413	DTOL	Angiosperm	Caryophyllaceae	Sagina	nodosa	<Solanum	GPB3%PVP	186.27	318.12	3.89	3.64	1.708	192.03	326.63	NA	1.16	0.58	0.57	3.59	3.25	0.006	NA	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9411	DTOL	Angiosperm	Asteraceae	Filago	minima	<Solanum	GPB3%PVP	137.49	219.72	4.06	2.57	1.598	137.02	219.77	NA	1.23	0.62	0.6	4.23	2.41	0.008	NA	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9414	DTOL	Angiosperm	Onagraceae	Epilobium	brunnescens	<Solanum	GPB3%PVP	116.56	315.46	5.01	3.57	2.706	119.32	321.73	NA	0.73	0.37	0.36	4.84	3.36	0.014	NA	Sahr Mian	NA	NA	-	NA	NA	NA	1
-RBGK	MC9527	DTOL	Angiosperm	Onagraceae	Epilobium	brunnescens	<Solanum	GPB3%PVP	197.55	560.77	5.33	3.82	2.839	199.78	567.98	0.70	0.7	0.35	0.34	5.13	3.72	0.007	0.002	Nacho	24/06/2023	KDTOL10898	NA	NA	NA	NA	1
+RBGK	MC9527	DTOL	Angiosperm	Onagraceae	Epilobium	brunnescens	<Solanum	GPB3%PVP	197.55	560.77	5.33	3.82	2.839	199.78	567.98	0.7	0.7	0.35	0.34	5.13	3.72	0.007	0.002	Nacho	24/06/2023	KDTOL10898	NA	NA	NA	NA	1
 RBGK	MC9415	DTOL	Angiosperm	Lythraceae	Lythrum	hyssopifolia	<Solanum	GPB3%PVP	364.03	449.29	4.49	4.02	1.234	373.48	460.08	NA	1.61	0.8	0.79	3.76	3.46	0.003	NA	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9416	DTOL	Angiosperm	Cyperaceae	Cyperus	fuscus	<Solanum	GPB3%PVP	125.94	476.60	4.45	3.01	3.784	129.2	484.24	NA	0.53	0.26	0.26	4.21	2.84	0.031	NA	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9417	DTOL	Angiosperm	Asteraceae	Filago	lutescens	<Solanum	GPB3%PVP	314.19	417.22	2.71	2.53	1.328	321.83	424.47	NA	1.5	0.75	0.73	2.39	2.63	0.008	NA	Sahr Mian	NA	NA	1.39	NA	NA	NA	1
@@ -416,10 +417,10 @@ RBGK	MC9425	DTOL	Angiosperm	Asteraceae	Hieracium	britannicum	>Petro	GPB3%PVP	171
 RBGK	MC9427	DTOL	Angiosperm	Campanulaceae	Lobelia	urens	<Petro	GPB3%PVP	103.06	437.44	4.67	2.38	4.245	104.13	441.68	1.06	1.06	0.53	0.52	4.38	2.44	0.009	0.002	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9428	DTOL	Angiosperm	Primulaceae	Hottonia	palustris	<Petro	GPB3%PVP	187.39	420.41	4.03	2.51	2.244	190.63	427.98	2.01	2	1	0.98	4.43	3.1	0.002	0.002	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9429	DTOL	Angiosperm	Genitanaceae	Gentiana	pneumonanthe	>Petro	GPB3%PVP	166.63	384.85	3.56	3.55	2.31	390.14	170.06	10.39	10.32	5.16	5.05	3.36	3.23	0.016	0.068	Sahr Mian	NA	NA	-	NA	NA	NA	1
-RBGK	MC9430	DTOL	Angiosperm	Caryophyllaceae	Illecebrum	verticillatum	<Petro	GPB3%PVP	103.23	466.28	4.68	3.56	4.517	104.11	480.92	1.00	0.97	0.49	0.48	4.58	3.09	0.090	0.019	Sahr Mian	NA	NA	-	NA	NA	NA	1
+RBGK	MC9430	DTOL	Angiosperm	Caryophyllaceae	Illecebrum	verticillatum	<Petro	GPB3%PVP	103.23	466.28	4.68	3.56	4.517	104.11	480.92	1	0.97	0.49	0.48	4.58	3.09	0.090	0.019	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9429	DTOL	Angiosperm	Alismataceae	Baldellia	ranunculoides	>Pisum	GPB3%PVP	139.50	421.39	3.13	3.54	3.021	425.62	140.32	27.46	27.57	13.79	13.48	3.53	3.36	0.011	0.099	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGE	DMR270	DTOL	Angiosperm	Lamiaceae	Galeopsis	tetrahit	<Petro	GPB3%PVP	247.89	315.48	3.42	2.87	1.273	250.23	317.22	3.54	3.55	1.77	1.74	3.36	2.76	0.007	0.019	Sahr Mian	NA	NA	3.10	NA	NA	NA	1
-RBGE	DMR271	DTOL	Angiosperm	Juncaceae	Juncus	bufonius	<Petro	GPB3%PVP	168.67	399.29	4.49	2.96	2.367	174.04	406.84	1.90	1.92	0.96	0.94	4.03	2.59	0.027	0.022	Sahr Mian	NA	NA	2.60	NA	NA	NA	1
+RBGE	DMR271	DTOL	Angiosperm	Juncaceae	Juncus	bufonius	<Petro	GPB3%PVP	168.67	399.29	4.49	2.96	2.367	174.04	406.84	1.9	1.92	0.96	0.94	4.03	2.59	0.027	0.022	Sahr Mian	NA	NA	2.60	NA	NA	NA	1
 RBGE	DMR269	DTOL	Angiosperm	Lamiaceae	Mentha	arvensis	>Solanum	GPB3%PVP	327.11	437.46	3.38	3.52	1.337	454.45	334.99	2.65	2.69	1.34	1.31	3.57	3.38	0.007	0.079	Sahr Mian	NA	NA	0.90	hexaploid	NA	NA	1
 RBGE	DMR272	DTOL	Angiosperm	Brassicaceae	Rorripa	palustris	<Solanum	GPB3%PVP	102.77	376.22	3.25	3.48	3.601	103.33	379.87	0.54	0.54	0.27	0.26	3.36	3.47	0.053	0.003	Sahr Mian	NA	NA	1.08	NA	NA	NA	1
 RBGE	DMR273	DTOL	Angiosperm	Cyperaceae	Bolboschoenus	maritimus	<Solanum	GPB3%PVP	110.38	343.98	5.26	3.46	3.116	111.55	351.45	0.64	0.63	0.31	0.31	5.36	3.36	0.032	0.006	Sahr Mian	NA	NA	-	NA	NA	NA	1
@@ -428,16 +429,16 @@ RBGK	MC9434	DTOL	Angiosperm	Polygonaceae	Fallopia	baldschuanica	<Petro	GPB3%PVP	
 RBGK	MC9431	DTOL	Angiosperm	Apiaceae	Hydrocotyle	ranunculoides	<Petro	GPB3%PVP	115.10	296.45	3.6	3.13	2.575	117.6	300.38	1.75	1.76	0.88	0.86	3.61	3.03	0.022	0.015	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9433	DTOL	Angiosperm	Malvaceae	Malva	sylvestris	<Petro	Galbraith	118.15	305.06	6.39	3.99	2.582	117.47	303.19	1.74	1.74	0.87	0.85	6.45	3.95	0.001	0.001	Sahr Mian	NA	NA	2.90	NA	NA	NA	1
 RBGK	MC9432	DTOL	Angiosperm	Asteraceae	Bidens	cernua	<Pisum	GPB3%PVP	170.11	325.33	3.35	2.63	1.912	174.34	331.2	4.75	4.78	2.39	2.34	3.3	2.45	0.011	0.028	Sahr Mian	NA	NA	4.60	NA	NA	NA	1
-RBGE	DVK6	DTOL	Angiosperm	Cyperaceae	Carex	leporina	<Solanum	GPB3%PVP	117.62	332.51	3.38	2.31	2.827	118.02	332.52	0.70	0.7	0.35	0.34	3.5	2.42	0.016	0.004	Sahr Mian	NA	NA	-	NA	NA	NA	1
+RBGE	DVK6	DTOL	Angiosperm	Cyperaceae	Carex	leporina	<Solanum	GPB3%PVP	117.62	332.51	3.38	2.31	2.827	118.02	332.52	0.7	0.7	0.35	0.34	3.5	2.42	0.016	0.004	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGE	DMR277	DTOL	Angiosperm	Junaceae	Juncus	articulatus	<Petro	GPB3%PVP	169.70	410.47	4.41	3.64	2.419	170.78	408.45	1.86	1.88	0.94	0.92	4.36	3.94	0.034	0.019	Sahr Mian	NA	NA	3.70	NA	NA	NA	1
 RBGE	DMR276	DTOL	Angiosperm	Cyperaceae	Rhynchospora	alba	<Solanum	GPB3%PVP	104.12	339.63	4.8	2.67	3.262	104.69	341.3	0.61	0.61	0.3	0.3	4.53	2.58	0.003	0.000	Sahr Mian	NA	NA	-	NA	NA	NA	1
-RBGE	DVK4	DTOL	Angiosperm	Poaceae	Festuca	vivipara	>Petro	GPB3%PVP	201.57	434.66	2.46	3.64	2.156	439	203.73	9.70	9.7	4.85	4.74	2.84	2.49	0.003	0.017	Sahr Mian	NA	NA	9.92	NA	NA	NA	1
+RBGE	DVK4	DTOL	Angiosperm	Poaceae	Festuca	vivipara	>Petro	GPB3%PVP	201.57	434.66	2.46	3.64	2.156	439	203.73	9.7	9.7	4.85	4.74	2.84	2.49	0.003	0.017	Sahr Mian	NA	NA	9.92	NA	NA	NA	1
 RBGE	DMR274	DTOL	Angiosperm	Gentianaceae	Gentianella	campestris	>Solanum	GPB3%PVP	171.93	447.46	3.9	3.17	2.602	447.77	173.29	5.15	5.12	2.56	2.5	3.06	3.68	0.018	0.035	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9436	DTOL	Angiosperm	Solanaceae	Solanum	nigrum	>Petro	GPB3%PVP	236.35	389.12	2.09	2.33	1.646	392.05	237.66	7.41	7.42	3.71	3.63	2.43	2.17	0.003	0.013	Sahr Mian	NA	NA	6.20	NA	NA	NA	1
 RBGE	DB1701	DTOL	Bryophyte	Polytrichaceae	Polytrichum	strictum	<Oryza	GPB3%PVP	112.18	253.53	3.45	3.1	2.26	115.17	265.35	0.88	0.87	0.43	0.42	3.65	3.18	0.038	0.015	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1708	DTOL	Bryophyte	Orthotrichaceae	Lewinskya	striata	<Oryza	GPB3%PVP	175.86	270.94	4.89	3.18	1.541	180.91	278.85	1.30	1.3	0.65	0.63	4.76	2.97	0.005	0.005	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1711	DTOL	Bryophyte	Grimmiaceae	Racomitrium	fasciculare	<Oryza	GPB3%PVP	70.15	233.76	4.01	3.37	3.332	73.6	252.87	0.60	0.58	0.29	0.28	4.11	3.25	0.088	0.015	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1712	DTOL	Bryophyte	Grimmiaceae	Racomitrium	ericoides	<Oryza	GPB3%PVP	92.25	309.29	4.43	3.01	3.453	97.94	337.87	0.60	0.58	0.29	0.28	4.23	3.17	0.025	0.014	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1708	DTOL	Bryophyte	Orthotrichaceae	Lewinskya	striata	<Oryza	GPB3%PVP	175.86	270.94	4.89	3.18	1.541	180.91	278.85	1.3	1.3	0.65	0.63	4.76	2.97	0.005	0.005	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1711	DTOL	Bryophyte	Grimmiaceae	Racomitrium	fasciculare	<Oryza	GPB3%PVP	70.15	233.76	4.01	3.37	3.332	73.6	252.87	0.6	0.58	0.29	0.28	4.11	3.25	0.088	0.015	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1712	DTOL	Bryophyte	Grimmiaceae	Racomitrium	ericoides	<Oryza	GPB3%PVP	92.25	309.29	4.43	3.01	3.453	97.94	337.87	0.6	0.58	0.29	0.28	4.23	3.17	0.025	0.014	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1714	DTOL	Bryophyte	Grimmiaceae	Racomitrium	aciculare	<Oryza	GPB3%PVP	122.76	356.28	4.03	2.98	2.902	124.35	361.45	0.69	0.69	0.34	0.34	4.43	2.9	0.006	0.001	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1715	DTOL	Bryophyte	Grimmiaceae	Racomitrium	heterostichum	<Oryza	GPB3%PVP	94.11	278.60	4.25	3.11	2.96	99.46	294.52	0.68	0.68	0.34	0.33	3.95	3.32	0.016	0.004	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1720	DTOL	Bryophyte	Grimmiaceae	Grimmia	trichophylla	<Oryza	GPB3%PVP	120.19	365.01	5.64	3.71	2.538	125.54	342.1	0.66	0.74	0.37	0.36	5.88	3.3	0.035	0.068	Sahr Mian	NA	NA	NA	NA	NA	NA	1
@@ -445,7 +446,7 @@ RBGE	DB1722	DTOL	Bryophyte	Scapaniaceae	Scapania	compacta	<Oryza	GPB3%PVP	144.51
 RBGE	DB1723	DTOL	Bryophyte	Grimimaceae	Grimmia	montana	<Oryza	GPB3%PVP	197.90	419.39	5.41	2.82	2.119	202.22	428.48	0.94	0.94	0.47	0.46	5.06	2.94	0.011	0.005	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1724	DTOL	Bryophyte	Leucodontaceae	Nogopterium	gracile	<Oryza	GPB3%PVP	168.00	340.55	4.39	4.7	2.027	173.5	353.38	0.99	0.98	0.49	0.48	3.66	4.16	0.009	0.004	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1725	DTOL	Bryophyte	Hedwigiaceae	Braunia	imberbis	<Oryza	GPB3%PVP	147.27	501.56	3.83	2.67	3.581	149.68	518.54	0.59	0.58	0.29	0.28	4.25	2.64	0.060	0.010	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1727	DTOL	Bryophyte	Polytrichaceae	Polytrichum	juniperum	<Oryza	GPB3%PVP	175.94	353.60	4.6	3.86	2.01	182.19	366.34	1.00	0.99	0.5	0.49	3.98	3.45	0.002	0.001	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1727	DTOL	Bryophyte	Polytrichaceae	Polytrichum	juniperum	<Oryza	GPB3%PVP	175.94	353.60	4.6	3.86	2.01	182.19	366.34	1	0.99	0.5	0.49	3.98	3.45	0.002	0.001	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1730	DTOL	Bryophyte	Grimmiaceae	Grimmia	decipiens	<Oryza	GPB3%PVP	262.89	365.16	4.97	3.44	1.389	270.35	375.83	1.44	1.44	0.72	0.7	5.1	2.75	0.003	0.003	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1731	DTOL	Bryophyte	Rhabdoweisiaceae	Cynodontium	bruntonii	<Oryza	GPB3%PVP	186.12	525.52	4.99	3.46	2.824	191.29	545.7	0.71	0.7	0.35	0.34	4.21	2.98	0.025	0.006	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1732	DTOL	Bryophyte	Aytoniaceae	Reboulia	hemisphaerica	<Oryza	GPB3%PVP	136.81	361.89	8.52	3.71	2.645	137.2	367.49	0.76	0.75	0.37	0.37	7.93	3.8	0.029	0.008	Sahr Mian	NA	NA	NA	NA	NA	NA	1
@@ -455,14 +456,14 @@ RBGE	DB1736	DTOL	Bryophyte	Mniaceae	Pohlia	wahlenbergii	<Solanum	GPB3%PVP	168.51
 RBGE	DB1738	DTOL	Bryophyte	Rhabdoweisiaceae	Rhabdoweisia	crispata	<Oryza	GPB3%PVP	110.02	375.76	3.07	1.65	2.961	110.87	346.48	0.59	0.64	0.32	0.31	3	1.8	0.017	0.049	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1739	DTOL	Bryophyte	Grimmiaceae	Grimmia	donniana	<Oryza	GPB3%PVP	147.46	333.45	4.17	2.83	2.261	151.31	339.46	0.88	0.89	0.45	0.44	3.77	2.66	0.021	0.008	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1741	DTOL	Bryophyte	Grimmiaceae	Grimmia	atrata	<Oryza	GPB3%PVP	175.33	320.88	2.75	2.1	1.83	178.01	324.98	1.09	1.1	0.55	0.54	2.58	2.17	0.005	0.003	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1742	DTOL	Bryophyte	Grimmiaceae	Grimmia	elongata	<Oryza	GPB3%PVP	171.53	344.09	4.31	2.78	2.006	173.7	347.62	1.00	1	0.5	0.49	3.81	2.59	0.005	0.002	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1742	DTOL	Bryophyte	Grimmiaceae	Grimmia	elongata	<Oryza	GPB3%PVP	171.53	344.09	4.31	2.78	2.006	173.7	347.62	1	1	0.5	0.49	3.81	2.59	0.005	0.002	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1744	DTOL	Bryophyte	Andreaeaceae	Andreaea	mutabilis	<Oryza	GPB3%PVP	89.74	327.43	7.52	3.56	3.649	89.77	327.71	0.55	0.55	0.27	0.27	7.54	3.4	0.019	0.003	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1745	DTOL	Bryophyte	Fissidentaceae	Fissidens	dubium	<Oryza	GPB3%PVP	125.48	324.36	7.41	2.08	2.585	125.34	327.03	0.77	0.77	0.38	0.37	7.47	2.29	0.022	0.006	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1737	DTOL	Bryophyte	Anastrophyllaceae	Barbilophozia	hatcherii	<Solanum	GPB3%PVP	182.29	380.50	4.7	3.15	2.087	190.89	392.54	1.90	1.93	0.96	0.94	4.35	3.14	0.028	0.026	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1737	DTOL	Bryophyte	Anastrophyllaceae	Barbilophozia	hatcherii	<Solanum	GPB3%PVP	182.29	380.50	4.7	3.15	2.087	190.89	392.54	1.9	1.93	0.96	0.94	4.35	3.14	0.028	0.026	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9437	DTOL	Angiosperm	Cyperaceae	Carex	disticha	<Solanum	LB01	110.03	264.13	4.69	3.72	2.401	113.46	271.2	0.82	0.83	0.41	0.41	4.42	3.85	0.026	0.009	Nacho	17/09/2023	NA	0.86	NA	NA	NA	1
 RBGK	MC9438	DTOL	Angiosperm	Ranunculaceae	Thalictrum	flavum	>Solanum	LB01	190.33	399.25	3.84	3.12	2.098	415.16	200.75	4.15	4.1	2.05	2	3.07	4.48	0.026	0.051	Nacho	17/09/2023	NA	1.61	potential polyploid	NA	NA	1
 RBGK	MC9439	DTOL	Angiosperm	Cyperaceae	Carex	lepidocarpa	<Solanum	LB01	145.06	321.10	4.21	2.9	2.214	146.34	322.71	0.89	0.9	0.45	0.44	4.64	3.7	0.012	0.005	Nacho	17/09/2023	NA	0.74	NA	NA	NA	1
-RBGK	MC9440	DTOL	Angiosperm	Cyperaceae	Carex	elata	<Solanum	LB01	178.33	353.69	4.94	3.56	1.983	181.56	361.36	1.00	0.99	0.5	0.49	4.74	3.5	0.032	0.016	Nacho	17/09/2023	NA	0.80	NA	NA	NA	1
+RBGK	MC9440	DTOL	Angiosperm	Cyperaceae	Carex	elata	<Solanum	LB01	178.33	353.69	4.94	3.56	1.983	181.56	361.36	1	0.99	0.5	0.49	4.74	3.5	0.032	0.016	Nacho	17/09/2023	NA	0.80	NA	NA	NA	1
 RBGK	MC9441	DTOL	Angiosperm	Cyperaceae	Carex	distans	<Solanum	LB01	143.98	332.08	4.44	4.07	2.307	146.08	335.56	0.86	0.86	0.43	0.42	4.68	3.7	0.010	0.003	Nacho	17/09/2023	NA	0.74	NA	NA	NA	1
 RBGK	MC9442	DTOL	Angiosperm	Rosaceae	Rubus	caesius	<Petro	OXPRO	181.99	503.88	5.02	2.17	2.769	184.24	501.83	1.63	1.65	0.83	0.81	5.05	2.74	0.076	0.047	Nacho	17/09/2023	NA	-	NA	NA	NA	1
 RBGK	MC9443	DTOL	Angiosperm	Rubiaceae	Galium	uliginosum	<Solanum	LB01	200.89	301.64	4.79	3.18	1.502	208.16	315.59	1.32	1.31	0.65	0.64	4.49	3.36	0.018	0.015	Nacho	17/09/2023	NA	-	NA	NA	NA	1
@@ -484,7 +485,7 @@ RBGK	MC9469	DTOL	Angiosperm	Brassicaceae	Turritis	glabra	<Solanum	GPB3%PVP	84.86
 RBGK	MC9463	DTOL	Angiosperm	Apiaceae	Sium	latifoilum	>Petro	GPB3%PVP	313.06	379.38	2.82	2.81	1.212	385.14	318.36	5.45	5.44	2.72	2.66	3.3	3.49	0.002	0.010	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9456	DTOL	Angiosperm	Asteraceae	Pulicaria	vulgaris	<Petro	GPB3%PVP	141.30	306.02	3.22	2.13	2.166	145.3	311.54	2.08	2.1	1.05	1.03	3.57	2.48	0.019	0.018	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9458	DTOL	Angiosperm	Lamiaceae	Teucrium	botrys	<Oryza	GPB3%PVP	208.66	304.23	6.23	3.24	1.458	211.54	309.89	0.69	0.68	0.34	0.33	5.6	3.26	0.009	0.004	Sahr Mian	NA	NA	-	NA	NA	NA	1
-RBGK	MC9459	DTOL	Angiosperm	Fabaceae	Ononis	reclinata	<Petro	GPB3%PVP	197.80	297.11	3.93	3.32	1.502	200.88	300.57	3.00	3.01	1.5	1.47	4.03	3.39	0.006	0.012	Sahr Mian	NA	NA	-	NA	NA	NA	1
+RBGK	MC9459	DTOL	Angiosperm	Fabaceae	Ononis	reclinata	<Petro	GPB3%PVP	197.80	297.11	3.93	3.32	1.502	200.88	300.57	3	3.01	1.5	1.47	4.03	3.39	0.006	0.012	Sahr Mian	NA	NA	-	NA	NA	NA	1
 RBGK	MC9457	DTOL	Angiosperm	Brassicaceae	Arabis	alpina	<Solanum	Galbraith	113.79	292.53	8.06	4.06	2.571	115.35	296.61	0.77	0.77	0.39	0.38	7.42	3.59	0.020	0.006	Sahr Mian	NA	NA	0.76	Endopolyploidy	NA	NA	1
 RBGK	MC9465	DTOL	Angiosperm	Molluginaceae	Mollugo	verticillata	>Solanum	GPB3%PVP	255.56	364.67	3.32	2.1	2.255	375.27	263.75	2.83	2.82	1.41	1.38	2.24	3.29	0.017	0.008	Sahr Mian	NA	NA	1.7	Potential polyploid	NA	NA	1
 RBGK	MC9466	DTOL	Angiosperm	Onagraceae	Ludwigia	grandifolia	<Petro	GPB3%PVP	226.20	323.35	4.97	3.27	1.429	232.64	329.36	3.15	3.18	1.59	1.55	4.75	3.41	0.013	0.029	Sahr Mian	NA	NA	-	NA	NA	NA	1
@@ -493,9 +494,9 @@ RBGK	MC9468	DTOL	Angiosperm	Apiaceae	Bupleurum	falcatum	<Solanum	GPB3%PVP	104.54
 RBGE	DB1746	DTOL	Bryophyte	Leucobryaceae	Campylopus	introflexus	<Oryza	OXPRO	237.03	366.15	4.91	3.48	1.545	242.13	374.83	0.65	0.65	0.32	0.32	4.63	3.58	0.010	0.004	Sahr Mian	NA	NA	NA	2N PEAK RECORDED	NA	NA	1
 RBGE	BD1747	DTOL	Bryophyte	Pottiaceae	Streblotrichum	convolutum var. commutatum	<Oryza	OXPRO	142.44	323.75	4.24	3.12	2.273	143.64	332.48	0.88	0.86	0.43	0.42	4.32	3.03	0.042	0.016	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1752	DTOL	Bryophyte	Brachytheciaceae	Brachythecium	rivulare	<Oryza	OXPRO	179.62	336.60	4.86	3.51	1.874	187.17	346.76	1.07	1.08	0.54	0.53	5.28	3.61	0.019	0.011	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1758	DTOL	Bryophyte	Ricciaceae	Riccia	sorocarpa	<Oryza	OXPRO	181.60	330.86	7.73	4.12	1.822	181.6	330.86	1.10	1.1	0.55	0.54	7.73	4.12	#DIV/0!	#DIV/0!	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1758	DTOL	Bryophyte	Ricciaceae	Riccia	sorocarpa	<Oryza	OXPRO	181.60	330.86	7.73	4.12	1.822	181.6	330.86	1.1	1.1	0.55	0.54	7.73	4.12	#DIV/0!	#DIV/0!	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1751	DTOL	Bryophyte	Amblystegiaceae	Hygroamblystegium	tenax	<Solanum	GPB3%PVP	165.97	342.26	3.68	2.74	2.062	169.85	348	1.92	1.93	0.97	0.95	3.81	2.59	0.014	0.013	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1754	DTOL	Bryophyte	Orthotrichaceae	Orthotrichum	anomalum	<Oryza	OXPRO	114.47	328.65	3.93	4.54	2.871	117.44	339.45	0.70	0.69	0.35	0.34	3.63	3.52	0.021	0.005	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1754	DTOL	Bryophyte	Orthotrichaceae	Orthotrichum	anomalum	<Oryza	OXPRO	114.47	328.65	3.93	4.54	2.871	117.44	339.45	0.7	0.69	0.35	0.34	3.63	3.52	0.021	0.005	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1755	DTOL	Bryophyte	Pottiaceae	Bryoerythrophyllum	recurvirostrum	<Oryza	OXPRO	157.93	313.73	4.12	3.47	1.987	161.47	325.58	1.01	0.99	0.5	0.49	3.24	3.25	0.027	0.014	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1756	DTOL	Bryophyte	Brachytheciaceae	Rhynchostegium	confertum	<Oryza	OXPRO	274.74	337.52	5	4.16	1.229	274.74	337.52	0.81	0.81	0.41	0.4	5	4.16	#DIV/0!	#DIV/0!	Sahr Mian	NA	NA	NA	2N PEAK RECORDED	NA	NA	1
 RBGE	DB1757	DTOL	Bryophyte	Pottiaceae	Hennediella	stanfordensis	<Oryza	OXPRO	164.14	316.54	7.03	4.86	1.987	164.14	316.54	1.04	1.04	0.52	0.51	7.03	4.86	#DIV/0!	#DIV/0!	Sahr Mian	NA	NA	NA	NA	NA	NA	1
@@ -531,7 +532,7 @@ RBGE	DB1779	DTOL	Bryophyte	NA	Pohlia	cruda	<Solanum	OXPRO	206.81	336.13	2.9	2.63
 RBGE	DB 1778	DTOL	Bryophyte	NA	Pohlia	nutans	<Solanum	OXPRO	322.06	387.33	4.25	3.05	1.203	341.64	402	1.65	1.68	0.84	0.82	4.09	3.24	0.023	0.032	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1777	DTOL	Bryophyte	NA	Andreaea	rupestris	<Oryza	GPB	86.33	306.52	5.97	2.42	3.55	89.29	313.3	0.56	0.57	0.28	0.28	6.37	3.18	0.039	0.006	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1780	DTOL	Bryophyte	NA	Isothecium	interludens	<Oryza	GPB	174.88	358.18	4.91	3.92	2.048	181.68	370.8	0.98	0.98	0.49	0.48	3.79	3.72	0.016	0.008	Sahr Mian	NA	NA	NA	NA	NA	NA	1
-RBGE	DB1775	DTOL	Bryophyte	NA	Marsupella	sprucei	<Oryza	OXPRO	83.51	334.27	11.93	3.94	4.003	83.51	334.27	0.50	0.5	0.25	0.24	11.93	3.94	#DIV/0!	#DIV/0!	Sahr Mian	NA	NA	NA	NA	NA	NA	1
+RBGE	DB1775	DTOL	Bryophyte	NA	Marsupella	sprucei	<Oryza	OXPRO	83.51	334.27	11.93	3.94	4.003	83.51	334.27	0.5	0.5	0.25	0.24	11.93	3.94	#DIV/0!	#DIV/0!	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DMR278	DTOL	Angiosperm	Brassicaceae	Erophila	verna	>Oryza	OXPRO	207.00	499.53	5.32	4.29	2.413	516.75	213.28	2.41	2.42	1.21	1.18	4.08	4.76	0.013	0.013	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGE	DB1773	DTOL	Bryophyte	NA	Racomitrium	sudeticum	<Oryza	OXPRO	140.08	343.60	3.65	3.46	2.437	142.29	349.68	0.82	0.81	0.41	0.4	3	3.06	0.013	0.002	Sahr Mian	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9491	DTOL	Angiosperm	Papaveraceae	Fumaria	muralis subsp. boraei	<Solanum	GPB3%PVP	243.26	387.75	4.71	4.25	1.594	245.92	399.19	1.24	1.22	0.61	0.6	4.39	3.22	0.026	0.019	Nacho	19/04/2023	KDTOL10775	NA	NA	NA	NA	1
@@ -546,11 +547,11 @@ RBGE	DMR282	DTOL	Angiosperm	Caryophyllaceae	Moehringia	trinervia	>Solanum	GPB3%P
 RBGE	DMR283	DTOL	Angiosperm	Scrophulariaceae	Scrophularia	vernalis	<Solanum	GPB3%PVP	212.24	504.07	4.8	2.53	2.375	219.17	527.24	0.83	0.82	0.41	0.4	4.54	2.6	0.026	0.009	Nacho	27/04/2023	NA	NA	NA	NA	NA	1
 RBGK	MC9496	DTOL	Angiosperm	Brassicaceae	Brassica	napus	<Petro	GPB3%PVP	200.86	731.60	4.83	2.86	3.642	189.99	697.03	1.24	1.23	0.61	0.6	4.12	2.69	0.035	0.012	Nacho	02/05/2023	KDTOL10785	NA	NA	NA	NA	1
 RBGK	MC9497	DTOL	Angiosperm	Asparagaceae	Ornithogalum	umbellatum	>Allium	GPB3%PVP	222.14	302.26	4.01	3.52	1.361	300.82	220.72	47.47	47.55	23.78	23.25	3.33	3.82	0.002	0.079	Nacho	02/05/2023	KDTOL10786	NA	NA	NA	NA	1
-RBGE	DB1786	DTOL	Bryophyte	Sphagnaceae	Sphagnum	capillifolium	<Oryza	GPB3%PVP	225.28	449.78	3.82	2.51	1.996	228.52	461.3	1.00	0.99	0.5	0.48	4.02	2.88	0.022	0.011	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
+RBGE	DB1786	DTOL	Bryophyte	Sphagnaceae	Sphagnum	capillifolium	<Oryza	GPB3%PVP	225.28	449.78	3.82	2.51	1.996	228.52	461.3	1	0.99	0.5	0.48	4.02	2.88	0.022	0.011	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DB1787	DTOL	Bryophyte	Sphagnaceae	Sphagnum	fallax	<Oryza	GPB3%PVP	240.83	496.46	3.53	2.87	2.061	248.71	523.4	0.97	0.95	0.48	0.46	3.28	2.89	0.037	0.017	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DB1784	DTOL	Bryophyte	Sphagnaceae	Sphagnum	russowii	<Solanum	GPB3%PVP	240.10	454.74	3.78	2.96	1.894	254.1	484.7	2.09	2.08	1.04	1.02	3.36	3.04	0.018	0.020	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DB1785	DTOL	Bryophyte	Dicranellaceae	Dicranella	subulata	<Oryza	GPB3%PVP	237.19	651.88	3.98	3.08	2.748	239.19	667.67	0.73	0.72	0.36	0.35	4.27	3.21	0.037	0.010	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
-RBGE	DB1783	DTOL	Bryophyte	Lembophyllaceae	Isothecium	holtii	<Oryza	GPB3%PVP	249.02	495.94	3.98	3.75	1.992	254.88	510.38	1.00	1	0.5	0.49	3.44	3.37	0.010	0.005	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
+RBGE	DB1783	DTOL	Bryophyte	Lembophyllaceae	Isothecium	holtii	<Oryza	GPB3%PVP	249.02	495.94	3.98	3.75	1.992	254.88	510.38	1	1	0.5	0.49	3.44	3.37	0.010	0.005	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DB1790	DTOL	Bryophyte	Lejeuneaceae	Lejeunea	lamacerina	<Oryza	OXPRO	167.57	799.65	6.1	2.08	4.772	173.93	825.98	0.42	0.42	0.21	0.21	5.25	2.48	0.043	0.004	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR285	DTOL	Angiosperm	Plantaginaceae	Veronica	filiformis	<Solanum	GPB3%PVP	238.69	633.54	3.74	2.59	2.654	244.3	658.68	0.75	0.73	0.37	0.36	4.34	2.27	0.038	0.010	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR286	DTOL	Angiosperm	Rosaceae	Prunus	avium	<Solanum	GPB3%PVP	207.43	463.11	4.4	2.78	2.233	210.99	472.44	0.89	0.88	0.44	0.43	4.16	2.53	0.010	0.004	Nacho	04/05/2023	NA	NA	NA	NA	NA	1
@@ -577,15 +578,15 @@ RBGE	DMR299	DTOL	Angiosperm	Oleaceae	Syringa	vulgaris	>Solanum	GPB3%PVP	227.08	2
 RBGE	DMR300	DTOL	Angiosperm	Asteraceae	Doronicum	pardalianches	>Petro	GPB3%PVP	210.05	336.46	3.19	3.36	1.602	346.81	219.9	7.21	7.1	3.55	3.47	3.24	3.28	0.022	0.097	Nacho	19/05/2023	NA	2C = 6.32 pg	NA	NA	NA	1
 RBGE	DMR301	DTOL	Angiosperm	Brassicaceae	Arabis	hirsuta	<Solanum	GPB3%PVP	230.06	319.36	3.56	2.59	1.388	233.02	324.58	1.43	1.42	0.71	0.7	3.12	2.33	0.005	0.005	Nacho	19/05/2023	NA	2C = 1.37 pg	NA	NA	NA	1
 RBGE	DMR302	DTOL	Angiosperm	Brassicaceae	Lepidium	campestre	<Solanum	GPB3%PVP	377.68	833.68	2.92	2.17	2.207	380.49	827.49	0.45	0.46	0.23	0.22	2.69	2.03	0.028	0.006	Nacho	19/05/2023	NA	-	Endopoliploid	NA	NA	1
-RBGE	DB1793	DTOL	Bryophyte	Pylaisiaceae	Pseudohygrohypnum	subeugyrium	<Oryza	GPB3%PVP	220.00	625.54	3.4	2.43	2.843	220.55	626.12	0.70	0.7	0.35	0.34	2.4	2.54	0.005	0.001	Nacho	23/05/2023	NA	NA	NA	NA	NA	1
+RBGE	DB1793	DTOL	Bryophyte	Pylaisiaceae	Pseudohygrohypnum	subeugyrium	<Oryza	GPB3%PVP	220.00	625.54	3.4	2.43	2.843	220.55	626.12	0.7	0.7	0.35	0.34	2.4	2.54	0.005	0.001	Nacho	23/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DB1794	DTOL	Bryophyte	Sphagnaceae	Sphagnum	quinquefarium	<Oryza	GPB3%PVP	210.71	431.43	4.25	2.68	2.047	213.7	438.52	0.98	0.97	0.49	0.48	4.05	2.59	0.004	0.002	Nacho	23/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DB1799	DTOL	Bryophyte	Grimmiaceae	Grimmia	torquata	<Oryza	GPB3%PVP	222.47	640.84	3.41	3.2	2.881	224.16	650.87	0.69	0.69	0.34	0.34	3.2	3.01	0.024	0.006	Nacho	23/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DB1800	DTOL	Bryophyte	Oedipodiaceae	Oedipodium	griffithianum	>Oryza	GPB3%PVP	292.57	460.11	3.2	4.63	1.573	262.76	415.35	0.64	0.63	0.32	0.31	3.86	5.01	0.014	0.006	Nacho	23/05/2023	NA	NA	Endopoliploid. 2Cpeak measured	NA	NA	1
 RBGE	DMR303	DTOL	Angiosperm	Primulaceae	Glaux	maritima	<Petro	GPB3%PVP	229.13	304.23	4.04	3.17	1.328	241.2	319.63	3.39	3.4	1.7	1.66	3.95	3.13	0.003	0.006	Nacho	25/05/2023	NA	-	NA	NA	NA	1
-RBGE	DMR304	DTOL	Angiosperm	Boraginaceae	Amsinckia	micrantha	<Petro	GPB3%PVP	245.02	552.35	4.42	2.94	2.254	230.7	522.01	2.00	1.99	0.99	0.97	4.3	2.8	0.012	0.010	Nacho	25/05/2023	NA	-	NA	NA	NA	1
+RBGE	DMR304	DTOL	Angiosperm	Boraginaceae	Amsinckia	micrantha	<Petro	GPB3%PVP	245.02	552.35	4.42	2.94	2.254	230.7	522.01	2	1.99	0.99	0.97	4.3	2.8	0.012	0.010	Nacho	25/05/2023	NA	-	NA	NA	NA	1
 RBGE	DMR305	DTOL	Angiosperm	Brassicaceae	Sisymbrium	altissimum	<Solanum	GPB3%PVP	226.31	388.24	4.77	3.12	1.716	226.21	387.51	0.58	0.58	0.29	0.28	4.81	3.15	0.005	0.002	Nacho	25/05/2023	NA	2C = 0.52pg	Endopoliploid. 4C peak measured	NA	NA	1
 RBGE	DMR306	DTOL	Angiosperm	Rosaceae	Aphanes	australis	>Solanum	GPB3%PVP	201.79	257.74	3.52	3.77	1.277	264.32	205.17	2.53	2.55	1.28	1.25	3.43	3.39	0.012	0.024	Nacho	25/05/2023	NA	NA	NA	NA	NA	1
-RBGE	DMR307	DTOL	Angiosperm	Violaceae	Viola	palustris	<Pisum	Galbraith	254.13	491.28	7.57	4.62	1.933	260.97	502.81	4.70	4.72	2.36	2.31	6.81	4.76	0.006	0.014	Nacho	25/05/2023	NA	2C = 4.10 and 4.50pg	Rough estimate	NA	NA	1
+RBGE	DMR307	DTOL	Angiosperm	Violaceae	Viola	palustris	<Pisum	Galbraith	254.13	491.28	7.57	4.62	1.933	260.97	502.81	4.7	4.72	2.36	2.31	6.81	4.76	0.006	0.014	Nacho	25/05/2023	NA	2C = 4.10 and 4.50pg	Rough estimate	NA	NA	1
 RBGE	DMR308	DTOL	Angiosperm	Orchidaceae	Orchis	mascula	<Allium	Galbraith	238.92	392.99	5.55	5	1.645	261.81	562.25	21.21	17.4	8.7	8.51	5.04	4.18	0.653	5.397	Nacho	25/05/2023	NA	-	Rough estimate using petals	NA	NA	1
 RBGE	DMR309	DTOL	Fern	Equisetaceae	Equisetum	pratense	>Pisum	GPB3%PVP	243.05	666.97	2.85	3.38	2.744	685.4	246.47	24.94	25.28	12.64	12.36	3.01	2.66	0.034	0.312	Nacho	25/05/2023	NA	2C = 25.56pg	NA	NA	NA	1
 RBGE	DMR310	DTOL	Angiosperm	Poaceae	Sesleria	caerulea	>Petro	GPB3%PVP	230.04	471.31	3.21	2.03	2.049	482.89	234.85	9.22	9.25	4.63	4.52	2.16	3	0.009	0.043	Nacho	25/05/2023	NA	2C = 9.10pg	NA	NA	NA	1
@@ -601,7 +602,7 @@ RBGK	MC9509	DTOL	Fern	Salviniaceae	Azolla	filiculoides	<Solanum	GPB3%PVP	252.06	
 RBGK	MC9510	DTOL	Angiosperm	Asteraceae	Crepis	vesicaria	>Petro	GPB3%PVP	212.34	255.48	3.38	3.24	1.203	261.48	215.76	5.41	5.45	2.73	2.67	2.98	2.86	0.009	0.040	Nacho	30/05/2023	KDTOL10803	NA	NA	NA	NA	1
 RBGK	MC9513	DTOL	Angiosperm	Fabaceae	Trifolium	ochroleucum	>Petro	GPB3%PVP	212.09	629.82	3.47	3.79	2.97	643.33	217.91	13.36	13.29	6.64	6.5	3.76	3.17	0.017	0.076	Nacho	31/05/2023	KDTOL10806	-	NA	NA	NA	1
 RBGK	MC9514	DTOL	Angiosperm	Asparagaceae	Convallaria	majalis	>Pisum	GPB3%PVP	163.90	727.03	3.99	4.14	4.436	723.92	165.67	40.32	39.72	19.86	19.42	4.02	3.71	0.063	0.572	Nacho	31/05/2023	KDTOL10807	2C = 35.33pg	NA	NA	NA	1
-RBGK	MC9515	DTOL	Angiosperm	Ranunculaceae	Aconitum	napellus	>Petro	GPB3%PVP	204.43	726.81	3.95	3.49	3.555	674.75	190.09	16.00	15.97	7.98	7.81	3.79	4.13	0.026	0.115	Nacho	31/05/2023	KDTOL10808	-	NA	NA	NA	1
+RBGK	MC9515	DTOL	Angiosperm	Ranunculaceae	Aconitum	napellus	>Petro	GPB3%PVP	204.43	726.81	3.95	3.49	3.555	674.75	190.09	16	15.97	7.98	7.81	3.79	4.13	0.026	0.115	Nacho	31/05/2023	KDTOL10808	-	NA	NA	NA	1
 RBGK	MC9516	DTOL	Angiosperm	Orchidaceae	Dactylorhiza	praetermissa	>Petro	GPB3%PVP	136.53	479.70	3.82	3.37	3.514	496.47	145.75	15.81	15.35	7.67	7.5	3.55	3.96	0.097	0.436	Nacho	31/05/2023	KDTOL10809	-	Few nucleai in 2C, the 4C had more but it wasn't exactly double	NA	NA	1
 RBGE	DMR312	DTOL	Angiosperm	Brassicaceae	Hesperis	matronalis	>Petro	Galbraith	202.03	755.62	3.35	2.34	3.74	763.38	204.21	16.83	16.82	8.41	8.23	2.1	2.98	0.007	0.031	Nacho	02/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR313	DTOL	Angiosperm	Caprifoliaceae	Valeriana	pyrenaica	<Solanum	Galbraith	200.51	296.95	3.27	3.27	1.481	197.34	288.15	1.34	1.36	0.68	0.66	3.71	3.69	0.020	0.019	Nacho	02/05/2023	NA	NA	NA	NA	NA	1
@@ -611,13 +612,13 @@ RBGE	DMR316	DTOL	Angiosperm	Rosaceae	Potentilla	crantzii	<Petro	Galbraith	198.59
 RBGE	DMR317	DTOL	Angiosperm	Boraginaceae	Lycopsis	arvensis	>Pisum	GPB3%PVP	214.71	785.31	4.34	4.8	3.657	814.38	226.04	33.25	32.77	16.38	16.02	3.83	4.18	0.061	0.558	Nacho	02/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR318	DTOL	Angiosperm	Betulaceae	Alnus	cordata	<Petro	Galbraith	213.69	749.00	4.41	1.97	3.505	216.2	759.09	1.28	1.28	0.64	0.63	4.82	2.15	0.007	0.002	Nacho	02/05/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR319	DTOL	Angiosperm	Caryophyllaceae	Silene	viscaria	>Solanum	GPB3%PVP	215.27	465.41	4.41	3.11	2.162	476.7	222.74	4.28	4.24	2.12	2.07	2.51	3.42	0.019	0.039	Nacho	14/06/2023	NA	NA	NA	NA	NA	1
-RBGE	DMR320	DTOL	Angiosperm	Apiaceae	Anthriscus	caucalis	<Solanum	GPB3%PVP	218.48	393.76	6.06	4.46	1.802	223.31	404.05	1.10	1.09	0.55	0.54	5.25	4.08	0.007	0.004	Nacho	14/06/2023	NA	NA	NA	NA	NA	1
+RBGE	DMR320	DTOL	Angiosperm	Apiaceae	Anthriscus	caucalis	<Solanum	GPB3%PVP	218.48	393.76	6.06	4.46	1.802	223.31	404.05	1.1	1.09	0.55	0.54	5.25	4.08	0.007	0.004	Nacho	14/06/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR321	DTOL	Angiosperm	Geraniaceae	Geranium	pyrenaicum	>Solanum	GPB3%PVP	222.82	305.30	4.4	4.38	1.37	311.78	227.86	2.71	2.71	1.35	1.32	3.89	3.94	0.003	0.007	Nacho	14/06/2023	NA	2C = 2.88pg	NA	NA	NA	1
 RBGE	DMR322	DTOL	Angiosperm	Caryophyllaceae	Cerastium	tomentosum	<Petro	GPB3%PVP	200.17	311.64	3.69	3.42	1.557	203.21	316.95	2.89	2.89	1.44	1.41	3.51	3	0.006	0.010	Nacho	14/06/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR323	DTOL	Angiosperm	Plantaginaceae	Linaria	purpurea	>Oryza	GPB3%PVP	223.70	450.76	4.77	4.85	2.015	452.59	226	2.02	2	1	0.98	4.12	3.85	0.011	0.011	Nacho	14/06/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR324	DTOL	Angiosperm	Poaceae	Milium	effusum	>Petro	GPB3%PVP	201.34	428.36	3.37	3.12	2.128	439.92	209.01	9.57	9.47	4.74	4.63	3.02	3.51	0.020	0.090	Nacho	14/06/2023	NA	2C = 7.9pg	NA	NA	NA	1
 RBGE	DMR325	DTOL	Angiosperm	Viburnaceae	Viburnum	opulus	>Petro	GPB3%PVP	221.93	466.81	5.11	5.02	2.103	499.68	237.81	9.47	9.46	4.73	4.62	4	5.11	0.018	0.081	Nacho	14/06/2023	NA	2C = 8.27pg	NA	NA	NA	1
-RBGE	DMR326	DTOL	Angiosperm	Ranunculaceae	Thalictrum	alpinum	<Solanum	GPB3%PVP	216.18	357.50	3.85	3.21	1.654	219.98	362.21	1.20	1.2	0.6	0.59	3.67	3.12	0.006	0.005	Nacho	14/06/2023	NA	2C = 1.1pg	NA	NA	NA	1
+RBGE	DMR326	DTOL	Angiosperm	Ranunculaceae	Thalictrum	alpinum	<Solanum	GPB3%PVP	216.18	357.50	3.85	3.21	1.654	219.98	362.21	1.2	1.2	0.6	0.59	3.67	3.12	0.006	0.005	Nacho	14/06/2023	NA	2C = 1.1pg	NA	NA	NA	1
 RBGE	DMR327	DTOL	Angiosperm	Rosaceae	Rubus	chamaemorus	<Petro	GPB3%PVP	215.89	291.76	4.38	5.4	1.351	223.65	302.93	3.33	3.32	1.66	1.62	4.7	5.2	0.003	0.007	Nacho	14/06/2023	NA	2C = 2.46pg	790 nuclei sample for the first run	NA	NA	1
 RBGE	DMR328	DTOL	Angiosperm	Poaceae	Alopecurus	geniculatus	<Allium	GPB3%PVP	191.47	450.55	5.29	4.03	2.353	201.03	468.23	14.83	14.98	7.49	7.32	4.56	3.3	0.021	0.138	Nacho	14/06/2023	NA	2C = 14.9pg	NA	NA	NA	1
 RBGK	MC9517	DTOL	Angiosperm	Saxifragaceae	Saxifraga	hirsuta	<Petro	Galbraith	222.77	272.62	4.25	3.22	1.224	225.63	276.05	3.68	3.68	1.84	1.8	4.08	3.17	0.001	0.002	Nacho	12/06/2023	NA	subsp. paucicrenata 2C = 3.21pg	NA	NA	NA	1
@@ -626,7 +627,7 @@ RBGK	MC9519	DTOL	Angiosperm	Euphorbiaceae	Euphorbia	hyberna	>Solanum	GPB3%PVP	19
 RBGK	MC9520	DTOL	Angiosperm	Rubiaceae	Rubia	peregrina	>Petro	Galbraith	187.94	395.12	3.03	3.84	2.102	418.44	202.48	9.46	9.3	4.65	4.55	4.1	2.84	0.035	0.155	Nacho	12/06/2023	NA	NA	NA	NA	NA	1
 RBGK	MC9521	DTOL	Angiosperm	Ericaceae	Arbutus	unedo	<Solanum	Galbraith	260.37	403.58	4.45	3.5	1.55	256.64	396.95	1.28	1.28	0.64	0.63	4.19	3.49	0.003	0.002	Nacho	12/06/2023	NA	NA	NA	NA	NA	1
 RBGK	MC9522	DTOL	Angiosperm	Rosaceae	Cotoneaster	integrifolius	<Petro	Galbraith	214.17	340.71	4.27	3.4	1.591	217.95	346.2	2.83	2.83	1.42	1.39	4.17	3.4	0.003	0.004	Nacho	12/06/2023	NA	NA	NA	NA	NA	1
-RBGK	MC9523	DTOL	Angiosperm	Amaryllidaceae	Allium	scorodoprasum	>Petro	GPB3%PVP	124.25	842.06	4.38	3.75	6.777	847.48	125.43	30.50	30.41	15.2	14.87	4.06	4.8	0.033	0.148	Nacho	12/06/2023	NA	NA	NA	NA	NA	1
+RBGK	MC9523	DTOL	Angiosperm	Amaryllidaceae	Allium	scorodoprasum	>Petro	GPB3%PVP	124.25	842.06	4.38	3.75	6.777	847.48	125.43	30.5	30.41	15.2	14.87	4.06	4.8	0.033	0.148	Nacho	12/06/2023	NA	NA	NA	NA	NA	1
 RBGK	MC9524	DTOL	Angiosperm	Lentibulariaceae	Pinguicula	grandiflora	<Solanum	Galbraith	217.89	384.69	5.34	3.58	1.765	216.15	383.39	1.12	1.12	0.56	0.55	4.9	3.25	0.009	0.006	Nacho	12/06/2023	NA	2C = 0.87pg	NA	NA	NA	1
 RBGK	MC9525	DTOL	Angiosperm	Iridaceae	Sisyrinchium	bermudiana	<Petro	Galbraith	219.01	330.14	2.99	5.21	1.507	218.44	329.09	2.99	2.99	1.49	1.46	3.09	5.49	0.004	0.007	Nacho	12/06/2023	NA	2C = 2.5pg	NA	NA	NA	1
 RBGK	MC9526	DTOL	Angiosperm	Cyperaceae	Carex	viridula	<Solanum	Galbraith	225.99	529.65	3.9	2.45	2.344	221.17	519.31	0.84	0.84	0.42	0.41	3.8	2.59	0.006	0.002	Nacho	09/06/2023	NA	2C = 0.72pg	NA	NA	NA	1
@@ -636,7 +637,7 @@ RBGK	MC9530	DTOL	Angiosperm	Asteraceae	Inula	salicina	>Solanum	GPB3%PVP	219.19	3
 RBGK	MC9531	DTOL	Angiosperm	Amaryllidaceae	Leucojum	aestivum	>Allium	Galbraith	242.04	478.51	4.02	4.37	1.977	481.56	243.73	68.98	68.94	34.47	33.71	4.3	4.46	0.010	0.336	Nacho	12/06/2023	NA	2C = 63.9pg	NA	NA	NA	1
 RBGK	MC9533	DTOL	Angiosperm	Ericaceae	Erica	erigena	<Petro	GPB3%PVP	173.01	736.97	9.4	4.66	4.26	173.21	735.53	1.06	1.06	0.53	0.52	8.83	5.04	0.018	0.005	Nacho	12/06/2023	NA	NA	Rough estimate. 240 and 455 nuclei respectively	NA	NA	1
 RBGK	MC9534	DTOL	Angiosperm	Rosaceae	Sorbus	hibernica	<Petro	GPB3%PVP	207.24	297.67	5.9	3.88	1.436	210.3	301.93	3.13	3.13	1.57	1.53	5.65	3.76	0.001	0.002	Nacho	12/06/2023	NA	NA	NA	NA	NA	1
-RBGK	MC9535	DTOL	Fern	Cystopteridaceae	Cystopteris	fragilis	<Allium	Ebihara	204.04	316.36	3.96	3.08	1.55	206.73	318.52	22.50	22.64	11.32	11.07	4.25	3.24	0.009	0.131	Nacho	09/06/2023	NA	(agg.) 2C = 16.57pg	NA	NA	NA	1
+RBGK	MC9535	DTOL	Fern	Cystopteridaceae	Cystopteris	fragilis	<Allium	Ebihara	204.04	316.36	3.96	3.08	1.55	206.73	318.52	22.5	22.64	11.32	11.07	4.25	3.24	0.009	0.131	Nacho	09/06/2023	NA	(agg.) 2C = 16.57pg	NA	NA	NA	1
 RBGK	MC9536	DTOL	Angiosperm	Orchidaceae	Dactylorhiza	kerryensis	Petro	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
 RBGK	MC9537	DTOL	Angiosperm	Violaceae	Viola	persicifolia	<Petro	Galbraith	194.16	621.68	8.67	5.51	3.202	192.41	613.42	1.41	1.41	0.71	0.69	8.24	6.06	0.023	0.009	Nacho	09/06/2023	NA	NA	NA	NA	NA	1
 RBGK	MC9538	DTOL	Angiosperm	Asteraceae	Achillea	maritima	>Solanum	Galbraith	213.67	598.60	3.89	3.49	2.802	595.13	212.46	5.55	5.55	2.77	2.71	3.46	3.55	0.005	0.010	Nacho	12/06/2023	NA	2C = 5.7pg	NA	NA	NA	1
@@ -651,7 +652,7 @@ RBGK	MC9546	DTOL	Angiosperm	Ranunculaceae	Clematis	viticella	<Allium	GPB3%PVP	21
 RBGK	MC9547	DTOL	Angiosperm	Vitaceae	Vitis	vinifera	<Solanum	GPB3%PVP	219.87	350.22	5.27	3.72	1.593	220.2	354.46	1.24	1.23	0.62	0.6	4.82	3.1	0.019	0.015	Nacho	13/06/2023	KDTOL10838	cv. Pinot Noiri 2C = 0.90	NA	NA	NA	1
 RBGK	MC9549	DTOL	Angiosperm	Vitaceae	Parthenocissus	inserta	<Solanum	GPB3%PVP	181.54	240.54	5.7	4.45	1.325	185.89	249.2	1.49	1.48	0.74	0.72	5.43	4.48	0.018	0.020	Nacho	13/06/2023	KDTOL10840	2C = 0.69pg	NA	NA	NA	1
 RBGK	MC9550	DTOL	Angiosperm	Fabaceae	Lathyrus	nissolia	<Allium	GPB3%PVP	217.30	760.97	3.94	3.62	3.502	218.69	764.51	9.96	9.98	4.99	4.88	3.59	3.42	0.008	0.024	Nacho	13/06/2023	KDTOL10841	2C = 12.90pg	NA	NA	NA	1
-RBGK	MC9551	DTOL	Angiosperm	Caryophyllaceae	Stellaria	graminea	<Petro	GPB3%PVP	216.05	442.03	4.57	4.07	2.046	207.01	422.12	2.20	2.21	1.1	1.08	4.18	4.05	0.008	0.008	Nacho	13/06/2023	KDTOL10842	2C = 1.92pg	NA	NA	NA	1
+RBGK	MC9551	DTOL	Angiosperm	Caryophyllaceae	Stellaria	graminea	<Petro	GPB3%PVP	216.05	442.03	4.57	4.07	2.046	207.01	422.12	2.2	2.21	1.1	1.08	4.18	4.05	0.008	0.008	Nacho	13/06/2023	KDTOL10842	2C = 1.92pg	NA	NA	NA	1
 RBGK	MC9552	DTOL	Angiosperm	Fabaceae	Lathyrus	latifolius	<Allium	GPB3%PVP	221.34	372.20	3.82	2.97	1.682	244.93	415.6	20.75	20.57	10.29	10.06	3.56	3.34	0.012	0.154	Nacho	13/06/2023	KDTOL10843	2C = 17.12pg	First one 454 onion nuclei	NA	NA	1
 RBGK	MC9553	DTOL	Angiosperm	Brassicaceae	Lepidium	latifolium	<Petro	GPB3%PVP	233.10	752.10	3.73	3.06	3.226	238.7	778.19	1.39	1.38	0.69	0.68	3.77	2.82	0.031	0.013	Nacho	13/06/2023	KDTOL10844	2C = 2.08pg	NA	NA	NA	1
 RBGK	MC9554	DTOL	Angiosperm	Balsaminaceae	Impatiens	parviflora	>Solanum	GPB3%PVP	236.73	482.22	5.24	6.13	2.037	462.1	226.63	4.03	4.04	2.02	1.97	7.36	6.52	0.018	0.034	Nacho	13/06/2023	KDTOL10845	2C =  3.82pg	Rough estimate	NA	NA	1
@@ -661,7 +662,7 @@ RBGE	DMR329	DTOL	Angiosperm	Potamogetonaceae	Stuckenia	pectinata	<Petro	GPB3%PVP
 RBGE	DMR330	DTOL	Angiosperm	Potamogetonaceae	Potamogeton	crispus	<Petro	GPB3%PVP	402.07	585.61	3.71	2.96	1.456	413.41	597.61	1.54	1.56	0.78	0.76	4.04	3.07	0.009	0.010	Nacho	16/06/2023	NA	NA	4C measured!	NA	NA	1
 RBGE	DMR332	DTOL	Angiosperm	Asteraceae	Pilosella	aurantiaca	>Solanum	GPB3%PVP	187.50	749.71	5.97	4.13	3.998	749.12	188.45	7.92	7.87	3.94	3.85	4.21	5.72	0.036	0.071	Nacho	16/06/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR334	DTOL	Angiosperm	Crassulaceae	Sedum	acre	<Petro	GPB3%PVP	212.62	320.24	5.62	4.75	1.506	213.58	322.44	2.99	2.98	1.49	1.46	5.4	4.51	0.003	0.006	Nacho	16/06/2023	NA	NA	Endopolyploid:2C 4C and 8C	NA	NA	1
-RBGE	DMR335	DTOL	Angiosperm	Rubiaceae	Galium	album	>Solanum	GPB3%PVP	225.92	433.82	4.76	4.42	1.92	459.38	242.75	3.80	3.75	1.87	1.83	4.46	4.8	0.025	0.049	Nacho	18/06/2023	NA	NA	NA	NA	NA	1
+RBGE	DMR335	DTOL	Angiosperm	Rubiaceae	Galium	album	>Solanum	GPB3%PVP	225.92	433.82	4.76	4.42	1.92	459.38	242.75	3.8	3.75	1.87	1.83	4.46	4.8	0.025	0.049	Nacho	18/06/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR336	DTOL	Angiosperm	Boraginaceae	Cynoglossum	officinale	<Petro	GPB3%PVP	209.77	509.47	5.43	3.48	2.429	217.73	521.86	1.85	1.88	0.94	0.92	4.84	3.52	0.031	0.024	Nacho	16/06/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR337	DTOL	Angiosperm	Cyperaceae	Blysmus	rufus	>Oryza	GPB3%PVP	199.50	860.05	4.89	3.2	4.311	888.1	208.06	4.31	4.27	2.13	2.09	3.48	4.76	0.039	0.039	Nacho	18/06/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR338	DTOL	Angiosperm	Polygonaceae	Rumex	crispus	>Oryza	GPB3%PVP	195.03	848.36	4.43	4.34	4.35	876.09	199.94	4.35	4.38	2.19	2.14	3.91	4.4	0.034	0.034	Nacho	18/06/2023	NA	NA	NA	NA	NA	1
@@ -688,14 +689,14 @@ RBGE	DMR340	DTOL	Angiosperm	Poaceae	Poa	chaixii	>Petro	GPB3%PVP	204.23	247.06	1.
 RBGE	DMR341	DTOL	Angiosperm	Poaceae	Poa	nemoralis	>Petro	GPB3%PVP	229.23	317.29	2.44	2.36	1.384	331.22	239.62	6.23	6.22	3.11	3.04	2.27	2.14	0.002	0.007	Nacho	22/06/2023	NA	2C = 5.49pg	NA	NA	NA	1
 RBGE	DMR342	DTOL	Angiosperm	Caryophyllaceae	Stellaria	palustris	<Petro	GPB3%PVP	208.94	388.58	2.46	2.76	1.86	211.7	391.2	2.42	2.44	1.22	1.19	2.46	2.93	0.010	0.013	Nacho	22/06/2023	NA	NA	NA	NA	NA	1
 RBGE	DMR343	DTOL	Fern	Polypodiaceae	Polystichum	aculeatum	<Allium	Ebihara	179.16	213.70	4.41	3.45	1.193	186.36	220.92	29.25	29.43	14.71	14.39	4.15	3.39	0.010	0.245	Nacho	22/06/2023	NA	NA	NA	NA	NA	1
-RBGE	DMR344	DTOL	Angiosperm	Boraginaceae	Phacelia	tanacetifolia	<Petro	GPB3%PVP	213.90	685.22	3.76	2.45	3.203	216.08	691.16	1.40	1.41	0.7	0.69	3.71	2.51	0.010	0.004	Nacho	22/06/2023	NA	NA	NA	NA	NA	1
-RBGE	DMR345	DTOL	Angiosperm	Apiaceae	Ammi	majus	<Petro	GPB3%PVP	217.14	444.80	3.23	2.41	2.048	221.62	452.34	2.20	2.2	1.1	1.08	3.06	2.19	0.006	0.007	Nacho	22/06/2023	NA	NA	It shows a smaller peak, maybe a fungus?	NA	NA	1
+RBGE	DMR344	DTOL	Angiosperm	Boraginaceae	Phacelia	tanacetifolia	<Petro	GPB3%PVP	213.90	685.22	3.76	2.45	3.203	216.08	691.16	1.4	1.41	0.7	0.69	3.71	2.51	0.010	0.004	Nacho	22/06/2023	NA	NA	NA	NA	NA	1
+RBGE	DMR345	DTOL	Angiosperm	Apiaceae	Ammi	majus	<Petro	GPB3%PVP	217.14	444.80	3.23	2.41	2.048	221.62	452.34	2.2	2.2	1.1	1.08	3.06	2.19	0.006	0.007	Nacho	22/06/2023	NA	NA	It shows a smaller peak, maybe a fungus?	NA	NA	1
 RBGK	MC9577	DTOL	Angiosperm	Onagraceae	Epilobium	montanum	<Solanum	GPB3%PVP	215.63	599.85	5.82	4.77	2.782	218.15	611.29	0.71	0.71	0.35	0.35	5.47	4.14	0.017	0.004	Nacho	24/06/2023	KDTOL10878	NA	NA	NA	NA	1
 RBGK	MC9578	DTOL	Angiosperm	Araceae	Calla	palustris	<Petro	GPB3%PVP	221.69	423.90	4.8	3.39	1.912	224.74	434.11	2.35	2.33	1.16	1.14	4.49	2.98	0.017	0.020	Nacho	23/06/2023	KDTOL10882	NA	NA	NA	NA	1
 RBGK	MC9579	DTOL	Angiosperm	Araceae	Orontium	aquaticum	>Secale	GPB3%PVP	202.70	496.77	5.18	3.79	2.451	502.14	205.81	40.68	40.5	20.25	19.81	3.58	4.51	0.011	0.174	Nacho	24/06/2023	KDTOL10883	NA	NA	NA	NA	1
 RBGK	TCRich sn	DTOL	Angiosperm	Rosaceae	Sorbus	richii	<Petro	GPB3%PVP	221.99	328.31	7.25	5.06	1.479	230.13	340.18	3.04	3.04	1.52	1.49	5.63	3.93	0.004	0.013	Nacho	23/06/2023	KDTOL10884	NA	624 nuclei in second run	NA	NA	1
 RBGK	MC9580	DTOL	Angiosperm	Asteraceae	Hieracium	radyrense	>Petro	GPB3%PVP	204.93	663.31	4.04	2.56	3.237	679.13	207.24	14.57	14.75	7.37	7.21	2.75	4.46	0.063	0.287	Nacho	23/06/2023	KDTOL10885	NA	NA	NA	NA	1
-RBGK	MC9581	DTOL	Angiosperm	Asteraceae	Hieracium	dumosum	>Petro	GPB3%PVP	219.03	730.26	2.85	2.52	3.334	745.97	223.93	15.00	14.99	7.5	7.33	2.52	2.88	0.018	0.082	Nacho	23/06/2023	KDTOL10886	NA	NA	NA	NA	1
+RBGK	MC9581	DTOL	Angiosperm	Asteraceae	Hieracium	dumosum	>Petro	GPB3%PVP	219.03	730.26	2.85	2.52	3.334	745.97	223.93	15	14.99	7.5	7.33	2.52	2.88	0.018	0.082	Nacho	23/06/2023	KDTOL10886	NA	NA	NA	NA	1
 RBGK	MC9582	DTOL	Angiosperm	Asteraceae	Hieracium	scullyi	>Petro	GPB3%PVP	205.32	531.43	3.84	2.93	2.588	546.6	214.04	11.65	11.49	5.75	5.62	2.71	3.25	0.029	0.132	Nacho	24/06/2023	KDTOL10887	NA	NA	NA	NA	1
 RBGK	TCRich sn	DTOL	Angiosperm	Asteraceae	Hieracium	aggregatifolium	>Petro	GPB3%PVP	217.05	549.26	4.59	3.29	2.531	555.28	220.68	11.39	11.32	5.66	5.54	3	3.87	0.013	0.058	Nacho	23/06/2023	KDTOL10888	NA	NA	NA	NA	1
 RBGK	MC9583	DTOL	Angiosperm	Asteraceae	Hieracium	drummondii	>Petro	GPB3%PVP	230.93	596.09	2.69	2.6	2.581	579.7	224.17	11.62	11.64	5.82	5.69	2.34	2.44	0.007	0.029	Nacho	24/06/2023	KDTOL10889	NA	NA	NA	NA	1
@@ -704,7 +705,7 @@ RBGK	MC9584	DTOL	Angiosperm	Asteraceae	Hieracium	richianum	>Petro	GPB3%PVP	200.5
 RBGK	MC9585	DTOL	Angiosperm	Asteraceae	Hieracium	attenboroughianum	>Petro	GPB3%PVP	232.50	546.06	4.06	2.69	2.349	552.96	234.66	10.57	10.6	5.3	5.19	2.62	3.97	0.009	0.040	Nacho	24/06/2023	KDTOL10892	NA	NA	NA	NA	1
 RBGK	MC9586	DTOL	Angiosperm	Asteraceae	Taraxacum	amarellum	<Secale	GPB3%PVP	229.24	631.36	5.22	3.24	2.754	228.84	643.36	6.03	5.91	2.95	2.89	4.86	2.55	0.050	0.106	Nacho	24/06/2023	KDTOL10893	NA	NA	NA	NA	1
 RBGK	TCRich 2021-080	DTOL	Angiosperm	Gentianaceae	Centaurium	intermedium	<Petro	GPB3%PVP	191.68	240.97	4.03	3.79	1.257	194.29	243.43	3.58	3.59	1.8	1.76	3.91	3.77	0.004	0.012	Nacho	24/06/2023	KDTOL10894	NA	NA	NA	NA	1
-RBGK	MC9587	DTOL	Angiosperm	Caryophyllaceae	Polycarpon	tetraphyllum	<Petro	GPB3%PVP	205.25	298.17	3.72	2.53	1.453	208.24	302.13	3.10	3.1	1.55	1.52	3.54	2.42	0.003	0.005	Nacho	24/06/2023	KDTOL10895	NA	NA	NA	NA	1
+RBGK	MC9587	DTOL	Angiosperm	Caryophyllaceae	Polycarpon	tetraphyllum	<Petro	GPB3%PVP	205.25	298.17	3.72	2.53	1.453	208.24	302.13	3.1	3.1	1.55	1.52	3.54	2.42	0.003	0.005	Nacho	24/06/2023	KDTOL10895	NA	NA	NA	NA	1
 RBGK	MC9588	DTOL	Angiosperm	Platanaceae	Platanus	hispanica	>Petro	Galbraith	186.68	358.76	2.92	2.65	1.922	363.14	189.19	8.65	8.64	4.32	4.22	2.57	3.12	0.003	0.010	Sahr Mian	28/06/2023	KDTOL10897	NA	NA	NA	NA	1
 RBGK	MC9593	DTOL	Angiosperm	Convolvulaceae	Calystegia	silvatica	<Solanum	Galbraith	205.47	304.23	4.13	5.04	1.481	198.97	293.45	1.34	1.34	0.67	0.66	4.42	4.67	0.006	0.005	Sahr Mian	28/06/2023	KDTOL10898	NA	NA	NA	NA	1
 RBGK	MC9589	DTOL	Angiosperm	Solanaceae	Solanum	crispum	>Petro	Galbraith	213.37	414.94	3.66	3.13	1.945	426.06	219.03	8.75	8.75	4.38	4.28	2.56	2.89	0.008	0.034	Sahr Mian	28/06/2023	KDTOL10899	NA	NA	NA	NA	1
@@ -736,7 +737,7 @@ RBGK	MC9598	DTOL	Angiosperm	Saxifragaceae	Saxifraga	cespitosa	>Petro	GPB3%PVP	21
 RBGK	MC9599	DTOL	Angiosperm	Campanulaceae	Campanula	patula	<Petro	GPB3%PVP	215.24	371.18	4.35	3.88	1.725	203.19	350.29	2.61	2.61	1.31	1.28	4.2	3.77	0.002	0.003	Nacho	02/07/2023	KDTOL10908	2C = 2.75pg	NA	NA	NA	1
 RBGK	MC9600	DTOL	Angiosperm	Apiaceae	Trinia	glauca	<Petro	GPB3%PVP	223.42	321.98	4.03	3.56	1.441	226.12	325.86	3.12	3.12	1.56	1.53	3.45	2.97	0.000	0.001	Nacho	02/07/2023	KDTOL10909	NA	NA	NA	NA	1
 RBGK	MC9601	DTOL	Angiosperm	Lamiaceae	Clinopodium	acinos	<Solanum	GPB3%PVP	204.71	339.79	5.49	2.91	1.66	207.19	344.69	1.19	1.19	0.6	0.58	4.99	3.01	0.004	0.003	Nacho	03/07/2023	KDTOL10913	NA	NA	NA	NA	1
-RBGK	MC9602	DTOL	Angiosperm	Juncaceae	Luzula	pallescens	<Solanum	GPB3%PVP	201.74	497.25	4.54	2.81	2.465	206.07	505.91	0.80	0.81	0.4	0.39	4.25	2.68	0.011	0.003	Nacho	03/07/2023	KDTOL10917	2C = 0.87pg	NA	NA	NA	1
+RBGK	MC9602	DTOL	Angiosperm	Juncaceae	Luzula	pallescens	<Solanum	GPB3%PVP	201.74	497.25	4.54	2.81	2.465	206.07	505.91	0.8	0.81	0.4	0.39	4.25	2.68	0.011	0.003	Nacho	03/07/2023	KDTOL10917	2C = 0.87pg	NA	NA	NA	1
 RBGK	MC9603	DTOL	Angiosperm	Cyperaceae	Eleocharis	parvula	<Petro	GPB3%PVP	207.03	342.83	3.08	2.72	1.656	211.66	353.13	2.72	2.7	1.35	1.32	2.97	2.59	0.012	0.019	Nacho	03/07/2023	KDTOL10918	NA	NA	NA	NA	1
 RBGK	MC9604	DTOL	Angiosperm	Scrophulariaceae	Limosella	australis	<Solanum	GPB3%PVP	192.80	558.67	5.46	2.87	2.895	194.05	529.17	0.68	0.73	0.37	0.36	5.06	2.48	0.009	0.086	Nacho	03/07/2023	KDTOL10919	NA	NA	NA	NA	1
 RBGK	MC9605	DTOL	Angiosperm	Crassulaceae	Crassula	aquatica	<Solanum	GPB3%PVP	210.45	303.09	3.03	2.77	1.44	215.17	309.39	0.69	0.69	0.34	0.34	3.06	2.63	0.003	0.001	Nacho	03/07/2023	KDTOL10920	NA	Endopolyploidy. I measured 4C	NA	NA	1
@@ -800,7 +801,7 @@ RBGK	MC9648	DTOL	Angiosperm	Solanaceae	Physalis	philadelphica	>Petro	GPB3%PVP	22
 RBGK	MC9649	DTOL	Angiosperm	Solanaceae	Alkekengi	officinarum	>Petro	GPB3%PVP	182.64	218.47	4.56	3.97	1.196	221.27	185.57	5.38	5.37	2.68	2.62	3.76	4.45	0.004	0.018	Nacho	27/07/2023	KDTOL11019	2C = 5.10pg	NA	NA	NA	1
 RBGK	MC9650	DTOL	Angiosperm	Moraceae	Ficus	carica	<Solanum	GPB3%PVP	178.43	476.79	4.44	3.19	2.672	178.54	478.42	0.74	0.74	0.37	0.36	5	3.76	0.011	0.003	Nacho	27/07/2023	KDTOL11020	2C = 0.73pg	NA	NA	NA	1
 RBGK	MC9651	DTOL	Angiosperm	Asteraceae	Erigeron	karvinskianus	<Petro	GPB3%PVP	206.24	235.71	3.7	2.59	1.143	206.6	237.07	3.94	3.92	1.96	1.92	3.94	2.68	0.005	0.016	Nacho	27/07/2023	KDTOL11021	NA	NA	NA	NA	1
-RBGK	MC9652	DTOL	Angiosperm	Acoraceae	Acorus	calamus	<Solanum	GPB3%PVP	208.48	258.80	3.86	4.68	1.241	204.46	255.5	1.60	1.58	0.79	0.77	3.12	3.66	0.008	0.010	Nacho	27/07/2023	KDTOL11022	2C = 1.09pg	NA	NA	NA	1
+RBGK	MC9652	DTOL	Angiosperm	Acoraceae	Acorus	calamus	<Solanum	GPB3%PVP	208.48	258.80	3.86	4.68	1.241	204.46	255.5	1.6	1.58	0.79	0.77	3.12	3.66	0.008	0.010	Nacho	27/07/2023	KDTOL11022	2C = 1.09pg	NA	NA	NA	1
 RBGK	MC9653	DTOL	Angiosperm	Poaceae	Pseudosasa	japonica	>Petro	GPB3%PVP	187.52	281.50	3.89	4.71	1.501	285.47	190.07	6.76	6.76	3.38	3.3	4.31	3.49	0.003	0.011	Nacho	27/07/2023	KDTOL11023	NA	NA	NA	NA	1
 RBGK	MC9654	DTOL	Angiosperm	Asteraceae	Calendula	arvensis	>Petro	GPB3%PVP	181.01	216.17	3.07	3.7	1.194	217.37	181.91	5.37	5.38	2.69	2.63	3.57	3	0.001	0.003	Nacho	27/07/2023	KDTOL11024	2C = 5.41pg	NA	NA	NA	1
 RBGK	MC9655	DTOL	Angiosperm	Oxalidaceae	Oxalis	corniculata	<Petro	GPB3%PVP	198.99	356.31	4.1	2.89	1.791	198.27	358	2.51	2.49	1.25	1.22	4.54	2.95	0.019	0.026	Nacho	27/07/2023	KDTOL11028	2C = 2.20-2.90	NA	NA	NA	1
@@ -822,16 +823,19 @@ RBGE	DMR360	DTOL	Angiosperm	Cyperaceae	Carex	canescens	<Solanum	GPB3%PVP	196.20	
 RBGE	DMR361	DTOL	Angiosperm	Poaceae	Alopecurus	magellanicus	>Secale	GPB3%PVP	199.96	466.32	2.53	2.63	2.332	473.57	204.71	38.71	38.41	19.2	18.78	2.41	2.44	0.020	0.331	Nacho	31/07/2023	NA	2C = 40.30pg	NA	NA	NA	1
 RBGE	DMR362	DTOL	Angiosperm	Poaceae	Phleum	alpinum	>Petro	GPB3%PVP	209.44	302.77	3.19	3.19	1.446	306.83	212.58	6.51	6.5	3.25	3.18	3.55	3.17	0.005	0.021	Nacho	31/07/2023	NA	2C = 6.50pg	NA	NA	NA	1
 RBGE	DMR363	DTOL	Gymnosperm	Ericaceae	Empetrum	nigrum	<Petro	GPB3%PVP	206.29	322.06	4.93	3.27	1.561	208.35	327.76	2.88	2.86	1.43	1.4	4.88	3.02	0.011	0.019	Nacho	31/07/2023	NA	2C = 1.29pg	Twice the reported content!	NA	NA	1
-RBGE	DBELL1813	DTOL	Bryophyte	Anthocerotaceae	Anthoceros	cf. agrestis	<Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1825	DTOL	Bryophyte	Orthotrichaceae	Orthotrichum	speciosum	<Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1833	DTOL	Bryophyte	Mniaceae	Rhizomnium	pseudopunctatum	>Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1834	DTOL	Bryophyte	Moerckiaceae	Moerckia	blyttii	>Solanum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1839	DTOL	Bryophyte	Mniaceae	Pohlia	ludwigii	<Solanum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1841	DTOL	Bryophyte	Andreaeaceae	Andreaea	sinuosa	<Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1843	DTOL	Bryophyte	Andreaeaceae	Andreaea	frigida	<Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1844	DTOL	Bryophyte	Sphagnaceae	Sphagnum	compactum	<Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1845	DTOL	Bryophyte	Andreaeaceae	Andreaea	alpestris	<Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DBELL1846	DTOL	Bryophyte	Antheliaceae	Anthelia	julacea	Oryza	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DMR364	DTOL	Angiosperm	Poaceae	Schedonorus	giganteus	Petro	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DMR365	DTOL	Angiosperm	Apiaceae	Cicuta	virosa	>Solanum	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
-RBGE	DMR366	DTOL	Angiosperm	Asteraceae	Antennaria	dioica	>Petro	GPB3%PVP	NA	NA	NA	NA	NA	NA	NA	#DIV/0!	NA	NA	NA	NA	NA	#DIV/0!	#DIV/0!	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
+RBGE	DBELL1813	DTOL	Bryophyte	Anthocerotaceae	Anthoceros	cf. agrestis	<Oryza	GPB3%PVP	140.26	525.36	12.43	4.52	3.746	149.64	591.77	0.53	0.51	0.25	0.25	12.08	3.88	0.278	0.036	Nacho	02/08/2023	NA	NA	1C? Really bad	NA	NA	1
+RBGE	DBELL1825	DTOL	Bryophyte	Orthotrichaceae	Orthotrichum	speciosum	<Oryza	GPB3%PVP	217.48	327.84	4.14	3.32	1.507	229.58	343.98	1.33	1.33	0.67	0.65	3.99	3.21	0.008	0.007	Nacho	02/08/2023	NA	NA	1C measured	NA	NA	1
+RBGE	DBELL1833	DTOL	Bryophyte	Mniaceae	Rhizomnium	pseudopunctatum	>Oryza	GPB3%PVP	191.36	837.15	3.96	2.44	4.375	847.6	197.6	8.75	8.58	4.29	4.2	2.5	3.83	0.082	0.164	Nacho	02/08/2023	NA	NA	1C measured	NA	NA	1
+RBGE	DBELL1834	DTOL	Bryophyte	Moerckiaceae	Moerckia	blyttii	>Solanum	GPB3%PVP	191.55	347.70	3.49	2.56	1.815	349.51	193.4	7.19	7.16	3.58	3.5	2.69	3.51	0.007	0.027	Nacho	02/08/2023	NA	NA	1C measured	NA	NA	1
+RBGE	DBELL1839	DTOL	Bryophyte	Mniaceae	Pohlia	ludwigii	<Solanum	GPB3%PVP	188.98	555.76	4.32	2.85	2.941	192.72	566.17	1.35	1.35	0.67	0.66	4.14	2.6	0.003	0.001	Nacho	02/08/2023	NA	NA	1C measured, endopolyploid	NA	NA	1
+RBGE	DBELL1841	DTOL	Bryophyte	Andreaeaceae	Andreaea	sinuosa	<Oryza	GPB3%PVP	204.40	631.10	5.13	3.02	3.087	204.59	636.48	0.65	0.64	0.32	0.31	5	3.01	0.026	0.005	Nacho	02/08/2023	NA	NA	1C measured	NA	NA	1
+RBGE	DBELL1843	DTOL	Bryophyte	Andreaeaceae	Andreaea	frigida	<Oryza	GPB3%PVP	210.65	634.98	6.48	2.6	3.014	210.82	647.15	0.66	0.65	0.33	0.32	5.78	2.82	0.078	0.017	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
+RBGE	DBELL1844	DTOL	Bryophyte	Sphagnaceae	Sphagnum	compactum	<Oryza	GPB3%PVP	217.57	476.27	4.35	2.68	2.189	221.84	488.29	0.91	0.91	0.45	0.44	4.44	2.77	0.010	0.004	Nacho	02/08/2023	NA	2C = 0.82pg	NA	NA	NA	1
+RBGE	DBELL1845	DTOL	Bryophyte	Andreaeaceae	Andreaea	alpestris	<Oryza	GPB3%PVP	212.86	731.22	6.24	2.54	3.435	215.83	744.13	0.58	0.58	0.29	0.28	5.8	2.48	0.018	0.003	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
+RBGE	DBELL1846	DTOL	Bryophyte	Antheliaceae	Anthelia	julacea	<Oryza	GPB3%PVP	210.60	561.49	4.27	3.03	2.666	211.83	564.1	0.75	0.75	0.38	0.37	4.32	3.01	0.004	0.001	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
+RBGE	DMR364	DTOL	Angiosperm	Poaceae	Schedonorus	giganteus	>Petro	GPB3%PVP	181.80	783.07	2.88	2.22	4.307	798.38	183.86	19.38	19.54	9.77	9.55	2	2.63	0.036	0.159	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
+RBGE	DMR365	DTOL	Angiosperm	Apiaceae	Cicuta	virosa	<Petro	GPB3%PVP	211.23	405.43	4.61	2.95	1.919	198.46	386.91	2.34	2.31	1.15	1.13	4.41	2.91	0.036	0.042	Nacho	02/08/2023	NA	NA	NA	NA	NA	1
+RBGE	DMR366	DTOL	Angiosperm	Asteraceae	Antennaria	dioica	<Petro	GPB3%PVP	167.76	275.03	4.56	5.59	1.639	166.76	282.42	2.74	2.66	1.33	1.3	6.41	5.98	0.077	0.121	Nacho	02/08/2023	NA	2C = 6.64pg (female)	I think the peaks moved together. The material was scarce and really bad estimates, but it seems that this is right ( I also compared it with onion and it looks like 9 times less than onion, so should be on the ca. 3pg range, as it is the case with <Petro)	NA	NA	1
+RBGE	DBELL1820	DTOL	Bryophyte	Lophocoleaceae	Chiloscyphus	pallescens	<Solanum	GPB3%PVP	168.84	753.06	8.71	3.34	4.46	169.96	761.33	0.89	0.88	0.44	0.43	6.79	3.43	0.027	0.005	Nacho	03/08/2023	NA	NA	1C measured, endopolyploid	NA	NA	1
+RBGE	DBELL1829	DTOL	Bryophyte	Amblystegiaceae	Drepanocladus	aduncus	<Oryza	GPB3%PVP	194.21	447.20	4.69	3.83	2.303	198.79	455	0.87	0.87	0.44	0.43	4.37	3.52	0.019	0.005	Nacho	03/08/2023	NA	NA	1C measured, endopolyploid	NA	NA	1
+RBGE	DBELL1831	DTOL	Bryophyte	Dicranellaceae	Dicranella	varia	<Oryza	GPB3%PVP	192.85	434.77	4.46	3.15	2.254	198.41	450.95	0.44	0.44	0.22	0.22	4.34	3.25	0.020	0.002	Nacho	03/08/2023	NA	NA	2C measured! endopolyploid	NA	NA	1
