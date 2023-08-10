@@ -14,7 +14,7 @@ attributes:
   #   separator:
   #     - ","
   long_list:
-    header:
+    header: project_code
     separator:
       - ","
     translate:
