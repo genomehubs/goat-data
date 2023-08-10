@@ -1,11 +1,11 @@
 taxon_id	input	rank
-7041	Coleoptera	order
+7408	Ichneumonidae	family
 7399	Hymenoptera	order
+7041	Coleoptera	order
 41098	Cantharis	genus
 41160	Phyllobius	genus
 #ilEilLuri	Eilema lurideola	species
 219450	Philonthus	genus
-7408	Ichneumonidae	family
 1594237	Argyresthia retinella	species
 572725	Argyresthia goedartella	species
 1504852	Micromus variegatus	species
@@ -319,6 +319,7 @@ taxon_id	input	rank
 758717	Acleris sparsana	species
 104470	Colotois pennaria	species
 988104	Dichonia aprilina	species
+197147	Caenis	genus
 2561093	Clepsis dumicolana	species
 1869771	Cydia amplana	species
 199012	Caloptilia populetorum	species
@@ -604,7 +605,6 @@ taxon_id	input	rank
 706835	Athysanus argentarius	species
 143750	Siphonoperla torrentium	species
 987932	Euplagia quadripunctaria	species
-197147	Caenis	genus
 406638	Ectobius pallidus	species
 237228	Campyloneura virgula	species
 2844360	Alcyonidium hirsutum	species
@@ -893,6 +893,9 @@ taxon_id	input	rank
 1872065	Nuctenea umbratica	species
 1100095	Misumena vatia	species
 560983	Escharella immersa	species
+41012	Tineidae	family
+687110	Nemapogon	genus
+685409	Monopis	genus
 311328	Tortrix viridana	species
 326953	Euchoeca nebulata	species
 #ilPerAlch	Perizoma alchemillata	species
@@ -921,7 +924,6 @@ taxon_id	input	rank
 1545198	Peritrechus geniculatus	species
 1284220	Teleiopsis diffinis	species
 987454	Anarta trifolii	species
-2891119	Cochylichroa atricapitana	species
 1100987	Eucosma campoliliana	species
 1280427	Aroga velocella	species
 132697	Coenonympha tullia	species
@@ -954,7 +956,6 @@ taxon_id	input	rank
 1594439	Buckleria paludum	species
 1545353	Podops inunctus	species
 260543	Chrysopa perla	species
-986995	Idaea muricata	species
 1907037	Pirata piscatorius	species
 1100916	Apotomis turbidana	species
 1100976	Epagoge grotiana	species
@@ -967,8 +968,6 @@ taxon_id	input	rank
 305495	Piezodorus lituratus	species
 527278	Pirata piraticus	species
 934862	Eupithecia valerianata	species
-687110	Nemapogon	genus
-685409	Monopis	genus
 2566305	Aproaerema larseniella	species
 934927	Cidaria fulvata	species
 1594308	Gypsonoma dealbana	species
@@ -1003,6 +1002,7 @@ taxon_id	input	rank
 1073588	Metzneria metzneriella	species
 1100936	Catoptria falsella	species
 1869985	Hedya salicella	species
+2891119	Cochylichroa atricapitana	species
 1405621	Glyphipterix simpliciella	species
 683971	Tischeria ekebladella	species
 1594332	Phtheochroa inopiana	species
