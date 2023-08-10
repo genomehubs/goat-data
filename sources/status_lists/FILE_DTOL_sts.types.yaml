@@ -13,6 +13,25 @@ attributes:
   #   header: family_representative
   #   separator:
   #     - ","
+  long_list:
+    header:
+    separator:
+      - ","
+    translate:
+      "['DTOL']": DTOL
+      "['ASG']" : ASG
+      "['VGP']": VGP
+      "['ERGAPI']": ERGA-PIL
+      "['BLAX', 'DTOL']" : DTOL
+      "['DTOL', 'DURB']" : DTOL
+      "['DTOL', 'LAWN']" : DTOL
+      "['DTOL', 'MEIER']" : DTOL
+      "['DTOL', 'RND']" : DTOL
+      "['ASG', 'DTOL']" : ASG, DTOL
+      "['DTOL', 'VGP']" : DTOL, VGP
+      "['BLAX']": ""
+      "['RND']": ""
+      "['DURB']": ""
   sequencing_status:
     header: sequencing_status_simple
     separator:
@@ -67,18 +86,33 @@ attributes:
       - ","
     translate:
       ERGAPI: ERGA-PIL
+      BLAX: ""
+      DURB: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
   sample_acquired:
     header: sample_acquired
     separator:
       - ","
     translate:
       ERGAPI: ERGA-PIL
+      BLAX: ""
+      DURB: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
   in_progress:
     header: in_progress
     separator:
       - ","
     translate:
       ERGAPI: ERGA-PIL
+      BLAX: ""
+      DURB: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
   sample_collected_by:
     translate:
       DALHOUSIE UNIVERSITY: DALU
