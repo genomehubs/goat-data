@@ -94,7 +94,7 @@ attributes:
     type: keyword
   sequencing_status:
     display_group: sequencing_status
-    display_level: 2
+    display_level: 1
     constraint:
       enum:
         - published
