@@ -1,5 +1,7 @@
 attributes:
   long_list:
+    description: Full species wishlist of a project
+    display_name: Long list
     display_group: target_lists
     display_level: 2
     constraint:
@@ -41,6 +43,7 @@ attributes:
         - pgp
         - phyloalps
         - prgp
+        - psyche
         - squalomix
         - tsi
         - vgp
@@ -51,6 +54,8 @@ attributes:
     traverse_direction: up
     type: keyword
   other_priority:
+    description: Species prioritised for sequencing
+    display_name: Other priority
     display_group: target_lists
     display_level: 2
     constraint:
@@ -92,6 +97,7 @@ attributes:
         - pgp
         - phyloalps
         - prgp
+        - psyche
         - squalomix
         - tsi
         - vgp
@@ -102,6 +108,8 @@ attributes:
     traverse_direction: up
     type: keyword
   family_representative:
+    description: Species prioritised for sequencing as family representatives
+    display_name: Family representative
     display_group: target_lists
     display_level: 2
     constraint:
@@ -143,6 +151,7 @@ attributes:
         - pgp
         - phyloalps
         - prgp
+        - psyche
         - squalomix
         - tsi
         - vgp
@@ -154,6 +163,8 @@ attributes:
     type: keyword
   contributing_project_lab:
     status: temporary
+    description: Detailed information of responsible for species genome sequencing 
+    display_name: Contributing project-lab
     display_group: target_lists
     display_level: 2
     summary: list
