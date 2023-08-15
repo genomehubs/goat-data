@@ -229,7 +229,7 @@ attributes:
     constraint:
       min: 1000000
     description: Genome size estimate from kmers
-    display_level: 1
+    display_level: 2
     display_name: Genome size kmer
     display_group: genome_size
     summary:
@@ -248,7 +248,7 @@ attributes:
     constraint:
       min: 1000000
     description: Genome size estimate from draft assembly
-    display_level: 1
+    display_level: 2
     display_name: Genome size draft
     display_group: genome_size
     summary:
