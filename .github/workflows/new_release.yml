@@ -10,7 +10,7 @@ env:
 jobs:
 
   get_dockers:
-    runs-on: self-hosted
+    runs-on: [ self-hosted, runner1 ]
     steps:
       - name: Get dockers
         run:  |
