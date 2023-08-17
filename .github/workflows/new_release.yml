@@ -570,8 +570,8 @@ jobs:
 
       - name: rsync production snapshot to sanger lustre
         run: |
-          rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE f:/lustre/scratch123/tol/share/goat/dev/
-          rsync -av --delete /volumes/docker/resources/files/                         f:/lustre/scratch123/tol/share/goat/dev/files/
+          rsync -av --delete /volumes/docker/snapshots/production/production-$RELEASE farm5:/lustre/scratch123/tol/share/goat/dev/
+          rsync -av --delete /volumes/docker/resources/files/                         farm5:/lustre/scratch123/tol/share/goat/dev/files/
 
   restore_on_prod:
     needs:
