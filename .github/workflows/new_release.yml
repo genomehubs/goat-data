@@ -20,7 +20,7 @@ jobs:
   update_ncbi_ena_tolids:
     needs:
       - get_dockers
-    runs-on: self-hosted
+    runs-on: [ self-hosted, runner1 ]
     steps:
       - name: Cleanup build folder
         run: |
@@ -112,7 +112,7 @@ jobs:
     needs:
       - get_dockers
       - update_ncbi_ena_tolids
-    runs-on:  [ self-hosted ]
+    runs-on:  [ self-hosted, runner2 ]
     steps:
       - name: Install dependencies
         run: |
@@ -192,7 +192,7 @@ jobs:
     needs:
       - get_dockers
       - update_ncbi_ena_tolids
-    runs-on:  self-hosted
+    runs-on:  [ self-hosted, runner1 ]
     steps:
     
       - name: Get bash release name
@@ -291,7 +291,7 @@ jobs:
       - get_dockers
       - genomehubs_init
       - update_api_googlesheets_data
-    runs-on:  self-hosted
+    runs-on:  [ self-hosted, runner1 ]
   
     steps:
       - name: Get bash release name
@@ -452,7 +452,7 @@ jobs:
     needs:
       - get_dockers
       - genomehubs_index_attributes
-    runs-on: self-hosted
+    runs-on: [ self-hosted, runner2 ]
     steps:
 
       - name: Get bash release name
@@ -521,7 +521,7 @@ jobs:
     needs:
       - get_dockers
       - genomehubs_index_attributes
-    runs-on: self-hosted
+    runs-on: [ self-hosted, runner1 ]
     steps:
 
       - name: Get bash release name
@@ -562,7 +562,7 @@ jobs:
     needs:
       - genomehubs_index_files
       - genomehubs_fill
-    runs-on:  self-hosted
+    runs-on: [ self-hosted, runner1 ]
     steps:
 
       - name: Get bash release name
@@ -577,7 +577,7 @@ jobs:
     needs:
       - genomehubs_fill
       - genomehubs_index_files
-    runs-on:  self-hosted
+    runs-on: [ self-hosted, runner2 ]
     steps:
 
       - name: Get bash release name
