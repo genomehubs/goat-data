@@ -35,8 +35,6 @@ attributes:
       - ","
       - "(?<!e)-"
 taxonomy:
-  genus:
-    header: Genus
   species:
     index: [5, 7]
     join: " "
