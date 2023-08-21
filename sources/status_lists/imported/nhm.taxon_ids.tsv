@@ -1,4 +1,5 @@
 taxon_id	input	rank
+29979	Isopoda	order
 986989	Horisme tersata	species
 934934	Cosmorhoe ocellata	species
 2681869	Depressariidae	family
@@ -118,7 +119,6 @@ taxon_id	input	rank
 1594449	Euspilapteryx auroguttella	species
 286670	Pentatoma rufipes	species
 934896	Thera obeliscata	species
-29979	Isopoda	order
 6683	Decapoda	order
 70849	Nudibranchia	order
 1594247	Celypha lacunana	species
@@ -216,8 +216,14 @@ taxon_id	input	rank
 79500	Bruchus	genus
 7149	Chironomidae	family
 69514	Australoplana sanguinea	species
+#tnAmpBioc	Amphiporus bioculatus	species
 2866285	Mesopsocus fuscifrons	species
+30300	Botryllus	genus
+39820	Nereididae	family
+560967	Callopora lineata	species
 7588	Asteroidea	class
+7625	Echinoidea	class
+92169	Talitridae	family
 537469	Rhyparochromus vulgaris	species
 2870497	Esperia sulphurella	species
 48991	Ephydridae	family
@@ -411,7 +417,6 @@ taxon_id	input	rank
 52428	Polyxenus lagurus	species
 166131	Asiraca clavicornis	species
 2026310	Closterotomus trivialis	species
-92169	Talitridae	family
 88022	Blaniulidae	family
 1268897	Cryptops hortensis	species
 118470	Ophyiulus pilosus	species
@@ -434,13 +439,11 @@ taxon_id	input	rank
 45920	Araneus diadematus	species
 29065	Martes martes	species
 500646	Metellina mengei	species
-30300	Botryllus	genus
 626263	Scrupocellaria scruposa	species
 96822	Sphaeromatidae	family
 6650	Polyplacophora	class
 69676	Lottiidae	family
 47127	Nuculidae	family
-7625	Echinoidea	class
 106738	Amphiuridae	family
 55617	Ophiocomina nigra	species
 51768	Alcyonium digitatum	species
@@ -536,7 +539,6 @@ taxon_id	input	rank
 2803877	Batracomorphus irroratus	species
 29997	Diplura	order
 145650	Cernuella virgata	species
-39820	Nereididae	family
 51258	Sabella	genus
 71505	Philine aperta	species
 2922058	Azorinus chamasolen	species
@@ -594,7 +596,6 @@ taxon_id	input	rank
 1443160	Saccoglossus horsti	species
 51987	Alcyonidium gelatinosum	species
 #ilEilGrie	Eilema griseola	species
-560967	Callopora lineata	species
 8260	Platichthys flesus	species
 1101017	Metalampra italica	species
 991039	Fenestrulina malusii	species
@@ -654,6 +655,8 @@ taxon_id	input	rank
 399045	Notodromas monacha	species
 70180	Ophiothrix fragilis	species
 72673	Ophiura ophiura	species
+317510	Bathyporeia	genus
+36119	Nephtyidae	family
 39821	Glyceridae	family
 #tzNolDila	Nolella dilatata	species
 97259	Electra pilosa	species
@@ -708,12 +711,10 @@ taxon_id	input	rank
 271031	Aplexa hypnorum	species
 419017	Bathyomphalus contortus	species
 240811	Acroloxus lacustris	species
-#tnAmpBioc	Amphiporus bioculatus	species
 117001	Leptasterias muelleri	species
 2922076	Scruparia ambigua	species
 458144	Ballus chalybeius	species
 315597	Melita	genus
-317510	Bathyporeia	genus
 37541	Buccinum undatum	species
 100776	Aequipecten opercularis	species
 88925	Lineus longissimus	species
@@ -746,7 +747,6 @@ taxon_id	input	rank
 987011	Selenia lunularia	species
 934899	Venusia blomeri	species
 987889	Atolmis rubricollis	species
-36119	Nephtyidae	family
 61862	Plecotus auritus	species
 37598	Fringilla coelebs	species
 1545295	Chartoscirta cincta	species
