@@ -1,6 +1,6 @@
 attributes:
   sample_collected:
-    description: Project - acronym - has collected samples for the taxon
+    description: "Project has collected samples for the taxon (acronym)"
     display_name: Sample collected
     display_group: sequencing_status
     display_level: 2
@@ -9,7 +9,7 @@ attributes:
     traverse_direction: up
     type: keyword
   sample_collected_by:
-    description: Intitution - acronym - that collected samples for the taxon
+    description: "Institution that collected samples for the taxon (acronym)"
     display_name: Sample collected by
     display_group: sequencing_status
     display_level: 2
@@ -35,7 +35,7 @@ attributes:
         - VIEN
   resampling_required:
     status: temporary
-    description: Project - acronym - needs additional samples
+    description: "Project needs additional samples (acronym)"
     display_name: Resampling required
     display_group: sequencing_status
     display_level: 2
@@ -343,22 +343,23 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
-#   sequencing_status_ebp:
-#     display_group: sequencing_status
-#     display_level: 2
-#     constraint:
-#       enum:
-#         - published
-#         - insdc_open
-#         - open
-# #        - insdc_submitted
-#         - in_progress
-#         - sample_acquired
-#         - sample_collected
-#     summary: enum
-#     traverse: enum
-#     traverse_direction: up
-#     type: keyword
+  sequencing_status_ebp:
+    status: deprecated
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_ebpn:
     description: Sequencing status for Earth Biogenome Project Norway EBP-Nor
     display_name: Sequencing status EBPN - EBP-Nor
@@ -395,22 +396,23 @@ attributes:
     traverse: enum
     traverse_direction: up
     type: keyword
-#   sequencing_status_erga:
-#     display_group: sequencing_status
-#     display_level: 2
-#     constraint:
-#       enum:
-#         - published
-#         - insdc_open
-#         - open
-# #        - insdc_submitted
-#         - in_progress
-#         - sample_acquired
-#         - sample_collected
-#     summary: enum
-#     traverse: enum
-#     traverse_direction: up
-#     type: keyword
+  sequencing_status_erga:
+    status: deprecated
+    display_group: sequencing_status
+    display_level: 2
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - open
+#        - insdc_submitted
+        - in_progress
+        - sample_acquired
+        - sample_collected
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
   sequencing_status_erga-bge:
     description: Sequencing status for ERGA-BGE Project
     display_name: Sequencing status ERGA-BGE
