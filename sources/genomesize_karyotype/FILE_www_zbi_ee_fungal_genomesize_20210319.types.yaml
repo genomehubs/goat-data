@@ -24,8 +24,6 @@ taxonomy:
     header: PHYLUM
   order:
     header: ORDER
-  genus:
-    header: GENUS
   species:
     index: [2, 3]
     join: " "

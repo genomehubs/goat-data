@@ -35,8 +35,6 @@ attributes:
 taxonomy:
   taxon_id:
     header: NCBI_taxon_id
-  genus:
-    header: Genus
   species:
     header: [Genus, Species]
     join: " "

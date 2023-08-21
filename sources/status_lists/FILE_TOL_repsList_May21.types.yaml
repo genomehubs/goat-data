@@ -21,7 +21,5 @@ taxonomy:
   species:
     index: [1, 2]
     join: " "
-  genus:
-    header: gen
   family:
     header: fam
