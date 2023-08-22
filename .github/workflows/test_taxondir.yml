@@ -22,6 +22,11 @@ jobs:
       - name: Delete indices for this branch/$RELEASE
         run:  |
           curl -s -X DELETE "es1:9200/*--$RELEASE"
+      - name: Create dev snapshot repo if it doesn't exist
+        run:  |
+          curl -s -X PUT "es1:9200/_snapshot/dev" \
+          -H 'Content-Type: application/json' \
+          -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/dev" } }' || exit 0
       - name: Restore and rename snapshot to current branch
         run:  |
           curl -s -X POST "es1:9200/_snapshot/dev/initassembly/_restore?wait_for_completion=true&pretty" \
