@@ -19,9 +19,9 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: Check es health
         run:  curl -s "es1:9200/_cat/health"
-      - name: Delete indices for this branch/$RELEASE
+      - name: Delete indices on this server
         run:  |
-          curl -s -X DELETE "es1:9200/*--$RELEASE"
+          curl -s -X DELETE "es1:9200/*"
       - name: Create dev snapshot repo if it doesn't exist
         run:  |
           curl -s -X PUT "es1:9200/_snapshot/dev" \
