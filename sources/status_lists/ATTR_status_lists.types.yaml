@@ -113,7 +113,7 @@ attributes:
     description: Most advanced sequencing status for taxon across all projects
     display_name: Sequencing status
     display_group: sequencing_status
-    display_level: 1
+    display_level: 2
     constraint:
       enum:
         - published

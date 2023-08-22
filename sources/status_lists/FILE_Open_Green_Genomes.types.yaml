@@ -39,8 +39,6 @@ attributes:
       open: OGG
       in_progress:
 taxonomy:
-  genus:
-    header: genus
   species:
     header: [genus, species]
     join: " "
