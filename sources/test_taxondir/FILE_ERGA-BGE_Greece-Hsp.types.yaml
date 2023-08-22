@@ -1,0 +1,63 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: GREECE-HSP_expanded.tsv
+  source: Declared Status List - ERGA-BGE Hotspots - Greece
+  source_date: 2023-07-06
+  source_description: ERGA-BGE Hotspots - Greece Status List, live spreadsheet
+  source_contact: Javier Palma, Instituto de Biologia Evolutiva - CSIC, Barcelona, Spain
+attributes:
+  long_list:
+    header: long_list
+    translate:
+      GREECE-HSP: ERGA-BGE
+  other_priority:
+    header: other_priority
+    translate:
+      GREECE-HSP: ERGA-BGE
+  family_representative:
+    header: family_representative
+    translate:
+      GREECE-HSP: ERGA-BGE
+  contributing_project_lab:
+    header: project
+    translate:
+      GREECE-HSP: BGE Hotspots - Greece
+  sequencing_status_erga-bge:
+    header: sequencing_status
+  sequencing_status:
+    header: sequencing_status
+  sample_collected:
+    header: sample_collected
+    translate:
+      GREECE-HSP: ERGA-BGE
+  sample_collected_by:
+    header: source
+  sample_acquired:
+    header: sample_acquired
+    translate:
+      GREECE-HSP: ERGA-BGE   
+  in_progress:
+    header: in_progress
+    translate:
+      GREECE-HSP: ERGA-BGE
+  open:
+    header: open
+    translate:
+      GREECE-HSP: ERGA-BGE
+  insdc_open:
+    header: insdc_open
+    translate:
+      GREECE-HSP: ERGA-BGE
+  published:
+    header: published
+    translate:
+      GREECE-HSP: ERGA-BGE
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family

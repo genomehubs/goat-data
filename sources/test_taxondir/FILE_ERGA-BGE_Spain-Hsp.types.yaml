@@ -1,0 +1,63 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: SPAIN-HSP_expanded.tsv
+  source: Declared Status List - ERGA-BGE Hotspots - Spain
+  source_date: 2023-07-06
+  source_description: ERGA-BGE Hotspots - Spain Status List, live spreadsheet
+  source_contact: Javier Palma, Instituto de Biologia Evolutiva - CSIC, Barcelona, Spain
+attributes:
+  long_list:
+    header: long_list
+    translate:
+      SPAIN-HSP: ERGA-BGE
+  other_priority:
+    header: other_priority
+    translate:
+      SPAIN-HSP: ERGA-BGE
+  family_representative:
+    header: family_representative
+    translate:
+      SPAIN-HSP: ERGA-BGE
+  contributing_project_lab:
+    header: project
+    translate:
+      SPAIN-HSP: BGE Hotspots - Spain
+  sequencing_status_erga-bge:
+    header: sequencing_status
+  sequencing_status:
+    header: sequencing_status
+  sample_collected:
+    header: sample_collected
+    translate:
+      SPAIN-HSP: ERGA-BGE
+  # sample_collected_by:
+  #   header: source
+  sample_acquired:
+    header: sample_acquired
+    translate:
+      SPAIN-HSP: ERGA-BGE   
+  in_progress:
+    header: in_progress
+    translate:
+      SPAIN-HSP: ERGA-BGE
+  open:
+    header: open
+    translate:
+      SPAIN-HSP: ERGA-BGE
+  insdc_open:
+    header: insdc_open
+    translate:
+      SPAIN-HSP: ERGA-BGE
+  published:
+    header: published
+    translate:
+      SPAIN-HSP: ERGA-BGE
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family

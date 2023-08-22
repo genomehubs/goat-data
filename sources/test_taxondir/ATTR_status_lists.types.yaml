@@ -1,16 +1,5 @@
-attributes:
-  sample_collected:
-    description: Project - acronym - has collected samples for the taxon
-    display_name: Sample collected
-    display_group: sequencing_status
-    display_level: 2
-    summary: list
-    traverse: list
-    traverse_direction: up
-    type: keyword
-  sample_collected_by:
-    description: Intitution - acronym - that collected samples for the taxon
-    display_name: Sample collected by
+defaults:
+  attributes:
     display_group: sequencing_status
     display_level: 2
     summary: list
@@ -19,859 +8,166 @@ attributes:
     type: keyword
     constraint:
       enum:
-        - DALU
-        - GHC
-        - MBA
-        - NHM
-        - NSU
-        - PSU
-        - QMUL
-        - RBGE
-        - KEW
-        - SAN
-        - UBC
-        - DERB
-        - OXF
-        - VIEN
+        - africabp
+        - ag100pest
+        - agi
+        - arg
+        - asg
+        - bat1k
+        - b10k
+        - bioplatforms_australia
+        - canbp
+        - cbp
+        - ccgp
+        - cfgp
+        - cngb
+        - dtol
+        - ebpn
+        - ein 
+        - endemixit
+        - erga
+        - erga-bge
+        - erga-ch
+        - erga-pil
+        - eurofish
+        - gaga
+        - gap
+        - gbr
+        - giga
+        - i5k
+        - ilebp
+        - 1kfg
+        - lmgp
+        - loewe-tbg
+        - metainvert
+        - ogg
+        - omg
+        - other
+        - pgp
+        - phyloalps
+        - prgp
+        - psyche
+        - squalomix
+        - tsi
+        - vgp
+        - ygg
+        - zoonomia
+    value_metadata:
+      default:
+        description: Click to view GoaT project page
+        link: https://goat.genomehubs.org/projects/{}
+      africabp:
+        description: "Africa Biogenome Project (click to view GoaT project page)"
+      ag100pest:
+        description: "Ag100Pest (click to view GoaT project page)"
+      agi:
+        description: "Applied Genomics Initiative (click to view GoaT project page)"
+      arg:
+        description: "Australian Amphibian and Reptile Genomics - AusARG (click to view GoaT project page)"
+      asg:
+        description: "Aquatic Symbiosis Genomics Project (click to view GoaT project page)"
+      bat1k:
+        description: "Bat 1K (click to view GoaT project page)"
+      b10k:
+        description: "Bird 10K (click to view GoaT project page)"
+      bioplatforms_australia:
+        description: "Bioplatforms Australia"
+      canbp:
+        description: "Canada Biogenome Project (click to view GoaT project page)"
+      cbp:
+        description: "Catalan Biogenome Project (click to view GoaT project page)"
+      ccgp:
+        description: "California Conservation Genomics Project (click to view GoaT project page)"
+      cfgp:
+        description: "Cartilaginous Fish Genome Project (click to view GoaT project page)"
+      dtol:
+        description: "Darwin Tree of Life (click to view GoaT project page)"
+      ebpn:
+        description: "EBP Norway (click to view GoaT project page)"
+      ein :
+        description: "Euglena International Network (click to view GoaT project page)"
+      endemixit:
+        description: "ENDEMIXIT (click to view GoaT project page)"
+      erga:
+        description: "European Reference Genome Atlas Umbrella (click to view GoaT project page)"
+      erga-bge:
+        description: "ERGA Biodiversity Genomics Europe (click to view GoaT project page)"
+      erga-ch:
+        description: "ERGA Switzerland (click to view GoaT project page)"
+      erga-pil:
+        description: "ERGA Pilot (click to view GoaT project page)"
+      eurofish:
+        description: "EUROFISH (click to view GoaT project page)"
+      gaga:
+        description: "Global Ant Genomics Alliance (click to view GoaT project page)"
+      gap:
+        description: "Genomics for Australian Plants (click to view GoaT project page)"
+      gbr:
+        description: "Great Reef Barrier (click to view GoaT project page)"
+      giga:
+        description: "Global Invertebrate Genomics Alliance (click to view GoaT project page)"
+      i5k:
+        description: "i5K (click to view GoaT project page)"
+      ilebp:
+        description: "Illinois EBP Pilot (click to view GoaT project page)"
+      1kfg:
+        description: "1K Fungal Genomes Project (click to view GoaT project page)"
+      lmgp:
+        description: "Lilioid Monocots Core Group Genome Project (click to view GoaT project page)"
+      loewe-tbg:
+        description: "LOEWE Centre for Translational Biodiversity Genomics (click to view GoaT project page)"
+      metainvert:
+        description: "MetaInvert (click to view GoaT project page)"
+      ogg:
+        description: "Open Green Genomes (click to view GoaT project page)"
+      omg:
+        description: "Oz Mammals Genomics (click to view GoaT project page)"
+      other:
+        description: "Other EBP Projects"
+      pgp:
+        description: "Polar Genomes Project (click to view GoaT project page)"
+      phyloalps:
+        description: "PhyloAlps (click to view GoaT project page)"
+      prgp:
+        description: "Primate Genomes Project (click to view GoaT project page)"
+      psyche:
+        description: "Project Psyche (click to view GoaT project page)"
+      squalomix:
+        description: "Squalomix (click to view GoaT project page)"
+      tsi:
+        description: "Threatened Species Initiative (click to view GoaT project page)"
+      vgp:
+        description: "Vertebrate Genomes Project (click to view GoaT project page)"
+      ygg:
+        description: "Yggdrasil (click to view GoaT project page)"
+      zoonomia:
+        description: "Zoonomia (click to view GoaT project page)"
+attributes:
+  sample_available:
+    description: "Project has available samples for the taxon (acronym)"
+    display_name: Sample collected
+  sample_collected:
+    description: "Project has collected samples for the taxon (acronym)"
+    display_name: Sample collected
   resampling_required:
     status: temporary
-    description: Project - acronym - needs additional samples
-    display_name: Resampling required
-    display_group: sequencing_status
-    display_level: 2
-    summary: list
-    traverse: list
-    traverse_direction: up
-    type: keyword 
+    description: Project needs additional samples (acronym)
+    display_name: Resampling required 
   sample_acquired:
     description: Samples received by sequencing center
     display_name: Sample acquired
-    display_group: sequencing_status
-    display_level: 2
-    summary: list
-    traverse: list
-    traverse_direction: up
-    type: keyword
-  number_acquired:
-    description: Count of samples received by sequencing center
-    display_name: Number acquired
-    display_group: sequencing_status
-    display_level: 2
-    summary:
-      - sum
-      - max
-      - min
-      - mode
-      - mean
-    traverse: sum
-    traverse_direction: up
-    type: long
   in_progress:
     description: Sequencing started but assembly not yet publicly available
     display_name: In progress
-    display_group: sequencing_status
-    display_level: 2
-    summary: list
-    traverse: list
-    traverse_direction: up
-    type: keyword
-  # insdc_submitted:
-  #  display_group: sequencing_status
-  #  display_level: 2
-  #  summary: list
-  #  traverse: list
-  #  traverse_direction: up
-  #  type: keyword
+  insdc_submitted:
+    description: Assembly submitted to INSDC but not yet publicly available
+    display_name: In progress
   open:
     description: Data publicly available
     display_name: Open
-    display_group: sequencing_status
-    display_level: 2
-    summary: list
-    traverse: list
-    traverse_direction: up
-    type: keyword
   insdc_open:
     description: Data publicly available on INSDC sequence repositories
     display_name: Open on INSDC
-    display_group: sequencing_status
-    display_level: 2
-    summary: list
-    traverse: list
-    traverse_direction: up
-    type: keyword
   published:
     description: Publication describing assembly is available
     display_name: Published
-    display_group: sequencing_status
-    display_level: 2
-    summary: list
-    traverse: list
-    traverse_direction: up
-    type: keyword
-  sequencing_status:
-    description: Most advanced sequencing status for taxon across all projects
-    display_name: Sequencing status
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_africabp:
-    description: Sequencing status for Africa Biogenome Project
-    display_name: Sequencing status AfricaBP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_ag100pest:
-    description: Sequencing status for Ag100Pest Initiative
-    display_name: Sequencing status Ag100Pest
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_agi:
-    description: Sequencing status for AGI Initiative from Bioplatforms Australia
-    display_name: Sequencing status AGI
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_arg:
-    description: Sequencing status for Australian Amphibian and Reptile Genomics Initiative Collaboration - AusARG
-    display_name: Sequencing status AusARG
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_asg:
-    description: Sequencing status for Aquatic Symbiosis Genomics Project
-    display_name: Sequencing status ASG
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_b10k:
-    description: Sequencing status for Bird 10,000 Genomes Project
-    display_name: Sequencing status B10K
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_bat1k:
-    description: Sequencing status for 1,000 Bat Genomes Project
-    display_name: Sequencing status Bat1K
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_canbp:
-    description: Sequencing status for Canada Biogenome Project
-    display_name: Sequencing status CanBP - CBP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_cbp:
-    description: Sequencing status for Catalan Biogenome Project
-    display_name: Sequencing status CBP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_ccgp:
-    description: Sequencing status for California Conservation Genomics Project
-    display_name: Sequencing status CCGP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_cfgp:
-    description: Sequencing status for Cartilaginous Fish Genome Project
-    display_name: Sequencing status CFGP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_dtol:
-    description: Sequencing status for Darwin Tree of Life project
-    display_name: Sequencing status DToL
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-#   sequencing_status_ebp:
-#     display_group: sequencing_status
-#     display_level: 2
-#     constraint:
-#       enum:
-#         - published
-#         - insdc_open
-#         - open
-# #        - insdc_submitted
-#         - in_progress
-#         - sample_acquired
-#         - sample_collected
-#     summary: enum
-#     traverse: enum
-#     traverse_direction: up
-#     type: keyword
-  sequencing_status_ebpn:
-    description: Sequencing status for Earth Biogenome Project Norway EBP-Nor
-    display_name: Sequencing status EBPN - EBP-Nor
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_endemixit:
-    description: Sequencing status for Italian Endemics Project
-    display_name: Sequencing status ENDEMIXIT
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-#   sequencing_status_erga:
-#     display_group: sequencing_status
-#     display_level: 2
-#     constraint:
-#       enum:
-#         - published
-#         - insdc_open
-#         - open
-# #        - insdc_submitted
-#         - in_progress
-#         - sample_acquired
-#         - sample_collected
-#     summary: enum
-#     traverse: enum
-#     traverse_direction: up
-#     type: keyword
-  sequencing_status_erga-bge:
-    description: Sequencing status for ERGA-BGE Project
-    display_name: Sequencing status ERGA-BGE
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_erga-ch:
-    description: Sequencing status for ERGA Switzerland Project
-    display_name: Sequencing status ERGA-CH
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_erga-pil:
-    description: Sequencing status for ERGA Pilot Project
-    display_name: Sequencing status ERGA-PIL
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_eurofish:
-    description: Sequencing status for EUROFISH Project
-    display_name: Sequencing status EUROFISH
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_gaga:
-    description: Sequencing status for Global Ant Genomics Alliance Project
-    display_name: Sequencing status GAGA
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_gap:
-    description: Sequencing status for Genomics for Australian Plants Project
-    display_name: Sequencing status GAP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_gbr:
-    description: Sequencing status for Great Reef Barrier Project
-    display_name: Sequencing status GBR
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_giga:
-    description: Sequencing status for Global Invertebrate Genome Alliance Project
-    display_name: Sequencing status GIGA
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_i5k:
-    description: Sequencing status for 5,000 Insect Genomes Project
-    display_name: Sequencing status i5K
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_ilebp:
-    description: Sequencing status for Illinois EBP Pilot Project
-    display_name: Sequencing status IlEBP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_1kfg:
-    description: Sequencing status for 1,000 Fungal Genomes Project
-    display_name: Sequencing status 1KFG
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted        
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_lmgp:
-    description: Sequencing status for Lilioid Monocots Core Group Genome Project
-    display_name: Sequencing status LMGP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_loewe-tbg:
-    description: Sequencing status for LOEWE Centre for Translational Biodiversity Genomics Projects
-    display_name: Sequencing status LOEWE-TBG
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_metainvert:
-    description: Sequencing status for Soil Invertebrate Genome Initiative
-    display_name: Sequencing status METAINVERT
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_ogg:
-    description: Sequencing status for Open Green Genomes Project
-    display_name: Sequencing status OGG
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_omg:
-    description: Sequencing status for Oz Mammals Genomics Project
-    display_name: Sequencing status OMG
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_other:
-    description: Sequencing status for temporarily unafiliated Projects
-    display_name: Sequencing status OTHER
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_pgp:
-    description: Sequencing status for Polar Genomes Project
-    display_name: Sequencing status PGP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_phyloalps:
-    description: Sequencing status for PhyloAlps Project
-    display_name: Sequencing status PhyloAlps
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_prgp:
-    description: Sequencing status for Primate Genomes Project
-    display_name: Sequencing status PRGP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_psyche:
-    description: Sequencing status for Project Psyche
-    display_name: Sequencing status Psyche
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_squalomix:
-    description: Sequencing status for Squalomix Project
-    display_name: Sequencing status Squalomix
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_tsi:
-    description: Sequencing status for Threatened Species Initiative
-    display_name: Sequencing status TSI
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_vgp:
-    description: Sequencing status for Vertebrate Genomes Project
-    display_name: Sequencing status VGP
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-  sequencing_status_ygg:
-    description: Sequencing status for Yggdrasil Project
-    display_name: Sequencing status YGG
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
-  sequencing_status_zoonomia:
-    description: Sequencing status for Zoonomia Project
-    display_name: Sequencing status Zoonomia
-    display_group: sequencing_status
-    display_level: 2
-    constraint:
-      enum:
-        - published
-        - insdc_open
-        - open
-#        - insdc_submitted
-        - in_progress
-        - sample_acquired
-        - sample_collected
-    summary: enum
-    traverse: enum
-    traverse_direction: up
-    type: keyword
