@@ -1,0 +1,79 @@
+attributes:
+  contributing_project_lab:
+    status: temporary
+    description: Detailed information of responsible for species genome sequencing 
+    display_name: Contributing project-lab
+    display_group: target_lists
+    display_level: 2
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+  sample_collected_by:
+    description: "Institution that collected samples for the taxon (acronym)"
+    display_name: Sample collected by
+    display_group: sequencing_status
+    display_level: 2
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
+    constraint:
+      enum:
+        - DALU
+        - GHC
+        - MBA
+        - NHM
+        - NSU
+        - PSU
+        - QMUL
+        - RBGE
+        - KEW
+        - SAN
+        - UBC
+        - DERB
+        - OXF
+        - VIEN
+      value_metadata:
+        DALU:
+          description: "Dalhousie University"
+        GHC:
+          description: Geomar Helmholtz Centre
+        MBA:
+          description: Marine Biological Association
+        NHM:
+          description: Natural History Museum
+        NSU:
+          description: Nova Southeastern University
+        PSU:
+          description: Portland State University
+        QMUL:
+          description: Queen Mary University of London
+        RBGE:
+          description: Royal Botanic Garden Edinburgh
+        KEW:
+          description: Royal Botanic Gardens Kew
+        SAN:
+          description: Sanger Institute
+        UBC:
+          description: University of British Columbia
+        DERB:
+          description: University of Derby
+        OXF:
+          description: University of Oxford
+        VIEN:
+          description: University Of Vienna 
+  number_acquired:
+    description: Count of samples received by sequencing center
+    display_name: Number acquired
+    display_group: sequencing_status
+    display_level: 2
+    summary:
+      - sum
+      - max
+      - min
+      - mode
+      - mean
+    traverse: sum
+    traverse_direction: up
+    type: long
