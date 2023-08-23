@@ -7,22 +7,15 @@ Anura	Bufonidae	Bufo	Bufo viridis-4				gonochorous	XY	male heterogametic
 Anura	Bufonidae	Chaunus	Chaunus ssp	22	22		gonochorous	homomorphic					
 Anura	Centronelidae	Centrolenella	Centrolenella anthistenesi				gonochorous	XY	male heterogametic				
 Anura	Dendrobatidae	Ameerega	Ameerega galactonotus	18	18		gonochorous	homomorphic					
-Anura	Dendrobatidae	Epipedobates	Epipedobates femoralis	24	24		gonochorous	homomorphic					
 Anura	Dendrobatidae	Epipedobates	Epipedobates trivittattus	24	24		gonochorous	homomorphic					
 Anura	Leptodactylidae	Crossodactylus	Crossodactylus caramaschi	26	26		gonochorous						
-Anura	Leptodactylidae	Eleutherodactylus	Eleutherodactylus euphronides	32	32		gonochorous	ZW	female heterogametic				
-Anura	Leptodactylidae	Eleutherodactylus	Eleutherodactylus maussi	36	35		gonochorous	complex XY	male heterogametic				
 Anura	Leptodactylidae	Eleutherodactylus	Eleutherodactylus riveroi				gonochorous	homomorphic	male heterogametic				
-Anura	Leptodactylidae	Eleutherodactylus	Eleutherodactylus shrevei	32	32	2	gonochorous	ZW	female heterogametic				
-Anura	Pipidae	Silurana	Silurana tropicalis				gonochorous						
 Anura	Racophoridae	Buergeria	Buergeria buergeri				gonochorous	ZW	female heterogametic				
 Anura	Ranidae	Fejervarya	Fejervarya ssp				gonochorous	homomorphic					
 Anura	Ranidae	Pelophylax	Pelophylax kl. Hispanicus			2	other						
 Anura	Ranidae	Rana	Rana brevipoda				gonochorous	homomorphic	male heterogametic				
 Anura	Ranidae	Rana	Rana huanrenesis	24	24		gonochorous	homomorphic					
 Anura	Ranidae	Rana	Rana sakurai	26	26		gonochorous	homomorphic	male heterogametic				
-Anura	Ranidae	Rana	Rana tigrina				gonochorous	homomorphic	female heterogametic				
-Anura	Ranidae	Tomopterna	Tomopterna labrosa				gonochorous						
 Caudata	Ambystomatidae	Ambystoma	Ambystoma (2) laterale-(2) jeffersonianum			4	other						
 Caudata	Ambystomatidae	Ambystoma	Ambystoma (2) laterale-(2) texanum			4	other						
 Caudata	Ambystomatidae	Ambystoma	Ambystoma (2) laterale-texanum			3	other						
@@ -56,8 +49,6 @@ Passeriformes	Emberizidae	Passerculus	Passerculus sandwichensis				gonochorous	Z
 Passeriformes	Emberizidae	Zonotrichia	Zonotrichia albicollis				gonochorous	ZW	female heterogametic				
 Passeriformes	Emberizidae	Zonotrichia	Zonotrichia capensis				gonochorous	ZW	female heterogametic				
 Passeriformes	Emberizidae	Zonotrichia	Zonotrichia leucophrys				gonochorous	ZW	female heterogametic				
-Passeriformes	Estrildidae	Erythrura	Erythrura gouldiae				gonochorous	ZW	female heterogametic				
-Passeriformes	Estrildidae	Taeniopygia	Taeniopygia bichenovii				gonochorous	ZW	female heterogametic				
 Anguilliformes	Muraenidae	Muraena	Muraena pavonina	42	42		hermaphrodite						
 Atheriniformes	Atherinidae	Menidia	Menidia clarkhubbsi complex			2	apomictic						
 Atheriniformes	Atherinidae	Menidia	Menidia peninsula				gonochorous				TSD		
@@ -87,7 +78,6 @@ Cypriniformes	Cyprinidae	Cyprinus	Cyprinus longipectoralis	100	100	4	gonochorous
 Cypriniformes	Cyprinidae	Cyprinus	Cyprinus micristius fuxianensis	100	100	4	gonochorous	XY	male heterogametic				
 Cypriniformes	Cyprinidae	Cyprinus	Cyprinus pellegrini barbatus	100	100	4	gonochorous	XY	male heterogametic				
 Cypriniformes	cyprinidae	Gnathopogon	Gnathopogon caerulrscens				gonochorous	homomorphic	male heterogametic		TSD	yes	
-Cypriniformes	Cyprinidae	Phoxinus	Phoxinus eos-neogaeus			2	apomictic						
 Cypriniformes	Cyprinidae	Phoxinus	Phoxinus eos-neogaeus x eos			3	other						
 Cypriniformes	Cyprinidae	Phoxinus	Phoxinus eos-neogaeus x neogaeus			3	other						
 Cypriniformes	Cyprinidae	Phoxinus	Phoxinus eos-neogaeus/eos-neogaeus x eos			2|3	other						
@@ -159,7 +149,6 @@ Perciformes	Cichlidae	Oreochromis	Oreochromis mossambicus-1	44	44		gonochorous		
 Perciformes	Cichlidae	Oreochromis	Oreochromis mossambicus-2				gonochorous	homomorphic	male heterogametic		TSD	yes	
 Perciformes	Cichlidae	Pseudotropheus	Pseudotropheus polit				gonochorous		male heterogametic				
 Perciformes	Cichlidae	Saratherodon	Saratherodon mossambicus				gonochorous	homomorphic	male heterogametic				
-Perciformes	Cichlidae	Tilapia	Tilapia mariae	40	40		gonochorous		female heterogametic			yes	
 Perciformes	Cichlidae	Tilapia	Tilapia zillii	44	44		gonochorous		male heterogametic			yes	
 Perciformes	Eleotridae	Awaous	Awaous strigatus				gonochorous	complex XY	male heterogametic				
 Perciformes	Gobiidae	Apocryptichthus	Apocryptichthus cantoris				gonochorous	homomorphic	male heterogametic				
@@ -169,7 +158,6 @@ Perciformes	Gobiidae	Gobiodon	Gobiodon quinquestriatus	44	44		hermaphrodite
 Perciformes	Gobiidae	Lythrypnus	Lythrypnus nesoites				hermaphrodite						
 Perciformes	Gobiidae	Lythrypnus	Lythrypnus phorellus				hermaphrodite						
 Perciformes	Gobiidae	Mogrunda	Mogrunda obscura	62	62		gonochorous	homomorphic	male heterogametic				
-Perciformes	Gobiidae	Neogobius	Neogobius kessleri	30	29		gonochorous	complex XY	male heterogametic				
 Perciformes	Gobiidae	Trimma	Trimma unisquamis				hermaphrodite						
 Perciformes	Labridae	Epidulus	Epidulus insidiator				hermaphrodite						
 Perciformes	Labridae	Halichoeres	Halichoeres bivattatus				hermaphrodite						
@@ -212,6 +200,7 @@ Perciformes	Serranidae	Hypoplectrodes	Hypoplectrodes puella				hermaphrodite
 Perciformes	Serranidae	Hypoplectrodes	Hypoplectrodes unicolor				hermaphrodite						
 Perciformes	Serranidae	Pseudoanthias	Pseudoanthias elongatus				hermaphrodite						
 Perciformes	Serranidae	Rypticus	Rypticus aurenatus				hermaphrodite						
+Perciformes	Serranidae	Serranus	Serranus fasciatus				hermaphrodite						
 Perciformes	Sparidae	Boops	Boops boops-1	48	48		hermaphrodite						
 Perciformes	Sparidae	Boops	Boops boops-2	48	48		hermaphrodite						
 Perciformes	Sparidae	Crysophrys	Crysophrys major				hermaphrodite						
@@ -265,7 +254,6 @@ Cetartiodactyla	Bovidae	Tetracerus	Tetracerus quatricornis	38	38		gonochorous	XY
 Carnivora	Canidae	Atelocynus 	Atelocynus  microtis	74	74		gonochorous	XY	male heterogametic				
 Carnivora	Canidae	Otocyon 	Otocyon  megalotis	72	72		gonochorous	XY	male heterogametic				
 Carnivora	Canidae	Vulpes 	Vulpes  fulva	34	34		gonochorous	XY	male heterogametic				
-Carnivora	Felidae	Felis	Felis marmorata	38	38		gonochorous	XY	male heterogametic				
 Carnivora	Felidae	Felis	Felis wiedi	36	36		gonochorous	XY	male heterogametic				
 Carnivora	Felidae	Felis 	Felis  lynx 	38	38		gonochorous	XY	male heterogametic				
 Carnivora	Felidae	Lynx 	Lynx  rufus	38	38		gonochorous	XY	male heterogametic				
@@ -477,7 +465,6 @@ Chelonia	Emydidae	Pseudemys	Pseudemys floridana	50	50		gonochorous				TSD Ia
 Chelonia	Kinosternidae	Kinosternon	Kinosternon arizonense	56	56		gonochorous				TSD II		
 Chelonia	Kinosternidae	Kinosternon	Kinosternon scorpioides spp	56	56		gonochorous				TSD II		
 Chelonia	Pelomedusidae	Pelomedua	Pelomedua subrufa	36	36		gonochorous				TSD II		
-Chelonia	Testudinidae	Eurotestudo	Eurotestudo hermanni	52	52		gonochorous				TSD Ia		
 Chelonia	Testudinidae	Malacocherus	Malacocherus tornieri	52	52		gonochorous				TSD Ia		
 Chelonia	Trionychidae	Apalone	Apalone mutica-1	66	66		gonochorous	homomorphic					
 Chelonia	Trionychidae	Apalone	Apalone mutica-2	66	66		gonochorous	homomorphic					
@@ -511,6 +498,7 @@ Squamata	Elapidae	Elapognathus	Elapognathus minor	36	36		gonochorous	ZW	female h
 Squamata	Elapidae	Microcephalophis	Microcephalophis cantoris	35			gonochorous	ZW	female heterogametic				
 Squamata	Elapidae	Micrurus	Micrurus lemniscatus carvalhoi	42	42		gonochorous	ZW	female heterogametic				
 Squamata	Elapidae	Micrurus	Micrurus nigrocinctus nigrocinctus	26	26		gonochorous	ZW	female heterogametic				
+Squamata	Elapidae	Pelamis	Pelamis platura	38	38		gonochorous	ZW	female heterogametic				
 Squamata	Elapidae	Rhinoplocephalus	Rhinoplocephalus boschmai	36	36		gonochorous	ZW	female heterogametic				
 Squamata	Elapidae	Rhinoplocephalus	Rhinoplocephalus nigrostriatus	36	36		gonochorous	ZW	female heterogametic				
 Squamata	Gekkonidae	Gekko	Gekko gekko	38	38		gonochorous	XY	male heterogametic				

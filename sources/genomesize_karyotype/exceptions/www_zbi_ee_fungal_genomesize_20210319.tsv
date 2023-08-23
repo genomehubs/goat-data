@@ -1,6 +1,8 @@
 PHYLUM	ORDER	GENUS	SPECIES	METHOD	1C in pg	1C in Mbp	x	FGSDID	SPECIMEN ID
 Ascomycota	Botryosphaeriales	Phyllosticta	citrichinensis	CS	0.030	29.16		5966	CBS 130529 v1.0
-Ascomycota	Capnodiales	Davidiella	populorum	CS	0.030	29.35		5012	SO2202
+Ascomycota	Capnodiales	Aulographum	hederae	CS	0.033	31.98		5209	CBS 113979 v1.0
+Ascomycota	Capnodiales	Pseudovirgaria	hyperparasitica	CS	0.036	35.44		5412	CBS 121739 v1.0
+Ascomycota	Dothideomycetes	Aeminium	ludgeri	CS	0.023	22.59		6013	DSM 106916 strain E14
 Ascomycota	Eurotiales	Emericella	nidulans	Fe-IC	0.030	29.32		2792	FGSC A4
 Ascomycota	Eurotiales	Emericella	nidulans	CS	0.031	30.16		4991	FGSC A4
 Ascomycota	Eurotiales	Emericella	nidulans	CS	0.031	30.48		5245	from AspGD
@@ -10,14 +12,124 @@ Ascomycota	Eurotiales	Emericella	nidulans	CHEF gel electrophoresis	0.032	31.00		
 Ascomycota	Eurotiales	Emericella	nidulans	CS	0.032	31.00		3930	
 Ascomycota	Eurotiales	Emericella	nidulans	CS	0.032	31.00		3951	strain FGSC A4
 Ascomycota	Eurotiales	Penicillium i	chrysogenum	CS	0.032	31.34		5311	v1.0
-Ascomycota	Hypocreales	Acremonium	alcalophilum	CS	0.037	35.79		5393	v2.0
-Ascomycota	Hypocreales	Acremonium	alcalophilum	CS	0.056	54.42		4848	v2.0
-Ascomycota	Hypocreales	Gliocladium	virens	CS	0.036	35.00		4011	
-Ascomycota	Hypocreales	Gliocladium	virens	CS	0.040	38.80		4989	Gv29-8
-Ascomycota	Hypocreales	Gliocladium	virens	CS	0.040	39.00		4860	Gv29-8 v2.0
+Ascomycota	Helotiales	Arachnopeziza	aranea cf.	Fl-PC	0.033	32.68	2	2215	BARAL 4205
+Ascomycota	Helotiales	Belonopsis	asteroma	Fl-PC	0.069	67.64	4	2102	REG
+Ascomycota	Helotiales	Belonopsis	guestphalicum cf.	Fl-PC	0.077	74.86	4	2125	BARAL 3825
+Ascomycota	Helotiales	Belonopsis	lacustris cf.	Fl-PC	0.063	61.94	4?	2123	BARAL 4212
+Ascomycota	Helotiales	Bisporella	scolochloae	Fl-PC	0.034	33.44	2	2452	REG
+Ascomycota	Helotiales	Bryoscyphus	marchantiae cf.	Fl-PC	0.098	96.14	6	2534	BARAL 3811
+Ascomycota	Helotiales	Cadophora	sp	CS	0.072	70.46		5260	DSE1049 v1.0
+Ascomycota	Helotiales	Calycellina	lutea	Fl-PC	0.075	73.34	4	2339	BARAL 4188
+Ascomycota	Helotiales	Capitotricha	fagiseda	Fl-PC	0.037	36.67	2	2206	REG
+Ascomycota	Helotiales	Ciboria	dumbirensis	Fl-PC	0.054	53.01	3	2372	REG
+Ascomycota	Helotiales	Cistella	acuum agg.	Fl-PC	0.038	37.43	2	2278	BARAL 4198 (Weber 528)
+Ascomycota	Helotiales	Cistella	acuum agg.	Fl-PC	0.038	37.43	2	2277	REG (Weber 373)
+Ascomycota	Helotiales	Claussenomyces	hydnicola cf.	Fl-PC	0.034	33.44	2	2385	MARSON 4367
+Ascomycota	Helotiales	Claussenomyces	luteoviridis cf.	Fl-PC	0.027	26.03	1-2	2381	REG
+Ascomycota	Helotiales	Coleosperma	lacustre cf.	Fl-PC	0.078	76.57	4	2166	BARAL 4211
+Ascomycota	Helotiales	Coronellaria	benkertii	Fl-PC	0.057	55.48	3	2164	BARAL 4138
+Ascomycota	Helotiales	Dasyscyphella	angustipila	Fl-PC	0.071	69.16	4	2259	REG
+Ascomycota	Helotiales	Dasyscyphus	aconiti	Fl-PC	0.033	32.68	2	2275	REG
+Ascomycota	Helotiales	Dasyscyphus	mughonicola	Fl-PC	0.055	53.77	3	2258	BARAL 4207
+Ascomycota	Helotiales	Dermea	prunastri ss. Holm	Fl-PC	0.052	51.30	3	2067	BARAL 3724
+Ascomycota	Helotiales	Dermea	pseudotsugae	Fl-PC	0.031	30.21	2	2065	BARAL 4102
+Ascomycota	Helotiales	Diplonaevia	emergens	Fl-PC	0.048	47.31	3	2169	REG
+Ascomycota	Helotiales	Diplonaevia	glacialis	Fl-PC	0.035	34.20	2	2168	BARAL 4137
+Ascomycota	Helotiales	Drepanopeziza	verrucispora	Fl-PC	0.037	36.67	2	2175	BARAL 4438
+Ascomycota	Helotiales	Durella	macrospora cf.	Fl-PC	0.045	44.08	2-3	2439	REG (Weber 264)
+Ascomycota	Helotiales	Geoglossum	glutinosum	Fl-PC	0.037	35.91	2	2182	BARAL 3929
+Ascomycota	Helotiales	Geoglossum	nigritum	Fl-PC	0.037	36.67	2	2183	BARAL 3893
+Ascomycota	Helotiales	Geoglossum	simile	Fl-PC	0.036	34.96	2	2184	REG
+Ascomycota	Helotiales	Grovesiella	abieticola cf.	Fl-PC	0.075	73.34	4	2428	BARAL 4054
+Ascomycota	Helotiales	Helotium	phiala cf.	Fl-PC	0.032	30.97	2	2453	REG (Weber 110)
+Ascomycota	Helotiales	Helotium	phiala cf.	Fl-PC	0.037	35.91	2	2455	REG (Weber 114)
+Ascomycota	Helotiales	Helotium	phiala cf.	Fl-PC	0.037	35.91	2	2454	REG (Weber 246)
+Ascomycota	Helotiales	Hyalacrotes	hamulata	Fl-PC	0.045	44.08	2-3	2329	BARAL 4196
+Ascomycota	Helotiales	Hyalopeziza	millepunctata	Fl-PC	0.039	38.38	2-3	2321	REG (Weber 557)
+Ascomycota	Helotiales	Hyalopeziza	millepunctata	Fl-PC	0.042	40.66	2-3	2322	REG (Weber 262)
+Ascomycota	Helotiales	Hyalopeziza	millepunctata	Fl-PC	0.044	43.13	2-3	2324	REG (Weber 310)
+Ascomycota	Helotiales	Hyalopeziza	millepunctata	Fl-PC	0.045	44.08	2-3	2325	BARAL 4095 (Weber 620)
+Ascomycota	Helotiales	Hyaloscypha	britannica	Fl-PC	0.030	29.26	2	2298	no herbarium specimen (Weber 241)
+Ascomycota	Helotiales	Hyaloscypha	britannica	Fl-PC	0.034	33.44	2	2299	BARAL 3714 (Weber 16)
+Ascomycota	Helotiales	Hymenoscyphus	calyculus cf.	Fl-PC	0.050	48.83	3	2500	REG (Weber 661)
+Ascomycota	Helotiales	Hymenoscyphus	carpinicola	Fl-PC	0.054	53.01	3	2506	REG (Weber 103)
+Ascomycota	Helotiales	Hymenoscyphus	carpinicola	Fl-PC	0.055	53.77	3	2507	REG (Weber 243)
+Ascomycota	Helotiales	Hymenoscyphus	consobrinus	Fl-PC	0.047	46.36	3	2489	REG
+Ascomycota	Helotiales	Hymenoscyphus	equisetinus	Fl-PC	0.036	34.96	2	2395	REG
+Ascomycota	Helotiales	Hymenoscyphus	herbarum cf.	Fl-PC	0.036	34.96	2	2343	BARAL 3582 REG (Weber 15)
+Ascomycota	Helotiales	Hymenoscyphus	imberbis cf.	Fl-PC	0.032	31.73	2	2484	REG (Weber 625)
+Ascomycota	Helotiales	Hymenoscyphus	sazavae cf.	Fl-PC	0.064	62.70	4	2529	REG (Weber 112)
+Ascomycota	Helotiales	Hymenoscyphus	sazavae cf.	Fl-PC	0.077	74.86	4	2530	REG (Weber 240)
+Ascomycota	Helotiales	Hymenoscyphus	sazavae cf.	Fl-PC	0.081	79.04	4	2532	REG (Weber 127)
+Ascomycota	Helotiales	Hymenoscyphus	sazavae cf.	Fl-PC	0.083	81.51	4	2531	REG (Weber 120)
+Ascomycota	Helotiales	Hysteropezizella	fuscella agg.	Fl-PC	0.019	18.81	1	2172	BARAL 4120
+Ascomycota	Helotiales	Incrupila	viridipilosa	Fl-PC	0.017	17.10	1	2220	BARAL 4013
+Ascomycota	Helotiales	Incrupilella	flexipila	Fl-PC	0.017	17.10	1	2222	BARAL 4045 (Weber 568)
+Ascomycota	Helotiales	Incrupilella	flexipila	Fl-PC	0.017	17.10	1	2221	BARAL 3972 (Weber 481)
+Ascomycota	Helotiales	Lachnum	elatius cf.	Fl-PC	0.036	34.96	2	2243	REG
+Ascomycota	Helotiales	Lachnum	microsporum	Fl-PC	0.036	34.96	2	2244	REG
+Ascomycota	Helotiales	Lachnum	pudicellum	Fl-PC	0.036	34.96	2	2242	REG
+Ascomycota	Helotiales	Lachnum	tenue	Fl-PC	0.036	34.96	2	2241	REG
+Ascomycota	Helotiales	Lachnum	tenuipilosum cf.	Fl-PC	0.047	46.36	3?	2250	no herbarium specimen
+Ascomycota	Helotiales	Lasiobelonium	mollissimum	Fl-PC	0.035	34.20	2.0	2268	BARAL 4078 (Weber 621)
+Ascomycota	Helotiales	Lasiobelonium	mollissimum cf.	Fl-PC	0.032	31.73	2	2270	REG (Weber 550)
+Ascomycota	Helotiales	Lasiobelonium	mollissimum cf.	Fl-PC	0.032	31.73	2	2269	BARAL 3522 (Weber 2)
+Ascomycota	Helotiales	Lasiobelonium	mollissimum cf.	Fl-PC	0.033	32.68	2	2271	BARAL 3520 (Weber 4)
+Ascomycota	Helotiales	Lasiobelonium	nazarovae cf.	Fl-PC	0.033	32.68	2	2263	BARAL 4111
+Ascomycota	Helotiales	Lasiobelonium	nidulum cf.	Fl-PC	0.038	37.43	2	2273	BARAL 4058 (Weber 510)
+Ascomycota	Helotiales	Microscypha	monticola	Fl-PC	0.048	47.31	3	2145	BARAL 4142
+Ascomycota	Helotiales	Mollisia	aquosa cf.	Fl-PC	0.072	70.11	4	2147	BARAL 3984
+Ascomycota	Helotiales	Mollisia	cinerea cf.	Fl-PC	0.047	45.60	3	2084	REG (Weber 187)
+Ascomycota	Helotiales	Mollisia	cinerea cf.	Fl-PC	0.048	47.31	3	2087	REG (Weber 342)
+Ascomycota	Helotiales	Mollisia	cinerea cf.	Fl-PC	0.048	47.31	3	2086	REG (Weber 319)
+Ascomycota	Helotiales	Mollisia	cinerea cf.	Fl-PC	0.048	47.31	3	2085	REG (Weber 141)
+Ascomycota	Helotiales	Mollisia	cinerea cf.	Fl-PC	0.051	49.78	3	2088	REG (Weber 140)
+Ascomycota	Helotiales	Mollisia	coerulans cf.	Fl-PC	0.047	46.36	3	2082	REG
+Ascomycota	Helotiales	Mollisia	escharodes	Fl-PC	0.134	131.10	8	2161	REG
+Ascomycota	Helotiales	Mollisia	lychnidis cf.	Fl-PC	0.130	127.11	8	2160	REG
+Ascomycota	Helotiales	Mollisia	palustris cf.	Fl-PC	0.040	39.14	2?	2077	BARAL 4125 (Weber 643)
+Ascomycota	Helotiales	Mollisina	echinulifera	Fl-PC	0.036	34.96	2	2358	REG
+Ascomycota	Helotiales	Muscicola	dubia	Fl-PC	0.058	56.24	3	2466	BARAL 3878
+Ascomycota	Helotiales	Nimbomollisia	macrospora	Fl-PC	0.055	53.77	3	2133	BARAL 4212
+Ascomycota	Helotiales	Niptera	submelaena	Fl-PC	0.054	53.01	3	2098	REG
+Ascomycota	Helotiales	Ombrophila	longispora cf.	Fl-PC	0.052	51.30	3	2399	BARAL 4214
+Ascomycota	Helotiales	Pachydisca	pilatii	Fl-PC	0.098	96.14	6	2533	REG
+Ascomycota	Helotiales	Pezicula	alba	Fl-PC	0.033	32.68	2	2055	BARAL 4025
+Ascomycota	Helotiales	Pezizella	pulchella ss. Svrèek	Fl-PC	0.056	54.53	3	2355	BARAL 3928
+Ascomycota	Helotiales	Phaeohelotium	italicum ss. Dennis	Fl-PC	0.052	51.30	3	2354	REG
+Ascomycota	Helotiales	Phialina	lachnobrachya	Fl-PC	0.049	48.07	3	2336	REG
+Ascomycota	Helotiales	Phialina	lachnobrachya	Fl-PC	0.053	52.06	3	2337	BARAL 4204
+Ascomycota	Helotiales	Pirottaea	adenostylidis	Fl-PC	0.068	66.88	4	2140	REG
+Ascomycota	Helotiales	Pirottaea	saxonica	Fl-PC	0.072	70.87	4	2141	BARAL 4080
+Ascomycota	Helotiales	Psilachnum	lanceolato-paraphysatum	Fl-PC	0.034	33.44	2	2287	BARAL 4078
+Ascomycota	Helotiales	Pyrenopeziza	plicata cf.	Fl-PC	0.078	76.57	4	2148	REG
+Ascomycota	Helotiales	Scutomollisia	lanceata	Fl-PC	0.031	30.21	2	2073	BARAL 4118
+Ascomycota	Helotiales	Scutomollisia	russea	Fl-PC	0.068	66.88	4	2101	BARAL 3827
+Ascomycota	Helotiales	Spathularia	pectinata	Fl-PC	0.102	100.13	6	2191	BARAL 4258
+Ascomycota	Helotiales	Stromatinia	paridis cf.	Fl-PC	0.052	50.54	3	2582	BARAL 4069
+Ascomycota	Helotiales	Tapesia	cinerella cf.	Fl-PC	0.048	47.31	3	2094	REG (Weber 294)
+Ascomycota	Helotiales	Tapesia	cinerella cf.	Fl-PC	0.053	52.06	3	2093	REG (Weber 365)
+Ascomycota	Helotiales	Unguiculariopsis	rehmii	Fl-PC	0.032	31.73	2	2330	BARAL 4150
+Ascomycota	Helotiales	Urceolella	conspicua	Fl-PC	0.068	66.88	3	2319	BARAL 3851
+Ascomycota	Helotiales	Urceolella	tetraspora	Fl-PC	0.042	40.66	2-3	2328	REG
+Ascomycota	Helotiales	Venturiocistella	pini cf.	Fl-PC	0.054	53.01	3	2427	BARAL 4139
 Ascomycota	Hypocreales	Hypocrea	citrina	Fl-PC	0.079	77.33		2010	REG
 Ascomycota	Hypocreales	Neotyphodium	lolii	CHEF gel electrophoresis	0.031	30.60	1	3992	
+Ascomycota	Hysteriales	Hysteropatella	elliptica	Fl-PC	0.022	21.09		2051	BARAL 4055 (Weber 506)
+Ascomycota	Hysteriales	Hysteropatella	elliptica	Fl-PC	0.023	22.04		2052	MARSON 4050 (Weber 543)
 Ascomycota	Hysteriales	Rhystidhysteron	rufulum	CS	0.041	40.18		5011	
+Ascomycota	Incertae sedis	Aaosphaeria	arxii	CS	0.040	38.90		5372	CBS 175.79 v1.0
+Ascomycota	Incertae sedis	Amorphotheca	resinae	CS	0.029	28.63		5256	(ATCC 22711)
+Ascomycota	Incertae sedis	Apiospora	montagnei	CS	0.049	47.67		5266	
+Ascomycota	Incertae sedis	Baeomyces	rufus	Fl-PC	0.026	25.27	1-2	2054	REG
+Ascomycota	Incertae sedis	Chalara	longipes	CS	0.054	52.43		5261	
+Ascomycota	Incertae sedis	Colletotrichum	acutatum	CS	0.051	50.04		5278	MH 18
+Ascomycota	Incertae sedis	Colletotrichum	acutatum	PI-FC	0.070	68.00		5950	LPV653
+Ascomycota	Incertae sedis	Colletotrichum	cereale	CS	0.053	52.15		5982	CBS 129662 v1.0
+Ascomycota	Incertae sedis	Colletotrichum	gloeosporioides	CS	0.060	58.84		5279	23 v1.0
+Ascomycota	Incertae sedis	Colletotrichum	graminicola	CS	0.053	51.60		5269	M1.001
+Ascomycota	Incertae sedis	Colletotrichum	higginsianum	CS	0.050	49.08		5270	IMI 349063
+Ascomycota	Incertae sedis	Glarea	lozoyensis	CS	0.040	39.51		5390	ATCC 20868
 Ascomycota	incertae sedis	Glomerella	graminicola	genomic reconstruction	0.045	44.00		4413	M1.401
 Ascomycota	incertae sedis	Glomerella	graminicola	Re-association kinetics	0.049	48.00		4410	M1.401
 Ascomycota	incertae sedis	Glomerella	graminicola	Re-association kinetics	0.051	50.00		4412	S16.001
@@ -37,12 +149,41 @@ Ascomycota	Incertae sedis	Magnaporthe	oryzae	CS	0.041	40.00		4831	Taxonomy ID: 2
 Ascomycota	Incertae sedis	Magnaporthe	oryzae	CS	0.043	41.70		5079	Taxonomy ID: 242507; strain 70-15
 Ascomycota	Incertae sedis	Myriogonium sp.		Fl-PC	0.015	14.63	1	2390	BARAL 4153 (Weber 650)
 Ascomycota	Incertae sedis	Myriogonium sp.		Fl-PC	0.017	17.10	1	2391	MARSON 4404
+Ascomycota	Incertae sedis	Orbilia	auricolor	Fl-PC	0.086	83.98	4?	2549	REG (Weber 291)
+Ascomycota	Incertae sedis	Orbilia	auricolor	Fl-PC	0.102	100.13	4?	2550	REG (Weber 304)
+Ascomycota	Incertae sedis	Orbilia	coccinella	Fl-PC	0.058	56.24	2-3?	2548	REG
+Ascomycota	Incertae sedis	Orbilia	comma	Fl-PC	0.033	32.68	1-2?	2541	BARAL 3996
+Ascomycota	Incertae sedis	Orbilia	delicatula	Fl-PC	0.023	22.04	1?	2543	REG (Weber 143)
+Ascomycota	Incertae sedis	Orbilia	delicatula	Fl-PC	0.044	43.13	2?	2544	REG (Weber 143)
+Ascomycota	Incertae sedis	Orbilia	delicatula	Fl-PC	0.045	44.08	2?	2545	REG (Weber 138)
+Ascomycota	Incertae sedis	Orbilia	delicatula	Fl-PC	0.046	44.84	2?	2546	REG (Weber 134)
+Ascomycota	Incertae sedis	Orbilia	sarraziniana	Fl-PC	0.048	47.31	2	2547	REG
+Ascomycota	Incertae sedis	Orbilia	vinosa	Fl-PC	0.043	42.37	2?	2542	REG
+Ascomycota	Incertae sedis	Sodiomyces	alkalinus	CS	0.044	43.45		5294	v1.0
+Ascomycota	Incertae sedis	Stachybotrys	chartarum	CS	0.038	36.68		5591	ASM102136v1
+Ascomycota	Incertae sedis	Stachybotrys	chartarum		0.041	40.00		3970	
+Ascomycota	Incertae sedis	Symbiotaphrina	kochii	CS	0.025	24.83		2702	CBS 250.77
 Ascomycota	Incertae sedis	Tromeropsis	microtheca cf.	Fl-PC	0.026	25.27		2009	REG
+Ascomycota	Incertae sedis	Verticillium	alfalfae	CS	0.034	32.83		5394	VaMs.102
+Ascomycota	Incertae sedis	Verticillium	dahliae	CS	0.035	33.83		4861	v1.0
+Ascomycota	Incertae sedis	Zymoseptoria	ardabiliae	CS	0.032	31.55		5377	STIR04_1.1.1
+Ascomycota	Incertae sedis	Zymoseptoria	ardabiliae	CS	0.034	32.86		5586	STIR04_1.1.2
+Ascomycota	Incertae sedis	Zymoseptoria	pseudotritici	CS	0.032	31.62		5616	Strain STIR04_2.2.1
+Ascomycota	Incertae sedis	Zymoseptoria	pseudotritici	CS	0.033	32.10		5615	Strain STIR04_4.3.1
+Ascomycota	Incertae sedis	Zymoseptoria	pseudotritici	CS	0.033	32.50		5618	Strain STIR04_5.9.1
+Ascomycota	Incertae sedis	Zymoseptoria	pseudotritici	CS	0.033	32.66		5376	STIR04_2.2.1
+Ascomycota	Incertae sedis	Zymoseptoria	pseudotritici	CS	0.034	32.80		5617	Strain STIR04_5.3
+Ascomycota	Incertae sedis	Zymoseptoria	pseudotritici	CS	0.034	33.46		5619	Strain STIR04_3.11.1
+Ascomycota	Incertae sedis	Zymoseptoria	pseudotritici	CS	0.038	36.80		5620	BioSample SAMN03333222
+Ascomycota	Incertae sedis	Zymoseptoria	tritici	CS	0.033	31.79		5613	ST99CH_1A5
+Ascomycota	Incertae sedis	Zymoseptoria	tritici	CS	0.033	32.64		5614	STIR04_A26b
+Ascomycota	Incertae sedis	Zymoseptoria	tritici	CS	0.039	37.86		5611	ST99CH_3D7
+Ascomycota	Incertae sedis	Zymoseptoria	tritici	CS	0.041	39.69		5582	IPO323
+Ascomycota	Incertae sedis	Zymoseptoria	tritici	CS	0.041	39.70		5612	ST99CH_1A5
 Ascomycota	Lecanorales	Calicium	adspersum cf.	Fl-PC	0.026	25.27		2007	REG
+Ascomycota	Microthyriales	Tothia	fuscella	CS	0.038	36.78		5384	CBS 130266 v1.0
 Ascomycota	Orbiliales	Arthrobotrys	oligospora	CS	0.041	40.07		5234	ATCC 24927 v1.0
 Ascomycota	Ostropales	Stictis	radiata cf.	Fl-PC	0.032	31.73		2000	REG
-Ascomycota	Pezizales	Fimaria sp.		Fl-PC	0.049	48.07	3	2664	REG (Weber 192)
-Ascomycota	Pezizales	Fimaria sp.		Fl-PC	0.052	51.30	3	2665	REG (Weber 186)
 Ascomycota	Pezizales	Otidea	alutacea cf.	Fl-PC	0.037	36.67	2	2667	REG
 Ascomycota	Pezizales	Otidea	cochleata cf.	Fl-PC	0.035	34.20	2	2666	REG
 Ascomycota	Pezizales	Pachyella	celtica	Fl-PC	0.092	90.44	6	2649	REG
@@ -53,75 +194,130 @@ Ascomycota	Pezizales	Scutellinia	ceijpii	Fl-PC	0.029	28.50	2	2688	REG (Weber 211
 Ascomycota	Pezizales	Scutellinia	ceijpii	Fl-PC	0.032	30.97	2	2689	REG (Weber 210)
 Ascomycota	Pezizales	Scutellinia	ceijpii	Fl-PC	0.032	31.73	2	2690	REG (Weber 66)
 Ascomycota	Pezizales	Scutellinia	ceijpii	Fl-PC	0.035	34.20	2	2691	REG (Weber 58)
-Ascomycota	Pezizales	Underwoodia	fuegiana	Fl-PC	0.096	93.67	6	2630	REG
-Ascomycota	Pleosporales	Stagonospora		CS	0.037	36.08		5386	SRC1lsM3a v1.0
-Ascomycota	Saccharomycetales	Candida	caseinolytica	CS	0.009	9.18		5015	Y-17796
-Ascomycota	Saccharomycetales	Candida	lusitaniae	CS	0.016	16.00		3962	strain ATCC 42720
-Ascomycota	Saccharomycetales	Candida	tenuis	CS	0.011	10.70		5016	NRRL Y-1498
-Ascomycota	Saccharomycetales	Pichia	sorbitophila	CHEF gel electrophoresis	0.014	13.90		4423	CBS 7064
+Ascomycota	Pleosporales	Leptosphaeria	maculans	CS	0.046	44.89		5005	
 Ascomycota	Saccharomycetes	Lipomyces	starkeyi NRRL Y-11557	CS	0.022	21.27		5922	
-Ascomycota	Sordariales	Lasiosphaeria	spermoides	Fl-PC	0.025	24.51		2032	REG
 Ascomycota	Sordariales	Myceliophthora	thermophila	CS	0.040	38.74		4855	
-Ascomycota	Xylariales	Endoxyla	avocetta	CS	0.057	56.23		5265	NRRL 3190 v1.0
 Ascomycota	Xylariales	Hypoxylon	multiforme	Fl-PC	0.025	24.51	0.0	2037	REG
 Ascomycota	Xylariales	Hypoxylon	sp	CS	0.039	37.70		5281	CI-4A v1.0
 Ascomycota	Xylariales	Hypoxylon	sp	CS	0.048	46.59		5282	CO27-5 v1.0
 Ascomycota	Xylariales	Hypoxylon	sp	CS	0.048	47.30		5283	EC38 v1.0
 Ascomycota	Xylariales	Pestalotiopsis	sp	CS	0.047	46.41		6068	NC0098 v1.0
+Ascomycota	Xylariales	Xylona	heveae	CS	0.025	24.34		5410	TC161 v1.0
 Basidiomycota	Agaricales	Armillaria sp.	NABS XI	PI-FC	0.074	72.37	2	4103	SP82-14
 Basidiomycota	Agaricales	Armillaria sp.	NABS XI	PI-FC	0.078	76.28	2	4104	SP83-07
 Basidiomycota	Agaricales	Auriculariopsis	albomellea	CS	0.052	50.89		5969	FP 102339 v1.0
 Basidiomycota	Agaricales	Coprinopsis	Coprinopsis strossmayeri	CS	0.034	33.32		5685	
 Basidiomycota	Agaricales	Cortinarius	glaucopus A	CS	0.065	63.45		5480	T 2004 276 v2.0
-Basidiomycota	Agaricales	Cystoderma	adnatifolium	FC	0.049	47.75	3	2722	TAAM 147343,171701,147356, 147360, 147381; H 92-1155
+Basidiomycota	Agaricomycetes	Hydnum	repandum	CS	0.069	67.14		5915	L. 1753
+Basidiomycota	Agaricomycetes	Inonotus	hispidus	PI-FC	0.042	41.00		5947	isolate LPV629
+Basidiomycota	Agaricomycetes	Lactarius	quietus	CS	0.119	115.90		5916	S23C v1.0
+Basidiomycota	Agaricomycetes	Lactarius	quietus	CS	0.119	115.90		5919	S23C v1.0
+Basidiomycota	Agaricomycetes	Lentinellus	vulpinus	CS	0.035	34.71		5920	AHS73672-sp v1.0
 Basidiomycota	Agaricostilbomycetes	Agaricostilbum	hyphaenes	CS	0.018	17.89		5504	ATCC MYA-4628 v1.0
 Basidiomycota	Auriculariales	Aporpium	caryae	CS	0.040	39.53		5493	L-13461
 Basidiomycota	Boletales	Austrogaster	marthae	DAPI-PC	0.099	96.65	4	4201	REG 3410
 Basidiomycota	Boletales	Austropaxillus	contulmensis	DAPI-PC	0.093	91.28	4	4203	REG 539
+Basidiomycota	Boletales	Boletus	ferrugineus	DAPI-PC	0.067	65.41	2	4289	REG 3457
 Basidiomycota	Boletales	Boletus	griseus	DAPI-PC	0.042	41.00	1	4313	REG 301
-Basidiomycota	Boletales	Boletus	ornatipes	DAPI-PC	0.039	38.08	1	4314	REG 329
-Basidiomycota	Boletales	Boletus	ornatipes	DAPI-PC	0.043	41.97	1	4315	REG 399
-Basidiomycota	Boletales	Boletus	pallidus	DAPI-PC	0.043	42.47	1	4311	REG 307
+Basidiomycota	Boletales	Boletus	luridiformis	DAPI-PC	0.092	90.31	3	4339	REG 2977
+Basidiomycota	Boletales	Boletus	luridiformis	DAPI-PC	0.099	97.13	3	4340	REG 2974
+Basidiomycota	Boletales	Boletus	luridiformis	DAPI-PC	0.100	98.11	3	4338	REG 2975
+Basidiomycota	Boletales	Boletus	luridiformis	DAPI-PC	0.101	98.59	3	4337	REG 2976
+Basidiomycota	Boletales	Boletus	radicans	DAPI-PC	0.069	67.84	2	4334	REG 2968
+Basidiomycota	Boletales	Boletus	radicans	DAPI-PC	0.076	74.68	2	4333	REG 2967
 Basidiomycota	Boletales	Boletus	subtomentosus	DAPI-PC	0.059	58.08	2	4297	REG 3459
 Basidiomycota	Boletales	Boletus	subtomentosus	DAPI-PC	0.061	60.04	2	4294	REG 3463
 Basidiomycota	Boletales	Boletus	subtomentosus	DAPI-PC	0.065	63.45	2	4295	REG 3460
 Basidiomycota	Boletales	Boletus	subtomentosus	DAPI-PC	0.068	66.87	2	4296	REG 3461
-Basidiomycota	Boletales	Gyrodon	merulioides	DAPI-PC	0.056	54.66	2	4216	REG 479
-Basidiomycota	Boletales	Leccinum	chromapes	DAPI-PC	0.039	38.56	1	4342	REG 444
-Basidiomycota	Boletales	Leccinum	chromapes	DAPI-PC	0.041	40.51	1	4341	REG 2999
-Basidiomycota	Boletales	Leccinum	rubropunctum	DAPI-PC	0.036	35.63	1	4344	REG 333
-Basidiomycota	Boletales	Leucogyrophana	romellii	DAPI-PC	0.054	52.72	2	4158	REG 401
 Basidiomycota	Boletales	Porphyrellus	fumosipes	DAPI-PC	0.109	106.40	3	4376	REG 378
 Basidiomycota	Boletales	Rhizoctonia	cucumeris	CS	0.049	47.66		5436	AG-1 IB
 Basidiomycota	Boletales	Rhizoctonia	cucumeris	CS	0.050	48.51		5663	AG-1 IB
 Basidiomycota	Boletales	Rhizoctonia	cucumeris	Nanopore-Generated Reads	0.055	54.00		5550	
 Basidiomycota	Boletales	Suillus	albidipes	DAPI-PC	0.066	64.43	2	4253	REG 627
-Basidiomycota	Boletales	Xerocomus	castanellus	DAPI-PC	0.036	35.14	1	4285	REG 330
+Basidiomycota	Corticiales	Dendrothele	bispora	CS	0.134	130.65		5476	CBS 962.96 v1.0
+Basidiomycota	Erythrobasidiales	Heterogastridium	pycnidioideum	CS	0.018	17.58		5508	ATCC MYA-4631 v1.0
 Basidiomycota	Hymenochaetales	Phellinus	ialni	DAPI-IC	0.050	49.33		5881	CBS 380-72; TFC 2006-1
 Basidiomycota	Hymenochaetales	Phellinus	ialni	DAPI-IC	0.050	49.33		5882	TAAM191390; TFC 2005-123
 Basidiomycota	Hymenochaetales	Phellinus	ialni	DAPI-IC	0.057	56.00		5880	TAAM 191375; TFC 2005-33
 Basidiomycota	Hymenochaetales	Phellinus	ialni	DAPI-IC	0.065	64.00		5883	TAAM 191388; TFC 2005-40
-Basidiomycota	Polyporales	Ceriporiopsis	subvermispora	CS	0.040	38.97		5541	B
-Basidiomycota	Polyporales	Ceriporiopsis	subvermispora	CS	0.040	39.00		4937	
+Basidiomycota	Mixiomycetes	Mixia	osmundae	CS	0.014	13.60		5097	
 Basidiomycota	Pucciniales	Uromyces	bidentis	FC	2.545	2489.00	1	5523	
 Basidiomycota	Russulales	Russula	Russula	CS	0.050	48.53		5992	BPL707 v1.0
-Basidiomycota	Sebacinales	Sebacina	vermifera	CS	0.039	38.09		5428	MAFF 305830 v1.0
 Basidiomycota	Sporidiobolales	Sporobolomyces	linderae	CS	0.019	18.24		5513	CBS 7893 v1.0
 Basidiomycota	Tritirachiales	Tritirachium	sp	CS	0.019	18.89		5514	CBS 265.96 v1.0
-Chytridiomycota	Neocallimastigales	Piromyces sp.		CS	0.031	30.00		4008	Piromyces sp. E2
-Chytridiomycota	Neocallimastigales	Piromyces sp.		CS	0.073	71.02		5335	E2 v1.0
+Basidiomycota	Ustilaginales	Classicula	fluitans	CS	0.054	52.67		5509	ATCC 64713 v1.0
+Glomeromycota	Diversisporales	Gigaspora	margarita	DAPI-PC	0.984	962.55		4082	HC/ Fungi E10
+Glomeromycota	Diversisporales	Gigaspora	margarita	DAPI-PC	1.024	1001.57		4081	HC/ Fungi E10
+Glomeromycota	Diversisporales	Scutellospora	castanea	Re-association kinetics	0.813	795.00	1	3926	
 Glomeromycota	Glomerales	Glomus	etunicatum	PI-FC	0.038	37.45		3928	
 Glomeromycota	Glomerales	Glomus	intraradice	FC	0.153	150.00		5561	industrial strain produced by AMykor GmbH (Germany)
 Glomeromycota	Glomerales	Glomus	intraradice	Fe-IC	0.168	164.05		5563	DAOM197198
 Glomeromycota	Glomerales	Glomus	intraradice	Fe-IC	0.183	178.52		5564	industrial strain produced by AMykor GmbH (Germany)
+Glomeromycota	Glomerales	Glomus	intraradices	PI-FC	0.014	13.93	1	4407	DAOM 181 602
+Glomeromycota	Glomerales	Glomus	intraradices	PI-FC	0.015	14.37	1	4405	DAOM 181 602
+Glomeromycota	Glomerales	Glomus	intraradices	genomic reconstruction	0.016	15.74	1	4409	DAOM 181 602
+Glomeromycota	Glomerales	Glomus	intraradices	Re-association kinetics	0.017	16.54	1	4408	DAOM 181 602
+Glomeromycota	Glomerales	Glomus	intraradices	FC	0.156	153.00		5202	AMykor
+Glomeromycota	Glomerales	Glomus	intraradices	FC	0.158	154.80		5203	DAOM197198
 Glomeromycota	Glomerales	Glomus	versiforme	DAPI-PC	0.333	325.19		4079	HC/ Fungi E01
 Glomeromycota	Glomerales	Glomus	versiforme	DAPI-PC	0.346	338.19		4016	HC/ Fungi E01
 Glomeromycota	Glomerales	Glomus	versiforme	DAPI-PC	0.359	351.20		4080	HC/ Fungi E01
+Glomeromycota	Glomerales	Rhizophagus	irregularis	CS	0.156	153.00		5562	DAOM-197198 grown in root culture of carrot (Daucus carota)
+Zygomycota	Kickxellales	Coemansia	reversa	CS	0.022	21.84		5337	NRRL 1564 v1.0
+Zygomycota	Kickxellales	Martensiomyces	pterosporus	CS	0.020	19.82		5338	CBS 209.56 v1.0
+Zygomycota	Kickxellales	Ramicandelaber	brevisporus	CS	0.026	25.53		5339	CBS 109374
+Zygomycota	Mucorales	Circinella	umbellata	CS	0.052	51.27		5976	NRRL1351 v1.0
+Zygomycota	Mucorales	Cokeromyces	recurvatus	CS	0.029	28.12		5971	NRRL 2243 v1.0
+Zygomycota	Mucorales	Cunninghamella	echinulata	CS	0.030	29.00		5970	NRRL 1382 v1.0
 Zygomycota	Mucorales	Fennellomyces	sp.	CS	0.047	45.90		5978	T-0311 v1.0
+Zygomycota	Mucorales	Gilbertella	persicaria	CS	0.026	25.73		5985	CBS 190.32-T v1.0
+Zygomycota	Mucorales	Mucor	ambiguus	CS	0.032	31.66		5837	NBRC 6742
+Zygomycota	Mucorales	Mucor	bainieri	CHEF gel electrophoresis	0.044	42.60		4040	NRRL A-11496 (type culture)
+Zygomycota	Mucorales	Mucor	circinelloides	CHEF gel electrophoresis	0.031	30.00		4037	FRR 2480
+Zygomycota	Mucorales	Mucor	circinelloides	CHEF gel electrophoresis	0.033	32.20		4038	FRR 2479
+Zygomycota	Mucorales	Mucor	circinelloides	CHEF gel electrophoresis	0.035	34.60		4039	CNCTC 1330
+Zygomycota	Mucorales	Mucor	circinelloides	CS	0.037	36.60		5025	CBS277.49
+Zygomycota	Mucorales	Mucor	indicus	CS	0.041	39.80		5836	B7402
+Zygomycota	Mucorales	Mucor	irregularis	CS	0.035	33.88		5833	B50
+Zygomycota	Mucorales	Mucor	mucedo	CHEF gel electrophoresis	0.031	30.20		4045	WRL CN(M) 122
+Zygomycota	Mucorales	Mucor	plumbeus	CHEF gel electrophoresis	0.041	39.80		4043	NRRL 687
+Zygomycota	Mucorales	Mucor	plumbeus	CHEF gel electrophoresis	0.042	40.70		4044	CCFC 144780
+Zygomycota	Mucorales	Mucor	racemosus		0.040	39.00		3982	
+Zygomycota	Mucorales	Mucor	racemosus	CHEF gel electrophoresis	0.041	40.00		4042	WRL CN(M) 162
+Zygomycota	Mucorales	Mucor	racemosus	CHEF gel electrophoresis	0.046	44.70		4041	NRRL 3640 (type culture)
+Zygomycota	Mucorales	Mucor	racemosus	CS	0.067	65.53		5838	B9645
+Zygomycota	Mucorales	Mucor	velutinosus	CS	0.037	35.85		5834	B5328
+Zygomycota	Mucorales	Phycomyces	blakesleeanus		0.031	30.00		3981	
+Zygomycota	Mucorales	Phycomyces	blakesleeanus	CS	0.041	40.00		4009	
+Zygomycota	Mucorales	Phycomyces	blakesleeanus	CS	0.055	53.90		5026	NRRL1555
+Zygomycota	Mucorales	Pilaira	anomala	CS	0.036	34.90		5979	RSA1997 v1.0
+Zygomycota	Mucorales	Radiomyces	spectabilis	CS	0.031	30.41		5989	NRRL 2753 (= CBS 255.60)
+Zygomycota	Mucorales	Rhizomucor	miehei	CS	0.028	27.60		5107	CAU432
+Zygomycota	Mucorales	Rhizomucor	pusillus	CS	0.026	25.64		5840	Taxonomy ID: 4840
 Zygomycota	Mucorales	Rhizomucor	variabilis	CS	0.034	33.04		5839	B7584
+Zygomycota	Mucorales	Rhizopus	arrhizus	CS	0.040	39.06		5621	Strain 99-892
+Zygomycota	Mucorales	Rhizopus	arrhizus	CS	0.041	40.29		5622	Strain HUMC 02
+Zygomycota	Mucorales	Rhizopus	arrhizus	CS	0.042	41.45		5627	Strain 99-133
+Zygomycota	Mucorales	Rhizopus	arrhizus	CS	0.044	42.78		5626	Strain Type I NRRL 21396
+Zygomycota	Mucorales	Rhizopus	arrhizus	CS	0.044	42.90		5628	Strain 97-1192
+Zygomycota	Mucorales	Rhizopus	arrhizus	CS	0.044	43.27		5623	Strain B7407
+Zygomycota	Mucorales	Rhizopus	arrhizus	CS	0.044	43.35		5624	Strain Type I NRRL 13440
+Zygomycota	Mucorales	Rhizopus	arrhizus	CS	0.049	47.53		5625	Strain Type I NRRL 18148
+Zygomycota	Mucorales	Rhizopus	microsporus	CS	0.027	25.97		5345	v1.0
+Zygomycota	Mucorales	Rhizopus	microsporus	CS	0.047	45.74		5344	CCTCC M201021
+Zygomycota	Mucorales	Rhizopus	microsporus	CS	0.050	48.73		5585	RMATCC62417_Allpaths-LG
 Zygomycota	Mucorales	Rhizopus	oryzae	CS	0.036	35.00		2901	
 Zygomycota	Mucorales	Rhizopus	oryzae	CS	0.038	37.46		5841	99-892
 Zygomycota	Mucorales	Rhizopus	oryzae	CS	0.041	40.00		4932	RA 99-880
 Zygomycota	Mucorales	Rhizopus	oryzae	CS	0.047	46.10		5027	99-880 from Broad
 Zygomycota	Mucorales	Rhizopus	rhizus	CS	0.042	40.78		5584	RA 99-880
+Zygomycota	Mucorales	Rhizopus	stolonifer	CS	0.039	38.03		5842	B9770
+Zygomycota	Mucorales	Spinellus	fusiger	CS	0.039	38.20		5990	NRRL 22323 v1.0
+Zygomycota	Umbelopsidales	Umbelopsis	ramanniana	CS	0.024	23.08		5346	AG # v1.0
 Zygomycota	Umbelopsidales	Umbelopsis	sp. nov.	CS	0.023	22.50		5996	AD052 v1.0
+Zygomycota	Zoopagales	Syncephalis	fuscata	CS	0.030	29.36		5984	S228 v1.0
+Zygomycota	Zoopagales	Syncephalis	fuscata	CS	0.030	29.36		5986	S228 v1.0
+Zygomycota	Entomophthorales	Conidiobolus	coronatus	CS	0.041	39.90		5340	NRRL28638 v1.0
+Zygomycota	Entomophthorales	Conidiobolus	thromboides	CS	0.025	24.64		5341	FSU 715
+Zygomycota	Mucorales	Backusella	circina	CS	0.050	48.65		5342	FSU 941 v1.0
+Zygomycota	Mucorales	Lichtheimia	hyalospora	CS	0.037	36.58		5343	JMRC:FSU:9682

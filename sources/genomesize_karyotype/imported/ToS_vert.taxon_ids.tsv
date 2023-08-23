@@ -19,6 +19,7 @@ taxon_id	input	rank
 200927	Adelphobates quinquevittatus	species
 92734	Ameerega picta	species
 92724	Dendrobates tinctorius	species
+92733	Allobates femoralis	species
 384900	Ameerega flavopicta	species
 161872	Ameerega hahneli	species
 8443	Alytes obstetricans	species
@@ -51,6 +52,9 @@ taxon_id	input	rank
 118230	Leiopelma archeyi	species
 43508	Leiopelma hamiltoni	species
 51644	Leiopelma hochstetteri	species
+448649	Pristimantis euphronides	species
+449743	Strabomantis biporcatus	species
+448888	Pristimantis shrevei	species
 76064	Engystomops petersi	species
 247950	Eupsophus insularis	species
 247951	Eupsophus migueli	species
@@ -66,6 +70,7 @@ taxon_id	input	rank
 51251	Neobatrachus sutor	species
 191477	Pelobates fuscus	species
 43542	Pelodytes punctatus	species
+8364	Xenopus tropicalis	species
 8355	Xenopus laevis	species
 105430	Xenopus ruwenzoriensis	species
 167930	Amolops mantzorum	species
@@ -85,8 +90,10 @@ taxon_id	input	rank
 146672	Lithobates sphenocephalus	species
 113384	Rana tagoi	species
 8407	Rana temporaria	species
+103373	Hoplobatrachus tigerinus	species
 156869	Rana tsushimensis	species
 164741	Tomopterna delalandii	species
+129011	Laliostoma labrosum	species
 8298	Ambystoma laterale	species
 8296	Ambystoma mexicanum	species
 8305	Ambystoma tigrinum	species
@@ -229,6 +236,7 @@ taxon_id	input	rank
 247727	Amadina fasciata	species
 187413	Amandava subflava	species
 247745	Emblema pictum	species
+44316	Chloebia gouldiae	species
 247731	Erythrura trichroa	species
 187427	Estrilda astrild	species
 247812	Euodice malabarica	species
@@ -244,6 +252,7 @@ taxon_id	input	rank
 247741	Poephila cincta	species
 522439	Poephila personata	species
 247740	Stagonopleura guttata	species
+247775	Stizoptera bichenovii	species
 59729	Taeniopygia guttata	species
 247673	Uraeginthus bengalus	species
 9135	Serinus canaria	species
@@ -389,6 +398,7 @@ taxon_id	input	rank
 1204396	Garra lamta	species
 273620	Squalius carolitertii	species
 263744	Squalius pyrenaicus	species
+307691	Chrosomus eos x Chrosomus neogaeus	species
 58319	Scardinius erythrophthalmus	species
 70739	Squalius alburnoides	species
 155067	Vimba vimba	species
@@ -498,6 +508,7 @@ taxon_id	input	rank
 50812	Pseudocrenilabrus multicolor	species
 47969	Oreochromis aureus	species
 81341	Satanoperca jurupari	species
+158779	Pelmatolapia mariae	species
 215370	Cirrhitichthys aprinus	species
 1633475	Cirrhitichthys aureus	species
 586806	Cirrhitichthys falco	species
@@ -533,6 +544,7 @@ taxon_id	input	rank
 314003	Lythrypnus dalli	species
 1193726	Lythrypnus spilus	species
 320610	Lythrypnus zebra	species
+320565	Ponticola kessleri	species
 448039	Paragobiodon echinocephalus	species
 166758	Priolepis eugenius	species
 990230	Priolepis hipoliti	species
@@ -688,7 +700,6 @@ taxon_id	input	rank
 1401209	Sacura margaritacea	species
 184441	Serranus baldwini	species
 94953	Serranus cabrilla	species
-237562	Serranus psittacinus	species
 357812	Serranus hepatus	species
 237618	Serranus phoebe	species
 349661	Serranus scriba	species
@@ -862,6 +873,7 @@ taxon_id	input	rank
 9696	Puma concolor	species
 46844	Leopardus geoffroyi	species
 61408	Otocolobus manul	species
+61410	Pardofelis marmorata	species
 61379	Felis nigripes	species
 32538	Leopardus pardalis	species
 61405	Leptailurus serval	species
@@ -1132,6 +1144,7 @@ taxon_id	input	rank
 510613	Podocnemis sextuberculata	species
 227871	Podocnemis unifilis	species
 167804	Aldabrachelys gigantea	species
+86976	Testudo hermanni	species
 66189	Chelonoidis niger	species
 38772	Gopherus agassizii	species
 38773	Gopherus polyphemus	species
@@ -1285,7 +1298,6 @@ taxon_id	input	rank
 111176	Notechis ater	species
 8663	Notechis scutatus	species
 8668	Oxyuranus scutellatus	species
-8688	Hydrophis platurus	species
 8670	Pseudechis australis	species
 239756	Pseudechis butleri	species
 239755	Pseudechis guttatus	species
