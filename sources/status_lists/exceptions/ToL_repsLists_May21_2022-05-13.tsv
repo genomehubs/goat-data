@@ -1,5 +1,4 @@
 	gen	sp	fam	family_representative	long_list	other_priority
-11	Silobia	rufescens	Acarosporaceae		DTOL	
 12	Trimmatothelopsis	smaragdula	Acarosporaceae		DTOL	
 34	Acrocephalus	schoenobaenus	Acrocephalidae	DTOL	DTOL	
 35	Acrocephalus	scirpaceus	Acrocephalidae	DTOL	DTOL	
@@ -10,7 +9,6 @@
 196	Comatricha	nigra	Amaurochaetidae		DTOL	
 197	Enerthenema	papillatum	Amaurochaetidae	DTOL	DTOL	
 198	Stemonitopsis	typhina	Amaurochaetidae	DTOL	DTOL	
-229	Serpoleskea	confervoides	Amblystegiaceae		DTOL	
 237	Anguillospora	rosea	Amniculicolaceae		DTOL	
 245	Amphianthus	dohrnii	Amphianthidae	DTOL	DTOL	
 246	Amphidium	lapponicum	Amphidiaceae	DTOL	DTOL	
@@ -48,6 +46,7 @@
 1385	Ceratosphaeria	lampadophora	Ceratosphaeriaceae	DTOL	DTOL	
 1386	Ceratosphaeria	fragilis	Ceratosphaeriaceae	DTOL	DTOL	
 1392	Agitata	tremulans	Cercomonadidae		DTOL	DTOL
+1447	Chaetosphaeria	myriocarpa	Chaetosphaeriaceae		DTOL	
 1458	Characium	marinum	Characiaceae	DTOL	DTOL	
 1473	Danilia	otaviana	Chilodontaidae	DTOL	DTOL	
 1474	Diurnea	fagella	Chimabachidae	DTOL	DTOL	
@@ -56,6 +55,7 @@
 1547	Graphis	albida	Cimidae	DTOL	DTOL	
 1590	Ramaria	abietina	Clavariaceae		DTOL	
 1591	Ramaria	flaccida	Clavariaceae		DTOL	
+1609	Sarcodictyon	catenatum	Clavulariidae	DTOL	DTOL	
 1610	Sarcodictyon	roseum	Clavulariidae	DTOL	DTOL	
 1616	Clypeosphaeria	mamillana	Clypeosphaeriaceae		DTOL	
 1617	Apiorhynchostoma	curreyi	Clypeosphaeriaceae	DTOL	DTOL	
@@ -66,13 +66,13 @@
 1689	Conocephalus	fuscus	Conocephalidae	DTOL	DTOL	
 1700	Cordana	boothii	Cordanaceae		DTOL	
 1701	Cordana	crassa	Cordanaceae		DTOL	
-1708	Cordyceps	capitata	Cordycipitaceae		DTOL	
 1751	Coscinodiscus	radiatus	Coscinodiscacaeae	DTOL	DTOL	
 1752	Coscinodiscus	granii	Coscinodiscacaeae	DTOL	DTOL	
 1764	Rhodolia	rosea	Crassulaceae		DTOL	
 1798	Cryptochetum	iceryae	Cryptochetidae	DTOL	DTOL	
 1903	Carex	simpliciusulca	Cyperaceae		DTOL	
 1949	Seticyphella	niveola	Cyphellaceae		DTOL	
+1950	Cheimonophyllum	candidissimum	Cyphellaceae	DTOL	DTOL	
 2051	Cosmarium	blytii	Desmidiaceae		DTOL	DTOL
 2055	Developayella	elegans	Developea	DTOL	DTOL	
 2056	Comoclathris	typhicola	Diademaceae	DTOL	DTOL	
@@ -144,6 +144,7 @@
 3161	Distaplia	magnilarva	Holozoidae		DTOL	
 3162	Distaplia	rosea	Holozoidae	DTOL	DTOL	
 3163	Distaplia	rosea	Holozoidae	DTOL	DTOL	
+3177	Hyalopeziza	millepunctata	Hyaloscyphaceae		DTOL	
 3196	Subulicystidium	longisporum	Hydnodontaceae		DTOL	
 3217	Hydrolithon	boreale	Hydrolithaceae	DTOL	DTOL	
 3218	Hydrolithon	cruciatum	Hydrolithaceae	DTOL	DTOL	
@@ -282,6 +283,7 @@
 3576	Anthina	flammea	Incertae sedis		DTOL	
 3577	Hapalosphaeria	deformans	Incertae sedis		DTOL	
 3580	Lobatopedis	foliicola	Incertae sedis		DTOL	
+3581	Gyrothrix	verticillata	Incertae sedis		DTOL	
 3582	Caducirostrum	foliicola	Incertae sedis		DTOL	
 3583	Gyrothrix	podosperma	Incertae sedis		DTOL	
 3585	Diachea	subsessilis	Incertae sedis		DTOL	
@@ -320,7 +322,6 @@
 3650	Sporidesmium	cladii	Incertae sedis		DTOL	
 3653	Phragmocephala	stemphylioides	Incertae sedis		DTOL	
 3654	Sporidesmium	lobatum	Incertae sedis		DTOL	
-3656	Monotosporella	tuberculata	Incertae sedis		DTOL	
 3658	Excipularia	fusispora	Incertae sedis		DTOL	
 3660	Pterygosporopsis	rhododendri	Incertae sedis		DTOL	
 3663	Phragmocephala	prolifera	Incertae sedis		DTOL	
@@ -341,6 +342,7 @@
 3686	Polycladium	equiseti	Incertae sedis		DTOL	
 3688	Thyronectria	berolinensis	Incertae sedis		DTOL	
 3689	Scythioria	phlogina	Incertae sedis		DTOL	
+3692	Gyrothrix	verticiclada	Incertae sedis		DTOL	
 3693	Balanium	stygium	Incertae sedis		DTOL	
 3695	Didymopsis	helvellae	Incertae sedis		DTOL	
 3700	Sporidesmium	vagum	Incertae sedis		DTOL	
@@ -377,7 +379,6 @@
 3750	Porocladium	aquaticum	Incertae sedis		DTOL	
 3753	Zygogloea	gemellipara	Incertae sedis		DTOL	
 3754	Sclerotium	neglectum	Incertae sedis		DTOL	
-3755	Titaeospora	equiseti	Incertae sedis		DTOL	
 3756	Pterygosporopsis	fragilis	Incertae sedis		DTOL	
 3757	Sporidesmium	ilicinum	Incertae sedis		DTOL	
 3758	Perisporium	princeps	Incertae sedis		DTOL	
@@ -434,6 +435,7 @@
 3843	Cornucopiella	mirabilis	Incertae sedis		DTOL	
 3845	Foveostroma	drupacearum	Incertae sedis		DTOL	
 3846	Lentescospora	submarina	Incertae sedis		DTOL	
+3848	Pleostigma	jungermannicola	Incertae sedis		DTOL	
 3849	Zythia	trifolii	Incertae sedis		DTOL	
 3852	Phragmocephala	cookei	Incertae sedis		DTOL	
 3853	Sporidesmium	paludosum	Incertae sedis		DTOL	
@@ -479,7 +481,6 @@
 3916	Gloeodes	pomigena	Incertae sedis		DTOL	
 3917	Endostilbum	cerasi	Incertae sedis		DTOL	
 3918	Domingoella	arctostaphyli	Incertae sedis		DTOL	
-3919	Bactrodesmium	longisporum	Incertae sedis		DTOL	
 3920	Micropera	sorbi	Incertae sedis		DTOL	
 3923	Cleistophoma	dryina	Incertae sedis		DTOL	
 3924	Ampulliferina	lauri	Incertae sedis		DTOL	
@@ -596,6 +597,8 @@
 4108	Clitocybe	nebularis	Incertae sedis		DTOL	
 4109	Cystoderma	amianthinum	Incertae sedis		DTOL	
 4111	Fistulina	hepatica	Incertae sedis		DTOL	
+4112	Lepista	flaccida	Incertae sedis		DTOL	
+4113	Lepista	nuda	Incertae sedis		DTOL	
 4114	Megacollybia	platyphylla	Incertae sedis		DTOL	
 4118	Bartheletia	paradoxa	Incertae sedis		DTOL	
 4125	Frigidopyrenia	bryospila	Incertae sedis		DTOL	
@@ -605,6 +608,9 @@
 4139	Sirobasidium	brefeldianum	Incertae sedis		DTOL	
 4140	Clitocybe	odora	Incertae sedis		DTOL	
 4141	Cystoderma	jasonis	Incertae sedis		DTOL	
+4142	Lepista	sordida	Incertae sedis		DTOL	
+4143	Lepista	panaeolus	Incertae sedis		DTOL	
+4145	Crucibulum	laeve	Incertae sedis		DTOL	
 4149	Inocybe	rimosa	Inocybaceae		DTOL	
 4161	Ismarus	dorsiger	Ismaridae	DTOL	DTOL	
 4166	Ruttnera	maritima	Isochrysidaceae	DTOL	DTOL	
@@ -622,6 +628,7 @@
 4459	Aphanomyces	stellatus	Leptolegniaceae		DTOL	
 4460	Aphanomyces	astaci	Leptolegniaceae	DTOL	DTOL	
 4461	Aphanomyces	euteiches	Leptolegniaceae	DTOL	DTOL	
+4479	Leptosphaeria	maculans	Leptosphaeriaceae		DTOL	
 4525	Synalissa	symphorea	Lichinaceae		DTOL	
 4561	Pseudolithoderma	extensum	Lithodermataceae	DTOL	DTOL	
 4562	Pseudolithoderma	roscoffense	Lithodermataceae	DTOL	DTOL	
@@ -639,20 +646,21 @@
 4797	Melogramma	campylosporum	Melogrammataceae	DTOL	DTOL	
 4804	Meriderma	cribrarioides	Meridermatidae		DTOL	
 4805	Meriderma	carestiae	Meridermatidae	DTOL	DTOL	
+4838	Pseudallescheria	boydii	Microascaceae		DTOL	
 4856	Microphor	crassipes	Microphoridae	DTOL	DTOL	
+4862	Microsphaeropsis	olivacea	Microsphaeropsidaceae	DTOL	DTOL	
 4999	Chaetocladium	brefeldii	Mucoraceae	DTOL	DTOL	
 5036	Mycetobia	gemella	Mycetobiidae	DTOL	DTOL	
 5072	Taeniolella	plantaginis	Mytilinidiaceae		DTOL	
 5073	Taeniolella	stilbospora	Mytilinidiaceae		DTOL	
 5088	Gwynia	capsula	NA	DTOL	DTOL	
 5103	Natrix	helvetica	Natricidae	DTOL	DTOL	
-5110	Neckera	smithii	Neckeraceae		DTOL	
+5147	Lachnella	alboviolascens	Niaceae		DTOL	
+5148	Lachnella	villosa	Niaceae		DTOL	
+5149	Flagelloscypha	minutissima	Niaceae	DTOL	DTOL	
+5150	Merismodes	anomala	Niaceae	DTOL	DTOL	
 5163	Micropharynx	parasitica	No assigned Family	DTOL	DTOL	
 5185	Nutomonas	kenti	Nutomonadidae	DTOL	DTOL	
-5190	Aglais	io	Nymphalidae	DTOL	DTOL	
-5191	Aglais	urticae	Nymphalidae	DTOL	DTOL	
-5193	Aphantopus	hyperantus	Nymphalidae	DTOL	DTOL	
-5212	Polygonia	c-album	Nymphalidae	DTOL	DTOL	
 5254	Halochlorococcum	moorei	Oltmannsiellopsidaceae	DTOL	DTOL	
 5304	Opetia	nigra	Opetiidae	DTOL	DTOL	
 5485	Oxyporus	corticola	Oxyporaceae		DTOL	
@@ -686,7 +694,8 @@
 5928	Verticillium	nigrescens	Plectosphaerellaceae		DTOL	
 5945	Connersia	rilstonei	Pleuroascaceae		DTOL	
 5949	Pleurochrysis	carterae	Pleurochrysidaceae	DTOL	DTOL	
-6035	Elymus	junceiformis	Poaceae		DTOL	
+6084	Poa	humilis	Poaceae		DTOL	
+6097	Schedonorus	arundinaceus	Poaceae		DTOL	
 6099	Schedonorus	pratensis	Poaceae		DTOL	
 6254	Harveylithon	samoënse	Porolithaceae	DTOL	DTOL	
 6282	Weissia	x-mittenii	Pottiaceae		DTOL	
@@ -694,6 +703,7 @@
 6462	Protostelium	arachisporum	Protosteliida		DTOL	
 6463	Protosteliopsis	fimicola	Protosteliida	DTOL	DTOL	
 6464	Protostelium	mycophagum	Protosteliida	DTOL	DTOL	
+6477	Psathyrella	candolleana	Psathyrellaceae		DTOL	
 6481	Psen	ater	Psenidae	DTOL	DTOL	
 6487	Lescuraea	incurvata	Pseudoleskeaceae		DTOL	
 6488	Lescuraea	saxicola	Pseudoleskeaceae		DTOL	
@@ -722,6 +732,7 @@
 6801	Peniophorella	guttulifera	Rickenellaceae		DTOL	
 6805	Peniophorella	praetermissa	Rickenellaceae		DTOL	
 6806	Peniophorella	pubera	Rickenellaceae		DTOL	
+6855	Potentilla	rupestris	Rosaceae		DTOL	
 6920	Sorbus	scannelliana	Rosaceae		DTOL	
 6943	Rozellopsis	inflata	Rozellopsidaceae	DTOL	DTOL	
 6944	Rozellopsis	septigena	Rozellopsidaceae	DTOL	DTOL	
@@ -761,7 +772,8 @@
 7858	Troposporella	monospora	Tubeufiaceae		DTOL	
 7901	Hormidiopsis	crenulata	Ulotrichaceae	DTOL	DTOL	
 7902	Chlorocystis	salina	Ultrichaceae	DTOL	DTOL	
-7956	Amphiporthe	leiphaemia	Valsaceae	DTOL	DTOL	
+7947	Valerianella	carinata	Valerianaceae		DTOL	
+7951	Valerianella	rimosa	Valerianaceae		DTOL	
 7963	Vannella	anglica	Vannellida	DTOL	DTOL	
 8046	Victorella	pavida	Victorellidae	DTOL	DTOL	
 8096	Lambiella	gyrizans	Xylographaceae		DTOL	

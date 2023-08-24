@@ -1080,6 +1080,7 @@ taxon_id	input	rank
 1858089	Capperia trichodactyla	species
 1594439	Buckleria paludum	species
 1903122	Stangeia siceliota	species
+1377603	Trichoptilus adelphodes	species
 1572507	Pterophorus pentadactyla	species
 1870699	Porrittia galactodactyla	species
 1870607	Calyciphora albodactylus	species
@@ -3346,9 +3347,11 @@ taxon_id	input	rank
 2828809	Pterolonche douxi	species
 753363	Lypusa maurella	species
 1870054	Lypusa tokari	species
+1101038	Pseudatemelia latipennella	species
 #ilAgnFlav	Agnoea flavifrontella	species
 #ilAgnSubo	Agnoea subochreella	species
 #ilAgnJose	Agnoea josephinae	species
+1197237	Pseudatemelia elsae	species
 1870601	Amphisbatis incongruella	species
 753308	Diurnea fagella	species
 1594279	Diurnea lipsiella	species
@@ -3615,6 +3618,7 @@ taxon_id	input	rank
 1107568	Anthocharis euphenoides	species
 385381	Anthocharis damone	species
 2828940	Anthocharis gruneri	species
+415341	Euchloe tagis	species
 320255	Zegris eupheme	species
 2875452	Zegris meridionalis	species
 596667	Zegris pyrothoe	species
@@ -3719,6 +3723,7 @@ taxon_id	input	rank
 2828950	Turanana taygetica	species
 282386	Chilades trochylus	species
 596718	Luthrodes galba	species
+596783	Polyommatus cyane	species
 242267	Plebejus argus	species
 155166	Plebejus idas	species
 155165	Plebejus argyrognomon	species
@@ -3843,6 +3848,8 @@ taxon_id	input	rank
 171802	Argynnis paphia	species
 405018	Argynnis pandora	species
 405016	Argynnis laodice	species
+405010	Argynnis aglaja	species
+101935	Argynnis cybele	species
 405009	Fabriciana adippe	species
 405017	Fabriciana niobe	species
 1986971	Fabriciana elisa	species
@@ -3890,10 +3897,15 @@ taxon_id	input	rank
 311057	Vanessa braziliensis	species
 113296	Hypanartia lethe	species
 171575	Araschnia levana	species
+111881	Nymphalis urticae	species
+2036209	Nymphalis ichnusa	species
+171585	Nymphalis io	species
 171592	Nymphalis antiopa	species
 171594	Nymphalis polychloros	species
 76219	Nymphalis xanthomelas	species
 235354	Nymphalis l-album	species
+171598	Nymphalis egea	species
+929971	Nymphalis c-album	species
 127333	Colobura dirce	species
 658804	Charaxes jasius	species
 267284	Caligo illioneus	species
@@ -3928,6 +3940,10 @@ taxon_id	input	rank
 111916	Lasiommata maera	species
 441990	Lasiommata deidamia	species
 348718	Lopinga achine	species
+2795565	Maniola tithonus	species
+2795563	Maniola cecilia	species
+2795562	Maniola bathseba	species
+2795564	Maniola hyperantus	species
 669740	Maniola telmessia	species
 1608718	Maniola halicarnassus	species
 330684	Maniola nurag	species
@@ -4070,6 +4086,9 @@ taxon_id	input	rank
 596556	Erebia kalmuka	species
 1664830	Erebia melancholica	species
 596655	Proterebia afra	species
+3038947	Cercyonis lycaon	species
+2599366	Cercyonis lupina	species
+596726	Cercyonis huebneri	species
 13037	Danaus plexippus	species
 151541	Danaus chrysippus	species
 76239	Libythea celtis	species
@@ -4118,6 +4137,7 @@ taxon_id	input	rank
 1804853	Selagia argyrella	species
 1870339	Selagia spadicella	species
 2793023	Psorosa dahliella	species
+3069442	Psorosa ferrugatella	species
 1858100	Psorosa nucleolella	species
 1870710	Rhodophaea formosa	species
 1870294	Sciota fumella	species
@@ -4587,6 +4607,7 @@ taxon_id	input	rank
 2820466	Dyschloropsis impararia	species
 1441570	Kuchleria insignata	species
 572857	Hemithea aestivaria	species
+722673	Hylaea fasciaria	species
 986955	Chlorissa viridata	species
 986954	Chlorissa cloraria	species
 2202988	Chlorissa pretiosaria	species
@@ -4647,6 +4668,7 @@ taxon_id	input	rank
 875879	Petrophora chlorosata	species
 934884	Pachycnemia hippocastanaria	species
 1870144	Pachycnemia tibiaria	species
+2561595	Petrophora narbonea	species
 2561459	Lignyoptera fumidaria	species
 1007357	Epirranthis diversata	species
 2803413	Heterolocha laminaria	species
@@ -4683,7 +4705,7 @@ taxon_id	input	rank
 1870639	Eumera regina	species
 1869489	Asovia maeoticaria	species
 934813	Campaea margaritaria	species
-722673	Hylaea fasciaria	species
+1869528	Campaea honoraria	species
 1869998	Hylaea mediterranea	species
 1869999	Hylaea pinicolaria	species
 1869407	Adalbertia castiliaria	species
@@ -5334,6 +5356,8 @@ taxon_id	input	rank
 987000	Melanthia alaudaria	species
 2978630	Melanthia mandshuricata	species
 #ilMesDidm	Mesotype didymata	species
+934905	Perizoma parallelolineatum	species
+934906	Perizoma verberata	species
 #ilPerAffi	Perizoma affinitata	species
 #ilPerAlch	Perizoma alchemillata	species
 1101031	Perizoma hydrata	species
@@ -5585,6 +5609,7 @@ taxon_id	input	rank
 1985205	Artimelia latreillii	species
 1985236	Watsonarctia deserta	species
 214311	Phragmatobia fuliginosa	species
+1985234	Phragmatobia luctifera	species
 1875022	Cymbalophora pudica	species
 214332	Pyrrharctia isabella	species
 875881	Spilarctia lutea	species
@@ -5677,6 +5702,7 @@ taxon_id	input	rank
 1870438	Zanclognatha zelleralis	species
 753219	Polypogon strigilatus	species
 1212777	Chrysorithrum flavomaculata	species
+1110838	Herminodes atrosignata	species
 1973513	Anumeta spilota	species
 1870052	Lygephila lusoria	species
 2249577	Lygephila ludicra	species
@@ -5705,6 +5731,7 @@ taxon_id	input	rank
 938222	Colobochyla salicalis	species
 753441	Trisateles emortualis	species
 938238	Laspeyria flexula	species
+2249541	Eublemma arcuinna	species
 1985227	Odice blandula	species
 1985228	Odice pergrata	species
 1985229	Odice suava	species
@@ -5723,6 +5750,7 @@ taxon_id	input	rank
 1985220	Eublemma pura	species
 1101076	Glossodice polygramma	species
 1985221	Eublemma scitula	species
+1555992	Eublemma ragusana	species
 1985240	Rhypagla lacernaria	species
 1985224	Metachrostis dardouini	species
 1870083	Metachrostis velox	species
@@ -6100,6 +6128,7 @@ taxon_id	input	rank
 987931	Enargia paleacea	species
 987962	Ipimorpha retusa	species
 987963	Ipimorpha subtusa	species
+1858035	Ipimorpha contusa	species
 987908	Cosmia diffinis	species
 987907	Cosmia affinis	species
 116126	Cosmia trapezina	species
@@ -6401,6 +6430,7 @@ taxon_id	input	rank
 716731	Lasionycta leucocycla	species
 716747	Lasionycta staudingeri	species
 685371	Lasionycta secedens	species
+716740	Lasionycta proxima	species
 #ilEriImbe	Eriopygodes imbecilla	species
 572777	Lacinipolia patalis	species
 691982	Lacinipolia laudabilis	species
@@ -6518,6 +6548,7 @@ taxon_id	input	rank
 988098	Coenophila subrosea	species
 988027	Protolampra sobrina	species
 988143	Paradiarsia punicea	species
+997539	Lycophotia molothina	species
 987975	Lycophotia porphyrea	species
 1870051	Lycophotia erythrina	species
 1804828	Diarsia dahlii	species

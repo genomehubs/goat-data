@@ -5,6 +5,7 @@ taxon_id	input	rank	suggested
 103435	Bufo raddei	species	Strauchbufo raddei
 389288	Bufo siculus	species	Bufotes boulengeri
 2736592	Rhinella schneideri	species	Rhinella diptycha
+92733	Epipedobates femoralis	species	Allobates femoralis
 384900	Epipedobates flavopictus	species	Ameerega flavopicta
 161872	Epipedobates hahneli	species	Ameerega hahneli
 318254	Aparasphenodon brunoi	species	Nyctimantis brunoi
@@ -16,7 +17,11 @@ taxon_id	input	rank	suggested
 8394	Phyllomedusa rohdei	species	Pithecopus rohdei
 317394	Scinax catharinae	species	Ololygon catharinae
 43508	Leiopelma pakeka	species	Leiopelma hamiltoni
+448649	Eleutherodactylus euphronides	species	Pristimantis euphronides
+449743	Eleutherodactylus maussi	species	Strabomantis biporcatus
+448888	Eleutherodactylus shrevei	species	Pristimantis shrevei
 76064	Physalaemus petersi	species	Engystomops petersi
+8364	Silurana tropicalis	species	Xenopus tropicalis
 45623	Pelophylax kl. esculentus	species	Pelophylax lessonae
 1752047	Pelophylax kl. grafi	species	Pelophylax grafi
 30360	Rana berlandieri	species	Lithobates berlandieri
@@ -26,6 +31,8 @@ taxon_id	input	rank	suggested
 8404	Rana pipiens	species	Lithobates pipiens
 8410	Rana rugosa	species	Glandirana rugosa
 146672	Rana sphenocephala	species	Lithobates sphenocephalus
+103373	Rana tigrina	species	Hoplobatrachus tigerinus
+129011	Tomopterna labrosa	species	Laliostoma labrosum
 36317	Hydromantes ambrosii	species	Speleomantes ambrosii
 57554	Hydromantes flavus	species	Speleomantes flavus
 482140	Hydromantes imperialis	species	Speleomantes imperialis
@@ -43,7 +50,9 @@ taxon_id	input	rank	suggested
 107021	Chen canagica	species	Anser canagicus
 56281	Chen rossii	species	Anser rossii
 2717061	Grus rubicunda	species	Antigone rubicunda
+44316	Erythrura gouldiae	species	Chloebia gouldiae
 247978	Neochmia modesta	species	Aidemosyne modesta
+247775	Taeniopygia bichenovii	species	Stizoptera bichenovii
 216193	Sylvia communis	species	Curruca communis
 548488	Oryzoborus maximiliani	species	Sporophila maximiliani
 2671080	Threskiornis moluccus	species	Threskiornis molucca
@@ -72,6 +81,7 @@ taxon_id	input	rank	suggested
 1221223	Cyprinus pellegrini pellegrini	species	Cyprinus pellegrini
 273620	Leuciscus carolitertii	species	Squalius carolitertii
 263744	Leuciscus pyrenaicus	species	Squalius pyrenaicus
+307691	Phoxinus eos-neogaeus	species	Chrosomus eos x Chrosomus neogaeus
 155067	Vimba vimba vimba	species	Vimba vimba
 135311	Pterolebias hoignei	species	Gnatholebias hoignei
 8078	Fundulus heteroclitus heteroclitus	species	Fundulus heteroclitus
@@ -89,9 +99,11 @@ taxon_id	input	rank	suggested
 8128	Oreochromis niloticus niloticus	species	Oreochromis niloticus
 47969	Sarotherodon aureus	species	Oreochromis aureus
 8128	Sarotherodon niloticus	species	Oreochromis niloticus
+158779	Tilapia mariae	species	Pelmatolapia mariae
 1282961	Boleophthalmus boddaerti	species	Boleophthalmus boddarti
 151723	Coryphopterus nicholsi	species	Rhinogobiops nicholsii
 203335	Gobiosoma multifasciatum	species	Tigrigobius multifasciatus
+320565	Neogobius kessleri	species	Ponticola kessleri
 267130	Synechogobius ommaturus	species	Acanthogobius hasta
 13719	Tetrapturus albidus	species	Kajikia albida
 356780	Halichoeres poecilopterus	species	Parajulis poecilepterus
@@ -118,7 +130,6 @@ taxon_id	input	rank	suggested
 1311448	Hemanthias vivanus	species	Baldwinella vivanus
 1311488	Holanthias martinicensis	species	Pronotogrammus martinicensis
 160704	Petrometopon cruentatum	species	Cephalopholis cruentata
-237562	Serranus fasciatus	species	Serranus psittacinus
 72011	Acanthopagrus schlegeli	species	Acanthopagrus schlegelii
 119711	Dentex tumifrons	species	Evynnis tumifrons
 50591	Pagellus mormyrus	species	Lithognathus mormyrus
@@ -155,6 +166,7 @@ taxon_id	input	rank	suggested
 9696	Felis concolor	species	Puma concolor
 46844	Felis geoffroyi	species	Leopardus geoffroyi
 61408	Felis manul	species	Otocolobus manul
+61410	Felis marmorata	species	Pardofelis marmorata
 32538	Felis pardalis	species	Leopardus pardalis
 61405	Felis serval	species	Leptailurus serval
 61388	Felis viverrina	species	Prionailurus viverrinus
@@ -189,6 +201,7 @@ taxon_id	input	rank	suggested
 30637	Spalax ehrenbergi	species	Nannospalax ehrenbergi
 85613	Emydoidea blandingii	species	Emys blandingii
 167804	Aldabrachelys dussumieri	species	Aldabrachelys gigantea
+86976	Eurotestudo hermanni	species	Testudo hermanni
 66189	Geochelone elephantopus	species	Chelonoidis niger
 184234	Crocodylus johnstoni	species	Crocodylus johnsoni
 281410	Agama caucasia	species	Paralaudakia caucasia
@@ -231,7 +244,6 @@ taxon_id	input	rank	suggested
 31162	Microcephalophis gracilis	species	Hydrophis gracilis
 1117137	Micrurus nigrocinctus mosquitensis	species	Micrurus mosquitensis
 35670	Naja naja naja	species	Naja naja
-8688	Pelamis platura	species	Hydrophis platurus
 292442	Rhinoplocephalus nigrescens	species	Cryptophis nigrescens
 1539846	Simoselaps warro	species	Antaioserpens warro
 529715	Suta flagellum	species	Parasuta flagellum
