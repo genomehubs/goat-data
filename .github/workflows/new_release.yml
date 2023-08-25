@@ -31,7 +31,7 @@ jobs:
       - name: checkout first
         uses: actions/checkout@v3
         with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
           clean: true
       - name: checkout RELEASE, or create a new branch
         run:  |
