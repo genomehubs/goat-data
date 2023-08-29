@@ -1,4 +1,5 @@
 institutionCode	otherCatalogNumbers	preservative	phylum	class	order	family	genus	specificEpithet	year	sequencing_status	sample_collected	sample_collected_by
+NHMUK	NHMUK:ecatalogue:10058570	Dry frozen (-80°C)	Arthropoda	Insecta	Hymenoptera	Ichneumonidae	Eudelus	mediovittatus	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:10429283		Arthropoda	Insecta	Hymenoptera	Tenthredinidae	Hemichroa	australis	2023	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:10450830	Dry frozen (-80°C)	Arthropoda	Insecta	Hymenoptera	Ichneumonidae	Coelichneumon	leucocerus	2023	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:10450822	Dry frozen (-80°C)	Arthropoda	Insecta	Hymenoptera	Ichneumonidae	Enicospilus	ramidulus	2023	sample_collected	DTOL	NHM
@@ -1786,7 +1787,6 @@ NHMUK	NHMUK:ecatalogue:10058559	Dry frozen (-80°C)	Arthropoda	Insecta	Diptera	L
 NHMUK	NHMUK:ecatalogue:10058563	Dry frozen (-80°C)	Arthropoda	Insecta	Hymenoptera	Ichneumonidae	Synosis	caesiellae	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:10058429	Dry frozen (-80°C)	Arthropoda	Insecta	Diptera	Mycetophilidae	Mycetophila	adumbrata	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:10058557	Dry frozen (-80°C)	Arthropoda	Insecta	Diptera	Limoniidae	Metalimnobia	bifasciata	2022	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:10058570	Dry frozen (-80°C)	Arthropoda	Insecta	Hymenoptera	Ichneumonidae	Eudelus	mediovittatus	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:10175964	Dry frozen (-80°C)	Arthropoda	Insecta	Diptera	Tipulidae	Dictenidia	bimaculata	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9809759	Dry frozen (-80°C)	Arthropoda	Insecta	Lepidoptera	Gracillariidae	Phyllonorycter	trifasciella	2022	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:10058446	Dry frozen (-80°C)	Arthropoda	Insecta	Lepidoptera	Gelechiidae	Mirificarma	mulinella	2022	sample_collected	DTOL	NHM
@@ -3120,6 +3120,15 @@ NHMUK	NHMUK:ecatalogue:9310514	Dry frozen (-80°C)	Arthropoda	Insecta	Coleoptera
 NHMUK	NHMUK:ecatalogue:9310512	Dry frozen (-80°C)	Arthropoda	Insecta	Coleoptera	Curculionidae	Sitona	lineatus	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9292447	Dry frozen (-80°C)	Arthropoda	Insecta	Hymenoptera				2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9173631	Dry frozen (-200°C)	Arthropoda	Insecta	Lepidoptera	Pyralidae	Parapoynx	stratiotata	2019	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505158	80% ethanol	Arthropoda	Insecta	Diptera	Chironomidae	Smittia	contingens	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505157	80% ethanol	Arthropoda	Insecta	Diptera	Ulidiidae	Physiphora	alceae	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505155	80% ethanol	Arthropoda	Insecta	Diptera	Scathophagidae	Norellisoma	spinimanum	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505154	80% ethanol	Arthropoda	Insecta	Diptera	Hippoboscidae	Lipoptena	cervi	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505153	80% ethanol	Arthropoda	Insecta	Diptera	Ephydridae	Paracoenia	fumosa	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505152	80% ethanol	Arthropoda	Insecta	Diptera	Sphaeroceridae	Chaetopodella	scutellaris	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505151	80% ethanol	Arthropoda	Insecta	Diptera	Muscidae	Hydrotaea	diabolus	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505150	80% ethanol	Arthropoda	Insecta	Diptera	Heleomyzidae	Neoleria	inscripta	2021	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9505149	80% ethanol	Arthropoda	Insecta	Hemiptera	Tingidae	Stephanitis	takeyai	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9317341	Dry frozen (-80°C)	Arthropoda	Insecta	Hemiptera	Psyllidae	Cacopsylla	fulguralis	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9317340	Dry frozen (-80°C)	Arthropoda	Insecta	Hemiptera	Aphididae	Periphyllus	acericola	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9317339	Dry frozen (-80°C)	Arthropoda	Insecta	Coleoptera	Carabidae	Leistus	spinibarbis	2021	sample_collected	DTOL	NHM
@@ -3315,6 +3324,7 @@ NHMUK	NHMUK:ecatalogue:9802775	Dry - pinned	Arthropoda	Insecta	Lepidoptera	Noctu
 NHMUK	NHMUK:ecatalogue:9802774	Dry - pinned	Arthropoda	Insecta	Lepidoptera	Lyonetiidae	Lyonetia	prunifoliella	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9802773	Dry - pinned	Arthropoda	Insecta	Lepidoptera	Gelechiidae	Monochroa	palustrella	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:10060220	Dry frozen (-80°C)	Arthropoda	Insecta	Hemiptera	Acanthosomatidae	Acanthosoma	haemorrhoidale	2022	sample_collected	DTOL	NHM
+NHMUK	NHMUK:ecatalogue:9248063	Liquid Nitrogen	Arthropoda	Insecta	Hemiptera	Coreidae	Coreus	marginatus	2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9180055	Ethanol	Arthropoda	Insecta	Megaloptera	Sialidae	Sialis	fuliginosa	2018	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9203175	Dry Ice	Arthropoda	Insecta	Lepidoptera	Noctuidae	Mesoligia	furuncula		sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248099	Liquid Nitrogen	Arthropoda	Insecta	Lepidoptera	Tortricidae	Clepsis	dumicolana	2020	sample_collected	DTOL	NHM
@@ -9903,15 +9913,6 @@ NHMUK	NHMUK:ecatalogue:9331399	100% ethanol	Arthropoda	Insecta	Diptera	Anthomyii
 NHMUK	NHMUK:ecatalogue:9331351	100% ethanol	Arthropoda	Insecta	Diptera	Anthomyiidae	Pegoplata	annulata	2019	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9505182	80% ethanol	Arthropoda	Insecta	Mecoptera	Boreidae	Boreus	hyemalis	2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9505159	80% ethanol	Arthropoda	Insecta	Neuroptera	Chrysopidae	Dichochrysa	prasina	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505158	80% ethanol	Arthropoda	Insecta	Diptera	Chironomidae	Smittia	contingens	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505157	80% ethanol	Arthropoda	Insecta	Diptera	Ulidiidae	Physiphora	alceae	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505155	80% ethanol	Arthropoda	Insecta	Diptera	Scathophagidae	Norellisoma	spinimanum	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505154	80% ethanol	Arthropoda	Insecta	Diptera	Hippoboscidae	Lipoptena	cervi	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505153	80% ethanol	Arthropoda	Insecta	Diptera	Ephydridae	Paracoenia	fumosa	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505152	80% ethanol	Arthropoda	Insecta	Diptera	Sphaeroceridae	Chaetopodella	scutellaris	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505151	80% ethanol	Arthropoda	Insecta	Diptera	Muscidae	Hydrotaea	diabolus	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505150	80% ethanol	Arthropoda	Insecta	Diptera	Heleomyzidae	Neoleria	inscripta	2021	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9505149	80% ethanol	Arthropoda	Insecta	Hemiptera	Tingidae	Stephanitis	takeyai	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9505072	Dry frozen (-80°C)	Arthropoda	Insecta	Odonata	Libellulidae	Leucorrhinia	dubia	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9505071	Dry frozen (-80°C)	Arthropoda	Insecta	Hymenoptera	Ichneumonidae	Stilbops	ruficornis	2021	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9505070	Dry frozen (-80°C)	Arthropoda	Insecta	Diptera	Bombyliidae	Villa	cingulata	2021	sample_collected	DTOL	NHM
@@ -11242,7 +11243,6 @@ NHMUK	NHMUK:ecatalogue:9248444	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248334	Liquid Nitrogen	Arthropoda	Insecta	Diptera	Syrphidae	Helophilus	trivittatus	2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248147	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248101	100% ethanol							2020	sample_collected	DTOL	NHM
-NHMUK	NHMUK:ecatalogue:9248063	Liquid Nitrogen	Arthropoda	Insecta	Hemiptera	Coreidae	Coreus	marginatus	2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248454	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248453	100% ethanol							2020	sample_collected	DTOL	NHM
 NHMUK	NHMUK:ecatalogue:9248452	100% ethanol							2020	sample_collected	DTOL	NHM

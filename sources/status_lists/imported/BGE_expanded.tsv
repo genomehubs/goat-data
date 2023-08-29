@@ -1,35 +1,36 @@
 species	family	phylum	source	ncbi_taxon_id	proposed_sequencing_centre	target_list_status	sequencing_status	goat_estimated_genome_size_(gb)	phase	notes	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
-Wirenia argentea	Gymnomeniidae	Mollusca	Norway	669229	SCILIFE	other_priority	sample_collected	743	2		BGE	BGE		BGE	BGE								
-Hydrurus foetidus	Hydruraceae	Ochrophyta	Norway	2996	SCILIFE	other_priority	sample_collected	116	2		BGE	BGE		BGE	BGE								
-Marifugia cavatica	Serpulidae	Annelida	Croatia	488418	SANGER	other_priority		734	2		BGE	BGE		BGE									
-Proasellus anophtalmus dalmatinus	Asellidae	Arthropoda	Croatia	1366552	SANGER	other_priority		1860	2		BGE	BGE		BGE									
-Alexandrium minutum	Pyrocystaceae	Miozoa	France	39455	GENOSCOPE	other_priority		116	2		BGE	BGE		BGE									
-Tritomurus scutellatus	Tomoceridae	Arthropoda	Slovenia	2725171	SANGER	other_priority		225	2		BGE	BGE		BGE									
-Herpes porcellus	Curculionidae	Arthropoda	Hungary	3065877	UNIFI	other_priority		2010	2		BGE	BGE		BGE									
-Omalisus fontisbellaquei	Elateridae	Arthropoda	Czechia	350094	SCILIFE	other_priority		1006	2		BGE	BGE		BGE									
-Phorcus turbinatus	Trochidae	Mollusca	Spain	43341	CNAG	other_priority	sample_collected	1910	2		BGE	BGE		BGE	BGE								
-Alpioniscus balthasari	Trichoniscidae	Arthropoda	Croatia	1233057	SANGER	other_priority		3790	2		BGE	BGE		BGE									
-Gammarus oceanicus	Gammaridae	Arthropoda	Poland	314080	GENOSCOPE	other_priority		3500	2		BGE	BGE		BGE									
-Gluvia dorsalis	Daesiidae	Arthropoda	Spain	62148	CNAG	other_priority	sample_collected	1100	2		BGE	BGE		BGE	BGE								
-Phyllidia flava	Phyllidiidae	Mollusca	Spain	2934182	CNAG	other_priority		1960	2		BGE	BGE		BGE									
-Xylophaga dorsalis	Xylophagaidae	Mollusca	Spain	1526741	CNAG	other_priority	sample_collected	685	2		BGE	BGE		BGE	BGE								
-Eunicella cavolini	Eunicellidae	Cnidaria	France	317547	GENOSCOPE	other_priority		626	2		BGE	BGE		BGE									
-Triaenophorus nodulosus	Triaenophoridae	Platyhelminthes	Finland	56557	SCILIFE	other_priority	sample_collected	323	2		BGE	BGE		BGE	BGE								
-Distaplia bermudensis	Holozoidae	Chordata	Italy	1917237	UNIFI	other_priority	sample_collected	438	2		BGE	BGE		BGE	BGE								
-Cistus crispus	Cistaceae	Spermatophyta	France	335185	GENOSCOPE	other_priority		1920	2		BGE	BGE		BGE									
-Mytilopsis leucophaeata	Dreissenidae	Mollusca	France	45971	GENOSCOPE	other_priority		1660	2		BGE	BGE		BGE									
-Pyrrhula murina	Fringillidae	Chordata	Portugal	928672	GENOSCOPE	other_priority		1330	2		BGE	BGE		BGE									
-Androsace saussurei	Primulaceae	Spermatophyta	France	2890055	GENOSCOPE	other_priority		1840	2		BGE	BGE		BGE									
-Arnica montana	Asteraceae	Spermatophyta	Germany	436207	SANGER	other_priority		1440	2		BGE	BGE		BGE									
-Graellsia isabellae	Saturniidae	Arthropoda	Spain	63975	CNAG	other_priority	sample_collected	650	2		BGE	BGE		BGE	BGE								
-Ailoscolex lacteospumosus	Hormogastridae	Annelida	Spain	1046305	CNAG	other_priority		724	2		BGE	BGE		BGE									
-Botrylloides israeliense	Styelidae	Chordata	Italy	2057147	UNIFI	other_priority	sample_collected	724	2		BGE	BGE		BGE	BGE								
-Erebia palarica	Nymphalidae	Arthropoda	Spain	191414	CNAG	other_priority	sample_collected	479	2		BGE	BGE		BGE	BGE								
-Anodonta cygnea	Unionidae	Mollusca	Switzerland	47528	UNIFI	other_priority		2000	2		BGE	BGE		BGE									
-Dysdera unguimmanis	Dysderidae	Arthropoda	Spain	119148	CNAG	other_priority	sample_collected	2930	2		BGE	BGE		BGE	BGE								
-Trachusa byssina	Megachilidae	Arthropoda	Germany	549142	SANGER	other_priority	sample_collected	812	2		BGE	BGE		BGE	BGE								
-Alyssoides utriculata	Brassicaceae	Spermatophyta	Switzerland	457762	UNIFI	other_priority	sample_collected	880	2		BGE	BGE		BGE	BGE								
-Rupicapra pyrenaica ornata	Bovidae	Chordata	Italy	130900	UNIFI	other_priority		3200	2	Species was nominated as Rupicapra ornata but then the provide gave us the correct name	BGE	BGE		BGE									
-Platypeza hirticeps	Platypezidae	Arthropoda	Finland	1445830	SCILIFE	other_priority		594	2		BGE	BGE		BGE									
-Ulmus laevis	Ulmaceae	Spermatophyta	Italy	233204	UNIFI	other_priority		2020	2		BGE	BGE		BGE									
-Anisus vorticulus	Planorbidae	Mollusca	Germany		SANGER	other_priority		1310	2		BGE	BGE		BGE									
+Wirenia argentea	Gymnomeniidae	Mollusca	Norway	669229	SCILIFE	other_priority	sample_collected	0,74	2		BGE	BGE		BGE	BGE								
+Hydrurus foetidus	Hydruraceae	Ochrophyta	Norway	2996	SCILIFE	other_priority	sample_collected	0,12	2		BGE	BGE		BGE	BGE								
+Marifugia cavatica	Serpulidae	Annelida	Croatia	488418	SANGER	other_priority		0,73	2		BGE	BGE		BGE									
+Proasellus anophtalmus dalmatinus	Asellidae	Arthropoda	Croatia	1366552	SANGER	other_priority		1,86	2		BGE	BGE		BGE									
+Alexandrium minutum	Pyrocystaceae	Miozoa	France	39455	GENOSCOPE	other_priority		0,12	2		BGE	BGE		BGE									
+Tritomurus scutellatus	Tomoceridae	Arthropoda	Slovenia	2725171	SANGER	other_priority		0,23	2		BGE	BGE		BGE									
+Herpes porcellus	Curculionidae	Arthropoda	Hungary	3065877	UNIFI	other_priority		2,01	2		BGE	BGE		BGE									
+Omalisus fontisbellaquei	Elateridae	Arthropoda	Czechia	350094	SCILIFE	other_priority		1,01	2		BGE	BGE		BGE									
+Phorcus turbinatus	Trochidae	Mollusca	Spain	43341	CNAG	other_priority	sample_collected	1,91	2		BGE	BGE		BGE	BGE								
+Alpioniscus balthasari	Trichoniscidae	Arthropoda	Croatia	1233057	SANGER	other_priority		3,79	2		BGE	BGE		BGE									
+Gammarus oceanicus	Gammaridae	Arthropoda	Poland	314080	GENOSCOPE	other_priority		3,50	2		BGE	BGE		BGE									
+Gluvia dorsalis	Daesiidae	Arthropoda	Spain	62148	CNAG	other_priority	sample_collected	1,10	2		BGE	BGE		BGE	BGE								
+Phyllidia flava	Phyllidiidae	Mollusca	Spain	2934182	CNAG	other_priority		1,96	2		BGE	BGE		BGE									
+Xylophaga dorsalis	Xylophagaidae	Mollusca	Spain	1526741	CNAG	other_priority	sample_collected	0,69	2		BGE	BGE		BGE	BGE								
+Eunicella cavolini	Eunicellidae	Cnidaria	France	317547	GENOSCOPE	other_priority		0,63	2		BGE	BGE		BGE									
+Triaenophorus nodulosus	Triaenophoridae	Platyhelminthes	Finland	56557	SCILIFE	other_priority	sample_collected	0,32	2		BGE	BGE		BGE	BGE								
+Distaplia bermudensis	Holozoidae	Chordata	Italy	1917237	UNIFI	other_priority	sample_collected	0,44	2		BGE	BGE		BGE	BGE								
+Cistus crispus	Cistaceae	Spermatophyta	France	335185	GENOSCOPE	other_priority		1,92	2		BGE	BGE		BGE									
+Mytilopsis leucophaeata	Dreissenidae	Mollusca	France	45971	GENOSCOPE	other_priority		1,66	2		BGE	BGE		BGE									
+Pyrrhula murina	Fringillidae	Chordata	Portugal	928672	GENOSCOPE	other_priority		1,33	2		BGE	BGE		BGE									
+Androsace saussurei	Primulaceae	Spermatophyta	France	2890055	GENOSCOPE	other_priority		1,84	2		BGE	BGE		BGE									
+Arnica montana	Asteraceae	Spermatophyta	Germany	436207	SANGER	other_priority		1,44	2		BGE	BGE		BGE									
+Graellsia isabellae	Saturniidae	Arthropoda	Spain	63975	CNAG	other_priority	sample_collected	0,65	2		BGE	BGE		BGE	BGE								
+Ailoscolex lacteospumosus	Hormogastridae	Annelida	Spain	1046305	CNAG	other_priority		0,72	2		BGE	BGE		BGE									
+Botrylloides israeliense	Styelidae	Chordata	Italy	2057147	UNIFI	other_priority	sample_collected	0,72	2		BGE	BGE		BGE	BGE								
+Erebia palarica	Nymphalidae	Arthropoda	Spain	191414	CNAG	other_priority	sample_collected	0,48	2		BGE	BGE		BGE	BGE								
+Anodonta cygnea	Unionidae	Mollusca	Switzerland	47528	UNIFI	other_priority		2,00	2		BGE	BGE		BGE									
+Dysdera unguimmanis	Dysderidae	Arthropoda	Spain	119148	CNAG	other_priority	sample_collected	2,93	2		BGE	BGE		BGE	BGE								
+Trachusa byssina	Megachilidae	Arthropoda	Germany	549142	SANGER	other_priority	sample_collected	0,81	2		BGE	BGE		BGE	BGE								
+Alyssoides utriculata	Brassicaceae	Spermatophyta	Switzerland	457762	UNIFI	other_priority	sample_collected	0,88	2		BGE	BGE		BGE	BGE								
+Rupicapra pyrenaica ornata	Bovidae	Chordata	Italy	130900	UNIFI	other_priority		3,20	2	Species was nominated as Rupicapra ornata but then the provide gave us the correct name	BGE	BGE		BGE									
+Platypeza hirticeps	Platypezidae	Arthropoda	Finland	1445830	SCILIFE	other_priority		0,59	2		BGE	BGE		BGE									
+Ulmus laevis	Ulmaceae	Spermatophyta	Italy	233204	UNIFI	other_priority		2,02	2		BGE	BGE		BGE									
+Protonethes ocellatus	Trichoniscidae	Arthropoda	Montenegro		SANGER	other_priority		3,79	2		BGE	BGE		BGE									
+Anisus vorticulus	Planorbidae	Mollusca	Germany		SANGER	other_priority		1,31	2		BGE	BGE		BGE									
