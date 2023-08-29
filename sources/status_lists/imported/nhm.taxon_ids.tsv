@@ -1,4 +1,5 @@
 taxon_id	input	rank
+#iyEudMedi	Eudelus mediovittatus	species
 1384878	Hemichroa australis	species
 2881741	Coelichneumon leucocerus	species
 65145	Enicospilus ramidulus	species
@@ -1144,7 +1145,6 @@ taxon_id	input	rank
 2728176	Metalimnobia bifasciata	species
 #iySynCaes	Synosis caesiellae	species
 #idMycAdum	Mycetophila adumbrata	species
-#iyEudMedi	Eudelus mediovittatus	species
 2881860	Dictenidia bimaculata	species
 199084	Phyllonorycter trifasciella	species
 2561510	Mirificarma mulinella	species
@@ -1839,6 +1839,14 @@ taxon_id	input	rank
 202195	Sitona lineatus	species
 7399	Hymenoptera	order
 1594321	Parapoynx stratiotata	species
+#idSmiCont	Smittia contingens	species
+1335499	Physiphora alceae	species
+1891011	Norellisoma spinimanum	species
+1888008	Paracoenia fumosa	species
+2886588	Chaetopodella scutellaris	species
+1816463	Hydrotaea diabolus	species
+2259918	Neoleria inscripta	species
+881763	Stephanitis takeyai	species
 1425412	Periphyllus acericola	species
 878056	Leistus spinibarbis	species
 346760	Chaetocnema concinna	species
@@ -1918,6 +1926,7 @@ taxon_id	input	rank
 346826	Phyllobius pomaceus	species
 262204	Dahlica triquetrella	species
 571336	Lyonetia prunifoliella	species
+1545300	Coreus marginatus	species
 997551	Mesoligia furuncula	species
 934882	Opisthograptis luteolata	species
 283834	Deilephila elpenor	species
@@ -2170,7 +2179,6 @@ taxon_id	input	rank
 202192	Xyleborus monographus	species
 878065	Longitarsus flavicornis	species
 878387	Pria dulcamarae	species
-1545300	Coreus marginatus	species
 236939	Capsus ater	species
 347976	Himacerus apterus	species
 226180	Sphaerophoria scripta	species
@@ -3314,7 +3322,6 @@ taxon_id	input	rank
 334573	Ceutorhynchus cochleariae	species
 #icAniVill	Anisoplia villosa	species
 1678295	Periphyllus hirticornis	species
-881763	Stephanitis takeyai	species
 2603396	Pulvinaria floccifera	species
 2591987	Synophropsis lauri	species
 763218	Lygocoris pabulinus	species
@@ -3985,7 +3992,7 @@ taxon_id	input	rank
 6359	Platynereis dumerilii	species
 249369	Serpula vermicularis	species
 1486853	Harmothoe extenuata	species
-1411680	Cerianthus lloydii	species
+1411680	Synarachnactis lloydii	species
 8284	Squalius cephalus	species
 58325	Leuciscus leuciscus	species
 48668	Rutilus rutilus	species
@@ -4131,13 +4138,6 @@ taxon_id	input	rank
 1875641	Limnephilus hirsutus	species
 #iiLimTaur	Limnephilus tauricus	species
 1663096	Pegoplata annulata	species
-#idSmiCont	Smittia contingens	species
-1335499	Physiphora alceae	species
-1891011	Norellisoma spinimanum	species
-1888008	Paracoenia fumosa	species
-2886588	Chaetopodella scutellaris	species
-1816463	Hydrotaea diabolus	species
-2259918	Neoleria inscripta	species
 2753613	Villa cingulata	species
 1162388	Prosorhynchoides borealis	species
 116838	Hemiuridae	family

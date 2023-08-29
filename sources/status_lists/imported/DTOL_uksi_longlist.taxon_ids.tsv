@@ -300,7 +300,6 @@ taxon_id	input	rank
 #gfAthAlni	Athelia alnicola	species
 #gfAthBinu	Athelia binucleospora	species
 139098	Athelia fibulata	species
-39291	Athelia rolfsii	species
 5229	Atractiella solani	species
 2094522	Odoria alborubescens	species
 5423	Kabatiella microsticta	species
@@ -685,7 +684,6 @@ taxon_id	input	rank
 1052879	Coemansia pectinata	species
 #gzCoeScor	Coemansia scorpioidea	species
 2663907	Coemansia thaxteri	species
-2792658	Colacogloea effusa	species
 #gaColFusi	Coleophoma fusiformis	species
 #gaColRhod	Coleophoma rhododendri	species
 1150935	Coleroa robertiani	species
@@ -888,7 +886,7 @@ taxon_id	input	rank
 #gfCraLuts	Craterellus lutescens	species
 3048534	Crepidotus carpaticus	species
 110239	Crepidotus cinnabarinus	species
-#glCrePrem	Cresponea premnea	species
+3071923	Cresponea premnea	species
 230788	Crinipellis scabella	species
 #gfCriSubm	Cristella submutabilis	species
 #gyCroRufe	Crocicreas rufescens	species
@@ -3386,7 +3384,7 @@ taxon_id	input	rank
 #gySclCine	Sclerotinia cinerea	species
 #gySclHomo	Sclerotinia homoeocarpa	species
 #gySclMusc	Sclerotinia muscorum	species
-180424	[Sclerotium] delphinii	species
+180424	Agroathelia delphinii	species
 #gfSclDuru	Sclerotium durum	species
 #gfSclMusc	Sclerotium muscorum	species
 #gfSclNegl	Sclerotium neglectum	species
@@ -4587,7 +4585,6 @@ taxon_id	input	rank
 122427	Sesquicillium buxi	species
 #grCloSimm	Clonostachys simmonsii	species
 1634537	Coccinonectria pachysandricola	species
-#gkColBisp	Colacogloea bispora	species
 #gaColLaur	Coleophoma laurocerasi	species
 #gaColOlea	Coleophoma oleae	species
 #gaColPrun	Coleophoma prunicola	species
@@ -16664,7 +16661,7 @@ taxon_id	input	rank
 #iuSolBurm	Solenopotes burmeisteri	species
 #itDenSalt	Dendrothrips saltator	species
 #itBalKroe	Baliothrips kroeli	species
-#itHopLong	Hoplothrips longisetis	species
+3072146	Hoplothrips longisetis	species
 #ihAphBagn	Aphorma bagnalli	species
 1588469	Sphaerius acaroides	species
 1588502	Teretrius fabricii	species
@@ -28600,7 +28597,7 @@ taxon_id	input	rank
 #idAulHeri	Aulagromyza heringii	species
 #idAulLuce	Aulagromyza lucens	species
 #idAulOrph	Aulagromyza orphana	species
-#idAulPopu	Aulagromyza populi	species
+3071722	Aulagromyza populi	species
 #idAulPopl	Aulagromyza populicola	species
 #idAulSimi	Aulagromyza similis	species
 #idAulTrem	Aulagromyza tremulae	species
@@ -48423,11 +48420,11 @@ taxon_id	input	rank
 #gkPucConi	Puccinia conii	species
 254666	Puccinia convolvuli	species
 #gkPucCrep	Puccinia crepidicola	species
-#gkPucCrei	Puccinia crepidis	species
+3071107	Puccinia crepidis	species
 2488355	Puccinia elymi	species
 2771890	Puccinia eriophori	species
 413620	Puccinia fergussonii	species
-#gkPucGent	Puccinia gentianae	species
+3071108	Puccinia gentianae	species
 #gkPucGlad	Puccinia gladioli	species
 5297	Puccinia graminis	species
 413108	Puccinia hieracii	species
@@ -51714,7 +51711,7 @@ taxon_id	input	rank
 670448	Haplothrips distinguendus	species
 #itHapFlav	Haplothrips flavitibia	species
 #itHapHeli	Haplothrips helianthemi	species
-#itHapHukk	Haplothrips hukkineni	species
+3072154	Haplothrips hukkineni	species
 1609762	Haplothrips jasionis	species
 #itHapJunc	Haplothrips juncorum	species
 453066	Haplothrips leucanthemi	species
@@ -51732,11 +51729,11 @@ taxon_id	input	rank
 #itHolScha	Holothrips schaubergeri	species
 #itHopBide	Hoplandrothrips bidens	species
 #itHopElli	Hoplandrothrips ellisi	species
-#itHopCort	Hoplothrips corticis	species
+3072145	Hoplothrips corticis	species
 #itHopFung	Hoplothrips fungi	species
-#itHopPedi	Hoplothrips pedicularius	species
+3072147	Hoplothrips pedicularius	species
 #itHopPoly	Hoplothrips polysticti	species
-#itHopSemi	Hoplothrips semicaecus	species
+3072148	Hoplothrips semicaecus	species
 #itHopUlmi	Hoplothrips ulmi	species
 #itHopUnic	Hoplothrips unicolor	species
 #itIriIrid	Iridothrips iridis	species
@@ -51763,7 +51760,7 @@ taxon_id	input	rank
 #itOdoPhal	Odontothrips phaleratus	species
 670467	Odontothrips ulicis	species
 670472	Oxythrips ajugae	species
-#itOxyBico	Oxythrips bicolor	species
+3072149	Oxythrips bicolor	species
 #itOxyHali	Oxythrips halidayi	species
 #itOxyQuer	Oxythrips quercicola	species
 #itOxyUlmi	Oxythrips ulmifoliorum	species
@@ -51774,7 +51771,7 @@ taxon_id	input	rank
 #itPoeAlbo	Poecilothrips albopictus	species
 #itPsyKewi	Psydrothrips kewi	species
 #itRhaLong	Rhaphidothrips longistylosus	species
-#itRhiBrun	Rhipidothrips brunneus	species
+3072150	Rhipidothrips brunneus	species
 1897931	Rhipidothrips gratiosus	species
 #itRubSilv	Rubiothrips silvarum	species
 #itRubVali	Rubiothrips validus	species
@@ -51807,7 +51804,7 @@ taxon_id	input	rank
 #itThrJuni	Thrips juniperinus	species
 #itThrKlap	Thrips klapaleki	species
 670476	Thrips major	species
-#itThrMeny	Thrips menyanthidis	species
+3072151	Thrips menyanthidis	species
 670473	Thrips minutissimus	species
 407017	Thrips nigropilosus	species
 3034999	Thrips origani	species
@@ -51824,8 +51821,8 @@ taxon_id	input	rank
 #itThrVerb	Thrips verbasci	species
 #itThrVimi	Thrips viminalis	species
 670474	Thrips vulgatissimus	species
-#itTmeSuba	Tmetothrips subapterus	species
-#itXylFuli	Xylaplothrips fuliginosus	species
+3072152	Tmetothrips subapterus	species
+3072153	Xylaplothrips fuliginosus	species
 318818	Pholoe baltica	species
 #wpSylArti	Syllides articulocirratus	species
 1436028	Magelona johnstoni	species
