@@ -1,0 +1,46 @@
+attributes:
+  sequencing_status:
+    default: open
+  open:
+    display_group: sequencing_status
+    default: CNGB
+  sample_collected:
+    display_group: sequencing_status
+    default: CNGB
+  sample_acquired:
+    display_group: sequencing_status
+    default: CNGB
+  in_progress:
+    display_group: sequencing_status
+    default: CNGB
+file:
+  format: tsv
+  header: true
+  name: cngb.tsv
+  organelle: nucleus
+identifiers:
+  assembly_id:
+    constraint:
+      len: 32
+    header: assemblyAccession
+    type: keyword
+  assembly_name:
+    constraint:
+      len: 64
+    header: assemblyName
+    type: keyword
+metadata:
+  source:
+    default: CNGB
+  source_url_stub:
+    default: https://db.cngb.org/search/assembly/
+  source_slug:
+    header: assemblyAccession
+names:
+  common_name:
+    header: commonName
+taxonomy:
+  taxon:
+    header: organismName
+  taxon_id:
+    header: taxId
