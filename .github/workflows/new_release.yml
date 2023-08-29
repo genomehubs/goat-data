@@ -207,25 +207,31 @@ jobs:
       - name: Check es health
         run:  curl -s "es1:9200/_cat/health"
 
-      - name: Create dev snapshot repo if it doesn't exist
+      - name: Create current snapshot repo if it doesn't exist
         run: |
-          curl -s -X PUT "es1:9200/_snapshot/dev" \
+          curl -s -X PUT "es1:9200/_snapshot/current" \
             -H 'Content-Type: application/json' \
-            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/dev" } }' || exit 0
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/current" } }' || exit 0
 
+      - name: Create latest snapshot repo if it doesn't exist
+        run: |
+          curl -s -X PUT "es1:9200/_snapshot/latest" \
+            -H 'Content-Type: application/json' \
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/latest" } }' || exit 0
+  
       - name: Create production-RELEASE snapshot repo if it doesn't exist
         run: |
           curl -s -X PUT "es1:9200/_snapshot/production-$RELEASE" \
             -H 'Content-Type: application/json' \
             -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/production-'$RELEASE'" } }' || exit 0
 
-      - name: Delete indices and snapshots for that release, except dev/analysis_file snapshot
+      - name: Delete indices and snapshots for that release, except current/analysis_file snapshot
         run: |
           curl -s -X DELETE "es1:9200/*--20*"
-          curl -s -X DELETE "es1:9200/_snapshot/dev/20*"
+          curl -s -X DELETE "es1:9200/_snapshot/current/20*"
       - name: Restore and rename analysis_file snapshot to current RELEASE indices
         run: |
-          curl -s -X POST "es1:9200/_snapshot/dev/analysis_file/_restore?wait_for_completion=true&pretty" \
+          curl -s -X POST "es1:9200/_snapshot/latest/analysis_file/_restore?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' {
               "ignore_unavailable": true,
@@ -275,14 +281,14 @@ jobs:
                 --sample-dir sources/assembly-data-sample"
       - name: Snapshot RELEASE initassembly
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_initassembly" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
-      - name: Snapshot BACKUP initassembly
+      - name: Snapshot latest BACKUP initassembly
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/initassembly" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/initassembly?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/latest/initassembly" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/latest/initassembly?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
@@ -326,8 +332,8 @@ jobs:
                 --taxon-lookup any --taxon-spellcheck"
       - name: Snapshot initassembly_otttolids
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
@@ -344,8 +350,8 @@ jobs:
                 --taxon-lookup any --taxon-spellcheck"
       - name: Snapshot initassembly_otttolids_gensizekaryo
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
@@ -392,8 +398,8 @@ jobs:
                 --assembly-dir sources/btk"
       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
@@ -431,8 +437,8 @@ jobs:
                 --taxon-dir sources/assembly-data-taxon"
       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
 
@@ -499,14 +505,14 @@ jobs:
       #           --file-metadata sources/btk/btk.files.yaml"
       - name: Snapshot RELEASE analysis_file
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_analysis_file" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_analysis_file?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_analysis_file?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "analysis*,file*", "include_global_state":false}'
-      - name: Snapshot BACKUP analysis_file
+      - name: Snapshot latest BACKUP analysis_file
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/analysis_file" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/analysis_file?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/latest/analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/latest/analysis_file?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "analysis*,file*", "include_global_state":false}'
       - name: Snapshot files to production-$RELEASE
@@ -546,8 +552,8 @@ jobs:
                 --traverse-infer-both"
       - name: Snapshot fill
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
     
