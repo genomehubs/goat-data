@@ -18,8 +18,6 @@ file:
   header: true
   name: cngb.tsv
   organelle: nucleus
-  source: CNGB
-  source_url_stub: https://db.cngb.org/search/assembly/
 identifiers:
   assembly_id:
     constraint:
@@ -32,6 +30,10 @@ identifiers:
     header: assemblyName
     type: keyword
 metadata:
+  source:
+    default: CNGB
+  source_url_stub:
+    default: https://db.cngb.org/search/assembly/
   source_slug:
     header: assemblyAccession
 names:
