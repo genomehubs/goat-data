@@ -22,14 +22,15 @@ jobs:
       - name: Delete indices on this server
         run:  |
           curl -s -X DELETE "es1:9200/*"
-      - name: Create dev snapshot repo if it doesn't exist
+
+      - name: Add "latest" snapshot repo if it isn't there
         run:  |
-          curl -s -X PUT "es1:9200/_snapshot/dev" \
+          curl -s -X PUT "es1:9200/_snapshot/latest" \
           -H 'Content-Type: application/json' \
-          -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/dev" } }' || exit 0
+          -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/latest" } }' || exit 0
       - name: Restore and rename snapshot to current branch
         run:  |
-          curl -s -X POST "es1:9200/_snapshot/dev/initassembly/_restore?wait_for_completion=true&pretty" \
+          curl -s -X POST "es1:9200/_snapshot/latest/initassembly/_restore?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' {
               "ignore_unavailable": true,
