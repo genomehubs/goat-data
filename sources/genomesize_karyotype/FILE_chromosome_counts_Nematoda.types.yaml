@@ -41,6 +41,8 @@ attributes:
       3: "triploid"
       4: "tetraploid"
     type: keyword
+  programmed_dna_elimination:
+    header: "programmed_DNA_elimination_present"
 taxonomy:
   family:
     header: Family

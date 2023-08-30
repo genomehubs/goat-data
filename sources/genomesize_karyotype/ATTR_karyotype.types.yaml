@@ -109,3 +109,14 @@ attributes:
     traverse: list
     traverse_direction: up
     type: keyword
+  programmed_dna_elimination:
+    status: temporary
+    display_group: karyotype
+    description: "Programmed DNA elimination present, number of additional chromosomes in somatic cells given as +n"
+    display_level: 2
+    display_name: Programmed DNA elimination present
+    summary: list
+    traverse: list
+    traverse_direction: up
+    taxon_traverse_limit: phylum
+    type: keyword
