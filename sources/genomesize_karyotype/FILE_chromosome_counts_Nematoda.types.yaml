@@ -1,0 +1,53 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: catalogue_of_chromosome_counts_Nematoda.tsv
+  source: Blaxter et al. (2023) A catalogue of chromosome counts for Phylum Nematoda Data Files
+  source_url: "https://docs.google.com/spreadsheets/d/1hjdUEB5i-tBSwRKHDIcmgBJMBDpFnY3Mn5vxiZ7Mc3w/edit#gid=578059503"
+  source_date: 2023-06-26
+attributes:
+  chromosome_number:
+    header: ["chromosome_number_female", "alternate_karyotypes"]
+    join: ", "
+    separator:
+      - ", "
+      - ","
+      - "-"
+    type: short
+  sex_determination:
+    header: "heterogametic_chromosomes_female-male"
+    separator:
+      - "/"
+    translate:
+      h-d: "haplodiploid"
+    type: keyword
+  ploidy:
+    header: "ploidy_of_female"
+    separator:
+      - ","
+      - ", "
+    translate:
+      polyploid: ""
+    type: short
+  ploidy_descriptive:
+    header: "ploidy_of_female"
+    separator:
+      - ","
+      - ", "
+    translate:
+      1: "haploid"
+      2: "diploid"
+      3: "triploid"
+      4: "tetraploid"
+    type: keyword
+taxonomy:
+  family:
+    header: Family
+  species:
+    header: "Species_name"
+  taxon_id:
+    header: NCBI_TXID
+metadata:
+  is_primary_value:
+    default: 1
