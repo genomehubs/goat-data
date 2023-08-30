@@ -76,3 +76,25 @@ attributes:
     traverse: mode
     traverse_direction: both
     type: short
+  ploidy_inferred:
+    display_group: karyotype
+    bins:
+      min: 0
+      max: 10
+      count: 10
+      scale: linear
+    constraint:
+      max: 200
+      min: 1
+    description: "Ploidy inferred from chromosome count and/or phylogeny"
+    display_level: 2
+    display_name: Estimated Ploidy
+    summary:
+      - mode_list
+      - mode
+      - median_high
+      - max
+      - min
+    traverse: mode
+    traverse_direction: both
+    type: short
