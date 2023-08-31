@@ -285,3 +285,11 @@ attributes:
       max: 100
     type: 2dp
     units: "%"
+  qv_score:
+    description: VGP Quality Value score computed with gfastats
+    display_group: metrics
+    display_level: 2
+    display_name: Quality Value score
+    constraint:
+      min: 1
+    type: 4dp

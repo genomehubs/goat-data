@@ -1,0 +1,21 @@
+file:
+  format: tsv
+  header: true
+  name: VGP_QV.tsv
+  needs:
+    - ATTR_assembly.types.yaml
+  source: VGP
+taxonomy:
+  taxon:
+    header: organism_name
+  taxon_id:
+    header: taxid
+identifiers:
+  assembly_id:
+    constraint:
+      len: 32
+    header: assembly_accession
+    type: keyword
+attributes:
+  qv_score:
+    header: qv_score

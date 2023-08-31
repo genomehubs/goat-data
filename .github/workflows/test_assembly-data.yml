@@ -22,30 +22,54 @@ jobs:
       - name: Delete indices on this server
         run: |
           curl -s -X DELETE "es1:9200/*--curation*"
-      - name: Add "latest" snapshot repo if it isn't there
+
+  genomehubs_init:
+    needs:
+      - get_dockers
+    runs-on: [self-hosted, runner3]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+          ref: ${{ env.RELEASE }}
+
+      - name: genomehubs init
         run: |
-          curl -s -X PUT "es1:9200/_snapshot/latest" \
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
+              "genomehubs init \
+                --es-host es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
+                --taxonomy-ncbi-root $TAXROOT \
+                --taxon-preload"
+
+      - name: Add ES index.mapping.nested_objects.limit 1000000
+        run: |
+          curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
           -H 'Content-Type: application/json' \
-          -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/latest" } }' || exit 0
-      - name: Restore and rename snapshot to current branch
+          -d '{ "index.mapping.nested_objects.limit" : 1000000 }'
+
+      - name: genomehubs index assembly assembly-data
         run: |
-          curl -s -X POST "es1:9200/_snapshot/latest/initassembly/_restore?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' {
-              "ignore_unavailable": true,
-              "include_global_state": false,
-              "include_aliases": false,
-              "rename_pattern" : "--goat--.*",
-              "rename_replacement" : "--goat--${{ env.RELEASE }}"
-              }'
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
+              "genomehubs index \
+                --es-host es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --assembly-dir sources/assembly-data"
+
       - name: Add ES index.mapping.nested_objects.limit 1000000
         run: |
           curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
             -H 'Content-Type: application/json' \
             -d '{ "index.mapping.nested_objects.limit" : 1000000 }'
-      - name: update config.yaml version
-        run: |
-          perl -i -plne 's/^(\s*version:) .*/$1 ${{ env.RELEASE }}/' sources/goat.yaml
+
       - name: genomehubs index test_taxondir
         run: |
           docker run --rm --network=host \

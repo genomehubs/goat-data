@@ -1,0 +1,44 @@
+file:
+  format: csv
+  header: true
+  name: DToL_flowering_plants.csv
+  source: DTOL Flowering Plants Estimates Kew
+  source_description: "Subset of chromosome data for DToL targets - ploidy inferred"
+  comment: "#"
+  source_date: 2023-07-07
+attributes:
+  chromosome_number:
+    header: Chromosome_numbers
+    separator:
+      - ", "
+      - ","
+      - "_"
+      - "-"
+      - "+B"
+      - "2n = "
+      - "c."
+      - ">"
+      - "<"
+    type: short
+    metadata:
+      is_primary_value:
+        default: 1
+  ploidy_inferred:
+    header: Ploidy_inferred
+    separator:
+      - ", "
+      - ","
+      - "_"
+      - "-"
+      - " (-"
+      - " (+"
+      - ") "
+      - ")"
+names:
+  common_name:
+    header: Vernacular
+taxonomy:
+  species:
+    header: Species_name_Stace4
+  family:
+    header: Family
