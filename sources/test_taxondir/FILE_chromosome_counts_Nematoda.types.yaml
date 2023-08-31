@@ -36,10 +36,10 @@ attributes:
       - ","
       - ", "
     translate:
-      1: "haploid"
-      2: "diploid"
-      3: "triploid"
-      4: "tetraploid"
+      "1": "haploid"
+      "2": "diploid"
+      "3": "triploid"
+      "4": "tetraploid"
     type: keyword
   programmed_dna_elimination:
     header: "programmed_DNA_elimination_present"
