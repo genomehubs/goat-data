@@ -5,7 +5,7 @@ common:
     version: 2023.08.31
   es:
     path: /genomehubs/resources/es
-    batch: 10000
+    batch: 1
   taxonomy:
     path: /tmp/new_taxdump
     url:  https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz
