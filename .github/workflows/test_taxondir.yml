@@ -22,7 +22,6 @@ jobs:
       - name: Delete indices on this server
         run: |
           curl -s -X DELETE "es1:9200/*--curation*"
-
       - name: Add "latest" snapshot repo if it isn't there
         run: |
           curl -s -X PUT "es1:9200/_snapshot/latest" \

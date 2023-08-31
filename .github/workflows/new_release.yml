@@ -2,39 +2,38 @@ name: new_release
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 0 * * 1,2,3,4,5,6' # At 00:05 every MTWTFS
+    - cron: "5 0 * * 1,2,3,4,5,6" # At 00:05 every MTWTFS
 env:
   DOCKERVERSION: latest
   TAXROOT: 2759
 
 jobs:
-
   get_dockers:
-    runs-on: [ self-hosted, runner1 ]
+    runs-on: [self-hosted, runner1]
     steps:
       - name: Get dockers
-        run:  |
+        run: |
           docker pull genomehubs/genomehubs:$DOCKERVERSION
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
-    
+
   update_ncbi_ena_tolids:
     needs:
       - get_dockers
-    runs-on: [ self-hosted, runner1 ]
+    runs-on: [self-hosted, runner1]
     steps:
       - name: Cleanup build folder
         run: |
           rm -rf ./* || true
           rm -rf ./.??* || true
       - name: Get release name from date
-        run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       - name: checkout first
         uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
           clean: true
       - name: checkout RELEASE, or create a new branch
-        run:  |
+        run: |
           git checkout -b $RELEASE
       - name: Download NCBI datasets executable
         run: |
@@ -47,28 +46,33 @@ jobs:
           ./datasets download genome taxon "$TAXROOT" --no-progressbar --dehydrated --filename sources/assembly-data/$TAXROOT.zip
       - name: Unzip NCBI eukaryota datasets zip
         run: unzip -o -d sources/assembly-data sources/assembly-data/$TAXROOT.zip ncbi_dataset/data/assembly_data_report.jsonl
+      - name: create a dir to store genomehubs parse files
+        run: mkdir -p sources/parsed
       - name: genomehubs parse --ncbi-datasets-genome
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$DOCKERVERSION bash -c \
-            "genomehubs parse --ncbi-datasets-genome sources/assembly-data --outfile sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz"
-          cp sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
+            "genomehubs parse --ncbi-datasets-genome sources/assembly-data --outfile sources/parsed/ncbi_datasets_eukaryota.tsv.gz"
+          cp sources/parsed/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data/
+          cp sources/parsed/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/
       - name: genomehubs parse --ncbi-datasets-sample
         run: |
           mkdir -p sources/assembly-data-sample
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$DOCKERVERSION bash -c \
-            "genomehubs parse --ncbi-datasets-sample sources/assembly-data --outfile sources/assembly-data-sample/ncbi_datasets_eukaryota_sample.tsv.gz"
+            "genomehubs parse --ncbi-datasets-sample sources/assembly-data --outfile sources/parsed/ncbi_datasets_eukaryota_sample.tsv.gz"
+          cp sources/parsed/ncbi_datasets_eukaryota_sample.tsv.gz sources/assembly-data-sample/
       - name: Clean up expanded ncbi datasets zip
-        run:  rm -rf sources/assembly-data/ncbi_dataset datasets
+        run: rm -rf sources/assembly-data/ncbi_dataset datasets
       - name: genomehubs parse --refseq-organelles
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$DOCKERVERSION bash -c \
-            "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
+            "genomehubs parse --refseq-organelles --outfile sources/parsed/refseq_organelles.tsv.gz"
+          cp sources/parsed/refseq_organelles.tsv.gz sources/assembly-data/
       - name: Get latest NCBI taxdump
         run: |
           mkdir -p /tmp/new_taxdump/ncbi && \
@@ -76,7 +80,7 @@ jobs:
           | tar xzf - nodes.dmp names.dmp && \
           mv nodes.dmp names.dmp /tmp/new_taxdump/ncbi
       - name: Get extra ENA taxonomy nodes
-        run:  |
+        run: |
           mkdir -p sources/ena-taxonomy
           cd sources/ena-taxonomy
           bash ../../scripts/get_ena_taxonomy_extra.bash $TAXROOT
@@ -86,13 +90,13 @@ jobs:
             ena-taxonomy.extra.curr.jsonl
           cd ../../
       - name: Get latest tolids
-        run:  |
+        run: |
           mkdir -p sources/tolids
           curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
           | gzip -c > sources/tolids/tolids.tsv.gz
 
       - name: Update sources/goat.yaml
-        run:  |
+        run: |
           perl -i -plne 's/20\d\d\.\d\d.\d\d/'$RELEASE'/g' sources/goat.yaml
 
       - name: Commit files in branch
@@ -112,7 +116,7 @@ jobs:
     needs:
       - get_dockers
       - update_ncbi_ena_tolids
-    runs-on:  [ self-hosted, runner2 ]
+    runs-on: [self-hosted, runner2]
     steps:
       - name: Install dependencies
         run: |
@@ -120,7 +124,7 @@ jobs:
           pip install requests pyyaml pandas numpy
 
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
@@ -152,8 +156,8 @@ jobs:
           ' ./sources/status_lists/vgp.tsv
 
       - name: Get from jgi api
-        run:  python3 ./scripts/jgi_to_tsv.py ${{ secrets.JGI_OFFLINE_TOKEN }} > ./sources/status_lists/jgi_1kfg.tsv
-  
+        run: python3 ./scripts/jgi_to_tsv.py ${{ secrets.JGI_OFFLINE_TOKEN }} > ./sources/status_lists/jgi_1kfg.tsv
+
       - name: Get from googlesheets (Kew, DTOL Assembly Informatics, Aus Genome Status Bioplatforms)
         run: |
           docker pull genomehubs/r-ver:latest
@@ -165,7 +169,7 @@ jobs:
             cp sources/assembly-data/cngb.tsv sources/assembly-data-taxon/cngb.tsv
 
       - name: Update source_date in yamls
-        run:  |
+        run: |
           RELEASEDATE=${RELEASE//./-}
           perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_assembly_informatics_status_kmer_draft.types.yaml
           perl -i -plne 's/source_date:\s*202\d.\d\d.\d\d/source_date: '$RELEASEDATE'/g' sources/genomesize_karyotype/FILE_DTOL_Plant_Genome_Size_Estimates.types.yaml
@@ -192,11 +196,10 @@ jobs:
     needs:
       - get_dockers
       - update_ncbi_ena_tolids
-    runs-on:  [ self-hosted, runner1 ]
+    runs-on: [self-hosted, runner1]
     steps:
-    
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -205,7 +208,7 @@ jobs:
           ref: ${{ env.RELEASE }}
 
       - name: Check es health
-        run:  curl -s "es1:9200/_cat/health"
+        run: curl -s "es1:9200/_cat/health"
 
       - name: Create current snapshot repo if it doesn't exist
         run: |
@@ -218,7 +221,7 @@ jobs:
           curl -s -X PUT "es1:9200/_snapshot/latest" \
             -H 'Content-Type: application/json' \
             -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/latest" } }' || exit 0
-  
+
       - name: Create production-RELEASE snapshot repo if it doesn't exist
         run: |
           curl -s -X PUT "es1:9200/_snapshot/production-$RELEASE" \
@@ -254,11 +257,11 @@ jobs:
                 --taxon-preload"
 
       - name: Add ES index.mapping.nested_objects.limit 1000000
-        run:  |
+        run: |
           curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
           -H 'Content-Type: application/json' \
           -d '{ "index.mapping.nested_objects.limit" : 1000000 }'
-      
+
       - name: genomehubs index assembly assembly-data
         run: |
           docker run --rm --network=host \
@@ -297,11 +300,11 @@ jobs:
       - get_dockers
       - genomehubs_init
       - update_api_googlesheets_data
-    runs-on:  [ self-hosted, runner1 ]
-  
+    runs-on: [self-hosted, runner1]
+
     steps:
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -384,8 +387,11 @@ jobs:
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs parse \
-                --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
-
+                --btk --btk-root Eukaryota --outfile sources/parsed/btk.tsv.gz"
+            cp sources/parsed/btk.tsv.gz sources/btk/
+      - name: clean up sources/parsed
+        run: |
+          rm -rf sources/parsed
       - name: genomehubs index assembly btk assemblies
         run: |
           docker run --rm --network=host \
@@ -458,11 +464,10 @@ jobs:
     needs:
       - get_dockers
       - genomehubs_index_attributes
-    runs-on: [ self-hosted, runner2 ]
+    runs-on: [self-hosted, runner2]
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -522,16 +527,14 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "analysis*,file*", "include_global_state":false}'
 
-
   genomehubs_fill:
     needs:
       - get_dockers
       - genomehubs_index_attributes
-    runs-on: [ self-hosted, runner1 ]
+    runs-on: [self-hosted, runner1]
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -556,7 +559,7 @@ jobs:
           curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
-    
+
       - name: Snapshot final fill to production-$RELEASE
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
@@ -568,11 +571,10 @@ jobs:
     needs:
       - genomehubs_index_files
       - genomehubs_fill
-    runs-on: [ self-hosted, runner1 ]
+    runs-on: [self-hosted, runner1]
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - name: rsync production snapshot to sanger lustre
         run: |
@@ -583,11 +585,10 @@ jobs:
     needs:
       - genomehubs_fill
       - genomehubs_index_files
-    runs-on: [ self-hosted, runner2 ]
+    runs-on: [self-hosted, runner2]
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - name: ssh prod and restore
         run: |
