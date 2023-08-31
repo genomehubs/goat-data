@@ -279,6 +279,7 @@ jobs:
             genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
+                --es-batch 1 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
                 --sample-dir sources/assembly-data-sample"
