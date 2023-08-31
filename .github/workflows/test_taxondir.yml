@@ -20,7 +20,7 @@ jobs:
         run: curl -s "es1:9200/_cat/health"
       - name: Delete indices on this server
         run: |
-          curl -s -X DELETE "es1:9200/*"
+          curl -s -X DELETE "es1:9200/*--curation*"
 
       - name: Add "latest" snapshot repo if it isn't there
         run: |
@@ -35,7 +35,7 @@ jobs:
               "ignore_unavailable": true,
               "include_global_state": false,
               "include_aliases": false,
-              "rename_pattern" : "--goat--*",
+              "rename_pattern" : "--goat--.*",
               "rename_replacement" : "--goat--${{ env.RELEASE }}"
               }'
       - name: Add ES index.mapping.nested_objects.limit 1000000
