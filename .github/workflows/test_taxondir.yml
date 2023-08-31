@@ -3,6 +3,7 @@ on: workflow_dispatch
 env:
   RELEASE: ${{ github.ref_name }}
   DOCKERVERSION: develop
+  TAXROOT: 2759
 
 jobs:
   run_test:
@@ -76,7 +77,7 @@ jobs:
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
-                --traverse-root 2759 \
+                --traverse-root $TAXROOT \
                 --traverse-infer-both"
 
       - name: restart dockers
