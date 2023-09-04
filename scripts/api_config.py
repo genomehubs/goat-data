@@ -89,19 +89,22 @@ def nhm_api_count_handler(r_text):
 def nhm_row_handler(fieldnames, **kwargs):
     nhm_post_data_after = nhm_post_data
     result = []
-
     while True:
         response = requests.post(nhm_url, headers=nhm_headers, json=nhm_post_data_after)
         r = response.json()
         dl = r["result"]["records"]
-        d = [[species["data"].get(f) for f in fieldnames] for species in dl]
-        # split catalogue headers at this point
-        result.extend(d)
+        for species in dl:
+            item_value = {}
+            for f in fieldnames:
+                field_value = species["data"].get(f)
+                if f == "otherCatalogNumbers":
+                    field_value = field_value[17:]
+                item_value[f] = field_value
+            result.append(item_value)
         print(r["result"]["after"])
         nhm_post_data_after.update({"after": r["result"]["after"]})
         if r["result"]["after"] == None:
             break
-
     return result
 
 
