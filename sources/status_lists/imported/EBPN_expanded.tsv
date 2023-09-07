@@ -7,7 +7,7 @@ ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	synonym	
 315322	Amblyraja	hyperborea	Rajidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 82379	Amphiura	chiajei	Amphiuridae	ebpn_other_priority			EBPN	EBPN		EBPN									
 29923	Amylomyces	rouxii	Mucoraceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
-1425294	Anelasma	squalicola	Pollicipedidae	ebpn_other_priority			EBPN	EBPN		EBPN									
+1425294	Anelasma	squalicola	Pollicipedidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 84120	Anoplodium	stichopi	Umagillidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 454130	Aspergillus	calidoustus	Aspergillaceae	ebpn_other_priority			EBPN	EBPN		EBPN									
 9770	Balaenoptera	physalus	Balaenopteridae	ebpn_other_priority			EBPN	EBPN		EBPN									
@@ -18,11 +18,11 @@ ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	synonym	
 13385	Calluna	vulgaris	Ericaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 37303	Chara	hispida	Characeae	ebpn_other_priority			EBPN	EBPN		EBPN									
 412156	Chrysochromulina	leadbeateri	Chrysochromulinaceae	ebpn_other_priority			EBPN	EBPN		EBPN									
-260543	Chrysopa	perla	Chrysopidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
+260543	Chrysopa	perla	Chrysopidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 127875	Cinclus	cinclus	Cinclidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 669661	Cochlearia	groenlandica	Brassicaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 858854	Cortinarius	alpinus	Cortinariaceae	ebpn_other_priority			EBPN	EBPN		EBPN									
-75324	Cortinarius	caperatus	Cortinariaceae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
+75324	Cortinarius	caperatus	Cortinariaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 155726	Cunninghamella	blakesleeana	Cunninghamellaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 76405	Cunninghamella	echinulata	Cunninghamellaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 132682	Daphnia	cristata	Daphniidae	ebpn_other_priority			EBPN	EBPN		EBPN									
@@ -32,7 +32,7 @@ ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	synonym	
 2681902	Discus	ruderatus	Discidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 192631	Elaphostrongylus	rangiferi	Protostrongylidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 603589	Ephemerella	aurivillii	Ephemerellidae	ebpn_other_priority			EBPN	EBPN		EBPN									
-648166	Etmopterus	spinax	Etmopteridae	ebpn_other_priority			EBPN	EBPN		EBPN									
+648166	Etmopterus	spinax	Etmopteridae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 430040	Eumicrotremus	spinosus	Cyclopteridae	ebpn_other_priority			EBPN	EBPN		EBPN									
 478208	Flustra	foliacea	Flustridae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 40483	Fomitopsis	pinicola	Fomitopsidaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
@@ -56,15 +56,15 @@ ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	synonym	
 42458	Lichtheimia	corymbifera	Lichtheimiaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 64522	Linnemannia	gamsii	Mortierellaceae	ebpn_other_priority			EBPN	EBPN		EBPN									
 64524	Linnemannia	hyalina	Mortierellaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
-64524	Mortierella	hyalina	Mortierellaceae	ebpn_other_priority			EBPN	EBPN		EBPN									
+64524	Mortierella	hyalina	Mortierellaceae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 8074	Lophius	piscatorius	Lophiidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 52792	Luscinia	svecica	Turdidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 13125	Lynx	lynx	Felidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 3752	Malus	sylvestris	Rosaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
-84115	Meara	stichopi	Nemertodermatidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
+84115	Meara	stichopi	Nemertodermatidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 48144	Meganyctiphanes	norvegica	Euphausiidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 860324	Melica	nutans	Poaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
-8086	Merluccius	merluccius	Gadidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+8086	Merluccius	merluccius	Gadidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 64518	Mortierella	alpina	Mortierellaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 589210	Mortierella	globalpina	Mortierellaceae	ebpn_other_priority			EBPN	EBPN		EBPN									
 979764	Mortierella	zonata	Mortierellaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
@@ -94,7 +94,7 @@ ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	synonym	
 2824852	Pseudopolydora	nordica	Spionidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 997042	Pseudopolydora	paucibranchiata	Spionidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 228257	Rangifer	tarandus	Cervidae	ebpn_other_priority	in_progress	Rangifer tarandus platyrynchus	EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
-86329	Rangifer	tarandus	Cervidae	ebpn_other_priority		Rangifer tarandus tarandus	EBPN	EBPN		EBPN									
+86329	Rangifer	tarandus	Cervidae	ebpn_other_priority	sample_collected	Rangifer tarandus tarandus	EBPN	EBPN		EBPN	EBPN								
 4846	Rhizopus	stolonifer	Rhizopodaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 64495	Rhizopus	arrhizus	Mucoraceae	ebpn_other_priority			EBPN	EBPN		EBPN									
 64495	Rhizopus	oryzae	Mucoraceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
@@ -127,7 +127,7 @@ ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	synonym	
 7671	Strongylocentrotus	droebachiensis	Strongylocentrotidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 2594091	Stygocapitella	zecai	Parergodrilidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 145168	Thraustochytrium	sp.	Thraustochytriaceae	ebpn_other_priority			EBPN	EBPN		EBPN									
-2665213	Triangulus	munidae	Lernaeodiscidae	ebpn_other_priority			EBPN	EBPN		EBPN									
+2665213	Triangulus	munidae	Lernaeodiscidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 2170715	Trichaptum	lancinum	Hymenochaetales incertae sedis	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 1835021	Ulota	intermedia	Orthotrichaceae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 44442	Umbelopsis	vinacea	Umbelopsidaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
@@ -138,22 +138,26 @@ ncbi_taxon_id	genus	species	family	target_list_status	sequencing_status	synonym	
 2021743	Vertigo	arctica	Vertiginidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 1128348	Vertigo	alpestris	Vertiginidae	ebpn_other_priority			EBPN	EBPN		EBPN									
 669863	Viola	epipsila	Violaceae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
-502521	Viola	rupestris	Violaceae	ebpn_other_priority		Viola rupestris relicta	EBPN	EBPN		EBPN									
+502521	Viola	rupestris	Violaceae	ebpn_other_priority	sample_acquired	Viola rupestris relicta	EBPN	EBPN		EBPN	EBPN	EBPN							
 37607	Pyrrhula	pyrrhula	Fringillidae	ebpn_other_priority	in_progress	pyrrhula	EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
-37609	Coccothraustes	coccothraustes	Fringillidae	ebpn_other_priority	sample_acquired	coccothraustes	EBPN	EBPN		EBPN	EBPN	EBPN							
-37598	Fringilla	coelebs	Fringillidae	ebpn_other_priority	sample_acquired	coelebs	EBPN	EBPN		EBPN	EBPN	EBPN							
-160760	Spinus	spinus	Fringillidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
-357736	Turdus	pilaris	Turdidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
-34924	Pica	pica	Corvidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
-50251	Sitta	europaea	Sittidae	ebpn_other_priority	sample_acquired	europaea	EBPN	EBPN		EBPN	EBPN	EBPN							
-37601	Chloris	chloris	Fringillidae	ebpn_other_priority	sample_acquired	chloris	EBPN	EBPN		EBPN	EBPN	EBPN							
-1471635	Lanius	collurio	Laniidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
-9182	Phylloscopus	trochilus	Phylloscopidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
+37609	Coccothraustes	coccothraustes	Fringillidae	ebpn_other_priority	in_progress	coccothraustes	EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+37598	Fringilla	coelebs	Fringillidae	ebpn_other_priority	in_progress	coelebs	EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+160760	Spinus	spinus	Fringillidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+357736	Turdus	pilaris	Turdidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+34924	Pica	pica	Corvidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+50251	Sitta	europaea	Sittidae	ebpn_other_priority	in_progress	europaea	EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+37601	Chloris	chloris	Fringillidae	ebpn_other_priority	in_progress	chloris	EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+1471635	Lanius	collurio	Laniidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
+9182	Phylloscopus	trochilus	Phylloscopidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 189513	Chrysoperla	carnea	Chrysopidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 185735	Arctogadus	glacialis	Gadidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 35896	Galium	boreale	Rubiaceae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
-201445	Coronella	austriaca	Colubridae	ebpn_other_priority			EBPN	EBPN		EBPN									
+201445	Coronella	austriaca	Colubridae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
+39297	Dracocephalum	ruyschiana	Lamiaceae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
+204219	Thymus	serpyllum	Lamiaceae	ebpn_other_priority	sample_acquired	tanaensis	EBPN	EBPN		EBPN	EBPN	EBPN							
+165317	Veronica	longifolia	Plantaginaceae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
+20403	Astragalus	alpinus	Fabaceae	ebpn_other_priority	sample_acquired	arcticus	EBPN	EBPN		EBPN	EBPN	EBPN							
 	Diamesa	lindrothi	Chironomidae	ebpn_other_priority	in_progress		EBPN	EBPN		EBPN	EBPN	EBPN	EBPN						
 	Enteroxenos	oestergreni	Eulimidae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
 	Oenothera	muricata	Onagraceae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
-	Tisbe	battagliai	Tisbidae	ebpn_other_priority			EBPN	EBPN		EBPN									
+	Viola	suecica	Violaceae	ebpn_other_priority	sample_acquired		EBPN	EBPN		EBPN	EBPN	EBPN							
