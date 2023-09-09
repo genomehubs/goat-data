@@ -1,4 +1,5 @@
 taxon_id	input	rank
+753371	Musotima nitidalis	species
 465155	Serica brunnea	species
 1101028	Pammene giganteana	species
 1073575	Agonopterix heracliana	species
@@ -1959,8 +1960,16 @@ taxon_id	input	rank
 1594338	Pyrausta aurata	species
 1191084	Elasmucha grisea	species
 2850632	Alysia manducator	species
+93883	Tineola bisselliella	species
+65311	Diplazon laetatorius	species
 30102	Cicadellidae	family
+878396	Ptomaphagus subvillosus	species
+346861	Tachyporus hypnorum	species
+317843	Miarus campanulae	species
 997513	Macrochilo cribrumalis	species
+878073	Paradromius linearis	species
+878186	Oxytelus laqueatus	species
+1553234	Cryptocephalus fulvus	species
 279420	Sialis lutaria	species
 1209556	Nomophila noctuella	species
 1869593	Cochylis atricapitana	species
@@ -1985,7 +1994,6 @@ taxon_id	input	rank
 171585	Nymphalis io	species
 1070333	Ectoedemia decentella	species
 1594254	Cochylis nana	species
-93883	Tineola bisselliella	species
 1100908	Anania crocealis	species
 #ilComAene	Commophila aeneana	species
 1594286	Elachista gleichenella	species
@@ -2084,6 +2092,8 @@ taxon_id	input	rank
 987968	Leucania comma	species
 878374	Phyllotreta vittula	species
 185214	Liposcelis bostrychophila	species
+7399	Hymenoptera	order
+41042	Tipulidae	family
 1869728	Colostygia multistrigaria	species
 186058	Cuscuta epithymum	species
 214030	Anaplectoides prasina	species
@@ -2100,7 +2110,6 @@ taxon_id	input	rank
 1393966	Cacopsylla fulguralis	species
 347359	Halyzia sedecimguttata	species
 346828	Phyllotreta nigripes	species
-7399	Hymenoptera	order
 1594321	Parapoynx stratiotata	species
 #idSmiCont	Smittia contingens	species
 1335499	Physiphora alceae	species
@@ -2113,7 +2122,6 @@ taxon_id	input	rank
 1425412	Periphyllus acericola	species
 878056	Leistus spinibarbis	species
 346760	Chaetocnema concinna	species
-346861	Tachyporus hypnorum	species
 2561799	Tachystola acroxantha	species
 242267	Plebejus argus	species
 1258725	Nemoura avicularis	species
@@ -2148,9 +2156,9 @@ taxon_id	input	rank
 1553771	Stethorus pusillus	species
 988104	Dichonia aprilina	species
 2014013	Caenis rivulorum	species
+878129	Magdalis barbicornis	species
 233164	Nemophora degeerella	species
 938207	Phytometra viridaria	species
-753371	Musotima nitidalis	species
 2561093	Clepsis dumicolana	species
 1869771	Cydia amplana	species
 #ilDenAlbi	Denisia albimaculea	species
@@ -2287,7 +2295,6 @@ taxon_id	input	rank
 2565953	Phronia biarcuata	species
 1412117	Lema cyanella	species
 201766	Apoderus coryli	species
-878129	Magdalis barbicornis	species
 947006	Lumbricus friendi	species
 274113	Diadromus troglodytes	species
 2922067	Exechia festiva	species
@@ -2411,7 +2418,6 @@ taxon_id	input	rank
 879052	Siagonium quadricorne	species
 1048942	Cordylepherus viridis	species
 350087	Cantharis rufa	species
-878073	Paradromius linearis	species
 2922059	Bruchidius imbricornis	species
 153018	Byturus ochraceus	species
 1593253	Myrmarachne formicaria	species
@@ -3195,7 +3201,6 @@ taxon_id	input	rank
 494159	Dolichomitus agnoscendus	species
 #iyAnaEuca	Anacharis eucharoides	species
 2881541	Anoncus gracilicornis	species
-65311	Diplazon laetatorius	species
 #iyLisLina	Lissonota lineata	species
 979952	Sussaba flavipes	species
 2867255	Odontomyia angulata	species
@@ -3212,7 +3217,6 @@ taxon_id	input	rank
 127480	Calathus fuscipes	species
 347315	Crypticus quisquilius	species
 2163654	Gelis hortensis	species
-1553234	Cryptocephalus fulvus	species
 877894	Cassida viridis	species
 877986	Kateretes pedicularius	species
 118799	Carabus granulatus	species
@@ -3564,7 +3568,6 @@ taxon_id	input	rank
 706835	Athysanus argentarius	species
 2881873	Dolichomitus mesocentrus	species
 491138	Crangon crangon	species
-878396	Ptomaphagus subvillosus	species
 7381	Sarcophagidae	family
 #iyPleDigi	Plectocryptus digitatus	species
 154142	Sphaerites glabratus	species
@@ -3674,9 +3677,7 @@ taxon_id	input	rank
 347362	Hermaeophaga mercurialis	species
 #qqRugInst	Rugathodes instabilis	species
 2979187	Hoplismenus bidentatus	species
-172134	Bathysaurus ferox	species
 472191	Phrosina semilunata	species
-317843	Miarus campanulae	species
 2981338	Paracallisoma idioxenos	species
 495374	Oxytorus armatus	species
 2980510	Actinauge abyssorum	species
@@ -3693,7 +3694,6 @@ taxon_id	input	rank
 2980511	Styracaster chuni	species
 381128	Lehmannia marginata	species
 273442	Cheilosia grossa	species
-878186	Oxytelus laqueatus	species
 1302814	Tandonia sowerbyi	species
 145610	Deroceras reticulatum	species
 #iyEpiPany	Epiclerus panyas	species
@@ -3851,7 +3851,6 @@ taxon_id	input	rank
 77651	Simocephalus vetulus	species
 99213	Parasitidae	family
 2211628	Mycetophila perpallida	species
-41042	Tipulidae	family
 156969	Platambus maculatus	species
 280090	Saldula saltatoria	species
 201871	Cimberis attelaboides	species

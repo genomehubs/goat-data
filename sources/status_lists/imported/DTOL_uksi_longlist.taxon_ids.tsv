@@ -5696,7 +5696,6 @@ taxon_id	input	rank
 #goNewPoly	Newbya polyandra	species
 112089	Achlya recurva	species
 1618013	Newbya spinosa	species
-2729594	Nigroporus durus	species
 #grNigElli	Nigrosabulum ellipsoideum	species
 #gyNipLych	Niptera lychnidis	species
 #grNodGeoc	Nodulisporium geochroum	species
@@ -6127,6 +6126,7 @@ taxon_id	input	rank
 #gfPorVeri	Poria versiformis	species
 #glPorRiva	Porina rivalis	species
 74615	Porodaedalea chrysoloma	species
+#grPorCord	Porosphaerella cordanophora	species
 168922	Porpidia albocaerulescens	species
 1531377	Porpidia irrigua	species
 2885714	Calcipostia guttulata	species
@@ -6918,9 +6918,9 @@ taxon_id	input	rank
 #glSpiPunt	Spiloma punctum	species
 #gfThePseu	Thelephora pseudopannosa	species
 #gfTomSubl	Tomentella sublaevis	species
-50383	Trichaptum laricinum	species
+50383	Pseudotrichaptum laricinum	species
 1490978	Trichoderma britdaniae	species
-#grTriPert	Trichonectria pertusariae	species
+3073514	Trichonectria pertusariae	species
 1891353	Verrucaria ahtii	species
 1891355	Verrucaria vitikainenii	species
 2548433	Xanthoparmelia taractica	species
@@ -7480,7 +7480,7 @@ taxon_id	input	rank
 #gfBolXanh	Boletus xanthopus	species
 693841	Entoloma vezzenaense	species
 3024448	Lecanora hypoptoides	species
-#glRinFurf	Rinodina furfuracea	species
+3072333	Rinodina furfuracea	species
 #gdRamRigi	Ramularia rigidula	species
 304753	Calonarius suaveolens	species
 622705	Phlegmacium majoranae	species
@@ -35954,7 +35954,7 @@ taxon_id	input	rank
 751683	Muhlenbergia schreberi	species
 433894	Munroa squarrosa	species
 81769	Muscari botryoides	species
-81770	Leopoldia comosa	species
+81770	Muscari comosum	species
 359867	Myagrum perfoliatum	species
 192337	Myosotis alpestris	species
 192342	Myosotis laxa	species
@@ -49203,7 +49203,7 @@ taxon_id	input	rank
 3039857	Tremella versicolor	species
 2563682	Triblidium caliciiforme	species
 #gaTriOcto	Triblidium octosporum	species
-2008363	Trichaptum fuscoviolaceum	species
+2008363	Hirschioporus fuscoviolaceus	species
 2075439	Tricharina cretea	species
 1450422	Trichia botrytis	species
 1697580	Trichia contorta	species
@@ -55053,6 +55053,7 @@ taxon_id	input	rank
 #htPleTrig	Pleurogonius trigonocephalus	species
 #htSteCest	Stephanostomum cesticillum	species
 1301050	Tylodelphys excavata	species
+3072562	Aplidium sp.	species
 2771288	Aplidium turbinatum	species
 62808	Botrylloides leachii	species
 693230	Dolioletta gegenbauri	species
@@ -55593,7 +55594,7 @@ taxon_id	input	rank
 77794	Luciobarbus capito	species
 1214126	Macarorchestia roffensis	species
 #uoTrySali	Tryblionella salinarum	species
-#iyHolFast	Holopyga fastuosa	species
+3073194	Holopyga fastuosa	species
 179823	Chaitophorus horii	species
 1425388	Chaitophorus salijaponicus	species
 70182	Polymyxa graminis	species
@@ -58988,7 +58989,7 @@ taxon_id	input	rank
 #xbSciMicr	Scissodesma micronitida	species
 #xbMacAnte	Mactrotoma antecedens	species
 1411939	Donacilla cornea	species
-#xbDonSemi	Donax semistriatus	species
+3074273	Donax semistriatus	species
 40130	Donax trunculus	species
 399303	Abra alba	species
 989232	Abra longicallus	species
