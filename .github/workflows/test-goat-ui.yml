@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Get dockers
         run: |
-          docker pull genomehubs/api:$DOCKERVERSION
-          docker tag genomehubs/api:$DOCKERVERSION genomehubs/api:test
+          docker pull genomehubs/genomehubs-api:$DOCKERVERSION
+          docker tag genomehubs/genomehubs-api:$DOCKERVERSION genomehubs/api:latest
           docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
 
   run_goat_ui_tests:
