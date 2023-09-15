@@ -2,6 +2,8 @@ name: new_release
 on:
   workflow_dispatch:
   push:
+env:
+  DOCKERVERSION: latest
 
 jobs:
   get_dockers:
