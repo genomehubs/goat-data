@@ -39,12 +39,12 @@ jobs:
             --name goat-api-test \
             --network=net-es \
             -p 3000:3000 \
-            -e "GH_API_URL=http://localhost:3000/api/v2 \
-            -e "GH_ORIGINS=http://localhost \
-            -e "GH_HUBNAME=goat \
-            -e "GH_HUBPATH=/genomehubs/resources/ \
-            -e "GH_NODE=http://es1:9200 \
-            -e "GH_RELEASE=$(date +'%Y.%m.%d') \
+            -e "GH_API_URL=http://localhost:3000/api/v2" \
+            -e "GH_ORIGINS=http://localhost" \
+            -e "GH_HUBNAME=goat" \
+            -e "GH_HUBPATH=/genomehubs/resources/" \
+            -e "GH_NODE=http://es1:9200" \
+            -e "GH_RELEASE=$(date +'%Y.%m.%d')" \
             -v `pwd`/goat-ui:/genomehubs/goat-ui \
             genomehubs/genomehubs-api:$DOCKERVERSION
           sleep 5
@@ -56,7 +56,6 @@ jobs:
           git clone https://github.com/genomehubs/goat-ui
       - name: Run landing page tests
         run: |
-          sleep 300
           docker run --rm --network=host \
             -v `pwd`/external/goat-ui:/genomehubs/goat-ui \
             genomehubs/genomehubs:$DOCKERVERSION bash -c \
