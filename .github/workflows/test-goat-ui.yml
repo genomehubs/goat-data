@@ -1,0 +1,47 @@
+name: new_release
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  # get_dockers:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - name: Get dockers
+  #       run: |
+  #         docker pull genomehubs/api:$DOCKERVERSION
+  #         docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
+
+  run_goat_ui_tests:
+    runs-on: [self-hosted, runner1]
+    services:
+      api:
+        image: genomehubs/api:$DOCKERVERSION
+        ports:
+          - 3000:3000
+        env:
+          GH_API_URL: http://localhost:3000/api/v2
+          GH_ORIGINS: http://localhost
+          GH_HUBNAME: goat
+          GH_HUBPATH: /genomehubs/resources/
+          GH_NODE: http://es1:9200
+          GH_RELEASE: $(date +'%Y.%m.%d')
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          mkdir -p
+          git clone https://github.com/genomehubs/goat-ui
+      - name: Run landing page tests
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/goat-ui:/genomehubs/goat-ui \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
+              "genomehubs test \
+                --config-file /genomehubs/goat-ui/tests/config/goat.yaml \
+                --base-url https://localhost:3000/api/v2 \
+                --json-test-dir /genomehubs/goat-ui/tests/api/landing"
+      - uses: webiny/action-post-run@3.0.0
+        id: post-run-command
+        with:
+          run: rm -r goat-ui
