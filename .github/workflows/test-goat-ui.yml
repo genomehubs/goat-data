@@ -12,6 +12,7 @@ jobs:
       - name: Get dockers
         run: |
           docker pull genomehubs/genomehubs-api:$DOCKERVERSION
+          docker rm -f goat-api-test
           docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
 
   run_goat_ui_tests:
@@ -29,7 +30,7 @@ jobs:
     #       GH_NODE: http://localhost:9200
     #       GH_RELEASE: 2023.09.15
     #       # GH_RELEASE: $(date +'%Y.%m.%d')
-
+    needs: get_dockers
     steps:
       - uses: actions/checkout@v3
       - name: Start API
