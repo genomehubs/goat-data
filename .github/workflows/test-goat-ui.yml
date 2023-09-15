@@ -6,21 +6,20 @@ env:
   DOCKERVERSION: latest
 
 jobs:
-  get_dockers:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - name: Get dockers
-        run: |
-          docker pull genomehubs/genomehubs-api:$DOCKERVERSION
-          docker tag genomehubs/genomehubs-api:$DOCKERVERSION genomehubs/api:latest
-          docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
+  # get_dockers:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - name: Get dockers
+  #       run: |
+  #         docker pull genomehubs/genomehubs-api:$DOCKERVERSION
+  #         docker tag genomehubs/genomehubs-api:$DOCKERVERSION genomehubs/api:latest
+  #         docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
 
   run_goat_ui_tests:
     runs-on: [self-hosted, runner1]
-    needs: get_dockers
     services:
       api:
-        image: genomehubs/api:test
+        image: genomehubs/genomehubs-api:$DOCKERVERSION
         ports:
           - 3000:3000
         env:
