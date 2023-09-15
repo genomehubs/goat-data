@@ -4,19 +4,20 @@ on:
   push:
 
 jobs:
-  # get_dockers:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - name: Get dockers
-  #       run: |
-  #         docker pull genomehubs/api:$DOCKERVERSION
-  #         docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
+  get_dockers:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Get dockers
+        run: |
+          docker pull genomehubs/api:$DOCKERVERSION
+          docker tag genomehubs/api:$DOCKERVERSION genomehubs/api:test
+          docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
 
   run_goat_ui_tests:
     runs-on: [self-hosted, runner1]
     services:
       api:
-        image: genomehubs/api:$DOCKERVERSION
+        image: genomehubs/api:test
         ports:
           - 3000:3000
         env:
@@ -25,7 +26,8 @@ jobs:
           GH_HUBNAME: goat
           GH_HUBPATH: /genomehubs/resources/
           GH_NODE: http://es1:9200
-          GH_RELEASE: $(date +'%Y.%m.%d')
+          GH_RELEASE: 2023.09.15
+          # GH_RELEASE: $(date +'%Y.%m.%d')
 
     steps:
       - uses: actions/checkout@v3
