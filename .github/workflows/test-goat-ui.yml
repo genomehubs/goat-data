@@ -17,6 +17,7 @@ jobs:
 
   run_goat_ui_tests:
     runs-on: [self-hosted, runner1]
+    needs: get_dockers
     services:
       api:
         image: genomehubs/api:test
