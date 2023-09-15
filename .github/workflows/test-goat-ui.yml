@@ -6,34 +6,49 @@ env:
   DOCKERVERSION: latest
 
 jobs:
-  # get_dockers:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - name: Get dockers
-  #       run: |
-  #         docker pull genomehubs/genomehubs-api:$DOCKERVERSION
-  #         docker tag genomehubs/genomehubs-api:$DOCKERVERSION genomehubs/api:latest
-  #         docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
+  get_dockers:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Get dockers
+        run: |
+          docker pull genomehubs/genomehubs-api:$DOCKERVERSION
+          docker run --rm genomehubs/api sh -c 'echo $CONTAINER_VERSION'
 
   run_goat_ui_tests:
     runs-on: [self-hosted, runner1]
-    services:
-      api:
-        image: genomehubs/genomehubs-api:latest
-        ports:
-          - 3000:3000
-        env:
-          GH_API_URL: http://localhost:3000/api/v2
-          GH_ORIGINS: http://localhost
-          GH_HUBNAME: goat
-          GH_HUBPATH: /genomehubs/resources/
-          GH_NODE: http://localhost:9200
-          GH_RELEASE: 2023.09.15
-          # GH_RELEASE: $(date +'%Y.%m.%d')
+    # services:
+    #   api:
+    #     image: genomehubs/genomehubs-api:latest
+    #     ports:
+    #       - 3000:3000
+    #     env:
+    #       GH_API_URL: http://localhost:3000/api/v2
+    #       GH_ORIGINS: http://localhost
+    #       GH_HUBNAME: goat
+    #       GH_HUBPATH: /genomehubs/resources/
+    #       GH_NODE: http://localhost:9200
+    #       GH_RELEASE: 2023.09.15
+    #       # GH_RELEASE: $(date +'%Y.%m.%d')
 
     steps:
       - uses: actions/checkout@v3
-      - run: |
+      - name: Start API
+        run: |
+          docker run --rm -d \
+            --name goat-api-test \
+            --network=net-es \
+            -p 3000:3000 \
+            -e "GH_API_URL=http://localhost:3000/api/v2 \
+            -e "GH_ORIGINS=http://localhost \
+            -e "GH_HUBNAME=goat \
+            -e "GH_HUBPATH=/genomehubs/resources/ \
+            -e "GH_NODE=http://es1:9200 \
+            -e "GH_RELEASE=$(date +'%Y.%m.%d') \
+            -v `pwd`/goat-ui:/genomehubs/goat-ui \
+            genomehubs/genomehubs-api:$DOCKERVERSION
+          sleep 5
+      - name: Git clone goat-ui
+        run: |
           git clone https://github.com/genomehubs/goat-ui
       - name: Run landing page tests
         run: |
@@ -47,4 +62,6 @@ jobs:
       - uses: webiny/action-post-run@3.0.0
         id: post-run-command
         with:
-          run: rm -r goat-ui
+          run: |
+            rm -rf goat-ui
+            docker rm -f goat-api-test
