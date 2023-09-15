@@ -27,7 +27,7 @@ jobs:
           GH_ORIGINS: http://localhost
           GH_HUBNAME: goat
           GH_HUBPATH: /genomehubs/resources/
-          GH_NODE: http://es1:9200
+          GH_NODE: http://localhost:9200
           GH_RELEASE: 2023.09.15
           # GH_RELEASE: $(date +'%Y.%m.%d')
 
