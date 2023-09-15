@@ -50,11 +50,13 @@ jobs:
           sleep 5
       - name: Git clone goat-ui
         run: |
+          mkdir -p external
+          cd external
           git clone https://github.com/genomehubs/goat-ui
       - name: Run landing page tests
         run: |
           docker run --rm --network=host \
-            -v `pwd`/goat-ui:/genomehubs/goat-ui \
+            -v `pwd`/external/goat-ui:/genomehubs/goat-ui \
             genomehubs/genomehubs:$DOCKERVERSION bash -c \
               "genomehubs test \
                 --config-file /genomehubs/goat-ui/tests/config/goat.yaml \
