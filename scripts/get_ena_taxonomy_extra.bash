@@ -6,7 +6,7 @@ if [ -z $TAXROOT ]; then
 fi
 
 # get all taxids available on ena taxonomy download (these are the ones also in ncbi taxdump)
-curl -s ftp://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/taxonomy.xml.gz \
+curl -s https://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/taxonomy.xml.gz \
 | gunzip -c | grep "^<taxon" | perl -lne 'print $1 if /taxId="(\d+)"/' > ena-taxonomy.xml.taxids || exit 0
 
 if [ $(stat -c %s ftp-taxonomy.taxids) -lt 10000000 ]; then exit 0; fi
