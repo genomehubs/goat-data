@@ -1,23 +1,34 @@
-species	family	phylum	kingdom	source	ncbi_taxon_id	proposed_sequencing_centre	target_list_status	sequencing_status	goat_stimated_genome_size_(gb)	phase	notes	comments	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
-Coronilla viminalis	Fabaceae	Streptophyta	Viridiplantae	SpainHSp	347984	SCILIFE	other_priority		0,39	1A	Sample not yet collected	CSC: I think we should use sample_acquired so it fits perfectly with the goat automation script. I have changed all Samples submitted to sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Obama nungara	Geoplanidae	 Platyhelminthes	Metazoa	SpainHSp	1826298	SCILIFE	other_priority	sample_acquired	1,60	1A	in DTOL long_list		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Pinna rudis	Pinnidae	 Mollusca	Metazoa	SpainHSp	1380992	SCILIFE	other_priority	sample_acquired	1,08	1A	in ASG and DTOL long_lists		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Siphonaria pectinata	Siphonariidae	 Mollusca	Metazoa	SpainHSp	57642	SCILIFE	other_priority	sample_acquired	2,00	1A	in DTOL long_list		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Tetrastemma melanocephalum	Tetrastemmatidae	 Nemertea	Metazoa	SpainHSp	307678	SCILIFE	other_priority	sample_acquired	1,37	1A	in DTOL long_list	Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Valencia hispanica	Valenciidae	Chordata	Metazoa	SpainHSP	195855	CNAG	other_priority	sample_acquired	1,50	1B		Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Allolobophora molleri 	Lumbricidae	Annelida	Metazoa	SpainHSP	647718	SANGER	other_priority	sample_acquired	0,65	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Conus guanche	Conidae	Mollusca	Metazoa	SpainHSP	308503	SANGER	other_priority	sample_acquired	3,11	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Gyrocaryum oppositifolium	Boraginaceae	Magnoliopsida	Plantae	SpainHSP	1929230	SANGER	other_priority	sample_acquired	0,56	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Munidopsis polymorpha	Munidopsidae	Arthropoda	Metazoa	SpainHSP	395596	SANGER	other_priority	sample_acquired	6,00	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Tarphius canariensis	Zopheridae	Arthropoda	Metazoa	SpainHSP	124803	SANGER	other_priority	sample_acquired	0,45	1B			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
-Pyrgus cinarae	Hesperiidae	Arthropoda	Metazoa	SpainHSp	983592	tbd	other_priority		0,56	TBD	Cancelled because of difficulty to get sample by provider, replaced by Lineus lacteus		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Harmothoe imbricata	Polynoidae	Annelida	Metazoa	SpainHSp	61848	tbd	other_priority		2,29	TBD	Cancelled because of difficulty to get sample by provider, replaced by Lineus lacteus		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Leuzea centauroides	Asteraceae	Viridiplantae	Plantae	SpainHSp	1284457	tbd	other_priority		1,05	TBD	Also called Rhaponticum centauroides but the latest genus name is Leuzea		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Loboptera canariensis	Ectobiidae	Arthropoda	Metazoa	SpainHSp	3054493	tbd	other_priority		1,49	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Loboptera troglobia	Ectobiidae	Arthropoda	Metazoa	SpainHSp	3054492	tbd	other_priority		1,49	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
-Hyalomma lusitanicum	Ixodidae	Arthropoda	Metazoa	SpainHSp	49205	tbd	other_priority	sample_collected	2,79	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Mesochaetopterus rogeri	Chaetopteridae	Annelida	Metazoa	SpainHSp	326179	tbd	other_priority	sample_collected	0,98	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Graellsia isabellae	Saturniidae	Arthropoda	Metazoa	SpainHSp	63975	tbd	other_priority	sample_collected	0,65	TBD	In collaboration with community sampling, one specimen from each		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Malpolon monspessulanus	Psammophiidae	Chordata	Metazoa	SpainHSp	184164	tbd	other_priority	sample_collected	1,48	TBD	in VGP long list, already agreed with them that we will sequence it by BGE	Candidate for genome estimate, not family member sequenced	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Ramphogordius lacteus	Lineidae	Nemertea	Metazoa	SpainHSp	947578	tbd	other_priority	sample_collected	1,37	TBD	also known as Lineus lacteus, in DTOL long_list, coordinating with them		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
-Sonchus bornmuelleri Pit. in Pitard & Proust	Asteraceae	Streptophyta	Plantae	SpainHSp	329349	tbd	other_priority		1,4	TBD			SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+species	family	phylum	kingdom	source	ncbi_taxon_id	target_list_status	sequencing_status	project	long_list	family_representative	other_priority	sample_collected	sample_acquired	in_progress	data_generation	in_assembly	insdc_submitted	open	insdc_open	published
+Coronilla viminalis	Fabaceae	Streptophyta	Viridiplantae	SpainHSp	347984	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Obama nungara	Geoplanidae	 Platyhelminthes	Metazoa	SpainHSp	1826298	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Pinna rudis	Pinnidae	 Mollusca	Metazoa	SpainHSp	1380992	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Siphonaria pectinata	Siphonariidae	 Mollusca	Metazoa	SpainHSp	57642	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Tetrastemma melanocephalum	Tetrastemmatidae	 Nemertea	Metazoa	SpainHSp	307678	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Valencia hispanica	Valenciidae	Chordata	Metazoa	SpainHSP	195855	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Allolobophora molleri 	Lumbricidae	Annelida	Metazoa	SpainHSP	647718	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Conus guanche	Conidae	Mollusca	Metazoa	SpainHSP	308503	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Gyrocaryum oppositifolium	Boraginaceae	Magnoliopsida	Plantae	SpainHSP	1929230	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Munidopsis polymorpha	Munidopsidae	Arthropoda	Metazoa	SpainHSP	395596	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Tarphius canariensis	Zopheridae	Arthropoda	Metazoa	SpainHSP	124803	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Loboptera canariensis	Ectobiidae	Arthropoda	Metazoa	SpainHSp	3054493	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Loboptera troglobia	Ectobiidae	Arthropoda	Metazoa	SpainHSp	3054492	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Hyalomma lusitanicum	Ixodidae	Arthropoda	Metazoa	SpainHSp	49205	other_priority	sample_collected	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Mesochaetopterus rogeri	Chaetopteridae	Annelida	Metazoa	SpainHSp	326179	other_priority	sample_collected	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Graellsia isabellae	Saturniidae	Arthropoda	Metazoa	SpainHSp	63975	other_priority	sample_acquired	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP	SPAIN-HSP							
+Malpolon monspessulanus	Psammophiidae	Chordata	Metazoa	SpainHSp	184164	other_priority	sample_collected	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Ramphogordius lacteus	Lineidae	Nemertea	Metazoa	SpainHSp	947578	other_priority	sample_collected	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Sonchus fauces-orci	Asteraceae	Streptophyta	Plantae	SpainHSp	329349	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Reichardia ligulata	Asteraceae	Streptophyta	Plantae	SpainHSp	43206	other_priority	sample_collected	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Heteromysis cotti	Mysidae	Arthropoda	Metazoa	SpainHSp	qmHetCott	other_priority	sample_collected	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Microplana groga	Geoplanidae	Platyhelminthes	Metazoa	SpainHSp	1520483	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Gesiella jameensis	Polynoidae	Annelida	Metazoa	SpainHSp	1960709	other_priority	sample_collected	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Leptonerilla diatomeophaga	Nerillidae	Annelida	Metazoa	SpainHSp	2704346	other_priority	sample_collected	SPAIN-HSP	SPAIN-HSP		SPAIN-HSP	SPAIN-HSP								
+Spelaeonicippe buchi	Pardaliscidae	Arthropoda	Metazoa	SpainHSp	Requested	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Megadrilus pelagicus	 Protodrilidae	Annelida	Metazoa	SpainHSp	Requested	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Parhyale multispinosa	Hyalidae	Crustacea	Metazoa	SpainHSp	Requested	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Hadzia acutus	Hadziidae	Arthropoda	Metazoa	SpainHSp	Requested	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Mesonerilla xurxoi	Nerillidae	Annelida	Metazoa	SpainHSp	2704355	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Microplana plurioculata	Geoplanidae	Platyhelminthes	Metazoa	SpainHSp	1820961	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Caenoplana bicolor	Geoplanidae	Platyhelminthes	Metazoa	SpainHSp	1520502	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Troglocharinus ferreri	Leiodidae	Arthropoda	Metazoa	SpainHSp	1304164	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
+Cheirolophus intybaceus	Asteraceae	Viridiplantae	Plantae	SpainHSp	64995	other_priority		SPAIN-HSP	SPAIN-HSP		SPAIN-HSP									
