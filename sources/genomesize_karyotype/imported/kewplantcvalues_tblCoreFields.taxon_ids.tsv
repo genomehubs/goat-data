@@ -738,7 +738,7 @@ taxon_id	input	rank
 217624	Cucumis heptadactylis	species
 396993	Cucumis humifructus	species
 3656	Cucumis melo	species
-61886	Cucumis metulifer	species
+61886	Cucumis metuliferus	species
 217627	Cucumis prophetarum	species
 3659	Cucumis sativus	species
 61887	Cucumis zeyherii	species
@@ -2583,10 +2583,10 @@ taxon_id	input	rank
 418175	Carex omiana	species
 418299	Carex kobomugi	species
 2753376	Carex paxii	species
-43166	Citrus aurantium	species
+43166	Citrus x aurantium	species
 171251	Citrus medica	species
-2708	Citrus limon	species
-159033	Citrus aurantiifolia	species
+2708	Citrus x limon	species
+159033	Citrus x aurantiifolia	species
 #drCitPara	Citrus paradisi	species
 37334	Citrus maxima	species
 1641301	Hedysarum varium	species
@@ -2927,6 +2927,7 @@ taxon_id	input	rank
 127171	Fissidens dubius	species
 127172	Fissidens subbasilaris	species
 52983	Fissidens taxifolius	species
+3075861	Fissidens sp.	species
 3225	Ceratodon purpureus	species
 80885	Dicranella heteromalla	species
 94686	Dicranodontium denudatum	species
@@ -3595,7 +3596,7 @@ taxon_id	input	rank
 80365	Laminaria digitata	species
 1399940	Spongomorpha arcta	species
 2822	Palmaria palmata	species
-203694	Gracilaria eucheumoides	species
+172970	Gracilaria eucheumatoides	species
 153904	Gayralia oxysperma	species
 461192	Perithalia caudata	species
 131052	Calonitophyllum medium	species
@@ -3730,9 +3731,9 @@ taxon_id	input	rank
 39836	Eucheuma isiforme	species
 88410	Kappaphycus striatus	species
 207661	Ahnfeltiopsis concinna	species
-2572395	Crassa caudata	species
+2572395	Gracilaria caudata	species
 172960	Gracilaria cervicornis	species
-2510791	Crassa firma	species
+2510791	Gracilaria firma	species
 33673	Gracilaria sp.	species
 172978	Gracilariopsis heteroclada	species
 356490	Hydropuntia cornea	species
@@ -5163,6 +5164,7 @@ taxon_id	input	rank
 370732	Festuca trichophylla subsp. trichophylla	subspecies
 225189	Festuca vaginata	species
 98753	Festuca valesiaca	species
+1851356	Festuca versicolor subsp. versicolor	subspecies
 745661	Festuca vivipara	species
 225188	Festuca wagneri	species
 200278	Festuca bromoides	species
