@@ -12,9 +12,16 @@ curl -s https://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/taxonomy.xml.gz \
 if [ $(stat -c %s ftp-taxonomy.taxids) -lt 10000000 ]; then exit 0; fi
 
 # get ALL ena taxids from ena api (these include the ones NOT in ncbi taxdump)
-curl -s "https://www.ebi.ac.uk/ena/portal/api/search?result=taxon&query=tax_tree($TAXROOT)&limit=10000000" | cut -f1 > resulttaxon.tax_tree$TAXROOT.taxids
+curl -s "https://www.ebi.ac.uk/ena/portal/api/search?result=taxon&query=tax_tree($TAXROOT)&limit=10000000" > resulttaxon.tax_tree$TAXROOT.taxid_desc
 
-if [ $(stat -c %s resulttaxon.tax_tree$TAXROOT.taxids) -lt 10000000 ]; then exit 0; fi
+if [ $(stat -c %s resulttaxon.tax_tree$TAXROOT.taxid_desc) -lt 10000000 ]; then exit 0; fi
+
+# taxids may be in column 1 or 2 - check which before cutting!
+if [[ "$(head -n 1 resulttaxon.tax_tree2759.taxid_desc | cut -f1)" == tax_id ]]; then
+  cut -f1 resulttaxon.tax_tree2759.taxid_desc > resulttaxon.tax_tree2759.taxids
+else
+  cut -f2 resulttaxon.tax_tree2759.taxid_desc > resulttaxon.tax_tree2759.taxids
+fi
 
 # if prev extra jsonl exists, gunzip it first
 gunzip ena-taxonomy.extra.jsonl.gz
