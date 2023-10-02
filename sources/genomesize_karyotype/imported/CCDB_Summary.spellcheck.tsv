@@ -340,6 +340,7 @@ taxon_id	input	rank	suggested
 240005	Achyranthes aspera var. indica	species	Achyranthes aspera
 263318	Acinodendron sintenisii	species	Miconia sintenisii
 224743	Acinos alpinus	species	Clinopodium alpinum
+3075037	Aciphylla hectori	species	Aciphylla hectorii
 2126678	Acmella filipes	species	Spilanthes americana
 2912032	Acmella oppositifolia	species	Heliopsis buphthalmoides
 181286	Acmispon subpinnatus	species	Lotus subpinnatus
@@ -367,6 +368,7 @@ taxon_id	input	rank	suggested
 194234	Adenocarpus hispanicus subsp. argyrophyllus	species	Adenocarpus argyrophyllus
 1205689	Adenosma indianum	species	Adenosma indiana
 1346281	Adenostyles platyphylloides	species	Caucasalia platyphylloides
+279216	Adesmia bicolor	species	Adesmia bicolora
 113211	Adonis microcarpa	species	Adonis aestivalis
 4494	Aegilops caudata	species	Aegilops markgrafii
 130455	Aegilops lorentii	species	Aegilops biuncialis
@@ -737,6 +739,7 @@ taxon_id	input	rank	suggested
 1960786	Astracantha ptilodes	species	Astragalus lydius
 989179	Astragalus aboriginum var. richardsonii	species	Astragalus richardsonii
 144085	Astragalus affghanus	species	Astragalus commixtus
+752249	Astragalus ammodytes	species	Brongniartia lupinoides
 144149	Astragalus arcuatus	species	Astragalus scaberrimus
 20421	Astragalus bellus	species	Astragalus pulchellus
 1264814	Astragalus berteri	species	Astragalus elongatus
@@ -1234,6 +1237,7 @@ taxon_id	input	rank	suggested
 998659	Cayratia tenuifolia	species	Causonis tenuifolia
 149356	Cayratia trifolia	species	Causonis trifolia
 420287	Cenchrus caliculatus	species	Cenchrus calyculatus
+4584	Cenchrus setiger	species	Cenchrus setigerus
 347522	Centaurea aegyptiaca	species	Centaurea eriophora
 351334	Centaurea alba subsp. costae	species	Centaurea costae
 145497	Centaurea attica	species	Centaurea graeca
@@ -1375,6 +1379,8 @@ taxon_id	input	rank	suggested
 107586	Cistanthe umbellata	species	Calyptridium umbellatum
 1723443	Citharexylum ligustrifolium	species	Ligustrum amurense
 317710	Citriobatus spinescens	species	Pittosporum spinescens
+159033	Citrus aurantiifolia	species	Citrus x aurantiifolia
+2708	Citrus limon	species	Citrus x limon
 164113	Citrus mitis	species	Citrus x microcarpa
 140879	Cladium mariscus subsp. californicum	species	Cladium californicum
 29670	Cleistachne sorghoides	species	Sorghum sorghoides
@@ -1630,7 +1636,7 @@ taxon_id	input	rank	suggested
 1932176	Ctenolepis garcini	species	Blastania garcinii
 396992	Cucumella aspera	species	Cucumis asper
 217624	Cucumis heptadactylus	species	Cucumis heptadactylis
-61886	Cucumis metuliferus	species	Cucumis metulifer
+61886	Cucumis metulifer	species	Cucumis metuliferus
 61887	Cucumis zeyheri	species	Cucumis zeyherii
 103969	Cucurbita andreana	species	Hesperocyparis macnabiana
 174196	Culcasia scandens	species	Culcasia saxatilis
@@ -1821,7 +1827,6 @@ taxon_id	input	rank	suggested
 56851	Dicranostigma franchetianum	species	Dicranostigma leptopodum
 56851	Dicranostigma henanense	species	Dicranostigma leptopodum
 359611	Dicrocaulon trichotomum	species	Mesembryanthemum trichotomum
-420293	Digitaria abludens	species	Pseudoraphis paradoxa
 48734	Digitaria compacta	species	Eragrostis cilianensis
 121769	Digitaria panicea	species	Digitaria sanguinalis
 661175	Digitaria seriata	species	Digitaria eriantha
@@ -1830,7 +1835,6 @@ taxon_id	input	rank	suggested
 497229	Diodella teres	species	Hexasepalum teres
 29710	Dioscorea cayennensis	species	Dioscorea cayenensis
 1933796	Dioscorea hastata	species	Dioscorea hassleriana
-1381966	Dioscorea pubera	species	Dioscorea puber
 330167	Dioscorea quaternata	species	Dioscorea villosa
 1367312	Diospyros decandra	species	Diospyros nigra
 413800	Diospyros glabra	species	Royena glabra
@@ -4103,7 +4107,6 @@ taxon_id	input	rank	suggested
 1911731	Proustia ilicifolia	species	Spinoliva ilicifolia
 318069	Prunella vulgaris subsp. asiatica	species	Prunella asiatica
 41526	Psephellus dealbatus	species	Centaurea dealbata
-146595	Psephellus simplicicaulis	species	Psephellus bellus
 141336	Pseuderanthemum cordatum	species	Streblacanthus cordatus
 487136	Pseudodracontium lacourii	species	Amorphophallus lacourii
 109584	Pseudogynoxys cordifolia	species	Pseudogynoxys chenopodioides
@@ -4635,7 +4638,6 @@ taxon_id	input	rank	suggested
 98724	Senecio websteri	species	Senecio neowebsteri
 592576	Senna insularis	species	Chamaecrista absus
 870738	Senna timoriensis	species	Senna timorensis
-1196464	Sericocarpus asteroides	species	Aster asteroides
 1903192	Seriphidium bicolor	species	Artemisia bicolor
 2966563	Seriphidium borotalense	species	Artemisia borotalensis
 1287603	Seriphidium diffusum	species	Artemisia diffusa
@@ -4671,6 +4673,7 @@ taxon_id	input	rank	suggested
 148930	Sidalcea setosa	species	Sidalcea oregana
 155232	Sideritis arborescens	species	Sideritis algarviensis
 155249	Sideritis fruticulosa	species	Sideritis hirta
+1391944	Sideritis gomerae	species	Sideritis gomeraea
 53174	Sideritis hirsuta	species	Stachys recta
 155250	Sideritis stricta	species	Sideritis hyssopifolia
 104329	Siemssenia capillaris	species	Podolepis capillaris
@@ -4694,7 +4697,9 @@ taxon_id	input	rank	suggested
 121486	Sinningia discolor	species	Sinningia speciosa
 189972	Sinningia macrorrhiza	species	Sinningia bulbosa
 189013	Sinningia verticillata	species	Sinningia douglasii
+186969	Sinosenecio globiger	species	Sinosenecio globigerus
 1798768	Sinosenecio hainanensis	species	Hainanecio hainanensis
+1045126	Sinosenecio villifer	species	Sinosenecio villiferus
 2293380	Siphonoglossa greggii	species	Justicia pilosella
 76368	Siphonoglossa longiflora	species	Justicia longii
 2293367	Siphonoglossa mexicana	species	Justicia hilsenbeckii
@@ -5074,7 +5079,6 @@ taxon_id	input	rank	suggested
 22666	Trapa rossica	species	Trapa natans
 2913518	Trautvetteria caroliniensis var. japonica	species	Trautvetteria palmata
 3480	Trema amboinensis	species	Trema tomentosum
-258494	Trema cannabina	species	Trema cannabinum
 28954	Trema micrantha	species	Trema micranthum
 63057	Trema orientalis	species	Trema orientale
 999597	Triadenum japonicum	species	Hypericum fauriei
@@ -5213,7 +5217,6 @@ taxon_id	input	rank	suggested
 376115	Ventenata macra	species	Gaudinopsis macra
 430987	Vepris undulata	species	Vepris lanceolata
 203094	Veratrum maackii var. japonicum	species	Veratrum japonicum
-1042526	Verbascum graecum	species	Verbascum sinuatum
 90365	Verbascum lasianthum	species	Verbascum phlomoides
 1042526	Verbascum pinnatifidum	species	Verbascum sinuatum
 312283	Verbena bipinnatifida	species	Glandularia bipinnatifida
@@ -5493,14 +5496,12 @@ taxon_id	input	rank	suggested
 93613	Botrychium dissectum	species	Sceptridium dissectum
 872463	Botrychium formosanum	species	Sceptridium formosanum
 208694	Botrychium japonicum	species	Sceptridium japonicum
-208696	Botrychium lunarioides	species	Sceptridium lunarioides
 41914	Botrychium multifidum	species	Sceptridium multifidum
 872466	Botrychium nipponicum	species	Sceptridium nipponicum
 208454	Botrychium oneidense	species	Sceptridium oneidense
 140026	Botrychium robustum	species	Sceptridium robustum
 2072990	Botrychium rugulosum	species	Sceptridium rugulosum
 350579	Botrychium schaffneri	species	Sceptridium schaffneri
-13832	Botrychium strictum	species	Botrypus strictus
 167744	Botrychium virginianum	species	Botrypus virginianus
 187475	Calamaria malinverniana	species	Isoetes malinverniana
 49509	Calamistrum globuliferum	species	Pilularia globulifera

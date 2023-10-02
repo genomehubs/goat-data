@@ -616,7 +616,6 @@ Anura		Batrachia	Pyxicephalidae		aStrKil	Amphibia	-	Strongylopus	kilimanjaro	VGP
 Anura		Batrachia	Strabomantidae		aPriLon	Amphibia	Long-bodied Paria Landfrog; Ranita Alargada de Paria	Pristimantis	longicorpus	VGP
 Anura		Batrachia	Strabomantidae		aPriWag	Amphibia	-	Pristimantis	wagteri	VGP
 Apoda		Gymnophiona	Typhlonectidae		aNecPet	Amphibia	-	Nectocaecilia	petersii	VGP
-Anura		Batrachia	Eleutherodactylidae		aEleJua	Amphibia	-	Eleutherodactylus	juanariveroi	VGP
 Anura		Batrachia	Hylidae		aDueIgn	Amphibia	Sierra Juarez Brook Frog	Duellmanohyla	ignicolor	VGP
 Anura		Batrachia	Hylidae		aPtyLeg	Amphibia	-	Ptychohyla	legleri	VGP
 Anura		Batrachia	Hylidae		aLitFus	Amphibia	-	Litoria	fuscula	VGP
@@ -3732,7 +3731,6 @@ Diprodontia		Australidelphia	Phalangeridae		mPhaAle	Mammalia	Gebe Cuscus	Phalang
 Rodentia		Euarchontoglires	Cricetidae		mAkoNeo	Mammalia	-	Akodon	neocenus	VGP
 Soricomorpha		Laurasiatheria	Soricidae		mCroDes	Mammalia	Desperate Shrew	Crocidura	desperata	VGP
 Chiroptera		Laurasiatheria	Pteropodidae		mPteInt	Mammalia	-	Pteropus	intermedius	VGP
-Chiroptera		Laurasiatheria	Phyllostomidae		mPlaInc	Mammalia	-	Platyrrhinus	incarum	VGP
 Primates		Euarchontoglires	Tarsiidae		mTarSpe	Mammalia	-	Tarsius	spectrumgurskyae	VGP
 Soricomorpha		Laurasiatheria	Soricidae		mCroDho	Mammalia	Dhofarian Shrew	Crocidura	dhofarensis	VGP
 Chiroptera		Laurasiatheria	Pteropodidae		mPteKey	Mammalia	Kei Flying Fox	Pteropus	keyensis	VGP
@@ -3956,7 +3954,6 @@ Carnivora		Laurasiatheria	Viverridae		mVivCiv	Mammalia	Malabar Civet	Viverra	civ
 Primates		Euarchontoglires	Cercopithecidae		mPreCan	Mammalia	-	Presbytis	canicrus	VGP
 Chiroptera		Laurasiatheria	Molossidae		mMyoWhi	Mammalia	Bini Free-Tailed Bat	Myopterus	whitleyi	VGP
 Chiroptera		Laurasiatheria	Vespertilionidae		mVesDou	Mammalia	Yellow-Lipped Cave Bat	Vespadelus	douglasorum	VGP
-Rodentia		Euarchontoglires	Erethizontidae		mCoeRoo	Mammalia	Roosmalen's Porcupine	Coendou	roosmalenorum	VGP
 Primates		Euarchontoglires	Cercopithecidae		mPreMit	Mammalia	-	Presbytis	mitrata	VGP
 Chiroptera		Laurasiatheria	Vespertilionidae		mTylPyg	Mammalia	-	Tylonycteris	pygmaeus	VGP
 Rodentia		Euarchontoglires	Sciuridae		mParCoo	Mammalia	Cooper's Mountain Squirrel	Paraxerus	cooperi	VGP
@@ -4878,7 +4875,6 @@ Stomiiformes		Stenopterygii	Stomiidae		fEusVit	Actinopterygii	-	Eustomias	vitiaz
 Beloniformes		Acanthopterygii	Adrianichthyidae		fAdrRos	Actinopterygii	-	Adrianichthys	roseni	VGP
 Beloniformes		Acanthopterygii	Zenarchopteridae		fZenCla	Actinopterygii	-	Zenarchopterus	clarus	VGP
 Cyprinodontiformes		Acanthopterygii	Cynolebiidae		fAnaTae	Actinopterygii	-	Anablepsoides	taeniatus	VGP
-Cyprinodontiformes		Acanthopterygii	Poeciliidae		fPoeCau	Actinopterygii	-	Poecilia	caudofasciata	VGP
 Perciformes		Acanthopterygii	Apogonidae		fApoRub	Actinopterygii	-	Apogon	rubellus	VGP
 Perciformes		Acanthopterygii	Pempheridae		fPemVir	Actinopterygii	-	Pempheris	viridis	VGP
 Perciformes		Acanthopterygii	Sparidae		fAcaMor	Actinopterygii	-	Acanthopagrus	morrisoni	VGP
@@ -5761,7 +5757,6 @@ Gobiiformes		Acanthopterygii	Gobiidae		fEviSpr	Actinopterygii	-	Eviota	springeri
 Gobiiformes		Acanthopterygii	Gobiidae		fTasLor	Actinopterygii	-	Tasmanogobius	lordi	VGP
 Gobiiformes		Acanthopterygii	Microdesmidae		fCerIon	Actinopterygii	-	Cerdale	ionthas	VGP
 Lophiiformes		Acanthopterygii	Ogcocephalidae		fMalGig	Actinopterygii	-	Malthopsis	gigas	VGP
-Anguilliformes		Elopomorpha	Muraenidae		fGymOdi	Actinopterygii	-	Gymnothorax	odishi	VGP
 Anguilliformes		Elopomorpha	Synaphobranchidae		fDysMuc	Actinopterygii	-	Dysomma	muciparus	VGP
 Characiformes		Ostariophysi	Alestidae		fBraLut	Actinopterygii	-	Brachyalestes	luteus	VGP
 Characiformes		Ostariophysi	Characidae		fBraRei	Actinopterygii	-	Brachychalcinus	reisi	VGP
@@ -6775,7 +6770,6 @@ Cichliformes		Acanthopterygii	Cichlidae		fLetArg	Actinopterygii	-	Lethrinops	arg
 Ophidiiformes		Acanthopterygii	Bythitidae		fHepCra	Actinopterygii	-	Hephthocara	crassiceps	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fFeiDab	Actinopterygii	-	Feia	dabra	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fIstHoe	Actinopterygii	-	Istigobius	hoesei	VGP
-Gobiiformes		Acanthopterygii	Gobiidae		fTomLat	Actinopterygii	-	Tomiyamichthys	latruncularius	VGP
 Anguilliformes		Elopomorpha	Congridae		fHetCob	Actinopterygii	-	Heteroconger	cobra	VGP
 Anguilliformes		Elopomorpha	Ophichthidae		fLutHee	Actinopterygii	-	Luthulenchelys	heemstraorum	VGP
 Characiformes		Ostariophysi	Characidae		fHypTuy	Actinopterygii	-	Hyphessobrycon	tuyensis	VGP
@@ -7101,7 +7095,6 @@ Ophidiiformes		Acanthopterygii	Ophidiidae		fDicMes	Actinopterygii	-	Dicrolene	me
 Gobiiformes		Acanthopterygii	Gobiidae		fBatBra	Actinopterygii	-	Bathygobius	brasiliensis	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fCryNiv	Actinopterygii	-	Cryptocentrus	niveatus	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fRhiSch	Actinopterygii	-	Rhinogobius	schultzei	VGP
-Gobiiformes		Acanthopterygii	Gobiidae		fTomTan	Actinopterygii	-	Tomiyamichthys	tanyspilus	VGP
 Characiformes		Ostariophysi	Alestidae		fHemPul	Actinopterygii	-	Hemigrammopetersius	pulcher	VGP
 Characiformes		Ostariophysi	Characidae		fHypWos	Actinopterygii	-	Hyphessobrycon	wosiackii	VGP
 Characiformes		Ostariophysi	Crenuchidae		fSkiMei	Actinopterygii	-	Skiotocharax	meizon	VGP
@@ -8613,7 +8606,6 @@ Siluriformes		Ostariophysi	Trichomycteridae		fTriCub	Actinopterygii	-	Trichomyct
 Osteoglossiformes		Osteoglossomorpha	Mormyridae		fMorCur	Actinopterygii	-	Mormyrops	curviceps	VGP
 Gadiformes		Paracanthopterygii	Macrouridae		fNezCli	Actinopterygii	-	Nezumia	cliveri	VGP
 Salmoniformes		Protacanthopterygii	Salmonidae		fSalCol	Actinopterygii	-	Salvelinus	colii	VGP
-Stomiiformes		Stenopterygii	Stomiidae		fBatAba	Actinopterygii	-	Bathophilus	abarbatus	VGP
 Cyprinodontiformes		Acanthopterygii	Cynolebiidae		fCynPac	Actinopterygii	-	Cynodonichthys	pacificus	VGP
 Cyprinodontiformes		Acanthopterygii	Cynolebiidae		fPleLac	Actinopterygii	-	Plesiolebias	lacerdai	VGP
 Perciformes		Acanthopterygii	Acropomatidae		fVerPse	Actinopterygii	-	Verilus	pseudomicrolepis	VGP
@@ -8747,7 +8739,6 @@ Scorpaeniformes		Acanthopterygii	Scorpaenidae		fParArm	Actinopterygii	-	Parascor
 Scorpaeniformes		Acanthopterygii	Triglidae		fPteEli	Actinopterygii	-	Pterygotrigla	elicryste	VGP
 Syngnathiformes		Acanthopterygii	Syngnathidae		fCosRet	Actinopterygii	-	Cosmocampus	retropinnis	VGP
 Blenniiformes		Acanthopterygii	Blenniidae		fIstRiv	Actinopterygii	-	Istiblennius	rivulatus	VGP
-Cichliformes		Acanthopterygii	Cichlidae		fCynAur	Actinopterygii	-	Cynotilapia	aurifrons	VGP
 Cichliformes		Acanthopterygii	Cichlidae		fMayKon	Actinopterygii	-	Maylandia	koningsi	VGP
 Cichliformes		Acanthopterygii	Cichlidae		fTelCen	Actinopterygii	-	Teleocichla	centisquama	VGP
 Ophidiiformes		Acanthopterygii	Ophidiidae		fLepCro	Actinopterygii	-	Lepophidium	crossotum	VGP
@@ -8866,7 +8857,6 @@ Scorpaeniformes		Acanthopterygii	Liparidae		fPseBel	Actinopterygii	-	Pseudolipar
 Syngnathiformes		Acanthopterygii	Syngnathidae		fDorDeo	Actinopterygii	-	Doryichthys	deokhatoides	VGP
 Batrachoidiformes		Acanthopterygii	Batrachoididae		fHalQue	Actinopterygii	-	Halophryne	queenslandiae	VGP
 Blenniiformes		Acanthopterygii	Blenniidae		fIstUni	Actinopterygii	-	Istiblennius	unicolor	VGP
-Cichliformes		Acanthopterygii	Cichlidae		fCynZeb	Actinopterygii	-	Cynotilapia	zebroides	VGP
 Gobiiformes		Acanthopterygii	Eleotridae		fMogVar	Actinopterygii	-	Mogurnda	variegata	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fBenSve	Actinopterygii	-	Benthophilus	svetovidovi	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fGloPha	Actinopterygii	-	Glossogobius	phaiosoma	VGP
@@ -9896,7 +9886,6 @@ Perciformes		Acanthopterygii	Zoarcidae		fPacMat	Actinopterygii	-	Pachycara	matal
 Scorpaeniformes		Acanthopterygii	Neosebastidae		fNeoOcc	Actinopterygii	-	Neosebastes	occidentalis	VGP
 Synbranchiformes		Acanthopterygii	Chaudhuriidae		fCheKee	Actinopterygii	-	Chendol	keelini	VGP
 Batrachoidiformes		Acanthopterygii	Batrachoididae		fSanBar	Actinopterygii	-	Sanopus	barbatus	VGP
-Cichliformes		Acanthopterygii	Cichlidae		fDipLon	Actinopterygii	-	Diplotaxodon	longimaxilla	VGP
 Ophidiiformes		Acanthopterygii	Ophidiidae		fMenBac	Actinopterygii	-	Menziesichthys	bacescui	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fBraSab	Actinopterygii	-	Brachygobius	sabanus	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fTriMul	Actinopterygii	-	Trimma	multiclitellum	VGP
@@ -9921,7 +9910,6 @@ Gadiformes		Paracanthopterygii	Macrouridae		fNezSoe	Actinopterygii	-	Nezumia	soe
 Osmeriformes		Protacanthopterygii	Alepocephalidae		fBatNie	Actinopterygii	-	Bathylaco	nielseni	VGP
 Osmeriformes		Protacanthopterygii	Platytroctidae		fHolMel	Actinopterygii	-	Holtbyrnia	melanocephala	VGP
 Salmoniformes		Protacanthopterygii	Salmonidae		fSalSch	Actinopterygii	-	Salvelinus	scharffi	VGP
-Cyprinodontiformes		Acanthopterygii	Poeciliidae		fBraOlo	Actinopterygii	-	Brachyrhaphis	olomina	VGP
 Perciformes		Acanthopterygii	Ambassidae		fParAll	Actinopterygii	-	Parambassis	alleni	VGP
 Perciformes		Acanthopterygii	Callionymidae		fSynGri	Actinopterygii	-	Synchiropus	grinnelli	VGP
 Perciformes		Acanthopterygii	Labridae		fCirTon	Actinopterygii	-	Cirrhilabrus	tonozukai	VGP
@@ -10007,7 +9995,6 @@ Cichliformes		Acanthopterygii	Cichlidae		fChrNan	Actinopterygii	-	Chromidotilapi
 Gobiiformes		Acanthopterygii	Eleotridae		fPogHet	Actinopterygii	-	Pogoneleotris	heterolepis	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fPomFla	Actinopterygii	-	Pomatoschistus	flavescens	VGP
 Anguilliformes		Elopomorpha	Ophichthidae		fOphMac	Actinopterygii	-	Ophichthus	maculatus	VGP
-Aulopiformes		Neoteleostei	Aulopidae		fHimCau	Actinopterygii	-	Hime	caudizoma	VGP
 Aulopiformes		Neoteleostei	Synodontidae		fSynRan	Actinopterygii	-	Synodus	randalli	VGP
 Myctophiformes		Neoteleostei	Myctophidae		fMycLun	Actinopterygii	-	Myctophum	lunatum	VGP
 Characiformes		Ostariophysi	Characidae		fAstDol	Actinopterygii	-	Astyanax	dolinae	VGP
@@ -10038,7 +10025,6 @@ Anguilliformes		Elopomorpha	Chlopsidae		fChlApt	Actinopterygii	-	Chlopsis	apteru
 Anguilliformes		Elopomorpha	Moringuidae		fMorPen	Actinopterygii	-	Moringua	penni	VGP
 Anguilliformes		Elopomorpha	Nettastomatidae		fHopSch	Actinopterygii	-	Hoplunnis	schmidti	VGP
 Anguilliformes		Elopomorpha	Ophichthidae		fOphMan	Actinopterygii	-	Ophichthus	manilensis	VGP
-Aulopiformes		Neoteleostei	Aulopidae		fHimCur	Actinopterygii	-	Hime	curtirostris	VGP
 Characiformes		Ostariophysi	Anostomidae		fLepAma	Actinopterygii	-	Leporinus	amae	VGP
 Characiformes		Ostariophysi	Characidae		fAstDor	Actinopterygii	-	Astyanax	dorioni	VGP
 Characiformes		Ostariophysi	Characidae		fMicGei	Actinopterygii	-	Microschemobrycon	geisleri	VGP
@@ -11333,7 +11319,6 @@ Blenniiformes		Acanthopterygii	Blenniidae		fAndPac	Actinopterygii	-	Andamia	paci
 Cichliformes		Acanthopterygii	Cichlidae		fApiHon	Actinopterygii	-	Apistogramma	hongsloi	VGP
 Ophidiiformes		Acanthopterygii	Dinematichthyidae		fDerMor	Actinopterygii	-	Dermatopsoides	morrisonae	VGP
 Ophidiiformes		Acanthopterygii	Ophidiidae		fNeoMal	Actinopterygii	-	Neobythites	malayanus	VGP
-Gobiiformes		Acanthopterygii	Gobiidae		fCafNud	Actinopterygii	-	Caffrogobius	nudiceps	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fPriAsc	Actinopterygii	-	Priolepis	ascensionis	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fSilSib	Actinopterygii	-	Silhouettea	sibayi	VGP
 Lophiiformes		Acanthopterygii	Linophrynidae		fLinArg	Actinopterygii	-	Linophryne	argyresca	VGP
@@ -11551,7 +11536,6 @@ Anabantiformes		Acanthopterygii	Nandidae		fNanMer	Actinopterygii	-	Nandus	mercat
 Blenniiformes		Acanthopterygii	Blenniidae		fAntCey	Actinopterygii	-	Antennablennius	ceylonensis	VGP
 Blenniiformes		Acanthopterygii	Blenniidae		fOmoSte	Actinopterygii	-	Omobranchus	steinitzi	VGP
 Blenniiformes		Acanthopterygii	Clinidae		fHetEqu	Actinopterygii	-	Heteroclinus	equiradiatus	VGP
-Cichliformes		Acanthopterygii	Cichlidae		fMylMol	Actinopterygii	-	Mylochromis	mollis	VGP
 Cichliformes		Acanthopterygii	Cichlidae		fPlaNig	Actinopterygii	-	Placidochromis	nigribarbis	VGP
 Cichliformes		Acanthopterygii	Cichlidae		fTroMod	Actinopterygii	-	Tropheops	modestus	VGP
 Gobiiformes		Acanthopterygii	Gobiidae		fCalBot	Actinopterygii	-	Callogobius	bothriorrhynchus	VGP
@@ -11964,7 +11948,6 @@ Gadiformes		Paracanthopterygii	Macrouridae		fVenNig	Actinopterygii	-	Ventrifossa
 Stomiiformes		Stenopterygii	Stomiidae		fEusHul	Actinopterygii	-	Eustomias	hulleyi	VGP
 Atheriniformes		Acanthopterygii	Atherinidae		fHypKlu	Actinopterygii	-	Hypoatherina	klunzingeri	VGP
 Cyprinodontiformes		Acanthopterygii	Cynolebiidae		fKryCam	Actinopterygii	-	Kryptolebias	campelloi	VGP
-Cyprinodontiformes		Acanthopterygii	Poeciliidae		fGamSen	Actinopterygii	-	Gambusia	senilis	VGP
 Cyprinodontiformes		Acanthopterygii	Procatopodidae		fMicLoa	Actinopterygii	-	Micropanchax	loati	VGP
 Perciformes		Acanthopterygii	Ammodytidae		fLepMac	Actinopterygii	-	Lepidammodytes	macrophthalmus	VGP
 Perciformes		Acanthopterygii	Cepolidae		fOwsMac	Actinopterygii	-	Owstonia	macrophthalma	VGP
@@ -13663,7 +13646,6 @@ Siluriformes		Ostariophysi	Bagridae		fTacMic	Actinopterygii	-	Tachysurus	microps
 Siluriformes		Ostariophysi	Heptapteridae		fPimPer	Actinopterygii	-	Pimelodella	peruana	VGP
 Siluriformes		Ostariophysi	Mochokidae		fSynLon	Actinopterygii	-	Synodontis	longispinis	VGP
 Gadiformes		Paracanthopterygii	Moridae		fGadMar	Actinopterygii	-	Gadella	maraldi	VGP
-Stomiiformes		Stenopterygii	Sternoptychidae		fArgIri	Actinopterygii	-	Argyripnus	iridescens	VGP
 Cyprinodontiformes		Acanthopterygii	Cyprinodontidae		fOreMin	Actinopterygii	-	Orestias	minuta	VGP
 Cyprinodontiformes		Acanthopterygii	Poeciliidae		fPhaMal	Actinopterygii	-	Phalloceros	malabarbai	VGP
 Perciformes		Acanthopterygii	Callionymidae		fCalAcu	Actinopterygii	-	Callionymus	acutirostris	VGP
@@ -14321,7 +14303,6 @@ Squamata		Lepidosauria	Colubridae		rAdeNig	Reptilia	-	Adelphicos	nigrilatum	VGP
 Squamata		Lepidosauria	Colubridae		rDipSaz	Reptilia	-	Dipsas	sazimai	VGP
 Squamata		Lepidosauria	Colubridae		rPhiLiv	Reptilia	-	Philodryas	livida	VGP
 Squamata		Lepidosauria	Diploglossidae		rCelAde	Reptilia	-	Celestus	adercus	VGP
-Squamata		Lepidosauria	Elapidae 		rBunAnd	Reptilia	-	Bungarus	andamanensis	VGP
 Squamata		Lepidosauria	Gekkonidae		rLupCor	Reptilia	-	Luperosaurus	corfieldi	VGP
 Squamata		Lepidosauria	Scincidae		rEmoAur	Reptilia	-	Emoia	aurulenta	VGP
 Squamata		Lepidosauria	Scincidae		rSphFus	Reptilia	-	Sphenomorphus	fuscolineatus	VGP
@@ -14341,7 +14322,6 @@ Squamata		Lepidosauria	Dactyloidae		rAnoRui	Reptilia	-	Anolis	ruizii	VGP
 Squamata		Lepidosauria	Diploglossidae		rCelAne	Reptilia	-	Celestus	anelpistus	VGP
 Squamata		Lepidosauria	Gymnophthalmidae 		rMacAta	Reptilia	-	Macropholidus	ataktolepis	VGP
 Squamata		Lepidosauria	Lamprophiidae		rPsaPul	Reptilia	-	Psammophis	pulcher	VGP
-Squamata		Lepidosauria	Leptotyphlopidae		rTriJan	Reptilia	-	Trilepida	jani	VGP
 Squamata		Lepidosauria	Scincidae		rKaeBed	Reptilia	-	Kaestlea	beddomii	VGP
 Squamata		Lepidosauria	Viperidae		rTriBro	Reptilia	-	Trimeresurus	brongersmai	VGP
 Testudines		Pantestudies	Chelidae		rElsFla	Reptilia	-	Elseya	flaviventralis	VGP
