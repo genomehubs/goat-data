@@ -13,6 +13,7 @@ attributes:
     type: keyword
 taxonomy:
   species:
-    header: Species
+    header: [Genus, Species]
+    join: " "
   family:
     header: Family
