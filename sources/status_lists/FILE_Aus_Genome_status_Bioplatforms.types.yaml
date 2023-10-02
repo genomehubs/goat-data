@@ -10,16 +10,28 @@ file:
 attributes:
   long_list:
     header: Bioplatforms_initiative
+    translate:
+      bioplatforms_australia: BPA
   other_priority:
     header: Bioplatforms_initiative
+    translate:
+      bioplatforms_australia: BPA
   sample_collected:
     header: sample_collected
+    translate:
+      bioplatforms_australia: BPA
   sample_acquired:
     header: sample_acquired
+    translate:
+      bioplatforms_australia: BPA
   in_progress:
     header: in_progress
+    translate:
+      bioplatforms_australia: BPA
   sequencing_status:
     header: translated_status
+    translate:
+      bioplatforms_australia: BPA
   sequencing_status_omg:
     header: sequencing_status_omg
   sequencing_status_arg:
