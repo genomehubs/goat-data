@@ -15,14 +15,14 @@ defaults:
         - asg
         - bat1k
         - b10k
-        - bioplatforms_australia
+        - bpa
         - canbp
         - cbp
         - ccgp
         - cfgp
         - dtol
         - ebpn
-        - ein 
+        - ein
         - endemixit
         - erga
         - erga-bge
@@ -69,7 +69,7 @@ defaults:
         description: "Bat 1K (click to view GoaT project page)"
       b10k:
         description: "Bird 10K (click to view GoaT project page)"
-      bioplatforms_australia:
+      bpa:
         description: "Bioplatforms Australia"
       canbp:
         description: "Canada Biogenome Project (click to view GoaT project page)"
@@ -83,7 +83,7 @@ defaults:
         description: "Darwin Tree of Life (click to view GoaT project page)"
       ebpn:
         description: "EBP Norway (click to view GoaT project page)"
-      ein :
+      ein:
         description: "Euglena International Network (click to view GoaT project page)"
       endemixit:
         description: "ENDEMIXIT (click to view GoaT project page)"
