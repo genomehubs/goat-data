@@ -13,6 +13,7 @@ defaults:
         - agi
         - arg
         - asg
+        - atlasea
         - bat1k
         - b10k
         - bpa
@@ -65,6 +66,8 @@ defaults:
         description: "Australian Amphibian and Reptile Genomics - AusARG (click to view GoaT project page)"
       asg:
         description: "Aquatic Symbiosis Genomics Project (click to view GoaT project page)"
+      atlasea:
+        description: "AtlaSea Project  (click to view GoaT project page)"
       bat1k:
         description: "Bat 1K (click to view GoaT project page)"
       b10k:

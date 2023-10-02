@@ -11,7 +11,7 @@ defaults:
         - published
         - insdc_open
         - open
-#        - insdc_submitted
+        #        - insdc_submitted
         - in_assembly
         - data_generation
         - in_progress
@@ -31,7 +31,7 @@ defaults:
         data_generation:
           description: Lab work in progress
         in_assembly:
-          description: In assemvly
+          description: In assembly
         insdc_submitted:
           description: Assembly submitted to INSDC but not yet publicly available
         open:
@@ -59,6 +59,9 @@ attributes:
   sequencing_status_asg:
     description: Sequencing status for Aquatic Symbiosis Genomics Project
     display_name: Sequencing status ASG
+  sequencing_status_atlasea:
+    description: Sequencing status for AtlaSea Project
+    display_name: Sequencing status AtlaSea
   sequencing_status_b10k:
     description: Sequencing status for Bird 10,000 Genomes Project
     display_name: Sequencing status B10K
@@ -80,18 +83,18 @@ attributes:
   sequencing_status_dtol:
     description: Sequencing status for Darwin Tree of Life project
     display_name: Sequencing status DToL
-#   sequencing_status_ebp:
-    # description: Sequencing status for EBP
-    # display_name: Sequencing status EBP
+  #   sequencing_status_ebp:
+  # description: Sequencing status for EBP
+  # display_name: Sequencing status EBP
   sequencing_status_ebpn:
     description: Sequencing status for Earth Biogenome Project Norway EBP-Nor
     display_name: Sequencing status EBPN - EBP-Nor
   sequencing_status_endemixit:
     description: Sequencing status for Italian Endemics Project
     display_name: Sequencing status ENDEMIXIT
-#   sequencing_status_erga:
-    # description: Sequencing status for ERGA
-    # display_name: Sequencing status ERGA
+  #   sequencing_status_erga:
+  # description: Sequencing status for ERGA
+  # display_name: Sequencing status ERGA
   sequencing_status_erga-bge:
     description: Sequencing status for ERGA-BGE Project
     display_name: Sequencing status ERGA-BGE
@@ -171,4 +174,3 @@ attributes:
   sequencing_status_zoonomia:
     description: Sequencing status for Zoonomia Project
     display_name: Sequencing status Zoonomia
-
