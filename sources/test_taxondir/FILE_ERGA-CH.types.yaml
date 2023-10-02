@@ -2,12 +2,11 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: CBP_expanded.tsv
-  source: Declared Status List - CBP
-  source_date: 2023-10-02
-  source_description: CBP Status List - Live Spreadsheet - CBP_GOAT
-  source_contact: Montserrat Corominas
-  source_link: https://dades.biogenoma.cat
+  name: ERGA-CH_expanded.tsv
+  source: Declared Status List - ERGA-CH
+  source_date: 2023-07-06
+  source_description: ERGA Switzerland Branch Status List, live spreadsheet
+  source_contact: Robert Waterhouse, University of Lausanne and Swiss Institute of Bioinformatics, Switzerland
 attributes:
   long_list:
     header: long_list
@@ -19,7 +18,7 @@ attributes:
   #   header: project
   #   translate:
   #     BGE: SSP Community Sampling
-  sequencing_status_cbp:
+  sequencing_status_erga-ch:
     header: sequencing_status
     translate:
       data_generation: in_progress
@@ -48,3 +47,5 @@ taxonomy:
     header: ncbi_taxon_id
   species:
     header: species
+  family:
+    header: family
