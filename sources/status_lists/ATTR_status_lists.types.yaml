@@ -21,6 +21,7 @@ defaults:
         - cbp
         - ccgp
         - cfgp
+        - cgp
         - cngb
         - dtol
         - ebpn
@@ -83,6 +84,8 @@ defaults:
         description: "California Conservation Genomics Project (click to view GoaT project page)"
       cfgp:
         description: "Cartilaginous Fish Genome Project (click to view GoaT project page)"
+      cgp:
+        description: "Cetaceans Genomes Project (click to view GoaT project page)"
       dtol:
         description: "Darwin Tree of Life (click to view GoaT project page)"
       ebpn:

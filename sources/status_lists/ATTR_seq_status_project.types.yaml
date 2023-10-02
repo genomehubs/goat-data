@@ -80,6 +80,9 @@ attributes:
   sequencing_status_cfgp:
     description: Sequencing status for Cartilaginous Fish Genome Project
     display_name: Sequencing status CFGP
+  sequencing_status_cgp:
+    description: Sequencing status for Cetaceans Genomes Project
+    display_name: Sequencing status CGP
   sequencing_status_dtol:
     description: Sequencing status for Darwin Tree of Life project
     display_name: Sequencing status DToL
