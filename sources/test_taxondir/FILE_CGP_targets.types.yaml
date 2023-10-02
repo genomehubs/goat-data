@@ -1,0 +1,18 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: CGP_targets.tsv
+  source: Declared Target List - CGP
+  source_date: 2022-10-02
+  source_description: Declared Target List - Cetaceans Genomes Project - static spreadsheet
+  source_contact: Phillip Morin, Southwest Fisheries Science Center, USA
+attributes:
+  long_list:
+    default: CGP
+    type: keyword
+taxonomy:
+  species:
+    header: Species
+  family:
+    header: Family

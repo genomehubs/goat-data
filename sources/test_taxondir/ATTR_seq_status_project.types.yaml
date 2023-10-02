@@ -1,0 +1,179 @@
+defaults:
+  attributes:
+    display_group: sequencing_status
+    display_level: 2
+    summary: enum
+    traverse: enum
+    traverse_direction: up
+    type: keyword
+    constraint:
+      enum:
+        - published
+        - insdc_open
+        - open
+        #        - insdc_submitted
+        - in_assembly
+        - data_generation
+        - in_progress
+        - sample_acquired
+        - sample_collected
+        - sample_available
+    value_metadata:
+      default:
+        sample_available:
+          description: "Project has available samples for the taxon"
+        sample_collected:
+          description: "Project has collected samples for the taxon"
+        sample_acquired:
+          description: Samples received by sequencing center
+        in_progress:
+          description: Sequencing started but assembly not yet publicly available
+        data_generation:
+          description: Lab work in progress
+        in_assembly:
+          description: In assembly
+        insdc_submitted:
+          description: Assembly submitted to INSDC but not yet publicly available
+        open:
+          description: Data publicly available
+        insdc_open:
+          description: Data publicly available on INSDC sequence repositories
+        published:
+          description: Publication describing assembly is available
+attributes:
+  sequencing_status:
+    description: Most advanced sequencing status for taxon across all projects
+    display_name: Sequencing status
+  sequencing_status_africabp:
+    description: Sequencing status for Africa Biogenome Project
+    display_name: Sequencing status AfricaBP
+  sequencing_status_ag100pest:
+    description: Sequencing status for Ag100Pest Initiative
+    display_name: Sequencing status Ag100Pest
+  sequencing_status_agi:
+    description: Sequencing status for AGI Initiative from Bioplatforms Australia
+    display_name: Sequencing status AGI
+  sequencing_status_arg:
+    description: Sequencing status for Australian Amphibian and Reptile Genomics Initiative Collaboration - AusARG
+    display_name: Sequencing status AusARG
+  sequencing_status_asg:
+    description: Sequencing status for Aquatic Symbiosis Genomics Project
+    display_name: Sequencing status ASG
+  sequencing_status_atlasea:
+    description: Sequencing status for AtlaSea Project
+    display_name: Sequencing status AtlaSea
+  sequencing_status_b10k:
+    description: Sequencing status for Bird 10,000 Genomes Project
+    display_name: Sequencing status B10K
+  sequencing_status_bat1k:
+    description: Sequencing status for 1,000 Bat Genomes Project
+    display_name: Sequencing status Bat1K
+  sequencing_status_canbp:
+    description: Sequencing status for Canada Biogenome Project
+    display_name: Sequencing status CanBP - CBP
+  sequencing_status_cbp:
+    description: Sequencing status for Catalan Biogenome Project
+    display_name: Sequencing status CBP
+  sequencing_status_ccgp:
+    description: Sequencing status for California Conservation Genomics Project
+    display_name: Sequencing status CCGP
+  sequencing_status_cfgp:
+    description: Sequencing status for Cartilaginous Fish Genome Project
+    display_name: Sequencing status CFGP
+  sequencing_status_cgp:
+    description: Sequencing status for Cetaceans Genomes Project
+    display_name: Sequencing status CGP
+  sequencing_status_dtol:
+    description: Sequencing status for Darwin Tree of Life project
+    display_name: Sequencing status DToL
+  #   sequencing_status_ebp:
+  # description: Sequencing status for EBP
+  # display_name: Sequencing status EBP
+  sequencing_status_ebpn:
+    description: Sequencing status for Earth Biogenome Project Norway EBP-Nor
+    display_name: Sequencing status EBPN - EBP-Nor
+  sequencing_status_endemixit:
+    description: Sequencing status for Italian Endemics Project
+    display_name: Sequencing status ENDEMIXIT
+  #   sequencing_status_erga:
+  # description: Sequencing status for ERGA
+  # display_name: Sequencing status ERGA
+  sequencing_status_erga-bge:
+    description: Sequencing status for ERGA-BGE Project
+    display_name: Sequencing status ERGA-BGE
+  sequencing_status_erga-ch:
+    description: Sequencing status for ERGA Switzerland Project
+    display_name: Sequencing status ERGA-CH
+  sequencing_status_erga-pil:
+    description: Sequencing status for ERGA Pilot Project
+    display_name: Sequencing status ERGA-PIL
+  sequencing_status_eurofish:
+    description: Sequencing status for EUROFISH Project
+    display_name: Sequencing status EUROFISH
+  sequencing_status_gaga:
+    description: Sequencing status for Global Ant Genomics Alliance Project
+    display_name: Sequencing status GAGA
+  sequencing_status_gap:
+    description: Sequencing status for Genomics for Australian Plants Project
+    display_name: Sequencing status GAP
+  sequencing_status_gbr:
+    description: Sequencing status for Great Reef Barrier Project
+    display_name: Sequencing status GBR
+  sequencing_status_giga:
+    description: Sequencing status for Global Invertebrate Genome Alliance Project
+    display_name: Sequencing status GIGA
+  sequencing_status_i5k:
+    description: Sequencing status for 5,000 Insect Genomes Project
+    display_name: Sequencing status i5K
+  sequencing_status_ilebp:
+    description: Sequencing status for Illinois EBP Pilot Project
+    display_name: Sequencing status IlEBP
+  sequencing_status_1kfg:
+    description: Sequencing status for 1,000 Fungal Genomes Project
+    display_name: Sequencing status 1KFG
+  sequencing_status_lmgp:
+    description: Sequencing status for Lilioid Monocots Core Group Genome Project
+    display_name: Sequencing status LMGP
+  sequencing_status_loewe-tbg:
+    description: Sequencing status for LOEWE Centre for Translational Biodiversity Genomics Projects
+    display_name: Sequencing status LOEWE-TBG
+  sequencing_status_metainvert:
+    description: Sequencing status for Soil Invertebrate Genome Initiative
+    display_name: Sequencing status METAINVERT
+  sequencing_status_ogg:
+    description: Sequencing status for Open Green Genomes Project
+    display_name: Sequencing status OGG
+  sequencing_status_omg:
+    description: Sequencing status for Oz Mammals Genomics Project
+    display_name: Sequencing status OMG
+  sequencing_status_other:
+    description: Sequencing status for temporarily unafiliated Projects
+    display_name: Sequencing status OTHER
+  sequencing_status_pgp:
+    description: Sequencing status for Polar Genomes Project
+    display_name: Sequencing status PGP
+  sequencing_status_phyloalps:
+    description: Sequencing status for PhyloAlps Project
+    display_name: Sequencing status PhyloAlps
+  sequencing_status_prgp:
+    description: Sequencing status for Primate Genomes Project
+    display_name: Sequencing status PRGP
+  sequencing_status_psyche:
+    description: Sequencing status for Project Psyche
+    display_name: Sequencing status Psyche
+  sequencing_status_squalomix:
+    description: Sequencing status for Squalomix Project
+    display_name: Sequencing status Squalomix
+  sequencing_status_tsi:
+    description: Sequencing status for Threatened Species Initiative
+    display_name: Sequencing status TSI
+  sequencing_status_vgp:
+    description: Sequencing status for Vertebrate Genomes Project
+    display_name: Sequencing status VGP
+    display_group: sequencing_status
+  sequencing_status_ygg:
+    description: Sequencing status for Yggdrasil Project
+    display_name: Sequencing status YGG
+  sequencing_status_zoonomia:
+    description: Sequencing status for Zoonomia Project
+    display_name: Sequencing status Zoonomia

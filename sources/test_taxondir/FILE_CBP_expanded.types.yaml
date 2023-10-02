@@ -2,11 +2,12 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: ATLASEA_expanded.tsv
-  source: Declared Status List - ATLASEA
+  name: CBP_expanded.tsv
+  source: Declared Status List - CBP
   source_date: 2023-10-02
-  source_description: AtlaSea (France ERGA Partner Branch) Status List, live spreadsheet
-  source_contact: "Hugues Roest Crollius, Institut de Biologie de l'ENS (IBENS), France"
+  source_description: CBP Status List - Live Spreadsheet - CBP_GOAT
+  source_contact: Montserrat Corominas
+  source_link: https://dades.biogenoma.cat
 attributes:
   long_list:
     header: long_list
@@ -18,7 +19,7 @@ attributes:
   #   header: project
   #   translate:
   #     BGE: SSP Community Sampling
-  sequencing_status_atlasea:
+  sequencing_status_cbp:
     header: sequencing_status
     translate:
       data_generation: in_progress
