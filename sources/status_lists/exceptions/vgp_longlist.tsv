@@ -1006,7 +1006,6 @@ Apoda		Gymnophiona	Caeciliidae		aCaeMar	Amphibia	-	Caecilia	marcusi	VGP
 Anura		Batrachia	Hylidae		aBoaPar	Amphibia	-	Boana	paranaiba	VGP
 Anura		Batrachia	Hylidae		aHylAnt	Amphibia	-	Hyloscirtus	antioquia	VGP
 Anura		Batrachia	Phrynobatrachidae		aPhrPer	Amphibia	-	Phrynobatrachus	perpalmatus	VGP
-Caudata		Batrachia	Plethodontidae		aThoTla	Amphibia	Heroic Minute Salamander	Thorius	tlaxiacus	VGP
 Apoda		Gymnophiona	Caeciliidae		aCaeMer	Amphibia	-	Caecilia	mertensi	VGP
 Anura		Batrachia	Bufonidae		aRhiCer	Amphibia	-	Rhinella	ceratophrys	VGP
 Anura		Batrachia	Dendrobatidae		aSilMin	Amphibia	-	Silverstoneia	minima	VGP
@@ -1324,7 +1323,6 @@ Anura		Batrachia	Hemiphractidae		aCryCon	Amphibia	-	Cryptobatrachus	conditus	VGP
 Anura		Batrachia	Hylidae		aBokLan	Amphibia	-	Bokermannohyla	langei	VGP
 Anura		Batrachia	Hylidae		aNycKud	Amphibia	-	Nyctimystes	kuduki	VGP
 Anura		Batrachia	Strabomantidae		aPriCor	Amphibia	-	Pristimantis	coronatus	VGP
-Caudata		Batrachia	Plethodontidae		aChiChi	Amphibia	El Chico Salamander; Salamandra de El Chico	Chiropterotriton	chico	VGP
 Apoda		Gymnophiona	Herpelidae		aHerMul	Amphibia	-	Herpele	multiplicata	VGP
 Anura		Batrachia	Hylidae		aLysBol	Amphibia	-	Lysapsus	boliviana	VGP
 Anura		Batrachia	Hylidae		aNycLat	Amphibia	-	Nyctimystes	latratus	VGP
@@ -3216,10 +3214,8 @@ Primates		Euarchontoglires	Galagidae		mSciCam	Mammalia	-	Sciurocheirus	cameronen
 Rodentia		Euarchontoglires	Gliridae		mDryNie	Mammalia	Baluchistan Forest Dormouse	Dryomys	niethammeri	VGP
 Rodentia		Euarchontoglires	Nesomyidae		mEliPet	Mammalia	Petter's Tuft-Tailed Rat	Eliurus	petteri	VGP
 Rodentia		Euarchontoglires	Muridae		mRatBla	Mammalia	Aceh Rat	Rattus	blangorum	VGP
-Chiroptera		Laurasiatheria	Vespertilionidae		mNycMic	Mammalia	Small-Toothed Long-Eared Bat	Nyctophilus	microdon	VGP
 Rodentia		Euarchontoglires	Chinchillidae		mLagAhu	Mammalia	Ecuadorean Viscacha	Lagidium	ahuacaense	VGP
 Primates		Euarchontoglires	Pitheciidae		mCalBap	Mammalia	-	Callicebus	baptista	VGP
-Chiroptera		Laurasiatheria	Vespertilionidae		mNycMic	Mammalia	Papuan Long-Eared Bat	Nyctophilus	microtis	VGP
 Artiodactyla		Laurasiatheria	Bovidae		mSaiBor	Mammalia	-	Saiga	borealis	VGP
 Chiroptera		Laurasiatheria	Vespertilionidae		mMurLor	Mammalia	-	Murina	loreliae	VGP
 Primates		Euarchontoglires	Galagidae		mSciMak	Mammalia	-	Sciurocheirus	makandensis	VGP
@@ -3907,7 +3903,6 @@ Rodentia		Euarchontoglires	Muridae		mCocKir	Mammalia	-	Coccymys	kirrhos	VGP
 Rodentia		Euarchontoglires	Muridae		mGerHar	Mammalia	Harwood's Gerbil	Gerbillus	harwoodi	VGP
 Primates		Euarchontoglires	Cebidae		mMicAca	Mammalia	Rio Acar?Marmoset	Mico	acariensis	VGP
 Primates		Euarchontoglires	Pitheciidae		mPleTop	Mammalia	-	Plecturocebus	toppini	VGP
-Rodentia		Euarchontoglires	Cricetidae		mSigZan	Mammalia	-	Sigmodon	zanjonensis	VGP
 Chiroptera		Laurasiatheria	Molossidae		mMorDor	Mammalia	Sumatran Mastiff Bat	Mormopterus	doriae	VGP
 Rodentia		Euarchontoglires	Muridae		mCocSha	Mammalia	-	Coccymys	shawmayeri	VGP
 Rodentia		Euarchontoglires	Muridae		mGerJam	Mammalia	James's Gerbil	Gerbillus	jamesi	VGP
@@ -4161,7 +4156,6 @@ Rodentia		Euarchontoglires	Cricetidae		mKunFro	Mammalia	-	Kunsia	fronto	VGP
 Rodentia		Euarchontoglires	Cricetidae		mTylMir	Mammalia	Mira Climbing Rat	Tylomys	mirae	VGP
 Rodentia		Euarchontoglires	Capromyidae		mIsoMon	Mammalia	Montane Hutia	Isolobodon	montanus	VGP
 Soricomorpha		Laurasiatheria	Soricidae		mCroPas	Mammalia	Pasha Shrew	Crocidura	pasha	VGP
-Soricomorpha		Laurasiatheria	Soricidae		mSorVer	Mammalia	Verapaz Shrew	Sorex	veraepacis	VGP
 Rodentia		Euarchontoglires	Cricetidae		mReiMus	Mammalia	-	Reithrodontomys	musseri	VGP
 Carnivora		Laurasiatheria	Canidae		mVulRue	Mammalia	-	Vulpes	rueppelli	VGP
 Didelphimorphia		Ameridelphia	Didelphidae		mMarCra	Mammalia	Slim-Faced Slender Mouse Opossum	Marmosops	cracens	VGP
@@ -4220,7 +4214,6 @@ Rodentia		Euarchontoglires	Cricetidae		mMegCur	Mammalia	Galap?os Giant Rat	Megao
 Rodentia		Euarchontoglires	Muridae		mDasSua	Mammalia	-	Dasymys	sua	VGP
 Soricomorpha		Laurasiatheria	Soricidae		mCroPul	Mammalia	Kashmir White-Toothed Shrew	Crocidura	pullata	VGP
 Chiroptera		Laurasiatheria	Vespertilionidae		mEptPla	Mammalia	Lagos Serotine	Eptesicus	platyops	VGP
-Didelphimorphia		Ameridelphia	Didelphidae		mMarNeb	Mammalia	Neblina Slender Opossum	Marmosops	neblina	VGP
 Rodentia		Euarchontoglires	Muridae		mPelHop	Mammalia	Hopkins's Groove-Toothed Swamp Rat	Pelomys	hopkinsi	VGP
 Rodentia		Euarchontoglires	Heptaxodontidae		mQueGra	Mammalia	-	Quemisia	gravis	VGP
 Soricomorpha		Laurasiatheria	Soricidae		mCroRai	Mammalia	Rainey Shrew	Crocidura	raineyi	VGP
@@ -8638,7 +8631,6 @@ Cypriniformes		Ostariophysi	Cyprinidae		fEntLuj	Actinopterygii	-	Enteromius	luja
 Cypriniformes		Ostariophysi	Cyprinidae		fGarRup	Actinopterygii	-	Garra	rupicola	VGP
 Cypriniformes		Ostariophysi	Cyprinidae		fLabItu	Actinopterygii	-	Labeobarbus	iturii	VGP
 Cypriniformes		Ostariophysi	Cyprinidae		fOstHar	Actinopterygii	-	Osteochilus	harrisoni	VGP
-Cypriniformes		Ostariophysi	Danionidae		fBarMod	Actinopterygii	-	Barilius	modestus	VGP
 Cypriniformes		Ostariophysi	Danionidae		fRasKlu	Actinopterygii	-	Rasbora	kluetensis	VGP
 Cypriniformes		Ostariophysi	Leuciscidae		fAlbDan	Actinopterygii	-	Alburnus	danubicus	VGP
 Siluriformes		Ostariophysi	Astroblepidae		fAstHet	Actinopterygii	-	Astroblepus	heterodon	VGP
@@ -14652,7 +14644,6 @@ Squamata		Lepidosauria	Colubridae		rCalGra	Reptilia	-	Calamaria	grabowskyi	VGP
 Squamata		Lepidosauria	Dactyloidae		rAnoSul	Reptilia	-	Anolis	sulcifrons	VGP
 Squamata		Lepidosauria	Elapidae 		rElaLat	Reptilia	-	Elapsoidea	laticincta	VGP
 Squamata		Lepidosauria	Gekkonidae		rLygIne	Reptilia	-	Lygodactylus	inexpectatus	VGP
-Squamata		Lepidosauria	Gekkonidae		rTenDad	Reptilia	-	Tenuidactylus	dadunensis	VGP
 Squamata		Lepidosauria	Gymnophthalmidae 		rPlaLim	Reptilia	-	Placosoma	limaverdorum	VGP
 Squamata		Lepidosauria	Leptotyphlopidae		rLepTel	Reptilia	-	Leptotyphlops	telloi	VGP
 Squamata		Lepidosauria	Scincidae		rEmoMax	Reptilia	-	Emoia	maxima	VGP

@@ -323,11 +323,11 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Polycirrus pennarbedae	Terebellidae	long_list		ATLASEA	ATLASEA											
 	Amphitrite fauveli	Terebellidae	long_list		ATLASEA	ATLASEA											
 	Amphitrite ramosa	Terebellidae	long_list		ATLASEA	ATLASEA											
-	Amphitrite rubra	Terebellidae	long_list		ATLASEA	ATLASEA											
+	Amphitrite rubra	Terebellidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Amphitrite variabilis	Terebellidae	long_list		ATLASEA	ATLASEA											
 	Lanassa praecox	Terebellidae	long_list		ATLASEA	ATLASEA											
 	Paramphitrite dragovabeci	Terebellidae	long_list		ATLASEA	ATLASEA											
-	Pista cretacea	Terebellidae	long_list		ATLASEA	ATLASEA											
+	Pista cretacea	Terebellidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Pista labruneae	Terebellidae	long_list		ATLASEA	ATLASEA											
 	Pista unibranchia	Terebellidae	long_list		ATLASEA	ATLASEA											
 	Euthelepus setubalensis	Terebellidae	long_list		ATLASEA	ATLASEA											
@@ -1729,7 +1729,6 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Alcyonidium argyllaceum	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
 	Alcyonidium condylocinereum	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
 	Alcyonidium duplex	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
-	Alcyonidium polyoum	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
 	Alcyonidium rylandi	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
 	Arachnoidella prenanti	Arachnidiidae	long_list		ATLASEA	ATLASEA											
 	Arachnoidella protecta	Arachnidiidae	long_list		ATLASEA	ATLASEA											
@@ -1884,7 +1883,6 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Paractinia striata		long_list		ATLASEA	ATLASEA											
 	Paractis flava		long_list		ATLASEA	ATLASEA											
 	Phymanthus pulcher	Phymanthidae	long_list		ATLASEA	ATLASEA											
-	Cylista elegans	Sagartiidae	long_list		ATLASEA	ATLASEA											
 	Chrysogorgia agassizii	Chrysogorgiidae	long_list		ATLASEA	ATLASEA											
 	Chrysogorgia quadruplex	Chrysogorgiidae	long_list		ATLASEA	ATLASEA											
 	Rolandia coralloides	Clavulariidae	long_list		ATLASEA	ATLASEA											
@@ -2097,7 +2095,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Ophiomitra spinea	Ophiotomidae	long_list		ATLASEA	ATLASEA											
 	Ophiotoma coriacea	Ophiotomidae	long_list		ATLASEA	ATLASEA											
 	Ophioconis forbesi	Ophiodermatidae	long_list		ATLASEA	ATLASEA											
-	Ophioderma longicaudum	Ophiodermatidae	long_list		ATLASEA	ATLASEA											
+	Ophioderma longicaudum	Ophiodermatidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Ophiocymbium cavernosum	Ophiomyxidae	long_list		ATLASEA	ATLASEA											
 	Ophiosphalma armigerum	Ophiosphalmidae	long_list		ATLASEA	ATLASEA											
 	Ophioleuce oxycraspedon	Ophiuridae	long_list		ATLASEA	ATLASEA											
@@ -2333,7 +2331,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Setia fusca	Rissoidae	long_list		ATLASEA	ATLASEA											
 	Megalomphalus disciformis	Vanikoridae	long_list		ATLASEA	ATLASEA											
 	Petaloconchus glomeratus	Vermetidae	long_list		ATLASEA	ATLASEA											
-	Thylacodes arenarius	Vermetidae	long_list		ATLASEA	ATLASEA											
+	Thylacodes arenarius	Vermetidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Thylaeodus semisurrectus	Vermetidae	long_list		ATLASEA	ATLASEA											
 	Vermetus granulatus	Vermetidae	long_list		ATLASEA	ATLASEA											
 	Xenophora crispa	Xenophoridae	long_list		ATLASEA	ATLASEA											
@@ -4622,7 +4620,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Rhodymenia phyllo√Ødes	Rhodymeniaceae	long_list		ATLASEA	ATLASEA											
 	Rhodymeniocolax mediterraneus	Rhodymeniaceae	long_list		ATLASEA	ATLASEA											
 	Sebdenia dichotoma	Sebdeniaceae	long_list		ATLASEA	ATLASEA											
-	Sebdenia rodrigueziana	Sebdeniaceae	long_list		ATLASEA	ATLASEA											
+	Sebdenia rodrigueziana	Sebdeniaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Antarcella atava	Arcellidae	long_list		ATLASEA	ATLASEA											
 	Arcella atava	Arcellidae	long_list		ATLASEA	ATLASEA											
 	Arcella bicornis	Arcellidae	long_list		ATLASEA	ATLASEA											
