@@ -1,4 +1,58 @@
 taxon_id	input	rank
+#qdMacPali	Macrosternodesmus palicola	species
+934862	Eupithecia valerianata	species
+1836943	Eurythenes maldoror	species
+987418	Eilema complana	species
+687107	Metzneria lappella	species
+1594240	Bucculatrix frangutella	species
+1545245	Scolopostethus affinis	species
+702717	Tuta absoluta	species
+#iyDicPudi	Dicaelotus pudibundus	species
+494329	Enizemum ornatum	species
+904094	Ischnus inquisitorius	species
+65146	Ophion ventricosus	species
+310390	Diadegma chrysostictos	species
+#iyAnaImmu	Anacharis immunis	species
+29058	Helicoverpa armigera	species
+274341	Sphecophaga vesparum	species
+#iyAclPilo	Aclastus pilosus	species
+1720797	Megacara hortulana	species
+543383	Tachinaephagus zealandicus	species
+108803	Sympiesis gordius	species
+#iyXorFuli	Xorides fuligator	species
+1217959	Ichneumon stramentor	species
+884582	Nematus lucidus	species
+1385013	Pristiphora monogyniae	species
+572903	Swammerdamia pyrella	species
+934863	Eupithecia venosata	species
+1031642	Meteorus rubens	species
+242282	Zele deceptor	species
+#iyNetIned	Netelia inedita	species
+143735	Leuctra nigra	species
+2163652	Gelis agilis	species
+877789	Aspidapion radiolus	species
+173649	Blastobasidae	family
+1870435	Ypsolopha scabrella	species
+1385206	Aneugmenus coronatus	species
+2890533	Dichrogaster aestivalis	species
+610530	Hypoponera punctatissima	species
+753214	Pandemis cinnamomeana	species
+1660580	Agriphila selasella	species
+1280451	Aproaerema anthyllidella	species
+873150	Meteorus affinis	species
+2884228	Hyposoter dolosus	species
+262031	Lasius umbratus	species
+146840	Labia minor	species
+2560927	Agriphila latistria	species
+247415	Ophonus ardosiacus	species
+1870143	Oxyptilus pilosellae	species
+1034393	Myrmeleotettix maculatus	species
+1045619	Pimpla contemplator	species
+1226590	Limnia unguicornis	species
+468752	Leptogaster cylindrica	species
+286505	Platystoma seminationis	species
+178772	Empis livida	species
+1384827	Dolerus ferrugatus	species
 50527	Buprestidae	family
 112292	Tenthredo arcuata	species
 222804	Calameuta filiformis	species
@@ -8,12 +62,8 @@ taxon_id	input	rank
 295700	Malachius bipustulatus	species
 2741129	Tipula vernalis	species
 2741127	Nephrotoma appendiculata	species
-1226590	Limnia unguicornis	species
-468752	Leptogaster cylindrica	species
-286505	Platystoma seminationis	species
-178772	Empis livida	species
 7197	Psychodidae	family
-1384827	Dolerus ferrugatus	species
+987969	Leucania obsoleta	species
 877859	Anobium punctatum	species
 1586101	Salda littoralis	species
 27439	Chrysomelidae	family
@@ -148,7 +198,6 @@ taxon_id	input	rank
 1869524	Caloptilia honoratella	species
 1594282	Eana incanana	species
 1870148	Pammene aurita	species
-687107	Metzneria lappella	species
 1869588	Cnephasia longana	species
 2727444	Aproaerema vinella	species
 1073589	Mompha miscella	species
@@ -297,7 +346,6 @@ taxon_id	input	rank
 1073575	Agonopterix heracliana	species
 414935	Silpha tristis	species
 572726	Argyresthia pruniella	species
-143735	Leuctra nigra	species
 355390	Stenobothrus lineatus	species
 302033	Octolasion cyaneum	species
 13519	Eupolymnia nebulosa	species
@@ -331,7 +379,6 @@ taxon_id	input	rank
 51259	Sabella pavonina	species
 1870687	Pempelia palumbella	species
 560876	Conwentzia pineticola	species
-1100919	Archips xylosteana	species
 247284	Harpalus anxius	species
 1262360	Melieria omissa	species
 302031	Aporrectodea longa	species
@@ -365,7 +412,6 @@ taxon_id	input	rank
 638490	Ischnura pumilio	species
 1008855	Haplopodoiulus spathifer	species
 295815	Subcoccinella vigintiquattuorpunctata	species
-695564	Erebidae	family
 1918206	Bithia spreta	species
 296003	Lagria hirta	species
 558720	Propylea quattuordecimpunctata	species
@@ -403,7 +449,6 @@ taxon_id	input	rank
 987030	Pterapherapteryx sexalata	species
 877886	Cantharis lateralis	species
 414871	Xanthandrus comtus	species
-610530	Hypoponera punctatissima	species
 703264	Hippodamia variegata	species
 56364	Agrotis ipsilon	species
 1266490	Pollenia angustigena	species
@@ -438,7 +483,6 @@ taxon_id	input	rank
 279646	Cirriformia tentaculata	species
 243486	Salticus scenicus	species
 330862	Tiphia femorata	species
-1073588	Metzneria metzneriella	species
 179674	Diachrysia chrysitis	species
 988145	Parastichtis suspecta	species
 6969	Sympetrum striolatum	species
@@ -613,7 +657,6 @@ taxon_id	input	rank
 997542	Orthosia gracilis	species
 1473659	Mycetophila caudata	species
 2339121	Polylepta guttiventris	species
-1034393	Myrmeleotettix maculatus	species
 988081	Brachylomia viminalis	species
 1804828	Diarsia dahlii	species
 347979	Himacerus mirmicoides	species
@@ -694,7 +737,6 @@ taxon_id	input	rank
 1720740	Pollenia griseotomentosa	species
 192443	Paraplatypeza atra	species
 688490	Plagodis pulveraria	species
-1031642	Meteorus rubens	species
 1601827	Mycetophila ichneumonea	species
 1415203	Catops kirbyi	species
 2882413	Mycetophila marginata	species
@@ -835,6 +877,7 @@ taxon_id	input	rank
 137503	Sepsidae	family
 877948	Carcinops pumilio	species
 2881108	Neolimonia dumetorum	species
+1100919	Archips xylosteana	species
 2561724	Scrobipalpa ocellatella	species
 326963	Lycia hirtaria	species
 2881718	Chrysops relictus	species
@@ -976,7 +1019,6 @@ taxon_id	input	rank
 1448892	Agonopterix liturosa	species
 986993	Idaea emarginata	species
 987984	Mythimna conigera	species
-1385206	Aneugmenus coronatus	species
 1385004	Pristiphora conjugata	species
 688168	Myopites inulaedyssentericae	species
 7460	Apis mellifera	species
@@ -1363,7 +1405,6 @@ taxon_id	input	rank
 346847	Rhizophagus dispar	species
 367067	Eutrichapion viciae	species
 115345	Coccidula rufa	species
-1280451	Aproaerema anthyllidella	species
 1501880	Oxystoma cerdo	species
 207206	Aphodius rufipes	species
 247293	Harpalus latus	species
@@ -1450,14 +1491,12 @@ taxon_id	input	rank
 1871928	Araneus alsine	species
 207390	Phyllopertha horticola	species
 1207093	Trichius fasciatus	species
-242282	Zele deceptor	species
 863709	Rhyssa persuasoria	species
 2979153	Ophion paraparvulus	species
 2884233	Ophion confusus	species
 1045627	Tryphon signator	species
 2979191	Polytribax perspicillator	species
 3039228	Coeloides melanotus	species
-#iyXorFuli	Xorides fuligator	species
 2891098	Glyphicnemis profligator	species
 #iyAstItal	Astiphromma italicum	species
 1545102	Coriomeris denticulatus	species
@@ -1467,7 +1506,6 @@ taxon_id	input	rank
 494736	Mesoleptus angustulus	species
 #iyEpyBili	Epyris bilineatus	species
 495706	Tymmophorus obscuripes	species
-2163652	Gelis agilis	species
 1830383	Melanips opacus	species
 1045562	Barycnemis harpura	species
 1385340	Tenthredopsis litterata	species
@@ -1570,7 +1608,6 @@ taxon_id	input	rank
 305495	Piezodorus lituratus	species
 527278	Pirata piraticus	species
 270614	Poecilus cupreus	species
-934862	Eupithecia valerianata	species
 722666	Lomaspilis marginata	species
 2484540	Chelipoda vocatoria	species
 572742	Coleophora serratella	species
@@ -1600,7 +1637,6 @@ taxon_id	input	rank
 280406	Larinioides sclopetarius	species
 #iySteLari	Stenomacrus laricis	species
 877887	Cantharis pallida	species
-1720797	Megacara hortulana	species
 2876618	Hypomecis atomaria	species
 1545180	Orius laticollis	species
 1073592	Pleurota bicostella	species
@@ -1651,6 +1687,7 @@ taxon_id	input	rank
 753224	Rivula sericealis	species
 212589	Hedychridium ardens	species
 51655	Plutella xylostella	species
+1073588	Metzneria metzneriella	species
 2494902	Crossocerus ovalis	species
 1594309	Hedya pruniana	species
 2891119	Cochylichroa atricapitana	species
@@ -1713,7 +1750,6 @@ taxon_id	input	rank
 1100912	Ancylis unguicella	species
 1870728	Subacronicta megacephala	species
 987436	Sphinx pinastri	species
-873150	Meteorus affinis	species
 126256	Orthetrum cancellatum	species
 442129	Choleva angustata	species
 988016	Pelosia muscerda	species
@@ -1978,6 +2014,10 @@ taxon_id	input	rank
 1191084	Elasmucha grisea	species
 2850632	Alysia manducator	species
 1539393	Ophion brevicornis	species
+495589	Tryphon bidentatus	species
+#iyPleDigi	Plectocryptus digitatus	species
+494226	Ctenochira marginata	species
+1080924	Zele chlorophthalmus	species
 93883	Tineola bisselliella	species
 560355	Ameletus inopinatus	species
 1395073	Perla bipunctata	species
@@ -2006,6 +2046,7 @@ taxon_id	input	rank
 1258725	Nemoura avicularis	species
 189839	Baetis rhodani	species
 65311	Diplazon laetatorius	species
+207148	Aphodius fimetarius	species
 30102	Cicadellidae	family
 878396	Ptomaphagus subvillosus	species
 346861	Tachyporus hypnorum	species
@@ -2032,7 +2073,6 @@ taxon_id	input	rank
 987893	Autographa pulchrina	species
 753154	Aphelia paleana	species
 1870231	Phyllonorycter pastorella	species
-986986	Eupithecia tenuiata	species
 934942	Hemistola chrysoprasaria	species
 171585	Nymphalis io	species
 1070333	Ectoedemia decentella	species
@@ -2252,7 +2292,6 @@ taxon_id	input	rank
 934882	Opisthograptis luteolata	species
 283834	Deilephila elpenor	species
 2567738	Yponomeuta padella	species
-1870435	Ypsolopha scabrella	species
 753148	Aethes cnicana	species
 687102	Limnaecia phragmitella	species
 684540	Gypsonoma aceriana	species
@@ -2270,6 +2309,7 @@ taxon_id	input	rank
 913292	Chrysis impressa	species
 1116930	Trypoxylon medium	species
 #iyLatPleu	Lathrolestes pleuralis	species
+986986	Eupithecia tenuiata	species
 1895146	Perithous divinator	species
 55898	Lysiphlebus confusus	species
 2968928	Atylotus rusticus	species
@@ -2388,11 +2428,9 @@ taxon_id	input	rank
 1553175	Cantharis nigricans	species
 1603140	Orionis coxator	species
 1100907	Agriphila inquinatella	species
-904094	Ischnus inquisitorius	species
 1588419	Quedius lucidulus	species
 753163	Catocala sponsa	species
 6421	Hirudo medicinalis	species
-#qdMacPali	Macrosternodesmus palicola	species
 #qpTraBrit	Trachypauropus britannicus	species
 1384840	Dolerus madidus	species
 346836	Pterostichus minor	species
@@ -2488,7 +2526,6 @@ taxon_id	input	rank
 703598	Otiorhynchus rugosostriatus	species
 298138	Platypus cylindrus	species
 878045	Isomira murina	species
-877789	Aspidapion radiolus	species
 202100	Otiorhynchus raucus	species
 1553623	Oulema obscura	species
 2849649	Uleiota planatus	species
@@ -2508,11 +2545,9 @@ taxon_id	input	rank
 248243	Siphlonurus alternatus	species
 687122	Pyralis farinalis	species
 1569489	Lithobius muticus	species
-2884228	Hyposoter dolosus	species
 329003	Cloeon simile	species
 913277	Chrysis angustula	species
 988009	Oligia strigilis	species
-#iyNetIned	Netelia inedita	species
 287200	Apoda limacodes	species
 1101000	Gypsonoma sociana	species
 2884230	Endasys rusticus	species
@@ -2664,7 +2699,6 @@ taxon_id	input	rank
 1073582	Chrysoesthia drurella	species
 500459	Microlophium carnosum	species
 1384713	Pristiphora melanocarpa	species
-1545314	Eremocoris podagricus	species
 #qqHarHomb	Harpactea hombergi	species
 52428	Polyxenus lagurus	species
 219428	Ciidae	family
@@ -2812,7 +2846,6 @@ taxon_id	input	rank
 3040206	Artioposthia exulans	species
 2562035	Protarchanara brevilinea	species
 2882406	Mycetophila fraterna	species
-987969	Leucania obsoleta	species
 29065	Martes martes	species
 34634	Mesostigmata	order
 191375	Talitrus saltator	species
@@ -2833,7 +2866,6 @@ taxon_id	input	rank
 256828	Bruchidius varius	species
 1553529	Lilioceris lilii	species
 1553612	Omonadus formicarius	species
-207148	Aphodius fimetarius	species
 1384894	Macrophya alboannulata	species
 1384760	Ametastegia carpini	species
 1486701	Auplopus carbonarius	species
@@ -3226,7 +3258,6 @@ taxon_id	input	rank
 1717381	Choerades femorata	species
 1262250	Rivellia syngenesiae	species
 2881606	Bellardia bayeri	species
-1045619	Pimpla contemplator	species
 #iyArbAtha	Arbelus athaliaeperda	species
 662491	Promethes sulcator	species
 594017	Sphenella marginata	species
@@ -3498,7 +3529,6 @@ taxon_id	input	rank
 2496348	Trivia monacha	species
 1980407	Macomangulus tenuis	species
 757356	Oeciacus hirundinis	species
-2882683	Pimpla spuria	species
 210124	Hydroporus pubescens	species
 82379	Amphiura chiajei	species
 986713	Armadillidium depressum	species
@@ -3552,7 +3582,6 @@ taxon_id	input	rank
 #eoAmpSecu	Amphiura securigera	species
 107853	Haliplus lineatocollis	species
 8260	Platichthys flesus	species
-494226	Ctenochira marginata	species
 877892	Cassida flaveola	species
 1101017	Metalampra italica	species
 577746	Cis bidentatus	species
@@ -3565,7 +3594,6 @@ taxon_id	input	rank
 110018	Haliplus ruficollis	species
 77565	Diastylis rathkei	species
 222001	Goniada maculata	species
-495589	Tryphon bidentatus	species
 197158	Erythromma najas	species
 2871731	Ectobius vittiventris	species
 1732128	Urothoe elegans	species
@@ -3600,7 +3628,6 @@ taxon_id	input	rank
 2881873	Dolichomitus mesocentrus	species
 491138	Crangon crangon	species
 7381	Sarcophagidae	family
-#iyPleDigi	Plectocryptus digitatus	species
 154142	Sphaerites glabratus	species
 3076498	Rhembobius quadrispinus	species
 2794003	Gelis melanocephalus	species
@@ -3645,7 +3672,6 @@ taxon_id	input	rank
 494156	Diphyus quadripunctorius	species
 41101	Rhagonycha fulva	species
 441210	Conocephalus discolor	species
-65146	Ophion ventricosus	species
 623212	Polycentropus irroratus	species
 195209	Aonides oxycephala	species
 3076499	Triclistus globulipes	species
@@ -3659,7 +3685,6 @@ taxon_id	input	rank
 714603	Nephtys caeca	species
 931518	Microchrysa polita	species
 878131	Malthinus balteatus	species
-1080924	Zele chlorophthalmus	species
 36325	Cucumariidae	family
 172462	Bathythrix pellucidator	species
 1870251	Polymixis flavicincta	species

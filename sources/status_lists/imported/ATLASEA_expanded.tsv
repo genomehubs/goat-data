@@ -91,7 +91,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1654346	Dinophilus taeniatus	Dinophilidae	long_list		ATLASEA	ATLASEA											
 188474	Trilobodrilus axi	Dinophilidae	long_list		ATLASEA	ATLASEA											
 188476	Trilobodrilus heideri	Dinophilidae	long_list		ATLASEA	ATLASEA											
-47118	Bonellia viridis	Bonelliidae	long_list		ATLASEA	ATLASEA											
+47118	Bonellia viridis	Bonelliidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 417073	Echiurus echiurus	Echiuridae	long_list		ATLASEA	ATLASEA											
 273019	Thalassema thalassema	Echiuridae	long_list		ATLASEA	ATLASEA											
 221997	Dorvillea erucaeformis	Dorvilleidae	long_list		ATLASEA	ATLASEA											
@@ -159,7 +159,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 104727	Polyophthalmus pictus	Opheliidae	long_list		ATLASEA	ATLASEA											
 205107	Ophelia bicornis	Opheliidae	long_list		ATLASEA	ATLASEA											
 875966	Ophelia limacina	Opheliidae	long_list		ATLASEA	ATLASEA											
-195260	Ophelia neglecta	Opheliidae	long_list		ATLASEA	ATLASEA											
+195260	Ophelia neglecta	Opheliidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 36124	Ophelia rathkei	Opheliidae	long_list		ATLASEA	ATLASEA											
 2486695	Ophelina abranchiata	Opheliidae	long_list		ATLASEA	ATLASEA											
 190468	Ophelina acuminata	Opheliidae	long_list		ATLASEA	ATLASEA											
@@ -190,7 +190,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 887200	Vanadis formosa	Alciopidae	long_list		ATLASEA	ATLASEA											
 45666	Aphrodita aculeata	Aphroditidae	long_list		ATLASEA	ATLASEA											
 1210409	Laetmonice filicornis	Aphroditidae	long_list		ATLASEA	ATLASEA											
-2029591	Laetmonice hystrix	Aphroditidae	long_list		ATLASEA	ATLASEA											
+2029591	Laetmonice hystrix	Aphroditidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 2153329	Laetmonice producta	Aphroditidae	long_list		ATLASEA	ATLASEA											
 1192175	Calamyzas amphictenicola	Chrysopetalidae	long_list		ATLASEA	ATLASEA											
 115833	Chrysopetalum debile	Chrysopetalidae	long_list		ATLASEA	ATLASEA											
@@ -200,7 +200,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1446102	Glycera fallax	Glyceridae	long_list	data_generation	ATLASEA	ATLASEA			ATLASEA	ATLASEA	ATLASEA	ATLASEA					
 529209	Glycera lapidum	Glyceridae	long_list		ATLASEA	ATLASEA											
 529249	Glycera oxycephala	Glyceridae	long_list		ATLASEA	ATLASEA											
-529286	Glycera tesselata	Glyceridae	long_list		ATLASEA	ATLASEA											
+529286	Glycera tesselata	Glyceridae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 104710	Glycera tridactyla	Glyceridae	long_list		ATLASEA	ATLASEA											
 529288	Glycera unicornis	Glyceridae	long_list		ATLASEA	ATLASEA											
 1436026	Glycinde nordmanni	Goniadidae	long_list		ATLASEA	ATLASEA											
@@ -303,7 +303,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 862912	Gattyana cirrhosa	Polynoidae	long_list		ATLASEA	ATLASEA											
 2951284	Harmothoe antilopes	Polynoidae	long_list		ATLASEA	ATLASEA											
 2922069	Harmothoe clavigera	Polynoidae	long_list		ATLASEA	ATLASEA											
-1486853	Harmothoe extenuata	Polynoidae	long_list		ATLASEA	ATLASEA											
+1486853	Harmothoe extenuata	Polynoidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 868031	Harmothoe fragilis	Polynoidae	long_list		ATLASEA	ATLASEA											
 1619589	Harmothoe fraserthomsoni	Polynoidae	long_list		ATLASEA	ATLASEA											
 2951285	Harmothoe gilchristi	Polynoidae	long_list		ATLASEA	ATLASEA											
@@ -358,7 +358,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1048815	Eusyllis lamelligera	Syllidae	long_list		ATLASEA	ATLASEA											
 418324	Nudisyllis pulligera	Syllidae	long_list		ATLASEA	ATLASEA											
 1045393	Odontosyllis ctenostoma	Syllidae	long_list		ATLASEA	ATLASEA											
-418334	Odontosyllis fulgurans	Syllidae	long_list		ATLASEA	ATLASEA											
+418334	Odontosyllis fulgurans	Syllidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 199562	Odontosyllis gibba	Syllidae	long_list		ATLASEA	ATLASEA											
 199564	Opisthodonta morena	Syllidae	long_list		ATLASEA	ATLASEA											
 418330	Brania pusilla	Syllidae	long_list		ATLASEA	ATLASEA											
@@ -430,11 +430,11 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1818031	Euchone rosea	Sabellidae	long_list		ATLASEA	ATLASEA											
 2974367	Laonome kroyeri	Sabellidae	long_list		ATLASEA	ATLASEA											
 2339973	Myxicola aesthetica	Sabellidae	long_list		ATLASEA	ATLASEA											
-76264	Myxicola infundibulum	Sabellidae	long_list		ATLASEA	ATLASEA											
+76264	Myxicola infundibulum	Sabellidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1816279	Parasabella saxicola	Sabellidae	long_list		ATLASEA	ATLASEA											
 279639	Pseudopotamilla reniformis	Sabellidae	long_list		ATLASEA	ATLASEA											
 51259	Sabella pavonina	Sabellidae	long_list		ATLASEA	ATLASEA											
-85702	Sabella spallanzanii	Sabellidae	long_list		ATLASEA	ATLASEA											
+85702	Sabella spallanzanii	Sabellidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 880628	Stylomma palmatum	Sabellidae	long_list		ATLASEA	ATLASEA											
 945923	Bathyvermilia eliasoni	Serpulidae	long_list		ATLASEA	ATLASEA											
 363306	Chitinopoma serrula	Serpulidae	long_list		ATLASEA	ATLASEA											
@@ -555,8 +555,8 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 46592	Dodecaceria concharum	Cirratulidae	long_list		ATLASEA	ATLASEA											
 1619271	Protocirrineris chrysoderma	Cirratulidae	long_list		ATLASEA	ATLASEA											
 40316	Ctenodrilus serratus	Ctenodrilidae	long_list		ATLASEA	ATLASEA											
-2972865	Bradabyssa villosa	Flabelligeridae	long_list		ATLASEA	ATLASEA											
-279650	Diplocirrus glaucus	Flabelligeridae	long_list		ATLASEA	ATLASEA											
+2972865	Bradabyssa villosa	Flabelligeridae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+279650	Diplocirrus glaucus	Flabelligeridae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 307616	Flabelligera affinis	Flabelligeridae	long_list		ATLASEA	ATLASEA											
 307612	Pherusa plumosa	Flabelligeridae	long_list		ATLASEA	ATLASEA											
 307605	Poeobius meseres	Flabelligeridae	long_list		ATLASEA	ATLASEA											
@@ -574,7 +574,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1056814	Amphitrite cirrata	Terebellidae	long_list		ATLASEA	ATLASEA											
 205114	Amphitritides gracilis	Terebellidae	long_list		ATLASEA	ATLASEA											
 2862683	Eupolymnia gili	Terebellidae	long_list		ATLASEA	ATLASEA											
-2862930	Eupolymnia lacazei	Terebellidae	long_list		ATLASEA	ATLASEA											
+2862930	Eupolymnia lacazei	Terebellidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 2862931	Eupolymnia meissnerae	Terebellidae	long_list		ATLASEA	ATLASEA											
 13519	Eupolymnia nebulosa	Terebellidae	long_list		ATLASEA	ATLASEA											
 279654	Eupolymnia nesidensis	Terebellidae	long_list		ATLASEA	ATLASEA											
@@ -1469,9 +1469,9 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1131619	Cymonomus granulatus	Cymonomidae	long_list		ATLASEA	ATLASEA											
 656162	Calcinus tubularis	Diogenidae	long_list		ATLASEA	ATLASEA											
 1127462	Clibanarius erythropus	Diogenidae	long_list		ATLASEA	ATLASEA											
-1070701	Dardanus arrosor	Diogenidae	long_list		ATLASEA	ATLASEA											
+1070701	Dardanus arrosor	Diogenidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1129476	Dardanus calidus	Diogenidae	long_list		ATLASEA	ATLASEA											
-1436025	Diogenes pugilator	Diogenidae	long_list		ATLASEA	ATLASEA											
+1436025	Diogenes pugilator	Diogenidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 654594	Paguristes eremita	Diogenidae	long_list		ATLASEA	ATLASEA											
 547242	Medorippe lanata	Dorippidae	long_list		ATLASEA	ATLASEA											
 411674	Dromia personata	Dromiidae	long_list		ATLASEA	ATLASEA											
@@ -1482,7 +1482,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1340059	Pisa hirticornis	Epialtidae	long_list		ATLASEA	ATLASEA											
 2951292	Pisa nodipes	Epialtidae	long_list		ATLASEA	ATLASEA											
 1416562	Pisa tetraodon	Epialtidae	long_list		ATLASEA	ATLASEA											
-483417	Eriphia verrucosa	Eriphiidae	long_list		ATLASEA	ATLASEA											
+483417	Eriphia verrucosa	Eriphiidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 2951281	Ethusa mascarone	Ethusidae	long_list		ATLASEA	ATLASEA											
 1129404	Galathea dispersa	Galatheidae	long_list		ATLASEA	ATLASEA											
 1582884	Galathea intermedia	Galatheidae	long_list		ATLASEA	ATLASEA											
@@ -1677,7 +1677,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1129396	Stereomastis nana	Polychelidae	long_list		ATLASEA	ATLASEA											
 1522709	Stereomastis sculpta	Polychelidae	long_list		ATLASEA	ATLASEA											
 1522743	Willemoesia leptodactyla	Polychelidae	long_list		ATLASEA	ATLASEA											
-2944259	Pisidia bluteli	Porcellanidae	long_list		ATLASEA	ATLASEA											
+2944259	Pisidia bluteli	Porcellanidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 874270	Pisidia longicornis	Porcellanidae	long_list		ATLASEA	ATLASEA											
 115613	Porcellana platycheles	Porcellanidae	long_list		ATLASEA	ATLASEA											
 2996399	Achelous hastatus	Portunidae	long_list		ATLASEA	ATLASEA											
@@ -1794,7 +1794,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 155709	Paragnathia formica	Gnathiidae	long_list		ATLASEA	ATLASEA											
 2909677	Haploniscus foresti	Haploniscidae	long_list		ATLASEA	ATLASEA											
 2976924	Hemioniscus balani	Hemioniscidae	long_list		ATLASEA	ATLASEA											
-155690	Cleantis prismatica	Holognathidae	long_list		ATLASEA	ATLASEA											
+155690	Cleantis prismatica	Holognathidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 96806	Idotea chelipes	Idoteidae	long_list		ATLASEA	ATLASEA											
 119198	Idotea emarginata	Idoteidae	long_list		ATLASEA	ATLASEA											
 119199	Idotea granulosa	Idoteidae	long_list		ATLASEA	ATLASEA											
@@ -2764,7 +2764,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1440456	Ascidia virginea	Ascidiidae	long_list		ATLASEA	ATLASEA											
 201961	Ascidiella aspersa	Ascidiidae	long_list		ATLASEA	ATLASEA											
 1298853	Ascidiella scabra	Ascidiidae	long_list		ATLASEA	ATLASEA											
-395376	Phallusia fumigata	Ascidiidae	long_list		ATLASEA	ATLASEA											
+395376	Phallusia fumigata	Ascidiidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 59560	Phallusia mammillata	Ascidiidae	long_list		ATLASEA	ATLASEA											
 2079803	Ciona edwardsi	Cionidae	long_list		ATLASEA	ATLASEA											
 7719	Ciona intestinalis	Cionidae	long_list		ATLASEA	ATLASEA											
@@ -3002,7 +3002,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 2980510	Actinauge abyssorum	Hormathiidae	long_list		ATLASEA	ATLASEA											
 478388	Actinauge richardi	Hormathiidae	long_list		ATLASEA	ATLASEA											
 176095	Adamsia palliata	Hormathiidae	long_list		ATLASEA	ATLASEA											
-6114	Calliactis parasitica	Hormathiidae	long_list		ATLASEA	ATLASEA											
+6114	Calliactis parasitica	Hormathiidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 2777157	Metridium dianthus	Metridiidae	long_list		ATLASEA	ATLASEA											
 6116	Metridium senile	Metridiidae	long_list		ATLASEA	ATLASEA											
 396347	Actinothoe sphyrodeta	Sagartiidae	long_list		ATLASEA	ATLASEA											
@@ -3015,7 +3015,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 859419	Acanthogorgia armata	Acanthogorgiidae	long_list		ATLASEA	ATLASEA											
 2723949	Acanthogorgia hirsuta	Acanthogorgiidae	long_list		ATLASEA	ATLASEA											
 124278	Alcyonium acaule	Alcyoniidae	long_list		ATLASEA	ATLASEA											
-124279	Alcyonium coralloides	Alcyoniidae	long_list		ATLASEA	ATLASEA											
+124279	Alcyonium coralloides	Alcyoniidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 51768	Alcyonium digitatum	Alcyoniidae	long_list		ATLASEA	ATLASEA											
 124277	Alcyonium glomeratum	Alcyoniidae	long_list		ATLASEA	ATLASEA											
 124280	Alcyonium hibernicum	Alcyoniidae	long_list		ATLASEA	ATLASEA											
@@ -3030,8 +3030,8 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1458167	Viminella flagellum	Ellisellidae	long_list		ATLASEA	ATLASEA											
 317547	Eunicella cavolini	Gorgoniidae	long_list		ATLASEA	ATLASEA											
 317548	Eunicella singularis	Gorgoniidae	long_list		ATLASEA	ATLASEA											
-396355	Eunicella verrucosa	Gorgoniidae	long_list		ATLASEA	ATLASEA											
-1502934	Leptogorgia sarmentosa	Gorgoniidae	long_list		ATLASEA	ATLASEA											
+396355	Eunicella verrucosa	Gorgoniidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+1502934	Leptogorgia sarmentosa	Gorgoniidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 44213	Acanella arbuscula	Isididae	long_list		ATLASEA	ATLASEA											
 1309715	Chelidonisis aurantiaca	Isididae	long_list		ATLASEA	ATLASEA											
 1329529	Isidella elongata	Isididae	long_list		ATLASEA	ATLASEA											
@@ -3057,12 +3057,12 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 68568	Funiculina quadrangularis	Funiculinidae	long_list		ATLASEA	ATLASEA											
 1150262	Pennatula phosphorea	Pennatulidae	long_list		ATLASEA	ATLASEA											
 1820127	Pennatula rubra	Pennatulidae	long_list		ATLASEA	ATLASEA											
-2759737	Pteroeides griseum	Pennatulidae	long_list		ATLASEA	ATLASEA											
+2759737	Pteroeides griseum	Pennatulidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 361155	Distichoptilum gracile	Protoptilidae	long_list		ATLASEA	ATLASEA											
 1399352	Scleroptilum grandiflorum	Scleroptilidae	long_list		ATLASEA	ATLASEA											
 1399338	Umbellula thomsoni	Umbellulidae	long_list		ATLASEA	ATLASEA											
 2769065	Cavernularia pusilla	Veretillidae	long_list		ATLASEA	ATLASEA											
-1400855	Veretillum cynomorium	Veretillidae	long_list		ATLASEA	ATLASEA											
+1400855	Veretillum cynomorium	Veretillidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1399339	Virgularia mirabilis	Virgulariidae	long_list		ATLASEA	ATLASEA											
 2268689	Virgularia tuberculata	Virgulariidae	long_list		ATLASEA	ATLASEA											
 213636	Caryophyllia ambrosia	Caryophylliidae	long_list		ATLASEA	ATLASEA											
@@ -3108,7 +3108,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 760128	Epizoanthus paxii	Epizoanthidae	long_list		ATLASEA	ATLASEA											
 798147	Isozoanthus sulcatus	Parazoanthidae	long_list		ATLASEA	ATLASEA											
 470410	Parazoanthus anguicomus	Parazoanthidae	long_list		ATLASEA	ATLASEA											
-44925	Parazoanthus axinellae	Parazoanthidae	long_list		ATLASEA	ATLASEA											
+44925	Parazoanthus axinellae	Parazoanthidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 861490	Parazoanthus juan-fernandezii	Parazoanthidae	long_list		ATLASEA	ATLASEA											
 328566	Savalia savaglia	Parazoanthidae	long_list	sample_acquired	ATLASEA	ATLASEA			ATLASEA	ATLASEA							
 1643393	Umimayanthus chanpuru	Parazoanthidae	long_list		ATLASEA	ATLASEA											
@@ -3484,13 +3484,13 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1138254	Arbaciella elegans	Arbaciidae	long_list		ATLASEA	ATLASEA											
 7648	Echinus esculentus	Echinidae	long_list		ATLASEA	ATLASEA											
 1419495	Echinus melo	Echinidae	long_list		ATLASEA	ATLASEA											
-1933096	Gracilechinus acutus	Echinidae	long_list		ATLASEA	ATLASEA											
+1933096	Gracilechinus acutus	Echinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1392642	Gracilechinus affinis	Echinidae	long_list		ATLASEA	ATLASEA											
 1392643	Gracilechinus alexandri	Echinidae	long_list		ATLASEA	ATLASEA											
 1392645	Gracilechinus elegans	Echinidae	long_list		ATLASEA	ATLASEA											
 7656	Paracentrotus lividus	Parechinidae	long_list		ATLASEA	ATLASEA											
 7660	Psammechinus miliaris	Parechinidae	long_list		ATLASEA	ATLASEA											
-39374	Sphaerechinus granularis	Toxopneustidae	long_list		ATLASEA	ATLASEA											
+39374	Sphaerechinus granularis	Toxopneustidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 161044	Genocidaris maculata	Trigonocidaridae	long_list		ATLASEA	ATLASEA											
 72719	Cidaris cidaris	Cidaridae	long_list		ATLASEA	ATLASEA											
 1105222	Stylocidaris affinis	Cidaridae	long_list		ATLASEA	ATLASEA											
@@ -3503,7 +3503,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 72668	Brissus unicolor	Brissidae	long_list		ATLASEA	ATLASEA											
 39298	Echinocardium cordatum	Loveniidae	long_list		ATLASEA	ATLASEA											
 290519	Echinocardium flavescens	Loveniidae	long_list		ATLASEA	ATLASEA											
-471983	Echinocardium mediterraneum	Loveniidae	long_list		ATLASEA	ATLASEA											
+471983	Echinocardium mediterraneum	Loveniidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 471984	Echinocardium mortenseni	Loveniidae	long_list		ATLASEA	ATLASEA											
 471985	Echinocardium pennatifidum	Loveniidae	long_list		ATLASEA	ATLASEA											
 72725	Spatangus purpureus	Spatangidae	long_list		ATLASEA	ATLASEA											
@@ -3673,7 +3673,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1268071	Procardium indicum	Cardiidae	long_list		ATLASEA	ATLASEA											
 1472678	Ciliatocardium ciliatum	Cardiidae	long_list		ATLASEA	ATLASEA											
 1548725	Serripes groenlandicus	Cardiidae	long_list		ATLASEA	ATLASEA											
-429181	Laevicardium crassum	Cardiidae	long_list		ATLASEA	ATLASEA											
+429181	Laevicardium crassum	Cardiidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1699450	Laevicardium oblongum	Cardiidae	long_list		ATLASEA	ATLASEA											
 1699427	Acanthocardia aculeata	Cardiidae	long_list		ATLASEA	ATLASEA											
 241154	Acanthocardia echinata	Cardiidae	long_list		ATLASEA	ATLASEA											
@@ -3687,8 +3687,8 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1676568	Parvicardium scabrum	Cardiidae	long_list		ATLASEA	ATLASEA											
 561464	Parvicardium scriptum	Cardiidae	long_list		ATLASEA	ATLASEA											
 561465	Parvicardium vroomi	Cardiidae	long_list		ATLASEA	ATLASEA											
-40130	Donax trunculus	Donacidae	long_list		ATLASEA	ATLASEA											
-1920007	Donax variegatus	Donacidae	long_list		ATLASEA	ATLASEA											
+40130	Donax trunculus	Donacidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+1920007	Donax variegatus	Donacidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 457701	Donax veruinus	Donacidae	long_list		ATLASEA	ATLASEA											
 246755	Donax vittatus	Donacidae	long_list		ATLASEA	ATLASEA											
 1795450	Gari costulata	Psammobiidae	long_list		ATLASEA	ATLASEA											
@@ -3881,7 +3881,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 31201	Spisula solida	Mactridae	long_list		ATLASEA	ATLASEA											
 31202	Spisula subtruncata	Mactridae	long_list		ATLASEA	ATLASEA											
 1411939	Donacilla cornea	Mesodesmatidae	long_list		ATLASEA	ATLASEA											
-78549	Callista chione	Veneridae	long_list		ATLASEA	ATLASEA											
+78549	Callista chione	Veneridae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 138984	Chamelea gallina	Veneridae	long_list		ATLASEA	ATLASEA											
 358437	Chamelea striatula	Veneridae	long_list		ATLASEA	ATLASEA											
 380098	Clausinella fasciata	Veneridae	long_list		ATLASEA	ATLASEA											
@@ -4003,7 +4003,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 749958	Hermaea bifida	Hermaeidae	long_list		ATLASEA	ATLASEA											
 281113	Addisonia excentrica	Addisoniidae	long_list		ATLASEA	ATLASEA											
 1855826	Diodora dorsata	Fissurellidae	long_list		ATLASEA	ATLASEA											
-869270	Diodora gibberula	Fissurellidae	long_list		ATLASEA	ATLASEA											
+869270	Diodora gibberula	Fissurellidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 120387	Diodora graeca	Fissurellidae	long_list		ATLASEA	ATLASEA											
 1855827	Diodora italica	Fissurellidae	long_list		ATLASEA	ATLASEA											
 2790554	Diodora ruppellii	Fissurellidae	long_list		ATLASEA	ATLASEA											
@@ -4015,7 +4015,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1007046	Fissurella nubecula	Fissurellidae	long_list		ATLASEA	ATLASEA											
 2268678	Puncturella noachina	Fissurellidae	long_list		ATLASEA	ATLASEA											
 994924	Haliotis mykonosensis	Haliotidae	long_list		ATLASEA	ATLASEA											
-36103	Haliotis tuberculata	Haliotidae	long_list		ATLASEA	ATLASEA											
+36103	Haliotis tuberculata	Haliotidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 740969	Iothia fulva	Lepetidae	long_list		ATLASEA	ATLASEA											
 72690	Lepeta caeca	Lepetidae	long_list		ATLASEA	ATLASEA											
 369574	Alderia modesta	Limapontiidae	long_list		ATLASEA	ATLASEA											
@@ -4047,7 +4047,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1676536	Ariadnaria borealis	Capulidae	long_list		ATLASEA	ATLASEA											
 211736	Capulus ungaricus	Capulidae	long_list		ATLASEA	ATLASEA											
 1665550	Galeodea echinophora	Cassidae	long_list		ATLASEA	ATLASEA											
-500097	Charonia lampas	Charoniidae	long_list		ATLASEA	ATLASEA											
+500097	Charonia lampas	Charoniidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1273237	Eatonina fulgida	Cingulopsidae	long_list		ATLASEA	ATLASEA											
 1231120	Eupaludestrina scamandri	Cochliopidae	long_list		ATLASEA	ATLASEA											
 1231121	Eupaludestrina stagnorum	Cochliopidae	long_list		ATLASEA	ATLASEA											
@@ -4078,8 +4078,8 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 31220	Littorina saxatilis	Littorinidae	long_list		ATLASEA	ATLASEA											
 58619	Melarhaphe neritoides	Littorinidae	long_list		ATLASEA	ATLASEA											
 488656	Cochlis vittata	Naticidae	long_list		ATLASEA	ATLASEA											
-488663	Naticarius hebraeus	Naticidae	long_list		ATLASEA	ATLASEA											
-488664	Naticarius stercusmuscarum	Naticidae	long_list		ATLASEA	ATLASEA											
+488663	Naticarius hebraeus	Naticidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+488664	Naticarius stercusmuscarum	Naticidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 489473	Notocochlis dillwynii	Naticidae	long_list		ATLASEA	ATLASEA											
 489478	Tectonatica sagraiana	Naticidae	long_list		ATLASEA	ATLASEA											
 488658	Euspira catena	Naticidae	long_list		ATLASEA	ATLASEA											
@@ -4087,7 +4087,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1676544	Euspira montagui	Naticidae	long_list		ATLASEA	ATLASEA											
 489456	Euspira nitida	Naticidae	long_list		ATLASEA	ATLASEA											
 1421133	Euspira pallida	Naticidae	long_list		ATLASEA	ATLASEA											
-488666	Neverita josephinia	Naticidae	long_list		ATLASEA	ATLASEA											
+488666	Neverita josephinia	Naticidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 848637	Simnia patula	Ovulidae	long_list		ATLASEA	ATLASEA											
 305772	Simnia spelta	Ovulidae	long_list		ATLASEA	ATLASEA											
 413199	Pterotrachea coronata	Pterotracheidae	long_list		ATLASEA	ATLASEA											
@@ -4173,8 +4173,8 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 134462	Coralliophila brevis	Muricidae	long_list		ATLASEA	ATLASEA											
 134461	Coralliophila meyendorffii	Muricidae	long_list		ATLASEA	ATLASEA											
 134466	Coralliophila panormitana	Muricidae	long_list		ATLASEA	ATLASEA											
-179646	Bolinus brandaris	Muricidae	long_list		ATLASEA	ATLASEA											
-179648	Hexaplex trunculus	Muricidae	long_list		ATLASEA	ATLASEA											
+179646	Bolinus brandaris	Muricidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+179648	Hexaplex trunculus	Muricidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 179650	Muricopsis cristata	Muricidae	long_list		ATLASEA	ATLASEA											
 51631	Nucella lapillus	Muricidae	long_list		ATLASEA	ATLASEA											
 1318636	Ocenebra edwardsii	Muricidae	long_list		ATLASEA	ATLASEA											
@@ -4198,9 +4198,9 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1934725	Tritia cuvierii	Nassariidae	long_list		ATLASEA	ATLASEA											
 1934726	Tritia denticulata	Nassariidae	long_list		ATLASEA	ATLASEA											
 2824858	Tritia elata	Nassariidae	long_list		ATLASEA	ATLASEA											
-1934729	Tritia grana	Nassariidae	long_list		ATLASEA	ATLASEA											
+1934729	Tritia grana	Nassariidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1973334	Tritia incrassata	Nassariidae	long_list		ATLASEA	ATLASEA											
-1934731	Tritia mutabilis	Nassariidae	long_list		ATLASEA	ATLASEA											
+1934731	Tritia mutabilis	Nassariidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1934732	Tritia neritea	Nassariidae	long_list		ATLASEA	ATLASEA											
 1934735	Tritia pellucida	Nassariidae	long_list		ATLASEA	ATLASEA											
 1934738	Tritia reticulata	Nassariidae	long_list		ATLASEA	ATLASEA											
@@ -4229,7 +4229,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 86349	Aegires punctilucens	Aegiridae	long_list		ATLASEA	ATLASEA											
 1758757	Aeolidia filomenae	Aeolidiidae	long_list		ATLASEA	ATLASEA											
 195873	Aeolidia papillosa	Aeolidiidae	long_list		ATLASEA	ATLASEA											
-934974	Aeolidiella alderi	Aeolidiidae	long_list		ATLASEA	ATLASEA											
+934974	Aeolidiella alderi	Aeolidiidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1903821	Aeolidiella glauca	Aeolidiidae	long_list		ATLASEA	ATLASEA											
 1287571	Aeolidiella sanguinea	Aeolidiidae	long_list		ATLASEA	ATLASEA											
 1287503	Anteaeolidiella cacaotica	Aeolidiidae	long_list		ATLASEA	ATLASEA											
@@ -4255,14 +4255,14 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1863025	Felimida binza	Chromodorididae	long_list		ATLASEA	ATLASEA											
 1499117	Felimida elegantula	Chromodorididae	long_list		ATLASEA	ATLASEA											
 1522280	Felimida krohni	Chromodorididae	long_list		ATLASEA	ATLASEA											
-1499118	Felimida luteorosea	Chromodorididae	long_list		ATLASEA	ATLASEA											
+1499118	Felimida luteorosea	Chromodorididae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1499119	Felimida purpurea	Chromodorididae	long_list		ATLASEA	ATLASEA											
 1798232	Felimare cantabrica	Chromodorididae	long_list		ATLASEA	ATLASEA											
 1589271	Felimare fontandraui	Chromodorididae	long_list		ATLASEA	ATLASEA											
 71311	Felimare orsinii	Chromodorididae	long_list		ATLASEA	ATLASEA											
-1564611	Felimare picta	Chromodorididae	long_list		ATLASEA	ATLASEA											
+1564611	Felimare picta	Chromodorididae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1589272	Felimare tricolor	Chromodorididae	long_list		ATLASEA	ATLASEA											
-71312	Felimare villafranca	Chromodorididae	long_list		ATLASEA	ATLASEA											
+71312	Felimare villafranca	Chromodorididae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1639837	Corambe obscura	Corambidae	long_list		ATLASEA	ATLASEA											
 1676545	Coryphella gracilis	Coryphellidae	long_list		ATLASEA	ATLASEA											
 2059235	Coryphella verrucosa	Coryphellidae	long_list		ATLASEA	ATLASEA											
@@ -4280,7 +4280,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 2980196	Discodoris rosi	Discodorididae	long_list		ATLASEA	ATLASEA											
 2980509	Geitodoris planata	Discodorididae	long_list		ATLASEA	ATLASEA											
 71315	Jorunna tomentosa	Discodorididae	long_list		ATLASEA	ATLASEA											
-120394	Peltodoris atromaculata	Discodorididae	long_list		ATLASEA	ATLASEA											
+120394	Peltodoris atromaculata	Discodorididae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 154653	Platydoris argo	Discodorididae	long_list		ATLASEA	ATLASEA											
 2678639	Tayuva lilacina	Discodorididae	long_list		ATLASEA	ATLASEA											
 2268638	Doris nobilis	Dorididae	long_list		ATLASEA	ATLASEA											
@@ -4306,7 +4306,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 76182	Eubranchus exiguus	Eubranchidae	long_list		ATLASEA	ATLASEA											
 1676543	Eubranchus tricolor	Eubranchidae	long_list		ATLASEA	ATLASEA											
 929450	Caloria elegans	Facelinidae	long_list		ATLASEA	ATLASEA											
-154642	Cratena peregrina	Facelinidae	long_list		ATLASEA	ATLASEA											
+154642	Cratena peregrina	Facelinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 934976	Dicata odhneri	Facelinidae	long_list		ATLASEA	ATLASEA											
 1287513	Facelina annulicornis	Facelinidae	long_list		ATLASEA	ATLASEA											
 219664	Facelina auriculata	Facelinidae	long_list		ATLASEA	ATLASEA											
@@ -4319,8 +4319,8 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1287638	Fiona pinnata	Fionidae	long_list		ATLASEA	ATLASEA											
 2059230	Carronella pellucida	Flabellinidae	long_list		ATLASEA	ATLASEA											
 76183	Edmundsella pedata	Flabellinidae	long_list		ATLASEA	ATLASEA											
-154626	Flabellina affinis	Flabellinidae	long_list		ATLASEA	ATLASEA											
-2483394	Paraflabellina ischitana	Flabellinidae	long_list		ATLASEA	ATLASEA											
+154626	Flabellina affinis	Flabellinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+2483394	Paraflabellina ischitana	Flabellinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1154737	Glaucus atlanticus	Glaucidae	long_list		ATLASEA	ATLASEA											
 71288	Ancula gibbosa	Goniodorididae	long_list		ATLASEA	ATLASEA											
 71308	Goniodoris castanea	Goniodorididae	long_list		ATLASEA	ATLASEA											
@@ -4339,7 +4339,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 2572464	Janolus hyalinus	Janolidae	long_list		ATLASEA	ATLASEA											
 2773495	Lomanotus genei	Lomanotidae	long_list		ATLASEA	ATLASEA											
 797223	Godiva quadricolor	Myrrhinidae	long_list		ATLASEA	ATLASEA											
-869980	Nemesignis banyulensis	Myrrhinidae	long_list		ATLASEA	ATLASEA											
+869980	Nemesignis banyulensis	Myrrhinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 71285	Acanthodoris pilosa	Onchidorididae	long_list		ATLASEA	ATLASEA											
 1639829	Adalaria loveni	Onchidorididae	long_list		ATLASEA	ATLASEA											
 1639830	Adalaria proxima	Onchidorididae	long_list		ATLASEA	ATLASEA											
@@ -4380,13 +4380,13 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1285140	Duvaucelia lineata	Tritoniidae	long_list		ATLASEA	ATLASEA											
 2079462	Duvaucelia manicata	Tritoniidae	long_list		ATLASEA	ATLASEA											
 1870835	Duvaucelia striata	Tritoniidae	long_list		ATLASEA	ATLASEA											
-154647	Marionia blainvillea	Tritoniidae	long_list		ATLASEA	ATLASEA											
+154647	Marionia blainvillea	Tritoniidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1676591	Tritonia hombergii	Tritoniidae	long_list		ATLASEA	ATLASEA											
 190187	Omalogyra atomus	Omalogyridae	long_list		ATLASEA	ATLASEA											
 884226	Microhedyle glandulifera	Parhedylidae	long_list		ATLASEA	ATLASEA											
 884218	Pontohedyle milaschewitchii	Parhedylidae	long_list		ATLASEA	ATLASEA											
 87957	Patella aspera	Patellidae	long_list		ATLASEA	ATLASEA											
-87958	Patella caerulea	Patellidae	long_list		ATLASEA	ATLASEA											
+87958	Patella caerulea	Patellidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 87960	Patella depressa	Patellidae	long_list		ATLASEA	ATLASEA											
 87961	Patella ferruginea	Patellidae	long_list		ATLASEA	ATLASEA											
 88005	Patella pellucida	Patellidae	long_list		ATLASEA	ATLASEA											
@@ -4397,7 +4397,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 154625	Elysia timida	Plakobranchidae	long_list		ATLASEA	ATLASEA											
 886667	Elysia translucens	Plakobranchidae	long_list		ATLASEA	ATLASEA											
 71494	Elysia viridis	Plakobranchidae	long_list		ATLASEA	ATLASEA											
-154630	Thuridilla hopei	Plakobranchidae	long_list		ATLASEA	ATLASEA											
+154630	Thuridilla hopei	Plakobranchidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 252552	Pleurobranchaea meckeli	Pleurobranchaeidae	long_list		ATLASEA	ATLASEA											
 1631827	Berthella ocellata	Pleurobranchidae	long_list		ATLASEA	ATLASEA											
 155528	Berthella plumula	Pleurobranchidae	long_list		ATLASEA	ATLASEA											
@@ -4495,14 +4495,14 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 55003	Clanculus corallinus	Trochidae	long_list		ATLASEA	ATLASEA											
 121182	Clanculus cruciatus	Trochidae	long_list		ATLASEA	ATLASEA											
 703297	Clanculus jussieui	Trochidae	long_list		ATLASEA	ATLASEA											
-335776	Bolma rugosa	Turbinidae	long_list		ATLASEA	ATLASEA											
-154632	Tylodina perversa	Tylodinidae	long_list		ATLASEA	ATLASEA											
+335776	Bolma rugosa	Turbinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+154632	Tylodina perversa	Tylodinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 219656	Umbraculum umbraculum	Umbraculidae	long_list		ATLASEA	ATLASEA											
 1367359	Bittium latreillii	Cerithiidae	long_list		ATLASEA	ATLASEA											
 2219155	Bittium reticulatum	Cerithiidae	long_list		ATLASEA	ATLASEA											
 1357316	Bittium simplex	Cerithiidae	long_list		ATLASEA	ATLASEA											
 164661	Cerithium lividulum	Cerithiidae	long_list		ATLASEA	ATLASEA											
-164662	Cerithium vulgatum	Cerithiidae	long_list		ATLASEA	ATLASEA											
+164662	Cerithium vulgatum	Cerithiidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1202149	Cerithiopsis ladae	Cerithiopsidae	long_list		ATLASEA	ATLASEA											
 1202151	Cerithiopsis minima	Cerithiopsidae	long_list		ATLASEA	ATLASEA											
 1202150	Cerithiopsis petanii	Cerithiopsidae	long_list		ATLASEA	ATLASEA											
@@ -4520,8 +4520,8 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 256138	Callochiton septemvalvis	Callochitonidae	long_list		ATLASEA	ATLASEA											
 126420	Acanthochitona crinita	Acanthochitonidae	long_list		ATLASEA	ATLASEA											
 3054875	Acanthochitona discrepans	Acanthochitonidae	long_list		ATLASEA	ATLASEA											
-55704	Acanthochitona fascicularis	Acanthochitonidae	long_list		ATLASEA	ATLASEA											
-256063	Ischnochiton rissoi	Ischnochitonidae	long_list		ATLASEA	ATLASEA											
+55704	Acanthochitona fascicularis	Acanthochitonidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+256063	Ischnochiton rissoi	Ischnochitonidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 541227	Stenosemus albus	Ischnochitonidae	long_list		ATLASEA	ATLASEA											
 1214103	Lepidochitona caprearum	Lepidochitonidae	long_list		ATLASEA	ATLASEA											
 256056	Lepidochitona cinerea	Lepidochitonidae	long_list		ATLASEA	ATLASEA											
@@ -4529,7 +4529,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 1138471	Boreochiton ruber	Tonicellidae	long_list		ATLASEA	ATLASEA											
 1366313	Tonicella marmorea	Tonicellidae	long_list		ATLASEA	ATLASEA											
 2732485	Hanleya hanleyi	Hanleyidae	long_list		ATLASEA	ATLASEA											
-120438	Lepidopleurus cajetanus	Leptochitonidae	long_list		ATLASEA	ATLASEA											
+120438	Lepidopleurus cajetanus	Leptochitonidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 993581	Leptochiton algesirensis	Leptochitonidae	long_list		ATLASEA	ATLASEA											
 211853	Leptochiton asellus	Leptochitonidae	long_list		ATLASEA	ATLASEA											
 993583	Leptochiton cancellatus	Leptochitonidae	long_list		ATLASEA	ATLASEA											
@@ -5238,7 +5238,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 77189	Poecillastra compressa	Vulcanellidae	long_list		ATLASEA	ATLASEA											
 1006843	Vulcanella gracilis	Vulcanellidae	long_list		ATLASEA	ATLASEA											
 289389	Aplysina aerophoba	Aplysinidae	long_list		ATLASEA	ATLASEA											
-121477	Aplysina cavernicola	Aplysinidae	long_list	sample_acquired	ATLASEA	ATLASEA			ATLASEA	ATLASEA							
+121477	Aplysina cavernicola	Aplysinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 717910	Hexadella dedritifera	Ianthellidae	long_list		ATLASEA	ATLASEA											
 252954	Hexadella pruvoti	Ianthellidae	long_list		ATLASEA	ATLASEA											
 717911	Hexadella racovitzai	Ianthellidae	long_list		ATLASEA	ATLASEA											
@@ -6069,7 +6069,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 714084	Cutleria adspersa	Cutleriaceae	long_list		ATLASEA	ATLASEA											
 714090	Cutleria chilosa	Cutleriaceae	long_list		ATLASEA	ATLASEA											
 74475	Cutleria multifida	Cutleriaceae	long_list		ATLASEA	ATLASEA											
-217213	Zanardinia typus	Cutleriaceae	long_list		ATLASEA	ATLASEA											
+217213	Zanardinia typus	Cutleriaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 62316	Arthrocladia villosa	Arthrocladiaceae	long_list		ATLASEA	ATLASEA											
 62298	Desmarestia aculeata	Desmarestiaceae	long_list		ATLASEA	ATLASEA											
 99931	Desmarestia dudresnayi	Desmarestiaceae	long_list		ATLASEA	ATLASEA											
@@ -6088,7 +6088,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 659328	Padina antillarum	Dictyotaceae	long_list		ATLASEA	ATLASEA											
 381692	Padina boergesenii	Dictyotaceae	long_list		ATLASEA	ATLASEA											
 531983	Padina boryana	Dictyotaceae	long_list		ATLASEA	ATLASEA											
-531984	Padina pavonica	Dictyotaceae	long_list		ATLASEA	ATLASEA											
+531984	Padina pavonica	Dictyotaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1128076	Padina pavonicoides	Dictyotaceae	long_list		ATLASEA	ATLASEA											
 27954	Taonia atomaria	Dictyotaceae	long_list		ATLASEA	ATLASEA											
 531995	Zonaria tournefortii	Dictyotaceae	long_list		ATLASEA	ATLASEA											
@@ -6359,11 +6359,11 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 589157	Caulerpa chemnitzia	Caulerpaceae	long_list		ATLASEA	ATLASEA											
 219692	Caulerpa cylindracea	Caulerpaceae	long_list		ATLASEA	ATLASEA											
 76314	Caulerpa prolifera	Caulerpaceae	long_list		ATLASEA	ATLASEA											
-76317	Caulerpa racemosa	Caulerpaceae	long_list		ATLASEA	ATLASEA											
+76317	Caulerpa racemosa	Caulerpaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 76313	Caulerpa taxifolia	Caulerpaceae	long_list		ATLASEA	ATLASEA											
 619706	Blastophysa rhizopus	Chaetosiphonaceae	long_list		ATLASEA	ATLASEA											
 414120	Codium adhaerens	Codiaceae	long_list		ATLASEA	ATLASEA											
-414121	Codium bursa	Codiaceae	long_list		ATLASEA	ATLASEA											
+414121	Codium bursa	Codiaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 414124	Codium coralloides	Codiaceae	long_list		ATLASEA	ATLASEA											
 414126	Codium decorticatum	Codiaceae	long_list		ATLASEA	ATLASEA											
 414128	Codium effusum	Codiaceae	long_list		ATLASEA	ATLASEA											
@@ -6376,7 +6376,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 170410	Halimeda cuneata	Halimedaceae	long_list		ATLASEA	ATLASEA											
 170433	Halimeda tuna	Halimedaceae	long_list		ATLASEA	ATLASEA											
 121088	Ostreobium quekettii	Ostreobiaceae	long_list		ATLASEA	ATLASEA											
-189428	Flabellia petiolata	Udoteaceae	long_list		ATLASEA	ATLASEA											
+189428	Flabellia petiolata	Udoteaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 170435	Penicillus capitatus	Udoteaceae	long_list		ATLASEA	ATLASEA											
 575870	Pseudochlorodesmis furcellata	Udoteaceae	long_list		ATLASEA	ATLASEA											
 204408	Anadyomene stellata	Anadyomenaceae	long_list		ATLASEA	ATLASEA											
@@ -6418,7 +6418,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 626742	Okellya curvata	Okellyaceae	long_list		ATLASEA	ATLASEA											
 35857	Cymopolia vanbosseae	Dasycladaceae	long_list		ATLASEA	ATLASEA											
 1818018	Dasycladus vermicularis	Dasycladaceae	long_list		ATLASEA	ATLASEA											
-35845	Acetabularia acetabulum	Polyphysaceae	long_list		ATLASEA	ATLASEA											
+35845	Acetabularia acetabulum	Polyphysaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1799581	Halochlorococcum marinum	Oltmannsiellopsidaceae	long_list		ATLASEA	ATLASEA											
 173495	Neodangemannia microcystis	Oltmannsiellopsidaceae	long_list		ATLASEA	ATLASEA											
 432603	Siphonocladus pusillus	Siphonocladaceae	long_list		ATLASEA	ATLASEA											
@@ -6550,7 +6550,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 193173	Gaillona rosea	Callithamniaceae	long_list		ATLASEA	ATLASEA											
 193184	Seirospora interrupta	Callithamniaceae	long_list		ATLASEA	ATLASEA											
 332498	Seirospora viridis	Callithamniaceae	long_list		ATLASEA	ATLASEA											
-42002	Crouania attenuata	Callithamniaceae	long_list		ATLASEA	ATLASEA											
+42002	Crouania attenuata	Callithamniaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1310127	Gulsonia nodulosa	Callithamniaceae	long_list		ATLASEA	ATLASEA											
 756384	Acrothamnion preissii	Ceramiaceae	long_list		ATLASEA	ATLASEA											
 997571	Antithamnion antillanum	Ceramiaceae	long_list		ATLASEA	ATLASEA											
@@ -6611,7 +6611,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 2575615	Erythroglossum lusitanicum	Delesseriaceae	long_list		ATLASEA	ATLASEA											
 35161	Phycodrys rubens	Delesseriaceae	long_list		ATLASEA	ATLASEA											
 136797	Polyneura bonnemaisonii	Delesseriaceae	long_list		ATLASEA	ATLASEA											
-2008650	Alsidium corallinum	Rhodomelaceae	long_list		ATLASEA	ATLASEA											
+2008650	Alsidium corallinum	Rhodomelaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 945030	Digenea simplex	Rhodomelaceae	long_list		ATLASEA	ATLASEA											
 121067	Halopithys incurva	Rhodomelaceae	long_list		ATLASEA	ATLASEA											
 228264	Rytiphlaea tinctoria	Rhodomelaceae	long_list		ATLASEA	ATLASEA											
@@ -6725,12 +6725,12 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 647613	Lithophyllum corallinae	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
 1277932	Lithophyllum dentatum	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
 1747662	Lithophyllum hibernicum	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
-89944	Lithophyllum incrustans	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
+89944	Lithophyllum incrustans	Lithophyllaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 2510017	Lithophyllum lobatum	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
 2496366	Lithophyllum nitorum	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
 1747663	Lithophyllum orbiculatum	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
 747335	Lithophyllum racemus	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
-466607	Lithophyllum stictiforme	Lithophyllaceae	long_list		ATLASEA	ATLASEA											
+466607	Lithophyllum stictiforme	Lithophyllaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1277934	Lithothamnion corallioides	Lithothamniaceae	long_list		ATLASEA	ATLASEA											
 1497737	Lithothamnion minervae	Lithothamniaceae	long_list		ATLASEA	ATLASEA											
 31400	Gelidium attenuatum	Gelidiaceae	long_list		ATLASEA	ATLASEA											
@@ -6844,7 +6844,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 118375	Grateloupia turuturu	Halymeniaceae	long_list	data_generation	ATLASEA	ATLASEA			ATLASEA	ATLASEA	ATLASEA	ATLASEA					
 2780032	Halymenia ballesterosii	Halymeniaceae	long_list		ATLASEA	ATLASEA											
 1925759	Halymenia elongata	Halymeniaceae	long_list		ATLASEA	ATLASEA											
-118377	Halymenia floresii	Halymeniaceae	long_list		ATLASEA	ATLASEA											
+118377	Halymenia floresii	Halymeniaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 2487446	Neofolia rosea	Halymeniaceae	long_list		ATLASEA	ATLASEA											
 2594480	Nesoia latifolia	Halymeniaceae	long_list		ATLASEA	ATLASEA											
 2594481	Nesoia mediterranea	Halymeniaceae	long_list		ATLASEA	ATLASEA											
@@ -6853,7 +6853,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 227973	Choreonema thuretii	Hapalidiaceae	long_list		ATLASEA	ATLASEA											
 1497743	Melobesia membranacea	Hapalidiaceae	long_list		ATLASEA	ATLASEA											
 1503748	Mesophyllum alternans	Hapalidiaceae	long_list		ATLASEA	ATLASEA											
-1503747	Mesophyllum expansum	Hapalidiaceae	long_list		ATLASEA	ATLASEA											
+1503747	Mesophyllum expansum	Hapalidiaceae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 1000564	Mesophyllum lichenoides	Hapalidiaceae	long_list		ATLASEA	ATLASEA											
 348032	Mesophyllum macroblastum	Hapalidiaceae	long_list		ATLASEA	ATLASEA											
 1277936	Mesophyllum sphaericum	Hapalidiaceae	long_list		ATLASEA	ATLASEA											
@@ -7135,7 +7135,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Adyte hyalina	Polynoidae	long_list		ATLASEA	ATLASEA											
 	Austrolaenilla mollis	Polynoidae	long_list		ATLASEA	ATLASEA											
 	Enipo kinbergi	Polynoidae	long_list		ATLASEA	ATLASEA											
-	Harmothoe areolata	Polynoidae	long_list		ATLASEA	ATLASEA											
+	Harmothoe areolata	Polynoidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Harmothoe bellani	Polynoidae	long_list		ATLASEA	ATLASEA											
 	Harmothoe coeliaca	Polynoidae	long_list		ATLASEA	ATLASEA											
 	Harmothoe elisabethae	Polynoidae	long_list		ATLASEA	ATLASEA											
@@ -7150,7 +7150,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Malmgrenia marphysae	Polynoidae	long_list		ATLASEA	ATLASEA											
 	Malmgrenia mcintoshi	Polynoidae	long_list		ATLASEA	ATLASEA											
 	Eusthenelais hibernica	Sigalionidae	long_list		ATLASEA	ATLASEA											
-	Euthalenessa oculata	Sigalionidae	long_list		ATLASEA	ATLASEA											
+	Euthalenessa oculata	Sigalionidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Fimbriosthenelais minor	Sigalionidae	long_list		ATLASEA	ATLASEA											
 	Sigalion squamosus	Sigalionidae	long_list		ATLASEA	ATLASEA											
 	Sphaerodoridium claparedii	Sphaerodoridae	long_list		ATLASEA	ATLASEA											
@@ -8634,7 +8634,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Micropora normani	Microporidae	long_list		ATLASEA	ATLASEA											
 	Pacificincola perforata	Pacificincolidae	long_list		ATLASEA	ATLASEA											
 	Reteporella couchii	Phidoloporidae	long_list		ATLASEA	ATLASEA											
-	Reteporella grimaldii	Phidoloporidae	long_list		ATLASEA	ATLASEA											
+	Reteporella grimaldii	Phidoloporidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Rhynchozoon bispinosum	Phidoloporidae	long_list		ATLASEA	ATLASEA											
 	Schizotheca divisa	Phidoloporidae	long_list		ATLASEA	ATLASEA											
 	Schizotheca fissa	Phidoloporidae	long_list		ATLASEA	ATLASEA											
@@ -8659,6 +8659,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Watersipora cucullata	Watersiporidae	long_list		ATLASEA	ATLASEA											
 	Alcyonidium albidum	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
 	Alcyonidium parasiticum	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
+	Alcyonidium polyoum	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
 	Bockiella angusta	Alcyonidiidae	long_list		ATLASEA	ATLASEA											
 	Arachnidium fibrosum	Arachnidiidae	long_list		ATLASEA	ATLASEA											
 	Buskia nitens	Buskiidae	long_list		ATLASEA	ATLASEA											
@@ -8744,7 +8745,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Actinia prasina	Actiniidae	long_list		ATLASEA	ATLASEA											
 	Paranemonia cinerea	Actiniidae	long_list		ATLASEA	ATLASEA											
 	Andresia partenopea	Andresiidae	long_list		ATLASEA	ATLASEA											
-	Bunodeopsis strumosa	Boloceroididae	long_list		ATLASEA	ATLASEA											
+	Bunodeopsis strumosa	Boloceroididae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Capnea sanguinea	Capneidae	long_list		ATLASEA	ATLASEA											
 	Edwardsia beautempsii	Edwardsiidae	long_list		ATLASEA	ATLASEA											
 	Edwardsia claparedii	Edwardsiidae	long_list		ATLASEA	ATLASEA											
@@ -8752,6 +8753,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Amphianthus dohrnii	Hormathiidae	long_list		ATLASEA	ATLASEA											
 	Hormathia coronata	Hormathiidae	long_list		ATLASEA	ATLASEA											
 	Telmatactis forskalii	Isophelliidae	long_list		ATLASEA	ATLASEA											
+	Cylista elegans	Sagartiidae	long_list		ATLASEA	ATLASEA											
 	Placogorgia graciosa	Plexauridae	long_list		ATLASEA	ATLASEA											
 	Placogorgia massiliensis	Plexauridae	long_list		ATLASEA	ATLASEA											
 	Swiftia dubia	Plexauridae	long_list		ATLASEA	ATLASEA											
@@ -8761,7 +8763,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Anomocora fecunda	Caryophylliidae	long_list		ATLASEA	ATLASEA											
 	Caryophyllia abyssorum	Caryophylliidae	long_list		ATLASEA	ATLASEA											
 	Caryophyllia cyathus	Caryophylliidae	long_list		ATLASEA	ATLASEA											
-	Caryophyllia seguenzae	Caryophylliidae	long_list		ATLASEA	ATLASEA											
+	Caryophyllia seguenzae	Caryophylliidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Premocyathus cornuformis	Caryophylliidae	long_list		ATLASEA	ATLASEA											
 	Stephanocyathus crassus	Caryophylliidae	long_list		ATLASEA	ATLASEA											
 	Stephanocyathus nobilis	Caryophylliidae	long_list		ATLASEA	ATLASEA											
@@ -8815,10 +8817,10 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Plutonaster bifrons	Astropectinidae	long_list		ATLASEA	ATLASEA											
 	Styracaster horridus	Porcellanasteridae	long_list		ATLASEA	ATLASEA											
 	Henricia pertusa	Echinasteridae	long_list		ATLASEA	ATLASEA											
-	Asterina gibbosa	Asterinidae	long_list		ATLASEA	ATLASEA											
+	Asterina gibbosa	Asterinidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Ceramaster granularis	Goniasteridae	long_list		ATLASEA	ATLASEA											
 	Korethraster hispidus	Korethrasteridae	long_list		ATLASEA	ATLASEA											
-	Leptometra phalangium	Antedonidae	long_list		ATLASEA	ATLASEA											
+	Leptometra phalangium	Antedonidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Pentametrocrinus atlanticus	Pentametrocrinidae	long_list		ATLASEA	ATLASEA											
 	Histocidaris purpurata	Histocidaridae	long_list		ATLASEA	ATLASEA											
 	Pourtalesia jeffreysi	Pourtalesiidae	long_list		ATLASEA	ATLASEA											
@@ -8907,7 +8909,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Turbanella plana	Turbanellidae	long_list		ATLASEA	ATLASEA											
 	Gnathostomaria lutheri	Gnathostomariidae	long_list		ATLASEA	ATLASEA											
 	Glossobalanus sarniensis	Ptychoderidae	long_list		ATLASEA	ATLASEA											
-	Glandiceps talaboti	Spengelidae	long_list		ATLASEA	ATLASEA											
+	Glandiceps talaboti	Spengelidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Echinoderes kristenseni	Echinoderidae	long_list		ATLASEA	ATLASEA											
 	Panomya norvegica	Hiatellidae	long_list		ATLASEA	ATLASEA											
 	Acar clathrata	Arcidae	long_list		ATLASEA	ATLASEA											
@@ -8918,7 +8920,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Limopsis aurita	Limopsidae	long_list		ATLASEA	ATLASEA											
 	Limopsis minuta	Limopsidae	long_list		ATLASEA	ATLASEA											
 	Acanthocardia spinosa	Cardiidae	long_list		ATLASEA	ATLASEA											
-	Donax semistriatus	Donacidae	long_list		ATLASEA	ATLASEA											
+	Donax semistriatus	Donacidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Abra profundorum	Semelidae	long_list		ATLASEA	ATLASEA											
 	Abra segmentum	Semelidae	long_list		ATLASEA	ATLASEA											
 	Ervilia castanea	Semelidae	long_list		ATLASEA	ATLASEA											
@@ -9156,7 +9158,7 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Murexsul aradasii	Muricidae	long_list		ATLASEA	ATLASEA											
 	Boreotrophon dabneyi	Muricidae	long_list		ATLASEA	ATLASEA											
 	Tritia lima	Nassariidae	long_list		ATLASEA	ATLASEA											
-	Tritia nitida	Nassariidae	long_list		ATLASEA	ATLASEA											
+	Tritia nitida	Nassariidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Aplus dorbignyi	Pisaniidae	long_list		ATLASEA	ATLASEA											
 	Enginella leucozona	Pisaniidae	long_list		ATLASEA	ATLASEA											
 	Azorilla lottae	Raphitomidae	long_list		ATLASEA	ATLASEA											
@@ -9307,8 +9309,8 @@ ncbi_taxon_id	species	family	target_list_status	sequencing_status	project	long_l
 	Monophorus perversus	Triphoridae	long_list		ATLASEA	ATLASEA											
 	Similiphora similior	Triphoridae	long_list		ATLASEA	ATLASEA											
 	Strobiligera brychia	Triphoridae	long_list		ATLASEA	ATLASEA											
-	Turritella turbona	Turritellidae	long_list		ATLASEA	ATLASEA											
-	Rhyssoplax olivacea	Chitonidae	long_list		ATLASEA	ATLASEA											
+	Turritella turbona	Turritellidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
+	Rhyssoplax olivacea	Chitonidae	long_list	sample_collected	ATLASEA	ATLASEA			ATLASEA								
 	Stenosemus exaratus	Ischnochitonidae	long_list		ATLASEA	ATLASEA											
 	Leptochiton gascognensis	Leptochitonidae	long_list		ATLASEA	ATLASEA											
 	Leptochiton leloupi	Leptochitonidae	long_list		ATLASEA	ATLASEA											
