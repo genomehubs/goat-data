@@ -36,7 +36,7 @@ jobs:
           CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets"
           FALLBACK=s3://goat/resources/datasets
           LOCAL=./resources
-          ./scripts/fetch-or-fallback.sh
+          ./scripts/update-resources/fetch-or-fallback.sh
 
   update-ncbi-datasets-zip:
     needs:
