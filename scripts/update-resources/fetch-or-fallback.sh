@@ -31,9 +31,11 @@ else
 fi
 cd -
 echo MOVE $filename to $LOCAL
-mv $tmpdir/$filename $LOCAL/$filename ||
-echo FAILED &&
-exit 1
+mv $tmpdir/$filename $LOCAL/$filename
+if [[ ! -f $LOCAL/$filename ]]; then 
+  echo FAILED &&
+  exit 1
+fi
 echo DEL $tmpdir
 rm -rf $tmpdir ||
 echo FAILED
