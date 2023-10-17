@@ -1,4 +1,4 @@
-name: new_release
+name: s3_release
 on:
   workflow_dispatch:
   push:
@@ -45,6 +45,6 @@ jobs:
     strategy:
       matrix:
         taxroot: ${{ fromJSON(needs.set_taxroot.outputs.taxroot) }}
-    uses: ./.github/workflows/components/update_ncbi_datasets.yml
+    uses: ./.github/workflows/_update_ncbi_datasets.yml
     with:
       taxroot: ${{ matrix.taxroot }}
