@@ -12,6 +12,7 @@ if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$LOCAL" ]]; then
 fi
 
 mkdir -p $LOCAL
+ls
 filename=$(basename $FALLBACK)
 
 tmpdir=$(mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir')
