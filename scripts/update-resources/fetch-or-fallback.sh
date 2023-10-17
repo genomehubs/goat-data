@@ -1,9 +1,9 @@
 #!/bin/bash
 
 usage='
-    CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets"
-    FALLBACK=s3://goat/resources/datasets
-    LOCAL=./resources
+    CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
+    FALLBACK=s3://goat/resources/datasets \
+    LOCAL=./resources \
     '$0
 
 if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$LOCAL" ]]; then

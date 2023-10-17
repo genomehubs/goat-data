@@ -33,9 +33,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch NCBI datasets executable
         run: |
-          echo CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" >> GITHUB_ENV
-          echo FALLBACK=s3://goat/resources/datasets >> GITHUB_ENV
-          echo LOCAL=./resources >> GITHUB_ENV
+          CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
+          FALLBACK=s3://goat/resources/datasets \
+          LOCAL=./resources \
           ./scripts/update-resources/fetch-or-fallback.sh
 
   update-ncbi-datasets-zip:
