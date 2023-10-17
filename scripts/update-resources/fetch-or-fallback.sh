@@ -12,7 +12,6 @@ if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$LOCAL" ]]; then
 fi
 
 mkdir -p $LOCAL
-ls
 filename=$(basename $FALLBACK)
 
 tmpdir=$(mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir')
@@ -32,6 +31,8 @@ else
 fi
 cd -
 echo MOVE $filename to $LOCAL
+echo $tmpdir/$filename $LOCAL/$filename
+ls $tmpdir
 mv $tmpdir/$filename $LOCAL/$filename ||
   echo FAILED &&
   exit 1
