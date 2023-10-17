@@ -1,0 +1,50 @@
+name: new_release
+on:
+  workflow_dispatch:
+  push:
+  # schedule:
+  #   - cron: "5 0 * * 1,2,3,4,5,6" # At 00:05 every MTWTFS
+env:
+  DOCKERVERSION: latest
+  TAXROOT: '["9612"]'
+
+jobs:
+  get-dockers:
+    runs-on: ubuntu-latest
+    # runs-on: [self-hosted, runner1]
+    steps:
+      - name: Get dockers
+        run: |
+          exit 0
+          # docker pull genomehubs/genomehubs:$DOCKERVERSION
+          # docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+
+  set-taxroot:
+    runs-on: ubuntu-latest
+    outputs:
+      taxroot: ${{ steps.taxroot-matrix.outputs.taxroot }}
+    steps:
+      - id: taxroot-matrix
+        run: echo "matrix=${TAXROOT}" >> $GITHUB_OUTPUT
+
+  fetch-ncbi-datasets:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch NCBI datasets executable
+        run: |
+          CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets"
+          FALLBACK=s3://goat/resources/datasets
+          LOCAL=./resources
+          ./scripts/fetch-or-fallback.sh
+
+  update-ncbi-datasets-zip:
+    needs:
+      - set-taxroot
+      - fetch-ncbi-datasets
+    strategy:
+      matrix:
+        taxroot: ${{ fromJSON(needs.set_taxroot.outputs.taxroot) }}
+    uses: ./.github/workflows/components/update_ncbi_datasets.yml
+    with:
+      taxroot: ${{ matrix.taxroot }}

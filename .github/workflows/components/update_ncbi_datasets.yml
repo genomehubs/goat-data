@@ -1,0 +1,19 @@
+name: update-ncbi-datasets
+on:
+  workflow_call:
+    inputs:
+      taxroot:
+        required: true
+        type: string
+
+jobs:
+  fetch-ncbi-datasets-zip:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch NCBI TAXROOT datasets zip
+        run: |
+          CMD="datasets download genome taxon ${{ inputs.taxroot }} --no-progressbar --dehydrated --filename ${{ inputs.taxroot }}.zip"
+          FALLBACK="s3://goat/resources/${{ inputs.taxroot }}.zip"
+          LOCAL=./resources
+          ./scripts/fetch-or-fallback.sh
