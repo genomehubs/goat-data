@@ -22,7 +22,7 @@ jobs:
   set-taxroot:
     runs-on: ubuntu-latest
     outputs:
-      taxroot: ${{ steps.set_taxroot.outputs.taxroot }}
+      taxroot: ${{ steps.set-taxroot.outputs.taxroot }}
     steps:
       - id: taxroot-matrix
         run: echo "matrix=${TAXROOT}" >> $GITHUB_OUTPUT
