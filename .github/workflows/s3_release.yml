@@ -35,4 +35,4 @@ jobs:
       - fetch-ncbi-datasets
     uses: ./.github/workflows/_update_ncbi_datasets.yml
     with:
-      taxroot: $TAXROOT
+      taxroot: ${{ env.TAXROOT }}
