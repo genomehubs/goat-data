@@ -53,7 +53,7 @@ jobs:
     strategy:
       matrix:
         taxroot: ${{ fromJSON(needs.set-taxroot.outputs.taxroot) }}
-    uses: .github/workflows/_update_ncbi_datasets.yml
+    uses: ./.github/workflows/_update_ncbi_datasets.yml
     with:
       taxroot: ${{ matrix.taxroot }}
       local: ${{ needs.set-taxroot.outputs.resources }}
