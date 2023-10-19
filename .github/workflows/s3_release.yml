@@ -19,6 +19,14 @@ jobs:
           # docker pull genomehubs/genomehubs:$DOCKERVERSION
           # docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
+  set-taxroot:
+    runs-on: ubuntu-latest
+    outputs:
+      taxroot: ${{ steps.set-taxroot.outputs.taxroot }}
+    steps:
+      - id: taxroot-matrix
+        run: echo "matrix=$TAXROOT" >> $GITHUB_OUTPUT
+
   fetch-ncbi-datasets:
     runs-on: [self-hosted, runner1]
     steps:
@@ -32,7 +40,11 @@ jobs:
 
   update-ncbi-datasets-zip:
     needs:
+      - set-taxroot
       - fetch-ncbi-datasets
+    strategy:
+      matrix:
+        taxroot: ${{ fromJSON(needs.set-taxroot.outputs.taxroot) }}
     uses: ./.github/workflows/_update_ncbi_datasets.yml
     with:
-      taxroot: ${{ env.TAXROOT }}
+      taxroot: ${{ matrix.taxroot }}
