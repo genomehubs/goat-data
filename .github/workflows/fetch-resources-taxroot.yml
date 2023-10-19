@@ -28,13 +28,25 @@ jobs:
           RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
 
-  fetch-ncbi-datasets-zip:
+  fetch-ena-taxonomy-extra:
     runs-on: [self-hosted, runner1]
     steps:
       - uses: actions/checkout@v3
-      - name: Fetch NCBI TAXROOT datasets zip
+      - name: Fetch ENA taxonomy extra
         run: |
-          CMD="chmod 755 ${{ inputs.resources }}/datasets && ${{ inputs.resources }}/datasets download genome taxon ${{ inputs.taxroot }} --no-progressbar --dehydrated --filename ${{ inputs.taxroot }}.zip" \
-          FALLBACK="s3://goat/resources/${{ inputs.taxroot }}.zip" \
+          CMD="cp sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ./; \
+              ./scripts/get_ena_taxonomy_extra.bash ${{ inputs.taxroot }}" \
+          FALLBACK="s3://goat/resources/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
           RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
+
+  # fetch-ncbi-datasets-zip:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch NCBI TAXROOT datasets zip
+  #       run: |
+  #         CMD="chmod 755 ${{ inputs.resources }}/datasets && ${{ inputs.resources }}/datasets download genome taxon ${{ inputs.taxroot }} --no-progressbar --dehydrated --filename ${{ inputs.taxroot }}.zip" \
+  #         FALLBACK="s3://goat/resources/${{ inputs.taxroot }}.zip" \
+  #         RESOURCES=${{ inputs.resources }} \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
