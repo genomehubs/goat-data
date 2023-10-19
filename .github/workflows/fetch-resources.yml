@@ -41,8 +41,9 @@ jobs:
         taxroot: ${{ fromJson(inputs.taxroot) }}
     uses: ./.github/workflows/fetch-resources-taxroot.yml
     with:
-      taxroot: ${{ matrix.taxroot }}
+      dockerversion: ${{ inputs.dockerversion }}
       resources: ${{ inputs.resources }}
+      taxroot: ${{ matrix.taxroot }}
 
   fetch-ncbi-taxdump:
     runs-on: [self-hosted, runner1]

@@ -19,12 +19,15 @@ mkdir -p $RESOURCES
 
 tmpdir=$(mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir')
 
+cd $tmpdir
+echo "RUN $CMD"
+eval "$CMD"
+status=$?
+cd -
+
 for url in ${FALLBACK//,/$IFS}; do
   filename=$(basename $url)
-  cd $tmpdir
-  echo "RUN $CMD"
-  eval "$CMD"
-  if [ $? == 0 ]; then
+  if [ $status == 0 ]; then
     echo UPLOAD $filename to s3
     s3cmd put setacl --acl-public $filename $url ||
     echo FAILED

@@ -2,6 +2,9 @@ name: fetch-resources-taxroot
 on:
   workflow_call:
     inputs:
+      dockerversion:
+        required: true
+        type: string
       resources:
         required: true
         type: string
@@ -17,8 +20,8 @@ jobs:
       - name: Fetch BlobToolKit
         run: |
           CMD="docker run --rm --network=host \
-          -v `pwd`:/genomehubs/tmp \
-          genomehubs/genomehubs:$DOCKERVERSION bash -c \
+          -v \$(pwd):/genomehubs/tmp \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"genomehubs parse \
               --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.tsv.gz\"" \
           FALLBACK=s3://goat/resources/btk.tsv.gz \
