@@ -10,65 +10,28 @@ env:
   RESOURCES: /home/ubuntu/resources
 
 jobs:
-  get-dockers:
-    runs-on: ubuntu-latest
-    # runs-on: [self-hosted, runner1]
-    steps:
-      - name: Get dockers
-        run: |
-          exit 0
-          # docker pull genomehubs/genomehubs:$DOCKERVERSION
-          # docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
-
-  set-taxroot:
+  set-variables:
     runs-on: ubuntu-latest
     outputs:
-      taxroot: ${{ steps.taxroot-matrix.outputs.taxroot }}
-      resources: ${{ steps.resources-directory.outputs.resources }}
+      dockerversion: ${{ steps.dockerversion.outputs.dockerversion }}
+      resources: ${{ steps.resources.outputs.resources }}
+      taxroot: ${{ steps.taxroot.outputs.taxroot }}
     steps:
-      - id: taxroot-matrix
+      - id: dockerversion
+        run: |
+          echo "dockerversion=$DOCKERVERSION" >> $GITHUB_OUTPUT
+      - id: resources
+        run: |
+          echo "resources=$RESOURCES" >> $GITHUB_OUTPUT
+      - id: taxroot
         run: |
           echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
-      - id: resources-directory
-        run: |
-          echo "resources=$RESOURCES"
-          echo "resources=$RESOURCES" >> $GITHUB_OUTPUT
 
-  fetch-ncbi-taxdump:
-    runs-on: [self-hosted, runner1]
+  fetch-resources:
     needs:
-      - set-taxroot
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch NCBI taxdump
-        run: |
-          CMD="curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
-          | tar xzf - nodes.dmp names.dmp" \
-          FALLBACK=s3://goat/resources/new_taxdump/ncbi/nodes.dmp,s3://goat/resources/new_taxdump/ncbi/names.dmp \
-          RESOURCES=${{ needs.set-taxroot.outputs.resources }}/new_taxdump/ncbi \
-          ./scripts/update-resources/fetch-or-fallback.sh
-
-  fetch-ncbi-datasets:
-    runs-on: [self-hosted, runner1]
-    needs:
-      - set-taxroot
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch NCBI datasets executable
-        run: |
-          CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
-          FALLBACK=s3://goat/resources/datasets \
-          RESOURCES=${{ needs.set-taxroot.outputs.resources }} \
-          ./scripts/update-resources/fetch-or-fallback.sh
-
-  update-ncbi-datasets-zip:
-    needs:
-      - set-taxroot
-      - fetch-ncbi-datasets
-    strategy:
-      matrix:
-        taxroot: ${{ fromJSON(needs.set-taxroot.outputs.taxroot) }}
-    uses: ./.github/workflows/_update_ncbi_datasets.yml
+      - set-variables
+    uses: ./.github/workflows/fetch-resources.yml
     with:
-      taxroot: ${{ matrix.taxroot }}
-      resources: ${{ needs.set-taxroot.outputs.resources }}
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      resources: ${{ needs.set-variables.outputs.resources }}
+      taxroot: ${{ needs.set-variables.outputs.taxroot }}

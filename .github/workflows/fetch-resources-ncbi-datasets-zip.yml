@@ -1,11 +1,11 @@
-name: update-ncbi-datasets
+name: fetch-resources-ncbi-datasets-zip
 on:
   workflow_call:
     inputs:
-      taxroot:
+      resources:
         required: true
         type: string
-      resources:
+      taxroot:
         required: true
         type: string
 
