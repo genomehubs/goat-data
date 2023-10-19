@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch NCBI TAXROOT datasets zip
         run: |
-          CMD="chmod 755 ${{ inputs.local }}/datasets && ${{ inputs.local }}/datasets download genome taxon ${{ inputs.taxroot }} --no-progressbar --dehydrated --filename ${{ inputs.taxroot }}.zip" \
+          CMD="chmod 755 ${{ inputs.resources }}/datasets && ${{ inputs.resources }}/datasets download genome taxon ${{ inputs.taxroot }} --no-progressbar --dehydrated --filename ${{ inputs.taxroot }}.zip" \
           FALLBACK="s3://goat/resources/${{ inputs.taxroot }}.zip" \
-          RESOURCES=${{ inputs.local }} \
+          RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
