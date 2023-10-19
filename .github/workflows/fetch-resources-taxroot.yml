@@ -1,4 +1,4 @@
-name: fetch-resources-ncbi-datasets-zip
+name: fetch-resources-taxroot
 on:
   workflow_call:
     inputs:
@@ -10,6 +10,21 @@ on:
         type: string
 
 jobs:
+  fetch-blobtoolkit:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch NCBI taxdump
+        run: |
+          CMD="docker run --rm --network=host \
+          -v `pwd`:/genomehubs/tmp \
+          genomehubs/genomehubs:$DOCKERVERSION bash -c \
+            "genomehubs parse \
+              --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.tsv.gz" \
+          FALLBACK=s3://goat/resources/btk.tsv.gz \
+          RESOURCES=${{ inputs.resources }} \
+          ./scripts/update-resources/fetch-or-fallback.sh
+
   fetch-ncbi-datasets-zip:
     runs-on: [self-hosted, runner1]
     steps:

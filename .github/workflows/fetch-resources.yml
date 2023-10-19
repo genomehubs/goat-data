@@ -13,13 +13,36 @@ on:
         type: string
 
 jobs:
-  get-dockers:
+  fetch-dockers:
     runs-on: [self-hosted, runner1]
     steps:
       - name: Get dockers
         run: |
           docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+
+  fetch-ncbi-datasets:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch NCBI datasets executable
+        run: |
+          CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
+          FALLBACK=s3://goat/resources/datasets \
+          RESOURCES=${{ inputs.resources }} \
+          ./scripts/update-resources/fetch-or-fallback.sh
+
+  fetch-resources-taxroot:
+    needs:
+      - fetch-dockers
+      - fetch-ncbi-datasets
+    strategy:
+      matrix:
+        taxroot: ${{ fromJson(inputs.taxroot) }}
+    uses: ./.github/workflows/fetch-resources-taxroot.yml
+    with:
+      taxroot: ${{ matrix.taxroot }}
+      resources: ${{ inputs.resources }}
 
   fetch-ncbi-taxdump:
     runs-on: [self-hosted, runner1]
@@ -44,25 +67,3 @@ jobs:
           FALLBACK=s3://goat/resources/tolids.tsv.gz \
           RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
-
-  fetch-ncbi-datasets:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch NCBI datasets executable
-        run: |
-          CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
-          FALLBACK=s3://goat/resources/datasets \
-          RESOURCES=${{ inputs.resources }} \
-          ./scripts/update-resources/fetch-or-fallback.sh
-
-  update-ncbi-datasets-zip:
-    needs:
-      - fetch-ncbi-datasets
-    strategy:
-      matrix:
-        taxroot: ${{ fromJson(inputs.taxroot) }}
-    uses: ./.github/workflows/fetch-resources-ncbi-datasets-zip.yml
-    with:
-      taxroot: ${{ matrix.taxroot }}
-      resources: ${{ inputs.resources }}
