@@ -5,8 +5,7 @@ on:
       taxroot:
         required: true
         type: string
-    resources:
-      taxroot:
+      resources:
         required: true
         type: string
 
