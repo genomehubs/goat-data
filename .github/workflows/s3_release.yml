@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       taxroot: ${{ steps.taxroot-matrix.outputs.taxroot }}
-      local: ${{ steps.resources-directory.outputs.resources }}
+      resources: ${{ steps.resources-directory.outputs.resources }}
     steps:
       - id: taxroot-matrix
         run: |
@@ -36,13 +36,15 @@ jobs:
 
   fetch-ncbi-datasets:
     runs-on: [self-hosted, runner1]
+    needs:
+      - set-taxroot
     steps:
       - uses: actions/checkout@v3
       - name: Fetch NCBI datasets executable
         run: |
           CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
           FALLBACK=s3://goat/resources/datasets \
-          RESOURCES=$RESOURCES \
+          RESOURCES=${{ needs.set-taxroot.outputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
 
   update-ncbi-datasets-zip:
