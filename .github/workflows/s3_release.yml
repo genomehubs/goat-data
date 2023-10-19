@@ -40,8 +40,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch NCBI taxdump
         run: |
-          CMD=curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
-          | tar xzf - nodes.dmp names.dmp \
+          CMD="curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
+          | tar xzf - nodes.dmp names.dmp" \
           FALLBACK=s3://goat/resources/new_taxdump/ncbi/nodes.dmp,s3://goat/resources/new_taxdump/ncbi/names.dmp \
           RESOURCES=${{ needs.set-taxroot.outputs.resources }}/new_taxdump/ncbi \
           ./scripts/update-resources/fetch-or-fallback.sh
