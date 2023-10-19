@@ -36,6 +36,8 @@ jobs:
 
   fetch-ncbi-taxdump:
     runs-on: [self-hosted, runner1]
+    needs:
+      - set-taxroot
     steps:
       - uses: actions/checkout@v3
       - name: Fetch NCBI taxdump
