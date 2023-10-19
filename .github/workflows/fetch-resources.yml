@@ -57,6 +57,20 @@ jobs:
           RESOURCES=${{ inputs.resources }}/new_taxdump/ncbi \
           ./scripts/update-resources/fetch-or-fallback.sh
 
+  fetch-refseq-organelles:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch Refseq
+        run: |
+          CMD="docker run --rm --network=host \
+          -v \$(pwd):/genomehubs/tmp \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+            \"genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz\"" \
+          FALLBACK=s3://goat/resources/refseq_organelles.tsv.gz \
+          RESOURCES=${{ inputs.resources }} \
+          ./scripts/update-resources/fetch-or-fallback.sh
+
   fetch-tolids:
     runs-on: [self-hosted, runner1]
     steps:
