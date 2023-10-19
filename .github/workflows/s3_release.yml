@@ -7,7 +7,7 @@ on:
 env:
   DOCKERVERSION: latest
   TAXROOT: '["9612"]'
-  LOCAL: /home/ubuntu/resources
+  RESOURCES: /home/ubuntu/resources
 
 jobs:
   get-dockers:
@@ -24,14 +24,14 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       taxroot: ${{ steps.taxroot-matrix.outputs.taxroot }}
-      local: ${{ steps.local-directory.outputs.local }}
+      local: ${{ steps.resources-directory.outputs.resources }}
     steps:
       - id: taxroot-matrix
         run: |
           echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
-      - id: local-directory
+      - id: resources-directory
         run: |
-          echo "local=$LOCAL" >> $GITHUB_OUTPUT
+          echo "resources=$RESOURCES" >> $GITHUB_OUTPUT
 
   fetch-ncbi-datasets:
     runs-on: [self-hosted, runner1]
@@ -43,7 +43,7 @@ jobs:
         run: |
           CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
           FALLBACK=s3://goat/resources/datasets \
-          LOCAL=${{ needs.set-taxroot.outputs.local }} \
+          RESOURCES=${{ needs.set-taxroot.outputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
 
   update-ncbi-datasets-zip:
@@ -53,7 +53,7 @@ jobs:
     strategy:
       matrix:
         taxroot: ${{ fromJSON(needs.set-taxroot.outputs.taxroot) }}
-    uses: ./.github/workflows/_update_ncbi_datasets.yml
+    uses: .github/workflows/_update_ncbi_datasets.yml
     with:
       taxroot: ${{ matrix.taxroot }}
-      local: ${{ needs.set-taxroot.outputs.local }}
+      local: ${{ needs.set-taxroot.outputs.resources }}

@@ -3,10 +3,10 @@
 usage='
     CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
     FALLBACK=s3://goat/resources/datasets \
-    LOCAL=./resources \
+    RESOURCES=./resources \
     '$0
 
-if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$LOCAL" ]]; then
+if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$RESOURCES" ]]; then
     echo "USAGE: $usage"
     exit 1
 fi
@@ -30,9 +30,9 @@ else
   exit 1
 fi
 cd -
-echo MOVE $filename to $LOCAL
-mv $tmpdir/$filename $LOCAL/$filename
-if [[ ! -f $LOCAL/$filename ]]; then 
+echo MOVE $filename to $RESOURCES
+mv $tmpdir/$filename $RESOURCES/$filename
+if [[ ! -f $RESOURCES/$filename ]]; then 
   echo FAILED &&
   exit 1
 fi

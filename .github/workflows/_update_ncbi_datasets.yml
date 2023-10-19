@@ -5,7 +5,7 @@ on:
       taxroot:
         required: true
         type: string
-    local:
+    resources:
       taxroot:
         required: true
         type: string
@@ -19,5 +19,5 @@ jobs:
         run: |
           CMD="chmod 755 ${{ inputs.local }}/datasets && ${{ inputs.local }}/datasets download genome taxon ${{ inputs.taxroot }} --no-progressbar --dehydrated --filename ${{ inputs.taxroot }}.zip" \
           FALLBACK="s3://goat/resources/${{ inputs.taxroot }}.zip" \
-          LOCAL=${{ inputs.local }} \
+          RESOURCES=${{ inputs.local }} \
           ./scripts/update-resources/fetch-or-fallback.sh
