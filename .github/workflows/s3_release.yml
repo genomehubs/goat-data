@@ -42,7 +42,6 @@ jobs:
         run: |
           CMD=curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
           | tar xzf - nodes.dmp names.dmp \
-          CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
           FALLBACK=s3://goat/resources/new_taxdump/ncbi/nodes.dmp,s3://goat/resources/new_taxdump/ncbi/names.dmp \
           RESOURCES=${{ needs.set-taxroot.outputs.resources }}/new_taxdump/ncbi \
           ./scripts/update-resources/fetch-or-fallback.sh
