@@ -14,13 +14,13 @@ jobs:
     runs-on: [self-hosted, runner1]
     steps:
       - uses: actions/checkout@v3
-      - name: Fetch NCBI taxdump
+      - name: Fetch BlobToolKit
         run: |
           CMD="docker run --rm --network=host \
           -v `pwd`:/genomehubs/tmp \
           genomehubs/genomehubs:$DOCKERVERSION bash -c \
-            "genomehubs parse \
-              --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.tsv.gz" \
+            \"genomehubs parse \
+              --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.tsv.gz\""" \
           FALLBACK=s3://goat/resources/btk.tsv.gz \
           RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
