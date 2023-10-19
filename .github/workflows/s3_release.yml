@@ -36,15 +36,13 @@ jobs:
 
   fetch-ncbi-datasets:
     runs-on: [self-hosted, runner1]
-    needs:
-      - set-taxroot
     steps:
       - uses: actions/checkout@v3
       - name: Fetch NCBI datasets executable
         run: |
           CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
           FALLBACK=s3://goat/resources/datasets \
-          RESOURCES=${{ needs.set-taxroot.outputs.resources }} \
+          RESOURCES=$RESOURCES \
           ./scripts/update-resources/fetch-or-fallback.sh
 
   update-ncbi-datasets-zip:
