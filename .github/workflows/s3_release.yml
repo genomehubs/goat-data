@@ -44,7 +44,7 @@ jobs:
       - fetch-ncbi-datasets
     strategy:
       matrix:
-        taxroot: ${{ fromJSON(needs.set_taxroot.outputs.taxroot) }}
+        taxroot: ${{ fromJSON(needs.set-taxroot.outputs.taxroot) }}
     uses: ./.github/workflows/_update_ncbi_datasets.yml
     with:
       taxroot: ${{ matrix.taxroot }}
