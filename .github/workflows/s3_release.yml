@@ -56,4 +56,4 @@ jobs:
     uses: ./.github/workflows/_update_ncbi_datasets.yml
     with:
       taxroot: ${{ matrix.taxroot }}
-      local: ${{ needs.set-taxroot.outputs.resources }}
+      resources: ${{ needs.set-taxroot.outputs.resources }}
