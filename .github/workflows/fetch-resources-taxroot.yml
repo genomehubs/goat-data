@@ -35,7 +35,7 @@ jobs:
       - name: Fetch ENA taxonomy extra
         run: |
           CMD="cp ${{ github.workspace }}/sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ./ || true; \
-          ${{ github.workspace }}/scripts/get_ena_taxonomy_extra.bash ${{ inputs.taxroot }}" \
+          bash ${{ github.workspace }}/scripts/get_ena_taxonomy_extra.bash ${{ inputs.taxroot }}" \
           FALLBACK="s3://goat/resources/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
           RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
