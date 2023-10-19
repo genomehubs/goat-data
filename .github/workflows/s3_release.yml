@@ -22,10 +22,12 @@ jobs:
   set-taxroot:
     runs-on: ubuntu-latest
     outputs:
-      taxroot: ${{ steps.set-taxroot.outputs.taxroot }}
+      taxroot: ${{ steps.taxroot-matrix.outputs.taxroot }}
     steps:
       - id: taxroot-matrix
-        run: echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
+        run: |
+          echo "taxroot=$TAXROOT"
+          echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
 
   fetch-ncbi-datasets:
     runs-on: [self-hosted, runner1]
