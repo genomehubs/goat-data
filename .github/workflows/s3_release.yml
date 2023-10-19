@@ -25,7 +25,7 @@ jobs:
       taxroot: ${{ steps.set-taxroot.outputs.taxroot }}
     steps:
       - id: taxroot-matrix
-        run: echo "matrix=$TAXROOT" >> $GITHUB_OUTPUT
+        run: echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
 
   fetch-ncbi-datasets:
     runs-on: [self-hosted, runner1]
