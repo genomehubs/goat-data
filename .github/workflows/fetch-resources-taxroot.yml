@@ -20,7 +20,7 @@ jobs:
           -v `pwd`:/genomehubs/tmp \
           genomehubs/genomehubs:$DOCKERVERSION bash -c \
             \"genomehubs parse \
-              --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.tsv.gz\""" \
+              --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.tsv.gz\"" \
           FALLBACK=s3://goat/resources/btk.tsv.gz \
           RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
