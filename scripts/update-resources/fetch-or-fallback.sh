@@ -16,30 +16,33 @@ if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$RESOURCES" ]]; then
 fi
 
 mkdir -p $RESOURCES
-filename=$(basename $FALLBACK)
 
 tmpdir=$(mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir')
-cd $tmpdir
-echo "RUN $CMD"
-eval "$CMD"
-if [ $? == 0 ]; then
-  echo UPLOAD $filename to s3
-  s3cmd put setacl --acl-public $filename $FALLBACK ||
-  echo FAILED
-else
-  echo FAILED
-  echo FETCH $filename from $FALLBACK
-  s3cmd get $FALLBACK $filename ||
-  echo FAILED &&
-  exit 1
-fi
-cd -
-echo MOVE $filename to $RESOURCES
-mv $tmpdir/$filename $RESOURCES/$filename
-if [[ ! -f $RESOURCES/$filename ]]; then 
-  echo FAILED &&
-  exit 1
-fi
+
+for url in ${FALLBACK//,/$IFS}; do
+  filename=$(basename $url)
+  cd $tmpdir
+  echo "RUN $CMD"
+  eval "$CMD"
+  if [ $? == 0 ]; then
+    echo UPLOAD $filename to s3
+    s3cmd put setacl --acl-public $filename $url ||
+    echo FAILED
+  else
+    echo FAILED
+    echo FETCH $filename from $url
+    s3cmd get $url $filename ||
+    echo FAILED &&
+    exit 1
+  fi
+  cd -
+  echo MOVE $filename to $RESOURCES
+  mv $tmpdir/$filename $RESOURCES/$filename
+  if [[ ! -f $RESOURCES/$filename ]]; then 
+    echo FAILED &&
+    exit 1
+  fi
+done
 echo DEL $tmpdir
 rm -rf $tmpdir ||
 echo FAILED
