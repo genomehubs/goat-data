@@ -11,7 +11,7 @@ if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$RESOURCES" ]]; then
     exit 1
 fi
 
-mkdir -p $LOCAL
+mkdir -p $RESOURCES
 filename=$(basename $FALLBACK)
 
 tmpdir=$(mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir')
