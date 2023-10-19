@@ -6,6 +6,10 @@ usage='
     RESOURCES=./resources \
     '$0
 
+echo CMD=$CMD
+echo FALLBACK=$FALLBACK
+echo RESOURCES=$RESOURCES
+
 if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$RESOURCES" ]]; then
     echo "USAGE: $usage"
     exit 1
