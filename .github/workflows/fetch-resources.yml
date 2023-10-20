@@ -11,6 +11,9 @@ on:
       taxroot:
         required: true
         type: string
+    secrets:
+      envPAT:
+        required: true
 
 jobs:
   # fetch-dockers:
