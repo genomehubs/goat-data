@@ -25,7 +25,10 @@ eval "$CMD"
 status=$?
 cd -
 
+exitcode=0
+
 for url in ${FALLBACK//,/$IFS}; do
+  cd $tmpdir
   filename=$(basename $url)
   if [ $status == 0 ]; then
     ls -al
@@ -37,21 +40,21 @@ for url in ${FALLBACK//,/$IFS}; do
     echo FAILED
     echo FETCH $filename from $url
     s3cmd get $url $filename ||
-    echo FAILED &&
-    exit 1
+    exitcode=1
   fi
   cd -
   echo MOVE $filename to $RESOURCES
   mv $tmpdir/$filename $RESOURCES/$filename
   if [[ ! -f $RESOURCES/$filename ]]; then 
-    echo FAILED &&
-    exit 1
+    exitcode=1
   fi
 done
 echo DEL $tmpdir
-rm -rf $tmpdir ||
-echo FAILED
-
+rm -rf $tmpdir || exitcode=1
+if [[ $exitcode == 1 ]]; then
+  echo FAILED
+  exit 1
+fi
 
 
 
