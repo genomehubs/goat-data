@@ -102,9 +102,9 @@ jobs:
         run: |
           rm -rf ${{ inputs.resources }}/tmp
           mkdir -p ${{ inputs.resources }}/tmp
-          # python3 ./scripts/api/api_to_tsv.py ${{ inputs.resources }}/tmp ${{ secrets.STS_AUTHORIZATION_KEY }} || exit 0
-          python3 ./scripts/jgi_to_tsv.py ${{ secrets.JGI_OFFLINE_TOKEN }} > ${{ inputs.resources }}/tmp/jgi_1kfg.tsv
-          python3 ./scripts/import_status.py "${{ secrets.ORIGINAL2_5_SCHEMA }}" ${{ inputs.resources }}/tmp
+          python3 ./scripts/api/api_to_tsv.py ${{ inputs.resources }}/tmp ${{ secrets.STS_AUTHORIZATION_KEY }} || exit 0
+          python3 ./scripts/jgi_to_tsv.py ${{ secrets.JGI_OFFLINE_TOKEN }} > ${{ inputs.resources }}/tmp/jgi_1kfg.tsv || exit 0
+          python3 ./scripts/import_status.py "${{ secrets.ORIGINAL2_5_SCHEMA }}" ${{ inputs.resources }}/tmp || exit 0
           ls ${{ inputs.resources }}/tmp
       - name: Move files or fallback
         run: |
