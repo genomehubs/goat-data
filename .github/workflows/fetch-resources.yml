@@ -13,13 +13,13 @@ on:
         type: string
 
 jobs:
-  fetch-dockers:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - name: Get dockers
-        run: |
-          docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
-          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+  # fetch-dockers:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - name: Get dockers
+  #       run: |
+  #         docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
+  #         docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
   # fetch-ncbi-datasets:
   #   runs-on: [self-hosted, runner1]
@@ -32,18 +32,18 @@ jobs:
   #         RESOURCES=${{ inputs.resources }} \
   #         ./scripts/update-resources/fetch-or-fallback.sh
 
-  fetch-resources-taxroot:
-    needs:
-      - fetch-dockers
-      # - fetch-ncbi-datasets
-    strategy:
-      matrix:
-        taxroot: ${{ fromJson(inputs.taxroot) }}
-    uses: ./.github/workflows/fetch-resources-taxroot.yml
-    with:
-      dockerversion: ${{ inputs.dockerversion }}
-      resources: ${{ inputs.resources }}
-      taxroot: ${{ matrix.taxroot }}
+  # fetch-resources-taxroot:
+  #   needs:
+  #     - fetch-dockers
+  #     # - fetch-ncbi-datasets
+  #   strategy:
+  #     matrix:
+  #       taxroot: ${{ fromJson(inputs.taxroot) }}
+  #   uses: ./.github/workflows/fetch-resources-taxroot.yml
+  #   with:
+  #     dockerversion: ${{ inputs.dockerversion }}
+  #     resources: ${{ inputs.resources }}
+  #     taxroot: ${{ matrix.taxroot }}
 
   # fetch-ncbi-taxdump:
   #   runs-on: [self-hosted, runner1]
@@ -82,3 +82,22 @@ jobs:
   #         FALLBACK=s3://goat/resources/tolids.tsv.gz \
   #         RESOURCES=${{ inputs.resources }} \
   #         ./scripts/update-resources/fetch-or-fallback.sh
+
+  fetch-from-apis:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install requests pyyaml pandas numpy
+      - name: Fetch from nhm and vgl and STS APIs
+        run: |
+          rm -rf ${{ inputs.resources }}/tmp
+          mkdir -p ${{ inputs.resources }}/tmp
+          python3 ./scripts/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} ${{ inputs.resources }}/tmp
+      - name: Fetch ToLIDs
+        run: |
+          CMD="mv ${{ inputs.resources }}/tmp/* ${{ inputs.resources }}/tmp/" \
+          FALLBACK=s3://goat/resources/nhm.tsv.gz,s3://goat/resources/sts.tsv.gz,s3://goat/resources/vgp.tsv.gz \
+          RESOURCES=${{ inputs.resources }} \
+          ./scripts/update-resources/fetch-or-fallback.sh

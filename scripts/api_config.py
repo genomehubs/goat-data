@@ -15,7 +15,7 @@ vgl_fieldnames = [
     "taxon_id",
     "vgp_phase",
 ]
-vgl_output_filename = "./sources/status_lists/vgp.tsv"
+vgl_output_filename = "vgp.tsv"
 
 
 def vgl_url_opener(**kwargs):
@@ -53,7 +53,7 @@ nhm_fieldnames = [
     "specificEpithet",
     "year",
 ]
-nhm_output_filename = "./sources/status_lists/nhm.tsv"
+nhm_output_filename = "nhm.tsv"
 nhm_post_data = {
     "size": "1000",
     "resource_ids": ["05ff2255-c38a-40c9-b657-4ccb55ab2feb"],
@@ -113,7 +113,7 @@ def nhm_row_handler(fieldnames, **kwargs):
 #####################################################################
 
 sts_url = "https://sts.tol.sanger.ac.uk/api/v1/species"
-sts_output_filename = "./sources/status_lists/sts.tsv"
+sts_output_filename = "sts.tsv"
 sts_fieldnames = [
     "available_samples_ready",
     "common_name",
