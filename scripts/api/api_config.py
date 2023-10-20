@@ -165,7 +165,6 @@ def sts_url_opener(token):
 
 def sts_api_count_handler(r_text):
     j = json.loads(r_text)
-    print(j)
     return j["data"]["total"]
 
 

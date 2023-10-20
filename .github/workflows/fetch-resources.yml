@@ -12,7 +12,11 @@ on:
         required: true
         type: string
     secrets:
-      envPAT:
+      JGI_OFFLINE_TOKEN:
+        required: true
+      ORIGINAL2_5_SCHEMA:
+        required: true
+      STS_AUTHORIZATION_KEY:
         required: true
 
 jobs:
