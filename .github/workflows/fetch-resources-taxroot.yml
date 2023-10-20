@@ -28,13 +28,26 @@ jobs:
           RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
 
+  fetch-ena-taxonomy-prev:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch ENA taxonomy prev
+        run: |
+          CMD="cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./" \
+          FALLBACK="s3://goat/resources/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
+          RESOURCES=${{ inputs.resources }} \
+          ./scripts/update-resources/fetch-or-fallback.sh || exit 0
+
   fetch-ena-taxonomy-extra:
     runs-on: [self-hosted, runner1]
+    needs:
+      - fetch-ena-taxonomy-prev
     steps:
       - uses: actions/checkout@v3
       - name: Fetch ENA taxonomy extra
         run: |
-          CMD="s3cmd get s3://goat/resources/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz 2>/dev/null && echo OK || : && \
+          CMD="cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./ 2>/dev/null || : && \
           bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash ${{ inputs.taxroot }}" \
           FALLBACK="s3://goat/resources/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
           RESOURCES=${{ inputs.resources }} \
