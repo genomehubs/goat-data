@@ -15,9 +15,17 @@ if [[ -z "$CMD" ]] || [[ -z "$FALLBACK" ]] || [[ -z "$RESOURCES" ]]; then
     exit 1
 fi
 
-mkdir -p $RESOURCES
-
+workdir=$(pwd)
 tmpdir=$(mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir')
+
+function fail {
+    printf '%s\n' "$1" >&2
+    cd $workdir
+    rm -rf $tmpdir
+    exit "${2-1}"
+}
+
+mkdir -p $RESOURCES
 
 cd $tmpdir
 echo "RUN $CMD"
@@ -39,22 +47,14 @@ for url in ${FALLBACK//,/$IFS}; do
   else
     echo FAILED
     echo FETCH $filename from $url
-    s3cmd get $url $filename ||
-    exitcode=1
+    s3cmd get $url $filename || fail FAILED
   fi
   cd -
   echo MOVE $filename to $RESOURCES
   mv $tmpdir/$filename $RESOURCES/$filename
   if [[ ! -f $RESOURCES/$filename ]]; then 
-    exitcode=1
+     fail FAILED
   fi
 done
 echo DEL $tmpdir
-rm -rf $tmpdir || exitcode=1
-if [[ $exitcode == 1 ]]; then
-  echo FAILED
-  exit 1
-fi
-
-
-
+rm -rf $tmpdir || fail FAILED
