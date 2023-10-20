@@ -108,7 +108,7 @@ jobs:
           ls ${{ inputs.resources }}/tmp
       - name: Move files or fallback
         run: |
-          CMD="mv ${{ inputs.resources }}/tmp/* ${{ inputs.resources }}/status/" \
-          FALLBACK=$(ls ${{ inputs.resources }}/tmp/*.tsv* | sed 's/^/s3:\/\/goat\//g;s/\/tmp//g'|paste -sd, -) \
+          CMD="mv ${{ inputs.resources }}/tmp/* ./" \
+          FALLBACK=$(ls ${{ inputs.resources }}/tmp/*.tsv* | sed 's/^/s3:\/\/goat\//g;s/\/tmp/\/status/g'|paste -sd, -) \
           RESOURCES=${{ inputs.resources }}/status \
           ./scripts/update-resources/fetch-or-fallback.sh
