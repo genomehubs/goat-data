@@ -6,6 +6,7 @@ def get_from_source(
     url_opener, count_handler, row_handler, fieldnames, output_filename, token=None
 ):
     r = url_opener(token=token)
+    print(r)
     r_text = r.text
     result_count = count_handler(r_text)
     print(f"count is {result_count}")
