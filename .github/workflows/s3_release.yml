@@ -35,3 +35,7 @@ jobs:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
       resources: ${{ needs.set-variables.outputs.resources }}
       taxroot: ${{ needs.set-variables.outputs.taxroot }}
+    secrets:
+      JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
+      ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
+      STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
