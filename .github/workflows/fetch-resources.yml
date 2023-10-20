@@ -94,7 +94,7 @@ jobs:
         run: |
           rm -rf ${{ inputs.resources }}/tmp
           mkdir -p ${{ inputs.resources }}/tmp
-          python3 ./scripts/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} ${{ inputs.resources }}/tmp
+          python3 ./scripts/api/api_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} ${{ inputs.resources }}/tmp
       - name: Fetch ToLIDs
         run: |
           CMD="mv ${{ inputs.resources }}/tmp/* ${{ inputs.resources }}/tmp/" \
