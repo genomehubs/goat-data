@@ -28,6 +28,8 @@ cd -
 for url in ${FALLBACK//,/$IFS}; do
   filename=$(basename $url)
   if [ $status == 0 ]; then
+    ls -al
+    echo $url
     echo UPLOAD $filename to s3
     s3cmd put setacl --acl-public $filename $url ||
     echo FAILED
