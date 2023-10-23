@@ -20,75 +20,75 @@ on:
         required: true
 
 jobs:
-  # fetch-dockers:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - name: Get dockers
-  #       run: |
-  #         docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
-  #         docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+  fetch-dockers:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Get dockers
+        run: |
+          docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
+          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
-  # fetch-ncbi-datasets:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch NCBI datasets executable
-  #       run: |
-  #         CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
-  #         FALLBACK=s3://goat/resources/datasets \
-  #         RESOURCES=${{ inputs.resources }} \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-ncbi-datasets:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch NCBI datasets executable
+        run: |
+          CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
+          FALLBACK=s3://goat/resources/datasets \
+          RESOURCES=${{ inputs.resources }} \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
-  # fetch-resources-taxroot:
-  #   needs:
-  #     - fetch-dockers
-  #     # - fetch-ncbi-datasets
-  #   strategy:
-  #     matrix:
-  #       taxroot: ${{ fromJson(inputs.taxroot) }}
-  #   uses: ./.github/workflows/fetch-resources-taxroot.yml
-  #   with:
-  #     dockerversion: ${{ inputs.dockerversion }}
-  #     resources: ${{ inputs.resources }}
-  #     taxroot: ${{ matrix.taxroot }}
+  fetch-resources-taxroot:
+    needs:
+      - fetch-dockers
+      # - fetch-ncbi-datasets
+    strategy:
+      matrix:
+        taxroot: ${{ fromJson(inputs.taxroot) }}
+    uses: ./.github/workflows/fetch-resources-taxroot.yml
+    with:
+      dockerversion: ${{ inputs.dockerversion }}
+      resources: ${{ inputs.resources }}
+      taxroot: ${{ matrix.taxroot }}
 
-  # fetch-ncbi-taxdump:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch NCBI taxdump
-  #       run: |
-  #         CMD="curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
-  #         | tar xzf - nodes.dmp names.dmp" \
-  #         FALLBACK=s3://goat/resources/new_taxdump/ncbi/nodes.dmp,s3://goat/resources/new_taxdump/ncbi/names.dmp \
-  #         RESOURCES=${{ inputs.resources }}/new_taxdump/ncbi \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-ncbi-taxdump:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch NCBI taxdump
+        run: |
+          CMD="curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
+          | tar xzf - nodes.dmp names.dmp" \
+          FALLBACK=s3://goat/resources/new_taxdump/ncbi/nodes.dmp,s3://goat/resources/new_taxdump/ncbi/names.dmp \
+          RESOURCES=${{ inputs.resources }}/new_taxdump/ncbi \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
-  # fetch-refseq-organelles:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch RefSeq organelles
-  #       run: |
-  #         CMD="docker run --rm --network=host \
-  #         -v \$(pwd):/genomehubs/tmp \
-  #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-  #           \"genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz\"" \
-  #         FALLBACK=s3://goat/resources/refseq_organelles.tsv.gz \
-  #         RESOURCES=${{ inputs.resources }} \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-refseq-organelles:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch RefSeq organelles
+        run: |
+          CMD="docker run --rm --network=host \
+          -v \$(pwd):/genomehubs/tmp \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+            \"genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz\"" \
+          FALLBACK=s3://goat/resources/assembly-data/refseq_organelles.tsv.gz \
+          RESOURCES=${{ inputs.resources }}/assembly-data \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
-  # fetch-tolids:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch ToLIDs
-  #       run: |
-  #         CMD="curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
-  #         | gzip -c > tolids.tsv.gz" \
-  #         FALLBACK=s3://goat/resources/tolids.tsv.gz \
-  #         RESOURCES=${{ inputs.resources }} \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-tolids:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch ToLIDs
+        run: |
+          CMD="curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
+          | gzip -c > tolids.tsv.gz" \
+          FALLBACK=s3://goat/resources/tolids/tolids.tsv.gz \
+          RESOURCES=${{ inputs.resources }}/tolids \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
   fetch-from-apis:
     runs-on: [self-hosted, runner1]
@@ -99,16 +99,67 @@ jobs:
           python3 -m pip install --upgrade pip
           pip install requests pyyaml pandas numpy
       - name: Fetch from nhm and vgl and STS APIs
+        # Fetches:
+        # - nhm.tsv
+        # - sts.tsv
+        # - vgp.tsv
         run: |
-          rm -rf ${{ inputs.resources }}/tmp
-          mkdir -p ${{ inputs.resources }}/tmp
-          python3 ./scripts/api/api_to_tsv.py ${{ inputs.resources }}/tmp ${{ secrets.STS_AUTHORIZATION_KEY }} || exit 0
-          python3 ./scripts/jgi_to_tsv.py ${{ secrets.JGI_OFFLINE_TOKEN }} > ${{ inputs.resources }}/tmp/jgi_1kfg.tsv || exit 0
-          python3 ./scripts/import_status.py "${{ secrets.ORIGINAL2_5_SCHEMA }}" ${{ inputs.resources }}/tmp || exit 0
-          ls ${{ inputs.resources }}/tmp
-      - name: Move files or fallback
+          rm -rf ${{ inputs.resources }}/status-lists/tmp
+          mkdir -p ${{ inputs.resources }}/status-lists/tmp
+          python3 ./scripts/api/api_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.STS_AUTHORIZATION_KEY }} || exit 0
+      - name: Fetch from JGI
+        # Fetches:
+        # - jgi_1kfg.tsv
         run: |
-          CMD="mv ${{ inputs.resources }}/tmp/* ./" \
-          FALLBACK=$(ls ${{ inputs.resources }}/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/status\//g'|paste -sd, -) \
-          RESOURCES=${{ inputs.resources }}/status \
+          python3 ./scripts/jgi_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.JGI_OFFLINE_TOKEN }} || exit 0
+      - name: Fetch from googlesheets
+        # Fetches:
+        # - ATLASEA_expanded.tsv
+        # - BGE_expanded.tsv
+        # - CBP_expanded.tsv
+        # - EBPN_expanded.tsv
+        # - ERGA-CH_expanded.tsv
+        # - EUROFISH_expanded.tsv
+        # - GREECE-HSP_expanded.tsv
+        # - SOLVENIA-HSP_expanded.tsv
+        # - SPAIN-HSP_expanded.tsv
+        # - YGG_expanded.tsv
+        run: |
+          python3 ./scripts/import_status.py ${{ inputs.resources }}/status-lists/tmp "${{ secrets.ORIGINAL2_5_SCHEMA }}" || exit 0
+      - name: Get from googlesheets (Kew, DTOL Assembly Informatics, Aus Genome Status Bioplatforms)
+        # Fetches:
+        # - cngb.tsv
+        # - DTOL_assembly_informatics_status_kmer_draft.tsv
+        # - DTOL_Plant_Genome_Size_Estimates.tsv
+        run: |
+          rm -rf ${{ inputs.resources }}/assembly-data/tmp
+          mkdir -p ${{ inputs.resources }}/assembly-data/tmp
+          rm -rf ${{ inputs.resources }}/genomesize-karyotype/tmp
+          mkdir -p ${{ inputs.resources }}/genomesize-karyotype/tmp
+          docker pull genomehubs/r-ver:latest
+          docker run --rm --user $UID:$GROUPS \
+            -v $GITHUB_WORKSPACE:/goat-data \
+            -w /goat-data \
+            genomehubs/r-ver:latest \
+            Rscript ./scripts/get_googlesheets.R ${{ inputs.resources }}/genomesize-karyotype/tmp ${{ inputs.resources }}/assembly-data/tmp
+      - name: Move assembly data files or fallback to previous
+        run: |
+          ls ${{ inputs.resources }}/assembly-data/tmp
+          CMD="mv ${{ inputs.resources }}/assembly-data/tmp/* ./" \
+          FALLBACK=$(ls ${{ inputs.resources }}/assembly-data/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/assembly-data\//g;s/\.failed$//g'|paste -sd, -) \
+          RESOURCES=${{ inputs.resources }}/assembly-data \
+          ./scripts/update-resources/fetch-or-fallback.sh
+      - name: Move genomesize/karyotype files or fallback to previous
+        run: |
+          ls ${{ inputs.resources }}/genomesize-karyotype/tmp
+          CMD="mv ${{ inputs.resources }}/genomesize-karyotype/tmp/* ./" \
+          FALLBACK=$(ls ${{ inputs.resources }}/genomesize-karyotype/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/genomesize-karyotype\//g;s/\.failed$//g'|paste -sd, -) \
+          RESOURCES=${{ inputs.resources }}/genomesize-karyotype \
+          ./scripts/update-resources/fetch-or-fallback.sh
+      - name: Move status list files or fallback to previous
+        run: |
+          ls ${{ inputs.resources }}/status-lists/tmp
+          CMD="mv ${{ inputs.resources }}/status-lists/tmp/* ./" \
+          FALLBACK=$(ls ${{ inputs.resources }}/status-lists/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/status-lists\//g;s/\.failed$//g'|paste -sd, -) \
+          RESOURCES=${{ inputs.resources }}/status-lists \
           ./scripts/update-resources/fetch-or-fallback.sh

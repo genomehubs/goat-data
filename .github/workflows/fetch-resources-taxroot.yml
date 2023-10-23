@@ -24,8 +24,8 @@ jobs:
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"genomehubs parse \
               --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.tsv.gz\"" \
-          FALLBACK=s3://goat/resources/btk.tsv.gz \
-          RESOURCES=${{ inputs.resources }} \
+          FALLBACK=s3://goat/resources/btk/btk.tsv.gz \
+          RESOURCES=${{ inputs.resources }}/btk \
           ./scripts/update-resources/fetch-or-fallback.sh
 
   fetch-ena-taxonomy-prev:
@@ -35,8 +35,8 @@ jobs:
       - name: Fetch ENA taxonomy prev
         run: |
           CMD="cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./" \
-          FALLBACK="s3://goat/resources/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
-          RESOURCES=${{ inputs.resources }} \
+          FALLBACK="s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
+          RESOURCES=${{ inputs.resources }}/ena-taxonomy \
           ./scripts/update-resources/fetch-or-fallback.sh || exit 0
 
   fetch-ena-taxonomy-extra:
@@ -49,8 +49,8 @@ jobs:
         run: |
           CMD="cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./ 2>/dev/null || : && \
           bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash ${{ inputs.taxroot }}" \
-          FALLBACK="s3://goat/resources/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
-          RESOURCES=${{ inputs.resources }} \
+          FALLBACK="s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
+          RESOURCES=${{ inputs.resources }}/ena-taxonomy \
           ./scripts/update-resources/fetch-or-fallback.sh
 
   fetch-ncbi-datasets-zip:
@@ -60,6 +60,6 @@ jobs:
       - name: Fetch NCBI TAXROOT datasets zip
         run: |
           CMD="chmod 755 ${{ inputs.resources }}/datasets && ${{ inputs.resources }}/datasets download genome taxon ${{ inputs.taxroot }} --no-progressbar --dehydrated --filename ${{ inputs.taxroot }}.zip" \
-          FALLBACK="s3://goat/resources/${{ inputs.taxroot }}.zip" \
-          RESOURCES=${{ inputs.resources }} \
+          FALLBACK="s3://goat/resources/assembly-data/${{ inputs.taxroot }}.zip" \
+          RESOURCES=${{ inputs.resources }}/assembly-data \
           ./scripts/update-resources/fetch-or-fallback.sh
