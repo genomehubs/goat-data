@@ -4414,6 +4414,7 @@ taxon_id	input	rank
 #gfBolRost	Boletus rostkowii	species
 #gfBolSubq	Boletus subsquamosus	species
 3062607	Bombardioidea bombardioides	species
+3081385	Botryandromyces heteroceri	species
 178477	Botryandromyces ornatus	species
 3035826	Botryobasidium asperulum	species
 #gfBotRubr	Botryobasidium rubrocoronatum	species
@@ -14968,9 +14969,9 @@ taxon_id	input	rank
 #gyIdiPeyr	Idiomyces peyritschii	species
 #gyLabCafi	Laboulbenia cafii	species
 #gyLabCasn	Laboulbenia casnoniae	species
-#gyLabCliv	Laboulbenia clivinalis	species
+3081382	Laboulbenia clivinalis	species
 #gyLabDubi	Laboulbenia dubia	species
-#gyLabFasc	Laboulbenia fasciculata	species
+3081381	Laboulbenia fasciculata	species
 1983711	Laboulbenia flagellata	species
 #gyLabGyri	Laboulbenia gyrinidarum	species
 #gyLabNebr	Laboulbenia nebriae	species
@@ -20562,7 +20563,6 @@ taxon_id	input	rank
 3039479	Chlorops ringens	species
 2881707	Chlorops pumilionis	species
 2881710	Chlorops scalaris	species
-#idChlTrog	Chlorops troglodytes	species
 2881712	Chlorops varsoviensis	species
 2882950	Thaumatomyia hallandica	species
 333801	Thaumatomyia notata	species
@@ -20669,7 +20669,7 @@ taxon_id	input	rank
 #idNeaLati	Neaera laticornis	species
 670663	Triarthria setipennis	species
 1918020	Actia crassicornis	species
-#idEntExol	Entomophaga exoleta	species
+3081881	Entomophaga exoleta	species
 1918021	Actia infantula	species
 1918022	Actia lamia	species
 1918025	Actia pilipennis	species
@@ -20677,7 +20677,7 @@ taxon_id	input	rank
 #idCerMons	Ceromya monstrosicornis	species
 #idEntNigr	Entomophaga nigrohalterata	species
 569015	Ceromya silacea	species
-#idGonVers	Goniocera versicolor	species
+3081864	Goniocera versicolor	species
 1918174	Siphona confusa	species
 1918172	Siphona boreata	species
 1740939	Siphona cristata	species
@@ -27226,6 +27226,8 @@ taxon_id	input	rank
 662014	Modeeria rotunda	species
 #qhModInsi	Modiolicola insignis	species
 620433	Mohnia mohni	species
+#ndMolCuan	Molgolaimus cuanensis	species
+320067	Molgolaimus demani	species
 30278	Molgula bleizi	species
 #kaMolSimp	Molgula simplex	species
 #kaMolSiph	Molgula siphonata	species
@@ -27408,7 +27410,7 @@ taxon_id	input	rank
 187406	Paracalanus parvus	species
 #qhParPygm	Paracalanus pygmaeus	species
 2969437	Paracanthonchus heterodontus	species
-#ndParLong	Paracanthonchus longicaudatus	species
+3082106	Paracanthonchus longicaudatus	species
 #ndParMult	Paracanthonchus multitubifer	species
 #ndParPlat	Paracanthonchus platti	species
 #ndParThau	Paracanthonchus thaumasius	species
@@ -29120,7 +29122,7 @@ taxon_id	input	rank
 #idEllAlbo	Ellipteroides alboscutellatus	species
 #idEllLate	Ellipteroides lateralis	species
 #idEllLimb	Ellipteroides limbatus	species
-#idEloApic	Eloeophila apicata	species
+3081180	Eloeophila apicata	species
 1822578	Eloeophila maculata	species
 2881911	Eloeophila mundata	species
 2881912	Eloeophila submarmorata	species
@@ -44927,7 +44929,7 @@ taxon_id	input	rank
 435408	Arcyria stipata	species
 45827	Arenariomyces trifurcatus	species
 47429	Armillaria mellea	species
-47431	Armillaria tabescens	species
+1929756	Desarmillaria tabescens	species
 #gdArnGeni	Arnaudiella genistae	species
 1536477	Arnium hirtum	species
 #gfArrObat	Arrhenia obatra	species
@@ -53623,7 +53625,7 @@ taxon_id	input	rank
 #gfTypErum	Typhula erumpens	species
 #gfTypThax	Typhula thaxteri	species
 #gkUreSene	Uredo senecionis	species
-#gkUroAcut	Uromyces acutatus	species
+3082108	Uromyces acutatus	species
 #gkUroGiga	Uromyces giganteus	species
 #gdVenTucu	Venturia tucumanensis	species
 644157	Verrucaria anziana	species
@@ -53817,8 +53819,8 @@ taxon_id	input	rank
 #qqAtuCrin	Aturus crinitus	species
 #qqAtuInte	Aturus intermedius	species
 #qqBarAngu	Barbaxonella angulata	species
-#qqCecNudu	Cecidophyes nudus	species
-#qqCecPsil	Cecidophyes psilonotus	species
+3081990	Cecidophyes nudus	species
+3081991	Cecidophyes psilonotus	species
 #qqCecAtri	Cecidophyopsis atrichus	species
 #qqCecRueb	Cecidophyopsis ruebsaameni	species
 #qqEpiCoac	Epitrimerus coactus	species
@@ -62880,7 +62882,7 @@ taxon_id	input	rank
 2498165	Cranogona dalensi	species
 1008864	Ommatoiulus moreleti	species
 3003709	Cylindroiulus pyrenaicus	species
-#qdCylSagi	Cylindroiulus sagittarius	species
+3081778	Cylindroiulus sagittarius	species
 247497	Mucidosphaerium pulchellum	species
 202011	Larinus turbinatus	species
 188558	Ulvella heteroclada	species
