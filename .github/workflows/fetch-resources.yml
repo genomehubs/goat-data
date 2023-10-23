@@ -59,10 +59,10 @@ jobs:
     steps:
       - name: collate-ncbi-datasets-assembly
         run: |
-          zcat ${{ inputs.resources }}/assembly-data/ncbi_datasets_*?.tsv.gz > ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz
+          zcat ${{ inputs.resources }}/assembly-data/ncbi_datasets_*([0-9]).tsv.gz > ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz
           mkdir -p ${{ inputs.resources }}/assembly-data-taxon
           cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ${{ inputs.resources }}/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
-          zcat ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_*_sample.tsv.gz > ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota_sample.tsv.gz
+          zcat ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_*([0-9])_sample.tsv.gz > ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota_sample.tsv.gz
 
   # fetch-ncbi-taxdump:
   #   runs-on: [self-hosted, runner1]
