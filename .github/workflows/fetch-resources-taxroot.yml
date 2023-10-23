@@ -84,6 +84,6 @@ jobs:
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"genomehubs parse --ncbi-datasets-sample assembly-data --outfile tmp/ncbi_datasets_${{ inputs.taxroot }}_sample.tsv.gz\"" \
-          FALLBACK=s3://goat/resources/assembly-data-sample/ncbi_datasets_${{ inputs.taxroot }}.tsv.gz \
+          FALLBACK=s3://goat/resources/assembly-data-sample/ncbi_datasets_${{ inputs.taxroot }}_sample.tsv.gz \
           RESOURCES=${{ inputs.resources }}/assembly-data-sample \
           ./scripts/update-resources/fetch-or-fallback.sh
