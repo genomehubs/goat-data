@@ -64,44 +64,52 @@ jobs:
           mkdir -p ${{ inputs.resources }}/assembly-data-taxon
           cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ${{ inputs.resources }}/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
           zcat ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_*([0-9])_sample.tsv.gz > ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota_sample.tsv.gz
+      - name: collate-ena-taxonomy-extra
+        run: |
+          shopt -s extglob
+          zcat ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.*([0-9]).jsonl.gz > ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.*([0-9]).jsonl.gz
+      - name: collate-btk-metadata
+        run: |
+          shopt -s extglob
+          zcat ${{ inputs.resources }}/btk/btk.*([0-9]).tsv.gz > ${{ inputs.resources }}/btk/btk.tsv.gz
 
-  # fetch-ncbi-taxdump:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch NCBI taxdump
-  #       run: |
-  #         CMD="curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
-  #         | tar xzf - nodes.dmp names.dmp" \
-  #         FALLBACK=s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp \
-  #         RESOURCES=${{ inputs.resources }}/taxdump/ncbi \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-ncbi-taxdump:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch NCBI taxdump
+        run: |
+          CMD="curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
+          | tar xzf - nodes.dmp names.dmp" \
+          FALLBACK=s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp \
+          RESOURCES=${{ inputs.resources }}/taxdump/ncbi \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
-  # fetch-refseq-organelles:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch RefSeq organelles
-  #       run: |
-  #         CMD="docker run --rm --network=host \
-  #         -v \$(pwd):/genomehubs/tmp \
-  #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-  #           \"genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz\"" \
-  #         FALLBACK=s3://goat/resources/assembly-data/refseq_organelles.tsv.gz \
-  #         RESOURCES=${{ inputs.resources }}/assembly-data \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-refseq-organelles:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch RefSeq organelles
+        run: |
+          CMD="docker run --rm --network=host \
+          -v \$(pwd):/genomehubs/tmp \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+            \"genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz\"" \
+          FALLBACK=s3://goat/resources/assembly-data/refseq_organelles.tsv.gz \
+          RESOURCES=${{ inputs.resources }}/assembly-data \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
-  # fetch-tolids:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch ToLIDs
-  #       run: |
-  #         CMD="curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
-  #         | gzip -c > tolids.tsv.gz" \
-  #         FALLBACK=s3://goat/resources/tolids/tolids.tsv.gz \
-  #         RESOURCES=${{ inputs.resources }}/tolids \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-tolids:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch ToLIDs
+        run: |
+          CMD="curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
+          | gzip -c > tolids.tsv.gz" \
+          FALLBACK=s3://goat/resources/tolids/tolids.tsv.gz \
+          RESOURCES=${{ inputs.resources }}/tolids \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
   fetch-from-apis:
     runs-on: [self-hosted, runner1]

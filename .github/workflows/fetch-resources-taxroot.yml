@@ -13,45 +13,45 @@ on:
         type: string
 
 jobs:
-  # fetch-blobtoolkit:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch BlobToolKit
-  #       run: |
-  #         CMD="docker run --rm --network=host \
-  #         -v \$(pwd):/genomehubs/tmp \
-  #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-  #           \"genomehubs parse \
-  #             --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.tsv.gz\"" \
-  #         FALLBACK=s3://goat/resources/btk/btk.tsv.gz \
-  #         RESOURCES=${{ inputs.resources }}/btk \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-blobtoolkit:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch BlobToolKit
+        run: |
+          CMD="docker run --rm --network=host \
+          -v \$(pwd):/genomehubs/tmp \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+            \"genomehubs parse \
+              --btk --btk-root ${{ inputs.taxroot }} --outfile tmp/btk.${{ inputs.taxroot }}.tsv.gz\"" \
+          FALLBACK=s3://goat/resources/btk/btk.${{ inputs.taxroot }}.tsv.gz \
+          RESOURCES=${{ inputs.resources }}/btk \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
-  # fetch-ena-taxonomy-prev:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch ENA taxonomy prev
-  #       run: |
-  #         CMD="cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./" \
-  #         FALLBACK="s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
-  #         RESOURCES=${{ inputs.resources }}/ena-taxonomy \
-  #         ./scripts/update-resources/fetch-or-fallback.sh || exit 0
+  fetch-ena-taxonomy-prev:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch ENA taxonomy prev
+        run: |
+          CMD="cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./" \
+          FALLBACK="s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
+          RESOURCES=${{ inputs.resources }}/ena-taxonomy \
+          ./scripts/update-resources/fetch-or-fallback.sh || exit 0
 
-  # fetch-ena-taxonomy-extra:
-  #   runs-on: [self-hosted, runner1]
-  #   needs:
-  #     - fetch-ena-taxonomy-prev
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch ENA taxonomy extra
-  #       run: |
-  #         CMD="cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./ 2>/dev/null || : && \
-  #         bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash ${{ inputs.taxroot }}" \
-  #         FALLBACK="s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
-  #         RESOURCES=${{ inputs.resources }}/ena-taxonomy \
-  #         ./scripts/update-resources/fetch-or-fallback.sh
+  fetch-ena-taxonomy-extra:
+    runs-on: [self-hosted, runner1]
+    needs:
+      - fetch-ena-taxonomy-prev
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch ENA taxonomy extra
+        run: |
+          CMD="cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./ 2>/dev/null || : && \
+          bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash ${{ inputs.taxroot }}" \
+          FALLBACK="s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz" \
+          RESOURCES=${{ inputs.resources }}/ena-taxonomy \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
   fetch-ncbi-datasets-zip:
     runs-on: [self-hosted, runner1]

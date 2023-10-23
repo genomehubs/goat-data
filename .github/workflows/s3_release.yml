@@ -6,7 +6,7 @@ on:
   #   - cron: "5 0 * * 1,2,3,4,5,6" # At 00:05 every MTWTFS
 env:
   DOCKERVERSION: latest
-  TAXROOT: '["9612"]'
+  TAXROOT: '["2759"]'
   RESOURCES: /home/ubuntu/resources
 
 jobs:
@@ -14,12 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       dockerversion: ${{ steps.dockerversion.outputs.dockerversion }}
+      release: ${{ steps.release.outputs.release }}
       resources: ${{ steps.resources.outputs.resources }}
       taxroot: ${{ steps.taxroot.outputs.taxroot }}
     steps:
       - id: dockerversion
         run: |
           echo "dockerversion=$DOCKERVERSION" >> $GITHUB_OUTPUT
+      - id: release
+        run: |
+          echo "release=$(date +'%Y.%m.%d')-rc1" >> $GITHUB_OUTPUT
       - id: resources
         run: |
           echo "resources=$RESOURCES" >> $GITHUB_OUTPUT
@@ -39,3 +43,13 @@ jobs:
       JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
       ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
       STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
+
+  # init-release:
+  #   needs:
+  #     - set-variables
+  #     # - fetch-resources
+  #   uses: ./.github/workflows/init-release.yml
+  #   with:
+  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+  #     release: ${{ needs.set-variables.outputs.release }}
+  #     resources: ${{ needs.set-variables.outputs.resources }}
