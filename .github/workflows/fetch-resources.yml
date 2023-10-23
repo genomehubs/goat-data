@@ -98,7 +98,7 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip install requests pyyaml pandas numpy
-      - name: Fetch from nhm and vgl and STS APIs
+      - name: Fetch from NHM and VGP and STS APIs
         # Fetches:
         # - nhm.tsv
         # - sts.tsv
@@ -107,13 +107,13 @@ jobs:
           rm -rf ${{ inputs.resources }}/status-lists/tmp
           mkdir -p ${{ inputs.resources }}/status-lists/tmp
           python3 ./scripts/api/api_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.STS_AUTHORIZATION_KEY }} || exit 0
-      - name: process nhm tsv
+      - name: Process NHM tsv
         run: |
           perl -plne '
             s/(.*institutionCode.*)/$1\tsequencing_status\tsample_collected\tsample_collected_by/ and next;
             s/$/\tsample_collected\tDTOL\tNHM/;
           ' ${{ inputs.resources }}/status-lists/tmp/nhm.raw > ${{ inputs.resources }}/status-lists/tmp/nhm.tsv
-      - name: process vgp tsv
+      - name: Process VGP tsv
         run: |
           perl -plne '
             s/(.*taxon_id.*)$/$1\tlong_list\tsample_collected\tsample_acquired\tin_progress\tinsdc_submitted\tinsdc_open\tpublished/;
@@ -126,7 +126,7 @@ jobs:
         # - jgi_1kfg.tsv
         run: |
           python3 ./scripts/jgi_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.JGI_OFFLINE_TOKEN }} || exit 0
-      - name: Fetch from googlesheets
+      - name: Fetch status from googlesheets
         # Fetches:
         # - ATLASEA_expanded.tsv
         # - BGE_expanded.tsv
@@ -140,7 +140,7 @@ jobs:
         # - YGG_expanded.tsv
         run: |
           python3 ./scripts/import_status.py ${{ inputs.resources }}/status-lists/tmp "${{ secrets.ORIGINAL2_5_SCHEMA }}" || exit 0
-      - name: Get from googlesheets (Kew, DTOL Assembly Informatics, Aus Genome Status Bioplatforms)
+      - name: Fetch other from googlesheets
         # Fetches:
         # - cngb.tsv
         # - DTOL_assembly_informatics_status_kmer_draft.tsv
@@ -164,6 +164,7 @@ jobs:
           FALLBACK=$(ls ${{ inputs.resources }}/assembly-data/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/assembly-data\//g;s/\.failed$//g'|paste -sd, -) \
           RESOURCES=${{ inputs.resources }}/assembly-data \
           ./scripts/update-resources/fetch-or-fallback.sh
+          mkdir -p ${{ inputs.resources }}/assembly-data-taxon
           cp ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
       - name: Move genomesize/karyotype files or fallback to previous
         run: |
