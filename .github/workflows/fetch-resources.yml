@@ -139,9 +139,10 @@ jobs:
           docker pull genomehubs/r-ver:latest
           docker run --rm --user $UID:$GROUPS \
             -v $GITHUB_WORKSPACE:/goat-data \
+            -v ${{ inputs.resources }}:/tmp
             -w /goat-data \
             genomehubs/r-ver:latest \
-            Rscript ./scripts/get_googlesheets.R ${{ inputs.resources }}/genomesize-karyotype/tmp ${{ inputs.resources }}/assembly-data/tmp
+            Rscript ./scripts/get_googlesheets.R /tmp/genomesize-karyotype/tmp /tmp/assembly-data/tmp
       - name: Move assembly data files or fallback to previous
         run: |
           ls ${{ inputs.resources }}/assembly-data/tmp
