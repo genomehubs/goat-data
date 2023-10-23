@@ -42,7 +42,7 @@ jobs:
   fetch-resources-taxroot:
     needs:
       - fetch-dockers
-      # - fetch-ncbi-datasets
+      - fetch-ncbi-datasets
     strategy:
       matrix:
         taxroot: ${{ fromJson(inputs.taxroot) }}
@@ -51,6 +51,18 @@ jobs:
       dockerversion: ${{ inputs.dockerversion }}
       resources: ${{ inputs.resources }}
       taxroot: ${{ matrix.taxroot }}
+
+  collate-taxroot-resources:
+    runs-on: [self-hosted, runner1]
+    needs:
+      - fetch-resources-taxroot
+    steps:
+      - name: collate-ncbi-datasets-assembly
+        run: |
+          zcat ${{ inputs.resources }}/assembly-data/ncbi_datasets_*?.tsv.gz > ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz
+          mkdir -p ${{ inputs.resources }}/assembly-data-taxon
+          cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ${{ inputs.resources }}/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
+          zcat ${{ inputs.resources }}/assembly-data/ncbi_datasets_*_sample.tsv.gz > ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota_sample.tsv.gz
 
   # fetch-ncbi-taxdump:
   #   runs-on: [self-hosted, runner1]

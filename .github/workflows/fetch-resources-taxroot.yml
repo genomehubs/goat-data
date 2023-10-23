@@ -67,20 +67,21 @@ jobs:
         run: |
           unzip -o -d ${{ inputs.resources }}/assembly-data ${{ inputs.resources }}/assembly-data/${{ inputs.taxroot }}.zip ncbi_dataset/data/assembly_data_report.jsonl
           ls ${{ inputs.resources }}/assembly-data
-
-      # - name: genomehubs parse --ncbi-datasets-genome
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:$DOCKERVERSION bash -c \
-      #       "genomehubs parse --ncbi-datasets-genome sources/assembly-data --outfile sources/parsed/ncbi_datasets_eukaryota.tsv.gz"
-      #     cp sources/parsed/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data/
-      #     cp sources/parsed/ncbi_datasets_eukaryota.tsv.gz sources/assembly-data-taxon/
-      # - name: genomehubs parse --ncbi-datasets-sample
-      #   run: |
-      #     mkdir -p sources/assembly-data-sample
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:$DOCKERVERSION bash -c \
-      #       "genomehubs parse --ncbi-datasets-sample sources/assembly-data --outfile sources/parsed/ncbi_datasets_eukaryota_sample.tsv.gz"
-      #     cp sources/parsed/ncbi_datasets_eukaryota_sample.tsv.gz sources/assembly-data-sample/
+      - name: Run genomehubs parse --ncbi-datasets-genome
+        run: |
+          CMD="docker run --rm --network=host \
+          -v \$(pwd):/genomehubs/tmp \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+            \"genomehubs parse --ncbi-datasets-genome tmp/assembly-data --outfile tmp/ncbi_datasets_${{ inputs.taxroot }}.tsv.gz\"" \
+          FALLBACK=s3://goat/resources/assembly-data/ncbi_datasets_${{ inputs.taxroot }}.tsv.gz \
+          RESOURCES=${{ inputs.resources }}/assembly-data \
+          ./scripts/update-resources/fetch-or-fallback.sh
+      - name: Run genomehubs parse --ncbi-datasets-sample
+        run: |
+          CMD="docker run --rm --network=host \
+          -v \$(pwd):/genomehubs/tmp \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+            \"genomehubs parse --ncbi-datasets-sample tmp/assembly-data --outfile tmp/ncbi_datasets_${{ inputs.taxroot }}_sample.tsv.gz\"" \
+          FALLBACK=s3://goat/resources/assembly-data-sample/ncbi_datasets_${{ inputs.taxroot }}.tsv.gz \
+          RESOURCES=${{ inputs.resources }}/assembly-data-sample \
+          ./scripts/update-resources/fetch-or-fallback.sh

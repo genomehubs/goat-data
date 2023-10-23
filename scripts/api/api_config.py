@@ -52,7 +52,6 @@ nhm_fieldnames = [
     "genus",
     "specificEpithet",
     "year",
-    "occurrenceStatus",
 ]
 nhm_output_filename = "nhm.raw"
 nhm_post_data = {
