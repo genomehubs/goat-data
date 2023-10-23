@@ -60,8 +60,8 @@ jobs:
         run: |
           CMD="curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
           | tar xzf - nodes.dmp names.dmp" \
-          FALLBACK=s3://goat/resources/new_taxdump/ncbi/nodes.dmp,s3://goat/resources/new_taxdump/ncbi/names.dmp \
-          RESOURCES=${{ inputs.resources }}/new_taxdump/ncbi \
+          FALLBACK=s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp \
+          RESOURCES=${{ inputs.resources }}/taxdump/ncbi \
           ./scripts/update-resources/fetch-or-fallback.sh
 
   fetch-refseq-organelles:
@@ -139,7 +139,7 @@ jobs:
           docker pull genomehubs/r-ver:latest
           docker run --rm --user $UID:$GROUPS \
             -v $GITHUB_WORKSPACE:/goat-data \
-            -v ${{ inputs.resources }}:/tmp
+            -v ${{ inputs.resources }}:/tmp \
             -w /goat-data \
             genomehubs/r-ver:latest \
             Rscript ./scripts/get_googlesheets.R /tmp/genomesize-karyotype/tmp /tmp/assembly-data/tmp
