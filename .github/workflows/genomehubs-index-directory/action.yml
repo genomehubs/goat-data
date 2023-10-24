@@ -37,8 +37,9 @@ runs:
   steps:
     # - id: snapshot index(es)
     #   description: Make a snapshot of the current index in case of need to rollback
-    - id: set DIRNAME variable
-      run: echo DIRNAME=${{ inputs.directory }} >> GITHUB_ENV
+    - id: set-DIRNAME-variable
+      run: |
+        echo DIRNAME=${{ inputs.directory }} >> GITHUB_ENV
       shell: bash
     - id: list-files
       run: |
