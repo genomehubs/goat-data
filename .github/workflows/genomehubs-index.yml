@@ -29,7 +29,7 @@ jobs:
       - name: Check es health
         run: curl -s "es1:9200/_cat/health"
 
-      - name: Index assembly
+      - name: Index assembly-data
         uses: ./.github/workflows/genomehubs-index-directory
         with:
           dockerversion: ${{ inputs.dockerversion }}
@@ -37,3 +37,41 @@ jobs:
           resources: ${{ inputs.resources }}
           directory: assembly-data
           type: assembly
+
+      - name: Index assembly-data-sample
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: assembly-data-sample
+          type: sample
+
+      - name: Index ott3.3
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: ott3.3
+          type: taxon
+
+      - name: Index ToLIDs
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: tolids
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon
+
+      - name: Index genomesize-karyotype
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: genomesize-karyotype
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon

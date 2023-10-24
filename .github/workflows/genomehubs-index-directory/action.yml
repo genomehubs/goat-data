@@ -10,6 +10,10 @@ inputs:
     description: Docker container version
     required: true
     type: string
+  flags:
+    description: Additional flags to pass to genomehubs index
+    default: ""
+    type: string
   release:
     description: GoaT release version
     required: true
@@ -34,4 +38,5 @@ runs:
     - run: |
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
+        echo flags=${{ inputs.flags }}
       shell: bash
