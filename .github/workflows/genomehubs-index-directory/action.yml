@@ -53,7 +53,7 @@ runs:
       continue-on-error: true
       run: |
         echo trying with files from resources
-        ls ${{ inputs.resources }}/${{ inputs.directory }}
+        ./scripts/index-directories
       shell: bash
       env:
         DIRECTORY: ${{ inputs.directory }}
