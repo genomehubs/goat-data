@@ -42,7 +42,7 @@ runs:
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
         echo flags=${{ inputs.flags }}
-        ls sources/${{ inputs.directory }}
+        echo DIRNAME=$([ -d sources/${{ inputs.directory }} ] && ${{ inputs.directory }} || ${{ inputs.directory }//-/_}) >> GITHUB_ENV
       shell: bash
     - id: attempt-1
       continue-on-error: true
@@ -54,5 +54,5 @@ runs:
       if: steps.attempt-1.outcome == 'failure'
       run: |
         echo retrying with files from sources
-        ls sources/${{ inputs.directory }}
+        ls sources/$DIRNAME
       shell: bash
