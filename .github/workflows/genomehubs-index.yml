@@ -30,7 +30,7 @@ jobs:
         run: curl -s "es1:9200/_cat/health"
 
       - name: Index assembly
-        uses: ./.github/workflows/genomehubs-index-directory.yml
+        uses: ./.github/workflows/genomehubs-index-directory
         with:
           dockerversion: ${{ inputs.dockerversion }}
           release: ${{ inputs.release }}

@@ -1,0 +1,37 @@
+name: genomehubs-index-directory
+description: |
+  Index a directory using updated files or fallback to previous version
+inputs:
+  directory:
+    description: Directory containing files to index
+    required: true
+    type: string
+  dockerversion:
+    description: Docker container version
+    required: true
+    type: string
+  release:
+    description: GoaT release version
+    required: true
+    type: string
+  resources:
+    description: Path to local resources
+    required: true
+    type: string
+  type:
+    description: Directory type
+    required: true
+    type: choice
+    choices:
+      - assembly
+      - feature
+      - sample
+      - taxon
+
+runs:
+  using: composite
+  steps:
+    - name: Check es health
+      run: |
+        echo directory=${{ inputs.directory }}
+        echo type=${{ inputs.type }}
