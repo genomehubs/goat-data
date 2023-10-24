@@ -37,26 +37,42 @@ runs:
   steps:
     # - id: snapshot index(es)
     #   description: Make a snapshot of the current index in case of need to rollback
-    - id: set-DIRNAME-variable
-      run: |
-        echo "DIRECTORY=${{ inputs.directory }}" >> $GITHUB_ENV
-      shell: bash
-    - id: list-files
-      run: |
-        echo directory=${{ inputs.directory }}
-        echo type=${{ inputs.type }}
-        echo flags=${{ inputs.flags }}
-        echo "DIRNAME=$([ -d sources/$DIRECTORY ] && echo $DIRECTORY || echo ${DIRECTORY//-/_})" >> $GITHUB_ENV
-      shell: bash
+    # - id: set-DIRNAME-variable
+    #   run: |
+    #     echo "DIRECTORY=${{ inputs.directory }}" >> $GITHUB_ENV
+    #   shell: bash
+    # - id: list-files
+    #   run: |
+    #     echo directory=${{ inputs.directory }}
+    #     echo type=${{ inputs.type }}
+    #     echo flags=${{ inputs.flags }}
+    #     echo "DIRNAME=$([ -d sources/$DIRECTORY ] && echo $DIRECTORY || echo ${DIRECTORY//-/_})" >> $GITHUB_ENV
+    #   shell: bash
+
     - id: attempt-1
       continue-on-error: true
       run: |
         echo trying with files from resources
         ls ${{ inputs.resources }}/${{ inputs.directory }}
       shell: bash
+      env:
+        DIRECTORY: ${{ inputs.directory }}
+        DOCKERVERSION: ${{ inputs.dockerversion }}
+        FLAGS: ${{ inputs.flags }}
+        RELEASE: ${{ inputs.release }}
+        RESOURCES: ${{ inputs.resources }}
+        TAXONOMY: ncbi
+        TYPE: ${{ inputs.type }}
+
     - id: attempt-2
       if: steps.attempt-1.outcome == 'failure'
       run: |
         echo retrying with files from sources
-        ls sources/$DIRNAME
       shell: bash
+      env:
+        DIRECTORY: ${{ inputs.directory }}
+        DOCKERVERSION: ${{ inputs.dockerversion }}
+        FLAGS: ${{ inputs.flags }}
+        RELEASE: ${{ inputs.release }}
+        TAXONOMY: ncbi
+        TYPE: ${{ inputs.type }}
