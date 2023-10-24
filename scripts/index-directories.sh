@@ -29,6 +29,7 @@ while read YAML; do
     fi
     if [ -e "$RESOURCES/$DIRECTORY/$FILE" ]; then
       cp $RESOURCES/$DIRECTORY/$FILE $tmpdir/$FILE
+      echo $FILE >> $tmpdir/from_resources.txt
     else
       s3cmd get s3://goat/resources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
       if [[ $? -eq 0 ]]; then
