@@ -35,8 +35,21 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: |
+    # - id: snapshot index(es)
+    #   description: Make a snapshot of the current index in case of need to rollback
+    - id: list-files
+      run: |
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
         echo flags=${{ inputs.flags }}
+        ls ${{ inputs.resources }}/${{ inputs.directory }}
+        ls sources/${{ inputs.directory }}
+      shell: bash
+    - id: attempt-1
+      run: |
+        echo trying with files from resources
+      shell: bash
+    - id: attempt-2
+      run: |
+        echo retrying with files from sources
       shell: bash
