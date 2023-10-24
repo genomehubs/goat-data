@@ -42,7 +42,7 @@ runs:
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
         echo flags=${{ inputs.flags }}
-        DIRNAME=${{ inputs.directory }} >> GITHUB_ENV
+        echo DIRNAME=${{ inputs.directory }} >> GITHUB_ENV
         echo DIRNAME=$DIRNAME
         echo DIRNAME=$([ -d sources/$DIRNAME ] && $DIRNAME || ${DIRNAME//-/_}) >> GITHUB_ENV
       shell: bash
