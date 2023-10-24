@@ -42,14 +42,17 @@ runs:
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
         echo flags=${{ inputs.flags }}
-        ls ${{ inputs.resources }}/${{ inputs.directory }}
         ls sources/${{ inputs.directory }}
       shell: bash
     - id: attempt-1
+      continue-on-error: true
       run: |
         echo trying with files from resources
+        ls ${{ inputs.resources }}/${{ inputs.directory }}
       shell: bash
     - id: attempt-2
+      if: steps.attempt-1.outcome == 'failure'
       run: |
         echo retrying with files from sources
+        ls sources/${{ inputs.directory }}
       shell: bash
