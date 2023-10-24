@@ -62,7 +62,7 @@ echo docker run --rm --network=host \
         --${TYPE}-dir sources $FLAGS"
 
 if [ $? -eq 0 ]; then
-  echo Reading $(wc -l) files to move from $tmpdir/from_resources.txt
+  echo Reading $(wc -l $tmpdir/from_resources.txt) files to move from $tmpdir/from_resources.txt
   while read FILE; do
     if [ $FILE == *yaml ]; then
       echo move $FILE to github
