@@ -42,7 +42,9 @@ runs:
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
         echo flags=${{ inputs.flags }}
-        DIRNAME=${{ inputs.directory }} echo DIRNAME=$([ -d sources/$DIRNAME ] && $DIRNAME || ${DIRNAME//-/_}) >> GITHUB_ENV
+        DIRNAME=${{ inputs.directory }} >> GITHUB_ENV
+        echo DIRNAME=$DIRNAME
+        echo DIRNAME=$([ -d sources/$DIRNAME ] && $DIRNAME || ${DIRNAME//-/_}) >> GITHUB_ENV
       shell: bash
     - id: attempt-1
       continue-on-error: true
