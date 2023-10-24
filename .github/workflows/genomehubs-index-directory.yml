@@ -1,0 +1,30 @@
+name: genomehubs-index-directory
+on:
+  workflow_call:
+    inputs:
+      directory:
+        required: true
+        type: string
+      dockerversion:
+        required: true
+        type: string
+      release:
+        required: true
+        type: string
+      resources:
+        required: true
+        type: string
+      type:
+        required: true
+        type: string
+
+jobs:
+  index-directory-or-fallback:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check es health
+        run: |
+          echo directory=${{ inputs.directory }}
+          echo type=${{ inputs.type }}

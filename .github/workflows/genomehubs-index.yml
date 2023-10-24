@@ -1,0 +1,39 @@
+name: genomehubs-index
+on:
+  workflow_call:
+    inputs:
+      dockerversion:
+        required: true
+        type: string
+      release:
+        required: true
+        type: string
+      resources:
+        required: true
+        type: string
+
+jobs:
+  fetch-dockers:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Get dockers
+        run: |
+          docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
+          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+
+  index-directories:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check es health
+        run: curl -s "es1:9200/_cat/health"
+
+      - name: Index assembly
+        uses: ./.github/workflows/genomehubs-index-directory.yml
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: assembly-data
+          type: assembly

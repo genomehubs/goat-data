@@ -1,4 +1,4 @@
-name: fetch-resources
+name: genomehubs-init
 on:
   workflow_call:
     inputs:
