@@ -68,6 +68,7 @@ runs:
       if: steps.attempt-1.outcome == 'failure'
       run: |
         echo retrying with files from sources
+        ./scripts/index-directories.sh
       shell: bash
       env:
         DIRECTORY: ${{ inputs.directory }}

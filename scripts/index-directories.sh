@@ -12,11 +12,15 @@ function fail {
 
 DIRNAME=$(if [[ -d sources/$DIRECTORY ]]; then echo $DIRECTORY; else echo ${DIRECTORY//-/_}; fi)
 
+> $tmpdir/from_resources.txt
+
 while read YAML; do
   YAMLFILE=$(basename $YAML)
   if [ ! -z "$RESOURCES" ]; then
     s3cmd get s3://goat/resources/$DIRECTORY/$YAMLFILE $tmpdir/$YAMLFILE 2>/dev/null
-    if [ $? -ne 0 ]; then
+    if [ $? -eq 0 ]; then
+      echo $YAMLFILE >> $tmpdir/from_resources.txt
+    else
       cp $YAML $tmpdir/$YAMLFILE
     fi
     FILE=$(cat $tmpdir/$YAMLFILE | yq -r '.file.name' 2>/dev/null)
@@ -27,7 +31,9 @@ while read YAML; do
       cp $RESOURCES/$DIRECTORY/$FILE $tmpdir/$FILE
     else
       s3cmd get s3://goat/resources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
-      if [[ $? -ne 0 ]]; then
+      if [[ $? -eq 0 ]]; then
+        echo $FILE >> $tmpdir/from_resources.txt
+      else
         s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
       fi
     fi
@@ -53,5 +59,17 @@ echo docker run --rm --network=host \
         --config-file sources/goat.yaml \
         --es-version $RELEASE \
         --${TYPE}-dir sources $FLAGS"
+
+if [ $? -eq 0 ]; then
+  while read FILE; do
+    if [ $FILE == *yaml ]; then
+      echo move $FILE to github
+    else
+      echo move $FILE to s3
+    fi
+  done < $tmpdir/from_resources.txt
+else
+  fail "Error while running genomehubs index"
+fi
 
 rm -rf $tmpdir
