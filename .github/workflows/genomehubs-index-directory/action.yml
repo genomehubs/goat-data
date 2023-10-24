@@ -40,16 +40,14 @@ runs:
     - id: set-DIRNAME-variable
       run: |
         echo "DIRECTORY=${{ inputs.directory }}" >> $GITHUB_ENV
-        echo DIRECTORY=$DIRECTORY
       shell: bash
     - id: list-files
       run: |
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
         echo flags=${{ inputs.flags }}
-        echo DIRNAME=$DIRECTORY
-        echo "DIRNAME=$([ -d sources/$DIRECTORY ] && $DIRECTORY || ${DIRECTORY//-/_})"
-        echo "DIRNAME=$([ -d sources/$DIRECTORY ] && $DIRECTORY || ${DIRECTORY//-/_})" >> $GITHUB_ENV
+        echo "DIRNAME=$([ -d sources/$DIRECTORY ] && echo $DIRECTORY || echo ${DIRECTORY//-/_})" >> $GITHUB_ENV
+        DIRECT=${{ inputs.directory }} echo DIR=$([ -d sources/$DIRECT ] && echo $DIRECT || echo ${DIRECT//-/_})"
       shell: bash
     - id: attempt-1
       continue-on-error: true
