@@ -47,7 +47,6 @@ runs:
         echo type=${{ inputs.type }}
         echo flags=${{ inputs.flags }}
         echo "DIRNAME=$([ -d sources/$DIRECTORY ] && echo $DIRECTORY || echo ${DIRECTORY//-/_})" >> $GITHUB_ENV
-        DIRECT=${{ inputs.directory }} echo DIR=$([ -d sources/$DIRECT ] && echo $DIRECT || echo ${DIRECT//-/_})
       shell: bash
     - id: attempt-1
       continue-on-error: true
