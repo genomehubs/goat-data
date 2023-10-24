@@ -31,7 +31,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Check es health
-      run: |
+    - run: |
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
+      shell: bash
