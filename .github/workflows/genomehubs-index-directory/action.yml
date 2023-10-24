@@ -39,16 +39,17 @@ runs:
     #   description: Make a snapshot of the current index in case of need to rollback
     - id: set-DIRNAME-variable
       run: |
-        echo "DIRNAME=${{ inputs.directory }}" >> $GITHUB_ENV
-        echo DIRNAME=$DIRNAME
+        echo "DIRECTORY=${{ inputs.directory }}" >> $GITHUB_ENV
+        echo DIRECTORY=$DIRECTORY
       shell: bash
     - id: list-files
       run: |
         echo directory=${{ inputs.directory }}
         echo type=${{ inputs.type }}
         echo flags=${{ inputs.flags }}
-        echo DIRNAME=$DIRNAME
-        echo "DIRNAME=$([ -d sources/$DIRNAME ] && $DIRNAME || ${DIRNAME//-/_})" >> $GITHUB_ENV
+        echo DIRNAME=$DIRECTORY
+        echo "DIRNAME=$([ -d sources/$DIRECTORY ] && $DIRECTORY || ${DIRECTORY//-/_})"
+        echo "DIRNAME=$([ -d sources/$DIRECTORY ] && $DIRECTORY || ${DIRECTORY//-/_})" >> $GITHUB_ENV
       shell: bash
     - id: attempt-1
       continue-on-error: true
