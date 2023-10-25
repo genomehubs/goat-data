@@ -35,14 +35,14 @@ jobs:
           directory: assembly-data
           type: assembly
 
-      - name: Index assembly-data-sample
-        uses: ./.github/workflows/genomehubs-index-directory
-        with:
-          dockerversion: ${{ inputs.dockerversion }}
-          release: ${{ inputs.release }}
-          resources: ${{ inputs.resources }}
-          directory: assembly-data-sample
-          type: sample
+      # - name: Index assembly-data-sample
+      #   uses: ./.github/workflows/genomehubs-index-directory
+      #   with:
+      #     dockerversion: ${{ inputs.dockerversion }}
+      #     release: ${{ inputs.release }}
+      #     resources: ${{ inputs.resources }}
+      #     directory: assembly-data-sample
+      #     type: sample
 
       # - name: Index ott3.3
       #   uses: ./.github/workflows/genomehubs-index-directory

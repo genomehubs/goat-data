@@ -98,6 +98,21 @@ else
   cp -r sources/$DIRNAME/tests $tmpdir/tests 2>/dev/null
 fi
 
+
+if [ ! -z "$RESOURCES" ]; then
+  # Make a snapshot to roll back to in case indexing fails
+
+  # Generate list of indices
+  INDICES="attributes-*$RELEASE,identifiers-*$RELEASE,$TYPE-*$RELEASE"
+  if [ $TYPE != feature ] && [ $TYPE != taxon ]; then
+    INDICES="$INDICES,taxon-*$RELEASE"
+  fi
+  curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" || exit 0
+  curl -s -X PUT    "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}?wait_for_completion=true&pretty" \
+    -H 'Content-Type: application/json' \
+    -d' { "indices": "'$INDICES'", "include_global_state":false}'
+fi
+
 # Run genomehubs index on the collated files
 docker run --rm --network=host \
     -v $tmpdir:/genomehubs/sources \
@@ -122,7 +137,21 @@ if [ $? -eq 0 ]; then
     fi
   done < $tmpdir/from_resources.txt
 else
+  if [ ! -z "$RESOURCES" ]; then
+    # restore indices from snapshot
+    curl -s -X DELETE "es1:9200/$INDICES"
+    curl -s -X POST   "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}/_restore?wait_for_completion=true&pretty" \
+    -H 'Content-Type: application/json' \
+    -d' { "indices": "'$INDICES'" }'
+    # delete snapshot
+    echo curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" || exit 0
+  fi
   fail "Error while running genomehubs index"
+fi
+
+if [ ! -z "$RESOURCES" ]; then
+  # delete snapshot
+  echo curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" || exit 0
 fi
 
 rm -rf $tmpdir

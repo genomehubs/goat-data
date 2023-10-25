@@ -21,71 +21,71 @@ jobs:
           docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
-  # prepare-snapshots:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
+  prepare-snapshots:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
 
-  #     - name: Check es health
-  #       run: curl -s "es1:9200/_cat/health"
+      - name: Check es health
+        run: curl -s "es1:9200/_cat/health"
 
-  #     - name: Create current snapshot repo if it doesn't exist
-  #       run: |
-  #         curl -s -X PUT "es1:9200/_snapshot/s3-current" \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/s3-current" } }' || exit 0
+      - name: Create current snapshot repo if it doesn't exist
+        run: |
+          curl -s -X PUT "es1:9200/_snapshot/s3-current" \
+            -H 'Content-Type: application/json' \
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/s3-current" } }' || exit 0
 
-  #     - name: Create latest snapshot repo if it doesn't exist
-  #       run: |
-  #         curl -s -X PUT "es1:9200/_snapshot/s3-latest" \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/s3-latest" } }' || exit 0
+      - name: Create latest snapshot repo if it doesn't exist
+        run: |
+          curl -s -X PUT "es1:9200/_snapshot/s3-latest" \
+            -H 'Content-Type: application/json' \
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/s3-latest" } }' || exit 0
 
-  #     - name: Create s3-RELEASE snapshot repo if it doesn't exist
-  #       run: |
-  #         curl -s -X PUT "es1:9200/_snapshot/s3-${{ inputs.release }}" \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/s3-${{ inputs.dockerversion }}" } }' || exit 0
+      - name: Create s3-RELEASE snapshot repo if it doesn't exist
+        run: |
+          curl -s -X PUT "es1:9200/_snapshot/s3-${{ inputs.release }}" \
+            -H 'Content-Type: application/json' \
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/s3-${{ inputs.dockerversion }}" } }' || exit 0
 
-  #     - name: Delete indices and snapshots for that release, except current/analysis_file snapshot
-  #       run: |
-  #         curl -s -X DELETE "es1:9200/*--${{ inputs.release }}*"
-  #         curl -s -X DELETE "es1:9200/_snapshot/s3-current/20*"
+      - name: Delete indices and snapshots for that release, except current/analysis_file snapshot
+        run: |
+          curl -s -X DELETE "es1:9200/*--${{ inputs.release }}*"
+          curl -s -X DELETE "es1:9200/_snapshot/s3-current/20*"
 
-  #     - name: Restore and rename analysis_file snapshot to current RELEASE indices
-  #       run: |
-  #         curl -s -X POST "es1:9200/_snapshot/latest/analysis_file/_restore?wait_for_completion=true&pretty" \
-  #           -H 'Content-Type: application/json' \
-  #           -d' {
-  #             "ignore_unavailable": true,
-  #             "include_global_state": false,
-  #             "include_aliases": false,
-  #             "rename_pattern" : "--goat--202.*",
-  #             "rename_replacement" : "--goat--${{ inputs.release }}"
-  #             }'
+      - name: Restore and rename analysis_file snapshot to current RELEASE indices
+        run: |
+          curl -s -X POST "es1:9200/_snapshot/latest/analysis_file/_restore?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' {
+              "ignore_unavailable": true,
+              "include_global_state": false,
+              "include_aliases": false,
+              "rename_pattern" : "--goat--202.*",
+              "rename_replacement" : "--goat--${{ inputs.release }}"
+              }'
 
   genomehubs-init:
     runs-on: [self-hosted, runner1]
     needs:
       - fetch-dockers
-      # - prepare-snapshots
+      - prepare-snapshots
     steps:
-      # - name: Update version in config
-      #   run: |
-      #     yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
+      - name: Update version in config
+        run: |
+          yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
 
-      # - name: Run genomehubs init
-      #   run: |
-      #     docker run --rm --network=host \
-      #       -v `pwd`/sources:/genomehubs/sources \
-      #       genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-      #         "genomehubs init \
-      #           --es-host es1:9200 \
-      #           --taxonomy-source ncbi \
-      #           --config-file sources/goat.yaml \
-      #           --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
-      #           --taxonomy-ncbi-root 2759 \
-      #           --taxon-preload"
+      - name: Run genomehubs init
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+              "genomehubs init \
+                --es-host es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
+                --taxonomy-ncbi-root 2759 \
+                --taxon-preload"
 
       - name: Add ES index.mapping.nested_objects.limit 1000000
         run: |
