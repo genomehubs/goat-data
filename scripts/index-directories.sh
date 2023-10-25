@@ -121,7 +121,6 @@ docker run --rm --network=host \
         --es-host es1:9200 \
         --taxonomy-source $TAXONOMY \
         --config-file sources/goat.yaml \
-        --es-version $RELEASE \
         --${TYPE}-dir sources $FLAGS"
 
 # If index was successful, move files from resources to release branch/bucket
