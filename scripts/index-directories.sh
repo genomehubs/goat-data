@@ -126,8 +126,8 @@ docker run --rm --network=host \
         "genomehubs index \
         --es-host es1:9200 \
         --taxonomy-source $TAXONOMY \
-        --config-file $tmpdir/config/goat.yaml \
-        --${TYPE}-dir $tmpdir $FLAGS"
+        --config-file /genomehubs/sources/config/goat.yaml \
+        --${TYPE}-dir /genomehubs/sources $FLAGS"
 
 # If index was successful, move files from resources to release branch/bucket
 if [ $? -eq 0 ]; then
