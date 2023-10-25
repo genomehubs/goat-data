@@ -82,7 +82,6 @@ jobs:
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
-                --es-version ${{ inputs.release }} \
                 --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
