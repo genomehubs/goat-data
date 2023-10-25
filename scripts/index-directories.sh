@@ -113,6 +113,12 @@ if [ ! -z "$RESOURCES" ]; then
     -d' { "indices": "'$INDICES'", "include_global_state":false}'
 fi
 
+# Fetch config file
+mkdir -p $tmpdir/config
+yq '.common.hub.version="${{ inputs.release }}"' $workdir/sources/goat.yaml > tmpdir/config/goat.yaml
+ls -al $tmpdir
+ls -al $tmpdir/config
+
 # Run genomehubs index on the collated files
 docker run --rm --network=host \
     -v $tmpdir:/genomehubs/sources \

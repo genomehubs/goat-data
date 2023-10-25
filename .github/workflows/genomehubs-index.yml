@@ -26,10 +26,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Update version in config
-        run: |
-          yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
-
       - name: Index assembly-data
         uses: ./.github/workflows/genomehubs-index-directory
         with:
