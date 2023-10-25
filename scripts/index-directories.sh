@@ -26,9 +26,11 @@ while read YAML; do
   YAMLFILE=$(basename $YAML)
   if [ ! -z "$RESOURCES" ]; then
     # Fetch YAML
+    echo $YAML
     s3cmd get s3://goat/resources/$DIRECTORY/$YAMLFILE $tmpdir/$YAMLFILE 2>/dev/null
     if [ $? -eq 0 ]; then
       echo $YAMLFILE >> $tmpdir/from_resources.txt
+      echo TRUE
     else
       cp $YAML $tmpdir/$YAMLFILE
     fi
@@ -117,9 +119,8 @@ fi
 # Fetch config file
 mkdir -p $tmpdir/config
 yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/config/goat.yaml
-ls -al $tmpdir
-ls -al $tmpdir/config
 
+fail truncated for testing
 # Run genomehubs index on the collated files
 docker run --rm --network=host \
     -v $tmpdir:/genomehubs/sources \
