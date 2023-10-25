@@ -31,30 +31,30 @@ jobs:
 
       - name: Create current snapshot repo if it doesn't exist
         run: |
-          echo curl -s -X PUT "es1:9200/_snapshot/s3-current" \
+          curl -s -X PUT "es1:9200/_snapshot/s3-current" \
             -H 'Content-Type: application/json' \
             -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/s3-current" } }' || exit 0
 
       - name: Create latest snapshot repo if it doesn't exist
         run: |
-          echo curl -s -X PUT "es1:9200/_snapshot/s3-latest" \
+          curl -s -X PUT "es1:9200/_snapshot/s3-latest" \
             -H 'Content-Type: application/json' \
             -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/s3-latest" } }' || exit 0
 
       - name: Create s3-RELEASE snapshot repo if it doesn't exist
         run: |
-          echo curl -s -X PUT "es1:9200/_snapshot/s3-${{ inputs.release }}" \
+          curl -s -X PUT "es1:9200/_snapshot/s3-${{ inputs.release }}" \
             -H 'Content-Type: application/json' \
             -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/s3-${{ inputs.dockerversion }}" } }' || exit 0
 
       - name: Delete indices and snapshots for that release, except current/analysis_file snapshot
         run: |
-          echo curl -s -X DELETE "es1:9200/*--${{ inputs.release }}*"
-          echo curl -s -X DELETE "es1:9200/_snapshot/s3-current/20*"
+          curl -s -X DELETE "es1:9200/*--${{ inputs.release }}*"
+          curl -s -X DELETE "es1:9200/_snapshot/s3-current/20*"
 
       - name: Restore and rename analysis_file snapshot to current RELEASE indices
         run: |
-          echo curl -s -X POST "es1:9200/_snapshot/latest/analysis_file/_restore?wait_for_completion=true&pretty" \
+          curl -s -X POST "es1:9200/_snapshot/latest/analysis_file/_restore?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' {
               "ignore_unavailable": true,
@@ -72,7 +72,7 @@ jobs:
     steps:
       - name: Run genomehubs init
         run: |
-          echo docker run --rm --network=host \
+          docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
               "genomehubs init \
