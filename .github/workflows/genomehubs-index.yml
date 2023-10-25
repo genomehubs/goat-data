@@ -34,6 +34,13 @@ jobs:
         run: |
           git checkout -b ${{ inputs.release }}
 
+      - name: restore init snapshot
+        run: |
+          curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}"
+          curl -s -X POST   "es1:9200/_snapshot/s3-current/${{ inputs.release }}_init/_restore?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}" }'
+
       - name: Index assembly-data
         uses: ./.github/workflows/genomehubs-index-directory
         with:
@@ -43,100 +50,100 @@ jobs:
           directory: assembly-data
           type: assembly
 
-      # - name: Index assembly-data-sample
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: assembly-data-sample
-      #     type: sample
+      - name: Index assembly-data-sample
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: assembly-data-sample
+          type: sample
 
-      # - name: Index ott3.3
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: ott3.3
-      #     type: taxon
+      - name: Index ott3.3
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: ott3.3
+          type: taxon
 
-      # - name: Index tolids
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: tolids
-      #     flags: --taxon-lookup any --taxon-spellcheck
-      #     type: taxon
+      - name: Index tolids
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: tolids
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon
 
-      # - name: Index genomesize-karyotype
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: genomesize-karyotype
-      #     flags: --taxon-lookup any --taxon-spellcheck
-      #     type: taxon
+      - name: Index genomesize-karyotype
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: genomesize-karyotype
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon
 
-      # - name: Index regional-lists
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: regional-lists
-      #     flags: --taxon-lookup any --taxon-spellcheck
-      #     type: taxon
+      - name: Index regional-lists
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: regional-lists
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon
 
-      # - name: Index uk-legislation
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: uk-legislation
-      #     flags: --taxon-lookup any --taxon-spellcheck
-      #     type: taxon
+      - name: Index uk-legislation
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: uk-legislation
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon
 
-      # - name: Index btk
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: btk
-      #     type: assembly
+      - name: Index btk
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: btk
+          type: assembly
 
-      # - name: Index lineages
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: lineages
-      #     type: taxon
+      - name: Index lineages
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: lineages
+          type: taxon
 
-      # - name: Index status-lists
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: status-lists
-      #     flags: --taxon-lookup any --taxon-spellcheck
-      #     type: taxon
+      - name: Index status-lists
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: status-lists
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon
 
-      # - name: Index assembly-data-taxon
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: assembly-data-taxon
-      #     type: taxon
+      - name: Index assembly-data-taxon
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: assembly-data-taxon
+          type: taxon
 
       - id: fail-if-no-changes
         name: Fail if no changes
