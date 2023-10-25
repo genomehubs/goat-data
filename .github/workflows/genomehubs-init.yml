@@ -70,6 +70,9 @@ jobs:
       - fetch-dockers
       - prepare-snapshots
     steps:
+      - name: Update version in config
+        run: |
+          yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
       - name: Run genomehubs init
         run: |
           docker run --rm --network=host \
