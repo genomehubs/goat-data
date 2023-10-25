@@ -126,8 +126,8 @@ docker run --rm --network=host \
         "genomehubs index \
         --es-host es1:9200 \
         --taxonomy-source $TAXONOMY \
-        --config-file sources/goat.yaml \
-        --${TYPE}-dir sources $FLAGS"
+        --config-file $tmpdir/config/goat.yaml \
+        --${TYPE}-dir $tmpdir $FLAGS"
 
 # If index was successful, move files from resources to release branch/bucket
 if [ $? -eq 0 ]; then
@@ -156,7 +156,7 @@ fi
 
 if [ ! -z "$RESOURCES" ]; then
   # delete snapshot
-  echo curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" || exit 0
+  curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" || exit 0
 fi
 
 rm -rf $tmpdir
