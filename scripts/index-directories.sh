@@ -26,11 +26,9 @@ while read YAML; do
   YAMLFILE=$(basename $YAML)
   if [ ! -z "$RESOURCES" ]; then
     # Fetch YAML
-    echo $YAML
     s3cmd get s3://goat/resources/$DIRECTORY/$YAMLFILE $tmpdir/$YAMLFILE 2>/dev/null
     if [ $? -eq 0 ]; then
       echo $YAMLFILE >> $tmpdir/from_resources.txt
-      echo TRUE
     else
       cp $YAML $tmpdir/$YAMLFILE
     fi
@@ -120,7 +118,6 @@ fi
 mkdir -p $tmpdir/config
 yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/config/goat.yaml
 
-fail truncated for testing
 # Run genomehubs index on the collated files
 docker run --rm --network=host \
     -v $tmpdir:/genomehubs/sources \
@@ -136,14 +133,14 @@ if [ $? -eq 0 ]; then
   if [ ! -z "$RESOURCES" ]; then
     echo Reading $(wc -l $tmpdir/from_resources.txt) files to move from $tmpdir/from_resources.txt
     while read FILE; do
-      if [ $FILE == *yaml ]; then
+      if [[ $FILE == *yaml ]]; then
         echo move $FILE to github
         cp $tmpdir/$FILE $workdir/sources/$DIRNAME/
-      elif [ $FILE == tests ]; then
+      elif [[ $FILE == tests ]]; then
         echo move $FILE to github
         mkdir -p $workdir/sources/$DIRNAME/$FILE
         cp $tmpdir/$FILE/* $workdir/sources/$DIRNAME/$FILE/
-      elif [ $FILE == names ]; then
+      elif [[ $FILE == names ]]; then
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/sources/$RELEASE/$DIRECTORY/ --recursive
       else
