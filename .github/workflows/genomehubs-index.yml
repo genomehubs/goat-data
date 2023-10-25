@@ -138,7 +138,14 @@ jobs:
       #     directory: assembly-data-taxon
       #     type: taxon
 
+      - id: fail-if-no-changes
+        name: Fail if no changes
+        continue-on-error: true
+        run: |
+          git diff --exit-code &>/dev/null && exit 1
+
       - name: Commit files in branch
+        if: steps.fail-if-no-changes.outcome == 'success'
         run: |
           git config --local user.email "goat@genomehubs.org"
           git config --local user.name "goat"
@@ -146,6 +153,7 @@ jobs:
           git commit -m "Add changes from workflow running release ${{ inputs.release }}"
 
       - name: Push changes
+        if: steps.fail-if-no-changes.outcome == 'success'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
