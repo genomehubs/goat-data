@@ -43,9 +43,9 @@ jobs:
 
       - name: Create s3-RELEASE snapshot repo if it doesn't exist
         run: |
-          echo curl -s -X PUT "es1:9200/_snapshot/s3-$RELEASE" \
+          echo curl -s -X PUT "es1:9200/_snapshot/s3-${{ inputs.release }} \
             -H 'Content-Type: application/json' \
-            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/s3-'$RELEASE'" } }' || exit 0
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/s3-${{ inputs.release }}" } }' || exit 0
 
       - name: Delete indices and snapshots for that release, except current/analysis_file snapshot
         run: |
@@ -61,7 +61,7 @@ jobs:
               "include_global_state": false,
               "include_aliases": false,
               "rename_pattern" : "--goat--202.*",
-              "rename_replacement" : "--goat--'$RELEASE'"
+              "rename_replacement" : "--goat--${{ inputs.release }}"
               }'
 
   genomehubs-init:
