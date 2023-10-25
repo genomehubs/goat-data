@@ -24,7 +24,15 @@ jobs:
   index-directories:
     runs-on: [self-hosted, runner1]
     steps:
-      - uses: actions/checkout@v3
+      - name: checkout first
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
+          clean: true
+
+      - name: checkout RELEASE, or create a new branch
+        run: |
+          git checkout -b ${{ inputs.release }}
 
       - name: Index assembly-data
         uses: ./.github/workflows/genomehubs-index-directory
@@ -129,3 +137,16 @@ jobs:
       #     resources: ${{ inputs.resources }}
       #     directory: assembly-data-taxon
       #     type: taxon
+
+      - name: Commit files in branch
+        run: |
+          git config --local user.email "goat@genomehubs.org"
+          git config --local user.name "goat"
+          git add -A
+          git commit -m "Add changes from workflow running release ${{ inputs.release }}"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ inputs.release }}

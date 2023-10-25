@@ -7,6 +7,7 @@ function fail {
     printf '%s\n' "$1" >&2
     cd $workdir
     rm -rf $tmpdir
+    curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
     exit "${2-1}"
 }
 
@@ -107,7 +108,7 @@ if [ ! -z "$RESOURCES" ]; then
   if [ $TYPE != feature ] && [ $TYPE != taxon ]; then
     INDICES="$INDICES,taxon-*$RELEASE"
   fi
-  curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" || exit 0
+  curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
   curl -s -X PUT    "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}?wait_for_completion=true&pretty" \
     -H 'Content-Type: application/json' \
     -d' { "indices": "'$INDICES'", "include_global_state":false}'
@@ -131,16 +132,31 @@ docker run --rm --network=host \
 
 # If index was successful, move files from resources to release branch/bucket
 if [ $? -eq 0 ]; then
-  echo Reading $(wc -l $tmpdir/from_resources.txt) files to move from $tmpdir/from_resources.txt
-  while read FILE; do
-    if [ $FILE == *yaml ]; then
-      echo move $FILE to github
-    elif [ $FILE == tests ]; then
-      echo move $FILE to github
-    else
-      echo move $FILE to s3
+  if [ ! -z "$RESOURCES" ]; then
+    echo Reading $(wc -l $tmpdir/from_resources.txt) files to move from $tmpdir/from_resources.txt
+    while read FILE; do
+      if [ $FILE == *yaml ]; then
+        echo move $FILE to github
+        cp $tmpdir/$FILE $workdir/sources/$DIRNAME/
+      elif [ $FILE == tests ]; then
+        echo move $FILE to github
+        mkdir -p $workdir/sources/$DIRNAME/$FILE
+        cp $tmpdir/$FILE/* $workdir/sources/$DIRNAME/$FILE/
+      elif [ $FILE == names ]; then
+        echo move $FILE to s3
+        s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/sources/$RELEASE/$DIRECTORY/ --recursive
+      else
+        echo move $FILE to s3
+        s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/sources/$RELEASE/$DIRECTORY/$FILE
+      fi
+    done < $tmpdir/from_resources.txt
+    if [ -d $tmpdir/imported ]; then
+      s3cmd put setacl --acl-public $tmpdir/imported s3://goat/sources/$RELEASE/$DIRECTORY/ --recursive
     fi
-  done < $tmpdir/from_resources.txt
+    if [ -d $tmpdir/exceptions ]; then
+      s3cmd put setacl --acl-public $tmpdir/exceptions s3://goat/sources/$RELEASE/$DIRECTORY/ --recursive
+    fi
+  fi
 else
   if [ ! -z "$RESOURCES" ]; then
     # restore indices from snapshot
@@ -149,14 +165,14 @@ else
     -H 'Content-Type: application/json' \
     -d' { "indices": "'$INDICES'" }'
     # delete snapshot
-    echo curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" || exit 0
+    echo curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
   fi
   fail "Error while running genomehubs index"
 fi
 
 if [ ! -z "$RESOURCES" ]; then
   # delete snapshot
-  curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" || exit 0
+  curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
 fi
 
 rm -rf $tmpdir
