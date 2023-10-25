@@ -115,7 +115,7 @@ fi
 
 # Fetch config file
 mkdir -p $tmpdir/config
-yq '.common.hub.version="$RELEASE"' $workdir/sources/goat.yaml > $tmpdir/config/goat.yaml
+yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/config/goat.yaml
 ls -al $tmpdir
 ls -al $tmpdir/config
 
