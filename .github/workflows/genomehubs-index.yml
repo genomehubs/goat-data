@@ -193,19 +193,21 @@ jobs:
         run: |
           pwd
           ls
-          git diff --exit-code &>/dev/null && exit 1
+          git diff | head
+          git diff --exit-code &>/dev/null
+          echo $?
 
-      - name: Commit files in branch
-        if: steps.check-changes.outcome == 'success'
-        run: |
-          git config --local user.email "goat@genomehubs.org"
-          git config --local user.name "goat"
-          git add -A
-          git commit -m "Add changes from workflow running release ${{ inputs.release }}"
+      # - name: Commit files in branch
+      #   if: steps.check-changes.outcome == 'success'
+      #   run: |
+      #     git config --local user.email "goat@genomehubs.org"
+      #     git config --local user.name "goat"
+      #     git add -A
+      #     git commit -m "Add changes from workflow running release ${{ inputs.release }}"
 
-      - name: Push changes
-        if: steps.check-changes.outcome == 'success'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ inputs.release }}
+      # - name: Push changes
+      #   if: steps.check-changes.outcome == 'success'
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: ${{ inputs.release }}
