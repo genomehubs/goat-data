@@ -131,8 +131,10 @@ docker run --rm --network=host \
 # If index was successful, move files from resources to release branch/bucket
 if [ $? -eq 0 ]; then
   if [ ! -z "$RESOURCES" ]; then
+    echo $RELEASE > $tmpdir/latest-release.txt
+    s3cmd put setacl --acl-public $tmpdir/latest-release.txt s3://goat/resources/$DIRECTORY/
     echo Reading $(wc -l $tmpdir/from_resources.txt) files to move from $tmpdir/from_resources.txt
-    while read FILE; do
+    while read FILE YAML; do
       if [[ $FILE == *yaml ]]; then
         echo move $FILE to github
         cp $tmpdir/$FILE $workdir/sources/$DIRNAME/
@@ -144,6 +146,15 @@ if [ $? -eq 0 ]; then
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/ --recursive
       else
+        # check if file has been updated since last release
+        diff -q \
+          <(s3cmd info s3://goat/sources/$DIRECTORY/$FILE || true | grep "MD5 sum" | awk '{print $NF}') \
+          <(md5sum $tmpdir/$FILE | awk '{print $1}')
+        if [ $? -ne 0 ]; then
+          # update associated YAML file with release date
+          YAML=$(basename $(grep -w $FILE $tmpdir/*.yaml | cut -d':' -f1))
+          cat $YAML | yq '.file.source_date='$RELEASE > $workdir/sources/$DIRNAME/$YAML
+        fi
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/$FILE
       fi
