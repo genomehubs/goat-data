@@ -41,7 +41,7 @@ jobs:
         run: |
           mkdir -p ${{ inputs.resources }}/btk/btk_files_extra
           diff \
-            <(cat resources/btk/btk.files.yaml | paste - - - - - - - - - - - - - - -) \
+            <(cat ${{ inputs.resources }}/btk/btk.files.yaml | paste - - - - - - - - - - - - - - -) \
             <(curl -Ls https://github.com/genomehubs/goat-data/raw/main/sources/btk/btk.files.yaml 2>/dev/null | paste - - - - - - - - - - - - - - -) \
           | perl -lne 'if (/^< /) { s/^< //; s/\t/\n/g; print}' \
           > ${{ inputs.resources }}/btk/btk_files_extra/btk_files_extra/btk.files.yaml
