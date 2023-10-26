@@ -36,7 +36,7 @@ jobs:
           yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
-            genomehubs/genomehubs:$DOCKERVERSION bash -c \
+            genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
               "genomehubs fill \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
