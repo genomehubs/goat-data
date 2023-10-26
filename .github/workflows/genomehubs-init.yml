@@ -52,18 +52,6 @@ jobs:
           curl -s -X DELETE "es1:9200/*--${{ inputs.release }}*"
           curl -s -X DELETE "es1:9200/_snapshot/s3-current/20*"
 
-      - name: Restore and rename analysis_file snapshot to current RELEASE indices
-        run: |
-          curl -s -X POST "es1:9200/_snapshot/latest/analysis_file/_restore?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' {
-              "ignore_unavailable": true,
-              "include_global_state": false,
-              "include_aliases": false,
-              "rename_pattern" : "--goat--202.*",
-              "rename_replacement" : "--goat--${{ inputs.release }}"
-              }'
-
   genomehubs-init:
     runs-on: [self-hosted, runner1]
     needs:

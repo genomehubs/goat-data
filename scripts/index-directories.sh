@@ -142,17 +142,17 @@ if [ $? -eq 0 ]; then
         cp $tmpdir/$FILE/* $workdir/sources/$DIRNAME/$FILE/
       elif [[ $FILE == names ]]; then
         echo move $FILE to s3
-        s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/sources/$RELEASE/$DIRECTORY/ --recursive
+        s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/ --recursive
       else
         echo move $FILE to s3
-        s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/sources/$RELEASE/$DIRECTORY/$FILE
+        s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/$FILE
       fi
     done < $tmpdir/from_resources.txt
     if [ -d $tmpdir/imported ]; then
-      s3cmd put setacl --acl-public $tmpdir/imported s3://goat/sources/$RELEASE/$DIRECTORY/ --recursive
+      s3cmd put setacl --acl-public $tmpdir/imported s3://goat/releases/$RELEASE/$DIRECTORY/ --recursive
     fi
     if [ -d $tmpdir/exceptions ]; then
-      s3cmd put setacl --acl-public $tmpdir/exceptions s3://goat/sources/$RELEASE/$DIRECTORY/ --recursive
+      s3cmd put setacl --acl-public $tmpdir/exceptions s3://goat/releases/$RELEASE/$DIRECTORY/ --recursive
     fi
   fi
 else
