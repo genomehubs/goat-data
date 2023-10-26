@@ -23,7 +23,8 @@ jobs:
           echo "dockerversion=$DOCKERVERSION" >> $GITHUB_OUTPUT
       - id: release
         run: |
-          echo "release=$(date +'%Y.%m.%d')-rc1" >> $GITHUB_OUTPUT
+          # echo "release=$(date +'%Y.%m.%d')-rc1" >> $GITHUB_OUTPUT
+          echo "release=2023.10.25-rc1" >> $GITHUB_OUTPUT
       - id: resources
         run: |
           echo "resources=$RESOURCES" >> $GITHUB_OUTPUT
@@ -31,18 +32,18 @@ jobs:
         run: |
           echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
 
-  # fetch-resources:
-  #   needs:
-  #     - set-variables
-  #   uses: ./.github/workflows/fetch-resources.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
-  #     taxroot: ${{ needs.set-variables.outputs.taxroot }}
-  #   secrets:
-  #     JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
-  #     ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
-  #     STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
+  fetch-resources:
+    needs:
+      - set-variables
+    uses: ./.github/workflows/fetch-resources.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      resources: ${{ needs.set-variables.outputs.resources }}
+      taxroot: ${{ needs.set-variables.outputs.taxroot }}
+    secrets:
+      JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
+      ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
+      STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
 
   # init-release:
   #   needs:
@@ -54,12 +55,22 @@ jobs:
   #     release: ${{ needs.set-variables.outputs.release }}
   #     resources: ${{ needs.set-variables.outputs.resources }}
 
-  index-directories:
-    needs:
-      - set-variables
-      # - fetch-resources
-    uses: ./.github/workflows/genomehubs-index.yml
-    with:
-      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-      release: ${{ needs.set-variables.outputs.release }}
-      resources: ${{ needs.set-variables.outputs.resources }}
+  # index-directories:
+  #   needs:
+  #     - set-variables
+  #     # - fetch-resources
+  #   uses: ./.github/workflows/genomehubs-index.yml
+  #   with:
+  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+  #     release: ${{ needs.set-variables.outputs.release }}
+  #     resources: ${{ needs.set-variables.outputs.resources }}
+
+  # index-files:
+  #   needs:
+  #     - set-variables
+  #     # - fetch-resources
+  #   uses: ./.github/workflows/genomehubs-index-files.yml
+  #   with:
+  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+  #     release: ${{ needs.set-variables.outputs.release }}
+  #     resources: ${{ needs.set-variables.outputs.resources }}

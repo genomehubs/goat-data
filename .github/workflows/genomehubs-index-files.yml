@@ -1,0 +1,93 @@
+name: genomehubs-index-files
+on:
+  workflow_call:
+    inputs:
+      dockerversion:
+        required: true
+        type: string
+      release:
+        required: true
+        type: string
+      resources:
+        required: true
+        type: string
+
+jobs:
+  # fetch-dockers:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - name: Get dockers
+  #       run: |
+  #         docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
+  #         docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+
+  index-files:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: checkout first
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
+          clean: true
+
+      - name: checkout RELEASE, or create a new branch
+        run: |
+          git checkout -b ${{ inputs.release }}
+
+      - name: restore init snapshot
+        run: |
+          curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}"
+          curl -s -X POST   "es1:9200/_snapshot/s3-current/${{ inputs.release }}_init/_restore?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}" }'
+
+      - name: Collect extra analysis and files compared to main branch
+        run: |
+          mkdir -p sources/btk_files_extra/
+          git show origin/main:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.main
+          git show origin/${{ env.RELEASE }}:sources/btk/btk.files.yaml > sources/btk/btk.files.yaml.${{ env.RELEASE }}
+          diff \
+            <(cat btk.files.yaml.${{ env.RELEASE }} | paste - - - - - - - - - - - - - - -) \
+            <(cat btk.files.yaml.main | paste - - - - - - - - - - - - - - -) \
+          | perl -lne 'if (/^< /) { s/^< //; s/\t/\n/g; print}' \
+          > sources/btk_files_extra/btk.files.yaml
+
+      - name: genomehubs index extra btk files
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v /volumes/docker/resources:/genomehubs/resources \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
+              "genomehubs index \
+                --es-host es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --file-metadata sources/btk_files_extra/btk.files.yaml"
+
+      # - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm_status
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
+      #     curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
+
+      # - id: check-changes
+      #   name: Check git diff
+      #   continue-on-error: true
+      #   run: |
+      #     git diff --exit-code &>/dev/null && exit 1
+
+      # - name: Commit files in branch
+      #   if: steps.check-changes.outcome == 'success'
+      #   run: |
+      #     git config --local user.email "goat@genomehubs.org"
+      #     git config --local user.name "goat"
+      #     git add -A
+      #     git commit -m "Add changes from workflow running release ${{ inputs.release }}"
+
+      # - name: Push changes
+      #   if: steps.check-changes.outcome == 'success'
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: ${{ inputs.release }}
