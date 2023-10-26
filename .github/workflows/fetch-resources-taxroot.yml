@@ -13,32 +13,6 @@ on:
         type: string
 
 jobs:
-  get-taxon-name-from-id:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - name: Get taxon name from GoaT
-        run: |
-          echo TAXNAME=$(curl -Ls "https://goat.genomehubs.org/api/v2/search?query=tax_name%28${{ inputs.taxroot }}%29&size=1" | \
-            yq -r '.results[0].result.scientific_name') >> $GITHUB_ENV
-
-  fetch-blobtoolkit:
-    runs-on: [self-hosted, runner1]
-    needs:
-      - get-taxon-name-from-id
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch BlobToolKit
-        run: |
-          echo TAXNAME=$TAXNAME
-          CMD="docker run --rm --network=host \
-          -v \$(pwd):/genomehubs/tmp \
-          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"genomehubs parse \
-              --btk --btk-root "$TAXNAME" --outfile tmp/btk.${{ inputs.taxroot }}.tsv.gz\"" \
-          FALLBACK=s3://goat/resources/btk/btk.${{ inputs.taxroot }}.tsv.gz,s3://goat/resources/btk/btk.${{ inputs.taxroot }}.files.gz \
-          RESOURCES=${{ inputs.resources }}/btk \
-          ./scripts/update-resources/fetch-or-fallback.sh
-
   # fetch-ena-taxonomy-prev:
   #   runs-on: [self-hosted, runner1]
   #   steps:

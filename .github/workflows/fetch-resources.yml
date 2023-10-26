@@ -39,18 +39,18 @@ jobs:
   #         RESOURCES=${{ inputs.resources }} \
   #         ./scripts/update-resources/fetch-or-fallback.sh
 
-  fetch-resources-taxroot:
-    # needs:
-    #   - fetch-dockers
-    #   - fetch-ncbi-datasets
-    strategy:
-      matrix:
-        taxroot: ${{ fromJson(inputs.taxroot) }}
-    uses: ./.github/workflows/fetch-resources-taxroot.yml
-    with:
-      dockerversion: ${{ inputs.dockerversion }}
-      resources: ${{ inputs.resources }}
-      taxroot: ${{ matrix.taxroot }}
+  # fetch-resources-taxroot:
+  #   # needs:
+  #   #   - fetch-dockers
+  #   #   - fetch-ncbi-datasets
+  #   strategy:
+  #     matrix:
+  #       taxroot: ${{ fromJson(inputs.taxroot) }}
+  #   uses: ./.github/workflows/fetch-resources-taxroot.yml
+  #   with:
+  #     dockerversion: ${{ inputs.dockerversion }}
+  #     resources: ${{ inputs.resources }}
+  #     taxroot: ${{ matrix.taxroot }}
 
   # collate-taxroot-resources:
   #   runs-on: [self-hosted, runner1]
@@ -72,11 +72,21 @@ jobs:
   #         shopt -s extglob
   #         cat ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.*([0-9]).jsonl.gz > ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
   #         s3cmd put setacl --acl-public ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
-  #     - name: collate-btk-metadata
-  #       run: |
-  #         shopt -s extglob
-  #         cat ${{ inputs.resources }}/btk/btk.*([0-9]).tsv.gz > ${{ inputs.resources }}/btk/btk.tsv.gz
-  #         s3cmd put setacl --acl-public ${{ inputs.resources }}/btk/btk.tsv.gz s3://goat/resources/btk/btk.tsv.gz
+
+  fetch-blobtoolkit:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch BlobToolKit
+        run: |
+          CMD="docker run --rm --network=host \
+          -v \$(pwd):/genomehubs/tmp \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+            \"genomehubs parse \
+              --btk --btk-root Eukaryota --outfile tmp/btk.tsv.gz\"" \
+          FALLBACK=s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.gz \
+          RESOURCES=${{ inputs.resources }}/btk \
+          ./scripts/update-resources/fetch-or-fallback.sh
 
   # fetch-ncbi-taxdump:
   #   runs-on: [self-hosted, runner1]
