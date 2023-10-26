@@ -48,15 +48,17 @@ jobs:
 
       - name: genomehubs index extra btk files
         run: |
+          yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             -v /volumes/docker/resources:/genomehubs/resources \
-            genomehubs/genomehubs:$DOCKERVERSION bash -c \
+            -v ${{ inputs.resources }}/btk:/genomehubs/btk \
+            genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
               "genomehubs index \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
-                --file-metadata ${{ inputs.resources }}/btk/btk_files_extra/btk.files.yaml"
+                --file-metadata btk/btk_files_extra/btk.files.yaml"
           rm -r ${{ inputs.resources }}/btk/btk_files_extra
 
       - name: Move btk files to s3 release directory
