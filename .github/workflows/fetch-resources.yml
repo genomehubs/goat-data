@@ -84,7 +84,7 @@ jobs:
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"genomehubs parse \
               --btk --btk-root Eukaryota --outfile tmp/btk.tsv.gz\"" \
-          FALLBACK=s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.gz \
+          FALLBACK=s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.yaml \
           RESOURCES=${{ inputs.resources }}/btk \
           ./scripts/update-resources/fetch-or-fallback.sh
 
