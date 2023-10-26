@@ -191,6 +191,8 @@ jobs:
         name: Check git diff
         continue-on-error: true
         run: |
+          pwd
+          ls
           git diff --exit-code &>/dev/null && exit 1
 
       - name: Commit files in branch
