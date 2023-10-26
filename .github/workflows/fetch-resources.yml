@@ -20,14 +20,6 @@ on:
         required: true
 
 jobs:
-  fetch-dockers:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - name: Get dockers
-        run: |
-          docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
-          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
-
   fetch-ncbi-datasets:
     runs-on: [self-hosted, runner1]
     steps:
@@ -40,9 +32,8 @@ jobs:
           ./scripts/update-resources/fetch-or-fallback.sh
 
   fetch-resources-taxroot:
-    # needs:
-    #   - fetch-dockers
-    #   - fetch-ncbi-datasets
+    needs:
+      - fetch-ncbi-datasets
     strategy:
       matrix:
         taxroot: ${{ fromJson(inputs.taxroot) }}
@@ -54,8 +45,8 @@ jobs:
 
   collate-taxroot-resources:
     runs-on: [self-hosted, runner1]
-    # needs:
-    #   - fetch-resources-taxroot
+    needs:
+      - fetch-resources-taxroot
     steps:
       - name: collate-ncbi-datasets-assembly
         run: |

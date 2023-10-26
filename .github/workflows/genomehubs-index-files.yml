@@ -13,14 +13,6 @@ on:
         type: string
 
 jobs:
-  fetch-dockers:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - name: Get dockers
-        run: |
-          docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
-          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
-
   index-files:
     runs-on: [self-hosted, runner1]
     steps:
