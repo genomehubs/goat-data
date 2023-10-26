@@ -185,7 +185,7 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{env.RELEASE}},attributes*${{env.RELEASE}},feature*${{env.RELEASE}},identifiers*${{env.RELEASE}},sample*${{env.RELEASE}},taxon*${{env.RELEASE}}", "include_global_state":false}'
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
 
       - id: check-changes
         name: Check git diff

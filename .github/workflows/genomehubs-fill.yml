@@ -1,0 +1,45 @@
+name: genomehubs-fill
+on:
+  workflow_call:
+    inputs:
+      dockerversion:
+        required: true
+        type: string
+      release:
+        required: true
+        type: string
+      resources:
+        required: true
+        type: string
+
+jobs:
+  fetch-dockers:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Get dockers
+        run: |
+          docker pull genomehubs/genomehubs:${{ inputs.dockerversion }}
+          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+
+  genomehubs-fill:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Restore initassembly_otttolids_gensizekaryo_reglegbtkasm_status snapshot
+        run: |
+          curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}"
+          curl -s -X POST   "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status/_restore?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}" }'
+
+      - name: Run genomehubs fill
+        run: |
+          yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:$DOCKERVERSION bash -c \
+              "genomehubs fill \
+                --es-host es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --traverse-root 2759 \
+                --traverse-infer-both"
