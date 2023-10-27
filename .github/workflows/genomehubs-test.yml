@@ -15,6 +15,24 @@ on:
 jobs:
   genomehubs-test:
     runs-on: [self-hosted, runner1]
+    services:
+      goat-api:
+        image: genomehubs/genomehubs-api:${{ inputs.dockerversion }}
+        ports:
+          - 3000:3000
+        env:
+          GH_RELEASE: ${{ inputs.release }}
+          GH_HUBNAME: goat
+          GH_API_PORT: 3000
+          GH_NODE: http://es1:9200
+      goat-ui:
+        image: genomehubs/genomehubs-ui:${{ inputs.dockerversion }}
+        ports:
+          - 8880:8880
+        env:
+          GH_SITENAME: GoaT
+          GH_API_URL: http://localhost:3000/api/v2
+
     steps:
       - uses: actions/checkout@v3
 

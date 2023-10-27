@@ -38,6 +38,8 @@ jobs:
       - name: Get dockers
         run: |
           docker pull genomehubs/genomehubs:$DOCKERVERSION
+          docker pull genomehubs/genomehubs-api:$DOCKERVERSION
+          docker pull genomehubs/genomehubs-ui:$DOCKERVERSION
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
   fetch-resources:
