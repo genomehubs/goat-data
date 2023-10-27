@@ -83,7 +83,8 @@ fi
 
 # Fetch tests directories
 if [ ! -z "$RESOURCES" ]; then
-  while read TESTS; do
+  while read TESTURL; do
+    TESTS=$(basename $TESTS)
     s3cmd get s3://goat/resources/$DIRECTORY/$TESTS $tmpdir/$TESTS 2>/dev/null
     if [ $? -eq 0 ]; then
       echo $TESTS >> $tmpdir/from_resources.txt
@@ -96,7 +97,7 @@ if [ ! -z "$RESOURCES" ]; then
     else
       cp -r sources/$DIRNAME/$TESTS $tmpdir/$TESTS 2>/dev/null
     fi
-  done <<< $(basename $(s3cmd ls s3://goat/resources/$DIRECTORY/ | awk '{print $NF}') | grep 'tests$')
+  done <<< $(s3cmd ls s3://goat/resources/$DIRECTORY/ | awk '{print $NF}' | grep 'tests$')
 else
   cp -r sources/$DIRNAME/*tests $tmpdir 2>/dev/null
 fi
