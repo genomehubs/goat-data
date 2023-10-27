@@ -7,8 +7,7 @@ function fail {
     printf '%s\n' "$1" >&2
     cd $workdir
     rm -rf $tmpdir
-    echo 6
-    curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
+    curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" &>/dev/null
     exit "${2-1}"
 }
 
@@ -58,7 +57,7 @@ while read YAML; do
       continue
     fi
     # Fetch data file
-    s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
+    s3cmd get s3://goat/sources/$DIRNAME/$FILE $tmpdir/$FILE 2>/dev/null
   fi
   if [ ! -e "$tmpdir/$FILE" ]; then
     fail "unable to find data file $FILE required by $YAML"
@@ -113,9 +112,7 @@ if [ ! -z "$RESOURCES" ]; then
   if [ $TYPE != feature ] && [ $TYPE != taxon ]; then
     INDICES="$INDICES,taxon-*$RELEASE"
   fi
-  echo 5
   curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" &>/dev/null
-  echo $?
   curl -s -X PUT    "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}?wait_for_completion=true&pretty" \
     -H 'Content-Type: application/json' \
     -d' { "indices": "'$INDICES'", "include_global_state":false}'
@@ -177,13 +174,11 @@ if [ $? -eq 0 ]; then
 else
   if [ ! -z "$RESOURCES" ]; then
     # restore indices from snapshot
-    echo d4
     curl -s -X DELETE "es1:9200/$INDICES"
     curl -s -X POST   "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}/_restore?wait_for_completion=true&pretty" \
     -H 'Content-Type: application/json' \
     -d' { "indices": "'$INDICES'" }'
     # delete snapshot
-    echo d3
     echo curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
   fi
   fail "Error while running genomehubs index"
@@ -191,7 +186,6 @@ fi
 
 if [ ! -z "$RESOURCES" ]; then
   # delete snapshot
-  echo 7
   curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
 fi
 
