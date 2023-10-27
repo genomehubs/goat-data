@@ -16,80 +16,80 @@ jobs:
   index-directories:
     runs-on: [self-hosted, runner1]
     steps:
-      - name: checkout first
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
-          clean: true
+      # - name: checkout first
+      #   uses: actions/checkout@v3
+      #   with:
+      #     persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
+      #     clean: true
 
-      - name: checkout RELEASE, or create a new branch
-        run: |
-          git checkout -b ${{ inputs.release }}
+      # - name: checkout RELEASE, or create a new branch
+      #   run: |
+      #     git checkout -b ${{ inputs.release }}
 
-      - name: restore init snapshot
-        run: |
-          curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}"
-          curl -s -X POST   "es1:9200/_snapshot/s3-current/${{ inputs.release }}_init/_restore?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}" }'
+      # - name: restore init snapshot
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}"
+      #     curl -s -X POST   "es1:9200/_snapshot/s3-current/${{ inputs.release }}_init/_restore?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}" }'
 
-      - name: Index assembly-data
-        uses: ./.github/workflows/genomehubs-index-directory
-        with:
-          dockerversion: ${{ inputs.dockerversion }}
-          release: ${{ inputs.release }}
-          resources: ${{ inputs.resources }}
-          directory: assembly-data
-          type: assembly
+      # - name: Index assembly-data
+      #   uses: ./.github/workflows/genomehubs-index-directory
+      #   with:
+      #     dockerversion: ${{ inputs.dockerversion }}
+      #     release: ${{ inputs.release }}
+      #     resources: ${{ inputs.resources }}
+      #     directory: assembly-data
+      #     type: assembly
 
-      - name: Index assembly-data-sample
-        uses: ./.github/workflows/genomehubs-index-directory
-        with:
-          dockerversion: ${{ inputs.dockerversion }}
-          release: ${{ inputs.release }}
-          resources: ${{ inputs.resources }}
-          directory: assembly-data-sample
-          type: sample
+      # - name: Index assembly-data-sample
+      #   uses: ./.github/workflows/genomehubs-index-directory
+      #   with:
+      #     dockerversion: ${{ inputs.dockerversion }}
+      #     release: ${{ inputs.release }}
+      #     resources: ${{ inputs.resources }}
+      #     directory: assembly-data-sample
+      #     type: sample
 
-      - name: Snapshot RELEASE initassembly
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
+      # - name: Snapshot RELEASE initassembly
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly" || exit 0
+      #     curl -s -X PUT    "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
 
-      - name: Snapshot latest BACKUP initassembly
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/s3-latest/initassembly" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/s3-latest/initassembly?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
+      # - name: Snapshot latest BACKUP initassembly
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/_snapshot/s3-latest/initassembly" || exit 0
+      #     curl -s -X PUT    "es1:9200/_snapshot/s3-latest/initassembly?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
 
-      - name: Index ott3.3
-        uses: ./.github/workflows/genomehubs-index-directory
-        with:
-          dockerversion: ${{ inputs.dockerversion }}
-          release: ${{ inputs.release }}
-          resources: ${{ inputs.resources }}
-          directory: ott3.3
-          type: taxon
+      # - name: Index ott3.3
+      #   uses: ./.github/workflows/genomehubs-index-directory
+      #   with:
+      #     dockerversion: ${{ inputs.dockerversion }}
+      #     release: ${{ inputs.release }}
+      #     resources: ${{ inputs.resources }}
+      #     directory: ott3.3
+      #     type: taxon
 
-      - name: Index tolids
-        uses: ./.github/workflows/genomehubs-index-directory
-        with:
-          dockerversion: ${{ inputs.dockerversion }}
-          release: ${{ inputs.release }}
-          resources: ${{ inputs.resources }}
-          directory: tolids
-          flags: --taxon-lookup any --taxon-spellcheck
-          type: taxon
+      # - name: Index tolids
+      #   uses: ./.github/workflows/genomehubs-index-directory
+      #   with:
+      #     dockerversion: ${{ inputs.dockerversion }}
+      #     release: ${{ inputs.release }}
+      #     resources: ${{ inputs.resources }}
+      #     directory: tolids
+      #     flags: --taxon-lookup any --taxon-spellcheck
+      #     type: taxon
 
-      - name: Snapshot initassembly_otttolids
-        run: |
-          curl -s -X DELETE "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly_otttolids" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly_otttolids?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
+      # - name: Snapshot initassembly_otttolids
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly_otttolids" || exit 0
+      #     curl -s -X PUT    "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly_otttolids?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
 
       - name: Index genomesize-karyotype
         uses: ./.github/workflows/genomehubs-index-directory
