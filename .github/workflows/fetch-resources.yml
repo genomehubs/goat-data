@@ -57,7 +57,7 @@ jobs:
           cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ${{ inputs.resources }}/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
           s3cmd put setacl --acl-public ${{ inputs.resources }}/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz s3://goat/resources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz
           cat ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_*([0-9])_sample.tsv.gz > ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_eukaryota_sample.tsv.gz
-          s3cmd put setacl --acl-public ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_eukaryota.tsv.gz s3://goat/resources/assembly-data-sample/ncbi_datasets_eukaryota_sample.tsv.gz
+          s3cmd put setacl --acl-public ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_eukaryota_sample.tsv.gz s3://goat/resources/assembly-data-sample/ncbi_datasets_eukaryota_sample.tsv.gz
       - name: collate-ena-taxonomy-extra
         run: |
           shopt -s extglob
