@@ -77,7 +77,8 @@ jobs:
   index-files:
     needs:
       - set-variables
-      - init-release
+      - index-directories
+      # - init-release
     uses: ./.github/workflows/genomehubs-index-files.yml
     with:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
