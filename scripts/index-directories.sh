@@ -82,6 +82,7 @@ else
 fi
 
 # Fetch tests directories
+cp -r sources/$DIRNAME/*tests $tmpdir 2>/dev/null
 if [ ! -z "$RESOURCES" ]; then
   while read TESTURL; do
     TESTS=$(basename $TESTS)
@@ -98,8 +99,6 @@ if [ ! -z "$RESOURCES" ]; then
       cp -r sources/$DIRNAME/$TESTS $tmpdir/$TESTS 2>/dev/null
     fi
   done <<< $(s3cmd ls s3://goat/resources/$DIRECTORY/ | awk '{print $NF}' | grep 'tests$')
-else
-  cp -r sources/$DIRNAME/*tests $tmpdir 2>/dev/null
 fi
 
 
