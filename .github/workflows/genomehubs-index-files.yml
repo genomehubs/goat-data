@@ -56,3 +56,24 @@ jobs:
       - name: Move btk files to s3 release directory
         run: |
           s3cmd put setacl --acl-public ${{ inputs.resources }}/btk/btk.files.yaml s3://goat/releases/${{ inputs.release }}/btk/btk.files.yaml
+
+      - name: Snapshot RELEASE analysis_file
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/current/${{ inputs.release }}_analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${{ inputs.release }}_analysis_file?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "analysis-*${{ inputs.release }},file-*"${{ inputs.release }}, "include_global_state":false}'
+
+      - name: Snapshot latest BACKUP analysis_file
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/latest/analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/latest/analysis_file?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "analysis-*${{ inputs.release }},file-*"${{ inputs.release }}, "include_global_state":false}'
+
+      - name: Snapshot files to production-RELEASE
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "analysis-*${{ inputs.release }},file-*"${{ inputs.release }}, "include_global_state":false}'

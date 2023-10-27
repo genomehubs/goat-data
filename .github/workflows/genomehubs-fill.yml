@@ -18,10 +18,10 @@ jobs:
     steps:
       - name: Restore initassembly_otttolids_gensizekaryo_reglegbtkasm_status snapshot
         run: |
-          curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}"
-          curl -s -X POST   "es1:9200/_snapshot/s3-current/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status/_restore?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}"
+          curl -s -X POST   "es1:9200/_snapshot/current/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status/_restore?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}" }'
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}" }'
 
       - name: Run genomehubs fill
         run: |
@@ -35,3 +35,17 @@ jobs:
                 --config-file sources/goat.yaml \
                 --traverse-root 2759 \
                 --traverse-infer-both"
+
+      - name: Snapshot fill
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/current/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}", "include_global_state":false}'
+
+      - name: Snapshot final fill to production-RELEASE
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}", "include_global_state":false}'

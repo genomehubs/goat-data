@@ -23,26 +23,26 @@ jobs:
 
       - name: Create current snapshot repo if it doesn't exist
         run: |
-          curl -s -X PUT "es1:9200/_snapshot/s3-current" \
+          curl -s -X PUT "es1:9200/_snapshot/current" \
             -H 'Content-Type: application/json' \
-            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/s3-current" } }' || exit 0
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/current" } }' || exit 0
 
       - name: Create latest snapshot repo if it doesn't exist
         run: |
-          curl -s -X PUT "es1:9200/_snapshot/s3-latest" \
+          curl -s -X PUT "es1:9200/_snapshot/latest" \
             -H 'Content-Type: application/json' \
-            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/s3-latest" } }' || exit 0
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/latest" } }' || exit 0
 
-      - name: Create s3-RELEASE snapshot repo if it doesn't exist
+      - name: Create production RELEASE snapshot repo if it doesn't exist
         run: |
-          curl -s -X PUT "es1:9200/_snapshot/s3-${{ inputs.release }}" \
+          curl -s -X PUT "es1:9200/_snapshot/production-${{ inputs.release }}" \
             -H 'Content-Type: application/json' \
-            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/s3-${{ inputs.dockerversion }}" } }' || exit 0
+            -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/production-${{ inputs.dockerversion }}" } }' || exit 0
 
       - name: Delete indices and snapshots for that release, except current/analysis_file snapshot
         run: |
           curl -s -X DELETE "es1:9200/*--${{ inputs.release }}*"
-          curl -s -X DELETE "es1:9200/_snapshot/s3-current/20*"
+          curl -s -X DELETE "es1:9200/_snapshot/current/20*"
 
   genomehubs-init:
     runs-on: [self-hosted, runner1]
@@ -74,14 +74,14 @@ jobs:
 
       - name: Snapshot RELEASE init
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/s3-current/${{ inputs.release }}_init" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/s3-current/${{ inputs.release }}_init?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/current/${{ inputs.release }}_init" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${{ inputs.release }}_init?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}", "include_global_state":false}'
 
       - name: Snapshot latest BACKUP init
         run: |
-          curl -s -X DELETE "es1:9200/_snapshot/s3-latest/init" || exit 0
-          curl -s -X PUT    "es1:9200/_snapshot/s3-latest/init?wait_for_completion=true&pretty" \
+          curl -s -X DELETE "es1:9200/_snapshot/latest/init" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/latest/init?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon*${{ inputs.release }}", "include_global_state":false}'
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}", "include_global_state":false}'

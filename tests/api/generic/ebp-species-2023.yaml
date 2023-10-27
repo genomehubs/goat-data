@@ -1,0 +1,50 @@
+description: Check EBP species by time plot
+endpoint: report
+querystring: report=histogram&rank=species&result=taxon&cat=assembly_level%3Dcontig%2Cscaffold%2Cchromosome%2Ccomplete%20genome&includeEstimates=true&excludeAncestral%5B0%5D=bioproject&excludeMissing%5B0%5D=bioproject&stacked=true&cumulative=true&xOpts=2006%2C%2C2%2C%2CAssembly%20date&taxonomy=ncbi&x=min%28assembly_date%29%20AND%20bioproject%3DPRJNA533106
+assert:
+  status:
+    success: true
+  report:
+    status:
+      success: true
+    report:
+      histogram:
+        histograms:
+          buckets:
+            jsonSchema:
+              type: array
+              contains:
+                type: number
+          allValues:
+            jsonSchema:
+              type: array
+              contains:
+                type: number
+          byCat:
+            chromosome:
+              jsonSchema:
+                type: array
+                contains:
+                  type: number
+            contig:
+              jsonSchema:
+                type: array
+                contains:
+                  type: number
+            scaffold:
+              jsonSchema:
+                type: array
+                contains:
+                  type: number
+          valueType: date
+          zDomain:
+            jsonSchema:
+              type: array
+              items:
+                - type: number
+                - type: number
+                  minimum: 500
+        x:
+          jsonSchema:
+            type: number
+            minimum: 1500

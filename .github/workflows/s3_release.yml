@@ -1,9 +1,9 @@
 name: s3_release
 on:
   workflow_dispatch:
-  push:
-  # schedule:
-  #   - cron: "5 0 * * 1,2,3,4,5,6" # At 00:05 every MTWTFS
+  # push:
+  schedule:
+    - cron: "5 0 * * 2,3,4,5,6" # At 00:05 every TWTFS
 env:
   DOCKERVERSION: latest
   TAXROOT: '["2759"]'
@@ -23,8 +23,8 @@ jobs:
           echo "dockerversion=$DOCKERVERSION" >> $GITHUB_OUTPUT
       - id: release
         run: |
-          #echo "release=$(date +'%Y.%m.%d')" >> $GITHUB_OUTPUT
-          echo "release=2023.10.26" >> $GITHUB_OUTPUT
+          echo "release=$(date +'%Y.%m.%d')" >> $GITHUB_OUTPUT
+          #echo "release=2023.10.26" >> $GITHUB_OUTPUT
       - id: resources
         run: |
           echo "resources=$RESOURCES" >> $GITHUB_OUTPUT
@@ -32,42 +32,42 @@ jobs:
         run: |
           echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
 
-  # fetch-dockers:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - name: Get dockers
-  #       run: |
-  #         docker pull genomehubs/genomehubs:$DOCKERVERSION
-  #         docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+  fetch-dockers:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Get dockers
+        run: |
+          docker pull genomehubs/genomehubs:$DOCKERVERSION
+          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
-  # fetch-resources:
-  #   needs:
-  #     - set-variables
-  #     - fetch-dockers
-  #   uses: ./.github/workflows/fetch-resources.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
-  #     taxroot: ${{ needs.set-variables.outputs.taxroot }}
-  #   secrets:
-  #     JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
-  #     ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
-  #     STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
+  fetch-resources:
+    needs:
+      - set-variables
+      - fetch-dockers
+    uses: ./.github/workflows/fetch-resources.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      resources: ${{ needs.set-variables.outputs.resources }}
+      taxroot: ${{ needs.set-variables.outputs.taxroot }}
+    secrets:
+      JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
+      ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
+      STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
 
-  # init-release:
-  #   needs:
-  #     - set-variables
-  #     - fetch-resources
-  #   uses: ./.github/workflows/genomehubs-init.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     release: ${{ needs.set-variables.outputs.release }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
+  init-release:
+    needs:
+      - set-variables
+      - fetch-resources
+    uses: ./.github/workflows/genomehubs-init.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
 
   index-directories:
     needs:
       - set-variables
-      # - init-release
+      - init-release
     uses: ./.github/workflows/genomehubs-index.yml
     with:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
@@ -77,8 +77,7 @@ jobs:
   index-files:
     needs:
       - set-variables
-      - index-directories
-      # - init-release
+      - init-release
     uses: ./.github/workflows/genomehubs-index-files.yml
     with:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
@@ -90,6 +89,16 @@ jobs:
       - set-variables
       - index-directories
     uses: ./.github/workflows/genomehubs-fill.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
+
+  run-tests:
+    needs:
+      - set-variables
+      - fill-values
+    uses: ./.github/workflows/genomehubs-test.yml
     with:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
       release: ${{ needs.set-variables.outputs.release }}

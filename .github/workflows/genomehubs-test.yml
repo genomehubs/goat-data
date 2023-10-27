@@ -1,0 +1,85 @@
+name: genomehubs-test
+on:
+  workflow_call:
+    inputs:
+      dockerversion:
+        required: true
+        type: string
+      release:
+        required: true
+        type: string
+      resources:
+        required: true
+        type: string
+
+jobs:
+  genomehubs-test:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run genomehubs API test generic
+        run: |
+          yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v `pwd`/tests:/genomehubs/tests \
+            genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+              "genomehubs test \
+                --config-file sources/goat.yaml \
+                --base-url http://localhost:3000/api/v2 \
+                --json-test-dir tests/api/generic"
+
+      # - name: Run genomehubs API test CGP
+      #   run: |
+      #     yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
+      #     docker run --rm --network=host \
+      #       -v `pwd`/sources:/genomehubs/sources \
+      #       -v `pwd`/tests:/genomehubs/tests \
+      #       genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+      #         "genomehubs test \
+      #           --config-file sources/goat.yaml \
+      #           --base-url http://localhost:3000/api/v2 \
+      #           --json-test-dir tests/api/CGP"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Run genomehubs UI tests
+        run: mkdir -p ${{ inputs.resources }}/projects
+          node ./tests/integration_tests/ui/scraper.mjs ./tests/ui ${{ inputs.resources }}/projects
+
+      - name: Copy test images to S3
+        run: |
+          s3cmd put setacl --acl-public ${{ inputs.resources }}/projects s3://goat/releases/$RELEASE/ --recursive
+
+  rsync_to_lustre:
+    needs:
+      - genomehubs-test
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: rsync production snapshot to sanger lustre
+        run: |
+          rsync -av --delete /volumes/docker/snapshots/production/production-${{ inputs.release }} farm5:/lustre/scratch123/tol/share/goat/dev/
+          rsync -av --delete /volumes/docker/resources/files/                         farm5:/lustre/scratch123/tol/share/goat/dev/files/
+
+  restore_on_prod:
+    needs:
+      - genomehubs-test
+    runs-on: [self-hosted, runner2]
+    steps:
+      - name: ssh prod and restore
+        run: |
+          ssh tol-goat-prod-run1 "
+          curl -s -X DELETE 'es1:9200/*--${{ inputs.release }}'
+          curl -s -X PUT 'es1:9200/_snapshot/production-${{ inputs.release }}' \
+            -H 'Content-Type: application/json' \
+            -d' { \"type\": \"fs\", \"settings\": { \"location\": \"/usr/share/elasticsearch/snapshots/production/production-${{ inputs.release }}\" } }'
+          curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file/_restore?wait_for_completion=true&pretty' \
+            -H 'Content-Type: application/json' \
+            -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
+          curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill/_restore?wait_for_completion=true&pretty' \
+            -H 'Content-Type: application/json' \
+            -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
+          "

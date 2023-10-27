@@ -23,7 +23,9 @@ S3YAMLS=$(grep -vFf <(echo "$SOURCEYAMLS" | awk -F"/" '{print $NF}') <(echo "$S3
 
 # Loop through YAMLs fetching YAML and data from S3 if available else from sources
 while read YAML; do
-  echo $YAML
+  if [ -z "$YAML" ]; then
+    continue
+  fi
   YAMLFILE=$(basename $YAML)
   if [ ! -z "$RESOURCES" ]; then
     # Fetch YAML
@@ -86,8 +88,10 @@ fi
 cp -r sources/$DIRNAME/*tests $tmpdir 2>/dev/null
 if [ ! -z "$RESOURCES" ]; then
   while read TESTURL; do
-    echo $TESTS
-    TESTS=$(basename $TESTS)
+    if [ -z "$TESTURL" ]; then
+      continue
+    fi
+    TESTS=$(basename $TESTURL)
     s3cmd get s3://goat/resources/$DIRECTORY/$TESTS $tmpdir/$TESTS 2>/dev/null
     if [ $? -eq 0 ]; then
       echo $TESTS >> $tmpdir/from_resources.txt
@@ -156,7 +160,6 @@ if [ $? -eq 0 ]; then
           <(md5sum $tmpdir/$FILE | awk '{print $1}')
         if [ $? -ne 0 ]; then
           # update associated YAML file with release date
-          echo $YAML
           YAML=$(basename $(grep -w $FILE $tmpdir/*.yaml | cut -d':' -f1))
           cat $YAML | yq '.file.source_date='$RELEASE > $workdir/sources/$DIRNAME/$YAML
         fi
