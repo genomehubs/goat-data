@@ -4,7 +4,7 @@ file:
   name: taxon_id_odb10_lineage.tsv
   source: BUSCOv5
   source_url: https://busco.ezlab.org/
-  tests: tests
+  tests: lineage_tests
 attributes:
   odb10_lineage:
     header: odb10_lineage

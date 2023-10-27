@@ -73,7 +73,7 @@ if [ ! -z "$RESOURCES" ]; then
       if [ ! -e "$tmpdir/names/$FILE" ]; then
         cp sources/$DIRNAME/names/$FILE $tmpdir/names/
       fi
-    done <<< $(ls sources/$DIRNAME/lineage_tests 2>/dev/null)
+    done <<< $(ls sources/$DIRNAME/names 2>/dev/null)
   else
     s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir/names 2>/dev/null
   fi
@@ -81,22 +81,24 @@ else
   s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir/names 2>/dev/null
 fi
 
-# Fetch tests directory
+# Fetch tests directories
 if [ ! -z "$RESOURCES" ]; then
-  s3cmd get s3://goat/resources/$DIRECTORY/tests $tmpdir/tests 2>/dev/null
-  if [ $? -eq 0 ]; then
-    echo tests >> $tmpdir/from_resources.txt
-    # Add extra tests from sources
-    while read YAML; do
-      if [ ! -e "$tmpdir/tests/$YAML" ]; then
-        cp sources/$DIRNAME/tests/$YAML $tmpdir/tests/
-      fi
-    done <<< $(ls sources/$DIRNAME/lineage_tests 2>/dev/null)
-  else
-    cp -r sources/$DIRNAME/tests $tmpdir/tests 2>/dev/null
-  fi
+  while read TESTS; do
+    s3cmd get s3://goat/resources/$DIRECTORY/$TESTS $tmpdir/$TESTS 2>/dev/null
+    if [ $? -eq 0 ]; then
+      echo $TESTS >> $tmpdir/from_resources.txt
+      # Add extra tests from sources
+      while read YAML; do
+        if [ ! -e "$tmpdir/$TESTS/$YAML" ]; then
+          cp sources/$DIRNAME/$TESTS/$YAML $tmpdir/$TESTS/
+        fi
+      done <<< $(ls sources/$DIRNAME/$TESTS 2>/dev/null)
+    else
+      cp -r sources/$DIRNAME/$TESTS $tmpdir/$TESTS 2>/dev/null
+    fi
+  done <<< $(basename $(s3cmd ls s3://goat/resources/$DIRECTORY/ | awk '{print $NF}') | grep 'tests$')
 else
-  cp -r sources/$DIRNAME/tests $tmpdir/tests 2>/dev/null
+  cp -r sources/$DIRNAME/*tests $tmpdir 2>/dev/null
 fi
 
 
@@ -138,7 +140,7 @@ if [ $? -eq 0 ]; then
       if [[ $FILE == *yaml ]]; then
         echo move $FILE to github
         cp $tmpdir/$FILE $workdir/sources/$DIRNAME/
-      elif [[ $FILE == tests ]]; then
+      elif [[ $FILE == *tests ]]; then
         echo move $FILE to github
         mkdir -p $workdir/sources/$DIRNAME/$FILE
         cp $tmpdir/$FILE/* $workdir/sources/$DIRNAME/$FILE/

@@ -1,0 +1,15 @@
+description: check taxon 9612 (Canis lupus) has assembly_span
+endpoint: taxon--{{taxonomy-source}}--{{hub-name}}--{{hub-version}}/_doc/taxon-9612
+querystring:
+assert:
+  _id: taxon-9612
+  found: True
+  _source:
+    taxon_id: "9612"
+    attributes:
+      - key: assembly_span
+        values:
+          - long_value:
+              jsonSchema:
+                minimum: 2000000000
+                maximum: 3000000000
