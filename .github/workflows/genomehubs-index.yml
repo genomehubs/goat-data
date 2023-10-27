@@ -16,15 +16,15 @@ jobs:
   index-directories:
     runs-on: [self-hosted, runner1]
     steps:
-      # - name: checkout first
-      #   uses: actions/checkout@v3
-      #   with:
-      #     persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
-      #     clean: true
+      - name: checkout first
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
+          clean: true
 
-      # - name: checkout RELEASE, or create a new branch
-      #   run: |
-      #     git checkout -b ${{ inputs.release }}
+      - name: checkout RELEASE, or create a new branch
+        run: |
+          git checkout -b ${{ inputs.release }}
 
       # - name: restore init snapshot
       #   run: |
