@@ -15,7 +15,7 @@ on:
 jobs:
   genomehubs-test:
     runs-on: [self-hosted, runner1]
-    container: ubuntu
+    container: genomehubs/genomehubs:${{ inputs.dockerversion }}
     services:
       goat-api:
         image: genomehubs/genomehubs-api:${{ inputs.dockerversion }}
@@ -33,6 +33,9 @@ jobs:
         env:
           GH_SITENAME: GoaT
           GH_API_URL: http://goat-api:3000/api/v2
+        volumes:
+          - sources:/genomehubs/sources
+          - tests:/genomehubs/tests
 
     steps:
       - uses: actions/checkout@v3
@@ -40,14 +43,18 @@ jobs:
       - name: Run genomehubs API test generic
         run: |
           yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
-          docker run --rm --network=host \
-            -v `pwd`/sources:/genomehubs/sources \
-            -v `pwd`/tests:/genomehubs/tests \
-            genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-              "genomehubs test \
+          genomehubs test \
                 --config-file sources/goat.yaml \
                 --base-url http://goat-api:3000/api/v2 \
-                --json-test-dir tests/api/generic"
+                --json-test-dir tests/api/generic
+          # docker run --rm --network=host \
+          #   -v `pwd`/sources:/genomehubs/sources \
+          #   -v `pwd`/tests:/genomehubs/tests \
+          #   genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+          #     "genomehubs test \
+          #       --config-file sources/goat.yaml \
+          #       --base-url http://goat-api:3000/api/v2 \
+          #       --json-test-dir tests/api/generic"
 
       # - name: Run genomehubs API test CGP
       #   run: |
