@@ -95,9 +95,9 @@ jobs:
         env:
           GH_RELEASE: ${{ inputs.release }}
           GH_HUBNAME: goat
-          GH_API_PORT: 3001
+          GH_API_PORT: 3000
           GH_SITENAME: GoaT
-          GH_API_URL: http://localhost:3001/api/v2
+          GH_API_URL: http://localhost:3000/api/v2
           GH_BASENAME: ""
 
       - name: Copy test images to S3
