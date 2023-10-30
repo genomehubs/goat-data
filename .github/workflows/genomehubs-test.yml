@@ -43,19 +43,9 @@ jobs:
   #     - name: Pip install genomehubs
   #       run: yes | pip install genomehubs
 
-  #     - name: Fetch genomehubs API
-  #       run: |
-  #         mkdir -p ${{ inputs.resources }}/genomehubs
-  #         curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name')/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
-  #         chmod 755 ${{ inputs.resources }}/genomehubs/genomehubs-api
-
-  #     - name: Fetch genomehubs UI
-  #       run: |
-  #         curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name')/genomehubs-ui-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
-  #         chmod 755 ${{ inputs.resources }}/genomehubs/genomehubs-ui
-
   #     - name: Run genomehubs API tests
   #       run: |
+  #         chmod 755 ${{ inputs.resources }}/genomehubs/genomehubs-*
   #         yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
   #         ${{ inputs.resources }}/genomehubs/genomehubs-api &
   #         sleep 5
@@ -132,7 +122,7 @@ jobs:
           curl -s -X DELETE 'es1:9200/*--${{ inputs.release }}'
           curl -s -X PUT 'es1:9200/_snapshot/production-${{ inputs.release }}' \
             -H 'Content-Type: application/json' \
-            -d' { \"type\": \"fs\", \"settings\": { \"location\": \"/usr/share/elasticsearch/snapshots/production/production-${{ inputs.dockerversion }}\" } }'
+            -d' { \"type\": \"fs\", \"settings\": { \"location\": \"/usr/share/elasticsearch/snapshots/production/production-${{ inputs.release }}\" } }'
           curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file/_restore?wait_for_completion=true&pretty' \
             -H 'Content-Type: application/json' \
             -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'

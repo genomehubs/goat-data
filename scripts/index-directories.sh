@@ -142,7 +142,7 @@ if [ $? -eq 0 ]; then
     echo $RELEASE > $tmpdir/latest-release.txt
     s3cmd put setacl --acl-public $tmpdir/latest-release.txt s3://goat/resources/$DIRECTORY/
     echo Reading $(wc -l $tmpdir/from_resources.txt) files to move from $tmpdir/from_resources.txt
-    while read FILE YAML; do
+    while read FILE; do
       if [[ $FILE == *yaml ]]; then
         echo move $FILE to github
         cp $tmpdir/$FILE $workdir/sources/$DIRNAME/
@@ -161,7 +161,7 @@ if [ $? -eq 0 ]; then
         if [ $? -ne 0 ]; then
           # update associated YAML file with release date
           YAML=$(basename $(grep -w $FILE $tmpdir/*.yaml | cut -d':' -f1))
-          cat $YAML | yq '.file.source_date='$RELEASE > $workdir/sources/$DIRNAME/$YAML
+          cat $YAML | yq '.file.source_date="'$RELEASE'"' > $workdir/sources/$DIRNAME/$YAML
         fi
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/$FILE

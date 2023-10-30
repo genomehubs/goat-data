@@ -26,10 +26,42 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch NCBI datasets executable
         run: |
-          CMD="curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets" \
-          FALLBACK=s3://goat/resources/datasets \
-          RESOURCES=${{ inputs.resources }} \
           ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets
+          FALLBACK: s3://goat/resources/datasets
+          RESOURCES: ${{ inputs.resources }}
+
+  fetch-genomehubs-api:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch GenomeHubs API executable
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
+                curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
+              )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
+          FALLBACK: s3://goat/resources/genomehubs/genomehubs-api
+          RESOURCES: ${{ inputs.resources }}/genomehubs
+
+  fetch-genomehubs-ui:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch GenomeHubs UI executable
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
+                curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
+              )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
+          FALLBACK: s3://goat/resources/genomehubs/genomehubs-ui
+          RESOURCES: ${{ inputs.resources }}/genomehubs
 
   fetch-resources-taxroot:
     needs:
@@ -75,9 +107,10 @@ jobs:
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"genomehubs parse \
               --btk --btk-root Eukaryota --outfile tmp/btk.tsv.gz\"" \
-          FALLBACK=s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.yaml \
-          RESOURCES=${{ inputs.resources }}/btk \
           ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          FALLBACK: s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.yaml
+          RESOURCES: ${{ inputs.resources }}/btk
 
   fetch-ncbi-taxdump:
     runs-on: [self-hosted, runner1]
@@ -85,11 +118,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch NCBI taxdump
         run: |
-          CMD="curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
-          | tar xzf - nodes.dmp names.dmp" \
-          FALLBACK=s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp \
-          RESOURCES=${{ inputs.resources }}/taxdump/ncbi \
           ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
+            | tar xzf - nodes.dmp names.dmp
+          FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp \
+          RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
 
   fetch-refseq-organelles:
     runs-on: [self-hosted, runner1]
@@ -97,13 +132,15 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch RefSeq organelles
         run: |
-          CMD="docker run --rm --network=host \
-          -v \$(pwd):/genomehubs/tmp \
-          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz\"" \
-          FALLBACK=s3://goat/resources/assembly-data/refseq_organelles.tsv.gz \
-          RESOURCES=${{ inputs.resources }}/assembly-data \
           ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            docker run --rm --network=host \
+              -v \$(pwd):/genomehubs/tmp \
+              genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+                "genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz"
+          FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/assembly-data
 
   fetch-tolids:
     runs-on: [self-hosted, runner1]
@@ -111,11 +148,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch ToLIDs
         run: |
-          CMD="curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
-          | gzip -c > tolids.tsv.gz" \
-          FALLBACK=s3://goat/resources/tolids/tolids.tsv.gz \
-          RESOURCES=${{ inputs.resources }}/tolids \
           ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
+            | gzip -c > tolids.tsv.gz
+          FALLBACK: s3://goat/resources/tolids/tolids.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/tolids
 
   fetch-from-apis:
     runs-on: [self-hosted, runner1]
@@ -186,24 +225,24 @@ jobs:
             Rscript ./scripts/get_googlesheets.R /tmp/genomesize-karyotype/tmp /tmp/assembly-data/tmp
       - name: Move assembly data files or fallback to previous
         run: |
-          ls ${{ inputs.resources }}/assembly-data/tmp
-          CMD="mv ${{ inputs.resources }}/assembly-data/tmp/* ./" \
           FALLBACK=$(ls ${{ inputs.resources }}/assembly-data/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/assembly-data\//g;s/\.failed$//g'|paste -sd, -) \
-          RESOURCES=${{ inputs.resources }}/assembly-data \
           ./scripts/update-resources/fetch-or-fallback.sh
           mkdir -p ${{ inputs.resources }}/assembly-data-taxon
           cp ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
+        env:
+          CMD: mv ${{ inputs.resources }}/assembly-data/tmp/* ./
+          RESOURCES: ${{ inputs.resources }}/assembly-data
       - name: Move genomesize/karyotype files or fallback to previous
         run: |
-          ls ${{ inputs.resources }}/genomesize-karyotype/tmp
-          CMD="mv ${{ inputs.resources }}/genomesize-karyotype/tmp/* ./" \
           FALLBACK=$(ls ${{ inputs.resources }}/genomesize-karyotype/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/genomesize-karyotype\//g;s/\.failed$//g'|paste -sd, -) \
-          RESOURCES=${{ inputs.resources }}/genomesize-karyotype \
           ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: mv ${{ inputs.resources }}/genomesize-karyotype/tmp/* ./
+          RESOURCES: ${{ inputs.resources }}/genomesize-karyotype
       - name: Move status list files or fallback to previous
         run: |
-          ls ${{ inputs.resources }}/status-lists/tmp
-          CMD="mv ${{ inputs.resources }}/status-lists/tmp/* ./" \
           FALLBACK=$(ls ${{ inputs.resources }}/status-lists/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/status-lists\//g;s/\.failed$//g'|paste -sd, -) \
-          RESOURCES=${{ inputs.resources }}/status-lists \
           ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: mv ${{ inputs.resources }}/status-lists/tmp/* ./
+          RESOURCES: ${{ inputs.resources }}/status-lists
