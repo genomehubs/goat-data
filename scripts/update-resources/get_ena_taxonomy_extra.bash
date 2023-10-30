@@ -36,13 +36,13 @@ else
 fi
 
 # if prev extra jsonl exists, gunzip it first
-gunzip ena-taxonomy.extra.$TAXROOT.jsonl.gz 2>/dev/null
+gunzip ena-taxonomy.extra.$TAXROOT.prev.jsonl.gz 2>/dev/null
 if [[ $? -eq 0 ]]; then
   # then only keep those entries which are in current resulttaxon.tax_tree$TAXID.tsv
   tail -n+2 resulttaxon.tax_tree$TAXROOT.taxids \
   | perl -plne 's/(\d+)/"taxId" : "$1"/' \
   | fgrep -f - ena-taxonomy.extra.$TAXROOT.jsonl \
-  > ena-taxonomy.extra.$TAXROOT.prev.jsonl
+  > TMP && mv TMP ena-taxonomy.extra.$TAXROOT.prev.jsonl
 else
   echo "No previous jsonl file found" || \
   touch ena-taxonomy.extra.$TAXROOT.prev.jsonl
@@ -59,7 +59,6 @@ cat ena-taxonomy.extra.$TAXROOT.prev.taxids ena-taxonomy.xml.taxids \
 tail -n+2 resulttaxon.tax_tree$TAXROOT.extra.curr.taxids \
 | while read -r TAXID
 do
-  echo https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/$TAXID
   curl -s https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/$TAXID \
   | perl -lne '
     $jsonl = "" if /^{/;
