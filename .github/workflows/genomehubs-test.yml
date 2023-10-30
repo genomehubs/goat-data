@@ -46,12 +46,12 @@ jobs:
       - name: Fetch genomehubs API
         run: |
           mkdir -p ${{ inputs.resources }}/genomehubs
-          curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name')/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
+          curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name')/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
           chmod 755 ${{ inputs.resources }}/genomehubs/genomehubs-api
 
       - name: Fetch genomehubs UI
         run: |
-          curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name')/genomehubs-ui-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
+          curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name')/genomehubs-ui-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
           chmod 755 ${{ inputs.resources }}/genomehubs/genomehubs-ui
 
       - name: Run genomehubs API test generic
