@@ -21,11 +21,11 @@ jobs:
         run: |
           ./scripts/update-resources/fetch-or-fallback.sh || exit 0
           ls -al
-          mv ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.prev.jsonl.gz \
-          || touch ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.prev.jsonl.gz
+          mv ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.prev.jsonl.gz \
+          || touch ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.prev.jsonl.gz
           ls -al
         env:
-          CMD: cp ${{ inputs.resources }}/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./
+          CMD: cp ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz ./
           FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.${{ inputs.taxroot }}.jsonl.gz
           RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
