@@ -21,7 +21,7 @@ on:
 
 jobs:
   fetch-ncbi-datasets:
-    runs-on: [self-hosted, runner1]
+    runs-on: [self-hosted, runner2]
     steps:
       - uses: actions/checkout@v3
       - name: Fetch NCBI datasets executable
