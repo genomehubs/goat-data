@@ -15,46 +15,61 @@ on:
 jobs:
   genomehubs-test:
     runs-on: [self-hosted, runner1]
-    container: genomehubs/genomehubs:${{ inputs.dockerversion }}
-    services:
-      goat-api:
-        image: genomehubs/genomehubs-api:${{ inputs.dockerversion }}
-        # ports:
-        # - 3000:3000
-        env:
-          GH_RELEASE: ${{ inputs.release }}
-          GH_HUBNAME: goat
-          GH_API_PORT: 3000
-          GH_NODE: http://es1:9200
-      goat-ui:
-        image: genomehubs/genomehubs-ui:${{ inputs.dockerversion }}
-        # ports:
-        #   - 8880:8880
-        env:
-          GH_SITENAME: GoaT
-          GH_API_URL: http://goat-api:3000/api/v2
-        volumes:
-          - sources:/genomehubs/sources
-          - tests:/genomehubs/tests
+    # services:
+    #   goat-api:
+    #     image: genomehubs/genomehubs-api:${{ inputs.dockerversion }}
+    #     # ports:
+    #     # - 3000:3000
+    #     env:
+    #       GH_RELEASE: ${{ inputs.release }}
+    #       GH_HUBNAME: goat
+    #       GH_API_PORT: 3000
+    #       GH_NODE: http://es1:9200
+    #   goat-ui:
+    #     image: genomehubs/genomehubs-ui:${{ inputs.dockerversion }}
+    #     # ports:
+    #     #   - 8880:8880
+    #     env:
+    #       GH_SITENAME: GoaT
+    #       GH_API_URL: http://goat-api:3000/api/v2
 
     steps:
-      # - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Pip install genomehubs
+        run: yes | pip install genomehubs
+
+      - name: Fetch genomehubs API
+        run: |
+          mkdir -p ${{ inputs.resources }}/genomehubs
+          curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name)/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
+          chmod 755 genomehubs-api
+
+      - name: Fetch genomehubs UI
+        run: |
+          curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name)/genomehubs-ui-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
+          chmod 755 genomehubs-ui
 
       - name: Run genomehubs API test generic
         run: |
           yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
+          GH_RELEASE=2021.10.15 GH_HUBNAME=goat GH_API_PORT=3001 ./dist/genomehubs-api &
+          API_PID=$!
+          echo "API_PID=$API_PID"
+          echo "API_PID=$API_PID" >> $GITHUB_ENV
+          sleep 5
           genomehubs test \
-                --config-file sources/goat.yaml \
-                --base-url http://goat-api:3000/api/v2 \
-                --json-test-dir tests/api/generic
-          # docker run --rm --network=host \
-          #   -v `pwd`/sources:/genomehubs/sources \
-          #   -v `pwd`/tests:/genomehubs/tests \
-          #   genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-          #     "genomehubs test \
-          #       --config-file sources/goat.yaml \
-          #       --base-url http://goat-api:3000/api/v2 \
-          #       --json-test-dir tests/api/generic"
+            --config-file sources/goat.yaml \
+            --base-url http://localhost:3001/api/v2 \
+            --json-test-dir tests/api/generic"
+        env:
+          GH_RELEASE: ${{ inputs.release }}
+          GH_HUBNAME: goat
+          GH_API_PORT: 3001
 
       # - name: Run genomehubs API test CGP
       #   run: |
