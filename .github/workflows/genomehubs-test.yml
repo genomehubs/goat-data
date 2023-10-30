@@ -18,8 +18,8 @@ jobs:
     services:
       goat-api:
         image: genomehubs/genomehubs-api:${{ inputs.dockerversion }}
-        ports:
-          - 3000:3000
+        # ports:
+        # - 3000:3000
         env:
           GH_RELEASE: ${{ inputs.release }}
           GH_HUBNAME: goat
@@ -27,11 +27,11 @@ jobs:
           GH_NODE: http://es1:9200
       goat-ui:
         image: genomehubs/genomehubs-ui:${{ inputs.dockerversion }}
-        ports:
-          - 8880:8880
+        # ports:
+        #   - 8880:8880
         env:
           GH_SITENAME: GoaT
-          GH_API_URL: http://localhost:3000/api/v2
+          GH_API_URL: http://goat-api:3000/api/v2
 
     steps:
       - uses: actions/checkout@v3
@@ -45,7 +45,7 @@ jobs:
             genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
               "genomehubs test \
                 --config-file sources/goat.yaml \
-                --base-url http://localhost:3000/api/v2 \
+                --base-url http://goat-api:3000/api/v2 \
                 --json-test-dir tests/api/generic"
 
       # - name: Run genomehubs API test CGP
