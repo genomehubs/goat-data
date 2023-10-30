@@ -65,7 +65,7 @@ jobs:
           genomehubs test \
             --config-file sources/goat.yaml \
             --base-url http://localhost:3001/api/v2 \
-            --json-test-dir tests/api/generic"
+            --json-test-dir tests/api/generic
         env:
           GH_RELEASE: ${{ inputs.release }}
           GH_HUBNAME: goat
