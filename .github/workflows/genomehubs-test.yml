@@ -90,6 +90,7 @@ jobs:
           ${{ inputs.resources }}/genomehubs/genomehubs-api &
           ${{ inputs.resources }}/genomehubs/genomehubs-ui &
           sleep 5
+          npm install js-yaml puppeteer
           node ./tests/ui/scraper.mjs ./tests/ui ${{ inputs.resources }}/projects
         env:
           GH_RELEASE: ${{ inputs.release }}
