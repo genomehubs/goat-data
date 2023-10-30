@@ -15,6 +15,7 @@ on:
 jobs:
   genomehubs-test:
     runs-on: [self-hosted, runner1]
+    container: ubuntu
     services:
       goat-api:
         image: genomehubs/genomehubs-api:${{ inputs.dockerversion }}
