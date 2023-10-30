@@ -112,19 +112,19 @@ jobs:
   #         FALLBACK: s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.yaml
   #         RESOURCES: ${{ inputs.resources }}/btk
 
-  fetch-ncbi-taxdump:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch NCBI taxdump
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
-            | tar xzf - nodes.dmp names.dmp
-          FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp
-          RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
+  # fetch-ncbi-taxdump:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch NCBI taxdump
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
+  #           | tar xzf - nodes.dmp names.dmp
+  #         FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp
+  #         RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
 
   # fetch-refseq-organelles:
   #   runs-on: [self-hosted, runner1]
