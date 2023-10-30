@@ -76,4 +76,4 @@ jobs:
           curl -s -X DELETE "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file" || exit 0
           curl -s -X PUT    "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
-            -d' { "indices": "analysis-*${{ inputs.release }},file-*"${{ inputs.release }}, "include_global_state":false}'
+            -d' { "indices": "analysis-*${{ inputs.release }},file-*${{ inputs.release }}", "include_global_state":false}'
