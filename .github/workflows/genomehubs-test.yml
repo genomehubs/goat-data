@@ -54,13 +54,10 @@ jobs:
           curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$(curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name')/genomehubs-ui-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
           chmod 755 ${{ inputs.resources }}/genomehubs/genomehubs-ui
 
-      - name: Run genomehubs API test generic
+      - name: Run genomehubs API tests
         run: |
           yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
           ${{ inputs.resources }}/genomehubs/genomehubs-api &
-          API_PID=$!
-          echo "API_PID=$API_PID"
-          echo "API_PID=$API_PID" >> $GITHUB_ENV
           sleep 5
           genomehubs test \
             --config-file sources/goat.yaml \
@@ -88,8 +85,19 @@ jobs:
           node-version: "16"
 
       - name: Run genomehubs UI tests
-        run: mkdir -p ${{ inputs.resources }}/projects
+        run: |
+          mkdir -p ${{ inputs.resources }}/projects
+          ${{ inputs.resources }}/genomehubs/genomehubs-api &
+          ${{ inputs.resources }}/genomehubs/genomehubs-ui &
+          sleep 5
           node ./tests/integration_tests/ui/scraper.mjs ./tests/ui ${{ inputs.resources }}/projects
+        env:
+          GH_RELEASE: ${{ inputs.release }}
+          GH_HUBNAME: goat
+          GH_API_PORT: 3001
+          GH_SITENAME: GoaT
+          GH_API_URL: http://localhost:3001/api/v2
+          GH_BASENAME: ""
 
       - name: Copy test images to S3
         run: |
