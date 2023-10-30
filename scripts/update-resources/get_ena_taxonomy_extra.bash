@@ -41,7 +41,7 @@ if [[ $? -eq 0 ]]; then
   # then only keep those entries which are in current resulttaxon.tax_tree$TAXID.tsv
   tail -n+2 resulttaxon.tax_tree$TAXROOT.taxids \
   | perl -plne 's/(\d+)/"taxId" : "$1"/' \
-  | fgrep -f - ena-taxonomy.extra.$TAXROOT.jsonl \
+  | fgrep -f - ena-taxonomy.extra.$TAXROOT.prev.jsonl \
   > TMP && mv TMP ena-taxonomy.extra.$TAXROOT.prev.jsonl
 else
   echo "No previous jsonl file found" || \
