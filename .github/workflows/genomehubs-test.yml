@@ -49,6 +49,7 @@ jobs:
         run: |
           mkdir -p ${{ inputs.resources }}/projects
           docker run --rm \
+            --network host \
             -e GH_RELEASE=${{ inputs.release }} \
             -e GH_HUBNAME=goat \
             -e GH_API_PORT=3000 \
