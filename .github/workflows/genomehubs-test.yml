@@ -55,7 +55,7 @@ jobs:
             -e GH_NODE=http://es1:9200 \
             -v `pwd`/tests/ui:/genomehubs/tests \
             -v ${{ inputs.resources }}/projects:/genomehubs/tests/out \
-            genomehubs/genomehubs-tests:develop \
+            genomehubs/genomehubs-test:develop \
               genomehubs-test-ui
 
       - name: Copy test images to S3
