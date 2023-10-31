@@ -48,7 +48,7 @@ jobs:
       - name: Run genomehubs UI tests
         run: |
           mkdir -p ${{ inputs.resources }}/projects
-          docker run --rm -it \
+          docker run --rm \
             -e GH_RELEASE=${{ inputs.release }} \
             -e GH_HUBNAME=goat \
             -e GH_API_PORT=3000 \
