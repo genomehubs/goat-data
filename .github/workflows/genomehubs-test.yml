@@ -27,6 +27,7 @@ jobs:
             -e GH_RELEASE=${{ inputs.release }} \
             -e GH_HUBNAME=goat \
             -e GH_NODE=http://es1:9200 \
+            -v `pwd`/sources/goat.yaml:/genomehubs/config/config.yaml \
             -v `pwd`/tests/api/generic:/genomehubs/tests \
             genomehubs/genomehubs-test:develop \
               genomehubs-test-api
