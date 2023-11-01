@@ -2,36 +2,68 @@ library(tidyverse)
 library(janitor)
 library(googlesheets4)
 
+args <- commandArgs(trailingOnly = TRUE)
+
+dir <- args[1]
+dir2 <- args[2]
+
+handleError <- function(e, filename) {
+  print(paste("Failed to create", filename))
+  print(e)
+  file.create(paste(filename, "failed", sep="."))
+}
+
 # dtol plant c values Sahr Mian
-read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSt0R1T3MpoOM6UFNMaT_Q9gR5TYyUZC1wgLqW_6_cH9zzII8ehadrbHX8bpktjTv2_yt_KHaj3x_e1/pub?output=tsv",
-    col_types = "c") %>%
-  clean_names() %>% remove_empty() %>%
-  filter(!is.na(genus), project=="DTOL") %>%
-  add_column(primary = 1) -> kew
-
-write_tsv(kew, "./sources/genomesize_karyotype/DTOL_Plant_Genome_Size_Estimates.tsv")
-
+tryCatch(
+  {
+    outfile <- paste(dir, "DTOL_Plant_Genome_Size_Estimates.tsv", sep="/")
+    read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSt0R1T3MpoOM6UFNMaT_Q9gR5TYyUZC1wgLqW_6_cH9zzII8ehadrbHX8bpktjTv2_yt_KHaj3x_e1/pub?output=tsv",
+        col_types = "c") %>%
+      clean_names() %>% remove_empty(c("rows")) %>%
+      filter(!is.na(genus), project=="DTOL") %>%
+      add_column(primary = 1) -> kew
+    write_tsv(kew, outfile)
+  },
+  error = function(e){
+    handleError(e, outfile)
+  }
+)
 
 # shane's tolqc status - select length if available, else est_size
-read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTU-En_URbYPtfyjBueQhnz7wYHt-OHVxvRyv9tNvCUPCTX9EEzxOL41QCUh6hgVNv-Vv_gLSAMJXv-/pub?gid=1442224132&single=true&output=tsv",
-    na = c("NA", "missing","","NULL")) %>%
-  clean_names() %>% remove_empty() %>%
-  filter(!is.na(taxon)) %>%
-  filter(is.na(accession) | !str_detect(accession, "^GCA_")) %>%
-  filter(!str_detect(statussummary, "^9")) %>%
-  filter(!str_detect(statussummary, "^5")) %>%
-  select(taxon, est_size_mb, length_mb) %>%
-  mutate(across(c(est_size_mb, length_mb), as.numeric)) %>%
-  filter(!is.na(est_size_mb) | !is.na(length_mb)) -> tolqc
-
-write_tsv(tolqc, "./sources/genomesize_karyotype/DTOL_assembly_informatics_status_kmer_draft.tsv")
+tryCatch(
+  {
+    outfile <- paste(dir, "DTOL_assembly_informatics_status_kmer_draft.tsv", sep="/")
+    read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTU-En_URbYPtfyjBueQhnz7wYHt-OHVxvRyv9tNvCUPCTX9EEzxOL41QCUh6hgVNv-Vv_gLSAMJXv-/pub?gid=1442224132&single=true&output=tsv",
+        na = c("NA", "missing","","NULL")) %>%
+      clean_names() %>% remove_empty(c("rows")) %>%
+      filter(!is.na(taxon)) %>%
+      filter(is.na(accession) | !str_detect(accession, "^GCA_")) %>%
+      filter(!str_detect(statussummary, "^9")) %>%
+      filter(!str_detect(statussummary, "^5")) %>%
+      select(taxon, est_size_mb, length_mb) %>%
+      mutate(across(c(est_size_mb, length_mb), as.numeric)) %>%
+      filter(!is.na(est_size_mb) | !is.na(length_mb)) -> tolqc
+    write_tsv(tolqc, outfile)
+  },
+  error = function(e){
+    handleError(e, outfile)
+  }
+)
 
 # CNGB
-read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQeTqi-qnoNgNl58gWDBT4CcR8nF9SmFOkC82KC6pkH42CoEi94yInhBE25SfxBqNeMBeVbpeEVs9GI/pub?gid=1726876704&single=true&output=tsv",
-    na = c("NA", "missing","","NULL")) %>%
-  remove_empty() -> cngb
-
-write_tsv(cngb, "./sources/assembly-data/cngb.tsv")
+tryCatch(
+  {
+    outfile <- paste(dir2, "cngb.tsv", sep="/")
+    read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQeTqi-qnoNgNl58gWDBT4CcR8nF9SmFOkC82KC6pkH42CoEi94yInhBE25SfxBqNeMBeVbpeEVs9GI/pub?gid=1726876704&single=true&output=tsv",
+        na = c("NA", "missing","","NULL"),
+        show_col_types = FALSE) %>%
+      remove_empty(c("rows")) -> cngb
+    write_tsv(cngb, outfile)
+  },
+  error = function(e){
+    handleError(e, outfile)
+  }
+)
 
 # australian bioportal
 # read_tsv("https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vS4iAxznp7djwBZE-m00ggKoVw8TZgxn19Lz1nYU20h_gYBARFd9ZS1zAjRpQlPE-68XK6zHKFfe4UA/pub?gid=890267489&output=tsv") %>%

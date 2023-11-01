@@ -156,26 +156,24 @@ def expand_sequencing_status(project_table, acronym):
 # Export tsv:
 
 
-def export_expanded_tsv(project_table, acronym):
-    file_name = "./sources/status_lists/" + acronym + "_expanded.tsv"
-    final_tsv = project_table.to_csv(file_name, sep="\t", index=False)
-    return final_tsv
+def export_expanded_tsv(project_table, acronym, dir):
+    file_name = f"{dir}/{acronym}_expanded.tsv"
+    return project_table.to_csv(file_name, sep="\t", index=False)
 
 
 # Putting all together for standard GoaT spreadsheets, schema 2.5
-import import_status_lib as isl
 
 
-def processing_schema_2_5_lists(acronym, url, start_row):
+def processing_schema_2_5_lists(acronym, url, start_row, dir):
     print(f"opening {acronym} url ...")
-    project_table = isl.open_google_spreadsheet(acronym, url, start_row)
+    project_table = open_google_spreadsheet(acronym, url, start_row)
     print(f"cleaning up {acronym} table ...")
-    project_table = isl.general_cleanup_for_table(project_table)
-    project_table = isl.cleanup_headers_specific_units(project_table)
+    project_table = general_cleanup_for_table(project_table)
+    project_table = cleanup_headers_specific_units(project_table)
     print(f"expanding {acronym} target status ...")
-    project_table = isl.expand_target_status(project_table, acronym)
-    project_table = isl.create_status_column(project_table, acronym)
+    project_table = expand_target_status(project_table, acronym)
+    project_table = create_status_column(project_table, acronym)
     print(f"expanding {acronym} sequencing status ...")
-    project_table = isl.expand_sequencing_status(project_table, acronym)
+    project_table = expand_sequencing_status(project_table, acronym)
     print(f"saving {acronym} to file")
-    isl.export_expanded_tsv(project_table, acronym)
+    export_expanded_tsv(project_table, acronym, dir)

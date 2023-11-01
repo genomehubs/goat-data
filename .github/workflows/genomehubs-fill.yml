@@ -1,0 +1,51 @@
+name: genomehubs-fill
+on:
+  workflow_call:
+    inputs:
+      dockerversion:
+        required: true
+        type: string
+      release:
+        required: true
+        type: string
+      resources:
+        required: true
+        type: string
+
+jobs:
+  genomehubs-fill:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Restore initassembly_otttolids_gensizekaryo_reglegbtkasm_status snapshot
+        run: |
+          curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}"
+          curl -s -X POST   "es1:9200/_snapshot/current/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status/_restore?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}" }'
+
+      - name: Run genomehubs fill
+        run: |
+          yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+              "genomehubs fill \
+                --es-host es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --traverse-root 2759 \
+                --traverse-infer-both"
+
+      - name: Snapshot fill
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/current/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}", "include_global_state":false}'
+
+      - name: Snapshot final fill to production-RELEASE
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}", "include_global_state":false}'

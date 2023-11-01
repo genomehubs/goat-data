@@ -1,0 +1,83 @@
+name: genomehubs-index-files
+on:
+  workflow_call:
+    inputs:
+      dockerversion:
+        required: true
+        type: string
+      release:
+        required: true
+        type: string
+      resources:
+        required: true
+        type: string
+
+jobs:
+  index-files:
+    runs-on: [self-hosted, runner2]
+    steps:
+      - name: Restore analysis_file snapshot
+        run: |
+          curl -s -X DELETE "es1:9200/analysis--${{ inputs.release }},file--${{ inputs.release }}"
+          curl -s -X POST "es1:9200/_snapshot/latest/analysis_file/_restore?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' {
+              "ignore_unavailable": true,
+              "include_global_state": false,
+              "include_aliases": false,
+              "rename_pattern" : "--goat--202.*",
+              "rename_replacement" : "--goat--${{ inputs.release }}"
+              }'
+
+      - name: Collect extra analysis and files compared to sources
+        run: |
+          mkdir -p ${{ inputs.resources }}/btk/btk_files_extra
+          diff \
+            <(cat ${{ inputs.resources }}/btk/btk.files.yaml | paste - - - - - - - - - - - - - - -) \
+            <(curl -Ls https://github.com/genomehubs/goat-data/raw/main/sources/btk/btk.files.yaml 2>/dev/null | paste - - - - - - - - - - - - - - -) \
+          | perl -lne 'if (/^< /) { s/^< //; s/\t/\n/g; print}' \
+          > ${{ inputs.resources }}/btk/btk_files_extra/btk.files.yaml
+
+      - name: Temporarily treat all files as extra
+        run: |
+          cp ${{ inputs.resources }}/btk/btk.files.yaml ${{ inputs.resources }}/btk/btk_files_extra/btk.files.yaml
+
+      - name: genomehubs index extra btk files
+        run: |
+          yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            -v /volumes/docker/resources:/genomehubs/resources \
+            -v ${{ inputs.resources }}/btk:/genomehubs/btk \
+            genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+              "genomehubs index \
+                --es-host es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --file-metadata btk/btk_files_extra/btk.files.yaml"
+          rm -r ${{ inputs.resources }}/btk/btk_files_extra
+
+      - name: Move btk files to s3 release directory
+        run: |
+          s3cmd put setacl --acl-public ${{ inputs.resources }}/btk/btk.files.yaml s3://goat/releases/${{ inputs.release }}/btk/btk.files.yaml
+
+      - name: Snapshot RELEASE analysis_file
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/current/${{ inputs.release }}_analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/current/${{ inputs.release }}_analysis_file?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "analysis-*${{ inputs.release }},file-*"${{ inputs.release }}, "include_global_state":false}'
+
+      - name: Snapshot latest BACKUP analysis_file
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/latest/analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/latest/analysis_file?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "analysis-*${{ inputs.release }},file-*"${{ inputs.release }}, "include_global_state":false}'
+
+      - name: Snapshot files to production-RELEASE
+        run: |
+          curl -s -X DELETE "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file" || exit 0
+          curl -s -X PUT    "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file?wait_for_completion=true&pretty" \
+            -H 'Content-Type: application/json' \
+            -d' { "indices": "analysis-*${{ inputs.release }},file-*${{ inputs.release }}", "include_global_state":false}'

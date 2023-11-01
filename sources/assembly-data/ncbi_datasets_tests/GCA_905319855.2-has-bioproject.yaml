@@ -1,0 +1,14 @@
+description: check assembly GCA_905319855.2 (mCanLor1.2) has bioproject
+endpoint: assembly--{{taxonomy-source}}--{{hub-name}}--{{hub-version}}/_doc/assembly-GCA_905319855.2
+querystring:
+assert:
+  _id: assembly-GCA_905319855.2
+  found: True
+  _source:
+    taxon_id: "9612"
+    attributes:
+      - key: bioproject
+        keyword_value:
+          - PRJEB40665
+          - PRJNA533106
+        source: INSDC
