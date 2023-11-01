@@ -7,7 +7,7 @@ function fail {
     printf '%s\n' "$1" >&2
     cd $workdir
     rm -rf $tmpdir
-    curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" &>/dev/null
+    curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_pre${DIRECTORY}" &>/dev/null
     exit "${2-1}"
 }
 
@@ -48,7 +48,8 @@ while read YAML; do
       if [[ $? -eq 0 ]]; then
         echo $FILE >> $tmpdir/from_resources.txt
       else
-        s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
+        s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null ||
+        s3cmd get s3://goat/sources/$DIRNAME/$FILE $tmpdir/$FILE 2>/dev/null
       fi
     fi
   else
@@ -59,6 +60,7 @@ while read YAML; do
       continue
     fi
     # Fetch data file
+    s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null ||
     s3cmd get s3://goat/sources/$DIRNAME/$FILE $tmpdir/$FILE 2>/dev/null
   fi
   if [ ! -e "$tmpdir/$FILE" ]; then
@@ -78,10 +80,12 @@ if [ ! -z "$RESOURCES" ]; then
       fi
     done <<< $(ls sources/$DIRNAME/names 2>/dev/null)
   else
-    s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir/names 2>/dev/null
+    s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir/names 2>/dev/null ||
+    s3cmd get s3://goat/sources/$DIRNAME/names $tmpdir/names 2>/dev/null
   fi
 else
-  s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir/names 2>/dev/null
+  s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir/names 2>/dev/null ||
+  s3cmd get s3://goat/sources/$DIRNAME/names $tmpdir/names 2>/dev/null
 fi
 
 # Fetch tests directories
@@ -116,8 +120,8 @@ if [ ! -z "$RESOURCES" ]; then
   if [ $TYPE != feature ] && [ $TYPE != taxon ]; then
     INDICES="$INDICES,taxon-*$RELEASE"
   fi
-  curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}" &>/dev/null
-  curl -s -X PUT    "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}?wait_for_completion=true&pretty" \
+  curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_pre${DIRECTORY}" &>/dev/null
+  curl -s -X PUT    "es1:9200/_snapshot/current/${RELEASE}_pre${DIRECTORY}?wait_for_completion=true&pretty" \
     -H 'Content-Type: application/json' \
     -d' { "indices": "'$INDICES'", "include_global_state":false}'
 fi
@@ -161,7 +165,7 @@ if [ $? -eq 0 ]; then
         if [ $? -ne 0 ]; then
           # update associated YAML file with release date
           YAML=$(basename $(grep -w $FILE $tmpdir/*.yaml | cut -d':' -f1))
-          cat $YAML | yq '.file.source_date="'$RELEASE'"' > $workdir/sources/$DIRNAME/$YAML
+          cat $tmpdir/$YAML | yq '.file.source_date="'$RELEASE'"' > $workdir/sources/$DIRNAME/$YAML
         fi
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/$FILE
@@ -178,18 +182,18 @@ else
   if [ ! -z "$RESOURCES" ]; then
     # restore indices from snapshot
     curl -s -X DELETE "es1:9200/$INDICES"
-    curl -s -X POST   "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}/_restore?wait_for_completion=true&pretty" \
+    curl -s -X POST   "es1:9200/_snapshot/current/${RELEASE}_pre${DIRECTORY}/_restore?wait_for_completion=true&pretty" \
     -H 'Content-Type: application/json' \
     -d' { "indices": "'$INDICES'" }'
     # delete snapshot
-    echo curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
+    echo curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_pre${DIRECTORY}"
   fi
   fail "Error while running genomehubs index"
 fi
 
 if [ ! -z "$RESOURCES" ]; then
   # delete snapshot
-  curl -s -X DELETE "es1:9200/_snapshot/s3-current/${RELEASE}_pre${DIRECTORY}"
+  curl -s -X DELETE "es1:9200/_snapshot/current/${RELEASE}_pre${DIRECTORY}"
 fi
 
 rm -rf $tmpdir

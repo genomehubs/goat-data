@@ -29,7 +29,7 @@ jobs:
             -e GH_NODE=http://es1:9200 \
             -v `pwd`/sources/goat.yaml:/genomehubs/config/config.yaml \
             -v `pwd`/tests/api/generic:/genomehubs/tests \
-            genomehubs/genomehubs-test:develop \
+            genomehubs/genomehubs-test:${{ inputs.dockerversion }} \
               genomehubs-test-api
 
       - name: Run genomehubs UI tests
@@ -43,46 +43,39 @@ jobs:
             -e GH_NODE=http://es1:9200 \
             -v `pwd`/tests/ui:/genomehubs/tests \
             -v ${{ inputs.resources }}/projects:/genomehubs/tests/out \
-            genomehubs/genomehubs-test:develop \
+            genomehubs/genomehubs-test:${{ inputs.dockerversion }} \
               genomehubs-test-ui
 
       - name: Copy test images to S3
         run: |
           s3cmd put setacl --acl-public ${{ inputs.resources }}/projects s3://goat/releases/${{ inputs.release }}/ --recursive
 
-      # - name: Snapshot files to production-RELEASE
-      #   run: |
-      #     curl -s -X DELETE "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file" || exit 0
-      #     curl -s -X PUT    "es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file?wait_for_completion=true&pretty" \
-      #       -H 'Content-Type: application/json' \
-      #       -d' { "indices": "analysis-*${{ inputs.release }},file-*${{ inputs.release }}", "include_global_state":false}'
+  rsync_to_lustre:
+    needs:
+      - genomehubs-test
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: rsync production snapshot to sanger lustre
+        run: |
+          rsync -av --delete /volumes/docker/snapshots/production/production-${{ inputs.release }} farm5:/lustre/scratch123/tol/share/goat/dev/
+          rsync -av --delete /volumes/docker/resources/files/                         farm5:/lustre/scratch123/tol/share/goat/dev/files/
 
-  # rsync_to_lustre:
-  #   needs:
-  #     - genomehubs-test
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - name: rsync production snapshot to sanger lustre
-  #       run: |
-  #         rsync -av --delete /volumes/docker/snapshots/production/production-${{ inputs.release }} farm5:/lustre/scratch123/tol/share/goat/dev/
-  #         rsync -av --delete /volumes/docker/resources/files/                         farm5:/lustre/scratch123/tol/share/goat/dev/files/
-
-  # restore_on_prod:
-  #   needs:
-  #     - genomehubs-test
-  #   runs-on: [self-hosted, runner2]
-  #   steps:
-  #     - name: ssh prod and restore
-  #       run: |
-  #         ssh tol-goat-prod-run1 "
-  #         curl -s -X DELETE 'es1:9200/*--${{ inputs.release }}'
-  #         curl -s -X PUT 'es1:9200/_snapshot/production-${{ inputs.release }}' \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { \"type\": \"fs\", \"settings\": { \"location\": \"/usr/share/elasticsearch/snapshots/production/production-${{ inputs.release }}\" } }'
-  #         curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file/_restore?wait_for_completion=true&pretty' \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
-  #         curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill/_restore?wait_for_completion=true&pretty' \
-  #           -H 'Content-Type: application/json' \
-  #           -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
-  #         "
+  restore_on_prod:
+    needs:
+      - genomehubs-test
+    runs-on: [self-hosted, runner2]
+    steps:
+      - name: ssh prod and restore
+        run: |
+          ssh tol-goat-prod-run1 "
+          curl -s -X DELETE 'es1:9200/*--${{ inputs.release }}'
+          curl -s -X PUT 'es1:9200/_snapshot/production-${{ inputs.release }}' \
+            -H 'Content-Type: application/json' \
+            -d' { \"type\": \"fs\", \"settings\": { \"location\": \"/usr/share/elasticsearch/snapshots/production/production-${{ inputs.release }}\" } }'
+          curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file/_restore?wait_for_completion=true&pretty' \
+            -H 'Content-Type: application/json' \
+            -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
+          curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill/_restore?wait_for_completion=true&pretty' \
+            -H 'Content-Type: application/json' \
+            -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
+          "
