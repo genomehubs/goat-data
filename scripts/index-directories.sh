@@ -70,7 +70,7 @@ done <<< $(printf "$SOURCEYAMLS\n$S3YAMLS\n" | sed '/^$/d')
 
 # Fetch names directory
 if [ ! -z "$RESOURCES" ]; then
-  s3cmd get s3://goat/resources/$DIRECTORY/names $tmpdir/names 2>/dev/null
+  s3cmd get s3://goat/resources/$DIRECTORY/names $tmpdir --recursive 2>/dev/null
   if [ $? -eq 0 ]; then
     echo names >> $tmpdir/from_resources.txt
     # Add extra files from sources
@@ -80,12 +80,12 @@ if [ ! -z "$RESOURCES" ]; then
       fi
     done <<< $(ls sources/$DIRNAME/names 2>/dev/null)
   else
-    s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir/names 2>/dev/null ||
-    s3cmd get s3://goat/sources/$DIRNAME/names $tmpdir/names 2>/dev/null
+    s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir --recursive 2>/dev/null ||
+    s3cmd get s3://goat/sources/$DIRNAME/names $tmpdir --recursive 2>/dev/null
   fi
 else
-  s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir/names 2>/dev/null ||
-  s3cmd get s3://goat/sources/$DIRNAME/names $tmpdir/names 2>/dev/null
+  s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir --recursive 2>/dev/null ||
+  s3cmd get s3://goat/sources/$DIRNAME/names $tmpdir --recursive 2>/dev/null
 fi
 
 # Fetch tests directories
@@ -96,7 +96,7 @@ if [ ! -z "$RESOURCES" ]; then
       continue
     fi
     TESTS=$(basename $TESTURL)
-    s3cmd get s3://goat/resources/$DIRECTORY/$TESTS $tmpdir/$TESTS 2>/dev/null
+    s3cmd get s3://goat/resources/$DIRECTORY/$TESTS $tmpdir --recursive 2>/dev/null
     if [ $? -eq 0 ]; then
       echo $TESTS >> $tmpdir/from_resources.txt
       # Add extra tests from sources

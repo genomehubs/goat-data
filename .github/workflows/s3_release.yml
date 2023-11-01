@@ -1,9 +1,9 @@
 name: s3_release
 on:
   workflow_dispatch:
-  push:
-  # schedule:
-  #   - cron: "5 0 * * 1, 2,3,4,5,6" # At 00:05 every TWTFS
+  # push:
+  schedule:
+    - cron: "5 0 * * 1,2,3,4,5,6" # At 00:05 every MTWTFS
 env:
   DOCKERVERSION: latest
   TAXROOT: '["2759"]'
@@ -24,7 +24,6 @@ jobs:
       - id: release
         run: |
           echo "release=$(date +'%Y.%m.%d')" >> $GITHUB_OUTPUT
-          #echo "release=2023.10.30" >> $GITHUB_OUTPUT
       - id: resources
         run: |
           echo "resources=$RESOURCES" >> $GITHUB_OUTPUT
@@ -37,28 +36,29 @@ jobs:
     steps:
       - name: Get dockers
         run: |
+          docker system prune -f
           docker pull genomehubs/genomehubs:$DOCKERVERSION
           docker pull genomehubs/genomehubs-test:$DOCKERVERSION
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
-  # fetch-resources:
-  #   needs:
-  #     - set-variables
-  #     - fetch-dockers
-  #   uses: ./.github/workflows/fetch-resources.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
-  #     taxroot: ${{ needs.set-variables.outputs.taxroot }}
-  #   secrets:
-  #     JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
-  #     ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
-  #     STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
+  fetch-resources:
+    needs:
+      - set-variables
+      - fetch-dockers
+    uses: ./.github/workflows/fetch-resources.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      resources: ${{ needs.set-variables.outputs.resources }}
+      taxroot: ${{ needs.set-variables.outputs.taxroot }}
+    secrets:
+      JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
+      ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
+      STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
 
   init-release:
     needs:
       - set-variables
-      # - fetch-resources
+      - fetch-resources
     uses: ./.github/workflows/genomehubs-init.yml
     with:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
