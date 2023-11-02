@@ -39,18 +39,18 @@ jobs:
   #           -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
   #         "
 
-  merge-changes:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
+  # merge-changes:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
 
-      - name: Merge ${{ inputs.release }} -> main
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: ${{ inputs.release }}
-          target_branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Merge ${{ inputs.release }} -> main
+  #       uses: devmasx/merge-branch@master
+  #       with:
+  #         type: now
+  #         from_branch: ${{ inputs.release }}
+  #         target_branch: main
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
 
   update-s3:
     runs-on: [self-hosted, runner1]
@@ -59,22 +59,22 @@ jobs:
 
       - name: Move sources -> previous
         run: |
-          s3cmd del s3://goat/previous --recursive
-          s3cmd mv s3://goat/sources/ s3://goat/previous/ --recursive --exclude *.png
-          s3cmd cp s3://goat/sources/projects s3://goat/previous/ --recursive
+          # s3cmd del s3://goat/previous --recursive
+          # s3cmd mv s3://goat/sources/ s3://goat/previous/ --recursive --exclude *.png
+          s3cmd cp s3://goat/sources/projects s3://goat/previous/ --recursive || :
 
       - name: Copy releases/${{ inputs.release }} -> sources
         run: |
           s3cmd cp s3://goat/releases/${{ inputs.release }}/ s3://goat/sources/ --recursive
 
-  restart-goat:
-    runs-on: [self-hosted, runner2]
-    # needs:
-    #   - restore-on-prod
-    steps:
-      - name: Restart goat web service
-        run: |
-          ssh tol-goat-prod-run1 "
-          export RELEASE=${{ inputs.release }} DOCKERVERSION=${{ inputs.dockerversion }}
-          bash update.sh
-          "
+  # restart-goat:
+  #   runs-on: [self-hosted, runner2]
+  #   # needs:
+  #   #   - restore-on-prod
+  #   steps:
+  #     - name: Restart goat web service
+  #       run: |
+  #         ssh tol-goat-prod-run1 "
+  #         export RELEASE=${{ inputs.release }} DOCKERVERSION=${{ inputs.dockerversion }}
+  #         bash update.sh
+  #         "
