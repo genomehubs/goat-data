@@ -2,21 +2,22 @@ file:
   display_group: general
   exclusions:
     attributes:
-    - bioproject
-    - biosample
+      - bioproject
+      - biosample
     identifiers:
-    - assembly_id
+      - assembly_id
     taxonomy:
-    - taxon_id
+      - taxon_id
   format: tsv
   header: true
   name: cngb.tsv
   needs:
-  - ATTR_assembly.types.yaml
-  - TAXON_assembly.types.yaml
+    - ATTR_assembly.types.yaml
+    - TAXON_assembly.types.yaml
   organelle: nucleus
   source: CNGB
   source_url_stub: https://db.cngb.org/search/assembly/
+  source_date: 2023.11.02
 taxonomy:
   taxon:
     header: organismName
@@ -51,7 +52,7 @@ attributes:
     header: bioProjectAccession
     organelle: nucleus
     separator:
-    - ;
+      - ;
     source: CNGB
     source_url_stub: https://db.cngb.org/search/assembly/
   biosample:
@@ -59,7 +60,7 @@ attributes:
     header: biosampleAccession
     organelle: nucleus
     separator:
-    - ;
+      - ;
     source: CNGB
     source_url_stub: https://db.cngb.org/search/assembly/
   scaffold_count:

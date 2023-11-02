@@ -30,7 +30,7 @@ attributes:
       PRJNA649812: GIGA
       PRJNA163993: i5K
       PRJNA844590: ILEBP
-      PRJNA706923: LOEWE-TBG   
+      PRJNA706923: LOEWE-TBG
       PRJNA758215: METAINVERT
       PRJNA707598: SQUALOMIX
       PRJNA489243: VGP
@@ -58,13 +58,11 @@ attributes:
       PRJNA649812: GIGA
       PRJNA163993: i5K
       PRJNA844590: ILEBP
-      PRJNA706923: LOEWE-TBG   
+      PRJNA706923: LOEWE-TBG
       PRJNA758215: METAINVERT
       PRJNA707598: SQUALOMIX
       PRJNA489243: VGP
       PRJNA312960: ZOONOMIA
-
-
   sequencing_status_ebp:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -106,7 +104,7 @@ attributes:
     separator:
       - ;
     translate:
-      PRJNA489245: insdc_open  
+      PRJNA489245: insdc_open
   sequencing_status_cbp:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -169,7 +167,7 @@ attributes:
     separator:
       - ;
     translate:
-      PRJNA706923: insdc_open  
+      PRJNA706923: insdc_open
   sequencing_status_metainvert:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -198,7 +196,6 @@ attributes:
       - ;
     translate:
       PRJNA312960: insdc_open
-
 file:
   format: tsv
   header: true
@@ -206,6 +203,7 @@ file:
   organelle: nucleus
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  source_date: 2023.11.02
 identifiers:
   assembly_id:
     constraint:

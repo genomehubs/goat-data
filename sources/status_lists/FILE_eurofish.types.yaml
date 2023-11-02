@@ -4,8 +4,8 @@ file:
   comment: "#"
   name: EUROFISH_expanded.tsv
   source: Declared Status Lists - EUROFISH
-  source_date: 2023-10-25
-  source_description:  Declared Status List - EUROFISH, live spreadsheet - eurofish_all.tsv
+  source_date: 2023.11.02
+  source_description: Declared Status List - EUROFISH, live spreadsheet - eurofish_all.tsv
   source_contact: Gene Myers, mpi-cbg.de
 attributes:
   long_list:
@@ -16,10 +16,10 @@ attributes:
     header: family_representative
   sequencing_status:
     header: sequencing_status
-#    translate:
-#      data_generation: in_progress
-#      in_assembly: in_progress
-#      insdc_submitted: in_progress
+    #    translate:
+    #      data_generation: in_progress
+    #      in_assembly: in_progress
+    #      insdc_submitted: in_progress
   sequencing_status_eurofish:
     header: sequencing_status
     # translate:
