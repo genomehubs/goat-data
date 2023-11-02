@@ -165,7 +165,7 @@ if [ $? -eq 0 ]; then
         if [ $? -ne 0 ]; then
           # update associated YAML file with release date
           YAML=$(basename $(grep -w $FILE $tmpdir/*.yaml | cut -d':' -f1))
-          cat $tmpdir/$YAML | yq '.file.source_date="'$RELEASE'"' > $workdir/sources/$DIRNAME/$YAML
+          cat $tmpdir/$YAML | yq '.file.source_date="'${RELEASE//./-}'"' > $workdir/sources/$DIRNAME/$YAML
         fi
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/$FILE
