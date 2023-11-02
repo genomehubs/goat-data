@@ -60,8 +60,7 @@ jobs:
       - name: Move sources -> previous
         run: |
           s3cmd del s3://goat/previous --recursive
-          s3cmd mv s3://goat/sources/ s3://goat/previous/ --recursive --exclude *.png
-          s3cmd cp s3://goat/sources/projects s3://goat/previous/ --recursive || :
+          s3cmd cp s3://goat/sources/ s3://goat/previous/ --recursive
 
       - name: Copy releases/${{ inputs.release }} -> sources
         run: |
