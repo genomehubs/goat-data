@@ -1,0 +1,80 @@
+name: genomehubs-test
+on:
+  workflow_call:
+    inputs:
+      dockerversion:
+        required: true
+        type: string
+      release:
+        required: true
+        type: string
+      resources:
+        required: true
+        type: string
+
+jobs:
+  # rsync-to-lustre:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - name: rsync production snapshot to sanger lustre
+  #       run: |
+  #         rsync -av --delete /volumes/docker/snapshots/production/production-${{ inputs.release }} farm5:/lustre/scratch123/tol/share/goat/dev/
+  #         rsync -av --delete /volumes/docker/resources/files/                         farm5:/lustre/scratch123/tol/share/goat/dev/files/
+
+  # restore-on-prod:
+  #   runs-on: [self-hosted, runner2]
+  #   steps:
+  #     - name: ssh prod and restore
+  #       run: |
+  #         ssh tol-goat-prod-run1 "
+  #         curl -s -X DELETE 'es1:9200/*--${{ inputs.release }}'
+  #         curl -s -X PUT 'es1:9200/_snapshot/production-${{ inputs.release }}' \
+  #           -H 'Content-Type: application/json' \
+  #           -d' { \"type\": \"fs\", \"settings\": { \"location\": \"/usr/share/elasticsearch/snapshots/production/production-${{ inputs.release }}\" } }'
+  #         curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_analysis_file/_restore?wait_for_completion=true&pretty' \
+  #           -H 'Content-Type: application/json' \
+  #           -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
+  #         curl -s -X POST 'es1:9200/_snapshot/production-${{ inputs.release }}/${{ inputs.release }}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill/_restore?wait_for_completion=true&pretty' \
+  #           -H 'Content-Type: application/json' \
+  #           -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
+  #         "
+
+  merge-changes:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Merge ${{ inputs.release }} -> main
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: ${{ inputs.release }}
+          target_branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  update-s3:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Move sources -> previous
+        run: |
+          s3cmd del s3://goat/previous --recursive
+          s3cmd mv s3://goat/sources/ s3://goat/previous/ --recursive --exclude *.png
+          s3cmd cp s3://goat/sources/projects s3://goat/previous/ --recursive
+
+      - name: Copy releases/${{ inputs.release }} -> sources
+        run: |
+          s3cmd cp s3://goat/releases/${{ inputs.release }}/ s3://goat/sources/ --recursive
+
+  restart-goat:
+    runs-on: [self-hosted, runner2]
+    # needs:
+    #   - restore-on-prod
+    steps:
+      - name: Restart goat web service
+        run: |
+          ssh tol-goat-prod-run1 "
+          export RELEASE=${{ inputs.release }} DOCKERVERSION=${{ inputs.dockerversion }}
+          bash update.sh
+          "
