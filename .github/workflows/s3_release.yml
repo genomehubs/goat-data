@@ -104,3 +104,13 @@ jobs:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
       release: ${{ needs.set-variables.outputs.release }}
       resources: ${{ needs.set-variables.outputs.resources }}
+
+  finish-release:
+    needs:
+      - set-variables
+      - run-tests
+    uses: ./.github/workflows/finish-release.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
