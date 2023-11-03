@@ -66,6 +66,14 @@ while read YAML; do
   if [ ! -e "$tmpdir/$FILE" ]; then
     fail "unable to find data file $FILE required by $YAML"
   fi
+  # check if file has been updated since last release
+  diff -q \
+    <(s3cmd info s3://goat/sources/$DIRNAME/$FILE || true | grep "MD5 sum" | awk '{print $NF}') \
+    <(md5sum $tmpdir/$FILE | awk '{print $1}')
+  if [ $? -ne 0 ]; then
+    # update associated YAML file with release date
+    cat $tmpdir/$YAMLFILE | yq '.file.source_date="'${RELEASE//./-}'"' > $tmpdir/$YAMLFILE.tmp && mv $tmpdir/$YAMLFILE.tmp $tmpdir/$YAMLFILE
+  fi
 done <<< $(printf "$SOURCEYAMLS\n$S3YAMLS\n" | sed '/^$/d')
 
 # Fetch names directory
@@ -166,6 +174,11 @@ if [ $? -eq 0 ]; then
           # update associated YAML file with release date
           YAML=$(basename $(grep -w $FILE $tmpdir/*.yaml | cut -d':' -f1))
           cat $tmpdir/$YAML | yq '.file.source_date="'${RELEASE//./-}'"' > $workdir/sources/$DIRNAME/$YAML
+        else
+          SOURCE_DATE=$(cat $tmpdir/$YAML | yq -r '.file.source_date')
+          if [[ $SOURCE_DATE == 2023.11.02 ]]; then
+            cat $tmpdir/$YAML | yq '.file.source_date="2023-11-02"' > $workdir/sources/$DIRNAME/$YAML
+          fi
         fi
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/$FILE
