@@ -60,11 +60,17 @@ jobs:
       - name: Move sources -> previous
         run: |
           s3cmd del s3://goat/previous --recursive
-          s3cmd cp s3://goat/sources/ s3://goat/previous/ --recursive
+          s3cmd ls s3://goat/sources --recursive | awk '{print $NF}' | \
+          while read FILE; do
+            s3cmd cp $FILE ${FILE/sources/previous}
+          done
 
       - name: Copy releases/${{ inputs.release }} -> sources
         run: |
-          s3cmd cp s3://goat/releases/${{ inputs.release }}/ s3://goat/sources/ --recursive
+          s3cmd ls s3://goat/releases/${{ inputs.release }} --recursive | awk '{print $NF}' | \
+          while read FILE; do
+            s3cmd cp $FILE ${FILE/releases\/${{ inputs.release }}/sources}
+          done
 
   restart-goat:
     runs-on: [self-hosted, runner2]
@@ -77,3 +83,12 @@ jobs:
           export RELEASE=${{ inputs.release }} DOCKERVERSION=${{ inputs.dockerversion }}
           bash update.sh
           "
+
+  delete-indexes:
+    runs-on: [self-hosted, runner2]
+    needs:
+      - restore-on-prod
+    steps:
+      - name: delete RELEASE indexes
+        run: |
+          curl -X DELETE es1:9200/*-${{ inputs.release }}

@@ -2,21 +2,29 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: YGG_expanded.tsv
-  source: Declared Status List - yggdrasil
-  source_date: "2023-11-04"
-  source_description: Declared Status List - yggdrasil, live tsv
-  source_contact: Sergei Kliver
+  name: ATLASEA_expanded.tsv
+  source: Declared Status List - ATLASEA
+  source_date: "2023-11-06"
+  source_description: AtlaSea (France ERGA Partner Branch) Status List, live spreadsheet
+  source_contact: "Hugues Roest Crollius, Institut de Biologie de l'ENS (IBENS), France"
 attributes:
   long_list:
     header: long_list
-  sequencing_status:
+  other_priority:
+    header: other_priority
+  family_representative:
+    header: family_representative
+  # contributing_project_lab:
+  #   header: project
+  #   translate:
+  #     BGE: SSP Community Sampling
+  sequencing_status_atlasea:
     header: sequencing_status
     translate:
       data_generation: in_progress
       in_assembly: in_progress
       insdc_submitted: in_progress
-  sequencing_status_ygg:
+  sequencing_status:
     header: sequencing_status
     translate:
       data_generation: in_progress
@@ -28,12 +36,6 @@ attributes:
     header: sample_acquired
   in_progress:
     header: in_progress
-  data_generation:
-    header: data_generation
-  in_assembly:
-    header: in_assembly
-  insdc_submitted:
-    header: insdc_submitted
   open:
     header: open
   insdc_open:

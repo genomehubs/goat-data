@@ -11,14 +11,12 @@ function fail {
     exit "${2-1}"
 }
 
-DIRNAME=$(if [[ -d sources/$DIRECTORY ]]; then echo $DIRECTORY; else echo ${DIRECTORY//-/_}; fi)
-
 > $tmpdir/from_resources.txt
 
 # List YAML files available in sources and on S3
 SUFFIX=.yaml
-SOURCEYAMLS=$(ls sources/$DIRNAME/*types$SUFFIX sources/$DIRNAME/*names$SUFFIX 2>/dev/null);
-S3YAMLS=$(s3cmd ls s3://goat/resources/$DIRNAME --recursive | grep $SUFFIX | awk '{print $NF}' 2>/dev/null)
+SOURCEYAMLS=$(ls sources/$DIRECTORY/*types$SUFFIX sources/$DIRECTORY/*names$SUFFIX 2>/dev/null);
+S3YAMLS=$(s3cmd ls s3://goat/resources/$DIRECTORY --recursive | grep $SUFFIX | awk '{print $NF}' 2>/dev/null)
 S3YAMLS=$(grep -vFf <(echo "$SOURCEYAMLS" | awk -F"/" '{print $NF}') <(echo "$S3YAMLS") 2>/dev/null)
 
 # Loop through YAMLs fetching YAML and data from S3 if available else from sources
@@ -48,8 +46,7 @@ while read YAML; do
       if [[ $? -eq 0 ]]; then
         echo $FILE >> $tmpdir/from_resources.txt
       else
-        s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null ||
-        s3cmd get s3://goat/sources/$DIRNAME/$FILE $tmpdir/$FILE 2>/dev/null
+        s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
       fi
     fi
   else
@@ -60,15 +57,14 @@ while read YAML; do
       continue
     fi
     # Fetch data file
-    s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null ||
-    s3cmd get s3://goat/sources/$DIRNAME/$FILE $tmpdir/$FILE 2>/dev/null
+    s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
   fi
   if [ ! -e "$tmpdir/$FILE" ]; then
     fail "unable to find data file $FILE required by $YAML"
   fi
   # check if file has been updated since last release
   diff -q \
-    <(s3cmd info s3://goat/sources/$DIRNAME/$FILE || true | grep "MD5 sum" | awk '{print $NF}') \
+    <(s3cmd info s3://goat/sources/$DIRECTORY/$FILE || true | grep "MD5 sum" | awk '{print $NF}') \
     <(md5sum $tmpdir/$FILE | awk '{print $1}')
   if [ $? -ne 0 ]; then
     # update associated YAML file with release date
@@ -84,20 +80,18 @@ if [ ! -z "$RESOURCES" ]; then
     # Add extra files from sources
     while read FILE; do
       if [ ! -e "$tmpdir/names/$FILE" ]; then
-        cp sources/$DIRNAME/names/$FILE $tmpdir/names/
+        cp sources/$DIRECTORY/names/$FILE $tmpdir/names/
       fi
-    done <<< $(ls sources/$DIRNAME/names 2>/dev/null)
+    done <<< $(ls sources/$DIRECTORY/names 2>/dev/null)
   else
-    s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir --recursive 2>/dev/null ||
-    s3cmd get s3://goat/sources/$DIRNAME/names $tmpdir --recursive 2>/dev/null
+    s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir --recursive 2>/dev/null
   fi
 else
-  s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir --recursive 2>/dev/null ||
-  s3cmd get s3://goat/sources/$DIRNAME/names $tmpdir --recursive 2>/dev/null
+  s3cmd get s3://goat/sources/$DIRECTORY/names $tmpdir --recursive 2>/dev/null
 fi
 
 # Fetch tests directories
-cp -r sources/$DIRNAME/*tests $tmpdir 2>/dev/null
+cp -r sources/$DIRECTORY/*tests $tmpdir 2>/dev/null
 if [ ! -z "$RESOURCES" ]; then
   while read TESTURL; do
     if [ -z "$TESTURL" ]; then
@@ -110,11 +104,11 @@ if [ ! -z "$RESOURCES" ]; then
       # Add extra tests from sources
       while read YAML; do
         if [ ! -e "$tmpdir/$TESTS/$YAML" ]; then
-          cp sources/$DIRNAME/$TESTS/$YAML $tmpdir/$TESTS/
+          cp sources/$DIRECTORY/$TESTS/$YAML $tmpdir/$TESTS/
         fi
-      done <<< $(ls sources/$DIRNAME/$TESTS 2>/dev/null)
+      done <<< $(ls sources/$DIRECTORY/$TESTS 2>/dev/null)
     else
-      cp -r sources/$DIRNAME/$TESTS $tmpdir/$TESTS 2>/dev/null
+      cp -r sources/$DIRECTORY/$TESTS $tmpdir/$TESTS 2>/dev/null
     fi
   done <<< $(s3cmd ls s3://goat/resources/$DIRECTORY/ | awk '{print $NF}' | grep 'tests$')
 fi
@@ -157,11 +151,11 @@ if [ $? -eq 0 ]; then
     while read FILE; do
       if [[ $FILE == *yaml ]]; then
         echo move $FILE to github
-        cp $tmpdir/$FILE $workdir/sources/$DIRNAME/
+        cp $tmpdir/$FILE $workdir/sources/$DIRECTORY/
       elif [[ $FILE == *tests ]]; then
         echo move $FILE to github
-        mkdir -p $workdir/sources/$DIRNAME/$FILE
-        cp $tmpdir/$FILE/* $workdir/sources/$DIRNAME/$FILE/
+        mkdir -p $workdir/sources/$DIRECTORY/$FILE
+        cp $tmpdir/$FILE/* $workdir/sources/$DIRECTORY/$FILE/
       elif [[ $FILE == names ]]; then
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/ --recursive
@@ -173,12 +167,7 @@ if [ $? -eq 0 ]; then
         if [ $? -ne 0 ]; then
           # update associated YAML file with release date
           YAML=$(basename $(grep -w $FILE $tmpdir/*.yaml | cut -d':' -f1))
-          cat $tmpdir/$YAML | yq '.file.source_date="'${RELEASE//./-}'"' > $workdir/sources/$DIRNAME/$YAML
-        else
-          SOURCE_DATE=$(cat $tmpdir/$YAML | yq -r '.file.source_date')
-          if [[ $SOURCE_DATE == 2023.11.02 ]]; then
-            cat $tmpdir/$YAML | yq '.file.source_date="2023-11-02"' > $workdir/sources/$DIRNAME/$YAML
-          fi
+          cat $tmpdir/$YAML | yq '.file.source_date="'${RELEASE//./-}'"' > $workdir/sources/$DIRECTORY/$YAML
         fi
         echo move $FILE to s3
         s3cmd put setacl --acl-public $tmpdir/$FILE s3://goat/releases/$RELEASE/$DIRECTORY/$FILE
