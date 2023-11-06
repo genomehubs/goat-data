@@ -69,9 +69,10 @@ file:
   header: true
   name: refseq_organelles.tsv.gz
   needs:
-  - ATTR_assembly.types.yaml
+    - ATTR_assembly.types.yaml
   source: NCBI
   source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
+  source_date: "2023-11-06"
 identifiers:
   assembly_id:
     index: 3

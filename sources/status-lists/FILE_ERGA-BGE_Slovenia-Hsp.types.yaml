@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: SLOVENIA-HSP_expanded.tsv
   source: Declared Status List - ERGA-BGE Hotspots - Slovenia
-  source_date: 2023-07-06
+  source_date: "2023-11-06"
   source_description: ERGA-BGE Hotspots - Slovenia Status List, live spreadsheet
   source_contact: Javier Palma, Instituto de Biologia Evolutiva - CSIC, Barcelona, Spain
 attributes:
@@ -37,7 +37,7 @@ attributes:
   sample_acquired:
     header: sample_acquired
     translate:
-      SLOVENIA-HSP: ERGA-BGE   
+      SLOVENIA-HSP: ERGA-BGE
   in_progress:
     header: in_progress
     translate:

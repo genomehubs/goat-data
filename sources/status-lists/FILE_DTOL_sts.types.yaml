@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: sts.tsv
   source: Declared Status Lists - DTOL STS
-  source_date: 2023-10-25
+  source_date: "2023-11-06"
   source_description: Declared Status Lists - DTOL Samples Tracking System
   #source_contact: https://sts.tol.sanger.ac.uk
   source_url: https://sts.tol.sanger.ac.uk/api/v1/swagger
@@ -19,16 +19,16 @@ attributes:
       - ","
     translate:
       "['DTOL']": DTOL
-      "['ASG']" : ASG
+      "['ASG']": ASG
       "['VGP']": VGP
       "['ERGAPI']": ERGA-PIL
-      "['BLAX', 'DTOL']" : DTOL
-      "['DTOL', 'DURB']" : DTOL
-      "['DTOL', 'LAWN']" : DTOL
-      "['DTOL', 'MEIER']" : DTOL
-      "['DTOL', 'RND']" : DTOL
-      "['ASG', 'DTOL']" : ASG, DTOL
-      "['DTOL', 'VGP']" : DTOL, VGP
+      "['BLAX', 'DTOL']": DTOL
+      "['DTOL', 'DURB']": DTOL
+      "['DTOL', 'LAWN']": DTOL
+      "['DTOL', 'MEIER']": DTOL
+      "['DTOL', 'RND']": DTOL
+      "['ASG', 'DTOL']": ASG, DTOL
+      "['DTOL', 'VGP']": DTOL, VGP
       "['BLAX']": ""
       "['RND']": ""
       "['DURB']": ""
