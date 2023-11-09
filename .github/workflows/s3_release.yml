@@ -55,20 +55,20 @@ jobs:
   #     ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
   #     STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
 
-  # init-release:
-  #   needs:
-  #     - set-variables
-  #     - fetch-resources
-  #   uses: ./.github/workflows/genomehubs-init.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     release: ${{ needs.set-variables.outputs.release }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
+  init-release:
+    needs:
+      - set-variables
+      # - fetch-resources
+    uses: ./.github/workflows/genomehubs-init.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
 
   index-directories:
     needs:
       - set-variables
-      # - init-release
+      - init-release
     uses: ./.github/workflows/genomehubs-index.yml
     with:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
