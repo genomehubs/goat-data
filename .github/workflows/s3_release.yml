@@ -31,15 +31,15 @@ jobs:
         run: |
           echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
 
-  fetch-dockers:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - name: Get dockers
-        run: |
-          docker system prune -f
-          docker pull genomehubs/genomehubs:$DOCKERVERSION
-          docker pull genomehubs/genomehubs-test:$DOCKERVERSION
-          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+  # fetch-dockers:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - name: Get dockers
+  #       run: |
+  #         docker system prune -f
+  #         docker pull genomehubs/genomehubs:$DOCKERVERSION
+  #         docker pull genomehubs/genomehubs-test:$DOCKERVERSION
+  #         docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
   # fetch-resources:
   #   needs:

@@ -24,6 +24,7 @@ while read YAML; do
   if [ -z "$YAML" ]; then
     continue
   fi
+  echo $YAML
   YAMLFILE=$(basename $YAML)
   if [ ! -z "$RESOURCES" ]; then
     # Fetch YAML
@@ -131,6 +132,8 @@ fi
 # Fetch config file
 mkdir -p $tmpdir/config
 yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/config/goat.yaml
+
+ls -al $tmpdir
 
 # Run genomehubs index on the collated files
 docker run --rm --network=host \
