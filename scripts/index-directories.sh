@@ -17,7 +17,9 @@ function fail {
 SUFFIX=.yaml
 SOURCEYAMLS=$(ls sources/$DIRECTORY/*types$SUFFIX sources/$DIRECTORY/*names$SUFFIX 2>/dev/null);
 S3YAMLS=$(s3cmd ls s3://goat/resources/$DIRECTORY --recursive | grep $SUFFIX | awk '{print $NF}' 2>/dev/null)
-S3YAMLS=$(grep -vFf <(echo "$SOURCEYAMLS" | awk -F"/" '{print $NF}') <(echo "$S3YAMLS") 2>/dev/null)
+if [ ! -z "$SOURCEYAMLS" ]; then
+  S3YAMLS=$(grep -vFf <(echo "$SOURCEYAMLS" | awk -F"/" '{print $NF}') <(echo "$S3YAMLS") 2>/dev/null)
+fi
 
 # Loop through YAMLs fetching YAML and data from S3 if available else from sources
 while read YAML; do
@@ -131,6 +133,8 @@ fi
 # Fetch config file
 mkdir -p $tmpdir/config
 yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/config/goat.yaml
+
+ls -al $tmpdir
 
 # Run genomehubs index on the collated files
 docker run --rm --network=host \

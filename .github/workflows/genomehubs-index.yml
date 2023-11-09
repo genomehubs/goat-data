@@ -24,7 +24,7 @@ jobs:
 
       - name: checkout RELEASE, or create a new branch
         run: |
-          git checkout -b ${{ inputs.release }}
+          git checkout -b ${{ inputs.release }}-test
 
       - name: restore init snapshot
         run: |
@@ -136,6 +136,15 @@ jobs:
           resources: ${{ inputs.resources }}
           directory: btk
           type: assembly
+
+      - name: Index sra
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: sra
+          type: taxon
 
       - name: Snapshot initassembly_otttolids_gensizekaryo_reglegbtkasm
         run: |
