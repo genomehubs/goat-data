@@ -162,15 +162,15 @@ jobs:
       #     directory: lineages
       #     type: taxon
 
-      # - name: Index status-lists
-      #   uses: ./.github/workflows/genomehubs-index-directory
-      #   with:
-      #     dockerversion: ${{ inputs.dockerversion }}
-      #     release: ${{ inputs.release }}
-      #     resources: ${{ inputs.resources }}
-      #     directory: status-lists
-      #     flags: --taxon-lookup any --taxon-spellcheck
-      #     type: taxon
+      - name: Index status-lists
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: status-lists
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon
 
       # - name: Index assembly-data-taxon
       #   uses: ./.github/workflows/genomehubs-index-directory
