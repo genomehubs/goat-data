@@ -1,11 +1,10 @@
 name: s3_release
 on:
   workflow_dispatch:
-  push:
   schedule:
     - cron: "5 0 * * 1,2,3,4,5,6" # At 00:05 every MTWTFS
 env:
-  DOCKERVERSION: develop
+  DOCKERVERSION: latest
   TAXROOT: '["2759"]'
   RESOURCES: /home/ubuntu/resources
 
@@ -31,86 +30,86 @@ jobs:
         run: |
           echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
 
-  # fetch-dockers:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - name: Get dockers
-  #       run: |
-  #         docker system prune -f
-  #         docker pull genomehubs/genomehubs:$DOCKERVERSION
-  #         docker pull genomehubs/genomehubs-test:$DOCKERVERSION
-  #         docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+  fetch-dockers:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - name: Get dockers
+        run: |
+          docker system prune -f
+          docker pull genomehubs/genomehubs:$DOCKERVERSION
+          docker pull genomehubs/genomehubs-test:$DOCKERVERSION
+          docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
 
-  # fetch-resources:
-  #   needs:
-  #     - set-variables
-  #     - fetch-dockers
-  #   uses: ./.github/workflows/fetch-resources.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
-  #     taxroot: ${{ needs.set-variables.outputs.taxroot }}
-  #   secrets:
-  #     JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
-  #     ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
-  #     STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
+  fetch-resources:
+    needs:
+      - set-variables
+      - fetch-dockers
+    uses: ./.github/workflows/fetch-resources.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      resources: ${{ needs.set-variables.outputs.resources }}
+      taxroot: ${{ needs.set-variables.outputs.taxroot }}
+    secrets:
+      JGI_OFFLINE_TOKEN: ${{ secrets.JGI_OFFLINE_TOKEN }}
+      ORIGINAL2_5_SCHEMA: ${{ secrets.ORIGINAL2_5_SCHEMA }}
+      STS_AUTHORIZATION_KEY: ${{ secrets.STS_AUTHORIZATION_KEY }}
 
-  # init-release:
-  #   needs:
-  #     - set-variables
-  #     # - fetch-resources
-  #   uses: ./.github/workflows/genomehubs-init.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     release: ${{ needs.set-variables.outputs.release }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
+  init-release:
+    needs:
+      - set-variables
+      - fetch-resources
+    uses: ./.github/workflows/genomehubs-init.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
 
   index-directories:
     needs:
       - set-variables
-      # - init-release
+      - init-release
     uses: ./.github/workflows/genomehubs-index.yml
     with:
       dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
       release: ${{ needs.set-variables.outputs.release }}
       resources: ${{ needs.set-variables.outputs.resources }}
 
-  # index-files:
-  #   needs:
-  #     - set-variables
-  #     - init-release
-  #   uses: ./.github/workflows/genomehubs-index-files.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     release: ${{ needs.set-variables.outputs.release }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
+  index-files:
+    needs:
+      - set-variables
+      - init-release
+    uses: ./.github/workflows/genomehubs-index-files.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
 
-  # fill-values:
-  #   needs:
-  #     - set-variables
-  #     - index-directories
-  #   uses: ./.github/workflows/genomehubs-fill.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     release: ${{ needs.set-variables.outputs.release }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
+  fill-values:
+    needs:
+      - set-variables
+      - index-directories
+    uses: ./.github/workflows/genomehubs-fill.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
 
-  # run-tests:
-  #   needs:
-  #     - set-variables
-  #     - fill-values
-  #   uses: ./.github/workflows/genomehubs-test.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     release: ${{ needs.set-variables.outputs.release }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
+  run-tests:
+    needs:
+      - set-variables
+      - fill-values
+    uses: ./.github/workflows/genomehubs-test.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
 
-  # finish-release:
-  #   needs:
-  #     - set-variables
-  #     - run-tests
-  #   uses: ./.github/workflows/finish-release.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     release: ${{ needs.set-variables.outputs.release }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
+  finish-release:
+    needs:
+      - set-variables
+      - run-tests
+    uses: ./.github/workflows/finish-release.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
