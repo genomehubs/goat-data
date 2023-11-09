@@ -26,12 +26,12 @@ jobs:
         run: |
           git checkout -b ${{ inputs.release }}-test
 
-      - name: restore init snapshot
-        run: |
-          curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}"
-          curl -s -X POST   "es1:9200/_snapshot/current/${{ inputs.release }}_init/_restore?wait_for_completion=true&pretty" \
-            -H 'Content-Type: application/json' \
-            -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}" }'
+      # - name: restore init snapshot
+      #   run: |
+      #     curl -s -X DELETE "es1:9200/assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}"
+      #     curl -s -X POST   "es1:9200/_snapshot/current/${{ inputs.release }}_init/_restore?wait_for_completion=true&pretty" \
+      #       -H 'Content-Type: application/json' \
+      #       -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}" }'
 
       # - name: Index assembly-data
       #   uses: ./.github/workflows/genomehubs-index-directory
