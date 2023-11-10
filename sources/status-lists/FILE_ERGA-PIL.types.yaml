@@ -3,9 +3,10 @@ file:
   header: true
   comment: "#"
   name: ERGA-PIL_expanded.tsv
-  source:  Declared Status Lists - ERGA Pilot Project
-  source_date: 2023-04-18
-  source_description: Declared Status Lists - ERGA Pilot, live Spreadsheet - Pilot Project Tracker  
+  source: Declared Status Lists - ERGA Pilot Project
+  source_url:
+  source_date: "2023-11-10"
+  source_description: Declared Status Lists - ERGA Pilot, live Spreadsheet - Pilot Project Tracker
   #source_contact:
 attributes:
   long_list:
@@ -37,4 +38,3 @@ taxonomy:
     header: ncbi_taxon_id
   species:
     header: species
-
