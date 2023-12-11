@@ -155,6 +155,7 @@ if [ $? -eq 0 ]; then
     while read FILE; do
       if [[ $FILE == *yaml ]]; then
         echo move $FILE to github
+        mkdir -p $workdir/sources/$DIRECTORY/
         cp $tmpdir/$FILE $workdir/sources/$DIRECTORY/
       elif [[ $FILE == *tests ]]; then
         echo move $FILE to github
