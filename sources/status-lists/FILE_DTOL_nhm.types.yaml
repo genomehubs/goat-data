@@ -3,26 +3,46 @@ file:
   header: true
   comment: "#"
   name: nhm.tsv
-  source: NHM Data Portal - DTOL Samples
-  source_date: "2023-12-11"
-  source_description: NHM Data Portal - List of Specimens Collected for the DToL Project
-  #source_contact:
-  source_url: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb
-  source_url_stub: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb/record/
+  source_date: "2023-12-12"
 metadata:
   source_slug:
     header: otherCatalogNumbers
 attributes:
   long_list:
     default: DTOL
+    source: NHM Data Portal - DTOL Samples
+    source_date: "2023-12-11"
+    source_description: NHM Data Portal - List of Specimens Collected for the DToL Project
+    source_url: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb
+    source_url_stub: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb/record/
   sequencing_status:
     header: sequencing_status
+    source: NHM Data Portal - DTOL Samples
+    source_date: "2023-12-11"
+    source_description: NHM Data Portal - List of Specimens Collected for the DToL Project
+    source_url: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb
+    source_url_stub: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb/record/
   sequencing_status_dtol:
     header: sequencing_status
+    source: NHM Data Portal - DTOL Samples
+    source_date: "2023-12-11"
+    source_description: NHM Data Portal - List of Specimens Collected for the DToL Project
+    source_url: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb
+    source_url_stub: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb/record/
   sample_collected:
     header: sample_collected
+    source: NHM Data Portal - DTOL Samples
+    source_date: "2023-12-11"
+    source_description: NHM Data Portal - List of Specimens Collected for the DToL Project
+    source_url: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb
+    source_url_stub: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb/record/
   sample_collected_by:
     header: sample_collected_by
+    source: NHM Data Portal - DTOL Samples
+    source_date: "2023-12-11"
+    source_description: NHM Data Portal - List of Specimens Collected for the DToL Project
+    source_url: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb
+    source_url_stub: https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb/record/
 taxonomy:
   phylum:
     header: phylum
