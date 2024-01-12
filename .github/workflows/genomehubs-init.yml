@@ -57,12 +57,13 @@ jobs:
         run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
+            -v ${{ inputs.resources }}:/genomehubs/resources \
             genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
               "genomehubs init \
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
-                --taxonomy-jsonl sources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
+                --taxonomy-jsonl resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz \
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
 
