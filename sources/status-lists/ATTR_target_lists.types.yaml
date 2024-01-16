@@ -41,6 +41,7 @@ defaults:
         - lmgp
         - loewe-tbg
         - metainvert
+        - og
         - ogg
         - omg
         - other
@@ -123,6 +124,8 @@ defaults:
         description: "LOEWE Centre for Translational Biodiversity Genomics (click to view GoaT project page)"
       metainvert:
         description: "MetaInvert (click to view GoaT project page)"
+      og:
+        description: "Ocean Genomes (click to view GoaT project page)"
       ogg:
         description: "Open Green Genomes (click to view GoaT project page)"
       omg:
