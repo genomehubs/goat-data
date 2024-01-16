@@ -42,7 +42,7 @@ jobs:
             -e GH_API_PORT=3000 \
             -e GH_NODE=http://es1:9200 \
             -v `pwd`/tests/ui:/genomehubs/tests \
-            -v ${{ inputs.resources }}/projects:/genomehubs/tests/out \
+            -v ${{ inputs.resources }}/projects:/genomehubs/tests-out \
             genomehubs/genomehubs-test:${{ inputs.dockerversion }} \
               genomehubs-test-ui
 
