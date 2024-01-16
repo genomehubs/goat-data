@@ -42,6 +42,7 @@ defaults:
         - lmgp
         - loewe-tbg
         - metainvert
+        - og
         - ogg
         - omg
         - other
@@ -124,6 +125,8 @@ defaults:
         description: "LOEWE Centre for Translational Biodiversity Genomics (click to view GoaT project page)"
       metainvert:
         description: "MetaInvert (click to view GoaT project page)"
+      og:
+        description: "Ocean Genomes (click to view GoaT project page)"
       ogg:
         description: "Open Green Genomes (click to view GoaT project page)"
       omg:
@@ -151,7 +154,7 @@ defaults:
 attributes:
   sample_available:
     description: "Project has available samples for the taxon (acronym)"
-    display_name: Sample collected
+    display_name: Sample available
   sample_collected:
     description: "Project has collected samples for the taxon (acronym)"
     display_name: Sample collected

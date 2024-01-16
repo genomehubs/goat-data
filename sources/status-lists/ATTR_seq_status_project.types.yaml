@@ -140,6 +140,9 @@ attributes:
   sequencing_status_metainvert:
     description: Sequencing status for Soil Invertebrate Genome Initiative
     display_name: Sequencing status METAINVERT
+  sequencing_status_og:
+    description: Sequencing status for Ocean Genomes Project
+    display_name: Sequencing status OG
   sequencing_status_ogg:
     description: Sequencing status for Open Green Genomes Project
     display_name: Sequencing status OGG
