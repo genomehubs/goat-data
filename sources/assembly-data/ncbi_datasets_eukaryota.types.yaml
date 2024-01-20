@@ -11,6 +11,14 @@ attributes:
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  assembly_status:
+    display_group: general
+    header: primaryValue
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    translate:
+      "1": primary
   assembly_type:
     display_group: general
     header: assemblyType
@@ -57,9 +65,23 @@ attributes:
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  ebp_metric_date:
+  ebp_standard_criteria:
     display_group: general
-    header: ebpMetricDate
+    header: ebpStandardCriteria
+    organelle: nucleus
+    separator:
+      - ;
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  ebp_standard_date:
+    display_group: general
+    header: ebpStandardDate
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  gc_percent:
+    display_group: general
+    header: gcPercent
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
@@ -81,10 +103,72 @@ attributes:
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  mitochondrion_accession:
+    display_group: general
+    header: mitochondrionAccession
+    organelle: nucleus
+    separator:
+      - ;
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  mitochondrion_assembly_span:
+    display_group: general
+    header: mitochondrionAssemblySpan
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  mitochondrion_gc_percent:
+    display_group: general
+    header: mitochondrionGcPercent
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  mitochondrion_scaffolds:
+    display_group: general
+    header: mitochondrionScaffolds
+    organelle: nucleus
+    separator:
+      - ;
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   noncoding_gene_count:
     display_group: general
     header: geneCountNoncoding
     organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  organelle:
+    display_group: general
+    header: organelle
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  plastid_accession:
+    display_group: general
+    header: plastidAccession
+    organelle: nucleus
+    separator:
+      - ;
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  plastid_assembly_span:
+    display_group: general
+    header: plastidAssemblySpan
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  plastid_gc_percent:
+    display_group: general
+    header: plastidGcPercent
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  plastid_scaffolds:
+    display_group: general
+    header: plastidScaffolds
+    organelle: nucleus
+    separator:
+      - ;
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   protein_count:
@@ -135,6 +219,12 @@ attributes:
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  source_accession:
+    display_group: general
+    header: sourceAccession
+    organelle: nucleus
+    source: INSDC
+    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   submitter:
     display_group: general
     header: submitter
@@ -166,7 +256,7 @@ file:
   organelle: nucleus
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2024-01-18"
+  source_date: "2024-01-20"
 identifiers:
   assembly_id:
     header: genbankAssmAccession
