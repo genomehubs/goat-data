@@ -1,7 +1,6 @@
 defaults:
   attributes:
     display_group: general
-    organelle: nucleus
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
     source: INSDC
 identifiers:
@@ -34,7 +33,7 @@ attributes:
         - chloroplast
         - plastid
         - apicoplast
-    default: nucleus
+        - kinetoplast
     type: keyword
   bioproject:
     constraint:
@@ -257,10 +256,21 @@ attributes:
     display_level: 2
     display_name: Last updated
     type: date
-  ebp_metric_date:
+  ebp_standard_date:
     display_level: 2
     display_name: EBP metric date
+    synonyms:
+      - ebp_metric_date
     type: date
+  ebp_standard_criteria:
+    constraint:
+      enum:
+        - 6.C.Q40
+        - 6.7.Q40
+        - 5.C.Q40
+    display_level: 2
+    display_name: EBP standard criteria
+    type: keyword
   refseq_category:
     display_level: 2
     display_name: RefSeq category
@@ -286,10 +296,50 @@ attributes:
     type: 2dp
     units: "%"
   qv_score:
+    constraint:
+      min: 1
+      type: 4dp
     description: VGP Quality Value score computed with gfastats
     display_group: metrics
     display_level: 2
     display_name: Quality Value score
+  source_accession:
+    display_group: linked assemblies
+    type: keyword
+  mitochondrion_assembly_span:
+    display_group: linked assemblies
+    type: keyword
+  mitochondrion_gc_percent:
+    display_group: linked assemblies
     constraint:
-      min: 1
-    type: 4dp
+      min: 0
+      max: 100
+    type: 2dp
+    units: "%"
+  mitochondrion_accession:
+    display_group: linked assemblies
+    type: keyword
+  mitochondrion_scaffolds:
+    display_group: linked assemblies
+    type: keyword
+  plastid_assembly_span:
+    display_group: linked assemblies
+    type: keyword
+  plastid_gc_percent:
+    display_group: linked assemblies
+    constraint:
+      min: 0
+      max: 100
+    type: 2dp
+    units: "%"
+  plastid_accession:
+    display_group: linked assemblies
+    type: keyword
+  plastid_scaffolds:
+    display_group: linked assemblies
+    type: keyword
+  assemblyStatus:
+    constraint:
+      enum:
+        - primary
+    type: keyword
