@@ -246,3 +246,84 @@ jobs:
         env:
           CMD: mv ${{ inputs.resources }}/status-lists/tmp/* ./
           RESOURCES: ${{ inputs.resources }}/status-lists
+
+  fetch-assembly-links:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch UCSC accession list
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s https://hgdownload.soe.ucsc.edu/hubs/UCSC_GI.assemblyHubList.txt \
+            | iconv -c -f ISO-8859-1 -t UTF-8//TRANSLIT -c \
+            | gzip -c > UCSC_GI.assemblyHubList.tsv.gz
+          FALLBACK: s3://goat/resources/tolids/UCSC_GI.assemblyHubList.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/assembly-data
+
+      - name: Fetch Ensembl Fungi accession list
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s http://ftp.ensemblgenomes.org/pub/current/fungi/species_metadata_EnsemblFungi.json \
+            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+            | gzip -c > species_metadata_EnsemblFungi.tsv.gz
+          FALLBACK: s3://goat/resources/tolids/species_metadata_EnsemblFungi.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/assembly-data
+
+      - name: Fetch Ensembl Metazoa accession list
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s http://ftp.ensemblgenomes.org/pub/current/metazoa/species_metadata_EnsemblMetazoa.json \
+            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+            | gzip -c > species_metadata_EnsemblMetazoa.tsv.gz
+          FALLBACK: s3://goat/resources/tolids/species_metadata_EnsemblMetazoa.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/assembly-data
+
+      - name: Fetch Ensembl Plants accession list
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s http://ftp.ensemblgenomes.org/pub/current/plants/species_metadata_EnsemblPlants.json \
+            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+            | gzip -c > species_metadata_EnsemblPlants.tsv.gz
+          FALLBACK: s3://goat/resources/tolids/species_metadata_EnsemblPlants.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/assembly-data
+
+      - name: Fetch Ensembl Protists accession list
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s http://ftp.ensemblgenomes.org/pub/current/protists/species_metadata_EnsemblProtists.json \
+            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+            | gzip -c > species_metadata_EnsemblProtists.tsv.gz
+          FALLBACK: s3://goat/resources/tolids/species_metadata_EnsemblProtists.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/assembly-data
+
+      - name: Fetch Ensembl Rapid accession list
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s https://ftp.ensembl.org/pub/rapid-release/species_metadata.json \
+            | jq -r '.[] | [.assembly_accession, .ensembl_production_name, .release_date, .strain, .taxonomy_id] | @tsv' \
+            | gzip -c > species_metadata_EnsemblRapid.tsv.gz
+          FALLBACK: s3://goat/resources/tolids/species_metadata_EnsemblRapid.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/assembly-data
+
+      - name: Fetch Ensembl Vertebrates accession list
+        run: |
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -s https://ftp.ensembl.org/pub/current/species_metadata_EnsemblVertebrates.json \
+              | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+              | gzip -c > species_metadata_EnsemblVertebrates.tsv.gz
+            FALLBACK: s3://goat/resources/tolids/species_metadata_EnsemblVertebrates.tsv.gz
+            RESOURCES: ${{ inputs.resources }}/assembly-data
