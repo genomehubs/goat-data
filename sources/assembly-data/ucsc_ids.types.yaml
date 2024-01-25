@@ -1,0 +1,18 @@
+file:
+  comment: "#"
+  format: tsv
+  header: false
+  name: UCSC_GI.assemblyHubList.tsv.gz
+  source_date: "2024-01-25"
+identifiers:
+  assembly_id:
+    index: 0
+  ucsc_assembly_name:
+    index: 1
+    source_url_stub: https://genome.ucsc.edu/h/
+metadata:
+  source_slug:
+    index: 0
+taxonomy:
+  taxon_id:
+    index: 4
