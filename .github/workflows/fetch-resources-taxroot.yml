@@ -71,7 +71,8 @@ jobs:
 
       - name: Run genomehubs parse --ncbi-datasets-genome
         run: |
-          CMD="docker run --rm --network=host \
+          CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_${{ inputs.taxroot }}.tsv.gz 2>/dev/null || : && \
+          docker run --rm --network=host \
           -v \$(pwd):/genomehubs/tmp \
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
