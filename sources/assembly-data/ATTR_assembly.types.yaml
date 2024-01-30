@@ -34,6 +34,7 @@ attributes:
         - plastid
         - apicoplast
         - kinetoplast
+    description: assembled organelle
     type: keyword
   bioproject:
     constraint:
@@ -339,19 +340,21 @@ attributes:
   plastid_scaffolds:
     display_group: linked assemblies
     type: keyword
-  chromosomal_percent:
+  assigned_percent:
+    description: percentage of scaffolded assembly span assigned to chromosomal units
     display_group: metrics
     display_level: 2
     constraint:
       min: 0
       max: 100
-    function: "{} * 1000"
+    function: "{} * 100"
     type: 2dp
     units: "%"
   assembly_status:
-    contsraint:
+    constraint:
       enum:
         - primary
         - alternate
+    description: primary or alternate assembly for a taxon
     display_group: general
     type: keyword

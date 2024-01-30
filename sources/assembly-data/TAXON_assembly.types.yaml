@@ -92,7 +92,7 @@ attributes:
     taxon_traverse_limit: phylum
     taxon_display_level: 2
   mitochondrion_gc_percent:
-    taxon_display_group: mitochondrion_gc_percent
+    taxon_display_group: mitochondrion_assembly
     taxon_name: mitochondrion_gc_percent
     taxon_key: mitochondrion_gc_percent
     taxon_display_name: mitochondrion gc percent
@@ -113,7 +113,7 @@ attributes:
     taxon_traverse_limit: phylum
     taxon_display_level: 2
   plastid_gc_percent:
-    taxon_display_group: plastid_gc_percent
+    taxon_display_group: plastid_assembly
     taxon_name: plastid_gc_percent
     taxon_key: plastid_gc_percent
     taxon_display_name: plastid gc percent
