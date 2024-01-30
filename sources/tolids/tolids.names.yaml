@@ -3,12 +3,13 @@ file:
   header: false
   name: tolids.tsv.gz
   source: dToL sample naming
-  source_url: https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming
+  source_url: https://id.tol.sanger.ac.uk/
+  source_date: "2024-01-30"
 taxon_names:
   tolid_prefix:
     index: 0
-  tol_id:
-    index: 0
+  # tol_id:
+  #   index: 0
   common_name:
     index: 3
 taxonomy:

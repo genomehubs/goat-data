@@ -11,7 +11,7 @@ attributes:
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  chromosomal_percent:
+  assigned_percent:
     header: assignedProportion
   assembly_status:
     header: primaryValue
@@ -254,7 +254,7 @@ file:
   organelle: nucleus
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2024-01-29"
+  source_date: "2024-01-30"
 identifiers:
   assembly_id:
     header: genbankAssmAccession
