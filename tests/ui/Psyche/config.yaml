@@ -4,3 +4,17 @@
   filename: assemblies-by-rank.png
 - url: "http://localhost:8880/search?result=taxon&includeEstimates=true&summaryValues=count&taxonomy=ncbi&size=10&offset=0&report=histogram&rank=species&pointSize=15&query=tax_tree%28lepidoptera%29%20AND%20min%28assembly_date%29%3E2023%20AND%20bioproject%3DPRJEB40665%20AND%20tax_rank%28species%29&cat=assembly_level&stacked=true&xOpts=2023-03%2C2024%2C%2C%2CAssembly%20date%20%28month%29"
   filename: progress-per-month.png
+- url: "http://localhost:8880/search?report=tree&query=tax_tree%28Eukaryota%29%20AND%20tax_rank%28family%29%20AND%20long_list%3DPSYCHE&y=assembly_span%20AND%20bioproject%3DTBD&treeStyle=rect&levels=subspecies%2Cspecies%2Cgenus%2Cfamily%2Corder%2Cclass%2Cphylum&includeEstimates=true&collapseMonotypic=true&yOpts=10000000%2C7000000000%2C%2Clog10&taxonomy=ncbi&result=taxon"
+  filename: sequenced-family-cladogram.png
+- url: "http://localhost:8880/search?report=arc&query=sample_collected%3DDTOL&y=long_list%3DPSYCHE&rank=species&includeEstimates=true&excludeAncestral%5b0%5d=sample_collected&excludeMissing%5b0%5d=sample_collected&taxonomy=ncbi&result=taxon&pointSize=15"
+  filename: target-species-collected-2000.png
+  size: 2000
+- url: "http://localhost:8880/search?report=arc&query=assembly_span%20AND%20bioproject%3DPRJEB40665&rank=family%2Cgenus%2Cspecies&y=long_list%3DPSYCHE&includeEstimates=true&excludeAncestral%5B0%5D=assembly_span&excludeMissing%5B0%5D=assembly_span&taxonomy=ncbi&result=taxon&xField=assembly_span&pointSize=15"
+  filename: assemblies-by-rank-2000.png
+  size: 2000
+- url: "http://localhost:8880/search?result=taxon&includeEstimates=true&summaryValues=count&taxonomy=ncbi&size=10&offset=0&report=histogram&rank=species&pointSize=15&query=tax_tree%28lepidoptera%29%20AND%20min%28assembly_date%29%3E2023%20AND%20bioproject%3DPRJEB40665%20AND%20tax_rank%28species%29&cat=assembly_level&stacked=true&xOpts=2023-03%2C2024%2C%2C%2CAssembly%20date%20%28month%29"
+  filename: progress-per-month-2000.png
+  size: 2000
+- url: "http://localhost:8880/search?report=tree&query=tax_tree%28Eukaryota%29%20AND%20tax_rank%28family%29%20AND%20long_list%3DPSYCHE&y=assembly_span%20AND%20bioproject%3DTBD&treeStyle=rect&levels=subspecies%2Cspecies%2Cgenus%2Cfamily%2Corder%2Cclass%2Cphylum&includeEstimates=true&collapseMonotypic=true&yOpts=10000000%2C7000000000%2C%2Clog10&taxonomy=ncbi&result=taxon"
+  filename: sequenced-family-cladogram-2000.png
+  size: 2000
