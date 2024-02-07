@@ -2,41 +2,51 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: DTOL_Vascular_collected.tsv
+  name: DTOL_Vascular_collected_expanded.tsv
   source: DTOL Vascular Plants Collections List
-  source_date: 2023-04-17
+  source_date: "2024-02-07"
   source_description: DTOL Plant Samples Working Group, Google Spreadsheet - DToL_vascular_plant_collections
   source_contact: DTOL Plant SWG
 attributes:
   long_list:
-    header: long_list
+    header: project
     type: keyword
   family_representative:
-    header: family_representative
+    header: status
+    translate:
+      dtol: ""
+      dtol_other_priority: ""
+      dtol_family_representative: family_representative
     type: keyword
   other_priority:
-    header: other_priority
+    header: status
+    translate:
+      dtol: ""
+      dtol_other_priority: other_priority
+      dtol_family_representative: ""
     type: keyword
   sequencing_status:
-    header: sample_collected
+    header: "collected_anyone/any_year"
     translate:
-      DTOL: sample_collected
+      "yes": sample_collected
     type: keyword
   sequencing_status_dtol:
-    header: sample_collected
+    header: "collected_anyone/any_year"
     translate:
-      DTOL: sample_collected
+      "yes": sample_collected
     type: keyword
   sample_collected:
-    header: sample_collected
+    header: "collected_anyone/any_year"
+    translate:
+      "yes": DTOL
     type: keyword
-  # sample_collected_by:
-  #   header:
-  #   join: ","
-  #  type: keyword
+    # sample_collected_by:
+    #   header:
+    #   join: ","
+    #  type: keyword
 taxonomy:
   species:
-    header: [Genus, Species]
+    header: [genus, species]
     join: " "
   family:
-    header: Family
+    header: family
