@@ -93,7 +93,9 @@ def parse_path(path_str: str) -> Optional[Any]:
     """
     keys = path_str.split(".")
 
-    def get_key(data: dict[str, Any] | list[dict[str, Any]], key: str) -> Optional[Any]:
+    def get_key(
+        data: Union[dict[str, Any], list[dict[str, Any]]], key: str
+    ) -> Optional[Any]:
         """
         Retrieves the value of a key from a dictionary or a list of dictionaries.
 
@@ -123,7 +125,7 @@ def parse_path(path_str: str) -> Optional[Any]:
         else:
             return None
 
-    def get_data(data: dict[str, Any] | list[dict[str, Any]]) -> Optional[Any]:
+    def get_data(data: Union[dict[str, Any], list[dict[str, Any]]]) -> Optional[Any]:
         """
         Recursively retrieves the value at the specified path from a nested dictionary
         or list of dictionaries.
