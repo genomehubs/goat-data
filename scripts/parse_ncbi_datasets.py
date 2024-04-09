@@ -8,12 +8,12 @@ import json
 import math
 import pathlib
 import subprocess
-import yaml
-
 from collections import defaultdict
-from collections.abc import Generator, Iterator
+from collections.abc import Callable, Generator, Iterator
 from functools import reduce
-from typing import Any, Callable, DefaultDict, Dict, IO, List, Optional, Tuple, Union
+from typing import IO, Any, Optional, Union
+
+import yaml
 
 
 def parse_args() -> argparse.Namespace:
@@ -93,7 +93,7 @@ def parse_path(path_str: str) -> Optional[Any]:
     """
     keys = path_str.split(".")
 
-    def get_key(data: Dict[str, Any] | List[Dict[str, Any]], key: str) -> Optional[Any]:
+    def get_key(data: dict[str, Any] | list[dict[str, Any]], key: str) -> Optional[Any]:
         """
         Retrieves the value of a key from a dictionary or a list of dictionaries.
 
@@ -123,7 +123,7 @@ def parse_path(path_str: str) -> Optional[Any]:
         else:
             return None
 
-    def get_data(data: Dict[str, Any] | List[Dict[str, Any]]) -> Optional[Any]:
+    def get_data(data: dict[str, Any] | list[dict[str, Any]]) -> Optional[Any]:
         """
         Recursively retrieves the value at the specified path from a nested dictionary
         or list of dictionaries.
@@ -143,7 +143,7 @@ def parse_path(path_str: str) -> Optional[Any]:
     return get_data
 
 
-def get_path_header(data: Dict[str, Any]) -> Iterator[Tuple[str, str]]:
+def get_path_header(data: dict[str, Any]) -> Iterator[tuple[str, str]]:
     """
     Yields the path and header for each object in the "attributes", "identifiers", and
     "taxonomy" sections of the provided data.
@@ -152,7 +152,7 @@ def get_path_header(data: Dict[str, Any]) -> Iterator[Tuple[str, str]]:
         data (dict): The data to search for path and header information.
 
     Yields:
-        Tuple[str, str]: The path and header for each matching object.
+        tuple[str, str]: The path and header for each matching object.
     """
     for section in ["attributes", "identifiers", "metadata", "names", "taxonomy"]:
         for _, obj in data.get(section, {}).items():
@@ -160,7 +160,7 @@ def get_path_header(data: Dict[str, Any]) -> Iterator[Tuple[str, str]]:
                 yield obj["path"], obj["header"]
 
 
-def set_headers(config: Dict[str, Any]) -> List[str]:
+def set_headers(config: dict[str, Any]) -> list[str]:
     """
     Retrieves a list of all headers defined in the "attributes", "identifiers",
     "metadata", "names", and "taxonomy" sections of the provided configuration.
@@ -171,7 +171,7 @@ def set_headers(config: Dict[str, Any]) -> List[str]:
     Returns:
         list: A list of all unique headers found in the specified sections.
     """
-    headers: List[str] = []
+    headers: list[str] = []
     for section in ["attributes", "identifiers", "metadata", "names", "taxonomy"]:
         for value in config.get(section, {}).values():
             if "header" in value and value["header"] not in headers:
@@ -180,8 +180,8 @@ def set_headers(config: Dict[str, Any]) -> List[str]:
 
 
 def get_parse_functions(
-    config: Dict[str, Any]
-) -> Dict[str, Callable[[Dict[str, Any]], Any]]:
+    config: dict[str, Any]
+) -> dict[str, Callable[[dict[str, Any]], Any]]:
     """
     Generates a dictionary of parse functions based on the path and header information
     extracted from the "attributes", "identifiers", and "taxonomy" sections of the
@@ -363,7 +363,7 @@ def add_organelle_entries(data: dict, organelles: dict) -> None:
             raise err
 
 
-def add_chromosome_entries(obj: dict, chromosomes: List[dict]) -> None:
+def add_chromosome_entries(obj: dict, chromosomes: list[dict]) -> None:
     """
     Adds feature entries for assembled chromosomes to the provided data object.
 
@@ -483,7 +483,7 @@ def check_ebp_criteria(
     data["processedAssemblyStats"]["assignedProportion"] = assignedProportion
 
 
-def process_sequence_report(data: Dict):
+def process_sequence_report(data: dict):
     """
     Processes the sequence report for an NCBI dataset, adding date fields for assemblies
     that meet certain metrics.
@@ -497,7 +497,7 @@ def process_sequence_report(data: Dict):
     """
     accession = data["accession"]
     span = int(data["assemblyStats"]["totalSequenceLength"])
-    organelles: DefaultDict[str, list] = defaultdict(list)
+    organelles: defaultdict[str, list] = defaultdict(list)
     report = fetch_sequences_report(accession)
     chromosomes: list = []
     assigned_span = 0
@@ -513,12 +513,12 @@ def process_sequence_report(data: Dict):
     check_ebp_criteria(data, span, chromosomes, assigned_span)
 
 
-def update_organelle_info(data: Dict, row: Dict) -> None:
+def update_organelle_info(data: dict, row: dict) -> None:
     """Update organelle info in data dict with fields from row.
 
     Args:
-        data (Dict): A dictionary containing the organelle information.
-        row (Dict): A dictionary containing the fields to update the organelle
+        data (dict): A dictionary containing the organelle information.
+        row (dict): A dictionary containing the fields to update the organelle
         information with.
 
     Returns:
@@ -542,7 +542,7 @@ def update_organelle_info(data: Dict, row: Dict) -> None:
         )
 
 
-def process_assembly_report(data: Dict, previous_data: Optional[Dict]) -> Dict:
+def process_assembly_report(data: dict, previous_data: Optional[dict]) -> dict:
     """Process assembly level information.
 
     This function takes a data dictionary and an optional previous_data dictionary, and
@@ -585,8 +585,8 @@ def process_assembly_report(data: Dict, previous_data: Optional[Dict]) -> Dict:
 
 
 def parse_report_values(
-    parse_fns: Dict[str, Callable[[Dict], Any]], data: Dict
-) -> Dict[str, Any]:
+    parse_fns: dict[str, Callable[[dict], Any]], data: dict
+) -> dict[str, Any]:
     """
     Applies a set of parsing functions to the provided data and returns a dictionary
     with the parsed values.
@@ -647,22 +647,22 @@ def print_to_tsv(headers: list[str], rows: list[dict], meta: dict):
             )
 
 
-def get_metadata(config: Dict, yaml_file: str) -> Dict:
+def get_metadata(config: dict, yaml_file: str) -> dict:
     """
     Retrieves metadata information from a configuration file, including the output file
     name and separator values for specific keys.
 
     Args:
-        config (Dict): A dictionary containing the configuration settings.
+        config (dict): A dictionary containing the configuration settings.
         yaml_file (str): The path to the YAML configuration file.
 
     Returns:
-        Dict: A dictionary containing the output file name and a dictionary of
+        dict: A dictionary containing the output file name and a dictionary of
             separators for specific keys.
     """
     yaml_dir = pathlib.Path(yaml_file).parent
     file_name = config.get("file", {}).get("name", "output.tsv")
-    separators: Dict[str, str] = {}
+    separators: dict[str, str] = {}
     with contextlib.suppress(KeyError):
         for key, value in config["attributes"].items():
             separators[key] = value.get("separator", ",")
@@ -688,17 +688,17 @@ def write_tsv(parsed: dict[str, dict], headers: list[str], meta: dict):
     print_to_tsv(headers, rows, meta)
 
 
-def parse_previous(f: IO[str], headers: List[str]) -> Dict[str, Dict[str, str]]:
+def parse_previous(f: IO[str], headers: list[str]) -> dict[str, dict[str, str]]:
     """Parses a TSV file containing NCBI dataset information and returns a
     dictionary of rows, where the keys are the GenBank accession numbers and
     the values are dictionaries representing the rows.
 
     Args:
         f (IO[str]): The file-like object containing the TSV data.
-        headers (List[str]): A list of column headers expected in the TSV file.
+        headers (list[str]): A list of column headers expected in the TSV file.
 
     Returns:
-        Dict[str, Dict[str, str]]: A dictionary where the keys are the GenBank
+        dict[str, dict[str, str]]: A dictionary where the keys are the GenBank
             accession numbers and the values are dictionaries representing the
             rows.
 
@@ -711,14 +711,14 @@ def parse_previous(f: IO[str], headers: List[str]) -> Dict[str, Dict[str, str]]:
     if header != headers:
         raise ValueError("Headers do not match")
 
-    rows: Dict[str, Dict[str, str]] = {}
+    rows: dict[str, dict[str, str]] = {}
     for row in reader:
         row_dict = {header[i]: row[i] for i in range(len(header))}
         rows[row_dict["genbankAccession"]] = row_dict
     return rows
 
 
-def load_previous(file_path: str, headers: List[str]) -> Dict[str, Dict]:
+def load_previous(file_path: str, headers: list[str]) -> dict[str, dict]:
     """
     Loads the previous data from a TSV file at the given file path.
 
