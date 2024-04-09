@@ -1,4 +1,27 @@
 #!/usr/bin/env python
+"""
+This script parses NCBI dataset files in JSONL format and outputs summary data in TSV
+format based on a provided configuration.
+
+It takes two arguments:
+
+- -f/--file: The path to the JSONL input file to parse. Default is
+  ncbi_test/ncbi_dataset/data/assembly_data_report.jsonl.
+
+- -c/--config: The path to the configuration file specifying which fields
+  to output. Default is ncbi_test/ncbi_datasets_eukaryota.types.yaml.
+
+The script parses the JSONL file, extracting fields based on the provided
+configuration. It then processes the data, adding additional fields based on the
+associated sequence report. If a previous TSV file is available at the output file
+location, as specified in the configuration file, the script will load
+the previous data and update entries only if the release date has changed.
+
+Each dataset contains only the fields defined in the configuration file. Additional
+fields can be included by adding entries with both `header` and `path` keys to the
+configuration file.
+"""
+
 
 import argparse
 import contextlib
