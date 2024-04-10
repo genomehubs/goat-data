@@ -28,15 +28,14 @@ import contextlib
 import csv
 import gzip
 import json
-import math
 import pathlib
 import subprocess
 from collections import defaultdict
-from collections.abc import Callable, Generator, Iterator
+from collections.abc import Generator, Iterator
 from functools import reduce
-from typing import IO, Any, Optional, Union
+from typing import IO, Any, Callable, Optional, Union
 
-import yaml
+import yaml  # type: ignore
 
 
 def parse_args() -> argparse.Namespace:
@@ -159,11 +158,22 @@ def parse_path(path_str: str) -> Optional[Any]:
         Returns:
             The value at the specified path, or None if the path does not exist.
         """
-        return reduce(
-            lambda d, key: get_key(d, key),
-            keys,
-            data,
-        )
+
+        def reducer(d, key):
+            """
+            Retrieves the value of a key from a dictionary or a list of dictionaries.
+
+            Args:
+                d (dict or list): The dictionary or list of dictionaries to search.
+                key (str): The key to search for.
+
+            Returns:
+                The value of the key, or None if the key does not exist or the data is
+                not a dictionary or list of dictionaries.
+            """
+            return get_key(d, key)
+
+        return reduce(reducer, keys, data)
 
     return get_data
 
@@ -224,7 +234,10 @@ def get_parse_functions(
     Returns:
         dict: A dictionary mapping headers to their corresponding parse functions.
     """
-    return {header: parse_path(path) for path, header in get_path_header(config)}
+    return {
+        header: parse_path(path) or (lambda _: None)
+        for path, header in get_path_header(config)
+    }
 
 
 def fetch_sequences_report(accession: str) -> Generator[dict, None, None]:
@@ -409,7 +422,7 @@ def add_chromosome_entries(obj: dict, chromosomes: list[dict]) -> None:
                 "end": seq["length"],
                 "strand": 1,
                 "length": seq["length"],
-                "midpoint": math.round(seq["length"] / 2),
+                "midpoint": round(seq["length"] / 2),
                 "midpoint_proportion": 0.5,
                 "seq_proportion": seq["length"] / obj["totalSequenceLength"],
             }
@@ -487,7 +500,7 @@ def check_ebp_criteria(
     scaffold_n50 = int(data["assemblyStats"].get("scaffoldN50", 0))
     assignedProportion = None
     if not chromosomes:
-        return
+        return False
     data["processedAssemblyStats"] = {}
     assignedProportion = assigned_span / span
     standardCriteria = []
@@ -506,6 +519,7 @@ def check_ebp_criteria(
         ]
         data["processedAssemblyStats"]["ebpStandardCriteria"] = standardCriteria
     data["processedAssemblyStats"]["assignedProportion"] = assignedProportion
+    return False
 
 
 def process_sequence_report(data: dict):
@@ -536,6 +550,7 @@ def process_sequence_report(data: dict):
 
     add_organelle_entries(data, organelles)
     check_ebp_criteria(data, span, chromosomes, assigned_span)
+    data["chromosomes"] = chromosomes
 
 
 def update_organelle_info(data: dict, row: dict) -> None:
@@ -743,7 +758,7 @@ def parse_previous(f: IO[str], headers: list[str]) -> dict[str, dict[str, str]]:
     return rows
 
 
-def load_previous(file_path: str, headers: list[str]) -> dict[str, dict]:
+def load_previous(file_path: pathlib.Path, headers: list[str]) -> dict[str, dict]:
     """
     Loads the previous data from a TSV file at the given file path.
 
@@ -759,8 +774,13 @@ def load_previous(file_path: str, headers: list[str]) -> dict[str, dict]:
     if not file_path.exists():
         return {}
 
-    open_fn = gzip.open if file_path.suffix == ".gz" else open
-    with open_fn(file_path, "rt") as f:
+    open_fh = (
+        gzip.open(str(file_path), "rt", encoding="utf-8")
+        if file_path.suffix == ".gz"
+        else open(str(file_path), "rt", encoding="utf-8")
+    )
+
+    with open_fh as f:
         return parse_previous(f, headers)
 
 
@@ -803,7 +823,7 @@ def main():
                 row = previous_row
                 parsed[accession] = row
                 continue
-        if accession not in parsed:
+        if False or accession not in parsed:
             process_sequence_report(data)
         row = parse_report_values(parse_fns, data)
         if accession not in parsed:
