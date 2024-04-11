@@ -30,7 +30,7 @@ from collections import defaultdict
 from collections.abc import Generator
 from typing import Optional
 
-import genomehubs.utils as ghubs
+from genomehubs import utils as gh_utils
 
 
 def parse_args() -> argparse.Namespace:
@@ -460,18 +460,18 @@ def main():
         None
     """
     args = parse_args()
-    config = ghubs.load_yaml_config(args.config)
-    meta = ghubs.get_metadata(config, args.config)
-    headers = ghubs.set_headers(config)
-    parse_fns = ghubs.get_parse_functions(config)
-    previous_parsed = ghubs.load_previous(
+    config = gh_utils.load_yaml(args.config)
+    meta = gh_utils.get_metadata(config, args.config)
+    headers = gh_utils.set_headers(config)
+    parse_fns = gh_utils.get_parse_functions(config)
+    previous_parsed = gh_utils.load_previous(
         meta["file_name"], "genbankAccession", headers
     )
     parsed = {}
     previous_data = {}
     ctr = 0
 
-    for data in ghubs.parse_jsonl_file(args.file):
+    for data in gh_utils.parse_jsonl_file(args.file):
         ctr += 1
         data = process_assembly_report(data, previous_data)
         accession = data["processedAssemblyInfo"]["genbankAccession"]
@@ -483,14 +483,14 @@ def main():
                 continue
         if accession not in parsed:
             process_sequence_report(data)
-        row = ghubs.parse_report_values(parse_fns, data)
+        row = gh_utils.parse_report_values(parse_fns, data)
         if accession not in parsed:
             update_organelle_info(data, row)
         parsed[accession] = row
         previous_data = data
         if ctr >= 115:
             break
-    ghubs.write_tsv(parsed, headers, meta)
+    gh_utils.write_tsv(parsed, headers, meta)
 
 
 if __name__ == "__main__":
