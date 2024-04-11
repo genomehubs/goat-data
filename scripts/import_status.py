@@ -7,7 +7,7 @@ import sys
 projects = [
     "ATLASEA",
     "BGE",
-    "BEENOME100"
+    "BEENOME100",
     "CBP",
     "EBPN",
     "ERGA-CH",
