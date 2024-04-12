@@ -53,6 +53,11 @@ def parse_args() -> argparse.Namespace:
         default="ncbi_test/ncbi_datasets_eukaryota.types.yaml",
         help="path to config file",
     )
+    parser.add_argument(
+        "--features",
+        default="ncbi_test/ncbi_datasets_eukaryota.chromosomes.tsv",
+        help="path to output features",
+    )
     return parser.parse_args()
 
 
@@ -86,7 +91,7 @@ def fetch_sequences_report(accession: str) -> Generator[dict, None, None]:
         yield json.loads(line)
 
 
-def set_organelle_name(seq: dict) -> str:
+def set_organelle_name(seq: dict) -> Optional[str]:
     """
     Determines the organelle type (mitochondrion or plastid) based on the assigned
     molecule location type in the provided sequence data.
@@ -96,13 +101,18 @@ def set_organelle_name(seq: dict) -> str:
             "assigned_molecule_location_type" field.
 
     Returns:
-        str: The organelle type, either "mitochondrion" or "plastid".
+        Optional[str]: The organelle type, either "mitochondrion" or "plastid", or None
+            if key error.
     """
-    return (
-        "mitochondrion"
-        if seq[0]["assigned_molecule_location_type"] == "Mitochondrion"
-        else "plastid"
-    )
+    try:
+        return (
+            "mitochondrion"
+            if seq[0]["assigned_molecule_location_type"].casefold()
+            == "Mitochondrion".casefold()
+            else "plastid"
+        )
+    except KeyError:
+        return None
 
 
 def is_assembled_molecule(seq: dict) -> bool:
@@ -116,7 +126,10 @@ def is_assembled_molecule(seq: dict) -> bool:
         bool: True if the sequence data represents an assembled molecule, False
             otherwise.
     """
-    return len(seq) == 1 and seq[0]["role"] == "assembled-molecule"
+    try:
+        return seq[0]["role"] == "assembled-molecule"
+    except (IndexError, KeyError):
+        return False
 
 
 def set_additional_organelle_values(
@@ -155,7 +168,7 @@ def set_additional_organelle_values(
         )
 
 
-def initialiseOrganelleInfo(data: dict, organelle_name: str):
+def initialise_organelle_info(data: dict, organelle_name: str):
     """
     Initializes the `processedOrganelleInfo` dictionary in the provided `data`
     dictionary, creating a new entry for the specified `organelle_name` if it doesn't
@@ -188,7 +201,7 @@ def set_organelle_values(data: dict, seq: dict) -> dict:
         "organelle": seq[0]["assigned_molecule_location_type"],
     }
     organelle_name: str = set_organelle_name(seq)
-    initialiseOrganelleInfo(data, organelle_name)
+    initialise_organelle_info(data, organelle_name)
     set_additional_organelle_values(seq, organelle, data, organelle_name)
     return organelle
 
@@ -217,22 +230,23 @@ def add_organelle_entries(data: dict, organelles: dict) -> None:
             raise err
 
 
-def add_chromosome_entries(obj: dict, chromosomes: list[dict]) -> None:
+def add_chromosome_entries(data: dict, chromosomes: list[dict]) -> None:
     """
     Adds feature entries for assembled chromosomes to the provided data object.
 
     Args:
-        obj (dict): A dictionary containing processed data.
+        data (dict): A dictionary containing processed data.
         chromosomes (list): A list of dictionaries containing sequence data for
             assembled chromosomes.
 
     Returns:
         None
     """
-    obj["chromosomes"] = []
+    data["chromosomes"] = []
     for seq in chromosomes:
-        obj["chromosomes"].append(
+        data["chromosomes"].append(
             {
+                "assembly_id": data["processedAssemblyInfo"]["genbankAccession"],
                 "sequence_id": seq["genbank_accession"],
                 "start": 1,
                 "end": seq["length"],
@@ -240,7 +254,8 @@ def add_chromosome_entries(obj: dict, chromosomes: list[dict]) -> None:
                 "length": seq["length"],
                 "midpoint": round(seq["length"] / 2),
                 "midpoint_proportion": 0.5,
-                "seq_proportion": seq["length"] / obj["totalSequenceLength"],
+                "seq_proportion": seq["length"]
+                / int(data["assemblyStats"]["totalSequenceLength"]),
             }
         )
 
@@ -366,7 +381,7 @@ def process_sequence_report(data: dict):
 
     add_organelle_entries(data, organelles)
     check_ebp_criteria(data, span, chromosomes, assigned_span)
-    data["chromosomes"] = chromosomes
+    add_chromosome_entries(data, chromosomes)
 
 
 def update_organelle_info(data: dict, row: dict) -> None:
@@ -440,6 +455,42 @@ def process_assembly_report(data: dict, previous_data: Optional[dict]) -> dict:
     return data
 
 
+def set_feature_headers() -> list[str]:
+    """Set chromosome headers.
+
+    Returns:
+        list: The list of headers.
+    """
+    return [
+        "assembly_id",
+        "sequence_id",
+        "start",
+        "end",
+        "strand",
+        "length",
+        "midpoint",
+        "midpoint_proportion",
+        "seq_proportion",
+    ]
+
+
+def append_features(
+    features: list[dict], headers: list[str], features_path: str
+) -> None:
+    """Append features to a TSV file.
+
+    Args:
+        features (list): A list of dictionaries containing features.
+        headers (list): A list of column headers.
+        features_path (str): The path to the output TSV file.
+
+    Returns:
+        None
+    """
+    gh_utils.append_to_tsv(headers, features, {"file_name": features_path})
+    return None
+
+
 def main():
     """
     Parses a JSONL file containing NCBI dataset information, processes the data,
@@ -464,12 +515,24 @@ def main():
     meta = gh_utils.get_metadata(config, args.config)
     headers = gh_utils.set_headers(config)
     parse_fns = gh_utils.get_parse_functions(config)
-    previous_parsed = gh_utils.load_previous(
-        meta["file_name"], "genbankAccession", headers
-    )
+    try:
+        previous_parsed = gh_utils.load_previous(
+            meta["file_name"], "genbankAccession", headers
+        )
+    except ValueError:
+        previous_parsed = {}
     parsed = {}
     previous_data = {}
     ctr = 0
+    feature_headers = set_feature_headers()
+    if args.features is not None:
+        try:
+            previous_features = gh_utils.load_previous(
+                args.features, "assembly_id", feature_headers
+            )
+        except ValueError:
+            previous_features = {}
+        gh_utils.write_tsv({}, feature_headers, {"file_name": args.features})
 
     for data in gh_utils.parse_jsonl_file(args.file):
         ctr += 1
@@ -479,6 +542,14 @@ def main():
             previous_row = previous_parsed[accession]
             if data["assemblyInfo"]["releaseDate"] == previous_row["releaseDate"]:
                 row = previous_row
+                if (
+                    args.features is not None
+                    and accession in previous_features
+                    and accession not in parsed
+                ):
+                    append_features(
+                        previous_features[accession], feature_headers, args.features
+                    )
                 parsed[accession] = row
                 continue
         if accession not in parsed:
@@ -488,7 +559,9 @@ def main():
             update_organelle_info(data, row)
         parsed[accession] = row
         previous_data = data
-        if ctr >= 115:
+        if args.features is not None:
+            append_features(data["chromosomes"], feature_headers, args.features)
+        if ctr >= 40:
             break
     gh_utils.write_tsv(parsed, headers, meta)
 
