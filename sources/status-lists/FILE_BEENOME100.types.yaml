@@ -2,11 +2,11 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: BAT1K_expanded.tsv
-  source: Declared Status List - BAT1K
+  name: BEENOME100_expanded.tsv
+  source: Declared Status List - Beenome100
   source_date: "2024-04-12"
-  source_description: Declared Status Lists -BAT1K - static spreadsheet - ALL Bats
-  source_contact: Meike Mei - https://bat1k.com/contact-us/
+  source_description: Declared Status Lists - Beenome 100 - live spreadsheet
+  source_contact: Michael Branstetter
 attributes:
   long_list:
     header: project
@@ -19,7 +19,7 @@ attributes:
     translate:
       insdc_submitted: open
     type: keyword
-  sequencing_status_bat1k:
+  sequencing_status_beenome100:
     header: sequencing_status
     translate:
       insdc_submitted: open
@@ -42,8 +42,17 @@ attributes:
     header: data_generation
   in_assembly:
     header: in_assembly
+  open:
+    header: open
+  insdc_open:
+    header: insdc_open
 taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+    translate:
+      needs species: ""
+      not in ncbi taxonomy: ""
   species:
-    header: binomial
+    header: species
   family:
     header: family
