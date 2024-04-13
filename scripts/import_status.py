@@ -12,6 +12,8 @@ projects = [
     "EBPN",
     "EUROFISH",
     "ERGA-CH",
+    "LOEWE-TBG",
+    "OTHER",
     "SPAIN-HSP",
     "SOLVENIA-HSP",
     "GREECE-HSP",
