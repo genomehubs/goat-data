@@ -55,7 +55,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--features",
-        default="ncbi_test/ncbi_datasets_eukaryota.chromosomes.tsv",
+        default=None,
         help="path to output features",
     )
     return parser.parse_args()
@@ -491,6 +491,25 @@ def append_features(
     return None
 
 
+def get_previous_parsed(file_path: str, key: str, headers: list[str]) -> dict:
+    """
+    Returns the previously parsed data based on the provided file path.
+
+    Args:
+        file_path (str): The path to the data file.
+        key (str): The key to use for parsing.
+        headers (list): A list of headers to be used for parsing.
+
+    Returns:
+        dict: The previously parsed data based on the key and headers. Returns an
+            empty dictionary if an exception is raised.
+    """
+    try:
+        return gh_utils.load_previous(file_path, key, headers)
+    except ValueError:
+        return {}
+
+
 def main():
     """
     Parses a JSONL file containing NCBI dataset information, processes the data,
@@ -515,27 +534,19 @@ def main():
     meta = gh_utils.get_metadata(config, args.config)
     headers = gh_utils.set_headers(config)
     parse_fns = gh_utils.get_parse_functions(config)
-    try:
-        previous_parsed = gh_utils.load_previous(
-            meta["file_name"], "genbankAccession", headers
-        )
-    except ValueError:
-        previous_parsed = {}
+    previous_parsed = get_previous_parsed(
+        meta["file_name"], "genbankAccession", headers
+    )
     parsed = {}
     previous_data = {}
-    ctr = 0
     feature_headers = set_feature_headers()
     if args.features is not None:
-        try:
-            previous_features = gh_utils.load_previous(
-                args.features, "assembly_id", feature_headers
-            )
-        except ValueError:
-            previous_features = {}
+        previous_features = get_previous_parsed(
+            args.features, "assembly_id", feature_headers
+        )
         gh_utils.write_tsv({}, feature_headers, {"file_name": args.features})
 
     for data in gh_utils.parse_jsonl_file(args.file):
-        ctr += 1
         data = process_assembly_report(data, previous_data)
         accession = data["processedAssemblyInfo"]["genbankAccession"]
         if accession in previous_parsed:
@@ -552,7 +563,7 @@ def main():
                     )
                 parsed[accession] = row
                 continue
-        if accession not in parsed:
+        if args.features is not None and accession not in parsed:
             process_sequence_report(data)
         row = gh_utils.parse_report_values(parse_fns, data)
         if accession not in parsed:
@@ -561,8 +572,6 @@ def main():
         previous_data = data
         if args.features is not None:
             append_features(data["chromosomes"], feature_headers, args.features)
-        if ctr >= 40:
-            break
     gh_utils.write_tsv(parsed, headers, meta)
 
 
