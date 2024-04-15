@@ -3,13 +3,16 @@
 This script parses NCBI dataset files in JSONL format and outputs summary data in TSV
 format based on a provided configuration.
 
-It takes two arguments:
+It takes the following arguments:
 
-- -f/--file: The path to the JSONL input file to parse. Default is
-  ncbi_test/ncbi_dataset/data/assembly_data_report.jsonl.
+- -f/--file: The path to the JSONL input file to parse,
+    e.g.: '/path/to/ncbi_dataset/data/assembly_data_report.jsonl'.
 
 - -c/--config: The path to the configuration file specifying which fields
-  to output. Default is ncbi_test/ncbi_datasets_eukaryota.types.yaml.
+    to output, e.g.: '/path/to/output/ncbi_datasets_eukaryota.types.yaml'.
+
+- --features: A file path to output processed features. If not provided, the script
+    will not process features.
 
 The script parses the JSONL file, extracting fields based on the provided
 configuration. It then processes the data, adding additional fields based on the
@@ -491,25 +494,6 @@ def append_features(
     return None
 
 
-def get_previous_parsed(file_path: str, key: str, headers: list[str]) -> dict:
-    """
-    Returns the previously parsed data based on the provided file path.
-
-    Args:
-        file_path (str): The path to the data file.
-        key (str): The key to use for parsing.
-        headers (list): A list of headers to be used for parsing.
-
-    Returns:
-        dict: The previously parsed data based on the key and headers. Returns an
-            empty dictionary if an exception is raised.
-    """
-    try:
-        return gh_utils.load_previous(file_path, key, headers)
-    except ValueError:
-        return {}
-
-
 def main():
     """
     Parses a JSONL file containing NCBI dataset information, processes the data,
@@ -534,14 +518,14 @@ def main():
     meta = gh_utils.get_metadata(config, args.config)
     headers = gh_utils.set_headers(config)
     parse_fns = gh_utils.get_parse_functions(config)
-    previous_parsed = get_previous_parsed(
+    previous_parsed = gh_utils.load_previous(
         meta["file_name"], "genbankAccession", headers
     )
     parsed = {}
     previous_data = {}
     feature_headers = set_feature_headers()
     if args.features is not None:
-        previous_features = get_previous_parsed(
+        previous_features = gh_utils.load_previous(
             args.features, "assembly_id", feature_headers
         )
         gh_utils.write_tsv({}, feature_headers, {"file_name": args.features})
