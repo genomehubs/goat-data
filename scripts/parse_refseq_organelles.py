@@ -252,11 +252,10 @@ def parse_flatfile(
                 if not parse_sequence(entry, fields):
                     continue
             except Exception:
-                LOGGER.warn("Unable to read sequence for %s", entry.id)
+                LOGGER.warning("Unable to read sequence for %s", entry.id)
                 continue
             fields[organelle] = fields
             data.append(fields)
-            break
     return data
 
 
@@ -326,11 +325,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "-o",
         "--organelle",
-        nargs="+",
+        nargs="*",
         choices=["mitochondrion", "plastid"],
         required=True,
         help='One or both of "mitochondrion" and "plastid".',
-        type=list[str],
     )
     parser.add_argument(
         "-c",
@@ -387,11 +385,11 @@ def main() -> None:
         meta["file_name"], "refseqAccession", headers
     )
     previous_date = config["file"]["source_date"] if previous_parsed else None
-    raw_parsed = refseq_organelle_parser(args, previous_date)
-    if not raw_parsed:
-        return
-    parsed = [gh_utils.parse_report_values(parse_fns, data) for data in raw_parsed]
-    gh_utils.write_tsv(parsed, headers, meta)
+    parsed = refseq_organelle_parser(args, previous_date)
+    if not parsed:
+        return None
+    rows = [gh_utils.parse_report_values(parse_fns, data) for data in parsed]
+    gh_utils.print_to_tsv(headers, rows, meta)
 
 
 if __name__ == "__main__":
