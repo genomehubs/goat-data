@@ -12,6 +12,7 @@ from collections import defaultdict
 from datetime import date, datetime, timedelta
 from itertools import groupby
 from operator import itemgetter
+from typing import Any
 
 from dotenv import load_dotenv
 from genomehubs import utils as gh_utils
@@ -20,8 +21,15 @@ from tolkein import tolog
 LOGGER = tolog.logger(__name__)
 
 
-def parse_arguments():
-    """Parse command line arguments."""
+def parse_arguments() -> argparse.Namespace:
+    """Parse command line arguments.
+
+    This function parses the command line arguments provided by the user.
+    It uses the argparse module to define and parse the arguments.
+
+    Returns:
+        argparse.Namespace: An object containing the parsed command line arguments.
+    """
     parser = argparse.ArgumentParser(description="Parse SRA data.")
     parser.add_argument("-f", "--file", help="Path to the SRA data file")
     parser.add_argument(
@@ -46,8 +54,26 @@ def parse_arguments():
     return args
 
 
-def split_chunks(values, split_val):
-    """Split a list of values into chunks at a certain value."""
+def split_chunks(values: list[Any], split_val: Any) -> Any:
+    """
+    Split a list of values into chunks at a certain value.
+
+    Args:
+        values (List[Any]): The list of values to be split into chunks.
+        split_val (Any): The value at which to split the list.
+
+    Returns:
+        Any: An iterator of chunks, where each chunk is a sublist of values.
+
+    Example:
+        >>> values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        >>> split_val = 5
+        >>> chunks = split_chunks(values, split_val)
+        >>> for chunk in chunks:
+        ...     print(chunk)
+        [1, 2, 3, 4]
+        [6, 7, 8, 9]
+    """
     index = 0
 
     def chunk_index(val):
@@ -59,8 +85,17 @@ def split_chunks(values, split_val):
     return groupby(values, chunk_index)
 
 
-def read_exp_xml(node, obj):
-    """Read values from ExpXml section."""
+def read_exp_xml(node: ET.Element, obj: dict[str, Any]) -> None:
+    """
+    Read values from ExpXml section.
+
+    Args:
+        node (xml.etree.ElementTree.Element): The XML node containing the ExpXml section.
+        obj (dict): The dictionary to store the parsed values.
+
+    Returns:
+        None
+    """
     for child in node:
         tag = child.tag
         if tag == "Bioproject":
@@ -77,8 +112,20 @@ def read_exp_xml(node, obj):
             obj["library_source"] = child.findtext("LIBRARY_SOURCE").lower()
 
 
-def read_runs(node, obj):
-    """Read values from Runs section."""
+def read_runs(node: ET.Element, obj: dict[str, Any]) -> None:
+    """
+    Read values from Runs section.
+
+    Parameters:
+    - node: XML element representing the Runs section.
+    - obj: Dictionary to store the parsed values.
+
+    Returns:
+    None
+
+    This function parses the Runs section of an XML element and extracts the accession and total_spots
+    values for each child element. It then appends the parsed values to the 'runs' list in the 'obj' dictionary.
+    """
     if "runs" not in obj:
         obj["runs"] = []
     for child in node:
@@ -88,14 +135,37 @@ def read_runs(node, obj):
 
 
 def open_file_based_on_extension(file_path, *_, **kwargs):
+    """
+    Opens a file based on its extension.
+
+    Args:
+        file_path (str): The path to the file.
+        *args: Variable length argument list.
+        **kwargs: Arbitrary keyword arguments.
+
+    Returns:
+        file object: The opened file object.
+
+    Raises:
+        None
+
+    """
     if file_path.endswith(".gz"):
         return gzip.open(file_path, "rt", encoding="utf8", **kwargs)
     else:
         return open(file_path, "r", encoding="utf8", **kwargs)
 
 
-def parse_sra_xml(xml_file):
-    """Parse an SRA xml file."""
+def parse_sra_xml(xml_file: str) -> list[dict]:
+    """
+    Parse an SRA xml file.
+
+    Args:
+        xml_file (str): The path to the SRA xml file.
+
+    Returns:
+        list: A list of dictionaries containing parsed information from the xml file.
+    """
     rows = []
     with open_file_based_on_extension(xml_file) as container_file:
         for doc_num, doc in split_chunks(
@@ -123,11 +193,74 @@ def parse_sra_xml(xml_file):
     return rows
 
 
-def group_by_taxon(rows, grouped=None):
+def group_by_taxon(rows: list, grouped=None) -> list[dict]:
     """
     Group SRA runs by taxon.
 
     Keep the most recent 10 rows only.
+
+    Parameters:
+    - rows (list): A list of dictionaries representing SRA runs.
+    - grouped (dict, optional): A dictionary to store the grouped data. If not provided, a new dictionary will be created.
+
+    Returns:
+    - rows (list): A list of dictionaries representing the grouped SRA runs.
+
+    Example:
+    ```
+    rows = [
+        {
+            "taxon_id": 123,
+            "runs": [
+                {
+                    "accession": "SRR123",
+                    "reads": 100
+                },
+                {
+                    "accession": "SRR456",
+                    "reads": 200
+                }
+            ]
+        },
+        {
+            "taxon_id": 456,
+            "runs": [
+                {
+                    "accession": "SRR789",
+                    "reads": 150
+                }
+            ]
+        }
+    ]
+
+    grouped = group_by_taxon(rows)
+    print(grouped)
+    ```
+    Output:
+    ```
+    [
+        {
+            "taxon_id": 123,
+            "sra_accession": "SRR123;SRR456",
+            "run_accession": "SRR123;SRR456",
+            "library_source": "",
+            "platform": "",
+            "reads": "100;200",
+            "total_reads": 300,
+            "total_runs": 2
+        },
+        {
+            "taxon_id": 456,
+            "sra_accession": "SRR789",
+            "run_accession": "SRR789",
+            "library_source": "",
+            "platform": "",
+            "reads": "150",
+            "total_reads": 150,
+            "total_runs": 1
+        }
+    ]
+    ```
     """
     if grouped is None or not grouped:
         grouped = defaultdict(lambda: {"count": 0, "reads": 0, "runs": []})
@@ -169,8 +302,25 @@ def group_by_taxon(rows, grouped=None):
     return rows
 
 
-def load_sra_tsv(file):
-    """Load rows from a TSV file."""
+def load_sra_tsv(file: str) -> dict:
+    """
+    Load rows from a TSV file and group them based on taxon_id.
+
+    Args:
+        file (str): The path to the TSV file.
+
+    Returns:
+        dict: A dictionary containing the grouped data. The keys are taxon_ids and the values are dictionaries
+              with the following keys:
+              - count: The total number of runs for the taxon_id.
+              - reads: The total number of reads for the taxon_id.
+              - runs: A list of dictionaries, each representing a run. Each run dictionary has the following keys:
+                - run_accession: The accession number of the run.
+                - sra_accession: The accession number of the SRA.
+                - library_source: The source of the library.
+                - platform: The platform used for the run.
+                - reads: The number of reads for the run.
+    """
     if not os.path.isfile(file):
         return None
     grouped = defaultdict(lambda: {"count": 0, "reads": 0, "runs": []})
@@ -203,16 +353,36 @@ def load_sra_tsv(file):
     return grouped
 
 
-def sra_parser(previous_parsed, args):
-    """Parse SRA efetch xml."""
+def sra_parser(previous_parsed: list, args: argparse.Namespace) -> list:
+    """Parse SRA efetch xml.
+
+    This function takes in the previously parsed data and the command line arguments.
+    It parses the SRA efetch xml file specified in the arguments and returns the parsed data
+    grouped by taxon.
+
+    Args:
+        previous_parsed (list): The previously parsed data.
+        args (Namespace): The command line arguments.
+
+    Returns:
+        list: The parsed data grouped by taxon.
+    """
     xml_file = args.file
-    # Load newer runs from xml
     rows = parse_sra_xml(xml_file)
     return group_by_taxon(rows, grouped=previous_parsed)
 
 
-def fetch_sra_data(config, args):
-    """Fetch the latest SRA data."""
+def fetch_sra_data(config: dict, args: argparse.Namespace) -> None:
+    """
+    Fetches the latest SRA data.
+
+    Args:
+        config (dict): A dictionary containing configuration settings.
+        args (Namespace): An object containing command-line arguments.
+
+    Returns:
+        None
+    """
     source_date = (
         config.get("file", {}).get("source_date", "2024-01-01").replace("-", "/")
     )
@@ -222,8 +392,6 @@ def fetch_sra_data(config, args):
         f"-maxdate {get_yesterday()} | efetch -db sra -format docsum "
         f"-api_key {args.api_key} > {args.file}"
     )
-    print(cmd)
-    return
     subprocess.run(
         shlex.split(cmd),
         stdout=subprocess.PIPE,
@@ -231,32 +399,37 @@ def fetch_sra_data(config, args):
     )
 
 
-def get_day_before(date_str):
-    if "-" in date_str:
-        return (datetime.strptime(date_str, "%Y-%m-%d") - timedelta(days=1)).strftime(
-            "%Y/%m/%d"
-        )
-    return (datetime.strptime(date_str, "%Y/%m/%d") - timedelta(days=1)).strftime(
-        "%Y/%m/%d"
-    )
+def get_yesterday() -> str:
+    """
+    Returns the date of yesterday in the format 'YYYY/MM/DD'.
 
-
-def get_yesterday():
+    Returns:
+        str: The date of yesterday in the format 'YYYY/MM/DD'.
+    """
     return (date.today() - timedelta(days=1)).strftime("%Y/%m/%d")
 
 
-def main():
+def main() -> None:
+    """
+    Main function for parsing SRA data.
+
+    This function parses SRA data based on the provided configuration and command line arguments.
+    It loads the configuration file, retrieves metadata, sets headers, fetches latest SRA data if specified,
+    loads previously parsed data, parses SRA data, and prints the parsed data to a TSV file.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     args = parse_arguments()
     config = gh_utils.load_yaml(args.config)
     meta = gh_utils.get_metadata(config, args.config)
     headers = gh_utils.set_headers(config)
-    # file = args.file
-    # config = args.config
-    # root_taxon = args.root_taxon
     if args.latest:
         LOGGER.info("Fetching latest SRA data")
         sra_data = fetch_sra_data(config, args)
-    # Load older runs from tsv
     previous_parsed = load_sra_tsv(meta["file_name"])
     sra_data = sra_parser(previous_parsed, args)
     gh_utils.print_to_tsv(headers, sra_data, meta)
