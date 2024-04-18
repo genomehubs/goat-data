@@ -22,15 +22,17 @@ if [ ! -z "$SOURCEYAMLS" ]; then
 fi
 
 # Loop through YAMLs fetching YAML and data from S3 if available else from sources
-while read YAML; do
+printf "$SOURCEYAMLS\n$S3YAMLS\n" | sed '/^$/d' | while read YAML; do
   if [ -z "$YAML" ]; then
     continue
   fi
   YAMLFILE=$(basename $YAML)
+  echo $YAMLFILE
   if [ ! -z "$RESOURCES" ]; then
     # Fetch YAML
-    s3cmd get s3://goat/resources/$DIRECTORY/$YAMLFILE $tmpdir/$YAMLFILE 2>/dev/null
+    s3cmd get s3://goat/resources/$DIRECTORY/$YAMLFILE $tmpdir/$YAMLFILE
     if [ $? -eq 0 ]; then
+      echo YAML from resources
       echo $YAMLFILE >> $tmpdir/from_resources.txt
     else
       cp $YAML $tmpdir/$YAMLFILE
@@ -44,11 +46,13 @@ while read YAML; do
       cp $RESOURCES/$DIRECTORY/$FILE $tmpdir/$FILE
       echo $FILE >> $tmpdir/from_resources.txt
     else
-      s3cmd get s3://goat/resources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
-      if [[ $? -eq 0 ]]; then
+      s3cmd get s3://goat/resources/$DIRECTORY/$FILE $tmpdir/$FILE
+      if [ $? -eq 0 ]; then
+        echo DATA file from resources
         echo $FILE >> $tmpdir/from_resources.txt
       else
-        s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE 2>/dev/null
+        echo DATA file from sources
+        s3cmd get s3://goat/sources/$DIRECTORY/$FILE $tmpdir/$FILE
       fi
     fi
   else
@@ -72,7 +76,7 @@ while read YAML; do
     # update associated YAML file with release date
     cat $tmpdir/$YAMLFILE | yq '.file.source_date="'${RELEASE//./-}'"' > $tmpdir/$YAMLFILE.tmp && mv $tmpdir/$YAMLFILE.tmp $tmpdir/$YAMLFILE
   fi
-done <<< $(printf "$SOURCEYAMLS\n$S3YAMLS\n" | sed '/^$/d')
+done
 
 # Fetch names directory
 if [ ! -z "$RESOURCES" ]; then
