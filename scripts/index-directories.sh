@@ -35,20 +35,23 @@ printf "$SOURCEYAMLS\n$S3YAMLS\n" | sed '/^$/d' | while read YAML; do
       echo YAML from resources
       echo $YAMLFILE >> $tmpdir/from_resources.txt
     else
+      echo YAML from sources
       cp $YAML $tmpdir/$YAMLFILE
     fi
     FILE=$(cat $tmpdir/$YAMLFILE | yq -r '.file.name' 2>/dev/null)
     if [[ -z $FILE ]] || [[ "$FILE" == null ]]; then
+      echo "No file specified in YAML"
       continue
     fi
     # Fetch data file
     if [ -e "$RESOURCES/$DIRECTORY/$FILE" ]; then
       cp $RESOURCES/$DIRECTORY/$FILE $tmpdir/$FILE
+      echo DATA file from local resources
       echo $FILE >> $tmpdir/from_resources.txt
     else
       s3cmd get s3://goat/resources/$DIRECTORY/$FILE $tmpdir/$FILE
       if [ $? -eq 0 ]; then
-        echo DATA file from resources
+        echo DATA file from s3 resources
         echo $FILE >> $tmpdir/from_resources.txt
       else
         echo DATA file from sources
