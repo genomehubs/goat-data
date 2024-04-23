@@ -1,3 +1,4 @@
+import traceback
 import import_status_lib as isl
 import sys
 
@@ -40,6 +41,7 @@ try:
             )
         except Exception:
             print("something has gone wrong: ", row["project_acronym"])
+            print(traceback.format_exc())
             try:
                 open(f"{sys.argv[1]}/{row['project_acronym']}_expanded.tsv.failed", "x")
             except FileExistsError:
