@@ -2,19 +2,22 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: LOEWE-TBG_expanded.tsv
-  source: Declared Status List - LOEWE-TBG
+  name: OTHER_expanded.tsv
+  source: Declared Status List - Other Projects
   source_date: "2024-04-26"
-  source_description: Declared Status List - The LOEWE Centre for Translational Biodiversity Genomics, live spreadsheet - LOEWE-TBG_GoaT
-  source_contact: Prof Dr. Michael Hiller, Prof Dr. Miklós Bálint, Senckenberg, Frankfurt, Germany
+  source_description: Declared Status List - Other Projects, Multiple Contributing Labs, live spreadsheet - GoaT_OTHER_projects_subprojects
+  source_contact: Individual contributors - see https://docs.google.com/spreadsheets/d/1yOzTrQy231afNA1CVCA9dH0SjB5VyvX12hdiotKPvhY/edit#gid=586527579
+  source_url: https://goat.cog.sanger.ac.uk/?shared=sources/status-lists/
 attributes:
   long_list:
-    header: long_list
+    header: target_list_status
   other_priority:
-    header: other_priority
+    header: target_list_status
+  contributing_project_lab:
+    header: contributing_project_lab
   sequencing_status:
     header: sequencing_status
-  sequencing_status_loewe-tbg:
+  sequencing_status_other:
     header: sequencing_status
   sample_collected:
     header: sample_collected
@@ -43,5 +46,3 @@ taxonomy:
     header: species
   family:
     header: family
-  synonym:
-    header: synonym
