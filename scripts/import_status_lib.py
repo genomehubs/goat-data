@@ -27,6 +27,7 @@ def open_google_spreadsheet(acronym, file_link, header_index):
 
 def general_cleanup_for_table(project_table):
     project_table = project_table.replace(r"^\s*$", np.nan, regex=True)
+    project_table = project_table.replace(r"^ +| +$", r"", regex=True)
     project_table = project_table.replace(
         "publication_available", "published", regex=False
     )
