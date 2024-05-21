@@ -1,0 +1,35 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: DTOL_chordata_collected.tsv
+  source: DTOL Chordata Collections List
+  source_date: "2024-05-21"
+  source_description: DTOL Chordata Working Group, Live Spreadsheet
+  source_contact: DTOL Chordates SWG
+attributes:
+  long_list:
+    header: long_list
+    type: keyword
+  sequencing_status:
+    header: goat_status
+    type: keyword
+  sequencing_status_dtol:
+    header: goat_status
+    type: keyword
+  sample_collected:
+    header: Collected
+    translate:
+      'yes': DTOL
+    type: keyword
+  sample_collected_by:
+    header: 'GAL Coll'
+    translate:
+    type: keyword
+taxonomy:
+  taxon_id:
+    header: TXID
+  species:
+    header: Species
+  family:
+    header: Family
