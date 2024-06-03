@@ -494,6 +494,28 @@ def append_features(
     return None
 
 
+def convert_keys_to_camel_case(data: dict) -> dict:
+    """
+    Recursively converts all keys in a dictionary to camel case.
+
+    Args:
+        data (dict): The dictionary to convert.
+
+    Returns:
+        dict: The dictionary with keys converted to camel case.
+    """
+    converted_data = {}
+    for key, value in data.items():
+        if isinstance(value, dict):
+            value = convert_keys_to_camel_case(value)
+        converted_key = "".join(
+            word.capitalize() if i > 0 else word
+            for i, word in enumerate(key.split("_"))
+        )
+        converted_data[converted_key] = value
+    return converted_data
+
+
 def main():
     """
     Parses a JSONL file containing NCBI dataset information, processes the data,
@@ -531,6 +553,8 @@ def main():
         gh_utils.write_tsv({}, feature_headers, {"file_name": args.features})
 
     for data in gh_utils.parse_jsonl_file(args.file):
+        if "accession" not in data:
+            data = convert_keys_to_camel_case(data=data["reports"][0])
         data = process_assembly_report(data, previous_data)
         accession = data["processedAssemblyInfo"]["genbankAccession"]
         if accession in previous_parsed:
