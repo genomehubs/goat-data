@@ -9,7 +9,7 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 from itertools import groupby
 from operator import itemgetter
 from typing import Any
@@ -90,7 +90,8 @@ def read_exp_xml(node: ET.Element, obj: dict[str, Any]) -> None:
     Read values from ExpXml section.
 
     Args:
-        node (xml.etree.ElementTree.Element): The XML node containing the ExpXml section.
+        node (xml.etree.ElementTree.Element): The XML node containing the ExpXml
+        section.
         obj (dict): The dictionary to store the parsed values.
 
     Returns:
@@ -123,8 +124,9 @@ def read_runs(node: ET.Element, obj: dict[str, Any]) -> None:
     Returns:
     None
 
-    This function parses the Runs section of an XML element and extracts the accession and total_spots
-    values for each child element. It then appends the parsed values to the 'runs' list in the 'obj' dictionary.
+    This function parses the Runs section of an XML element and extracts the accession
+    and total_spots values for each child element. It then appends the parsed values to
+    the 'runs' list in the 'obj' dictionary.
     """
     if "runs" not in obj:
         obj["runs"] = []
@@ -201,7 +203,8 @@ def group_by_taxon(rows: list, grouped=None) -> list[dict]:
 
     Parameters:
     - rows (list): A list of dictionaries representing SRA runs.
-    - grouped (dict, optional): A dictionary to store the grouped data. If not provided, a new dictionary will be created.
+    - grouped (dict, optional): A dictionary to store the grouped data. If not provided,
+                                a new dictionary will be created.
 
     Returns:
     - rows (list): A list of dictionaries representing the grouped SRA runs.
@@ -310,11 +313,13 @@ def load_sra_tsv(file: str) -> dict:
         file (str): The path to the TSV file.
 
     Returns:
-        dict: A dictionary containing the grouped data. The keys are taxon_ids and the values are dictionaries
+        dict: A dictionary containing the grouped data. The keys are taxon_ids and the
+              values are dictionaries
               with the following keys:
               - count: The total number of runs for the taxon_id.
               - reads: The total number of reads for the taxon_id.
-              - runs: A list of dictionaries, each representing a run. Each run dictionary has the following keys:
+              - runs: A list of dictionaries, each representing a run. Each run
+                      dictionary has the following keys:
                 - run_accession: The accession number of the run.
                 - sra_accession: The accession number of the SRA.
                 - library_source: The source of the library.
@@ -357,8 +362,8 @@ def sra_parser(previous_parsed: list, args: argparse.Namespace) -> list:
     """Parse SRA efetch xml.
 
     This function takes in the previously parsed data and the command line arguments.
-    It parses the SRA efetch xml file specified in the arguments and returns the parsed data
-    grouped by taxon.
+    It parses the SRA efetch xml file specified in the arguments and returns the parsed
+    data grouped by taxon.
 
     Args:
         previous_parsed (list): The previously parsed data.
@@ -413,9 +418,10 @@ def main() -> None:
     """
     Main function for parsing SRA data.
 
-    This function parses SRA data based on the provided configuration and command line arguments.
-    It loads the configuration file, retrieves metadata, sets headers, fetches latest SRA data if specified,
-    loads previously parsed data, parses SRA data, and prints the parsed data to a TSV file.
+    This function parses SRA data based on the provided configuration and command line
+    arguments. It loads the configuration file, retrieves metadata, sets headers,
+    fetches latest SRA data if specified, loads previously parsed data, parses SRA data,
+    and prints the parsed data to a TSV file.
 
     Args:
         None
