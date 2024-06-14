@@ -1,0 +1,47 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: LOEWE-TBG_expanded.tsv
+  source: Declared Status List - LOEWE-TBG
+  source_date: "2024-06-12"
+  source_description: Declared Status List - The LOEWE Centre for Translational Biodiversity Genomics, live spreadsheet - LOEWE-TBG_GoaT
+  source_contact: Prof Dr. Michael Hiller, Prof Dr. Miklós Bálint, Senckenberg, Frankfurt, Germany
+attributes:
+  long_list:
+    header: long_list
+  other_priority:
+    header: other_priority
+  sequencing_status:
+    header: sequencing_status
+  sequencing_status_loewe-tbg:
+    header: sequencing_status
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  data_generation:
+    header: [data_generation, in_assembly]
+    join: ","
+    separator:
+      - ","
+    type: keyword
+  in_assembly:
+    header: in_assembly
+  in_progress:
+    header: in_progress
+  open:
+    header: insdc_open
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family
+  synonym:
+    header: synonym

@@ -1,0 +1,58 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: BEENOME100_expanded.tsv
+  source: Declared Status List - Beenome100
+  source_date: "2024-06-12"
+  source_description: Declared Status Lists - Beenome 100 - live spreadsheet
+  source_contact: Michael Branstetter
+attributes:
+  long_list:
+    header: project
+    type: keyword
+  family_representative:
+    header: family_representative
+    type: keyword
+  sequencing_status:
+    header: sequencing_status
+    translate:
+      insdc_submitted: open
+    type: keyword
+  sequencing_status_beenome100:
+    header: sequencing_status
+    translate:
+      insdc_submitted: open
+    type: keyword
+  sample_collected:
+    header: sample_collected
+    type: keyword
+  # sample_collected_by:
+  #   header: collected_by
+  #   translate:
+  #     "BMS,RBGK": KEW
+  # type: keyword
+  sample_acquired:
+    header: sample_acquired
+    type: keyword
+  in_progress:
+    header: in_progress
+    type: keyword
+  data_generation:
+    header: data_generation
+  in_assembly:
+    header: in_assembly
+  open:
+    header: open
+  insdc_open:
+    header: insdc_open
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+    translate:
+      needs species: ""
+      not in ncbi taxonomy: ""
+  species:
+    header: species
+  family:
+    header: family

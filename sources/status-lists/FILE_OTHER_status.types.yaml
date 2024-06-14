@@ -1,0 +1,48 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: OTHER_expanded.tsv
+  source: Declared Status List - Other Projects
+  source_date: "2024-06-12"
+  source_description: Declared Status List - Other Projects, Multiple Contributing Labs, live spreadsheet - GoaT_OTHER_projects_subprojects
+  source_contact: Individual contributors - see https://docs.google.com/spreadsheets/d/1yOzTrQy231afNA1CVCA9dH0SjB5VyvX12hdiotKPvhY/edit#gid=586527579
+  source_url: https://goat.cog.sanger.ac.uk/?shared=sources/status-lists/
+attributes:
+  long_list:
+    header: target_list_status
+  other_priority:
+    header: target_list_status
+  contributing_project_lab:
+    header: contributing_project_lab
+  sequencing_status:
+    header: sequencing_status
+  sequencing_status_other:
+    header: sequencing_status
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  data_generation:
+    header: [data_generation, in_assembly]
+    join: ","
+    separator:
+      - ","
+    type: keyword
+  in_assembly:
+    header: in_assembly
+  in_progress:
+    header: in_progress
+  open:
+    header: insdc_open
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family
