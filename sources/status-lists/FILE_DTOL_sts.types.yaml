@@ -135,7 +135,7 @@ attributes:
   resampling_required:
     header: material_status
     translate:
-      RECOLLECTION_REQUIRED: 'DTOL'
+      RECOLLECTION_REQUIRED: "DTOL"
       WAITING_FOR_NEW_SEQUENCING: ""
       OVERRIDE_DATA_COMPLETION: ""
   number_acquired:

@@ -2,7 +2,6 @@
 
 import csv
 import sys
-import traceback
 import requests
 
 output_filename = f"{sys.argv[1]}/jgi_1kfg.tsv"
@@ -68,7 +67,6 @@ try:
 
 except Exception:
     print(f"something has gone wrong: {output_filename}")
-    print(traceback.format_exc())
     try:
         open(f"{output_filename}.failed", "x")
     except FileExistsError:

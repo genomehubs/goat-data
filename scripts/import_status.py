@@ -1,4 +1,3 @@
-import traceback
 import import_status_lib as isl
 import sys
 
@@ -7,17 +6,14 @@ import sys
 
 projects = [
     "ATLASEA",
-    "BEENOME100",
     "BGE",
     "CBP",
     "EBPN",
-    "EUROFISH",
     "ERGA-CH",
-    "LOEWE-TBG",
-    "OTHER",
-    "SPAIN-HSP",
-    "SOLVENIA-HSP",
+    "EUROFISH",
     "GREECE-HSP",
+    "SOLVENIA-HSP",
+    "SPAIN-HSP",
     "YGG",
 ]
 
@@ -41,7 +37,6 @@ try:
             )
         except Exception:
             print("something has gone wrong: ", row["project_acronym"])
-            print(traceback.format_exc())
             try:
                 open(f"{sys.argv[1]}/{row['project_acronym']}_expanded.tsv.failed", "x")
             except FileExistsError:

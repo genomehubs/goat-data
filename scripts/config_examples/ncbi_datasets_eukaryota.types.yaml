@@ -1,0 +1,190 @@
+attributes:
+  assembly_level:
+    header: assemblyLevel
+    path: assemblyInfo.assemblyLevel
+  assembly_span:
+    header: totalSequenceLength
+    path: assemblyStats.totalSequenceLength
+  assigned_percent:
+    header: assignedProportion
+    path: processedAssemblyStats.assignedProportion
+  assembly_status:
+    header: primaryValue
+    path: processedAssemblyInfo.primaryValue
+    translate:
+      "1": primary
+  assembly_type:
+    header: assemblyType
+    path: assemblyInfo.assemblyType
+  bioproject:
+    header: bioProjectAccession
+    path: assemblyInfo.bioprojectLineage.bioprojects.accession
+    separator:
+      - ;
+  biosample:
+    header: biosampleAccession
+    path: assemblyInfo.biosample.accession
+    separator:
+      - ;
+  chromosome_count:
+    header: totalNumberOfChromosomes
+    path: assemblyStats.totalNumberOfChromosomes
+  contig_count:
+    header: numberOfContigs
+    path: assemblyStats.numberOfContigs
+  contig_l50:
+    header: contigL50
+    path: assemblyStats.contigL50
+  contig_n50:
+    header: contigN50
+    path: assemblyStats.contigN50
+  ebp_standard_criteria:
+    header: ebpStandardCriteria
+    path: processedAssemblyStats.ebpStandardCriteria
+    separator:
+      - ;
+  ebp_standard_date:
+    header: ebpStandardDate
+    path: processedAssemblyStats.ebpStandardDate
+  gc_percent:
+    header: gcPercent
+    path: assemblyStats.gcPercent
+  gene_count:
+    header: geneCountTotal
+    path: annotationInfo.stats.geneCounts.total
+  gene_count.source.date:
+    header: annotationReleaseDate
+    path: annotationInfo.releaseDate
+  isolate:
+    header: isolate
+    path: assemblyInfo.biosample.attributes.name==isolate.value
+  last_updated:
+    header: releaseDate
+    path: assemblyInfo.releaseDate
+  mitochondrion_accession:
+    header: mitochondrionAccession
+    path: processedOrganelleInfo.mitochondrion.accession
+    separator:
+      - ;
+  mitochondrion_assembly_span:
+    header: mitochondrionAssemblySpan
+    path: processedOrganelleInfo.mitochondrion.assemblySpan
+  mitochondrion_gc_percent:
+    header: mitochondrionGcPercent
+    path: processedOrganelleInfo.mitochondrion.gcPercent
+  mitochondrion_scaffolds:
+    header: mitochondrionScaffolds
+    path: processedOrganelleInfo.mitochondrion.scaffolds
+    separator:
+      - ;
+  noncoding_gene_count:
+    header: geneCountNoncoding
+    path: annotationInfo.stats.geneCounts.nonCoding
+  noncoding_gene_count.source.date:
+    header: annotationReleaseDate
+    path: annotationInfo.releaseDate
+  plastid_accession:
+    header: plastidAccession
+    path: processedOrganelleInfo.plastid.accession
+    separator:
+      - ;
+  plastid_assembly_span:
+    header: plastidAssemblySpan
+    path: processedOrganelleInfo.plastid.assemblySpan
+  plastid_gc_percent:
+    header: plastidGcPercent
+    path: processedOrganelleInfo.plastid.gcPercent
+  plastid_scaffolds:
+    header: plastidScaffolds
+    path: processedOrganelleInfo.plastid.scaffolds
+    separator:
+      - ;
+  protein_count:
+    header: geneCountProteincoding
+    path: annotationInfo.stats.geneCounts.proteinCoding
+  protein_count.source.date:
+    header: annotationReleaseDate
+    path: annotationInfo.releaseDate
+  pseudogene_count:
+    header: geneCountPseudogene
+    path: annotationInfo.stats.geneCounts.pseudogene
+  pseudogene.source.date:
+    header: annotationReleaseDate
+    path: annotationInfo.releaseDate
+  refseq_category:
+    header: refseqCategory
+    path: assemblyInfo.refseqCategory
+  sample_sex:
+    header: sex
+    path: assemblyInfo.biosample.attributes.name==sex.value
+  scaffold_count:
+    header: numberOfScaffolds
+    path: assemblyStats.numberOfScaffolds
+  scaffold_l50:
+    header: scaffoldL50
+    path: assemblyStats.scaffoldL50
+  scaffold_n50:
+    header: scaffoldN50
+    path: assemblyStats.scaffoldN50
+  sequence_count:
+    header: numberOfComponentSequences
+    path: assemblyStats.numberOfComponentSequences
+  submitter:
+    header: submitter
+    path: assemblyInfo.submitter
+  ungapped_span:
+    header: totalUngappedLength
+    path: assemblyStats.totalUngappedLength
+file:
+  display_group: general
+  exclusions:
+    attributes:
+      - bioproject
+      - biosample
+    identifiers:
+      - assembly_id
+    taxonomy:
+      - taxon_id
+  format: tsv
+  header: true
+  name: ncbi_datasets_test.tsv
+  needs:
+    - ATTR_assembly.types.yaml
+    - TAXON_assembly.types.yaml
+  source: INSDC
+  source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  source_date: "2024-01-18"
+identifiers:
+  assembly_id:
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
+  assembly_name:
+    header: assemblyName
+    path: assemblyInfo.assemblyName
+  genbank_accession:
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
+  refseq_accession:
+    header: refseqAccession
+    path: processedAssemblyInfo.refseqAccession
+  wgs_accession:
+    header: wgsProjectAccession
+    path: wgsInfo.wgsProjectAccession
+metadata:
+  is_primary_value:
+    header: primaryValue
+    path: processedAssemblyInfo.primaryValue
+  source_slug:
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
+names:
+  common_name:
+    header: commonName
+    path: organism.commonName
+taxonomy:
+  taxon:
+    header: organismName
+    path: organism.organismName
+  taxon_id:
+    header: taxId
+    path: organism.taxId

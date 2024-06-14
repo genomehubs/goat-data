@@ -39,17 +39,14 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch GenomeHubs API executable
         run: |
-          curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
-            curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
-          )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
-        #   ./scripts/update-resources/fetch-or-fallback.sh
-        # env:
-        #   CMD: |
-        #     curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
-        #         curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
-        #       )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
-        #   FALLBACK: s3://goat/resources/genomehubs/genomehubs-api
-        #   RESOURCES: ${{ inputs.resources }}/genomehubs
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
+                curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
+              )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
+          FALLBACK: s3://goat/resources/genomehubs/genomehubs-api
+          RESOURCES: ${{ inputs.resources }}/genomehubs
 
   fetch-genomehubs-ui:
     runs-on: [self-hosted, runner1]
@@ -57,17 +54,14 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fetch GenomeHubs UI executable
         run: |
-          curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
-            curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
-          )/genomehubs-ui-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
-        #   ./scripts/update-resources/fetch-or-fallback.sh
-        # env:
-        #   CMD: |
-        #     curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
-        #         curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
-        #       )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
-        #   FALLBACK: s3://goat/resources/genomehubs/genomehubs-ui
-        #   RESOURCES: ${{ inputs.resources }}/genomehubs
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: |
+            curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
+                curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
+              )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
+          FALLBACK: s3://goat/resources/genomehubs/genomehubs-ui
+          RESOURCES: ${{ inputs.resources }}/genomehubs
 
   fetch-resources-taxroot:
     needs:

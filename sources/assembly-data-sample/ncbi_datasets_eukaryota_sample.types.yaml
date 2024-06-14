@@ -68,7 +68,7 @@ attributes:
     header:
       - latitude
       - longitude
-    join: ','
+    join: ","
     organelle: nucleus
     source: INSDC
     source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/

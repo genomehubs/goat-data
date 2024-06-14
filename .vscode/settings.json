@@ -1,13 +1,7 @@
 {
   "git.ignoreLimitWarning": true,
-  "python.linting.pylintEnabled": false,
-  "python.linting.pydocstyleEnabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.enabled": true,
-  "python.formatting.provider": "none",
   "editor.formatOnSave": true,
-  "python.sortImports.path": "isort",
-  "python.sortImports.args": ["-m 3", "-tc"],
+  "flake8.args": ["--max-line-length=88"],
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports.python": "explicit"

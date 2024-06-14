@@ -4,11 +4,11 @@ attributes:
     index: 8
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    taxon_display_group: '{{organelle}}_assembly'
+    taxon_display_group: "{{organelle}}_assembly"
     taxon_display_level: 2
-    taxon_display_name: '{{organelle}} span'
-    taxon_key: '{{organelle}}_assembly_span'
-    taxon_name: '{{organelle}}_assembly_span'
+    taxon_display_name: "{{organelle}} span"
+    taxon_key: "{{organelle}}_assembly_span"
+    taxon_name: "{{organelle}}_assembly_span"
     taxon_traverse_limit: phylum
   bioproject:
     display_group: general
@@ -30,11 +30,11 @@ attributes:
       max: 100
       min: 0
       scale: linear
-    taxon_display_group: '{{organelle}}_assembly'
+    taxon_display_group: "{{organelle}}_assembly"
     taxon_display_level: 2
-    taxon_display_name: '{{organelle}} GC%'
-    taxon_key: '{{organelle}}_gc_percent'
-    taxon_name: '{{organelle}}_gc_percent'
+    taxon_display_name: "{{organelle}} GC%"
+    taxon_key: "{{organelle}}_gc_percent"
+    taxon_name: "{{organelle}}_gc_percent"
     taxon_summary: median
     taxon_traverse: median
     taxon_traverse_limit: phylum
@@ -49,7 +49,7 @@ attributes:
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
   organelle:
-    default: '{{organelle}}'
+    default: "{{organelle}}"
     display_group: general
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
@@ -59,10 +59,10 @@ attributes:
     index: 12
     source: NCBI
     source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    taxon_display_group: '{{organelle}}_assembly'
-    taxon_display_name: '{{organelle}} sample location'
-    taxon_key: '{{organelle}}_sample_location'
-    taxon_name: '{{organelle}}_sample_location'
+    taxon_display_group: "{{organelle}}_assembly"
+    taxon_display_name: "{{organelle}} sample location"
+    taxon_key: "{{organelle}}_sample_location"
+    taxon_name: "{{organelle}}_sample_location"
 file:
   display_group: general
   format: tsv

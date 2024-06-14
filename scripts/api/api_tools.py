@@ -1,7 +1,6 @@
 # import requests
 import csv
 import sys
-import traceback
 
 
 def get_from_source(
@@ -22,7 +21,6 @@ def get_from_source(
             writer.writerows(rows)
     except Exception:
         print(f"something has gone wrong: {output_filename}")
-        print(traceback.format_exc())
         try:
             open(f"{output_filename}.failed", "x")
         except FileExistsError:

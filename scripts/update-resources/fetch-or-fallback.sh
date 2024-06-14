@@ -38,7 +38,7 @@ exitcode=0
 for url in ${FALLBACK//,/$IFS}; do
   cd $tmpdir
   filename=$(basename $url)
-  if [ $status == 0 ] && [ -f $filename ]; then
+  if [ $status == 0 ]; then
     ls -al
     echo $url
     echo UPLOAD $filename to s3

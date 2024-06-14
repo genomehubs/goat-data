@@ -16,7 +16,6 @@ defaults:
         - atlasea
         - bat1k
         - b10k
-        - beenome100
         - bpa
         - canbp
         - cbp
@@ -75,8 +74,6 @@ defaults:
         description: "Bat 1K (click to view GoaT project page)"
       b10k:
         description: "Bird 10K (click to view GoaT project page)"
-      beenome100:
-        description: "Beenome100 (click to view GoaT project page)"
       bpa:
         description: "Bioplatforms Australia"
       canbp:
