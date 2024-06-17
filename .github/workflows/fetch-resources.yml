@@ -107,7 +107,7 @@ jobs:
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"cp /genomehubs/assembly-data/refseq_organelles.types.yaml /genomehubs/tmp/ \
-              /genomehubs/parse_refseq_organelles.py \
+              && /genomehubs/parse_refseq_organelles.py \
               -o mitochondrion \
               -c /genomehubs/tmp/refseq_organelles.types.yaml \
               && ls -al /genomehubs/tmp/refseq_organelles.tsv.gz \
