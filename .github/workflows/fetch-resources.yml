@@ -364,7 +364,7 @@ jobs:
             \"/genomehubs/parse_ncbi_datasets.py \
               -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
               -c /genomehubs/ncbi_datasets_eukaryota.types.yaml \
-              --features \
+              --features ncbi_datasets_eukaryota_features.tsv.gz \
             && mv /genomehubs/*tsv* /genomehubs/tmp/\"" \
           ./scripts/update-resources/fetch-or-fallback.sh
         # run: |
