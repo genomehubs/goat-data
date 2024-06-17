@@ -20,18 +20,18 @@ on:
         required: true
 
 jobs:
-  fetch-ncbi-datasets:
-    runs-on: [self-hosted, runner2]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch NCBI datasets executable
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets
-          FALLBACK: s3://goat/resources/datasets
-          RESOURCES: ${{ inputs.resources }}
+  # fetch-ncbi-datasets:
+  #   runs-on: [self-hosted, runner2]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch NCBI datasets executable
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -Ls https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets > datasets
+  #         FALLBACK: s3://goat/resources/datasets
+  #         RESOURCES: ${{ inputs.resources }}
 
   # fetch-genomehubs-api:
   #   runs-on: [self-hosted, runner1]
@@ -93,21 +93,27 @@ jobs:
   #         FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp
   #         RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
 
-  # fetch-refseq-organelles:
-  #   runs-on: [self-hosted, runner1]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Fetch RefSeq organelles
-  #       run: |
-  #         ./scripts/update-resources/fetch-or-fallback.sh
-  #       env:
-  #         CMD: |
-  #           docker run --rm --network=host \
-  #             -v \$(pwd):/genomehubs/tmp \
-  #             genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-  #               "genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz"
-  #         FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
-  #         RESOURCES: ${{ inputs.resources }}/assembly-data
+  fetch-refseq-organelles:
+    runs-on: [self-hosted, runner1]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch RefSeq organelles
+        run: |
+          CMD="cp ${{ inputs.resources }}/assembly-data/refseq_organelles.tsv.gz ./ 2>/dev/null || : && \
+          s3cmd get s3://goat/resources/assembly-data/refseq_organelles.types.yaml ${{ inputs.resources }}/assembly-data/refseq_organelles.types.yaml 2>/dev/null || : && \
+          docker run --rm --network=host \
+          -v $(pwd)/scripts/parse_refseq_organelles.py:/genomehubs/parse_refseq_organelles.py \
+          -v \$(pwd):/genomehubs/tmp \
+          -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+            \"/genomehubs/parse_refseq_organelles.py \
+              -o plastid \
+              -o mitochondrion \
+              -c /genomehubs/assembly-data/refseq_organelles.types.yaml\"" \
+          ./scripts/update-resources/fetch-or-fallback.sh && exit 1
+        env:
+          FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
+          RESOURCES: ${{ inputs.resources }}/assembly-data
 
   # fetch-tolids:
   #   runs-on: [self-hosted, runner1]
@@ -324,67 +330,66 @@ jobs:
   #         CMD: |
   #           cp ${{ inputs.resources }}/ena-taxonomy.extra.prev.jsonl.gz ./ 2>/dev/null || : && \
   #           cp ${{ inputs.resources }}/ena-taxonomy.extra.jsonl.gz ./ 2>/dev/null || : && \
-  #           exit 1
-  #         #  bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash 2759
+  #           bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash 2759
   #         FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
   #         RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
-  fetch-ncbi-datasets-zip:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      # - name: Fetch NCBI TAXROOT datasets zip
-      #   run: |
-      #     ./scripts/update-resources/fetch-or-fallback.sh
-      #   env:
-      #     CMD: |
-      #       chmod 755 ${{ inputs.resources }}/datasets && \
-      #       ${{ inputs.resources }}/datasets download genome \
-      #         taxon 2759 \
-      #         --no-progressbar \
-      #         --dehydrated \
-      #         --filename eukaryota.zip
-      #     FALLBACK: s3://goat/resources/assembly-data/eukaryota.zip
-      #     RESOURCES: ${{ inputs.resources }}/assembly-data
+  # fetch-ncbi-datasets-zip:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch NCBI TAXROOT datasets zip
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           chmod 755 ${{ inputs.resources }}/datasets && \
+  #           ${{ inputs.resources }}/datasets download genome \
+  #             taxon 2759 \
+  #             --no-progressbar \
+  #             --dehydrated \
+  #             --filename eukaryota.zip
+  #         FALLBACK: s3://goat/resources/assembly-data/eukaryota.zip
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      # - name: Unzip NCBI TAXROOT datasets zip
-      #   run: |
-      #     unzip -o -d ${{ inputs.resources }}/assembly-data ${{ inputs.resources }}/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
-      #     ls ${{ inputs.resources }}/assembly-data
+  #     - name: Unzip NCBI TAXROOT datasets zip
+  #       run: |
+  #         unzip -o -d ${{ inputs.resources }}/assembly-data ${{ inputs.resources }}/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
+  #         ls ${{ inputs.resources }}/assembly-data
 
-      - name: Run genomehubs parse --ncbi-datasets-genome
-        run: |
-          CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ./ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.types.yaml ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.types.yaml 2>/dev/null || : && \
-          docker run --rm --network=host \
-          -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
-          -v \$(pwd):/genomehubs/tmp \
-          -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
-          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"/genomehubs/parse_ncbi_datasets.py \
-              -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
-              -c /genomehubs/assembly-data/ncbi_datasets_eukaryota.types.yaml \
-              --features ncbi_datasets_eukaryota_features.tsv.gz \
-            && mv /genomehubs/*tsv* /genomehubs/tmp/\"" \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  #     - name: Run genomehubs parse --ncbi-datasets-genome
+  #       run: |
+  #         CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ./ 2>/dev/null || : && \
+  #         s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.types.yaml ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.types.yaml 2>/dev/null || : && \
+  #         docker run --rm --network=host \
+  #         -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
+  #         -v \$(pwd):/genomehubs/tmp \
+  #         -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+  #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+  #           \"/genomehubs/parse_ncbi_datasets.py \
+  #             -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
+  #             -c /genomehubs/assembly-data/ncbi_datasets_eukaryota.types.yaml \
+  #             --features ncbi_datasets_eukaryota_features.tsv.gz \
+  #           && mv /genomehubs/*tsv* /genomehubs/tmp/\"" \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Run genomehubs parse --ncbi-datasets-sample
-        run: |
-          CMD="cp ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_sample.tsv.gz ./ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.types.yaml ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_sample.types.yaml 2>/dev/null || : && \
-          docker run --rm --network=host \
-          -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
-          -v \$(pwd):/genomehubs/tmp \
-          -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
-          -v ${{ inputs.resources }}/assembly-data-sample:/genomehubs/assembly-data-sample \
-          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"/genomehubs/parse_ncbi_datasets.py \
-              -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
-              -c /genomehubs/assembly-data-sample/ncbi_datasets_sample.types.yaml\" && exit 1" \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          FALLBACK: s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data-sample
+  #     - name: Run genomehubs parse --ncbi-datasets-sample
+  #       run: |
+  #         CMD="cp ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_sample.tsv.gz ./ 2>/dev/null || : && \
+  #         s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.types.yaml ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_sample.types.yaml 2>/dev/null || : && \
+  #         docker run --rm --network=host \
+  #         -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
+  #         -v \$(pwd):/genomehubs/tmp \
+  #         -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+  #         -v ${{ inputs.resources }}/assembly-data-sample:/genomehubs/assembly-data-sample \
+  #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+  #           \"/genomehubs/parse_ncbi_datasets.py \
+  #             -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
+  #             -c /genomehubs/assembly-data-sample/ncbi_datasets_sample.types.yaml\"" \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         FALLBACK: s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data-sample
