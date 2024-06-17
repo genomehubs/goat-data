@@ -544,9 +544,12 @@ def main():
     meta = gh_utils.get_metadata(config, args.config)
     headers = gh_utils.set_headers(config)
     parse_fns = gh_utils.get_parse_functions(config)
-    previous_parsed = gh_utils.load_previous(
-        meta["file_name"], "genbankAccession", headers
-    )
+    try:
+        previous_parsed = gh_utils.load_previous(
+            meta["file_name"], "genbankAccession", headers
+        )
+    except Exception:
+        previous_parsed = {}
     parsed = {}
     previous_data = {}
     feature_headers = set_feature_headers()
