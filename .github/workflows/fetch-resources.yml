@@ -106,9 +106,10 @@ jobs:
           -v \$(pwd):/genomehubs/tmp \
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"/genomehubs/parse_refseq_organelles.py \
+            \"cp /genomehubs/assembly-data/refseq_organelles.types.yaml /genomehubs/tmp/ \
+              /genomehubs/parse_refseq_organelles.py \
               -o mitochondrion \
-              -c /genomehubs/assembly-data/refseq_organelles.types.yaml \
+              -c /genomehubs/tmp/refseq_organelles.types.yaml \
               && ls -al /genomehubs/tmp/refseq_organelles.tsv.gz \
               && ls -al /genomehubs/assembly-data/refseq_organelles.tsv.gz\"" \
           ./scripts/update-resources/fetch-or-fallback.sh && exit 1
