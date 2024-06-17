@@ -360,10 +360,10 @@ jobs:
           -v $(pwd)/scripts/config_examples/ncbi_datasets_eukaryota.types.yaml:/genomehubs/ncbi_datasets_eukaryota.types.yaml \
           -v \$(pwd):/genomehubs/tmp \
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
-          --workdir /genomehubs/assembly-data \
+          --workdir /genomehubs/tmp \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"/genomehubs/parse_ncbi_datasets.py \
-              -f ncbi_dataset/data/assembly_data_report.jsonl \
+              -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
               -c /genomehubs/ncbi_datasets_eukaryota.types.yaml\"" \
           ./scripts/update-resources/fetch-or-fallback.sh
         # run: |
