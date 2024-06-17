@@ -109,7 +109,7 @@ jobs:
             \"/genomehubs/parse_refseq_organelles.py \
               -o mitochondrion plastid \
               -c /genomehubs/assembly-data/refseq_organelles.types.yaml \
-              && find /genomehubs -name refseq_organelles.tsv.gz\"" \
+              && mv /genomehubs/tmp/refseq_organelles.tsv.gz /genomehubs/assembly-data/\"" \
           ./scripts/update-resources/fetch-or-fallback.sh && exit 1
         env:
           FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
