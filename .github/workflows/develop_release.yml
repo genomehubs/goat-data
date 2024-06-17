@@ -5,22 +5,21 @@ on: workflow_dispatch
 #     - cron: '5 0 * * 1,2,3,4' # At 00:05 every MTWT
 
 jobs:
-
   get_dockers:
     runs-on: self-hosted
     steps:
       - name: Get dockers
-        run:  |
+        run: |
           docker pull genomehubs/genomehubs:develop
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
-    
+
   update_ncbi_ena_tolids:
     needs:
       - get_dockers
     runs-on: self-hosted
     steps:
       - name: Get release name from date
-        run:  echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: echo "RELEASE=$(date +'%Y.%m.%d')" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       # - run:  echo "RELEASE=2022.06.25" | tee /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       - name: checkout first
         uses: actions/checkout@v3
@@ -28,7 +27,7 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: checkout RELEASE, or create a new branch
-        run:  |
+        run: |
           git checkout -b $RELEASE
       - name: Download NCBI datasets executable
         run: |
@@ -56,7 +55,7 @@ jobs:
             genomehubs/genomehubs:develop bash -c \
             "genomehubs parse --ncbi-datasets-sample sources/assembly-data --outfile sources/assembly-data-sample/ncbi_datasets_eukaryota_sample.tsv.gz"
       - name: Clean up expanded ncbi datasets zip
-        run:  rm -rf sources/assembly-data/ncbi_dataset datasets
+        run: rm -rf sources/assembly-data/ncbi_dataset datasets
       - name: genomehubs parse --refseq-organelles
         run: |
           docker run --rm --network=host \
@@ -64,7 +63,7 @@ jobs:
             genomehubs/genomehubs:develop bash -c \
             "genomehubs parse --refseq-organelles --outfile sources/assembly-data/refseq_organelles.tsv.gz"
       - name: Get extra ENA taxonomy nodes
-        run:  |
+        run: |
           mkdir -p sources/ena-taxonomy
           cd sources/ena-taxonomy
           bash ../../scripts/get_ena_taxonomy_extra.bash
@@ -74,13 +73,13 @@ jobs:
             ena-taxonomy.extra.curr.jsonl
           cd ../../
       - name: Get latest tolids
-        run:  |
+        run: |
           mkdir -p sources/tolids
           curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
           | gzip -c > sources/tolids/tolids.tsv.gz
 
       - name: Update sources/goat.yaml
-        run:  |
+        run: |
           perl -i -plne 's/20\d\d\.\d\d.\d\d/'$RELEASE'/g' sources/goat.yaml
 
       - name: Commit files in branch
@@ -100,7 +99,7 @@ jobs:
     needs:
       - get_dockers
       - update_ncbi_ena_tolids
-    runs-on:  [ self-hosted ]
+    runs-on: [self-hosted]
     steps:
       - name: Install dependencies
         run: |
@@ -108,7 +107,7 @@ jobs:
           pip install requests pyyaml
 
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
@@ -124,7 +123,7 @@ jobs:
           ' > ./sources/status_lists/nhm.tsv
 
       - name: Get from sts api
-        run:  python3 ./scripts/sts_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} > ./sources/status_lists/sts.tsv
+        run: python3 ./scripts/sts_to_tsv.py ${{ secrets.STS_AUTHORIZATION_KEY }} > ./sources/status_lists/sts.tsv
 
       - name: Get from vgp yaml
         run: |
@@ -160,11 +159,10 @@ jobs:
     needs:
       - get_dockers
       - update_ncbi_ena_tolids
-    runs-on:  self-hosted
+    runs-on: self-hosted
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -173,7 +171,7 @@ jobs:
           ref: ${{ env.RELEASE }}
 
       - name: Check es health
-        run:  curl -s "http://es1:9200/_cat/health"
+        run: curl -s "http://es1:9200/_cat/health"
 
       - name: Create dev snapshot repo if it doesn't exist
         run: |
@@ -249,11 +247,11 @@ jobs:
       - get_dockers
       - genomehubs_init
       - update_api_googlesheets_data
-    runs-on:  self-hosted
-  
+    runs-on: self-hosted
+
     steps:
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -339,7 +337,7 @@ jobs:
                 --btk --btk-root Eukaryota --outfile sources/btk/btk.tsv.gz"
 
       - name: Add ES index.mapping.nested_objects.limit 100000
-        run:  |
+        run: |
           curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
             -H 'Content-Type: application/json' \
             -d '{ "index.mapping.nested_objects.limit" : 100000 }'
@@ -418,9 +416,8 @@ jobs:
       - genomehubs_index_attributes
     runs-on: self-hosted
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -475,16 +472,14 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "analysis*,file*", "include_global_state":false}'
 
-
   genomehubs_fill:
     needs:
       - get_dockers
       - genomehubs_index_attributes
     runs-on: self-hosted
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -509,7 +504,7 @@ jobs:
           curl -s -X PUT    "es1:9200/_snapshot/dev/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
-    
+
       - name: Snapshot final fill to production-$RELEASE
         run: |
           curl -s -X DELETE "es1:9200/_snapshot/production-${RELEASE}/${RELEASE}_initassembly_otttolids_gensizekaryo_reglegbtkasm_status_fill" || exit 0
@@ -517,32 +512,29 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*,attributes*,feature*,identifiers*,sample*,taxon*", "include_global_state":false}'
 
-
-  rsync_to_edin_prod:
+  rsync_to_prod:
     needs:
       - genomehubs_index_files
       - genomehubs_fill
-    runs-on:  self-hosted
+    runs-on: self-hosted
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
-      - name: rsync production snapshot to edinburgh prod
+      - name: rsync production snapshot to prod
         run: |
           rsync -av --delete  /volumes/docker/snapshots/production/production-$RELEASE goat:/volumes/docker/snapshots/production/
           rsync -av --delete  /volumes/docker/resources/files                          goat:/volumes/docker/resources/
 
-  restore_on_edin_prod:
+  restore_on_prod:
     needs:
-      - rsync_to_edin_prod
-    runs-on:  self-hosted
+      - rsync_to_prod
+    runs-on: self-hosted
     steps:
-
       - name: Get bash release name
-        run:  cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
+        run: cat /tmp/CURRENT_RELEASE >> $GITHUB_ENV
 
-      - name: ssh edin prod and restore
+      - name: ssh prod and restore
         run: |
           ssh goat "
           curl -s -X DELETE 'es1:9200/*--$RELEASE'
@@ -563,7 +555,7 @@ jobs:
             echo "RELEASEDAY=${BASH_REMATCH[1]}" | tee -a /tmp/CURRENT_RELEASE >> $GITHUB_ENV
           fi
 
-      - name: ssh edin prod and start dockers
+      - name: ssh prod and start dockers
         run: |
           ssh goat "
           mkdir -p /volumes/docker/logs/$RELEASE
