@@ -585,7 +585,7 @@ def main():
             update_organelle_info(data, row)
         parsed[accession] = row
         previous_data = data
-        if args.features is not None:
+        if args.features is not None and "chromosomes" in data:
             append_features(data["chromosomes"], feature_headers, args.features)
     gh_utils.write_tsv(parsed, headers, meta)
 
