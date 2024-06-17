@@ -94,7 +94,7 @@ jobs:
   #         RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
 
   fetch-refseq-organelles:
-    runs-on: [self-hosted, runner1]
+    runs-on: [self-hosted, runner2]
     steps:
       - uses: actions/checkout@v3
       - name: Fetch RefSeq organelles
