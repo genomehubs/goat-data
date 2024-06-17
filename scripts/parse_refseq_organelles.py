@@ -381,9 +381,12 @@ def main() -> None:
     meta = gh_utils.get_metadata(config, args.config)
     headers = gh_utils.set_headers(config)
     parse_fns = gh_utils.get_parse_functions(config)
-    previous_parsed = gh_utils.load_previous(
-        meta["file_name"], "refseqAccession", headers
-    )
+    try:
+        previous_parsed = gh_utils.load_previous(
+            meta["file_name"], "refseqAccession", headers
+        )
+    except Exception:
+        previous_parsed = {}
     previous_date = config["file"]["source_date"] if previous_parsed else None
     parsed = refseq_organelle_parser(args, previous_date)
     if not parsed:
