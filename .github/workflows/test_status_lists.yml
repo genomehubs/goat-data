@@ -5,25 +5,24 @@ env:
   DOCKERVERSION: develop
 
 jobs:
-
   run_test:
     runs-on: [self-hosted, runner3]
     steps:
       - name: Get dockers
-        run:  |
+        run: |
           docker pull genomehubs/genomehubs:$DOCKERVERSION
           docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: Check es health
-        run:  curl -s "es1:9200/_cat/health"
+        run: curl -s "es1:9200/_cat/health"
       - name: Delete indices for this branch/$RELEASE
-        run:  |
+        run: |
           curl -s -X DELETE "es1:9200/*--$RELEASE"
       - name: Restore and rename snapshot to current branch
-        run:  |
+        run: |
           curl -s -X POST "es1:9200/_snapshot/dev/initassembly/_restore?wait_for_completion=true&pretty" \
             -H 'Content-Type: application/json' \
             -d' {
@@ -34,15 +33,15 @@ jobs:
               "rename_replacement" : "--goat--${{ env.RELEASE }}"
               }'
       - name: Add ES index.mapping.nested_objects.limit 1000000
-        run:  |
+        run: |
           curl -s -X PUT "es1:9200/taxon--ncbi--goat--${RELEASE}/_settings" \
             -H 'Content-Type: application/json' \
             -d '{ "index.mapping.nested_objects.limit" : 1000000 }'
       - name: update config.yaml version
-        run:  |
+        run: |
           perl -i -plne 's/^(\s*version:) .*/$1 ${{ env.RELEASE }}/' sources/goat.yaml
       - name: genomehubs index taxon status_lists
-        run:  |
+        run: |
           docker run --rm --network=host \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:$DOCKERVERSION bash -c \

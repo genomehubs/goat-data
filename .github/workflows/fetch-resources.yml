@@ -23,7 +23,7 @@ jobs:
   # fetch-ncbi-datasets:
   #   runs-on: [self-hosted, runner2]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch NCBI datasets executable
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh
@@ -36,7 +36,7 @@ jobs:
   # fetch-genomehubs-api:
   #   runs-on: [self-hosted, runner1]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch GenomeHubs API executable
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh
@@ -51,7 +51,7 @@ jobs:
   # fetch-genomehubs-ui:
   #   runs-on: [self-hosted, runner1]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch GenomeHubs UI executable
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh
@@ -66,7 +66,7 @@ jobs:
   # fetch-blobtoolkit:
   #   runs-on: [self-hosted, runner1]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch BlobToolKit
   #       run: |
   #         CMD="docker run --rm --network=host \
@@ -82,7 +82,7 @@ jobs:
   # fetch-ncbi-taxdump:
   #   runs-on: [self-hosted, runner1]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch NCBI taxdump
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh
@@ -96,7 +96,7 @@ jobs:
   fetch-refseq-organelles:
     runs-on: [self-hosted, runner2]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Fetch RefSeq organelles
         run: |
           CMD="cp ${{ inputs.resources }}/assembly-data/refseq_organelles.tsv.gz ./ 2>/dev/null || : && \
@@ -118,7 +118,7 @@ jobs:
   # fetch-tolids:
   #   runs-on: [self-hosted, runner1]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch ToLIDs
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh
@@ -132,7 +132,7 @@ jobs:
   # fetch-from-apis:
   #   runs-on: [self-hosted, runner1]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Install dependencies
   #       run: |
   #         python3 -m pip install --upgrade pip
@@ -223,7 +223,7 @@ jobs:
   # fetch-assembly-links:
   #   runs-on: [self-hosted, runner1]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch UCSC accession list
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh
@@ -304,7 +304,7 @@ jobs:
   # fetch-ena-taxonomy-prev:
   #   runs-on: [self-hosted, runner2]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch ENA taxonomy prev
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh || exit 0
@@ -322,7 +322,7 @@ jobs:
   #   needs:
   #     - fetch-ena-taxonomy-prev
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch ENA taxonomy extra
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh
@@ -337,7 +337,7 @@ jobs:
   # fetch-ncbi-datasets-zip:
   #   runs-on: [self-hosted, runner1]
   #   steps:
-  #     - uses: actions/checkout@v3
+  #     - uses: actions/checkout@v4
   #     - name: Fetch NCBI TAXROOT datasets zip
   #       run: |
   #         ./scripts/update-resources/fetch-or-fallback.sh

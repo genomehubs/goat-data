@@ -16,7 +16,7 @@ jobs:
   prepare-snapshots:
     runs-on: [self-hosted, runner1]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Check es health
         run: curl -s "es1:9200/_cat/health"
