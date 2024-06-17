@@ -107,9 +107,10 @@ jobs:
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"/genomehubs/parse_refseq_organelles.py \
-              -o plastid \
               -o mitochondrion \
-              -c /genomehubs/assembly-data/refseq_organelles.types.yaml\"" \
+              -o plastid \
+              -c /genomehubs/assembly-data/refseq_organelles.types.yaml \
+              && mv /genomehubs/*tsv* /genomehubs/tmp/\"" \
           ./scripts/update-resources/fetch-or-fallback.sh && exit 1
         env:
           FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
@@ -388,7 +389,8 @@ jobs:
   #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
   #           \"/genomehubs/parse_ncbi_datasets.py \
   #             -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
-  #             -c /genomehubs/assembly-data-sample/ncbi_datasets_sample.types.yaml\"" \
+  #             -c /genomehubs/assembly-data-sample/ncbi_datasets_sample.types.yaml \
+  #           && mv /genomehubs/*tsv* /genomehubs/tmp/\"" \
   #         ./scripts/update-resources/fetch-or-fallback.sh
   #       env:
   #         FALLBACK: s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz
