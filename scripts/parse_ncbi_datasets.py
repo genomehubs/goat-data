@@ -28,7 +28,6 @@ configuration file.
 
 import argparse
 import json
-import os
 import subprocess
 from collections import defaultdict
 from collections.abc import Generator
@@ -581,9 +580,6 @@ def main():
         previous_data = data
         if args.features is not None:
             append_features(data["chromosomes"], feature_headers, args.features)
-    print(len(parsed))
-    print(meta)
-    print(os.getcwd())
     gh_utils.write_tsv(parsed, headers, meta)
 
 
