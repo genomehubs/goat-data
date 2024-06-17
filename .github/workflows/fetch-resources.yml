@@ -107,10 +107,9 @@ jobs:
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"/genomehubs/parse_refseq_organelles.py \
-              -o mitochondrion \
-              -o plastid \
+              -o mitochondrion plastid \
               -c /genomehubs/assembly-data/refseq_organelles.types.yaml \
-              && mv /genomehubs/*tsv* /genomehubs/tmp/\"" \
+              && find /genomehubs -name refseq_organelles.tsv.gz\"" \
           ./scripts/update-resources/fetch-or-fallback.sh && exit 1
         env:
           FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
