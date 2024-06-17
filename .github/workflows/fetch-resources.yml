@@ -359,11 +359,11 @@ jobs:
           -v scripts/config_examples/ncbi_datasets_eukaryota.types.yaml:/genomehubs/ncbi_datasets_eukaryota.types.yaml \
           -v \$(pwd):/genomehubs/tmp \
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+          --workdir /genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"cd assembly-data && \
-            /genomehubs/parse_ncbi_datasets.py \
+            \"/genomehubs/parse_ncbi_datasets.py \
               -f ncbi_dataset/data/assembly_data_report.jsonl \
-              -c /genomehubs/ncbi_datasets_eukaryota.types.yaml\""
+              -c /genomehubs/ncbi_datasets_eukaryota.types.yaml\"" \
           ./scripts/update-resources/fetch-or-fallback.sh
         # run: |
         #   CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ./ 2>/dev/null || : && \
@@ -385,11 +385,11 @@ jobs:
           -v scripts/config_examples/ncbi_datasets_sample.types.yaml:/genomehubs/ncbi_datasets_sample.types.yaml \
           -v \$(pwd):/genomehubs/tmp \
           -v ${{ inputs.resources }}/assembly-data-sample:/genomehubs/assembly-data-sample \
+          --workdir /genomehubs/assembly-data-sample \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"cd assembly-data-sample && \
-            /genomehubs/parse_ncbi_datasets.py \
+            \"/genomehubs/parse_ncbi_datasets.py \
               -f ncbi_dataset/data/assembly_data_report.jsonl \
-              -c /genomehubs/ncbi_datasets_sample.types.yaml\""
+              -c /genomehubs/ncbi_datasets_sample.types.yaml\"" \
           ./scripts/update-resources/fetch-or-fallback.sh
         # run: |
         #   CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_sample.tsv.gz ./ 2>/dev/null || : && \
