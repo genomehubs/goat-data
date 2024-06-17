@@ -33,324 +33,324 @@ jobs:
           FALLBACK: s3://goat/resources/datasets
           RESOURCES: ${{ inputs.resources }}
 
-  fetch-genomehubs-api:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch GenomeHubs API executable
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
-                curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
-              )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
-          FALLBACK: s3://goat/resources/genomehubs/genomehubs-api
-          RESOURCES: ${{ inputs.resources }}/genomehubs
+  # fetch-genomehubs-api:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch GenomeHubs API executable
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
+  #               curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
+  #             )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-api
+  #         FALLBACK: s3://goat/resources/genomehubs/genomehubs-api
+  #         RESOURCES: ${{ inputs.resources }}/genomehubs
 
-  fetch-genomehubs-ui:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch GenomeHubs UI executable
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
-                curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
-              )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
-          FALLBACK: s3://goat/resources/genomehubs/genomehubs-ui
-          RESOURCES: ${{ inputs.resources }}/genomehubs
+  # fetch-genomehubs-ui:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch GenomeHubs UI executable
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -Ls https://github.com/genomehubs/genomehubs/releases/download/$( \
+  #               curl -Ls https://api.github.com/repos/genomehubs/genomehubs/releases/latest | jq -r '.tag_name' \
+  #             )/genomehubs-api-linux > ${{ inputs.resources }}/genomehubs/genomehubs-ui
+  #         FALLBACK: s3://goat/resources/genomehubs/genomehubs-ui
+  #         RESOURCES: ${{ inputs.resources }}/genomehubs
 
-  fetch-blobtoolkit:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch BlobToolKit
-        run: |
-          CMD="docker run --rm --network=host \
-          -v \$(pwd):/genomehubs/tmp \
-          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"genomehubs parse \
-              --btk --btk-root Eukaryota --outfile tmp/btk.tsv.gz\"" \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          FALLBACK: s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.yaml
-          RESOURCES: ${{ inputs.resources }}/btk
+  # fetch-blobtoolkit:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch BlobToolKit
+  #       run: |
+  #         CMD="docker run --rm --network=host \
+  #         -v \$(pwd):/genomehubs/tmp \
+  #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+  #           \"genomehubs parse \
+  #             --btk --btk-root Eukaryota --outfile tmp/btk.tsv.gz\"" \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         FALLBACK: s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.yaml
+  #         RESOURCES: ${{ inputs.resources }}/btk
 
-  fetch-ncbi-taxdump:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch NCBI taxdump
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
-            | tar xzf - nodes.dmp names.dmp
-          FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp
-          RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
+  # fetch-ncbi-taxdump:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch NCBI taxdump
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
+  #           | tar xzf - nodes.dmp names.dmp
+  #         FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp
+  #         RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
 
-  fetch-refseq-organelles:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch RefSeq organelles
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            docker run --rm --network=host \
-              -v \$(pwd):/genomehubs/tmp \
-              genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-                "genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz"
-          FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  # fetch-refseq-organelles:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch RefSeq organelles
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           docker run --rm --network=host \
+  #             -v \$(pwd):/genomehubs/tmp \
+  #             genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+  #               "genomehubs parse --refseq-organelles --outfile tmp/refseq_organelles.tsv.gz"
+  #         FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-  fetch-tolids:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch ToLIDs
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
-            | gzip -c > tolids.tsv.gz
-          FALLBACK: s3://goat/resources/tolids/tolids.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/tolids
+  # fetch-tolids:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch ToLIDs
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
+  #           | gzip -c > tolids.tsv.gz
+  #         FALLBACK: s3://goat/resources/tolids/tolids.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/tolids
 
-  fetch-from-apis:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: |
-          python3 -m pip install --upgrade pip
-          pip install requests pyyaml pandas numpy
-      - name: Fetch from NHM and VGP and STS APIs
-        # Fetches:
-        # - nhm.tsv
-        # - sts.tsv
-        # - vgp.tsv
-        run: |
-          rm -rf ${{ inputs.resources }}/status-lists/tmp
-          mkdir -p ${{ inputs.resources }}/status-lists/tmp
-          python3 ./scripts/api/api_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.STS_AUTHORIZATION_KEY }} || exit 0
-      - name: Process NHM tsv
-        run: |
-          perl -plne '
-            s/(.*institutionCode.*)/$1\tsequencing_status\tsample_collected\tsample_collected_by/ and next;
-            s/$/\tsample_collected\tDTOL\tNHM/;
-          ' ${{ inputs.resources }}/status-lists/tmp/nhm.raw > ${{ inputs.resources }}/status-lists/tmp/nhm.tsv
-      - name: Process VGP tsv
-        run: |
-          perl -plne '
-            s/(.*taxon_id.*)$/$1\tlong_list\tsample_collected\tsample_acquired\tin_progress\tinsdc_submitted\tinsdc_open\tpublished/;
-            s/(.*0-data_queued.*)$/$1\tVGP\tVGP\tVGP\t\t\t\t/;
-            s/(.(1-DNA_isolation|2-data_progress|3-data_done|4-asm_progress|5-asm_done|6-asm_curation|7-asm_curated).*)$/$1\tVGP\tVGP\tVGP\tVGP\t\t\t/;
-            s/(.*8-NCBI.*)$/$1\tVGP\tVGP\tVGP\tVGP\tVGP\tVGP\t/;
-          ' ${{ inputs.resources }}/status-lists/tmp/vgp.raw > ${{ inputs.resources }}/status-lists/tmp/vgp.tsv
-      - name: Fetch from JGI
-        # Fetches:
-        # - jgi_1kfg.tsv
-        run: |
-          python3 ./scripts/jgi_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.JGI_OFFLINE_TOKEN }} || exit 0
-      - name: Fetch status from googlesheets
-        # Fetches:
-        # - ATLASEA_expanded.tsv
-        # - BGE_expanded.tsv
-        # - CBP_expanded.tsv
-        # - EBPN_expanded.tsv
-        # - ERGA-CH_expanded.tsv
-        # - EUROFISH_expanded.tsv
-        # - GREECE-HSP_expanded.tsv
-        # - SOLVENIA-HSP_expanded.tsv
-        # - SPAIN-HSP_expanded.tsv
-        # - YGG_expanded.tsv
-        run: |
-          python3 ./scripts/import_status.py ${{ inputs.resources }}/status-lists/tmp "${{ secrets.ORIGINAL2_5_SCHEMA }}" || exit 0
-      - name: Fetch other from googlesheets
-        # Fetches:
-        # - cngb.tsv
-        # - DTOL_assembly_informatics_status_kmer_draft.tsv
-        # - DTOL_Plant_Genome_Size_Estimates.tsv
-        run: |
-          rm -rf ${{ inputs.resources }}/assembly-data/tmp
-          mkdir -p ${{ inputs.resources }}/assembly-data/tmp
-          rm -rf ${{ inputs.resources }}/genomesize-karyotype/tmp
-          mkdir -p ${{ inputs.resources }}/genomesize-karyotype/tmp
-          docker pull genomehubs/r-ver:latest
-          docker run --rm --user $UID:$GROUPS \
-            -v $GITHUB_WORKSPACE:/goat-data \
-            -v ${{ inputs.resources }}:/tmp \
-            -w /goat-data \
-            genomehubs/r-ver:latest \
-            Rscript ./scripts/get_googlesheets.R /tmp/genomesize-karyotype/tmp /tmp/assembly-data/tmp
-      - name: Move assembly data files or fallback to previous
-        run: |
-          FALLBACK=$(ls ${{ inputs.resources }}/assembly-data/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/assembly-data\//g;s/\.failed$//g'|paste -sd, -) \
-          ./scripts/update-resources/fetch-or-fallback.sh
-          mkdir -p ${{ inputs.resources }}/assembly-data-taxon
-          cp ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
-        env:
-          CMD: mv ${{ inputs.resources }}/assembly-data/tmp/* ./
-          RESOURCES: ${{ inputs.resources }}/assembly-data
-      - name: Move genomesize/karyotype files or fallback to previous
-        run: |
-          FALLBACK=$(ls ${{ inputs.resources }}/genomesize-karyotype/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/genomesize-karyotype\//g;s/\.failed$//g'|paste -sd, -) \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: mv ${{ inputs.resources }}/genomesize-karyotype/tmp/* ./
-          RESOURCES: ${{ inputs.resources }}/genomesize-karyotype
-      - name: Move status list files or fallback to previous
-        run: |
-          FALLBACK=$(ls ${{ inputs.resources }}/status-lists/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/status-lists\//g;s/\.failed$//g'|paste -sd, -) \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: mv ${{ inputs.resources }}/status-lists/tmp/* ./
-          RESOURCES: ${{ inputs.resources }}/status-lists
+  # fetch-from-apis:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Install dependencies
+  #       run: |
+  #         python3 -m pip install --upgrade pip
+  #         pip install requests pyyaml pandas numpy
+  #     - name: Fetch from NHM and VGP and STS APIs
+  #       # Fetches:
+  #       # - nhm.tsv
+  #       # - sts.tsv
+  #       # - vgp.tsv
+  #       run: |
+  #         rm -rf ${{ inputs.resources }}/status-lists/tmp
+  #         mkdir -p ${{ inputs.resources }}/status-lists/tmp
+  #         python3 ./scripts/api/api_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.STS_AUTHORIZATION_KEY }} || exit 0
+  #     - name: Process NHM tsv
+  #       run: |
+  #         perl -plne '
+  #           s/(.*institutionCode.*)/$1\tsequencing_status\tsample_collected\tsample_collected_by/ and next;
+  #           s/$/\tsample_collected\tDTOL\tNHM/;
+  #         ' ${{ inputs.resources }}/status-lists/tmp/nhm.raw > ${{ inputs.resources }}/status-lists/tmp/nhm.tsv
+  #     - name: Process VGP tsv
+  #       run: |
+  #         perl -plne '
+  #           s/(.*taxon_id.*)$/$1\tlong_list\tsample_collected\tsample_acquired\tin_progress\tinsdc_submitted\tinsdc_open\tpublished/;
+  #           s/(.*0-data_queued.*)$/$1\tVGP\tVGP\tVGP\t\t\t\t/;
+  #           s/(.(1-DNA_isolation|2-data_progress|3-data_done|4-asm_progress|5-asm_done|6-asm_curation|7-asm_curated).*)$/$1\tVGP\tVGP\tVGP\tVGP\t\t\t/;
+  #           s/(.*8-NCBI.*)$/$1\tVGP\tVGP\tVGP\tVGP\tVGP\tVGP\t/;
+  #         ' ${{ inputs.resources }}/status-lists/tmp/vgp.raw > ${{ inputs.resources }}/status-lists/tmp/vgp.tsv
+  #     - name: Fetch from JGI
+  #       # Fetches:
+  #       # - jgi_1kfg.tsv
+  #       run: |
+  #         python3 ./scripts/jgi_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.JGI_OFFLINE_TOKEN }} || exit 0
+  #     - name: Fetch status from googlesheets
+  #       # Fetches:
+  #       # - ATLASEA_expanded.tsv
+  #       # - BGE_expanded.tsv
+  #       # - CBP_expanded.tsv
+  #       # - EBPN_expanded.tsv
+  #       # - ERGA-CH_expanded.tsv
+  #       # - EUROFISH_expanded.tsv
+  #       # - GREECE-HSP_expanded.tsv
+  #       # - SOLVENIA-HSP_expanded.tsv
+  #       # - SPAIN-HSP_expanded.tsv
+  #       # - YGG_expanded.tsv
+  #       run: |
+  #         python3 ./scripts/import_status.py ${{ inputs.resources }}/status-lists/tmp "${{ secrets.ORIGINAL2_5_SCHEMA }}" || exit 0
+  #     - name: Fetch other from googlesheets
+  #       # Fetches:
+  #       # - cngb.tsv
+  #       # - DTOL_assembly_informatics_status_kmer_draft.tsv
+  #       # - DTOL_Plant_Genome_Size_Estimates.tsv
+  #       run: |
+  #         rm -rf ${{ inputs.resources }}/assembly-data/tmp
+  #         mkdir -p ${{ inputs.resources }}/assembly-data/tmp
+  #         rm -rf ${{ inputs.resources }}/genomesize-karyotype/tmp
+  #         mkdir -p ${{ inputs.resources }}/genomesize-karyotype/tmp
+  #         docker pull genomehubs/r-ver:latest
+  #         docker run --rm --user $UID:$GROUPS \
+  #           -v $GITHUB_WORKSPACE:/goat-data \
+  #           -v ${{ inputs.resources }}:/tmp \
+  #           -w /goat-data \
+  #           genomehubs/r-ver:latest \
+  #           Rscript ./scripts/get_googlesheets.R /tmp/genomesize-karyotype/tmp /tmp/assembly-data/tmp
+  #     - name: Move assembly data files or fallback to previous
+  #       run: |
+  #         FALLBACK=$(ls ${{ inputs.resources }}/assembly-data/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/assembly-data\//g;s/\.failed$//g'|paste -sd, -) \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #         mkdir -p ${{ inputs.resources }}/assembly-data-taxon
+  #         cp ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
+  #       env:
+  #         CMD: mv ${{ inputs.resources }}/assembly-data/tmp/* ./
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
+  #     - name: Move genomesize/karyotype files or fallback to previous
+  #       run: |
+  #         FALLBACK=$(ls ${{ inputs.resources }}/genomesize-karyotype/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/genomesize-karyotype\//g;s/\.failed$//g'|paste -sd, -) \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: mv ${{ inputs.resources }}/genomesize-karyotype/tmp/* ./
+  #         RESOURCES: ${{ inputs.resources }}/genomesize-karyotype
+  #     - name: Move status list files or fallback to previous
+  #       run: |
+  #         FALLBACK=$(ls ${{ inputs.resources }}/status-lists/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/status-lists\//g;s/\.failed$//g'|paste -sd, -) \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: mv ${{ inputs.resources }}/status-lists/tmp/* ./
+  #         RESOURCES: ${{ inputs.resources }}/status-lists
 
-  fetch-assembly-links:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch UCSC accession list
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s https://hgdownload.soe.ucsc.edu/hubs/UCSC_GI.assemblyHubList.txt \
-            | iconv -c -f ISO-8859-1 -t UTF-8//TRANSLIT -c \
-            | gzip -c > UCSC_GI.assemblyHubList.tsv.gz
-          FALLBACK: s3://goat/resources/assembly-data/UCSC_GI.assemblyHubList.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  # fetch-assembly-links:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch UCSC accession list
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s https://hgdownload.soe.ucsc.edu/hubs/UCSC_GI.assemblyHubList.txt \
+  #           | iconv -c -f ISO-8859-1 -t UTF-8//TRANSLIT -c \
+  #           | gzip -c > UCSC_GI.assemblyHubList.tsv.gz
+  #         FALLBACK: s3://goat/resources/assembly-data/UCSC_GI.assemblyHubList.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Fetch Ensembl Fungi accession list
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s http://ftp.ensemblgenomes.org/pub/current/fungi/species_metadata_EnsemblFungi.json \
-            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
-            | gzip -c > species_metadata_EnsemblFungi.tsv.gz
-          FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblFungi.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  #     - name: Fetch Ensembl Fungi accession list
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s http://ftp.ensemblgenomes.org/pub/current/fungi/species_metadata_EnsemblFungi.json \
+  #           | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+  #           | gzip -c > species_metadata_EnsemblFungi.tsv.gz
+  #         FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblFungi.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Fetch Ensembl Metazoa accession list
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s http://ftp.ensemblgenomes.org/pub/current/metazoa/species_metadata_EnsemblMetazoa.json \
-            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
-            | gzip -c > species_metadata_EnsemblMetazoa.tsv.gz
-          FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblMetazoa.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  #     - name: Fetch Ensembl Metazoa accession list
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s http://ftp.ensemblgenomes.org/pub/current/metazoa/species_metadata_EnsemblMetazoa.json \
+  #           | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+  #           | gzip -c > species_metadata_EnsemblMetazoa.tsv.gz
+  #         FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblMetazoa.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Fetch Ensembl Plants accession list
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s http://ftp.ensemblgenomes.org/pub/current/plants/species_metadata_EnsemblPlants.json \
-            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
-            | gzip -c > species_metadata_EnsemblPlants.tsv.gz
-          FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblPlants.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  #     - name: Fetch Ensembl Plants accession list
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s http://ftp.ensemblgenomes.org/pub/current/plants/species_metadata_EnsemblPlants.json \
+  #           | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+  #           | gzip -c > species_metadata_EnsemblPlants.tsv.gz
+  #         FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblPlants.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Fetch Ensembl Protists accession list
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s http://ftp.ensemblgenomes.org/pub/current/protists/species_metadata_EnsemblProtists.json \
-            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
-            | gzip -c > species_metadata_EnsemblProtists.tsv.gz
-          FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblProtists.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  #     - name: Fetch Ensembl Protists accession list
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s http://ftp.ensemblgenomes.org/pub/current/protists/species_metadata_EnsemblProtists.json \
+  #           | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+  #           | gzip -c > species_metadata_EnsemblProtists.tsv.gz
+  #         FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblProtists.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Fetch Ensembl Rapid accession list
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s https://ftp.ensembl.org/pub/rapid-release/species_metadata.json \
-            | jq -r '.[] | [.assembly_accession, .ensembl_production_name, .release_date, .strain, .taxonomy_id] | @tsv' \
-            | gzip -c > species_metadata_EnsemblRapid.tsv.gz
-          FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblRapid.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  #     - name: Fetch Ensembl Rapid accession list
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s https://ftp.ensembl.org/pub/rapid-release/species_metadata.json \
+  #           | jq -r '.[] | [.assembly_accession, .ensembl_production_name, .release_date, .strain, .taxonomy_id] | @tsv' \
+  #           | gzip -c > species_metadata_EnsemblRapid.tsv.gz
+  #         FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblRapid.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Fetch Ensembl Vertebrates accession list
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s https://ftp.ensembl.org/pub/current/species_metadata_EnsemblVertebrates.json \
-            | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
-            | gzip -c > species_metadata_EnsemblVertebrates.tsv.gz
-          FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblVertebrates.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  #     - name: Fetch Ensembl Vertebrates accession list
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s https://ftp.ensembl.org/pub/current/species_metadata_EnsemblVertebrates.json \
+  #           | jq -r '.[] | [.assembly.assembly_accession, .organism.url_name, .data_release.release_date, .organism.strain, .organism.taxonomy_id] | @tsv' \
+  #           | gzip -c > species_metadata_EnsemblVertebrates.tsv.gz
+  #         FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblVertebrates.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
-  fetch-ena-taxonomy-prev:
-    runs-on: [self-hosted, runner2]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch ENA taxonomy prev
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh || exit 0
-          ls -al
-          mv ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ${{ inputs.resources }}/ena-taxonomy.extra.prev.jsonl.gz \
-          || touch ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.prev.jsonl.gz
-          ls -al
-        env:
-          CMD: cp ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ./
-          FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
-          RESOURCES: ${{ inputs.resources }}/ena-taxonomy
+  # fetch-ena-taxonomy-prev:
+  #   runs-on: [self-hosted, runner2]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch ENA taxonomy prev
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh || exit 0
+  #         ls -al
+  #         mv ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ${{ inputs.resources }}/ena-taxonomy.extra.prev.jsonl.gz \
+  #         || touch ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.prev.jsonl.gz
+  #         ls -al
+  #       env:
+  #         CMD: cp ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ./
+  #         FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
+  #         RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
-  fetch-ena-taxonomy-extra:
-    runs-on: [self-hosted, runner2]
-    needs:
-      - fetch-ena-taxonomy-prev
-    steps:
-      - uses: actions/checkout@v3
-      - name: Fetch ENA taxonomy extra
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            cp ${{ inputs.resources }}/ena-taxonomy.extra.prev.jsonl.gz ./ 2>/dev/null || : && \
-            cp ${{ inputs.resources }}/ena-taxonomy.extra.jsonl.gz ./ 2>/dev/null || : && \
-            exit 1
-          #  bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash 2759
-          FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
-          RESOURCES: ${{ inputs.resources }}/ena-taxonomy
+  # fetch-ena-taxonomy-extra:
+  #   runs-on: [self-hosted, runner2]
+  #   needs:
+  #     - fetch-ena-taxonomy-prev
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Fetch ENA taxonomy extra
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           cp ${{ inputs.resources }}/ena-taxonomy.extra.prev.jsonl.gz ./ 2>/dev/null || : && \
+  #           cp ${{ inputs.resources }}/ena-taxonomy.extra.jsonl.gz ./ 2>/dev/null || : && \
+  #           exit 1
+  #         #  bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash 2759
+  #         FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
+  #         RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
   fetch-ncbi-datasets-zip:
     runs-on: [self-hosted, runner1]
     steps:
       - uses: actions/checkout@v3
-      - name: Fetch NCBI TAXROOT datasets zip
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            chmod 755 ${{ inputs.resources }}/datasets && \
-            ${{ inputs.resources }}/datasets download genome \
-              taxon 2759 \
-              --no-progressbar \
-              --dehydrated \
-              --filename eukaryota.zip
-          FALLBACK: s3://goat/resources/assembly-data/eukaryota.zip
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+      # - name: Fetch NCBI TAXROOT datasets zip
+      #   run: |
+      #     ./scripts/update-resources/fetch-or-fallback.sh
+      #   env:
+      #     CMD: |
+      #       chmod 755 ${{ inputs.resources }}/datasets && \
+      #       ${{ inputs.resources }}/datasets download genome \
+      #         taxon 2759 \
+      #         --no-progressbar \
+      #         --dehydrated \
+      #         --filename eukaryota.zip
+      #     FALLBACK: s3://goat/resources/assembly-data/eukaryota.zip
+      #     RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Unzip NCBI TAXROOT datasets zip
-        run: |
-          unzip -o -d ${{ inputs.resources }}/assembly-data ${{ inputs.resources }}/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
-          ls ${{ inputs.resources }}/assembly-data
+      # - name: Unzip NCBI TAXROOT datasets zip
+      #   run: |
+      #     unzip -o -d ${{ inputs.resources }}/assembly-data ${{ inputs.resources }}/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
+      #     ls ${{ inputs.resources }}/assembly-data
 
       - name: Run genomehubs parse --ncbi-datasets-genome
         run: |
@@ -389,7 +389,7 @@ jobs:
           --workdir /genomehubs/assembly-data-sample \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"/genomehubs/parse_ncbi_datasets.py \
-              -f ncbi_dataset/data/assembly_data_report.jsonl \
+              -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
               -c /genomehubs/ncbi_datasets_sample.types.yaml\"" \
           ./scripts/update-resources/fetch-or-fallback.sh
         # run: |
