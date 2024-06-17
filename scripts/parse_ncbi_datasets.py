@@ -371,16 +371,20 @@ def process_sequence_report(data: dict):
     accession = data["accession"]
     span = int(data["assemblyStats"]["totalSequenceLength"])
     organelles: defaultdict[str, list] = defaultdict(list)
-    report = fetch_sequences_report(accession)
-    chromosomes: list = []
-    assigned_span = 0
-    for seq in report:
-        if is_non_nuclear(seq):
-            organelles[seq["chr_name"]].append(seq)
-        elif is_assigned_to_chromosome(seq):
-            assigned_span += seq["length"]
-            if is_chromosome(seq):
-                chromosomes.append(seq)
+    try:
+        report = fetch_sequences_report(accession)
+        chromosomes: list = []
+        assigned_span = 0
+        for seq in report:
+            if is_non_nuclear(seq):
+                organelles[seq["chr_name"]].append(seq)
+            elif is_assigned_to_chromosome(seq):
+                assigned_span += seq["length"]
+                if is_chromosome(seq):
+                    chromosomes.append(seq)
+    except subprocess.TimeoutExpired:
+        print(f"ERROR: Timeout fetching sequence report for {accession}")
+        return
 
     add_organelle_entries(data, organelles)
     check_ebp_criteria(data, span, chromosomes, assigned_span)
