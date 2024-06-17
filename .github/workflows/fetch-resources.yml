@@ -357,14 +357,13 @@ jobs:
           CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ./ 2>/dev/null || : && \
           docker run --rm --network=host \
           -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
-          -v $(pwd)/scripts/config_examples/ncbi_datasets_eukaryota.types.yaml:/genomehubs/ncbi_datasets_eukaryota.types.yaml \
           -v \$(pwd):/genomehubs/tmp \
+          -v $(pwd)/scripts/config_examples/ncbi_datasets_eukaryota.types.yaml:/genomehubs/tmp/ncbi_datasets_eukaryota.types.yaml \
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
-          --workdir /genomehubs/tmp \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
             \"/genomehubs/parse_ncbi_datasets.py \
               -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
-              -c /genomehubs/ncbi_datasets_eukaryota.types.yaml\"" \
+              -c /genomehubs/tmp/ncbi_datasets_eukaryota.types.yaml\"" \
           ./scripts/update-resources/fetch-or-fallback.sh
         # run: |
         #   CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ./ 2>/dev/null || : && \
