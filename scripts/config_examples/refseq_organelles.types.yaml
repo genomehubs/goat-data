@@ -34,7 +34,7 @@ file:
   display_group: general
   format: tsv
   header: true
-  name: refseq_organelles.tsv
+  name: refseq_organelles.tsv.gz
   needs:
     - ATTR_assembly.types.yaml
   source: NCBI

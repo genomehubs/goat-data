@@ -355,24 +355,50 @@ jobs:
         run: |
           CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ./ 2>/dev/null || : && \
           docker run --rm --network=host \
+          -v scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
+          -v scripts/config_examples/ncbi_datasets_eukaryota.types.yaml:/genomehubs/ncbi_datasets_eukaryota.types.yaml \
           -v \$(pwd):/genomehubs/tmp \
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"genomehubs parse --ncbi-datasets-genome assembly-data --outfile tmp/ncbi_datasets_eukaryota.tsv.gz\"" \
+            \"cd assembly-data && \
+            /genomehubs/parse_ncbi_datasets.py \
+              -f ncbi_dataset/data/assembly_data_report.jsonl \
+              -c /genomehubs/ncbi_datasets_eukaryota.types.yaml\""
           ./scripts/update-resources/fetch-or-fallback.sh
+        # run: |
+        #   CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ./ 2>/dev/null || : && \
+        #   docker run --rm --network=host \
+        #   -v \$(pwd):/genomehubs/tmp \
+        #   -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+        #   genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+        #     \"genomehubs parse --ncbi-datasets-genome assembly-data --outfile tmp/ncbi_datasets_eukaryota.tsv.gz\"" \
+        #   ./scripts/update-resources/fetch-or-fallback.sh
         env:
           FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz
           RESOURCES: ${{ inputs.resources }}/assembly-data
 
       - name: Run genomehubs parse --ncbi-datasets-sample
         run: |
-          CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_sample.tsv.gz ./ 2>/dev/null || : && \
+          CMD="cp ${{ inputs.resources }}/assembly-data-sample/ncbi_datasets_sample.tsv.gz ./ 2>/dev/null || : && \
           docker run --rm --network=host \
+          -v scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
+          -v scripts/config_examples/ncbi_datasets_sample.types.yaml:/genomehubs/ncbi_datasets_sample.types.yaml \
           -v \$(pwd):/genomehubs/tmp \
-          -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+          -v ${{ inputs.resources }}/assembly-data-sample:/genomehubs/assembly-data-sample \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"genomehubs parse --ncbi-datasets-sample assembly-data --outfile tmp/ncbi_datasets_sample.tsv.gz\"" \
+            \"cd assembly-data-sample && \
+            /genomehubs/parse_ncbi_datasets.py \
+              -f ncbi_dataset/data/assembly_data_report.jsonl \
+              -c /genomehubs/ncbi_datasets_sample.types.yaml\""
           ./scripts/update-resources/fetch-or-fallback.sh
+        # run: |
+        #   CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_sample.tsv.gz ./ 2>/dev/null || : && \
+        #   docker run --rm --network=host \
+        #   -v \$(pwd):/genomehubs/tmp \
+        #   -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+        #   genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+        #     \"genomehubs parse --ncbi-datasets-sample assembly-data --outfile tmp/ncbi_datasets_sample.tsv.gz\"" \
+        #   ./scripts/update-resources/fetch-or-fallback.sh
         env:
           FALLBACK: s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz
           RESOURCES: ${{ inputs.resources }}/assembly-data-sample

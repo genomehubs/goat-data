@@ -47,7 +47,7 @@ for url in ${FALLBACK//,/$IFS}; do
   else
     echo FAILED
     echo FETCH $filename from $url
-    s3cmd get $url $filename || fail FAILED
+    s3cmd get --force $url $filename || fail FAILED
   fi
   cd -
   echo MOVE $filename to $RESOURCES

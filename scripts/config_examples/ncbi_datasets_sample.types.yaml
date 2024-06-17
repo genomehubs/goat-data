@@ -54,7 +54,7 @@ file:
       - taxon_id
   format: tsv
   header: true
-  name: ncbi_datasets_sample.tsv
+  name: ncbi_datasets_sample.tsv.gz
   needs:
     - ATTR_assembly.types.yaml
     - TAXON_assembly.types.yaml
