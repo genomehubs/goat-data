@@ -362,9 +362,7 @@ jobs:
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           --workdir /genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"cat /genomehubs/parse_ncbi_datasets.py && \
-            cat /genomehubs/ncbi_datasets_eukaryota.types.yaml && \
-            /genomehubs/parse_ncbi_datasets.py \
+            \"/genomehubs/parse_ncbi_datasets.py \
               -f ncbi_dataset/data/assembly_data_report.jsonl \
               -c /genomehubs/ncbi_datasets_eukaryota.types.yaml\"" \
           ./scripts/update-resources/fetch-or-fallback.sh

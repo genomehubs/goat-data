@@ -553,10 +553,12 @@ def main():
         gh_utils.write_tsv({}, feature_headers, {"file_name": args.features})
 
     for data in gh_utils.parse_jsonl_file(args.file):
+        print(data.keys())
         if "accession" not in data:
             data = convert_keys_to_camel_case(data=data["reports"][0])
         data = process_assembly_report(data, previous_data)
         accession = data["processedAssemblyInfo"]["genbankAccession"]
+        print(accession)
         if accession in previous_parsed:
             previous_row = previous_parsed[accession]
             if data["assemblyInfo"]["releaseDate"] == previous_row["releaseDate"]:
