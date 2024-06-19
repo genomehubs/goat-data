@@ -595,7 +595,7 @@ def main():
         parsed[accession] = row
         previous_data = data
         if args.features is not None and "chromosomes" in data:
-            append_features(data["chromosomes"], feature_headers, args.features)
+            append_features(data["chromosomes"], feature_headers, feature_file)
         if ctr > 10:
             break
     if meta["file_name"].endswith(".gz"):
