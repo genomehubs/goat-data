@@ -581,7 +581,7 @@ def main():
                     and accession not in parsed
                 ):
                     append_features(
-                        previous_features[accession], feature_headers, args.features
+                        previous_features[accession], feature_headers, feature_file
                     )
                 parsed[accession] = row
                 continue
@@ -604,7 +604,7 @@ def main():
     else:
         gh_utils.write_tsv(parsed, headers, meta)
 
-    if feature_file is not None and feature_file.endswith(".gz"):
+    if feature_file is not None and args.features.endswith(".gz"):
         os.system(f"gzip -f {feature_file}")
 
 
