@@ -561,9 +561,7 @@ def main():
         )
         if feature_file.endswith(".gz"):
             feature_file = feature_file[:-3]
-        gh_utils.write_tsv(
-            previous_features, feature_headers, {"file_name": feature_file}
-        )
+        gh_utils.write_tsv({}, feature_headers, {"file_name": feature_file})
 
     ctr = 0
     for data in gh_utils.parse_jsonl_file(args.file):
@@ -584,6 +582,7 @@ def main():
                         previous_features[accession], feature_headers, feature_file
                     )
                 parsed[accession] = row
+                print(row["genbankAccession"], "already processed")
                 continue
         if args.features is not None and accession not in parsed:
             process_sequence_report(data)
@@ -597,6 +596,7 @@ def main():
             append_features(data["chromosomes"], feature_headers, args.features)
         if ctr > 10:
             break
+    print(parsed.keys())
     if meta["file_name"].endswith(".gz"):
         meta["file_name"] = meta["file_name"][:-3]
         gh_utils.write_tsv(parsed, headers, meta)
