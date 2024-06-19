@@ -28,6 +28,7 @@ configuration file.
 
 import argparse
 import json
+import os
 import subprocess
 from collections import defaultdict
 from collections.abc import Generator
@@ -591,7 +592,12 @@ def main():
             append_features(data["chromosomes"], feature_headers, args.features)
         if ctr > 10:
             break
-    gh_utils.write_tsv(parsed, headers, meta)
+    if meta["file_name"].endswith(".gz"):
+        meta["file_name"] = meta["file_name"][:-3]
+        gh_utils.write_tsv(parsed, headers, meta)
+        os.system(f"gzip -f {meta['file_name']}")
+    else:
+        gh_utils.write_tsv(parsed, headers, meta)
 
 
 if __name__ == "__main__":
