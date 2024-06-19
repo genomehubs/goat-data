@@ -593,7 +593,6 @@ def main():
             in ["Chromosome", "Complete Genome"]
         ):
             process_sequence_report(data)
-            ctr += 1
         row = gh_utils.parse_report_values(parse_fns, data)
         if accession not in parsed:
             update_organelle_info(data, row)
