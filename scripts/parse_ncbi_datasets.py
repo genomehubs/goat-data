@@ -30,6 +30,7 @@ import argparse
 import json
 import os
 import subprocess
+import sys
 from collections import defaultdict
 from collections.abc import Generator
 from typing import Optional
@@ -572,6 +573,7 @@ def main():
             data = convert_keys_to_camel_case(data=data["reports"][0])
         data = process_assembly_report(data, previous_data)
         accession = data["processedAssemblyInfo"]["genbankAccession"]
+        print(accession, file=sys.stderr)
         if accession in previous_parsed:
             previous_row = previous_parsed[accession]
             if data["assemblyInfo"]["releaseDate"] == previous_row["releaseDate"]:
