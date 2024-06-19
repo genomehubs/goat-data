@@ -376,7 +376,7 @@ jobs:
 
       - name: Run genomehubs parse --ncbi-datasets-sample
         run: |
-          # CMD="s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+          CMD="s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz \$(pwd)/ 2>/dev/null || : && \
           s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.types.yaml \$(pwd)/ 2>/dev/null || : && \
           docker run --rm --network=host \
           -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
