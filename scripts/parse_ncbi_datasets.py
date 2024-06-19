@@ -556,9 +556,12 @@ def main():
     feature_headers = set_feature_headers()
     feature_file = args.features
     if feature_file is not None:
-        previous_features = gh_utils.load_previous(
-            args.features, "assembly_id", feature_headers
-        )
+        try:
+            previous_features = gh_utils.load_previous(
+                args.features, "assembly_id", feature_headers
+            )
+        except Exception:
+            previous_features = {}
         if feature_file.endswith(".gz"):
             feature_file = feature_file[:-3]
         gh_utils.write_tsv({}, feature_headers, {"file_name": feature_file})
@@ -569,9 +572,7 @@ def main():
             data = convert_keys_to_camel_case(data=data["reports"][0])
         data = process_assembly_report(data, previous_data)
         accession = data["processedAssemblyInfo"]["genbankAccession"]
-        print(accession)
         if accession in previous_parsed:
-            print(accession, "in previous")
             previous_row = previous_parsed[accession]
             if data["assemblyInfo"]["releaseDate"] == previous_row["releaseDate"]:
                 row = previous_row
@@ -584,10 +585,7 @@ def main():
                         previous_features[accession], feature_headers, feature_file
                     )
                 parsed[accession] = row
-                print(row["genbankAccession"], "already processed")
                 continue
-        else:
-            print(previous_parsed.keys())
         if args.features is not None and accession not in parsed:
             process_sequence_report(data)
             ctr += 1
@@ -600,7 +598,6 @@ def main():
             append_features(data["chromosomes"], feature_headers, args.features)
         if ctr > 10:
             break
-    print(parsed.keys())
     if meta["file_name"].endswith(".gz"):
         meta["file_name"] = meta["file_name"][:-3]
         gh_utils.write_tsv(parsed, headers, meta)
