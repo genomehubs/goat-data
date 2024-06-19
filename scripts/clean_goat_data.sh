@@ -1,32 +1,39 @@
 #!/bin/bash
 # This scipt is used to clean up old goat data directories
 # The data directories are named as production-YYYY-MM-DD
-# The data directories older than 7 days will be deleted
-# The data directories in the list of goat_archived_list.txt will be kept
-# The script will be run in dry run mode by default, use -r to run in real mode
+# The script will keep the data directories that are in the list of goat_archived_list.txt
+# The script will keep the data directories that are within the days to keep
+# The script will keep the data directories that are the first data of the month if keep_first_data_of_month is enabled
+# The script will delete the data directories that are not in the list of data to keep 
 
-set -eu
+set -e
 set -o pipefail
 
 usage() {
-    echo "Usage: $0 [-r] [-d <goat_data_dir>]" >&2
+    echo "Usage: $0 [-r] [-m] [-d <goat_data_dir>] [-k <days_to_keep>] " >&2
     exit 1
 }
 
-DATA_AGE_LIMIT=7
 GOAT_ARCHIVED_LIST_FILE="goat_archived_list.txt"
-
-goat_data_dir=
+goat_data_dir=''
+days_to_keep=3
+keep_first_data_of_month=false
 dry_run=true
 goat_archived_list=()
 
-while getopts ':rd:' opt; do
+while getopts ':rmd:k:' opt; do
     case "$opt" in
         r)
             dry_run=false
             ;;
+        m)
+            keep_first_data_of_month=true
+            ;;
         d)
             goat_data_dir="$OPTARG"
+            ;;
+        k)
+            days_to_keep="$OPTARG"
             ;;
         :)
             echo "Option -$OPTARG requires an argument." >&2
@@ -49,7 +56,7 @@ if [ ! -d "$goat_data_dir" ]; then
     usage
 fi
 
-# IFS=$'\n' read -d '' -r -a goat_archived_list2 <<< "$(wget -qO- https://raw.githubusercontent.com/sanger-tol/readmapping/main/assets/samplesheet.csv )" || true
+# IFS=$'\n' read -d '' -r -a goat_archived_list <<< "$(wget -qO- https://raw.githubusercontent.com/genomehubs/goat-data/data_clean_script/scripts/goat_archived_list.txt )" || true
 
 IFS=$'\n' read -d '' -r -a goat_archived_list < $GOAT_ARCHIVED_LIST_FILE || true
 
@@ -71,34 +78,75 @@ fi
 
 cd ${goat_data_dir}
 count=0
-count_deleted=0
+data_dir_to_keep=()
+current_month=""
+previous_month=""
+day_data_dir=""
+previous_day_data_dir=""
 
-for day_data_dir in production-202*.*.*; do
+for day_data_dir in `ls -d production-202[0-9].[0-1][0-9].[0-3][0-9] | sort -r`; do
     count=$((count+1))
     echo "================"
     echo "Checking data directory ${day_data_dir}: $count"
     day=${day_data_dir#"production-"}
-    
+    current_month=${day:0:7}
+
+    # keep the data directory if it is in the list of data to keep
     if [[ " ${goat_archived_list[@]} " =~ " ${day} " ]]; then
-        echo "Data $day_data_dir is in the list of data to keep, skip!"
+        echo "Data $day_data_dir is in the list of data to keep, keep!"
+        if [[ ! " ${data_dir_to_keep[@]} " =~ " ${day_data_dir} " ]]; then
+            data_dir_to_keep+=($day_data_dir)
+        fi
+    fi
+
+    # keep the data directory if it is within the days to keep
+    if [[ "$count" -le "$days_to_keep" ]]; then
+        echo "Data ${day_data_dir} is within the days to keep, keep!"
+        if [[ ! " ${data_dir_to_keep[@]} " =~ " ${day_data_dir} " ]]; then
+            data_dir_to_keep+=($day_data_dir)
+        fi
+    fi
+
+    if ! $keep_first_data_of_month; then
+        echo "Keep first data of the month is disabled!"
         continue
     fi
-    
-    day=${day//./-}
-    data_age=$((($(date +%s) - $(date +%s -d "$day")) / 86400))
-    
-    if [[ "$data_age" -le "$DATA_AGE_LIMIT" ]]; then
-        echo "Data $day_data_dir only $data_age days old, skip!"
-        continue
-    else
-        echo "Data $day_data_dir is $data_age days old, it will be deleted now!"
+
+    # Keep the data directory if it is the first data of the month
+    if [[ "$current_month" != "$previous_month" ]]; then
+        echo "Previous day data directory is the first data of previous month, keep!"
+        if [[ "$previous_month" != "" ]] && [[ ! " ${data_dir_to_keep[@]} " =~ " ${previous_day_data_dir} " ]]; then
+            data_dir_to_keep+=($previous_day_data_dir)
+        fi
+    fi
+
+    previous_month=$current_month    
+    previous_day_data_dir=$day_data_dir
+done
+
+if $keep_first_data_of_month; then
+    echo "The last day data directory is the first data of the last month, keep!"
+    if [[ ! " ${data_dir_to_keep[@]} " =~ " ${day_data_dir} " ]]; then
+        data_dir_to_keep+=($day_data_dir)
+    fi
+fi
+
+echo
+echo "================"
+echo "Checking done, in total ${count}!"
+echo "The number of data dir to keep: ${#data_dir_to_keep[@]}"
+printf '%s\n' ${data_dir_to_keep[@]}
+echo "================"
+
+count_deleted=0
+for day_data_dir in `ls -d production-202[0-9].[0-1][0-9].[0-3][0-9]`; do
+    if [[ ! " ${data_dir_to_keep[@]} " =~ " ${day_data_dir} " ]]; then
+        echo "Delete data directory ${day_data_dir}"
         $cmd rm -rf $day_data_dir
         count_deleted=$((count_deleted+1))
     fi
 done
 
-echo
 echo "================"
-echo "Checking done, in total ${count}!"
-echo "Deleted $count_deleted data directories!"
+echo "In total ${count_deleted} data directories are deleted!"
 echo "================"
