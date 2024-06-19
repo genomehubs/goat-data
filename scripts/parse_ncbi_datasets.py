@@ -554,11 +554,16 @@ def main():
     parsed = {}
     previous_data = {}
     feature_headers = set_feature_headers()
-    if args.features is not None:
+    feature_file = args.features
+    if feature_file is not None:
         previous_features = gh_utils.load_previous(
             args.features, "assembly_id", feature_headers
         )
-        gh_utils.write_tsv({}, feature_headers, {"file_name": args.features})
+        if feature_file.endswith(".gz"):
+            feature_file = feature_file[:-3]
+        gh_utils.write_tsv(
+            previous_features, feature_headers, {"file_name": feature_file}
+        )
 
     ctr = 0
     for data in gh_utils.parse_jsonl_file(args.file):
@@ -598,6 +603,9 @@ def main():
         os.system(f"gzip -f {meta['file_name']}")
     else:
         gh_utils.write_tsv(parsed, headers, meta)
+
+    if feature_file is not None and feature_file.endswith(".gz"):
+        os.system(f"gzip -f {feature_file}")
 
 
 if __name__ == "__main__":
