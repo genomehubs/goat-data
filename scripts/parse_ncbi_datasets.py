@@ -569,7 +569,9 @@ def main():
             data = convert_keys_to_camel_case(data=data["reports"][0])
         data = process_assembly_report(data, previous_data)
         accession = data["processedAssemblyInfo"]["genbankAccession"]
+        print(accession)
         if accession in previous_parsed:
+            print(accession, "in previous")
             previous_row = previous_parsed[accession]
             if data["assemblyInfo"]["releaseDate"] == previous_row["releaseDate"]:
                 row = previous_row
@@ -584,6 +586,8 @@ def main():
                 parsed[accession] = row
                 print(row["genbankAccession"], "already processed")
                 continue
+        else:
+            print(previous_parsed.keys())
         if args.features is not None and accession not in parsed:
             process_sequence_report(data)
             ctr += 1

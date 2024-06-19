@@ -93,29 +93,29 @@ jobs:
   #         FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp
   #         RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
 
-  fetch-refseq-organelles:
-    runs-on: [self-hosted, runner2]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Fetch RefSeq organelles
-        run: |
-          CMD="s3cmd get s3://goat/resources/assembly-data/refseq_organelles.tsv.gz ${{ inputs.resources }}/assembly-data/refseq_organelles.tsv.gz 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data/refseq_organelles.types.yaml ${{ inputs.resources }}/assembly-data/refseq_organelles.types.yaml 2>/dev/null || : && \
-          docker run --rm --network=host \
-          -v $(pwd)/scripts/parse_refseq_organelles.py:/genomehubs/parse_refseq_organelles.py \
-          -v \$(pwd):/genomehubs/tmp \
-          -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
-          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"cp /genomehubs/assembly-data/refseq_organelles.types.yaml /genomehubs/tmp/ \
-              && /genomehubs/parse_refseq_organelles.py \
-              -o mitochondrion \
-              -c /genomehubs/tmp/refseq_organelles.types.yaml \
-              && ls -al /genomehubs/tmp/refseq_organelles.tsv.gz \
-              && ls -al /genomehubs/assembly-data/refseq_organelles.tsv.gz\"" \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  # fetch-refseq-organelles:
+  #   runs-on: [self-hosted, runner2]
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Fetch RefSeq organelles
+  #       run: |
+  #         CMD="s3cmd get s3://goat/resources/assembly-data/refseq_organelles.tsv.gz ${{ inputs.resources }}/assembly-data/refseq_organelles.tsv.gz 2>/dev/null || : && \
+  #         s3cmd get s3://goat/resources/assembly-data/refseq_organelles.types.yaml ${{ inputs.resources }}/assembly-data/refseq_organelles.types.yaml 2>/dev/null || : && \
+  #         docker run --rm --network=host \
+  #         -v $(pwd)/scripts/parse_refseq_organelles.py:/genomehubs/parse_refseq_organelles.py \
+  #         -v \$(pwd):/genomehubs/tmp \
+  #         -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+  #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+  #           \"cp /genomehubs/assembly-data/refseq_organelles.types.yaml /genomehubs/tmp/ \
+  #             && /genomehubs/parse_refseq_organelles.py \
+  #             -o mitochondrion \
+  #             -c /genomehubs/tmp/refseq_organelles.types.yaml \
+  #             && ls -al /genomehubs/tmp/refseq_organelles.tsv.gz \
+  #             && ls -al /genomehubs/assembly-data/refseq_organelles.tsv.gz\"" \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
   # fetch-tolids:
   #   runs-on: [self-hosted, runner1]
