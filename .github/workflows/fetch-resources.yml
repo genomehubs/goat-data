@@ -99,7 +99,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch RefSeq organelles
         run: |
-          CMD="cp ${{ inputs.resources }}/assembly-data/refseq_organelles.tsv.gz ./ 2>/dev/null || : && \
+          CMD="s3cmd get s3://goat/resources/assembly-data/refseq_organelles.tsv.gz ${{ inputs.resources }}/assembly-data/refseq_organelles.tsv.gz 2>/dev/null || : && \
           s3cmd get s3://goat/resources/assembly-data/refseq_organelles.types.yaml ${{ inputs.resources }}/assembly-data/refseq_organelles.types.yaml 2>/dev/null || : && \
           docker run --rm --network=host \
           -v $(pwd)/scripts/parse_refseq_organelles.py:/genomehubs/parse_refseq_organelles.py \
@@ -361,8 +361,9 @@ jobs:
 
       - name: Run genomehubs parse --ncbi-datasets-genome
         run: |
-          CMD="cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ./ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.types.yaml ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.types.yaml 2>/dev/null || : && \
+          CMD="s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.types.yaml ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.types.yaml 2>/dev/null || : && \
+          s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz 2>/dev/null || : && \
+          s3cmd get s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota_features.tsv.gz 2>/dev/null || : && \
           docker run --rm --network=host \
           -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
           -v \$(pwd):/genomehubs/tmp \
