@@ -397,7 +397,7 @@ def main() -> None:
     if meta["file_name"].endswith(".gz"):
         meta["file_name"] = meta["file_name"][:-3]
         gh_utils.print_to_tsv(headers, rows, meta)
-        os.system(f"gzip {meta['file_name']}")
+        os.system(f"gzip -f {meta['file_name']}")
     else:
         gh_utils.print_to_tsv(headers, rows, meta)
 

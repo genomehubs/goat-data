@@ -589,7 +589,7 @@ def main():
         previous_data = data
         if args.features is not None and "chromosomes" in data:
             append_features(data["chromosomes"], feature_headers, args.features)
-        if ctr > 100:
+        if ctr > 10:
             break
     gh_utils.write_tsv(parsed, headers, meta)
 
