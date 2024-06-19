@@ -7,6 +7,7 @@ Parse RefSeq collection records for organelle sequences.
 import argparse
 import contextlib
 import gzip
+import os
 import re
 from collections import Counter
 from typing import Optional
@@ -392,7 +393,13 @@ def main() -> None:
     if not parsed:
         return None
     rows = [gh_utils.parse_report_values(parse_fns, data) for data in parsed]
-    gh_utils.print_to_tsv(headers, rows, meta)
+
+    if meta["file_name"].endswith(".gz"):
+        meta["file_name"] = meta["file_name"][:-3]
+        gh_utils.print_to_tsv(headers, rows, meta)
+        os.system(f"gzip {meta['file_name']}")
+    else:
+        gh_utils.print_to_tsv(headers, rows, meta)
 
 
 if __name__ == "__main__":

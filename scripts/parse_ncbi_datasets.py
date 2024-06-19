@@ -559,6 +559,7 @@ def main():
         )
         gh_utils.write_tsv({}, feature_headers, {"file_name": args.features})
 
+    ctr = 0
     for data in gh_utils.parse_jsonl_file(args.file):
         if "accession" not in data:
             data = convert_keys_to_camel_case(data=data["reports"][0])
@@ -580,6 +581,7 @@ def main():
                 continue
         if args.features is not None and accession not in parsed:
             process_sequence_report(data)
+            ctr += 1
         row = gh_utils.parse_report_values(parse_fns, data)
         if accession not in parsed:
             update_organelle_info(data, row)
@@ -587,6 +589,8 @@ def main():
         previous_data = data
         if args.features is not None and "chromosomes" in data:
             append_features(data["chromosomes"], feature_headers, args.features)
+        if ctr > 100:
+            break
     gh_utils.write_tsv(parsed, headers, meta)
 
 
