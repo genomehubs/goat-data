@@ -567,13 +567,11 @@ def main():
             feature_file = feature_file[:-3]
         gh_utils.write_tsv({}, feature_headers, {"file_name": feature_file})
 
-    ctr = 0
     for data in gh_utils.parse_jsonl_file(args.file):
         if "accession" not in data:
             data = convert_keys_to_camel_case(data=data["reports"][0])
         data = process_assembly_report(data, previous_data)
         accession = data["processedAssemblyInfo"]["genbankAccession"]
-        print(accession, file=sys.stderr)
         if accession in previous_parsed:
             previous_row = previous_parsed[accession]
             if data["assemblyInfo"]["releaseDate"] == previous_row["releaseDate"]:
@@ -603,8 +601,7 @@ def main():
         previous_data = data
         if args.features is not None and "chromosomes" in data:
             append_features(data["chromosomes"], feature_headers, feature_file)
-        if ctr > 10:
-            break
+
     if meta["file_name"].endswith(".gz"):
         meta["file_name"] = meta["file_name"][:-3]
         gh_utils.write_tsv(parsed, headers, meta)
