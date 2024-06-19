@@ -586,7 +586,12 @@ def main():
                     )
                 parsed[accession] = row
                 continue
-        if args.features is not None and accession not in parsed:
+        if (
+            args.features is not None
+            and accession not in parsed
+            and data["assemblyInfo"]["assemblyLevel"]
+            in ["Chromosome", "Complete Genome"]
+        ):
             process_sequence_report(data)
             ctr += 1
         row = gh_utils.parse_report_values(parse_fns, data)
