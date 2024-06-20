@@ -1,11 +1,8 @@
 name: s3_release
 on:
-  push:
-    branches:
-      - feature/release-pipeline
   workflow_dispatch:
-  # schedule:
-  #   - cron: "5 0 * * 1,2,3,4,5,6" # At 00:05 every MTWTFS
+  schedule:
+    - cron: "5 0 * * 1,2,3,4,5,6" # At 00:05 every MTWTFS
 env:
   DOCKERVERSION: latest
   TAXROOT: '["2759"]'
