@@ -499,7 +499,10 @@ def append_to_tsv(headers: list[str], rows: list[dict], meta: dict):
             print(row)
             f.write(
                 "\t".join(
-                    [format_entry(row.get(col, []), col, meta) for col in headers]
+                    [
+                        gh_utils.format_entry(row.get(col, []), col, meta)
+                        for col in headers
+                    ]
                 )
                 + "\n"
             )
