@@ -483,7 +483,7 @@ def set_feature_headers() -> list[str]:
     ]
 
 
-def format_entry(entry: Union[str, list], key: str, meta: dict) -> str:
+def format_entry(entry, key: str, meta: dict) -> str:
     """
     Formats a single entry in a dictionary, handling the case where the entry is a list.
 
