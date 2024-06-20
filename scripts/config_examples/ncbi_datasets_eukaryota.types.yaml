@@ -147,13 +147,13 @@ file:
       - taxon_id
   format: tsv
   header: true
-  name: ncbi_datasets_test.tsv.gz
+  name: ncbi_datasets_eukaryota.tsv.gz
   needs:
     - ATTR_assembly.types.yaml
     - TAXON_assembly.types.yaml
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2024-01-18"
+  source_date: "2024-06-19"
 identifiers:
   assembly_id:
     header: genbankAccession

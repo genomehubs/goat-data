@@ -31,7 +31,7 @@ jobs:
           echo "taxroot=$TAXROOT" >> $GITHUB_OUTPUT
 
   fetch-dockers:
-    runs-on: [self-hosted, runner1]
+    runs-on: [self-hosted, runner2]
     steps:
       - name: Get dockers
         run: |
