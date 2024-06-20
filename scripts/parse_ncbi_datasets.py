@@ -500,7 +500,8 @@ def format_entry(entry, key: str, meta: dict) -> str:
     """
     if not isinstance(entry, list):
         return str(entry)
-    print(meta["separators"])
+    if "separators" not in meta or isinstance(meta["separators"], str):
+        return ",".join([str(e) for e in entry if e is not None])
     return (
         meta["separators"].get(key, ",").join([str(e) for e in entry if e is not None])
     )
