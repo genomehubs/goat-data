@@ -576,6 +576,7 @@ def main():
             previous_row = previous_parsed[accession]
             if data["assemblyInfo"]["releaseDate"] == previous_row["releaseDate"]:
                 row = previous_row
+                print(row)
                 if (
                     args.features is not None
                     and accession in previous_features

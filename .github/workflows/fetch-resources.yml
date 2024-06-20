@@ -336,24 +336,24 @@ jobs:
     runs-on: [self-hosted, runner1]
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch NCBI TAXROOT datasets zip
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            chmod 755 ${{ inputs.resources }}/datasets && \
-            ${{ inputs.resources }}/datasets download genome \
-              taxon 2759 \
-              --no-progressbar \
-              --dehydrated \
-              --filename eukaryota.zip
-          FALLBACK: s3://goat/resources/assembly-data/eukaryota.zip
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+      # - name: Fetch NCBI TAXROOT datasets zip
+      #   run: |
+      #     ./scripts/update-resources/fetch-or-fallback.sh
+      #   env:
+      #     CMD: |
+      #       chmod 755 ${{ inputs.resources }}/datasets && \
+      #       ${{ inputs.resources }}/datasets download genome \
+      #         taxon 2759 \
+      #         --no-progressbar \
+      #         --dehydrated \
+      #         --filename eukaryota.zip
+      #     FALLBACK: s3://goat/resources/assembly-data/eukaryota.zip
+      #     RESOURCES: ${{ inputs.resources }}/assembly-data
 
-      - name: Unzip NCBI TAXROOT datasets zip
-        run: |
-          unzip -o -d ${{ inputs.resources }}/assembly-data ${{ inputs.resources }}/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
-          ls ${{ inputs.resources }}/assembly-data
+      # - name: Unzip NCBI TAXROOT datasets zip
+      #   run: |
+      #     unzip -o -d ${{ inputs.resources }}/assembly-data ${{ inputs.resources }}/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
+      #     ls ${{ inputs.resources }}/assembly-data
 
       - name: Run genomehubs parse --ncbi-datasets-genome
         run: |
