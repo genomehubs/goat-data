@@ -483,6 +483,28 @@ def set_feature_headers() -> list[str]:
     ]
 
 
+def append_to_tsv(headers: list[str], rows: list[dict], meta: dict):
+    """
+    Appends the provided rows to a TSV file with the specified file name.
+
+    Args:
+        headers (list[str]): A list of column headers.
+        rows (list[dict]): A list of dictionaries, where each dictionary represents a
+            row of data and the keys correspond to the column headers.
+        meta (dict): A dictionary containing metadata, including the "file_name" key
+            which specifies the output file name.
+    """
+    with open(meta["file_name"], "a") as f:
+        for row in rows:
+            print(row)
+            f.write(
+                "\t".join(
+                    [format_entry(row.get(col, []), col, meta) for col in headers]
+                )
+                + "\n"
+            )
+
+
 def append_features(
     features: list[dict], headers: list[str], features_path: str
 ) -> None:
@@ -496,7 +518,7 @@ def append_features(
     Returns:
         None
     """
-    gh_utils.append_to_tsv(headers, features, {"file_name": features_path})
+    append_to_tsv(headers, features, {"file_name": features_path})
     return None
 
 
