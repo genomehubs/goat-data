@@ -520,13 +520,13 @@ def append_to_tsv(headers: list[str], rows: list[dict], meta: dict):
     """
     with open(meta["file_name"], "a") as f:
         for row in rows:
-            print(row)
-            f.write(
-                "\t".join(
-                    [format_entry(row.get(col, []), col, meta) for col in headers]
+            if isinstance(row, dict):
+                f.write(
+                    "\t".join(
+                        [format_entry(row.get(col, []), col, meta) for col in headers]
+                    )
+                    + "\n"
                 )
-                + "\n"
-            )
 
 
 def append_features(
