@@ -483,6 +483,29 @@ def set_feature_headers() -> list[str]:
     ]
 
 
+def format_entry(entry: Union[str, list], key: str, meta: dict) -> str:
+    """
+    Formats a single entry in a dictionary, handling the case where the entry is a list.
+
+    Args:
+        entry (Union[str, list]): The entry to be formatted, which may be a single
+            value or a list of values.
+        key (str): The key associated with the entry.
+        meta (dict): A dictionary containing metadata, including a "separators"
+            dictionary that maps keys to separator strings.
+
+    Returns:
+        str: The formatted entry, where list elements are joined using the separator
+            specified in the "separators" dictionary.
+    """
+    if not isinstance(entry, list):
+        return str(entry)
+    print(meta["separators"])
+    return (
+        meta["separators"].get(key, ",").join([str(e) for e in entry if e is not None])
+    )
+
+
 def append_to_tsv(headers: list[str], rows: list[dict], meta: dict):
     """
     Appends the provided rows to a TSV file with the specified file name.
@@ -499,10 +522,7 @@ def append_to_tsv(headers: list[str], rows: list[dict], meta: dict):
             print(row)
             f.write(
                 "\t".join(
-                    [
-                        gh_utils.format_entry(row.get(col, []), col, meta)
-                        for col in headers
-                    ]
+                    [format_entry(row.get(col, []), col, meta) for col in headers]
                 )
                 + "\n"
             )
