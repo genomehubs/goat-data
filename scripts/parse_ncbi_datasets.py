@@ -576,12 +576,12 @@ def main():
             previous_row = previous_parsed[accession]
             if data["assemblyInfo"]["releaseDate"] == previous_row["releaseDate"]:
                 row = previous_row
-                print(previous_features[accession])
                 if (
                     args.features is not None
                     and accession in previous_features
                     and accession not in parsed
                 ):
+                    print(previous_features[accession])
                     append_features(
                         previous_features[accession], feature_headers, feature_file
                     )
