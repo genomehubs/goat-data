@@ -390,5 +390,3 @@ jobs:
         env:
           FALLBACK: s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz
           RESOURCES: ${{ inputs.resources }}/assembly-data-sample
-      - name: fail
-        run: exit 1
