@@ -3,12 +3,12 @@ attributes:
     header: bioProjectAccession
     path: bioproject
     separator:
-      - ;
+      - ","
   biosample:
     header: biosampleAccession
     path: biosample
     separator:
-      - ;
+      - ","
   last_updated:
     header: releaseDate
     path: releaseDate

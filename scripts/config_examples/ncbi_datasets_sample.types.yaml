@@ -9,12 +9,12 @@ attributes:
     header: bioProjectAccession
     path: assemblyInfo.bioprojectLineage.bioprojects.accession
     separator:
-      - ;
+      - ","
   biosample:
     header: biosampleAccession
     path: assemblyInfo.biosample.accession
     separator:
-      - ;
+      - ","
   elevation:
     header: elevation
     path: assemblyInfo.biosample.attributes.name==geographic location (elevation).value

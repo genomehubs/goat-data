@@ -20,12 +20,12 @@ attributes:
     header: bioProjectAccession
     path: assemblyInfo.bioprojectLineage.bioprojects.accession
     separator:
-      - ;
+      - ","
   biosample:
     header: biosampleAccession
     path: assemblyInfo.biosample.accession
     separator:
-      - ;
+      - ","
   chromosome_count:
     header: totalNumberOfChromosomes
     path: assemblyStats.totalNumberOfChromosomes
@@ -42,7 +42,7 @@ attributes:
     header: ebpStandardCriteria
     path: processedAssemblyStats.ebpStandardCriteria
     separator:
-      - ;
+      - ","
   ebp_standard_date:
     header: ebpStandardDate
     path: processedAssemblyStats.ebpStandardDate
