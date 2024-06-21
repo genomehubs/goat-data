@@ -28,6 +28,7 @@ configuration file.
 
 import argparse
 import json
+import os
 import subprocess
 from collections import defaultdict
 from collections.abc import Generator
@@ -371,16 +372,20 @@ def process_sequence_report(data: dict):
     accession = data["accession"]
     span = int(data["assemblyStats"]["totalSequenceLength"])
     organelles: defaultdict[str, list] = defaultdict(list)
-    report = fetch_sequences_report(accession)
-    chromosomes: list = []
-    assigned_span = 0
-    for seq in report:
-        if is_non_nuclear(seq):
-            organelles[seq["chr_name"]].append(seq)
-        elif is_assigned_to_chromosome(seq):
-            assigned_span += seq["length"]
-            if is_chromosome(seq):
-                chromosomes.append(seq)
+    try:
+        report = fetch_sequences_report(accession)
+        chromosomes: list = []
+        assigned_span = 0
+        for seq in report:
+            if is_non_nuclear(seq):
+                organelles[seq["chr_name"]].append(seq)
+            elif is_assigned_to_chromosome(seq):
+                assigned_span += seq["length"]
+                if is_chromosome(seq):
+                    chromosomes.append(seq)
+    except subprocess.TimeoutExpired:
+        print(f"ERROR: Timeout fetching sequence report for {accession}")
+        return
 
     add_organelle_entries(data, organelles)
     check_ebp_criteria(data, span, chromosomes, assigned_span)
@@ -477,6 +482,52 @@ def set_feature_headers() -> list[str]:
     ]
 
 
+def format_entry(entry, key: str, meta: dict) -> str:
+    """
+    Formats a single entry in a dictionary, handling the case where the entry is a list.
+
+    Args:
+        entry (Union[str, list]): The entry to be formatted, which may be a single
+            value or a list of values.
+        key (str): The key associated with the entry.
+        meta (dict): A dictionary containing metadata, including a "separators"
+            dictionary that maps keys to separator strings.
+
+    Returns:
+        str: The formatted entry, where list elements are joined using the separator
+            specified in the "separators" dictionary.
+    """
+    if not isinstance(entry, list):
+        return str(entry)
+    if "separators" not in meta or isinstance(meta["separators"], str):
+        return ",".join([str(e) for e in entry if e is not None])
+    return (
+        meta["separators"].get(key, ",").join([str(e) for e in entry if e is not None])
+    )
+
+
+def append_to_tsv(headers: list[str], rows: list[dict], meta: dict):
+    """
+    Appends the provided rows to a TSV file with the specified file name.
+
+    Args:
+        headers (list[str]): A list of column headers.
+        rows (list[dict]): A list of dictionaries, where each dictionary represents a
+            row of data and the keys correspond to the column headers.
+        meta (dict): A dictionary containing metadata, including the "file_name" key
+            which specifies the output file name.
+    """
+    with open(meta["file_name"], "a") as f:
+        for row in rows:
+            if isinstance(row, dict):
+                f.write(
+                    "\t".join(
+                        [format_entry(row.get(col, []), col, meta) for col in headers]
+                    )
+                    + "\n"
+                )
+
+
 def append_features(
     features: list[dict], headers: list[str], features_path: str
 ) -> None:
@@ -490,7 +541,7 @@ def append_features(
     Returns:
         None
     """
-    gh_utils.append_to_tsv(headers, features, {"file_name": features_path})
+    append_to_tsv(headers, features, {"file_name": features_path})
     return None
 
 
@@ -540,17 +591,26 @@ def main():
     meta = gh_utils.get_metadata(config, args.config)
     headers = gh_utils.set_headers(config)
     parse_fns = gh_utils.get_parse_functions(config)
-    previous_parsed = gh_utils.load_previous(
-        meta["file_name"], "genbankAccession", headers
-    )
+    try:
+        previous_parsed = gh_utils.load_previous(
+            meta["file_name"], "genbankAccession", headers
+        )
+    except Exception:
+        previous_parsed = {}
     parsed = {}
     previous_data = {}
     feature_headers = set_feature_headers()
-    if args.features is not None:
-        previous_features = gh_utils.load_previous(
-            args.features, "assembly_id", feature_headers
-        )
-        gh_utils.write_tsv({}, feature_headers, {"file_name": args.features})
+    feature_file = args.features
+    if feature_file is not None:
+        try:
+            previous_features = gh_utils.load_previous(
+                args.features, "assembly_id", feature_headers
+            )
+        except Exception:
+            previous_features = {}
+        if feature_file.endswith(".gz"):
+            feature_file = feature_file[:-3]
+        gh_utils.write_tsv({}, feature_headers, {"file_name": feature_file})
 
     for data in gh_utils.parse_jsonl_file(args.file):
         if "accession" not in data:
@@ -566,21 +626,36 @@ def main():
                     and accession in previous_features
                     and accession not in parsed
                 ):
+                    print(previous_features[accession])
                     append_features(
-                        previous_features[accession], feature_headers, args.features
+                        previous_features[accession], feature_headers, feature_file
                     )
                 parsed[accession] = row
                 continue
-        if args.features is not None and accession not in parsed:
+        if (
+            args.features is not None
+            and accession not in parsed
+            and data["assemblyInfo"]["assemblyLevel"]
+            in ["Chromosome", "Complete Genome"]
+        ):
             process_sequence_report(data)
         row = gh_utils.parse_report_values(parse_fns, data)
         if accession not in parsed:
             update_organelle_info(data, row)
         parsed[accession] = row
         previous_data = data
-        if args.features is not None:
-            append_features(data["chromosomes"], feature_headers, args.features)
-    gh_utils.write_tsv(parsed, headers, meta)
+        if args.features is not None and "chromosomes" in data:
+            append_features(data["chromosomes"], feature_headers, feature_file)
+
+    if meta["file_name"].endswith(".gz"):
+        meta["file_name"] = meta["file_name"][:-3]
+        gh_utils.write_tsv(parsed, headers, meta)
+        os.system(f"gzip -f {meta['file_name']}")
+    else:
+        gh_utils.write_tsv(parsed, headers, meta)
+
+    if feature_file is not None and args.features.endswith(".gz"):
+        os.system(f"gzip -f {feature_file}")
 
 
 if __name__ == "__main__":
