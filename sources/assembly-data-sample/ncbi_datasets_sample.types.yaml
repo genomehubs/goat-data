@@ -1,0 +1,93 @@
+attributes:
+  assembly_level:
+    header: assemblyLevel
+    path: assemblyInfo.assemblyLevel
+  assembly_type:
+    header: assemblyType
+    path: assemblyInfo.assemblyType
+  bioproject:
+    header: bioProjectAccession
+    path: assemblyInfo.bioprojectLineage.bioprojects.accession
+    separator:
+      - ","
+  biosample:
+    header: biosampleAccession
+    path: assemblyInfo.biosample.accession
+    separator:
+      - ","
+  elevation:
+    header: elevation
+    path: assemblyInfo.biosample.attributes.name==geographic location (elevation).value
+  estimated_genome_size:
+    header: estimated_genome_size
+    path: assemblyInfo.biosample.attributes.name==estimated size.value
+  isolate:
+    header: isolate
+    path: assemblyInfo.biosample.attributes.name==isolate.value
+  last_updated:
+    header: releaseDate
+    path: assemblyInfo.biosample.lastUpdated
+  location_name:
+    header: location_name
+    path: assemblyInfo.biosample.attributes.name==geo_loc_name.value
+  num_replicons:
+    header: num_replicons
+    path: assemblyInfo.biosample.attributes.name==num_replicons.value
+  ploidy:
+    header: ploidy
+    path: assemblyInfo.biosample.attributes.name==ploidy.value
+  sample_sex:
+    header: sex
+    path: assemblyInfo.biosample.attributes.name==sex.value
+  submitter:
+    header: submitter
+    path: assemblyInfo.submitter
+file:
+  display_group: general
+  exclusions:
+    attributes:
+      - bioproject
+      - biosample
+    identifiers:
+      - assembly_id
+    taxonomy:
+      - taxon_id
+  format: tsv
+  header: true
+  name: ncbi_datasets_sample.tsv.gz
+  needs:
+    - ATTR_assembly.types.yaml
+    - TAXON_assembly.types.yaml
+  source: INSDC
+  source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+  source_date: "2024-06-22"
+identifiers:
+  sample_id:
+    header: biosampleAccession
+    path: assemblyInfo.biosample.accession
+  assembly_id:
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
+  assembly_name:
+    header: assemblyName
+    path: assemblyInfo.assemblyName
+  genbank_accession:
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
+  refseq_accession:
+    header: refseqAccession
+    path: processedAssemblyInfo.refseqAccession
+  wgs_accession:
+    header: wgsProjectAccession
+    path: wgsInfo.wgsProjectAccession
+metadata:
+  source_slug:
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
+taxonomy:
+  taxon:
+    header: organismName
+    path: organism.organismName
+  taxon_id:
+    header: taxId
+    path: organism.taxId

@@ -1,240 +1,140 @@
 attributes:
   assembly_level:
-    display_group: general
     header: assemblyLevel
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyInfo.assemblyLevel
   assembly_span:
-    display_group: general
     header: totalSequenceLength
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.totalSequenceLength
   assigned_percent:
     header: assignedProportion
+    path: processedAssemblyStats.assignedProportion
   assembly_status:
     header: primaryValue
+    path: processedAssemblyInfo.primaryValue
     translate:
       "1": primary
   assembly_type:
-    display_group: general
     header: assemblyType
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyInfo.assemblyType
   bioproject:
-    display_group: general
     header: bioProjectAccession
-    organelle: nucleus
+    path: assemblyInfo.bioprojectLineage.bioprojects.accession
     separator:
-      - ;
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+      - ","
   biosample:
-    display_group: general
     header: biosampleAccession
-    organelle: nucleus
+    path: assemblyInfo.biosample.accession
     separator:
-      - ;
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+      - ","
   chromosome_count:
-    display_group: general
     header: totalNumberOfChromosomes
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.totalNumberOfChromosomes
   contig_count:
-    display_group: general
     header: numberOfContigs
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.numberOfContigs
   contig_l50:
-    display_group: general
     header: contigL50
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.contigL50
   contig_n50:
-    display_group: general
     header: contigN50
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.contigN50
   ebp_standard_criteria:
-    display_group: general
     header: ebpStandardCriteria
-    organelle: nucleus
+    path: processedAssemblyStats.ebpStandardCriteria
     separator:
-      - ;
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+      - ","
   ebp_standard_date:
-    display_group: general
     header: ebpStandardDate
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: processedAssemblyStats.ebpStandardDate
   gc_percent:
-    display_group: general
     header: gcPercent
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.gcPercent
   gene_count:
-    display_group: general
     header: geneCountTotal
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: annotationInfo.stats.geneCounts.total
+  gene_count.source.date:
+    header: annotationReleaseDate
+    path: annotationInfo.releaseDate
   isolate:
-    display_group: general
     header: isolate
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyInfo.biosample.attributes.name==isolate.value
   last_updated:
-    display_group: general
     header: releaseDate
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyInfo.releaseDate
   mitochondrion_accession:
-    display_group: general
     header: mitochondrionAccession
-    organelle: nucleus
+    path: processedOrganelleInfo.mitochondrion.accession
     separator:
       - ;
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   mitochondrion_assembly_span:
-    display_group: general
     header: mitochondrionAssemblySpan
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: processedOrganelleInfo.mitochondrion.assemblySpan
   mitochondrion_gc_percent:
-    display_group: general
     header: mitochondrionGcPercent
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: processedOrganelleInfo.mitochondrion.gcPercent
   mitochondrion_scaffolds:
-    display_group: general
     header: mitochondrionScaffolds
-    organelle: nucleus
+    path: processedOrganelleInfo.mitochondrion.scaffolds
     separator:
       - ;
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   noncoding_gene_count:
-    display_group: general
     header: geneCountNoncoding
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  organelle:
-    display_group: general
-    header: organelle
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: annotationInfo.stats.geneCounts.nonCoding
+  noncoding_gene_count.source.date:
+    header: annotationReleaseDate
+    path: annotationInfo.releaseDate
   plastid_accession:
-    display_group: general
     header: plastidAccession
-    organelle: nucleus
+    path: processedOrganelleInfo.plastid.accession
     separator:
       - ;
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   plastid_assembly_span:
-    display_group: general
     header: plastidAssemblySpan
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: processedOrganelleInfo.plastid.assemblySpan
   plastid_gc_percent:
-    display_group: general
     header: plastidGcPercent
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: processedOrganelleInfo.plastid.gcPercent
   plastid_scaffolds:
-    display_group: general
     header: plastidScaffolds
-    organelle: nucleus
+    path: processedOrganelleInfo.plastid.scaffolds
     separator:
       - ;
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   protein_count:
-    display_group: general
     header: geneCountProteincoding
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: annotationInfo.stats.geneCounts.proteinCoding
+  protein_count.source.date:
+    header: annotationReleaseDate
+    path: annotationInfo.releaseDate
   pseudogene_count:
-    display_group: general
     header: geneCountPseudogene
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: annotationInfo.stats.geneCounts.pseudogene
+  pseudogene.source.date:
+    header: annotationReleaseDate
+    path: annotationInfo.releaseDate
   refseq_category:
-    display_group: general
     header: refseqCategory
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyInfo.refseqCategory
   sample_sex:
-    display_group: general
     header: sex
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyInfo.biosample.attributes.name==sex.value
   scaffold_count:
-    display_group: general
     header: numberOfScaffolds
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.numberOfScaffolds
   scaffold_l50:
-    display_group: general
     header: scaffoldL50
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.scaffoldL50
   scaffold_n50:
-    display_group: general
     header: scaffoldN50
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.scaffoldN50
   sequence_count:
-    display_group: general
     header: numberOfComponentSequences
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_accession:
-    display_group: general
-    header: sourceAccession
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyStats.numberOfComponentSequences
   submitter:
-    display_group: general
     header: submitter
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    path: assemblyInfo.submitter
   ungapped_span:
-    display_group: general
-    display_name: Ungapped span
-    organelle: nucleus
-    source: INSDC
-    source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
+    header: totalUngappedLength
+    path: assemblyStats.totalUngappedLength
 file:
   display_group: general
   exclusions:
@@ -251,31 +151,40 @@ file:
   needs:
     - ATTR_assembly.types.yaml
     - TAXON_assembly.types.yaml
-  organelle: nucleus
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2024-06-14"
+  source_date: "2024-06-22"
 identifiers:
   assembly_id:
-    header: genbankAssmAccession
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
   assembly_name:
     header: assemblyName
+    path: assemblyInfo.assemblyName
   genbank_accession:
-    header: genbankAssmAccession
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
   refseq_accession:
-    header: refseqAssmAccession
+    header: refseqAccession
+    path: processedAssemblyInfo.refseqAccession
   wgs_accession:
     header: wgsProjectAccession
+    path: wgsInfo.wgsProjectAccession
 metadata:
   is_primary_value:
     header: primaryValue
+    path: processedAssemblyInfo.primaryValue
   source_slug:
-    header: genbankAssmAccession
+    header: genbankAccession
+    path: processedAssemblyInfo.genbankAccession
 names:
   common_name:
     header: commonName
+    path: organism.commonName
 taxonomy:
   taxon:
     header: organismName
+    path: organism.organismName
   taxon_id:
     header: taxId
+    path: organism.taxId
