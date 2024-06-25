@@ -1,68 +1,35 @@
 attributes:
-  assembly_span:
-    display_group: general
-    index: 8
-    source: NCBI
-    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    taxon_display_group: "{{organelle}}_assembly"
-    taxon_display_level: 2
-    taxon_display_name: "{{organelle}} span"
-    taxon_key: "{{organelle}}_assembly_span"
-    taxon_name: "{{organelle}}_assembly_span"
-    taxon_traverse_limit: phylum
   bioproject:
-    display_group: general
-    index: 5
-    source: NCBI
-    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
+    header: bioProjectAccession
+    path: bioproject
+    separator:
+      - ","
   biosample:
-    display_group: general
-    index: 6
-    source: NCBI
-    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-  gc_percent:
-    display_group: general
-    index: 9
-    source: NCBI
-    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    taxon_bins:
-      count: 10
-      max: 100
-      min: 0
-      scale: linear
-    taxon_display_group: "{{organelle}}_assembly"
-    taxon_display_level: 2
-    taxon_display_name: "{{organelle}} GC%"
-    taxon_key: "{{organelle}}_gc_percent"
-    taxon_name: "{{organelle}}_gc_percent"
-    taxon_summary: median
-    taxon_traverse: median
-    taxon_traverse_limit: phylum
+    header: biosampleAccession
+    path: biosample
+    separator:
+      - ","
   last_updated:
-    display_group: general
-    index: 11
-    source: NCBI
-    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-  n_percent:
-    display_group: general
-    index: 10
-    source: NCBI
-    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-  organelle:
-    default: "{{organelle}}"
-    display_group: general
-    source: NCBI
-    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    type: keyword
-  sample_location:
-    display_group: general
-    index: 12
-    source: NCBI
-    source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-    taxon_display_group: "{{organelle}}_assembly"
-    taxon_display_name: "{{organelle}} sample location"
-    taxon_key: "{{organelle}}_sample_location"
-    taxon_name: "{{organelle}}_sample_location"
+    header: releaseDate
+    path: releaseDate
+  mitochondrion_accession:
+    header: mitochondrionAccession
+    path: mitochondrion.id
+  mitochondrion_assembly_span:
+    header: mitochondrionAssemblySpan
+    path: mitochondrion.assemblySpan
+  mitochondrion_gc_percent:
+    header: mitochondrionGcPercent
+    path: mitochondrion.gcPercent
+  plastid_accession:
+    header: plastidAccession
+    path: plastid.id
+  plastid_assembly_span:
+    header: plastidAssemblySpan
+    path: plastid.assemblySpan
+  plastid_gc_percent:
+    header: plastidGcPercent
+    path: plastid.gcPercent
 file:
   display_group: general
   format: tsv
@@ -72,31 +39,25 @@ file:
     - ATTR_assembly.types.yaml
   source: NCBI
   source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-  source_date: "2024-06-14"
+  source_date: "2024-06-25"
 identifiers:
   assembly_id:
-    index: 3
+    header: refseqAccession
+    path: id
   genbank_accession:
-    index: 4
+    header: genbankAccession
+    path: genbankAccession
   refseq_accession:
-    index: 3
+    header: refseqAccession
+    path: id
 metadata:
-  organelle:
-    index: 7
-  source_author:
-    index: 13
-  source_pubmed_id:
-    index: 16
   source_slug:
-    index: 3
-  source_title:
-    index: 15
-  source_year:
-    index: 14
+    header: refseqAccession
+    path: id
 taxonomy:
-  lineage:
-    index: 2
   taxon:
-    index: 0
+    header: organismName
+    path: annotations.organism
   taxon_id:
-    index: 1
+    header: taxonId
+    path: taxonId
