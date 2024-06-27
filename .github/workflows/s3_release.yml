@@ -74,15 +74,15 @@ jobs:
       release: ${{ needs.set-variables.outputs.release }}
       resources: ${{ needs.set-variables.outputs.resources }}
 
-  # index-files:
-  #   needs:
-  #     - set-variables
-  #     - init-release
-  #   uses: ./.github/workflows/genomehubs-index-files.yml
-  #   with:
-  #     dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
-  #     release: ${{ needs.set-variables.outputs.release }}
-  #     resources: ${{ needs.set-variables.outputs.resources }}
+  index-files:
+    needs:
+      - set-variables
+      - init-release
+    uses: ./.github/workflows/genomehubs-index-files.yml
+    with:
+      dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+      release: ${{ needs.set-variables.outputs.release }}
+      resources: ${{ needs.set-variables.outputs.resources }}
 
   fill-values:
     needs:
