@@ -56,7 +56,7 @@ if [ ! -d "$goat_data_dir" ]; then
     usage
 fi
 
-IFS=$'\n' read -d '' -r -a goat_archived_list <<< "$(wget -qO- https://raw.githubusercontent.com/genomehubs/goat-data/data_clean_script/scripts/goat_archived_list.txt )" || true
+IFS=$'\n' read -d '' -r -a goat_archived_list <<< "$(wget -qO- https://raw.githubusercontent.com/genomehubs/goat-data/main/scripts/goat_archived_list.txt )" || true
 
 # IFS=$'\n' read -d '' -r -a goat_archived_list < $GOAT_ARCHIVED_LIST_FILE || true
 
