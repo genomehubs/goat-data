@@ -21,6 +21,7 @@ jobs:
           rsync -av --delete /volumes/docker/snapshots/production/production-${{ inputs.release }} farm5:/lustre/scratch123/tol/share/goat/dev/
           rsync -av --delete /volumes/docker/resources/files/                         farm5:/lustre/scratch123/tol/share/goat/dev/files/
           /home/ubuntu/scripts/clean_goat_data.sh -d /volumes/docker/snapshots/production -r
+          ssh farm /lustre/scratch123/tol/share/goat/scripts/clean_goat_data.sh -d /lustre/scratch123/tol/share/goat/dev -m  -r
 
   restore-on-prod:
     runs-on: [self-hosted, runner2]
