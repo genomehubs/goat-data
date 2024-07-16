@@ -17,7 +17,7 @@ jobs:
     runs-on: [self-hosted, runner1]
     steps:
       - name: checkout first
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token
           clean: true

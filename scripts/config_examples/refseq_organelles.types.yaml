@@ -3,12 +3,12 @@ attributes:
     header: bioProjectAccession
     path: bioproject
     separator:
-      - ;
+      - ","
   biosample:
     header: biosampleAccession
     path: biosample
     separator:
-      - ;
+      - ","
   last_updated:
     header: releaseDate
     path: releaseDate
@@ -34,12 +34,12 @@ file:
   display_group: general
   format: tsv
   header: true
-  name: refseq_organelles.tsv
+  name: refseq_organelles.tsv.gz
   needs:
     - ATTR_assembly.types.yaml
   source: NCBI
   source_url_stub: https://www.ncbi.nlm.nih.gov/nuccore/
-  source_date: "2024-04-09"
+  source_date: "2024-06-19"
 identifiers:
   assembly_id:
     header: refseqAccession

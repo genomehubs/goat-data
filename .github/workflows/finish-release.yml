@@ -18,11 +18,11 @@ jobs:
     steps:
       - name: rsync production snapshot to sanger lustre
         run: |
-          rsync -av --delete /volumes/docker/snapshots/production/production-${{ inputs.release }} farm5:/lustre/scratch123/tol/share/goat/dev/
-          rsync -av --delete /volumes/docker/resources/files/                         farm5:/lustre/scratch123/tol/share/goat/dev/files/
+          rsync -av --delete /volumes/docker/snapshots/production/production-${{ inputs.release }} farm:/lustre/scratch123/tol/share/goat/dev/
+          rsync -av --delete /volumes/docker/resources/files/                         farm:/lustre/scratch123/tol/share/goat/dev/files/
           /home/ubuntu/scripts/clean_goat_data.sh -d /volumes/docker/snapshots/production -r
           ssh farm /lustre/scratch123/tol/share/goat/scripts/clean_goat_data.sh -d /lustre/scratch123/tol/share/goat/dev -m  -r
-
+ 
   restore-on-prod:
     runs-on: [self-hosted, runner2]
     steps:
@@ -44,7 +44,7 @@ jobs:
   merge-changes:
     runs-on: [self-hosted, runner1]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Merge ${{ inputs.release }} -> main
         uses: devmasx/merge-branch@master
@@ -57,7 +57,7 @@ jobs:
   update-s3:
     runs-on: [self-hosted, runner1]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Move sources -> previous
         run: |

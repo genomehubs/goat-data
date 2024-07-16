@@ -20,12 +20,12 @@ attributes:
     header: bioProjectAccession
     path: assemblyInfo.bioprojectLineage.bioprojects.accession
     separator:
-      - ;
+      - ","
   biosample:
     header: biosampleAccession
     path: assemblyInfo.biosample.accession
     separator:
-      - ;
+      - ","
   chromosome_count:
     header: totalNumberOfChromosomes
     path: assemblyStats.totalNumberOfChromosomes
@@ -42,7 +42,7 @@ attributes:
     header: ebpStandardCriteria
     path: processedAssemblyStats.ebpStandardCriteria
     separator:
-      - ;
+      - ","
   ebp_standard_date:
     header: ebpStandardDate
     path: processedAssemblyStats.ebpStandardDate
@@ -147,13 +147,13 @@ file:
       - taxon_id
   format: tsv
   header: true
-  name: ncbi_datasets_test.tsv
+  name: ncbi_datasets_eukaryota.tsv.gz
   needs:
     - ATTR_assembly.types.yaml
     - TAXON_assembly.types.yaml
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2024-01-18"
+  source_date: "2024-06-19"
 identifiers:
   assembly_id:
     header: genbankAccession
