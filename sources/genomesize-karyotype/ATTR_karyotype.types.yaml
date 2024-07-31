@@ -10,6 +10,7 @@ attributes:
       max: 2000
       min: 1
     description: Chromosome number
+    long_description: Total chromosome number observed in cells of an individual
     display_level: 1
     display_name: Chromosome number
     summary:
@@ -33,6 +34,7 @@ attributes:
       max: 2000
       min: 1
     description: Haploid number
+    long_description: Number of chromosomes in haploid cells of an individual, correspond to gamete chromosome count in animals and gametophyte chromosome count in plants
     display_level: 1
     display_name: Haploid number
     summary:
@@ -49,6 +51,7 @@ attributes:
     status: temporary
     display_group: karyotype
     description: Sex chromosomes and sex karyotype features - temporary attribute
+    long_description: Sex chromosomes and sex karyotype features - temporary attribute collating most sex phenotypes of chromosomes and karyotypes from the Tree of Sex consortium database
     display_level: 2
     display_name: Sex karyotype features
     summary: list
@@ -66,6 +69,7 @@ attributes:
       max: 200
       min: 1
     description: Ploidy - numeric value
+    long_description: Ploidy is the numeric value of sets of homologous chromosomes found in an individual
     display_level: 2
     display_name: Ploidy
     summary:
@@ -88,6 +92,7 @@ attributes:
       max: 200
       min: 1
     description: "Numeric ploidy inferred from chromosome count and/or phylogeny"
+    long_description: Use this field to retrieve a numeric ploidy value inferred based on phylogenetic methods and chromosome counts of closely related species outside GoaT trasverse methods
     display_level: 2
     display_name: Estimated ploidy
     summary:
@@ -103,6 +108,7 @@ attributes:
     status: temporary
     display_group: karyotype
     description: Ploidy - descriptive to include polyploids of uncertain ploidy
+    long_description: Ploidy descriptive is the spelled ploidy of an individual - used to allow inclusion of the value polyploid as metadata of poplyploids of uncertain ploidy
     display_level: 2
     display_name: Ploidy descriptive
     summary: list
@@ -113,6 +119,7 @@ attributes:
     status: temporary
     display_group: karyotype
     description: "Programmed DNA elimination present, number of additional chromosomes in somatic cells given as +n"
+    long_description: "Programmed DNA elimination present, number of additional chromosomes in somatic cells given as +n"
     display_level: 2
     display_name: Programmed DNA elimination present
     summary: list
