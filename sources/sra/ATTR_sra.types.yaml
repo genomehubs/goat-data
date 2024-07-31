@@ -1,6 +1,7 @@
 attributes:
   total_runs:
-    description: Total number of sequencing runs available in SRA
+    description: Total number of transcriptome sequencing runs available in SRA
+    long_description: Total number of sequencing runs available in the Sequence Read Archive, SRA, filtered for RNA-Seq data. Use this data to retrieve taxon lists with RNA sequencing, transcriptome, and single-cell transcriptome data 
     display_group: sra
     source_url: https://ncbi.nlm.nih.gov/sra/
     source: NCBI
@@ -9,7 +10,8 @@ attributes:
     traverse_direction: up
     type: integer
   total_reads:
-    description: Total number of reads across all runs in SRA
+    description: Total number of reads across all transcriptomic and single cell RNA sequencing runs in SRA
+    long_description: Total number of RNA sequencing reads across all runs in the Sequence Read Archive, SRA, filtered for RNA-Seq data. Use this data to retrieve taxon lists with RNA sequencing, transcriptome, and single-cell transcriptome read data
     display_group: sra
     source_url: https://ncbi.nlm.nih.gov/sra/
     source: NCBI
@@ -22,7 +24,8 @@ attributes:
       enum:
         - transcriptomic
         - single cell
-    description: Library sources for most recent libraries (up to 10)
+    description: Library sources for most recent transcriptomic libraries (up to 10)
+    long_description: Library sources for most recent transcriptomic libraries in the Sequence Read Archive, SRA (up to 10). Use this data to retrieve taxon lists with RNA sequencing by type of transcriptome data library, including single cell transcriptome
     display_group: sra
     source_url: https://ncbi.nlm.nih.gov/sra/
     source: NCBI
@@ -38,7 +41,8 @@ attributes:
         - ILLUMINA
         - OXFORD_NANOPORE
         - PACBIO_SMRT
-    description: Sequencing platforms for most recent libraries (up to 10)
+    description: Sequencing platforms for most recent transcriptomic libraries (up to 10)
+    long_description: Sequencing platforms for most recent transcriptomic libraries in the Sequence Read Archive, SRA (up to 10). Use this field to retrieve the sequecing platforms or technologies used for RNA sequencing of transcriptome and single cell transcriptome data 
     display_group: sra
     source_url: https://ncbi.nlm.nih.gov/sra/
     source: NCBI
@@ -47,7 +51,8 @@ attributes:
     traverse_direction: up
     type: keyword
   sra_accession:
-    description: Most recent SRA experiment accessions (up to 10)
+    description: Most recent SRA experiment accessions (up to 10) for RNA sequencing
+    long_description: Most recent SRA experiment accessions (up to 10) for RNA sequencing in the Sequence Read Archive, SRA. Use this field to retrieve the SRA accessions for RNA sequencing of transcriptome and single cell transcriptome experiments
     display_group: sra
     source_url: https://ncbi.nlm.nih.gov/sra/
     source: NCBI
@@ -60,6 +65,7 @@ attributes:
         link: https://www.ebi.ac.uk/ena/browser/view/{}
   run_accession:
     description: Most recent SRA run accessions (up to 10)
+    long_description: Most recent SRA run accessions (up to 10) for RNA sequencing in the Sequence Read Archive, SRA. Use this field to retrieve the run accessions for RNA sequencing of transcriptome and single-cell transcriptome data
     display_group: sra
     source_url: https://ncbi.nlm.nih.gov/sra/
     source: NCBI
@@ -72,6 +78,7 @@ attributes:
         link: https://www.ebi.ac.uk/ena/browser/view/{}
   reads:
     description: Number of reads per run for the most recent libraries (up to 10)
+    long_description: Number of reads per run for the most recent libraries (up to 10) for RNA sequencing in the Sequence Read Archive, SRA. Use this field to retrieve the number of reads for RNA sequencing of transcriptome and single cell transcroptomic data
     display_group: sra
     source_url: https://ncbi.nlm.nih.gov/sra/
     source: NCBI

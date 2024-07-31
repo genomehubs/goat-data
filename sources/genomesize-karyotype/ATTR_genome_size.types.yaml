@@ -8,7 +8,8 @@ attributes:
     constraint:
       max: 200
       min: 0.001
-    description: 1C value
+    description: 1C value or haploid DNA content in picograms
+    long_description: C-value is the amount of DNA in one haploid set of chromosomes in picograms
     display_level: 2
     display_name: C value
     display_group: genome_size
@@ -48,6 +49,7 @@ attributes:
         - reassociation kinetics
         - whole genome sequencing
     description: C value estimation method
+    long_description: Method used to estimate the C value in picograms
     display_level: 2
     display_name: C value method
     display_group: genome_size
@@ -142,7 +144,8 @@ attributes:
         - Ventral hypodermal chord
         - Whole body
         - Whole body squash
-    description: Cell type
+    description: Cell type used for C value estimation
+    long_description: Cell or tissue type of the sample used for C value estimation
     display_level: 2
     display_name: C value cell type
     display_group: genome_size
@@ -208,6 +211,7 @@ attributes:
     constraint:
       min: 1000000
     description: Genome size
+    long_description: Genome size retrieved from genome size databases, estimated from the conversion of C value from picograms of DNA to base pairs For assembly-based genome size estimates, use assembly_span instead
     display_name: Genome size
     display_level: 1
     display_group: genome_size
@@ -229,6 +233,7 @@ attributes:
     constraint:
       min: 1000000
     description: Genome size estimate from kmers
+    long_description: Genome size estimate from kmers of initial sequencing using GenomeScope profile of raw sequencing reads
     display_level: 2
     display_name: Genome size kmer
     display_group: genome_size
@@ -248,6 +253,7 @@ attributes:
     constraint:
       min: 1000000
     description: Genome size estimate from draft assembly
+    long_description: Genome size estimate that corresponds to the length in base pairs of the draft assembly
     display_level: 2
     display_name: Genome size draft
     display_group: genome_size
