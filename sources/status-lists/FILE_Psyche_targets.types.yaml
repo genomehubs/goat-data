@@ -1,20 +1,20 @@
 file:
-  format: csv
+  format: tsv
   header: true
   comment: "#"
-  name: Lepiforum_Lepidoptera_Liste_Europa_Version_9.csv
+  name: Lepiforum_Lepidoptera_Liste_Europa_Version_9_expanded.tsv
   source: Declared Target List - Psyche
   source_description: Original Target List for Project Psyche from Jan 2023, static spreadsheet - "Lepiforum's Checklist of European Lepidoptera"
   source_contact: "Charlotte Wright, Wellcome Sanger Institute"
-  source_date: 2023-08-15
+  source_date: "2024-08-20"
   source_url: https://lepiforum.org/wiki/page/Downloads
 attributes:
   long_list:
-    default: PSYCHE
+    header: long_list
     type: keyword
 taxonomy:
   species:
-    header: ['Gattung','Art']
+    header: ['Gattung', 'Art']
     join: " "
   family:
     header: Familie

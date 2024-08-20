@@ -4,9 +4,9 @@ file:
   comment: "#"
   name: B10K_expanded_2022-04-19.tsv
   source: Declared Status List - B10K
-  source_date: 2021-10-26
-  source_description: B10K static spreadsheet - B10K Samples
-  #source_contact: 
+  source_date: "2024-08-20"
+  source_description: B10K static spreadsheet - B10K Samples 2021
+  source_url: https://b10k.genomics.cn/species.html
 attributes:
   long_list:
     header: long_list
@@ -28,10 +28,10 @@ attributes:
     header: sample_acquired
   in_progress:
     header: in_progress
-  # insdc_open:
-  #   header: insdc_submitted     
-  # published:
-  #   header: insdc_submitted     
+    # insdc_open:
+    #   header: insdc_submitted     
+    # published:
+    #   header: insdc_submitted     
 taxonomy:
   species:
     header: Species_name
