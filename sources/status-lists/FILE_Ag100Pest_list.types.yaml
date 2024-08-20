@@ -3,10 +3,11 @@ file:
   header: true
   comment: "#"
   name: AG100PEST_expanded.tsv
-  source: Declared Status List - Ag100Pest 
+  source: Declared Status List - Ag100Pest
   source_description: Ag100Pest Initiative, USDA, Agricultural Research Service, USA, - static spreadsheet
   source_contact: Anna Childers, Bee Research Laboratory, USDA, Agricultural Research Service, USA
-  source_date: 2022-06-08
+  source_date: "2024-08-20"
+  source_url: https://i5k.github.io/ag100pest
 attributes:
   long_list:
     header: long_list
@@ -28,15 +29,15 @@ attributes:
     header: insdc_open
   published:
     header: published
-  # publication_id:
-  #   header: publication_id
+    # publication_id:
+    #   header: publication_id
 taxonomy:
   taxon_id:
     header: ncbi_taxon_id
   species:
     header: species
   subspecies:
-    header: [ species , subspecies ]
+    header: [species, subspecies]
     join: " "
   family:
     header: family
