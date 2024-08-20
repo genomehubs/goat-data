@@ -99,8 +99,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch RefSeq organelles
         run: |
-          CMD="s3cmd get s3://goat/resources/assembly-data/refseq_organelles.tsv.gz \$(pwd)/ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data/refseq_organelles.types.yaml \$(pwd)/ 2>/dev/null || : && \
+          CMD="s3cmd get s3://goat/resources/assembly-data/refseq_organelles.tsv.gz \$(pwd)/ 2>/dev/null || \
+          s3cmd get s3://goat/sources/assembly-data/refseq_organelles.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+          s3cmd get s3://goat/resources/assembly-data/refseq_organelles.types.yaml \$(pwd)/ 2>/dev/null || \
+          s3cmd get s3://goat/sources/assembly-data/refseq_organelles.types.yaml \$(pwd)/ 2>/dev/null || : && \
           docker run --rm --network=host \
           -v $(pwd)/scripts/parse_refseq_organelles.py:/genomehubs/parse_refseq_organelles.py \
           -v \$(pwd):/genomehubs/tmp \
@@ -357,9 +359,13 @@ jobs:
 
       - name: Run genomehubs parse --ncbi-datasets-genome
         run: |
-          CMD="s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.types.yaml \$(pwd)/ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+          CMD="s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.types.yaml \$(pwd)/ 2>/dev/null || \
+          s3cmd get s3://goat/sources/assembly-data/ncbi_datasets_eukaryota.types.yaml \$(pwd)/ 2>/dev/null || : && \
+          s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ 2>/dev/null || \
+          s3cmd get s3://goat/sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+          s3cmd get s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || \
+          s3cmd get s3://goat/sources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+          mkdir -p ${{ inputs.resources }}/assembly-data-taxon \
           docker run --rm --network=host \
           -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
           -v \$(pwd):/genomehubs/tmp \
@@ -368,16 +374,19 @@ jobs:
             \"/genomehubs/parse_ncbi_datasets.py \
               -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
               -c /genomehubs/tmp/ncbi_datasets_eukaryota.types.yaml \
-              --features /genomehubs/tmp/ncbi_datasets_eukaryota_features.tsv.gz\"" \
+              --features /genomehubs/tmp/ncbi_datasets_eukaryota_features.tsv.gz\" \
+          cp ${{ inputs.resources }}/assembly-data/ncbi_datasets_eukaryota.tsv.gz ${{ inputs.resources }}/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz" \
           ./scripts/update-resources/fetch-or-fallback.sh
         env:
-          FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
+          FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-taxon/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
           RESOURCES: ${{ inputs.resources }}/assembly-data
 
       - name: Run genomehubs parse --ncbi-datasets-sample
         run: |
-          CMD="s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz \$(pwd)/ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.types.yaml \$(pwd)/ 2>/dev/null || : && \
+          CMD="s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz \$(pwd)/ 2>/dev/null || \
+          s3cmd get s3://goat/sources/assembly-data-sample/ncbi_datasets_sample.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+          s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.types.yaml \$(pwd)/ 2>/dev/null || \
+          s3cmd get s3://goat/sources/assembly-data-sample/ncbi_datasets_sample.types.yaml \$(pwd)/ 2>/dev/null || : && \
           docker run --rm --network=host \
           -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
           -v \$(pwd):/genomehubs/tmp \
