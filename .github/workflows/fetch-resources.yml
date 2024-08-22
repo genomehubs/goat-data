@@ -365,7 +365,7 @@ jobs:
           s3cmd get s3://goat/sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ 2>/dev/null || : && \
           s3cmd get s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || \
           s3cmd get s3://goat/sources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || : && \
-          mkdir -p ${{ inputs.resources }}/assembly-data-taxon \
+          mkdir -p ${{ inputs.resources }}/assembly-data-taxon && \
           docker run --rm --network=host \
           -v $(pwd)/scripts/parse_ncbi_datasets.py:/genomehubs/parse_ncbi_datasets.py \
           -v \$(pwd):/genomehubs/tmp \
