@@ -15,6 +15,7 @@ on:
 jobs:
   index-directories-1:
     runs-on: [self-hosted, runner1]
+    timeout-minutes: 600
     steps:
       - name: checkout first
         uses: actions/checkout@v4
@@ -110,6 +111,7 @@ jobs:
 
   index-directories-2:
     runs-on: [self-hosted, runner1]
+    timeout-minutes: 600
     needs:
       - index-directories-1
     steps:
