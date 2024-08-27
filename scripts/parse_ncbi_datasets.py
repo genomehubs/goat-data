@@ -626,7 +626,6 @@ def main():
                     and accession in previous_features
                     and accession not in parsed
                 ):
-                    print(previous_features[accession])
                     append_features(
                         previous_features[accession], feature_headers, feature_file
                     )
