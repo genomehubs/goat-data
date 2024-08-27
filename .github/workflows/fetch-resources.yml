@@ -373,13 +373,14 @@ jobs:
             \"/genomehubs/parse_ncbi_datasets.py \
               -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
               -c /genomehubs/tmp/ncbi_datasets_eukaryota.types.yaml \
-              --features /genomehubs/tmp/ncbi_datasets_eukaryota_features.tsv.gz\" \
-          cp \$(pwd)/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ncbi_datasets_eukaryota_taxon.tsv.gz" \
+              --features /genomehubs/tmp/ncbi_datasets_eukaryota_features.tsv.gz\"" \
           ./scripts/update-resources/fetch-or-fallback.sh
         env:
-          FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-taxon/ncbi_datasets_eukaryota_taxon.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
+          FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
           RESOURCES: ${{ inputs.resources }}/assembly-data
-
+      - name: copy ncbi_datasets_eukaryota.tsv.gz to ncbi_datasets_eukaryota_taxon.tsv.gz
+        run: |
+          s3cmd cp s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz s3://goat/resources/assembly-data-taxon/ncbi_datasets_eukaryota_taxon.tsv.gz 2>/dev/null || :
       - name: Run genomehubs parse --ncbi-datasets-sample
         run: |
           CMD="s3cmd get s3://goat/resources/assembly-data-sample/ncbi_datasets_sample.tsv.gz \$(pwd)/ 2>/dev/null || \
