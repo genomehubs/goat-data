@@ -374,7 +374,7 @@ jobs:
               -f /genomehubs/assembly-data/ncbi_dataset/data/assembly_data_report.jsonl \
               -c /genomehubs/tmp/ncbi_datasets_eukaryota.types.yaml \
               --features /genomehubs/tmp/ncbi_datasets_eukaryota_features.tsv.gz\" \
-          cp \$(pwd)/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ncbi_datasets_eukaryota_taxon.tsv.gz && \
+          cp \$(pwd)/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ncbi_datasets_eukaryota_taxon.tsv.gz" \
           ./scripts/update-resources/fetch-or-fallback.sh
         env:
           FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-taxon/ncbi_datasets_eukaryota_taxon.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
