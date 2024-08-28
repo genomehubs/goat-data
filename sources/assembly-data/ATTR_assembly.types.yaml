@@ -12,19 +12,19 @@ identifiers:
     type: keyword
   genbank_accession:
     description: GenBank accession
-    long_description: A GenBank accession is a unique identifier that is assigned to each sequence record submitted to GenBank database. The current format for GenBank assembly accessionis is [two-letter alphabetical prefix][six digits][. ][version number], while older records use the format [one-letter alphabetical prefix][five digits][. ][version number]. Genome assemblies in GenBank have accessions prefixed with the GCA_ , while those in RefSeq have accessions prefixed with GCF_
+    long_description: A GenBank accession is a unique identifier that is assigned to each sequence record submitted to GenBank database. Genome assemblies in GenBank have accessions prefixed with the GCA_ , while those in RefSeq have accessions prefixed with GCF_
     constraint:
       len: 32
     type: keyword
   refseq_accession:
-    description: The accession and version for the RefSeq version of the assembly
-    long_description: A RefSeq accession is a unique identifier for a sequence record in the NCBI Reference Sequence Database. The RefSeq ID can be used to retrieve lists of species or assemblies with reference or representative genome categories. RefSeq accessions usually have a GCF_ prefix and has the format (“accession.version”)
+    description: RefSeq accession
+    long_description: A RefSeq accession is a unique identifier for a sequence record in the NCBI Reference Sequence Database. The RefSeq ID can be used to retrieve lists of species or assemblies with reference or representative genome categories
     constraint:
       len: 32
     type: keyword
   wgs_accession:
     description: Whole Genome Shotgun (WGS) accession
-    long_description: Identifier for Whole Genome Shotgun (WGS) projects in GenBank database. WGS projects are genome assemblies of incomplete genomes or incomplete chromosomes sequenced by a whole genome shotgun strategy. WGS accessions can be assigned to assembly submissions with or without annotation, including unannotated contigs and scaffolds, annotated contigs with unannotated scaffolds, or unannotated contigs with annotated scaffolds
+    long_description: Identifier for Whole Genome Shotgun (WGS) projects in GenBank database. WGS projects are genome assemblies of incomplete genomes or incomplete chromosomes sequenced by a whole genome shotgun strategy
     constraint:
       len: 16
     type: keyword
@@ -51,7 +51,7 @@ attributes:
     constraint:
       len: 32
     description: INSDC bioproject ID or assembly collection name
-    long_description: Bioproject ID is a unique identifier for a collection of biological data for a single initiative, originating from a single organization or from a consortium
+    long_description: Bioproject ID is a unique identifier for a collection of biological data for a single initiative, originating from a single organization or from a consortium. . A Bioproject ID can be used as a proxy to retrieve all assemblies associated with a given EBP sequencing project
     synonyms:
       - bioproject_accession
     type: keyword
@@ -71,6 +71,8 @@ attributes:
         description: "AtlaSea (click to view on ENA)"
       prjna489245:
         description: "Bat 1K (click to view on ENA)"
+      PRJNA1075696:
+        description: "Bioplatforms Australia (click to view on ENA)"
       prjna545868:
         description: "Bird 10K (click to view on ENA)"
       prjna813333:
@@ -121,7 +123,7 @@ attributes:
         description: "Yggdrasil (click to view on ENA)"
   biosample:
     description: BioSample Identifier
-    long_description: A unique identifier assigned to each entry in the NCBI BioSample database. A BioSample contains descriptions of biological source materials used in experimental assays, such as nucleotide sequencing
+    long_description: A unique identifier assigned to each entry in the NCBI BioSample database
     constraint:
       len: 32
     synonyms:
@@ -147,7 +149,7 @@ attributes:
       scale: log10
   protein_count:
     description: Protein count
-    long_description: Number of proteins in an assembly derived from annotation
+    long_description: Number of proteins in an annotated assembly
     display_group: annotation
     display_level: 2
     display_name: Protein count
@@ -156,7 +158,7 @@ attributes:
     type: integer
   pseudogene_count:
     description: Pseudogene count
-    long_description: Number of pseudogenes in an assembly derived from annotation
+    long_description: Number of pseudogenes in an annotated assembly
     display_group: annotation
     display_level: 2
     display_name: Pseudogene count
@@ -165,7 +167,7 @@ attributes:
     type: integer
   noncoding_gene_count:
     description: Non-coding gene count
-    long_description: Number of noncoding genes in an organism's genome assembly
+    long_description: Number of noncoding genes in a genome assembly
     display_group: annotation
     display_level: 2
     display_name: Non-coding gene count
@@ -178,13 +180,14 @@ attributes:
     display_name: Sample sex
     type: keyword
   isolate:
-    description: Isolate
+    description: Sample Isolate ID
+    long_description: ID of sample or strain isolated from culture of microorganism colonies. The isolate is a culture of microorganisms isolated for sequencing
     display_level: 2
     display_name: Isolate
     type: keyword
   assembly_level:
     description: Highest level of an assembly submission
-    long_description: The highest assembly level for any object in the assembly. The assembly level is a proxy for existence of an assembly of the whole nuclear genome of a taxon. For a taxon, having a value for the assembly_level attribute can be considered the same as having a genome assembly
+    long_description: The highest assembly level for any object in the assembly. Ordered from lowest to highest, the assembly level can be "contig", "scaffold", and "chromosome" or "complete genome" . The assembly level is a proxy for the existence of an assembly of the whole nuclear genome of a taxon. For a taxon, having a value for the assembly_level attribute can be considered the same as having a genome assembly
     primary_attribute: True
     display_level: 1
     display_name: Assembly level
@@ -231,7 +234,7 @@ attributes:
         description: "Diploid assembly including all haplotypes"
         long_description: "A genome assembly from a diploid in which many haplotypic sequences have been resolved, but the two haplotypes have not been separated"
   assembly_span:
-    description: Total sequence length of assembly
+    description: Total assembly length
     long_description: Numeric value corresponding to the total sequence length of assembly in base pairs. The asembly span or length is a proxy for genome size and can be used to help estimate the expected assembly span of related taxa
     display_group: metrics
     display_level: 1
@@ -246,7 +249,7 @@ attributes:
       count: 10
       scale: log10
   ungapped_span:
-    description: Sequence length of assembly, excluding gaps
+    description: Assembly length, excluding gaps
     long_description: Sequence length of ungapped assembly, does not include gaps
     display_group: metrics
     display_level: 2
@@ -257,7 +260,7 @@ attributes:
     units: bases
   contig_n50:
     description: Contig N50 statistic
-    long_description: Contig N50 is a value for assessment of assembly contiguity. Given a set of contigs, the N50 is defined as the sequence length of the shortest contig at 50% of the total assembly length
+    long_description: Contig N50 is a value for assessment of assembly contiguity. Given an ordered set of contigs, the N50 is defined as the sequence length of the shortest contig at 50% of the total assembly length
     display_group: metrics
     display_level: 1
     display_name: Contig N50
@@ -282,7 +285,7 @@ attributes:
     units: bases
   scaffold_n50:
     description: Scaffold N50 statistic
-    long_description: Scaffold N50 is a value for assessment of assembly contiguity. Given a set of scaffolds, the N50 is defined as the sequence length of the shortest scaffold at 50% of the total assembly length
+    long_description: Scaffold N50 is a value for assessment of assembly contiguity. Given an ordered set of scaffolds, the N50 is defined as the sequence length of the shortest scaffold at 50% of the total assembly length
     display_group: metrics
     display_level: 1
     display_name: Scaffold N50
@@ -297,7 +300,7 @@ attributes:
       scale: log10
   scaffold_l50:
     description: Scaffold L50 statistic
-    long_description: Scaffold L50 is a value for assessment of assembly contiguity. Given a set of scaffolds, each with its own length, the L50 is defined as count of smallest number of scaffolds whose length sum makes up half of genome size
+    long_description: "Scaffold L50 is a value for assessment of assembly contiguity. Given an ordered set of scaffolds, each with its own length, the L50 is defined as count of smallest number of scaffolds whose length sum makes up half of genome size"
     
     display_group: metrics
     display_level: 2
@@ -308,7 +311,7 @@ attributes:
     units: bases
   contig_count:
     description: Contig count
-    long_description: Total number of contigs in an assembly submission
+    long_description: Total number of contigs in an assembly
     display_group: metrics
     display_level: 1
     display_name: Contig count
@@ -318,7 +321,7 @@ attributes:
     units: bases
   scaffold_count:
     description: Scaffold count
-    long_description: Total number of scaffolds in an assembly submission
+    long_description: Total number of scaffolds in an assembly
     display_group: metrics
     display_level: 1
     display_name: Scaffold count
@@ -328,7 +331,7 @@ attributes:
     units: bases
   chromosome_count:
     description: Chromosome count
-    long_description: Total number of chromosome types identified in an assembly submission. The chromosome count is equal as the haploid chromosome number of a taxon when the sequenced individual belongs to the homogametic sex. When the sex of the sequenced sample corresponds to the heterogametic sex of a taxon, then the chromosome count ican be lower, higher or equal the haploid number, depending on the karyotype of the individual 
+    long_description: Total number of chromosome identified in an assembly. The chromosome count is equal to the haploid chromosome number of a taxon when the sequenced individual belongs to the homogametic sex. When the sex of the sequenced sample corresponds to the heterogametic sex of a taxon, then the chromosome count can be higher or equal the haploid number, depending on the karyotype of the individual 
     display_group: metrics
     display_level: 1
     display_name: Chromosome count
@@ -338,7 +341,7 @@ attributes:
     units: bases
   sequence_count:
     description: Sequence count
-    long_description: Total number of sequences composing an assembly
+    long_description: Total number of sequences comprising an assembly
     display_group: metrics
     display_level: 2
     display_name: Sequence count
@@ -382,19 +385,21 @@ attributes:
       "5.6": 
         description: "chromosome-level assemblies with contig N50 >= 100K and scaffold N50 >= 1Mb"
   refseq_category:
-    description: NCBI RefSeq genome classification of a reference or representative genome
+    description: NCBI RefSeq genome classification
     long_description: RefSeq genome classification of a reference or representative genome in the NCBI  RefSeq database
     display_level: 2
     display_name: RefSeq category
     type: keyword
     value_metadata:
       Reference genome:
-        description: A manually selected high-quality genome assembly that NCBI and the community have identified as important as a standard against which other data are compared
+        description: Reference genome assembly
+        long_description: A manually selected high-quality genome assembly that NCBI and the community have identified as important as a standard against which other data are compared
       Representative genome:
-        description: A genome computationally or manually selected as a representative from among the best genomes available for a species or clade that does not have a designated reference genome
+        description: Representative genome assembly
+        long_description: A genome computationally or manually selected as a representative from among the best genomes available for a species or clade that does not have a designated reference genome
   submitter:
     description: Submitter information
-    long_description: person or organization responsible for submitting the sequencing data to a nucleotide database. Typically, this will be the submitter's organizational affiliation
+    long_description: Person or organization responsible for submitting the sequencing data to a nucleotide database. Typically, this will be the submitter's organizational affiliation
     display_level: 2
     display_name: Submitter
     type: keyword
@@ -410,7 +415,7 @@ attributes:
     units: "%"
   n_percent:
     description: N percentage
-    long_description: "Percentage of the placeholder for unknown or uncertain nucleotide (N) in a specific position of a sequence or assembly"
+    long_description: "Percentage of unknown or uncertain nucleotides (denoted N) in an assembly"
     display_group: metrics
     display_level: 2
     constraint:
@@ -477,7 +482,8 @@ attributes:
     display_group: linked assemblies
     type: keyword
   assigned_percent:
-    description: percentage of scaffolded assembly span assigned to chromosomal units
+    description: Percent assigned to chromosomes
+    long_description: Percentage of scaffolded assembly span assigned to chromosomal units
     display_group: metrics
     display_level: 2
     constraint:
@@ -496,6 +502,8 @@ attributes:
     type: keyword
     value_metadata:
       primary:
-        description: "The primary assemblies represents the collection of assembled chromosomes, unlocalized and unplaced sequences that, when combined, should represent a non-redundant haploid genome. This excludes any of the alternate locus groups"
+        description: Primary genome assembly
+        long_description: "The primary assemblies represents the collection of assembled chromosomes, unlocalized and unplaced sequences that, when combined, should represent a non-redundant haploid genome. This excludes any of the alternate locus groups"
       alternate:
-        description: "A variation of a whole genome assembly harboring the alternate loci present in the haploid assembly, also known as the primary assembly. It serves as an alternative representation of the genome found at specific locations in the genome"
+        description: Alternate genome assembly
+        long_description: "A variation of a whole genome assembly harboring the alternate loci present in the haploid assembly, also known as the primary assembly. It serves as an alternative representation of the genome found at specific locations in the genome"
