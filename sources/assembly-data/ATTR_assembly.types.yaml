@@ -5,22 +5,32 @@ defaults:
     source: INSDC
 identifiers:
   assembly_id:
+    description: Assembly Identifier
+    long_description: The assembly identifier, or assembly ID, is a unique identifier assigned to each genome assembly record in a nucleotide database. The assembly ID is formed by a combination of letters and digits that unambiguously distinguish between different versions of an assembly. The structure of an assembly ID varies according to source repository and organelle used to produce an assembly
     constraint:
       len: 32
     type: keyword
   genbank_accession:
+    description: GenBank accession
+    long_description: A GenBank accession is a unique identifier that is assigned to each sequence record submitted to GenBank database. Genome assemblies in GenBank have accessions prefixed with the GCA_ , while those in RefSeq have accessions prefixed with GCF_
     constraint:
       len: 32
     type: keyword
   refseq_accession:
+    description: RefSeq accession
+    long_description: A RefSeq accession is a unique identifier for a sequence record in the NCBI Reference Sequence Database. The RefSeq ID can be used to retrieve lists of species or assemblies with reference or representative genome categories
     constraint:
       len: 32
     type: keyword
   wgs_accession:
+    description: Whole Genome Shotgun (WGS) accession
+    long_description: Identifier for Whole Genome Shotgun (WGS) projects in GenBank database. WGS projects are genome assemblies of incomplete genomes or incomplete chromosomes sequenced by a whole genome shotgun strategy
     constraint:
       len: 16
     type: keyword
   assembly_name:
+    description: Assembly name
+    long_description: A text string specifying the submitter's name for the assembly or a default name is provided by genome assembly repositories
     constraint:
       len: 64
     type: keyword
@@ -35,11 +45,13 @@ attributes:
         - apicoplast
         - kinetoplast
     description: assembled organelle
+    long_description: The organelle from which a genome assembly was generated. Used to delimit queries to nucleus or nuclear genome, mitochondrion, chloroplast, plastid, apicoplast and kinetoplast sequences
     type: keyword
   bioproject:
     constraint:
       len: 32
     description: INSDC bioproject ID or assembly collection name
+    long_description: Bioproject ID is a unique identifier for a collection of biological data for a single initiative, originating from a single organization or from a consortium. . A Bioproject ID can be used as a proxy to retrieve all assemblies associated with a given EBP sequencing project
     synonyms:
       - bioproject_accession
     type: keyword
@@ -55,8 +67,12 @@ attributes:
         description: "Ag100Pest (click to view on ENA)"
       prjeb43743:
         description: "Aquatic Symbiosis Genomics Project (click to view on ENA)"
+      prjeb64126:
+        description: "AtlaSea (click to view on ENA)"
       prjna489245:
         description: "Bat 1K (click to view on ENA)"
+      PRJNA1075696:
+        description: "Bioplatforms Australia (click to view on ENA)"
       prjna545868:
         description: "Bird 10K (click to view on ENA)"
       prjna813333:
@@ -65,12 +81,18 @@ attributes:
         description: "Catalan Biogenome Project (click to view on ENA)"
       prjna720569:
         description: "California Conservation Genomics Project (click to view on ENA)"
+      prjna1020146:
+        description: "Cetacean Genomes Project (click to view on ENA)"
       prjeb40665:
         description: "Darwin Tree of Life (click to view on ENA)"
+      PRJEB65317:
+        description: "Earth Biogenome Project Norway (click to view on ENA)"
       prjna712951:
         description: "ENDEMIXIT (click to view on ENA)"
       prjeb61747:
         description: "ERGA Biodiversity Genomics Europe (click to view on ENA)"
+      PRJEB49197:
+        description: "ERGA-CH, The Swiss node of ERGA (click to view on ENA)"
       prjeb47820:
         description: "ERGA Pilot (click to view on ENA)"
       prjeb43510:
@@ -89,11 +111,19 @@ attributes:
         description: "LOEWE Centre for Translational Biodiversity Genomics (click to view on ENA)"
       prjna758215:
         description: "MetaInvert (click to view on ENA)"
+      PRJNA1046164:
+        description: "Ocean Genomes (click to view on ENA)"
+      PRJEB71705:
+        description: "Project Psyche (click to view on ENA)"
       prjna707598:
         description: "Squalomix (click to view on ENA)"
       prjna489243:
         description: "Vertebrate Genomes Project (click to view on ENA)"
+      PRJNA955268:
+        description: "Yggdrasil (click to view on ENA)"
   biosample:
+    description: BioSample Identifier
+    long_description: A unique identifier assigned to each entry in the NCBI BioSample database
     constraint:
       len: 32
     synonyms:
@@ -104,6 +134,8 @@ attributes:
         description: Click to view BioSample record on ENA
         link: https://www.ebi.ac.uk/ena/browser/view/{}
   gene_count:
+    description: Gene count
+    long_description: Number of genes in an assembly
     display_group: annotation
     display_level: 1
     display_name: Gene count
@@ -116,6 +148,8 @@ attributes:
       count: 10
       scale: log10
   protein_count:
+    description: Protein count
+    long_description: Number of proteins in an annotated assembly
     display_group: annotation
     display_level: 2
     display_name: Protein count
@@ -123,6 +157,8 @@ attributes:
       min: 1
     type: integer
   pseudogene_count:
+    description: Pseudogene count
+    long_description: Number of pseudogenes in an annotated assembly
     display_group: annotation
     display_level: 2
     display_name: Pseudogene count
@@ -130,6 +166,8 @@ attributes:
       min: 1
     type: integer
   noncoding_gene_count:
+    description: Non-coding gene count
+    long_description: Number of noncoding genes in a genome assembly
     display_group: annotation
     display_level: 2
     display_name: Non-coding gene count
@@ -137,14 +175,20 @@ attributes:
       min: 1
     type: integer
   sample_sex:
+    description: Sample sex
     display_level: 2
     display_name: Sample sex
     type: keyword
   isolate:
+    description: Sample Isolate ID
+    long_description: ID of sample or strain isolated from culture of microorganism colonies. The isolate is a culture of microorganisms isolated for sequencing
     display_level: 2
     display_name: Isolate
     type: keyword
   assembly_level:
+    description: Highest level of an assembly submission
+    long_description: The highest assembly level for any object in the assembly. Ordered from lowest to highest, the assembly level can be "contig", "scaffold", and "chromosome" or "complete genome" . The assembly level is a proxy for the existence of an assembly of the whole nuclear genome of a taxon. For a taxon, having a value for the assembly_level attribute can be considered the same as having a genome assembly
+    primary_attribute: True
     display_level: 1
     display_name: Assembly level
     type: keyword
@@ -154,11 +198,44 @@ attributes:
         - chromosome
         - scaffold
         - contig
+    value_metadata:
+      complete genome:
+        description: "Gapless chromosomes and no unplaced sequences"
+        long_description: "All chromosomes are gapless and contain runs of nine or less ambiguous bases (Ns), there are no unplaced or unlocalized scaffolds, and all the expected chromosomes are present"
+      chromosome:
+        description: "There is sequence for one or more chromosomes"
+        long_description: "There is sequence for one or more chromosomes. This may be a completely sequenced chromosome without gaps or a chromosome containing spans with gaps between them. There may also be unplaced or unlocalized sequences"
+      scaffold:
+        description: "Unplaced scaffolds or unlocalised sequences"
+        long_description: "One or more contigs are connected across gaps of 10 or more bases to create scaffolds. All sequences are unplaced or unlocalized"
+      contig:
+        description: "Unplaced or unlocalised contigs"
+        long_description: "All sequences do not contain gaps. All sequences are unplaced or unlocalized. Includes ultra-contig assemblies based on long read sequencing with no gaps"
   assembly_type:
+    description: Assembly type
+    long_description: "Assembly type according to its representation of all chromosome sets of an individual. The default value is haploid"
     display_level: 2
     display_name: Assembly type
     type: keyword
+    value_metadata:
+      haploid:
+        description: "Haploid representation of an organism's genome"
+        long_description: "The collection of chromosome assemblies, unlocalized and unplaced sequences representing an organism's genome. Any locus may be represented zero or one time, and entire chromosomes are only represented zero or one time"
+      alternate-pseudohaplotype:
+        description: "Collection of alternate loci sequences linked to a haploid assembly"
+        long_description: "The assembled collection of alternate loci sequences representing the pseudohaplotype genome linked to a haploid assembly"
+      diploid:
+        description: "Diploid representation of an organism's genome"
+        long_description: "Genome assembly for which a chromosome assembly is available for both sets of an individual's chromosomes."
+      haploid-with-alt-loci:
+        description: "Collection of haploid assembly, alternate loci, and unlocalized and unplaced sequences"
+        long_description: "The collection of chromosome assemblies, unlocalized and unplaced sequences, and alternate loci representing an organism's genome. Any locus may be represented zero, one, or greater than one time, but entire chromosomes are only represented zero or one time"
+      unresolved-diploid:
+        description: "Diploid assembly including all haplotypes"
+        long_description: "A genome assembly from a diploid in which many haplotypic sequences have been resolved, but the two haplotypes have not been separated"
   assembly_span:
+    description: Total assembly length
+    long_description: Numeric value corresponding to the total sequence length of assembly in base pairs. The asembly span or length is a proxy for genome size and can be used to help estimate the expected assembly span of related taxa
     display_group: metrics
     display_level: 1
     display_name: Assembly span
@@ -172,6 +249,8 @@ attributes:
       count: 10
       scale: log10
   ungapped_span:
+    description: Assembly length, excluding gaps
+    long_description: Sequence length of ungapped assembly, does not include gaps
     display_group: metrics
     display_level: 2
     display_name: Ungapped span
@@ -180,6 +259,8 @@ attributes:
     type: long
     units: bases
   contig_n50:
+    description: Contig N50 statistic
+    long_description: Contig N50 is a value for assessment of assembly contiguity. Given an ordered set of contigs, the N50 is defined as the sequence length of the shortest contig at 50% of the total assembly length
     display_group: metrics
     display_level: 1
     display_name: Contig N50
@@ -193,6 +274,8 @@ attributes:
       count: 10
       scale: log10
   contig_l50:
+    description: Contig L50 statistic
+    long_description: Contig L50 is a value for assessment of assembly contiguity. Given a set of contigs, each with its own length, the L50 is defined as count of smallest number of contigs whose length sum makes up half of genome size
     display_group: metrics
     display_level: 2
     display_name: Contig L50
@@ -201,6 +284,8 @@ attributes:
     type: long
     units: bases
   scaffold_n50:
+    description: Scaffold N50 statistic
+    long_description: Scaffold N50 is a value for assessment of assembly contiguity. Given an ordered set of scaffolds, the N50 is defined as the sequence length of the shortest scaffold at 50% of the total assembly length
     display_group: metrics
     display_level: 1
     display_name: Scaffold N50
@@ -214,6 +299,9 @@ attributes:
       count: 10
       scale: log10
   scaffold_l50:
+    description: Scaffold L50 statistic
+    long_description: "Scaffold L50 is a value for assessment of assembly contiguity. Given an ordered set of scaffolds, each with its own length, the L50 is defined as count of smallest number of scaffolds whose length sum makes up half of genome size"
+    
     display_group: metrics
     display_level: 2
     display_name: Scaffold L50
@@ -222,6 +310,8 @@ attributes:
     type: long
     units: bases
   contig_count:
+    description: Contig count
+    long_description: Total number of contigs in an assembly
     display_group: metrics
     display_level: 1
     display_name: Contig count
@@ -230,6 +320,8 @@ attributes:
     type: long
     units: bases
   scaffold_count:
+    description: Scaffold count
+    long_description: Total number of scaffolds in an assembly
     display_group: metrics
     display_level: 1
     display_name: Scaffold count
@@ -238,6 +330,8 @@ attributes:
     type: long
     units: bases
   chromosome_count:
+    description: Chromosome count
+    long_description: Total number of chromosome identified in an assembly. The chromosome count is equal to the haploid chromosome number of a taxon when the sequenced individual belongs to the homogametic sex. When the sex of the sequenced sample corresponds to the heterogametic sex of a taxon, then the chromosome count can be higher or equal the haploid number, depending on the karyotype of the individual 
     display_group: metrics
     display_level: 1
     display_name: Chromosome count
@@ -246,6 +340,8 @@ attributes:
     type: long
     units: bases
   sequence_count:
+    description: Sequence count
+    long_description: Total number of sequences comprising an assembly
     display_group: metrics
     display_level: 2
     display_name: Sequence count
@@ -254,16 +350,22 @@ attributes:
     type: long
     units: bases
   last_updated:
+    description: Date of last assembly update
+    long_description: Most recent date when a genome assembly has been updated. Used to retrieve the latest date the assembly accession was incremented to its current version 
     display_level: 2
     display_name: Last updated
     type: date
   ebp_standard_date:
+    description: Earliest date an assembly met EBP metrics standards
+    long_description: Earliest date an assembly met EBP metrics standards or EBP standards criteria
     display_level: 2
     display_name: EBP metric date
     synonyms:
       - ebp_metric_date
     type: date
   ebp_standard_criteria:
+    description: Assembly standards defined by the Earth Biogenome Project (EBP)
+    long_description: A set of categories for reference genome assemblies, defined by the Earth Biogenome Project (EBP) as guidelines of quality for an assembly submission
     constraint:
       enum:
         - 6.C
@@ -273,15 +375,37 @@ attributes:
     display_level: 2
     display_name: EBP standard criteria
     type: keyword
+    value_metadata::
+      6.C: 
+        description: "chromosome-level assemblies with contig N50 >= 1Mb"
+      "6.7": 
+        description: "Assemblies with contig N50 >= 1Mb and scaffold N50 >= 10Mb"
+      5.C: 
+        description: "chromosome-level assemblies with contig N50 >= 100Kb"
+      "5.6": 
+        description: "chromosome-level assemblies with contig N50 >= 100K and scaffold N50 >= 1Mb"
   refseq_category:
+    description: NCBI RefSeq genome classification
+    long_description: RefSeq genome classification of a reference or representative genome in the NCBI  RefSeq database
     display_level: 2
     display_name: RefSeq category
     type: keyword
+    value_metadata:
+      Reference genome:
+        description: Reference genome assembly
+        long_description: A manually selected high-quality genome assembly that NCBI and the community have identified as important as a standard against which other data are compared
+      Representative genome:
+        description: Representative genome assembly
+        long_description: A genome computationally or manually selected as a representative from among the best genomes available for a species or clade that does not have a designated reference genome
   submitter:
+    description: Submitter information
+    long_description: Person or organization responsible for submitting the sequencing data to a nucleotide database. Typically, this will be the submitter's organizational affiliation
     display_level: 2
     display_name: Submitter
     type: keyword
   gc_percent:
+    description: GC percentage of genome assembly
+    long_description: Percentage of GC base pairs within assembly sequences
     display_group: metrics
     display_level: 1
     constraint:
@@ -290,6 +414,8 @@ attributes:
     type: 2dp
     units: "%"
   n_percent:
+    description: N percentage
+    long_description: "Percentage of unknown or uncertain nucleotides (denoted N) in an assembly"
     display_group: metrics
     display_level: 2
     constraint:
@@ -301,7 +427,8 @@ attributes:
     constraint:
       min: 1
       type: 4dp
-    description: VGP Quality Value score computed with gfastats
+    description: Quality Value score
+    long_description: VGP Quality Value score computed with gfastats
     display_group: metrics
     display_level: 2
     display_name: Quality Value score
@@ -309,9 +436,13 @@ attributes:
     display_group: linked assemblies
     type: keyword
   mitochondrion_assembly_span:
+    description: Total sequence length of mitochondrion assembly
+    long_description: Numeric value corresponding to the total sequence length of a mitochondrion assembly in base pairs
     display_group: linked assemblies
     type: keyword
   mitochondrion_gc_percent:
+    description: GC percentage of mitochrondrion assembly
+    long_description: Percentage of GC base pairs within the mitochrondrion assembly sequences
     display_group: linked assemblies
     constraint:
       min: 0
@@ -319,15 +450,22 @@ attributes:
     type: 2dp
     units: "%"
   mitochondrion_accession:
+    primary_attribute: True
+    description: Mitochondrion accession identifier
+    long_description: "Mitochondrion accession is a unique identifier of a mitochondrial genome assembly. It can be used as a proxy for the existence of an organelle assembly of the type mitochondrion. For a taxon, having a value for the mitochondrion_accession attribute can be considered the same as having a mitochondrial genome assembly"
     display_group: linked assemblies
     type: keyword
   mitochondrion_scaffolds:
     display_group: linked assemblies
     type: keyword
   plastid_assembly_span:
+    description: Total sequence length of plastid assembly
+    long_description: Numeric value corresponding to the total sequence length of a plastid assembly in base pairs
     display_group: linked assemblies
     type: keyword
   plastid_gc_percent:
+    description: GC percentage of plastid assembly
+    long_description: Percentage of GC base pairs within the plastid assembly sequences
     display_group: linked assemblies
     constraint:
       min: 0
@@ -335,13 +473,17 @@ attributes:
     type: 2dp
     units: "%"
   plastid_accession:
+    primary_attribute: True
+    description: Plastid assembly accession identifier
+    long_description: "Plastid accession is a unique identifier of a plastid genome assembly. It can be used as a proxy for the existence of an organelle genome or assembly of the type plastid. For a taxon, having a value for the plastid attribute can be considered the same as having a plastid genome assembly"
     display_group: linked assemblies
     type: keyword
   plastid_scaffolds:
     display_group: linked assemblies
     type: keyword
   assigned_percent:
-    description: percentage of scaffolded assembly span assigned to chromosomal units
+    description: Percent assigned to chromosomes
+    long_description: Percentage of scaffolded assembly span assigned to chromosomal units
     display_group: metrics
     display_level: 2
     constraint:
@@ -355,6 +497,13 @@ attributes:
       enum:
         - primary
         - alternate
-    description: primary or alternate assembly for a taxon
+    description: primary or alternate genome assembly
     display_group: general
     type: keyword
+    value_metadata:
+      primary:
+        description: Primary genome assembly
+        long_description: "The primary assemblies represents the collection of assembled chromosomes, unlocalized and unplaced sequences that, when combined, should represent a non-redundant haploid genome. This excludes any of the alternate locus groups"
+      alternate:
+        description: Alternate genome assembly
+        long_description: "A variation of a whole genome assembly harboring the alternate loci present in the haploid assembly, also known as the primary assembly. It serves as an alternative representation of the genome found at specific locations in the genome"
