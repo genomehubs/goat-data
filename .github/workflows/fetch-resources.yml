@@ -200,10 +200,16 @@ jobs:
         run: |
           FALLBACK=$(ls ${{ inputs.resources }}/assembly-data/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/assembly-data\//g;s/\.failed$//g'|paste -sd, -) \
           ./scripts/update-resources/fetch-or-fallback.sh
-          mkdir -p ${{ inputs.resources }}/assembly-data-taxon
-          cp ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
         env:
           CMD: mv ${{ inputs.resources }}/assembly-data/tmp/* ./
+          RESOURCES: ${{ inputs.resources }}/assembly-data
+      - name: Move cngb taxon files or fallback to previous
+        run: |
+          mkdir -p ${{ inputs.resources }}/assembly-data-taxon
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: mv ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
+          FALLBACK: s3://goat/resources/assembly-data-taxon/cngb.tsv
           RESOURCES: ${{ inputs.resources }}/assembly-data
       - name: Move genomesize/karyotype files or fallback to previous
         run: |
