@@ -13,13 +13,26 @@ def open_private_tsv(private_link_token):
 
 
 def open_google_spreadsheet(acronym, file_link, header_index):
-    project_table = pd.read_csv(
-        file_link,
-        # Set first column as rownames in data frame
-        delimiter="\t",
-        header=header_index,
-        dtype=object,
-    )
+    encodings = ['utf-8', 'ISO-8859-1', 'latin1']  # List of encodings to try
+    project_table = None
+    
+    for encoding in encodings:
+        try:
+            project_table = pd.read_csv(
+                file_link,
+                delimiter="\t",
+                header=header_index,
+                dtype=object,
+                encoding=encoding
+            )
+            print(f"File opened successfully with {encoding} encoding.")
+            break  # Exit the loop if reading is successful
+        except UnicodeDecodeError:
+            print(f"Failed to open file with {encoding} encoding. Trying next...")
+
+    if project_table is None:
+        raise ValueError("Failed to open the file with the provided encodings.")
+
     project_table.rename(columns={"#NCBI_taxon_id": "NCBI_taxon_id"}, inplace=True)
     project_table["project"] = acronym.upper()
     return project_table
