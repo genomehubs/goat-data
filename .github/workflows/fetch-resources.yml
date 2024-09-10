@@ -201,7 +201,7 @@ jobs:
           mkdir -p ${{ inputs.resources }}/assembly-data-taxon
           ./scripts/update-resources/fetch-or-fallback.sh
         env:
-          CMD: mv ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
+          CMD: cp ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
           FALLBACK: s3://goat/resources/assembly-data-taxon/cngb.tsv
           RESOURCES: ${{ inputs.resources }}/assembly-data-taxon
       - name: Move assembly data files or fallback to previous
