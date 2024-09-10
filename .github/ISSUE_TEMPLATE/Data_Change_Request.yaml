@@ -1,6 +1,6 @@
-name: GoaT Data Change
-description: This request type should be used when new or more appropriate sources are found to describe species metadata than what is currently displayed.
-title: Data Change [TITLE]
+name: GoaT Data Change Request
+description: Request new values and/or more accurate sources for GoaT data. Values will be displayed as primary (summary) on GoaT queries.
+title: Data Change Request [TITLE]
 labels: [data-change-request]
 body:
   - type: markdown
@@ -10,8 +10,8 @@ body:
   - type: checkboxes
     id: category
     attributes:
-      label: What is your request type?
-      description: Use this field to inform if you would like to add missing data values, correct existing values on GoaT or set an existing value as the sumarry value for a taxon.
+      label: What type of data change are you requesting?
+      description: Use this field to inform if you would like to add missing values, correct existing values on GoaT or set an existing value as the primary value for a taxon.
       options:
         - label: new_data_value
         - label: data_correction
@@ -19,9 +19,9 @@ body:
   - type: textarea
     id: attribute
     attributes:
-      label: Attribute label
-      description: Please add the label in lowercase for the attribute you are submitting the request, unless it is a proper name.
-      placeholder: e.g., chromosome_number
+      label: attribute label
+      description: Please add the label for the attribute(s) you are submitting the data change request, comma-separated.
+      placeholder: e.g., chromosome_number, ploidy, genome_size_method
     validations:
       required: true
   - type: textarea
@@ -36,16 +36,14 @@ body:
     attributes:
       label: New values
       description: Please add the new values for the selected attribute by taxon. Please use lower-case and separate multiple values by a comma.
-      placeholder: 
-        bos taurus | XX,XY
-        cat | XX
+      placeholder:  e.g., taxID | species | family | chromosome_number | attribute2 | attribute3
     validations:
       required: true
   - type: textarea
     id: taxonomy
     attributes:
       label: Taxon- or tissue- restricted
-      description: Is the value restricted? Please indicate if there are any taxonomic or biological constraints for the attribute and values. Include the ncbi taxonomy ID when referring to a specific taxon group.
+      description: Is the value biologically restricted? Please indicate if there are any taxonomic or biological constraints for the attribute and values. Include the ncbi taxonomy ID when referring to a specific taxon group.
       placeholder: e.g., male plant-specific, term applies only to taxID 35493 males, Streptophyta. not applicable to Basidiomycota Fungi, taxID 5204. Germline restricted.
     validations:
       required: false
