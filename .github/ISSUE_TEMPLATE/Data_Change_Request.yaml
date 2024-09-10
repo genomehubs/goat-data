@@ -36,7 +36,7 @@ body:
     attributes:
       label: New values
       description: Please add the new values for the selected attribute by taxon. Please use lower-case and separate multiple values by a comma.
-      placeholder:  Please use the format: taxID | species | family | attribute1 | attribute2 | attribute3 ...
+      placeholder:  Please use the format taxID | species | family | attribute1 | attribute2 | attribute3 ...
     validations:
       required: true
   - type: textarea
