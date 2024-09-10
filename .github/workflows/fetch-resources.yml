@@ -196,13 +196,6 @@ jobs:
             -w /goat-data \
             genomehubs/r-ver:latest \
             Rscript ./scripts/get_googlesheets.R /tmp/genomesize-karyotype/tmp /tmp/assembly-data/tmp
-      - name: Move assembly data files or fallback to previous
-        run: |
-          FALLBACK=$(ls ${{ inputs.resources }}/assembly-data/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/assembly-data\//g;s/\.failed$//g'|paste -sd, -) \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: mv ${{ inputs.resources }}/assembly-data/tmp/* ./
-          RESOURCES: ${{ inputs.resources }}/assembly-data
       - name: Move cngb taxon files or fallback to previous
         run: |
           mkdir -p ${{ inputs.resources }}/assembly-data-taxon
@@ -210,6 +203,13 @@ jobs:
         env:
           CMD: mv ${{ inputs.resources }}/assembly-data/cngb.tsv ${{ inputs.resources }}/assembly-data-taxon/
           FALLBACK: s3://goat/resources/assembly-data-taxon/cngb.tsv
+          RESOURCES: ${{ inputs.resources }}/assembly-data-taxon
+      - name: Move assembly data files or fallback to previous
+        run: |
+          FALLBACK=$(ls ${{ inputs.resources }}/assembly-data/tmp/*.tsv* | sed 's/.*\//s3:\/\/goat\/resources\/assembly-data\//g;s/\.failed$//g'|paste -sd, -) \
+          ./scripts/update-resources/fetch-or-fallback.sh
+        env:
+          CMD: mv ${{ inputs.resources }}/assembly-data/tmp/* ./
           RESOURCES: ${{ inputs.resources }}/assembly-data
       - name: Move genomesize/karyotype files or fallback to previous
         run: |
