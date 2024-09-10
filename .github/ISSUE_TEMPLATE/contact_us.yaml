@@ -10,7 +10,7 @@ body:
   - type: dropdown
     id: team
     attributes:
-      label: For which aspect of GoaT do you need assistance?
+      label: What do you need assistance with?
       options:
         - data submission
         - data retrieval
