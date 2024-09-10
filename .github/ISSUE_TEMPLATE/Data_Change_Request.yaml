@@ -1,5 +1,5 @@
 name: GoaT Data Change
-description: This request type should be used when new or more appropriate sources are found to describe species metadata than what is currently displayed (e.g. chromosome number, number of Bs, sex determination, genome size, ploidy, etc.).
+description: This request type should be used when new or more appropriate sources are found to describe species metadata than what is currently displayed.
 title: Data Change [TITLE]
 labels: [data-change-request]
 body:
