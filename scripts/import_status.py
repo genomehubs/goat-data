@@ -6,14 +6,15 @@ import sys
 
 projects = [
     "ATLASEA",
-    "BGE",
+    "BEENOME100",
     "CBP",
+    "CGP",
     "EBPN",
-    "ERGA-CH",
     "EUROFISH",
-    "GREECE-HSP",
-    "SOLVENIA-HSP",
-    "SPAIN-HSP",
+    "ERGA-BGE",
+    "ERGA-CH",
+    "LOEWE-TBG",
+    "OTHER",
     "YGG",
 ]
 
