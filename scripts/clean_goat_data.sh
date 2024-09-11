@@ -5,12 +5,13 @@
 # The script will keep the data directories that are within the days to keep
 # The script will keep the data directories that are the first data of the month if keep_first_data_of_month is enabled
 # The script will delete the data directories that are not in the list of data to keep 
+# The script will delete the ES index for the data directories that are deleted if remove_prod_es_index is enabled
 
 set -e
 set -o pipefail
 
 usage() {
-    echo "Usage: $0 [-r] [-m] [-d <goat_data_dir>] [-k <days_to_keep>] " >&2
+    echo "Usage: $0 [-r] [-m] [-d <goat_data_dir>] [-k <days_to_keep>] [-p] " >&2
     exit 1
 }
 
