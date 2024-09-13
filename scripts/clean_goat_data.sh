@@ -5,23 +5,26 @@
 # The script will keep the data directories that are within the days to keep
 # The script will keep the data directories that are the first data of the month if keep_first_data_of_month is enabled
 # The script will delete the data directories that are not in the list of data to keep 
+# The script will delete the ES index for the data directories that are deleted if remove_prod_es_index is enabled
 
 set -e
 set -o pipefail
 
 usage() {
-    echo "Usage: $0 [-r] [-m] [-d <goat_data_dir>] [-k <days_to_keep>] " >&2
+    echo "Usage: $0 [-r] [-m] [-d <goat_data_dir>] [-k <days_to_keep>] [-p] " >&2
     exit 1
 }
 
 GOAT_ARCHIVED_LIST_FILE="goat_archived_list.txt"
+GOAT_PROD_VM="tol-goat-prod-run1"
 goat_data_dir=''
 days_to_keep=3
 keep_first_data_of_month=false
 dry_run=true
+remove_prod_es_index=false
 goat_archived_list=()
 
-while getopts ':rmd:k:' opt; do
+while getopts ':rmd:k:p' opt; do
     case "$opt" in
         r)
             dry_run=false
@@ -34,6 +37,9 @@ while getopts ':rmd:k:' opt; do
             ;;
         k)
             days_to_keep="$OPTARG"
+            ;;
+        p)
+            remove_prod_es_index=true
             ;;
         :)
             echo "Option -$OPTARG requires an argument." >&2
@@ -141,9 +147,16 @@ echo "================"
 count_deleted=0
 for day_data_dir in `ls -d production-202[0-9].[0-1][0-9].[0-3][0-9]`; do
     if [[ ! " ${data_dir_to_keep[@]} " =~ " ${day_data_dir} " ]]; then
+        echo "================"
         echo "Delete data directory ${day_data_dir}"
         $cmd rm -rf $day_data_dir
         count_deleted=$((count_deleted+1))
+        
+        if $remove_prod_es_index; then
+            echo "Delete ES index for ${day_data_dir}"
+            day=${day_data_dir#"production-"}
+            $cmd ssh $GOAT_PROD_VM "curl -X DELETE es1:9200/*-${day}"
+        fi
     fi
 done
 
