@@ -1,0 +1,30 @@
+name: Contact Us
+description: Get in touch with the GoaT team.
+title: '[Contact Us]: '
+labels: ['connect']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for getting in touch with us.
+  - type: dropdown
+    id: team
+    attributes:
+      label: What do you need assistance with?
+      options:
+        - data submission
+        - data retrieval
+        - code
+        - web page
+        - EBP
+        - queries
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: Message
+      description: Please use this field to reach out. If you find a bug, have data change or feature request, please create an issue on the respective GitHub page (https://github.com/genomehubs/goat-data/issues/new/choose) directly.
+    validations:
+      required: true
