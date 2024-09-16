@@ -23,6 +23,7 @@ def open_google_spreadsheet(acronym, file_link, header_index):
                 delimiter="\t",
                 header=header_index,
                 dtype=object,
+                quoting=3,
                 encoding=encoding
             )
             print(f"File opened successfully with {encoding} encoding.")
