@@ -2,33 +2,24 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: ERGA-BGE_expanded.tsv
-  source: Declared Status List - ERGA-BGE
+  name: CGP_expanded.tsv
+  source: Declared Target List - CGP
   source_date: "2024-09-17"
-  source_description: ERGA-BGE Target and Status List, live spreadsheet
-  source_contact: Tyler Alioto, CNAG, Barcelona, Spain
-  source_url: https://genomes.cnag.cat/erga-stream/goat/
+  source_description: Declared Target List - Cetaceans Genomes Project - live spreadsheet
+  source_contact: Phillip Morin, Southwest Fisheries Science Center, USA
 attributes:
   long_list:
     header: long_list
-  other_priority:
-    header: other_priority
-  family_representative:
-    header: family_representative
-  contributing_project_lab:
-    header: contributing_project_lab
-  sequencing_status_erga-bge:
-    header: sequencing_status
-    translate:
-      none: ""
   sequencing_status:
     header: sequencing_status
     translate:
-      none: ""
+      data_generation: in_progress
+      in_assembly: in_progress
+      insdc_submitted: in_progress
+  sequencing_status_cgp:
+    header: sequencing_status
   sample_collected:
     header: sample_collected
-  sample_collected_by:
-    header: contributing_project_lab
   sample_acquired:
     header: sample_acquired
   in_progress:
@@ -37,6 +28,8 @@ attributes:
     header: data_generation
   in_assembly:
     header: in_assembly
+  insdc_submitted:
+    header: insdc_submitted
   open:
     header: open
   insdc_open:
