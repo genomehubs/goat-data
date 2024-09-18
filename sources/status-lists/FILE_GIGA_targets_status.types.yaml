@@ -4,8 +4,8 @@ file:
   comment: "#"
   name: GIGA_expanded.tsv
   source: Declared Status List - GIGA
-  source_description:  Declared Status List - Global Invertebrate Genomics Alliance (GIGA), Static file - GIGA-phylumlist_withClass
-  source_date: 2020-06-21
+  source_description: Declared Status List - Global Invertebrate Genomics Alliance (GIGA), Static file - GIGA-phylumlist_withClass
+  source_date: "2024-09-18"
   source_contact: Jeff Robinson, UMBC
 attributes:
   long_list:
@@ -15,21 +15,25 @@ attributes:
   family_representative:
     header: family_representative
   sequencing_status:
-    header: translated_status
+    header: sequencing_status
   sequencing_status_giga:
-    header: translated_status
+    header: sequencing_status
   sample_collected:
     header: sample_collected
   sample_acquired:
     header: sample_acquired
   in_progress:
     header: in_progress
+  data_generation:
+    header: data_generation
+  in_assembly:
+    header: in_assembly
   insdc_open:
     header: insdc_open
   published:
     header: published
-  # publication_id:
-  #   header: publication_ID
+    # publication_id:
+    #   header: publication_ID
 taxonomy:
   taxon_id:
     header: ncbi_taxon_id

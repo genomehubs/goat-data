@@ -4,12 +4,14 @@ file:
   comment: "#"
   name: GAGA_expanded.tsv
   source: Declared Status List - GAGA
-  source_date: 2021-09-20
+  source_date: "2024-09-18"
   source_description: Declared Status List - Global Ant Genomics Alliance, Live spreadsheet - GAGA_all_species_list_v2
   source_contact: Guojie Zhang, University of Copenhagen, Denmark
 attributes:
   long_list:
     header: long_list
+  other_priority:
+    header: other_priority
   family_representative:
     header: family_representative
   sequencing_status:
@@ -28,11 +30,17 @@ attributes:
     header: sample_acquired
   in_progress:
     header: in_progress
+  open:
+    header: open
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
 taxonomy:
   taxon_id:
-    header: NCBI_taxon_id
+    header: ncbi_taxon_id
   species:
-    header: [Genus, species]
+    header: [genus, species]
     join: " "
   family:
     header: family
