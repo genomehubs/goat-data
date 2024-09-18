@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: PGP_expanded.tsv
   source: Declared Status List - PGP
-  source_date: 2022-06-17
+  source_date: "2024-09-18"
   source_description: Declared Status List - Polar Genomes Project, live spreadsheet - Polar_Genomes_Project_goat
   source_contact: Seunghyun Kang, Korea Polar Research Institute (KOPRI)
 attributes:
@@ -16,22 +16,32 @@ attributes:
     header: family_representative
   sequencing_status:
     header: sequencing_status
-#    translate:
-#      data_generation: in_progress
-#      in_assembly: in_progress
-#      insdc_submitted: in_progress
+    separator:
+      - ";"
+      #    translate:
+      #      data_generation: in_progress
+      #      in_assembly: in_progress
+      #      insdc_submitted: in_progress
   sequencing_status_pgp:
     header: sequencing_status
-    # translate:
-    #   data_generation: in_progress
-    #   in_assembly: in_progress
-    #   insdc_submitted: in_progress
+    separator:
+      - ";"
+      # translate:
+      #   data_generation: in_progress
+      #   in_assembly: in_progress
+      #   insdc_submitted: in_progress
   sample_collected:
     header: sample_collected
   sample_acquired:
     header: sample_acquired
+  data_generation:
+    header: data_generation
+  in_assembly:
+    header: in_assembly
   in_progress:
     header: in_progress
+  open:
+    header: open
   insdc_open:
     header: insdc_open
   published:
