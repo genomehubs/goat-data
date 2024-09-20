@@ -68,6 +68,9 @@ attributes:
   sequencing_status_bat1k:
     description: Sequencing status for 1,000 Bat Genomes Project
     display_name: Sequencing status Bat1K
+  sequencing_status_beenome100:
+    description: Sequencing status for the Beenome100 Genomes Project
+    display_name: Sequencing status Beenome100
   sequencing_status_canbp:
     description: Sequencing status for Canada Biogenome Project
     display_name: Sequencing status CanBP - CBP
