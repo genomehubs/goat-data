@@ -160,7 +160,7 @@ sts_fieldnames = [
 
 
 def sts_url_opener(token):
-    return requests.get(sts_url, headers={"Authorization": token, "Project": "ALL"})
+    return requests.get(sts_url, headers={"Authorization": token, "Project": "ALL"},verify=False)
 
 
 def sts_api_count_handler(r_text):
@@ -176,7 +176,7 @@ def sts_row_handler(result_count, fieldnames, token, **kwargs):
         print(page)
 
         url = f"{sts_url}?page={page}&page_size={page_size}"
-        r = requests.get(url, headers={"Authorization": token, "Project": "ALL"}).json()
+        r = requests.get(url, headers={"Authorization": token, "Project": "ALL"},verify=False).json()
         dl = r["data"]["list"]
 
         for species in dl:
