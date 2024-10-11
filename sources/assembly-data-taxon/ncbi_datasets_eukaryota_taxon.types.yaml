@@ -14,26 +14,53 @@ attributes:
       - ;
     translate:
       PRJNA533106: EBP
+      PRJEB33226: 25GP
+      PRJEB80366: AEGIS
       PRJNA811786: AFRICABP
       PRJNA555319: AG100PEST
+      PRJEB51690: ANOPHELES
       PRJEB43743: ASG
+      PRJNA1075730: ARG
+      PRJEB64126: ATLASEA
+      PRJNA1098052: AVI
       PRJNA545868: B10K
       PRJNA489245: BAT1K
+      PRJNA923301: BEENOME100
+      PRJNA1075696: BIOPLATFORMS
       PRJNA813333: CANBP
       PRJEB49670: CBP
       PRJNA720569: CCGP
+      PRJNA1020146: CGP
+      PRJNA1157211: DGB
       PRJEB40665: DTOL
+      PRJNA512907: DNAZOO
+      PRJEB65317: EBPN
       PRJNA712951: ENDEMIXIT
       PRJEB43510: ERGA
-      PRJEB47820: ERGAPIL
+      PRJEB61747: ERGA-BGE
+      PRJEB49197: ERGA-CH
+      PRJEB47820: ERGA-PIL
       PRJNA393850: EUROFISH
+      PRJNA1098046: FFI
+      PRJNA1098053: FISH
+      PRJNA1075727: GAP
       PRJNA649812: GIGA
+      PRJNA1075702: GBR
       PRJNA163993: i5K
       PRJNA844590: ILEBP
+      PRJNA1098055: IPM
+      PRJNA948806: LMGP
       PRJNA706923: LOEWE-TBG
       PRJNA758215: METAINVERT
+      PRJNA1046164: OG
+      PRJNA1075707: OMG
+      PRJNA1098054: PP
+      PRJNA785018: PRGP
+      PRJEB71705: PSYCHE
       PRJNA707598: SQUALOMIX
+      PRJNA1075750: TSI
       PRJNA489243: VGP
+      PRJNA955268: YGG
       PRJNA312960: ZOONOMIA
   insdc_open:
     display_group: sequencing_status
@@ -42,26 +69,51 @@ attributes:
       - ;
     translate:
       PRJNA533106: EBP
+      PRJEB33226: 25GP
+      PRJEB80366: AEGIS
       PRJNA811786: AFRICABP
       PRJNA555319: AG100PEST
+      PRJEB51690: ANOPHELES
       PRJEB43743: ASG
+      PRJNA1075730: ARG
+      PRJEB64126: ATLASEA
+      PRJNA1098052: AVI
       PRJNA545868: B10K
       PRJNA489245: BAT1K
+      PRJNA923301: BEENOME100
+      PRJNA1075696: BIOPLATFORMS
       PRJNA813333: CANBP
       PRJEB49670: CBP
       PRJNA720569: CCGP
+      PRJNA1020146: CGP
+      PRJNA1157211: DGB
       PRJEB40665: DTOL
+      PRJNA512907: DNAZOO
+      PRJEB65317: EBPN
       PRJNA712951: ENDEMIXIT
       PRJEB43510: ERGA
-      PRJEB47820: ERGAPIL
+      PRJEB47820: ERGA-PIL
       PRJNA393850: EUROFISH
+      PRJNA1098046: FFI
+      PRJNA1098053: FISH
+      PRJNA1075727: GAP
       PRJNA649812: GIGA
+      PRJNA1075702: GBR
       PRJNA163993: i5K
       PRJNA844590: ILEBP
+      PRJNA1098055: IPM
+      PRJNA948806: LMGP
       PRJNA706923: LOEWE-TBG
       PRJNA758215: METAINVERT
+      PRJNA1046164: OG
+      PRJNA1075707: OMG
+      PRJNA1098054: PP
+      PRJNA785018: PRGP
+      PRJEB71705: PSYCHE
       PRJNA707598: SQUALOMIX
+      PRJNA1075750: TSI
       PRJNA489243: VGP
+      PRJNA955268: YGG
       PRJNA312960: ZOONOMIA
   sequencing_status_ebp:
     display_group: sequencing_status
@@ -70,6 +122,29 @@ attributes:
       - ;
     translate:
       PRJNA533106: insdc_open
+  sequencing_status_1000gch:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      TBD: insdc_open
+  sequencing_status_25gp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB33226: insdc_open
+  sequencing_status_aegis:
+    description: Sequencing status for AEGIS
+    display_name: Sequencing status AEGIS
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB80366: insdc_open
   sequencing_status_africabp:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -84,6 +159,13 @@ attributes:
       - ;
     translate:
       PRJNA555319: insdc_open
+  sequencing_status_anopheles:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB51690: insdc_open
   sequencing_status_asg:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -91,6 +173,27 @@ attributes:
       - ;
     translate:
       PRJEB43743: insdc_open
+  sequencing_status_arg:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1075730: insdc_open
+  sequencing_status_atlasea:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB64126: insdc_open
+  sequencing_status_avi:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1098052: insdc_open
   sequencing_status_b10k:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -105,6 +208,27 @@ attributes:
       - ;
     translate:
       PRJNA489245: insdc_open
+  sequencing_status_beenome100:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA923301: insdc_open
+  sequencing_status_bioplatforms:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1075696: insdc_open
+  sequencing_status_canbp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA813333: insdc_open
   sequencing_status_cbp:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -112,6 +236,27 @@ attributes:
       - ;
     translate:
       PRJEB49670: insdc_open
+  sequencing_status_ccgp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA720569: insdc_open
+  sequencing_status_cgp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1020146: insdc_open
+  sequencing_status_dgb:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1157211: insdc_open
   sequencing_status_dtol:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -119,6 +264,20 @@ attributes:
       - ;
     translate:
       PRJEB40665: insdc_open
+  sequencing_status_dnazoo:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA512907: insdc_open
+  sequencing_status_ebpn:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB65317: insdc_open
   sequencing_status_endemixit:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -133,6 +292,20 @@ attributes:
       - ;
     translate:
       PRJEB43510: insdc_open
+  sequencing_status_erga-bge:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB61747: insdc_open
+  sequencing_status_erga-ch:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB49197: insdc_open
   sequencing_status_erga-pil:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -147,6 +320,27 @@ attributes:
       - ;
     translate:
       PRJNA393850: insdc_open
+  sequencing_status_ffi:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1098046: insdc_open
+  sequencing_status_fish:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1098053: insdc_open
+  sequencing_status_gap:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1075727: insdc_open
   sequencing_status_giga:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -154,6 +348,13 @@ attributes:
       - ;
     translate:
       PRJNA649812: insdc_open
+  sequencing_status_gbr:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1075702: insdc_open
   sequencing_status_i5k:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -161,6 +362,20 @@ attributes:
       - ;
     translate:
       PRJNA163993: insdc_open
+  sequencing_status_ilebp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA844590: insdc_open
+  sequencing_status_ipm:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1098055: insdc_open
   sequencing_status_loewe-tbg:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -175,6 +390,41 @@ attributes:
       - ;
     translate:
       PRJNA758215: insdc_open
+  sequencing_status_og:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1046164: insdc_open
+  sequencing_status_omg:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1075707: insdc_open
+  sequencing_status_pp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1098054: insdc_open
+  sequencing_status_prgp:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA785018: insdc_open
+  sequencing_status_psyche:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB71705: insdc_open
   sequencing_status_squalomix:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -182,6 +432,13 @@ attributes:
       - ;
     translate:
       PRJNA707598: insdc_open
+  sequencing_status_tsi:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1075750: insdc_open
   sequencing_status_vgp:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -189,6 +446,13 @@ attributes:
       - ;
     translate:
       PRJNA489243: insdc_open
+  sequencing_status_ygg:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA955268: insdc_open
   sequencing_status_zoonomia:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -203,7 +467,7 @@ file:
   organelle: nucleus
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2024-08-19"
+  source_date: "2024-10-11"
 identifiers:
   assembly_id:
     constraint:

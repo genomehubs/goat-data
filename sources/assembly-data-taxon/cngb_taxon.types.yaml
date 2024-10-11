@@ -1,24 +1,28 @@
 attributes:
   sequencing_status:
-    default: open
+    header: project
+    translate:
+      CNGB: open
   open:
     display_group: sequencing_status
-    default: CNGB
+    header: project
   sample_collected:
     display_group: sequencing_status
-    default: CNGB
+    header: project
   sample_acquired:
     display_group: sequencing_status
-    default: CNGB
+    header: project
   in_progress:
     display_group: sequencing_status
-    default: CNGB
+    header: project
 file:
   format: tsv
   header: true
   name: cngb.tsv
   organelle: nucleus
-  source_date: "2024-08-19"
+  source_date: "2024-10-11"
+  source: CNGB
+  source_url_stub: https://db.cngb.org/search/assembly/
 identifiers:
   assembly_id:
     constraint:
@@ -31,10 +35,6 @@ identifiers:
     header: assemblyName
     type: keyword
 metadata:
-  source:
-    default: CNGB
-  source_url_stub:
-    default: https://db.cngb.org/search/assembly/
   source_slug:
     header: assemblyAccession
 names:
