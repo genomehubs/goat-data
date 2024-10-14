@@ -44,15 +44,24 @@ attributes:
   sequencing_status:
     description: Most advanced sequencing status for taxon across all projects
     display_name: Sequencing status
+  sequencing_status_1000gch:
+    description: Sequencing status for 1,000 Chilean Genomes
+    display_name: Sequencing status 1000GCh
   sequencing_status_africabp:
     description: Sequencing status for Africa Biogenome Project
     display_name: Sequencing status AfricaBP
   sequencing_status_ag100pest:
     description: Sequencing status for Ag100Pest Initiative
     display_name: Sequencing status Ag100Pest
+  sequencing_status_aegis:
+    description: Sequencing status for AEGIS
+    display_name: Sequencing status AEGIS
   sequencing_status_agi:
     description: Sequencing status for AGI Initiative from Bioplatforms Australia
     display_name: Sequencing status AGI
+  sequencing_status_agc:
+    description: Sequencing status for Amphibian Genomics Consortium
+    display_name: Sequencing status AGC
   sequencing_status_arg:
     description: Sequencing status for Australian Amphibian and Reptile Genomics Initiative Collaboration - AusARG
     display_name: Sequencing status AusARG
@@ -62,6 +71,9 @@ attributes:
   sequencing_status_atlasea:
     description: Sequencing status for AtlaSea Project
     display_name: Sequencing status AtlaSea
+  sequencing_status_avi:
+    description: Sequencing status for Australian Avian Genomics Initiative 
+    display_name: Sequencing status AVI
   sequencing_status_b10k:
     description: Sequencing status for Bird 10,000 Genomes Project
     display_name: Sequencing status B10K
@@ -113,6 +125,12 @@ attributes:
   sequencing_status_eurofish:
     description: Sequencing status for EUROFISH Project
     display_name: Sequencing status EUROFISH
+  sequencing_status_ffi:
+    description: Sequencing status for Australian Functional Fungi Initiative
+    display_name: Sequencing status FFI
+  sequencing_status_fish:
+    description: Sequencing status for Australian Fish Genomics Initiative
+    display_name: Sequencing status FISH
   sequencing_status_gaga:
     description: Sequencing status for Global Ant Genomics Alliance Project
     display_name: Sequencing status GAGA
@@ -120,17 +138,23 @@ attributes:
     description: Sequencing status for Genomics for Australian Plants Project
     display_name: Sequencing status GAP
   sequencing_status_gbr:
-    description: Sequencing status for Great Reef Barrier Project
+    description: Sequencing status for Great Barrier Reef SeaQuence Project
     display_name: Sequencing status GBR
   sequencing_status_giga:
     description: Sequencing status for Global Invertebrate Genome Alliance Project
     display_name: Sequencing status GIGA
+  sequencing_status_hk-ebp:
+    description: Sequencing status for Hong Kong EBP
+    display_name: Sequencing status HK-EBP
   sequencing_status_i5k:
     description: Sequencing status for 5,000 Insect Genomes Project
     display_name: Sequencing status i5K
   sequencing_status_ilebp:
     description: Sequencing status for Illinois EBP Pilot Project
     display_name: Sequencing status IlEBP
+  sequencing_status_ipm:
+    description: Sequencing status for Integrated Pest Management Omics Initiative
+    display_name: Sequencing status IPM
   sequencing_status_1kfg:
     description: Sequencing status for 1,000 Fungal Genomes Project
     display_name: Sequencing status 1KFG
@@ -161,6 +185,9 @@ attributes:
   sequencing_status_phyloalps:
     description: Sequencing status for PhyloAlps Project
     display_name: Sequencing status PhyloAlps
+  sequencing_status_pp:
+    description: Sequencing status for Plant Pathogen Initiative
+    display_name: Sequencing status PP
   sequencing_status_prgp:
     description: Sequencing status for Primate Genomes Project
     display_name: Sequencing status PRGP

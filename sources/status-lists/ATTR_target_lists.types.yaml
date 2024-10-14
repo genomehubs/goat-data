@@ -8,12 +8,15 @@ defaults:
     type: keyword
     constraint:
       enum:
+        - 1000gch
         - africabp
         - ag100pest
+        - agc
         - agi
         - arg
         - asg
         - atlasea
+        - avi
         - bat1k
         - b10k
         - beenome100
@@ -23,6 +26,7 @@ defaults:
         - ccgp
         - cfgp
         - cgp
+        - cngb
         - dtol
         - ebpn
         - ein
@@ -32,12 +36,16 @@ defaults:
         - erga-ch
         - erga-pil
         - eurofish
+        - ffi
+        - fish
         - gaga
         - gap
         - gbr
         - giga
+        - hk-ebp
         - i5k
         - ilebp
+        - ipm
         - 1kfg
         - lmgp
         - loewe-tbg
@@ -48,6 +56,7 @@ defaults:
         - other
         - pgp
         - phyloalps
+        - pp
         - prgp
         - psyche
         - squalomix
@@ -59,10 +68,14 @@ defaults:
       default:
         description: Click to view GoaT project page
         link: https://goat.genomehubs.org/projects/{}
+      1000gch:
+        description: "1,000 Chilean Genomes (click to view GoaT project page)"
       africabp:
         description: "Africa Biogenome Project (click to view GoaT project page)"
       ag100pest:
         description: "Ag100Pest (click to view GoaT project page)"
+      agc:
+        description: "Amphibian Genomics Consortium (click to view GoaT project page)"
       agi:
         description: "Applied Genomics Initiative (click to view GoaT project page)"
       arg:
@@ -70,7 +83,9 @@ defaults:
       asg:
         description: "Aquatic Symbiosis Genomics Project (click to view GoaT project page)"
       atlasea:
-        description: "AtlaSea Project  (click to view GoaT project page)"
+        description: "AtlaSea Project (click to view GoaT project page)"
+      avi:
+        description: "Australian Avian Genomics Initiative (click to view GoaT project page)"
       bat1k:
         description: "Bat 1K (click to view GoaT project page)"
       b10k:
@@ -112,13 +127,21 @@ defaults:
       gap:
         description: "Genomics for Australian Plants (click to view GoaT project page)"
       gbr:
-        description: "Great Reef Barrier (click to view GoaT project page)"
+        description: "Great Barrier Reef SeaQuence Project (click to view GoaT project page)"
       giga:
         description: "Global Invertebrate Genomics Alliance (click to view GoaT project page)"
+      hk-ebp:
+        description: "Hong Kong EBP (click to view GoaT project page)"
+      ffi:
+        description: "Australian Functional Fungi Initiative (click to view GoaT project page)"
+      fish:
+        description: "Australian Fish Genomics Initiative (click to view GoaT project page)"
       i5k:
         description: "i5K (click to view GoaT project page)"
       ilebp:
         description: "Illinois EBP Pilot (click to view GoaT project page)"
+      ipm:
+        description: "Integrated Pest Management Omics Initiative (click to view GoaT project page)"
       1kfg:
         description: "1K Fungal Genomes Project (click to view GoaT project page)"
       lmgp:
@@ -139,6 +162,8 @@ defaults:
         description: "Polar Genomes Project (click to view GoaT project page)"
       phyloalps:
         description: "PhyloAlps (click to view GoaT project page)"
+      pp:
+        description: "Plant Pathogen Initiative (click to view GoaT project page)"
       prgp:
         description: "Primate Genomes Project (click to view GoaT project page)"
       psyche:
@@ -155,7 +180,7 @@ defaults:
         description: "Zoonomia (click to view GoaT project page)"
 attributes:
   long_list:
-    description: Full species wishlist of a project
+    description: "All potential targets (wishlist) of a project."
     display_name: Long list
   other_priority:
     description: Species prioritised for sequencing
