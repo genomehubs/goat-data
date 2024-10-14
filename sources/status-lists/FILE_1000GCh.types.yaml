@@ -2,11 +2,12 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: GIGA_expanded.tsv
-  source: Declared Status List - GIGA
-  source_description: Declared Status List - Global Invertebrate Genomics Alliance (GIGA), Static file - GIGA-phylumlist_withClass
+  name: 1000GCH_expanded.tsv
+  source: Declared Status List - 1000GCh
   source_date: "2024-10-14"
-  source_contact: Jeff Robinson, UMBC
+  source_description: Declared Status List - 1,000 Chilean Genomes - Live spreadsheet - 1K_Chilean _genomes
+  source_contact: Dr. Pamela Morales
+  source_url: https://1000genomas.cl/
 attributes:
   long_list:
     header: long_list
@@ -16,8 +17,16 @@ attributes:
     header: family_representative
   sequencing_status:
     header: sequencing_status
-  sequencing_status_giga:
+    #    translate:
+    #      data_generation: in_progress
+    #      in_assembly: in_progress
+    #      insdc_submitted: in_progress
+  sequencing_status_1000gch:
     header: sequencing_status
+    # translate:
+    #   data_generation: in_progress
+    #   in_assembly: in_progress
+    #   insdc_submitted: in_progress
   sample_collected:
     header: sample_collected
   sample_acquired:
@@ -32,8 +41,6 @@ attributes:
     header: insdc_open
   published:
     header: published
-    # publication_id:
-    #   header: publication_ID
 taxonomy:
   taxon_id:
     header: ncbi_taxon_id

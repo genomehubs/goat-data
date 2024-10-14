@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: sts.tsv
   source: Declared Status Lists - DTOL STS
-  source_date: "2024-10-10"
+  source_date: "2024-10-14"
   source_description: Declared Status Lists - DTOL Samples Tracking System
   #source_contact: https://sts.tol.sanger.ac.uk
   source_url: https://sts.tol.sanger.ac.uk/api/v1/swagger
@@ -20,12 +20,45 @@ attributes:
     translate:
       "['DTOL']": DTOL
       "['ASG']": ASG
+      "['BAT1K']": BAT1K
+      "['PSYCHE']": PSYCHE
       "['VGP']": VGP
       "['ERGAPI']": ERGA-PIL
+      "['ERGA']": ERGA-BGE
       "['BLAX', 'DTOL']": DTOL
+      "['BLAX', 'PSYCHE']": DTOL, PSYCHE
+      "['DTOL', 'BAT1K']": DTOL, BAT1K
       "['DTOL', 'DURB']": DTOL
+      "['DTOL', 'JARON']": DTOL
       "['DTOL', 'LAWN']": DTOL
       "['DTOL', 'MEIER']": DTOL
+      "['DTOL', 'PSYCHE']": DTOL, PSYCHE
+      "['DTOL', 'RND']": DTOL
+      "['ASG', 'DTOL']": ASG, DTOL
+      "['DTOL', 'VGP']": DTOL, VGP
+      "['BLAX']": ""
+      "['RND']": ""
+      "['DURB']": ""
+  other_priority:
+    header: project_code
+    separator:
+      - ","
+    translate:
+      "['DTOL']": DTOL
+      "['ASG']": ASG
+      "['BAT1K']": BAT1K
+      "['PSYCHE']": PSYCHE
+      "['VGP']": VGP
+      "['ERGAPI']": ERGA-PIL
+      "['ERGA']": ERGA-BGE
+      "['BLAX', 'DTOL']": DTOL
+      "['BLAX', 'PSYCHE']": DTOL, PSYCHE
+      "['DTOL', 'BAT1K']": DTOL, BAT1K
+      "['DTOL', 'DURB']": DTOL
+      "['DTOL', 'JARON']": DTOL
+      "['DTOL', 'LAWN']": DTOL
+      "['DTOL', 'MEIER']": DTOL
+      "['DTOL', 'PSYCHE']": DTOL, PSYCHE
       "['DTOL', 'RND']": DTOL
       "['ASG', 'DTOL']": ASG, DTOL
       "['DTOL', 'VGP']": DTOL, VGP
@@ -40,36 +73,52 @@ attributes:
     header: sequencing_status_asg
     separator:
       - ","
+  sequencing_status_bat1k:
+    header: sequencing_status_bat1k
+    separator:
+      - ","
   sequencing_status_dtol:
     header: sequencing_status_dtol
+    separator:
+      - ","
+  sequencing_status_erga-bge:
+    header: sequencing_status_erga
     separator:
       - ","
   sequencing_status_erga-pil:
     header: sequencing_status_ergapi
     separator:
       - ","
+  sequencing_status_psyche:
+    header: sequencing_status_psyche
+    separator:
+      - ","
   sequencing_status_vgp:
     header: sequencing_status_vgp
     separator:
       - ","
-  # sequencing_status_berri:
-  #   header: sequencing_status_berri
-  #   separator:
-  #     - ","
-  # sequencing_status_blax:
-  #   header: sequencing_status_blax
-  #   separator:
-  #     - ","
-  # sequencing_status_durb:
-  #   header: sequencing_status_durb
-  #   separator:
-  #     - ","
-  # sequencing_status_rnd:
-  #   header: sequencing_status_rnd
-  #   separator:
-  #     - ","
-  # sequencing_status_lawn:
-  #   header: sequencing_status_lawn
+      # sequencing_status_berri:
+      #   header: sequencing_status_berri
+      #   separator:
+      #     - ","
+      # sequencing_status_blax:
+      #   header: sequencing_status_blax
+      #   separator:
+      #     - ","
+      # sequencing_status_durb:
+      #   header: sequencing_status_durb
+      #   separator:
+      #     - ","
+      # sequencing_status_rnd:
+      #   header: sequencing_status_rnd
+      #   separator:
+      #     - ","
+      # sequencing_status_lawn:
+      #   header: sequencing_status_lawn
+      #   separator:
+      #     - ","
+    # sequencing_status_jaron:
+  #   header: sequencing_status_jaron
   #   separator:
   #     - ","
   # sequencing_status_meier:
@@ -88,6 +137,7 @@ attributes:
       ERGAPI: ERGA-PIL
       BLAX: ""
       DURB: ""
+      JARON: ""
       LAWN: ""
       MEIER: ""
       RND: ""
@@ -99,6 +149,7 @@ attributes:
       ERGAPI: ERGA-PIL
       BLAX: ""
       DURB: ""
+      JARON: ""
       LAWN: ""
       MEIER: ""
       RND: ""
@@ -110,6 +161,7 @@ attributes:
       ERGAPI: ERGA-PIL
       BLAX: ""
       DURB: ""
+      JARON: ""
       LAWN: ""
       MEIER: ""
       RND: ""
