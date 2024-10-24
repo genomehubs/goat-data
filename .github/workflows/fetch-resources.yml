@@ -336,7 +336,7 @@ jobs:
           CMD: |
             cp ${{ inputs.resources }}/ena-taxonomy.extra.prev.jsonl.gz ./ 2>/dev/null || : && \
             cp ${{ inputs.resources }}/ena-taxonomy.extra.jsonl.gz ./ 2>/dev/null || : && \
-            bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash 2759
+            echo bash ${{ github.workspace }}/scripts/update-resources/get_ena_taxonomy_extra.bash 2759
           FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
           RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
