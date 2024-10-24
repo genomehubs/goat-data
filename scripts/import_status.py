@@ -5,6 +5,7 @@ import sys
 # reload(isl)
 
 projects = [
+    "1000GCH",
     "ATLASEA",
     "BEENOME100",
     "CANBP",
