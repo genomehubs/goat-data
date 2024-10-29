@@ -307,26 +307,26 @@ jobs:
           FALLBACK: s3://goat/resources/assembly-data/species_metadata_EnsemblVertebrates.tsv.gz
           RESOURCES: ${{ inputs.resources }}/assembly-data
 
-  fetch-ena-taxonomy-prev:
-    runs-on: [self-hosted, runner2]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Fetch ENA taxonomy prev
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh || exit 0
-          ls -al
-          mv ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ${{ inputs.resources }}/ena-taxonomy.extra.prev.jsonl.gz \
-          || touch ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.prev.jsonl.gz
-          ls -al
-        env:
-          CMD: cp ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ./
-          FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
-          RESOURCES: ${{ inputs.resources }}/ena-taxonomy
+  # fetch-ena-taxonomy-prev:
+  #   runs-on: [self-hosted, runner2]
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Fetch ENA taxonomy prev
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh || exit 0
+  #         ls -al
+  #         mv ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ${{ inputs.resources }}/ena-taxonomy.extra.prev.jsonl.gz \
+  #         || touch ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.prev.jsonl.gz
+  #         ls -al
+  #       env:
+  #         CMD: cp ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz ./
+  #         FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
+  #         RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
   fetch-ena-taxonomy-extra:
     runs-on: [self-hosted, runner2]
-    needs:
-      - fetch-ena-taxonomy-prev
+    # needs:
+    #   - fetch-ena-taxonomy-prev
     steps:
       - uses: actions/checkout@v4
       - name: Fetch ENA taxonomy extra
@@ -337,7 +337,8 @@ jobs:
             cp ${{ inputs.resources }}/ena-taxonomy.extra.jsonl.gz ./ 2>/dev/null || : && \
             ${{ github.workspace }}/scripts/update-resources/get-ena-taxonomy-extra.py 2759 && \
             cat ena-taxonomy.prev.jsonl.gz ena-taxonomy.new.jsonl.gz > ena-taxonomy.extra.jsonl.gz && \
-            cp ena-taxonomy.extra.jsonl.gz ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
+            cp ena-taxonomy.extra.jsonl.gz ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz && \
+            rm ena-taxonomy.prev.jsonl.gz ena-taxonomy.new.jsonl.gz
           FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
           RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
