@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: DTOL_chordata_collected.tsv
   source: DTOL Chordata Collections List
-  source_date: "2024-11-05"
+  source_date: "2024-11-13"
   source_description: DTOL Chordata Working Group, Live Spreadsheet
   source_contact: DTOL Chordates SWG
 attributes:
@@ -25,6 +25,7 @@ attributes:
   sample_collected_by:
     header: 'GAL Coll'
     translate:
+      'NHM BUT need to resend': NHM
     type: keyword
 taxonomy:
   taxon_id:
