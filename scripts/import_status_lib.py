@@ -166,6 +166,21 @@ def expand_sequencing_status(project_table, acronym):
     ] = acronym
     return project_table
 
+# create mandatory columns
+
+def create_mandatory_columns(project_table):
+    mandatory_fields = [
+        "ncbi_taxon_id",
+        "species",
+        "family",
+        "synonym",
+        "publication_id",
+        "contributing_project_lab",
+    ]
+    for item in mandatory_fields:
+        if item not in project_table:
+            project_table[item] = np.nan
+    return project_table
 
 # Export tsv:
 
@@ -189,5 +204,7 @@ def processing_schema_2_5_lists(acronym, url, start_row, dir):
     project_table = create_status_column(project_table, acronym)
     print(f"expanding {acronym} sequencing status ...")
     project_table = expand_sequencing_status(project_table, acronym)
+    print(f'creating {acronym} mandatory fields ...')
+    project_table = create_mandatory_columns(project_table)
     print(f"saving {acronym} to file")
     export_expanded_tsv(project_table, acronym, dir)
