@@ -4,7 +4,7 @@ file:
   comment: "#"
   name: DTOL_Arthropoda_family_reps_expanded.tsv
   source: DTOL Arthropod Family Representatives List
-  source_date: "2024-05-20"
+  source_date: "2024-11-13"
   source_description: DTOL Arthropod Samples Working Group and NHM, live spreadsheet - DToL - Arthropod Family Representatives List
   source_contact: DTOL Arthropod SWG
 attributes:
@@ -28,7 +28,7 @@ attributes:
     header: sample_collected
     type: keyword
   sample_collected_by:
-    header: [NHM, WYTHAM, TOL_SCOTLAND]
+    header: [NHM, WYTHAM, TOL_SCOTLAND, SANGER]
     join: ","
     translate:
       NOT COLLECTED: ""
@@ -36,6 +36,7 @@ attributes:
       WYTHAM: OXF
       TOL_SCOTLAND: SAN
       Sanger: SAN
+      COLLECTED: SAN
     separator:
       - ","
     type: keyword
