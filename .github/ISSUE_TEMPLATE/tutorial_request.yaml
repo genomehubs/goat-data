@@ -1,7 +1,7 @@
 name: GoaT Tutorial Request
 description: Unsure about a query or feature? Request a tutorial for GoaT Wiki or Youtube Channel.
 title: New Tutorial [TITLE]
-labels: "project:goat :goat:"
+labels: "project:goat :goat:, process:documentation, stack:ui, stack:data"
 body:
   - type: markdown
     attributes:
@@ -29,7 +29,7 @@ body:
     attributes:
       label: Tutorial Format
       description: Please indicate your preferred method for the tutorial 
-      placeholder:  decision-tree
+      placeholder:  'decision-tree, video, text-description, etc."
   - type: textarea
     id: context
     attributes:
