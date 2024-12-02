@@ -29,7 +29,7 @@ body:
     attributes:
       label: Tutorial Format
       description: Please indicate your preferred method for the tutorial 
-      placeholder:  'decision-tree, video, text-description, etc."
+      placeholder:  "decision-tree, video, text-description, etc."
   - type: textarea
     id: context
     attributes:
