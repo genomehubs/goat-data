@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
+import argparse
 import json
 import os
 import subprocess
+import sys
 from collections import defaultdict
 from collections.abc import Generator
 from typing import Optional
@@ -326,14 +328,28 @@ def fetch_and_parse_ncbi_datasets(
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Fetch and parse NCBI datasets.")
+    parser.add_argument(
+        "-f",
+        "--file_path",
+        type=str,
+        required=True,
+        help="Path to the assembly data files (without extension).",
+    )
+    parser.add_argument(
+        "-r",
+        "--root_taxid",
+        type=str,
+        default="2759",
+        help="Root taxonomic ID for fetching datasets (default: 2759).",
+    )
+    args = parser.parse_args()
+    if not args.file_path:
+        print("Error: file_path is required.")
+        sys.exit(1)
+
     fetch_and_parse_ncbi_datasets(
-        root_taxid="2759",
-        config_file=(
-            "/Users/rchallis/projects/genomehubs/goat-data/sources/"
-            "assembly-data/ncbi_datasets_eukaryota.types.yaml"
-        ),
-        feature_file=(
-            "/Users/rchallis/projects/genomehubs/goat-data/sources/"
-            "assembly-data/ncbi_datasets_eukaryota.features.tsv"
-        ),
+        root_taxid=args.root_taxid,
+        config_file=f"{args.file_path}.types.yaml",
+        feature_file=f"{args.file_path}.features.tsv",
     )
