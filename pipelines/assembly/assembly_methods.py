@@ -159,7 +159,7 @@ def add_chromosome_entries(data: dict, chromosomes: list[dict]) -> None:
         data["chromosomes"].append(
             {
                 "assembly_id": data["processedAssemblyInfo"]["genbankAccession"],
-                "sequence_id": seq["genbank_accession"],
+                "sequence_id": seq.get("genbank_accession", ""),
                 "start": 1,
                 "end": seq["length"],
                 "strand": 1,
