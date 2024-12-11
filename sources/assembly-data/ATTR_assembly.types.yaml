@@ -305,9 +305,6 @@ attributes:
     display_group: metrics
     display_level: 2
     display_name: Quality Value score
-  linked_accession:
-    display_group: linked assemblies
-    type: keyword
   source_accession:
     display_group: linked assemblies
     type: keyword
@@ -359,13 +356,5 @@ attributes:
         - primary
         - alternate
     description: primary or alternate assembly for a taxon
-    display_group: general
-    type: keyword
-  biosample_representative:
-    constraint:
-      enum:
-        - primary
-        - secondary
-    description: primary or secondary assembly for a biosample
     display_group: general
     type: keyword

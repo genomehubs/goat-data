@@ -26,11 +26,6 @@ attributes:
     path: assemblyInfo.biosample.accession
     separator:
       - ","
-  biosample_representative:
-    header: biosampleRepresentative
-    path: assemblyInfo.biosampleRepresentative
-    translate:
-      "1": primary
   chromosome_count:
     header: totalNumberOfChromosomes
     path: assemblyStats.totalNumberOfChromosomes
@@ -66,11 +61,6 @@ attributes:
   last_updated:
     header: releaseDate
     path: assemblyInfo.releaseDate
-  linked_accession:
-    header: linkedAssembly
-    path: assemblyInfo.linkedAssemblies.linkedAssembly
-    separator:
-      - ";"
   mitochondrion_accession:
     header: mitochondrionAccession
     path: processedOrganelleInfo.mitochondrion.accession
@@ -163,7 +153,7 @@ file:
     - TAXON_assembly.types.yaml
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2024-12-10"
+  source_date: "2024-12-11"
 identifiers:
   assembly_id:
     header: genbankAccession
