@@ -62,21 +62,19 @@ def set_additional_organelle_values(
         organelle_name (str): The name of the organelle.
     """
     if is_assembled_molecule(seq):
-        organelle["genbankAssmAccession"] = seq[0]["genbank_accession"]
-        organelle["totalSequenceLength"] = seq[0]["length"]
-        organelle["gcPercent"] = seq[0]["gc_percent"]
+        organelle["genbankAssmAccession"] = seq[0].get("genbank_accession", None)
+        organelle["totalSequenceLength"] = seq[0].get("length", None)
+        organelle["gcPercent"] = seq[0].get("gc_percent", None)
         data["processedOrganelleInfo"][organelle_name]["assemblySpan"] = organelle[
             "totalSequenceLength"
         ]
         data["processedOrganelleInfo"][organelle_name]["gcPercent"] = organelle[
             "gcPercent"
         ]
-        data["processedOrganelleInfo"][organelle_name]["accession"] = seq[0][
-            "genbank_accession"
-        ]
+        data["processedOrganelleInfo"][organelle_name]["accession"] = seq[0].get("genbank_accession", None)
     else:
         data["processedOrganelleInfo"][organelle_name]["scaffolds"] = ";".join(
-            [entry["genbank_accession"] for entry in seq]
+            [entry.get("genbank_accession", None) for entry in seq]
         )
 
 
@@ -156,17 +154,18 @@ def add_chromosome_entries(data: dict, chromosomes: list[dict]) -> None:
     """
     data["chromosomes"] = []
     for seq in chromosomes:
+        length = seq.get("length", 0)
         data["chromosomes"].append(
             {
                 "assembly_id": data["processedAssemblyInfo"]["genbankAccession"],
                 "sequence_id": seq.get("genbank_accession", ""),
                 "start": 1,
-                "end": seq["length"],
+                "end": length,
                 "strand": 1,
-                "length": seq["length"],
-                "midpoint": round(seq["length"] / 2),
+                "length": length,
+                "midpoint": round(length / 2),
                 "midpoint_proportion": 0.5,
-                "seq_proportion": seq["length"]
+                "seq_proportion": length
                 / int(data["assemblyStats"]["totalSequenceLength"]),
             }
         )
