@@ -52,9 +52,10 @@ jobs:
           -v \$(pwd):/genomehubs/tmp \
           -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
           genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"/genomehubs/parse_ncbi_assemblies.py \
+            \"cd /genomehubs/tmp && \
+            /genomehubs/parse_ncbi_assemblies.py \
               -r 2759 \
-              -f /genomehubs/tmp/ncbi_datasets_eukaryota \"" \
+              -f ncbi_datasets_eukaryota \"" \
           ./scripts/update-resources/fetch-or-fallback.sh
         env:
           FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
