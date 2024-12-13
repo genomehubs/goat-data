@@ -26,6 +26,11 @@ attributes:
     path: assemblyInfo.biosample.accession
     separator:
       - ","
+  biosample_representative:
+    header: biosampleRepresentative
+    path: assemblyInfo.biosampleRepresentative
+    translate:
+      "1": primary
   chromosome_count:
     header: totalNumberOfChromosomes
     path: assemblyStats.totalNumberOfChromosomes
@@ -61,6 +66,11 @@ attributes:
   last_updated:
     header: releaseDate
     path: assemblyInfo.releaseDate
+  linked_accession:
+    header: linkedAssembly
+    path: assemblyInfo.linkedAssemblies.linkedAssembly
+    separator:
+      - ";"
   mitochondrion_accession:
     header: mitochondrionAccession
     path: processedOrganelleInfo.mitochondrion.accession
