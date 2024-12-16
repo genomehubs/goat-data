@@ -80,9 +80,8 @@ attributes:
   ebp_standard_criteria:
     taxon_display_group: assembly
     taxon_summary:
-      - enum
       - list
-    taxon_traverse: enum
+    taxon_traverse: list
     taxon_traverse_direction: up
   mitochondrion_assembly_span:
     taxon_display_group: mitochondrion_assembly
