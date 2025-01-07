@@ -1,17 +1,17 @@
 name: GoaT Tutorial Request
-description: Unsure about a query or feature? Request a tutorial for GoaT Wiki or Youtube Channel.
+description: Want help with a query or feature? Request a tutorial on the GoaT wiki or Youtube channel.
 title: New Tutorial [TITLE]
 labels: "project:goat :goat:, process:documentation, stack:ui, stack:data"
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to request a tutorial on GoaT. Thanks for taking the time to contribute. 
+        Use this form to request a GoaT tutorial. Thanks for taking the time to contribute. 
   - type: checkboxes
     id: confirmation
     attributes:
       label: tutorial type
-      description: Use this field to inform if you would like to request a new tutorial  or refine an existing tutorial on [GoaT-Wiki](https://github.com/genomehubs/goat-data/wiki) or [YouTube channel](https://www.youtube.com/@genomesonatree)
+      description: Use this field if you would like to request a new, or an update to an existing, tutorial on the [GoaT-Wiki](https://github.com/genomehubs/goat-data/wiki) or [YouTube channel](https://www.youtube.com/@genomesonatree)
       options:
         - label: new_tutorial
         - label: clarification_of_existing_tutorial
@@ -21,17 +21,17 @@ body:
     id: description
     attributes:
       label: Description of request
-      description: Please provide a description of the issue.
+      description: Please describe what you would like the tutorial to cover.
     validations:
       required: true
   - type: input
     id:  format
     attributes:
       label: Tutorial Format
-      description: Please indicate your preferred method for the tutorial 
-      placeholder:  "decision-tree, video, text-description, etc."
+      description: Please indicate your preferred format for the tutorial 
+      placeholder:  "text description, video, decision tree, etc."
   - type: textarea
     id: context
     attributes:
       label: Additional context
-      description: Add any other context or screenshots about the feature request here.
+      description: Add any related context, specific examples or screenshots here.
