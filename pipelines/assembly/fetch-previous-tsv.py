@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import gzip
 import os
 import sys
 
@@ -63,9 +64,15 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
         print(f"Downloading {remote_file} to {local_file}")
         s3.download_fileobj(bucket_name, key, f)
 
-    with open(local_file, "r") as f:
-        line_count = sum(1 for _ in f)
-        print(f"Downloaded {line_count} lines to {local_file}")
+    # Check if the file is gzipped
+    if local_file.endswith(".gz"):
+        with gzip.open(local_file, "rt") as f:
+            line_count = sum(1 for _ in f)
+            print(f"Downloaded {line_count} lines to {local_file}")
+    else:
+        with open(local_file, "r") as f:
+            line_count = sum(1 for _ in f)
+            print(f"Downloaded {line_count} lines to {local_file}")
 
     return line_count
 
