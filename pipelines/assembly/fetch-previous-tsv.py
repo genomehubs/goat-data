@@ -37,7 +37,7 @@ def get_filenames(yaml_path: str, remote_path: str) -> tuple:
     return (local_file, remote_file)
 
 
-@task(retries=2, retry_delay_seconds=2)
+@task(retries=2, retry_delay_seconds=2, log_prints=True)
 def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     """
     Fetch the TSV file from the remote path.
@@ -55,6 +55,7 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
 
     # Fetch the TSV file from the remote path
     command = ["s3cmd", "get", remote_file, local_file]
+    print(command)
     result = subprocess.run(command)
     if result.returncode != 0:
         # Raise an error if the command fails
