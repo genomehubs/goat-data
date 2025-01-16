@@ -102,12 +102,12 @@ def compare_datasets_summary(local_path: str, remote_path: str) -> bool:
 
 @flow()
 def fetch_ncbi_datasets(root_taxid: str, file_path: str, remote_path: str) -> None:
-    fetch_ncbi_datasets_summary(root_taxid, file_path)
+    line_count = fetch_ncbi_datasets_summary(root_taxid, file_path)
     status = compare_datasets_summary(file_path, remote_path)
     emit_event(
-        event=f"datasets.{root_taxid}.completed",
-        resource={"prefect.resource.id": f"datasets.{root_taxid}"},
-        payload={"status": status},
+        event="update.ncbi.datasets.completed",
+        resource={"prefect.resource.id": f"fetch.datasets.{file_path}"},
+        payload={"line_count": line_count, "matches_previous": status},
     )
     return status
 
