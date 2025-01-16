@@ -6,6 +6,7 @@ import subprocess
 import sys
 
 from prefect import flow, task
+from prefect.events import emit_event
 
 
 @task(retries=2, retry_delay_seconds=2)
@@ -102,7 +103,13 @@ def compare_datasets_summary(local_path: str, remote_path: str) -> bool:
 @flow()
 def fetch_ncbi_datasets(root_taxid: str, file_path: str, remote_path: str) -> None:
     fetch_ncbi_datasets_summary(root_taxid, file_path)
-    return compare_datasets_summary(file_path, remote_path)
+    status = compare_datasets_summary(file_path, remote_path)
+    emit_event(
+        event=f"datasets.{root_taxid}.completed",
+        resource={"prefect.resource.id": f"datasets.{root_taxid}"},
+        payload={"status": status},
+    )
+    return status
 
 
 def parse_args():
