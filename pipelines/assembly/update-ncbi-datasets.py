@@ -99,7 +99,7 @@ def compare_datasets_summary(local_path: str, remote_path: str) -> bool:
     return local_md5 == remote_md5
 
 
-@flow(persist_result=True)
+@flow()
 def fetch_ncbi_datasets(root_taxid: str, file_path: str, remote_path: str) -> None:
     fetch_ncbi_datasets_summary(root_taxid, file_path)
     return compare_datasets_summary(file_path, remote_path)
