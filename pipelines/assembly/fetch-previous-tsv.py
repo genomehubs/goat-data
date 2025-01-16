@@ -2,9 +2,9 @@
 
 import argparse
 import os
-import subprocess
 import sys
 
+import boto3
 import yaml
 from genomehubs import utils as gh_utils
 from prefect import flow, task
@@ -40,7 +40,7 @@ def get_filenames(yaml_path: str, remote_path: str) -> tuple:
 @task(retries=2, retry_delay_seconds=2, log_prints=True)
 def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     """
-    Fetch the TSV file from the remote path.
+    Fetch the TSV file from the remote path using boto3.
 
     Args:
         remote_file (str): Path to the remote TSV file.
@@ -49,23 +49,20 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     Returns:
         int: Number of lines written to the local file.
     """
-    # Return 0 if the remote file does not exist
-    if subprocess.run(["s3cmd", "info", remote_file]).returncode != 0:
+    s3 = boto3.client("s3")
+    bucket_name, key = remote_file.replace("s3://", "").split("/", 1)
+
+    try:
+        s3.head_object(Bucket=bucket_name, Key=key)
+    except s3.exceptions.ClientError:
         return 0
 
-    # Fetch the TSV file from the remote path
-    command = ["s3cmd", "get", remote_file, local_file]
-    print(command)
-    result = subprocess.run(command)
-    if result.returncode != 0:
-        # Raise an error if the command fails
-        raise RuntimeError(f"Error fetching TSV file: {result.stderr}")
-    # Write to local_file and count lines while writing
-    line_count = 0
-    with open(local_file, "w") as f:
-        for line in result.stdout.splitlines():
-            f.write(line + "\n")
-            line_count += 1
+    with open(local_file, "wb") as f:
+        s3.download_fileobj(bucket_name, key, f)
+
+    with open(local_file, "r") as f:
+        line_count = sum(1 for _ in f)
+
     return line_count
 
 

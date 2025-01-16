@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 import argparse
+import hashlib
 import os
 import subprocess
 import sys
 
+import boto3
+from botocore.exceptions import ClientError
 from prefect import flow, task
 from prefect.events import emit_event
 
@@ -80,21 +83,36 @@ def compare_datasets_summary(local_path: str, remote_path: str) -> bool:
     if not os.path.exists(local_path):
         raise FileNotFoundError(f"Local file {local_path} does not exist")
 
+    s3 = boto3.client("s3")
+
+    # Extract bucket name and key from the S3 path
+    def parse_s3_path(s3_path):
+        if s3_path.startswith("s3://"):
+            s3_path = s3_path[5:]
+        bucket, key = s3_path.split("/", 1)
+        return bucket, key
+
+    bucket, key = parse_s3_path(remote_path)
+
     # Return false if the remote file does not exist
-    if subprocess.run(["s3cmd", "info", remote_path]).returncode != 0:
+    try:
+        s3.head_object(Bucket=bucket, Key=key)
+    except ClientError:
         return False
 
     # Generate md5sum of the local file
-    local_md5 = subprocess.run(
-        ["md5sum", local_path], capture_output=True, text=True
-    ).stdout.split()[0]
+    def generate_md5(file_path):
+        hash_md5 = hashlib.md5()
+        with open(file_path, "rb") as f:
+            for chunk in iter(lambda: f.read(4096), b""):
+                hash_md5.update(chunk)
+        return hash_md5.hexdigest()
+
+    local_md5 = generate_md5(local_path)
 
     # Generate md5sum of the remote file
-    remote_md5 = (
-        subprocess.run(["s3cmd", "info", remote_path], capture_output=True, text=True)
-        .stdout.splitlines()[1]
-        .split()[1]
-    )
+    remote_obj = s3.get_object(Bucket=bucket, Key=key)
+    remote_md5 = remote_obj["ETag"].strip('"')
 
     # Return True if the md5sums are the same
     return local_md5 == remote_md5
