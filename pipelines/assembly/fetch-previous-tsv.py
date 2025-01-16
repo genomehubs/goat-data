@@ -53,15 +53,19 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     bucket_name, key = remote_file.replace("s3://", "").split("/", 1)
 
     try:
+        print(f"Bucket name: {bucket_name}, Key: {key}")
         s3.head_object(Bucket=bucket_name, Key=key)
     except s3.exceptions.ClientError:
+        print(f"Remote file {remote_file} does not exist.")
         return 0
 
     with open(local_file, "wb") as f:
+        print(f"Downloading {remote_file} to {local_file}")
         s3.download_fileobj(bucket_name, key, f)
 
     with open(local_file, "r") as f:
         line_count = sum(1 for _ in f)
+        print(f"Downloaded {line_count} lines to {local_file}")
 
     return line_count
 
