@@ -38,7 +38,7 @@ def get_filenames(yaml_path: str, remote_path: str) -> tuple:
     return (local_file, remote_file)
 
 
-@task(retries=2, retry_delay_seconds=2, log_prints=True)
+@task(retries=2, retry_delay_seconds=2)
 def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     """
     Fetch the TSV file from the remote path using boto3.
@@ -54,25 +54,20 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     bucket_name, key = remote_file.replace("s3://", "").split("/", 1)
 
     try:
-        print(f"Bucket name: {bucket_name}, Key: {key}")
         s3.head_object(Bucket=bucket_name, Key=key)
     except s3.exceptions.ClientError:
-        print(f"Remote file {remote_file} does not exist.")
         return 0
 
     with open(local_file, "wb") as f:
-        print(f"Downloading {remote_file} to {local_file}")
         s3.download_fileobj(bucket_name, key, f)
 
     # Check if the file is gzipped
     if local_file.endswith(".gz"):
         with gzip.open(local_file, "rt") as f:
             line_count = sum(1 for _ in f)
-            print(f"Downloaded {line_count} lines to {local_file}")
     else:
         with open(local_file, "r") as f:
             line_count = sum(1 for _ in f)
-            print(f"Downloaded {line_count} lines to {local_file}")
 
     return line_count
 
@@ -94,17 +89,25 @@ def compare_headers(yaml_file: dict, local_file: str) -> bool:
         return False
 
     # Get the headers from the YAML file
-    config = gh_utils.load_yaml(yaml_file)
-    headers = gh_utils.set_headers(config)
     try:
-        headers = yaml_file["file"]["columns"]
+        config = gh_utils.load_yaml(yaml_file)
     except Exception as e:
         # Raise an error if reading the YAML file fails
         raise RuntimeError(f"Error reading YAML file: {e}") from e
 
+    try:
+        headers = gh_utils.set_headers(config)
+    except Exception as e:
+        # Raise an error if setting headers fails
+        raise RuntimeError(f"Error setting headers: {e}") from e
+
     # Get the headers from the local TSV file
-    with open(local_file, "r") as f:
-        local_headers = f.readline().strip().split("\t")
+    if local_file.endswith(".gz"):
+        with gzip.open(local_file, "rt") as f:
+            local_headers = f.readline().strip().split("\t")
+    else:
+        with open(local_file, "r") as f:
+            local_headers = f.readline().strip().split("\t")
 
     # Return True if the headers are the same
     return headers == local_headers
