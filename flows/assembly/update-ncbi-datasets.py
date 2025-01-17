@@ -12,7 +12,7 @@ from prefect import flow, task
 from prefect.events import emit_event
 
 
-@task(retries=2, retry_delay_seconds=2)
+@task(retries=2, retry_delay_seconds=2, log_prints=True)
 def fetch_ncbi_datasets_summary(
     root_taxid: str,
     file_path: str,
@@ -45,6 +45,7 @@ def fetch_ncbi_datasets_summary(
         raise RuntimeError(f"Error fetching datasets summary: {result.stderr}")
 
     try:
+        print(f"Writing datasets summary to file: {file_path}")
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         # Write to the file and count lines while writing
         line_count = 0
