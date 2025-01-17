@@ -28,8 +28,8 @@ deployments:
   - name: update-ncbi-datasets
     entrypoint: flows/assembly/update-ncbi-datasets.py:fetch_ncbi_datasets
     parameters:
-      root_taxid: "9608"
-      file_path: ${HOME}/tmp/test/ncbi_datasets_canidae.jsonl
+      root_taxid: "2759"
+      file_path: /home/ubuntu/tmp/test/ncbi_datasets_canidae.jsonl
       remote_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
     schedules:
       - *daily
@@ -47,4 +47,5 @@ deployments:
         parameters:
           yaml_path: "sources/assembly-data/ncbi_datasets_eukaryota.types.yaml"
           remote_path: "s3://goat/sources/assembly-data/"
+          work_dir: "/home/ubuntu/tmp/test/assembly-data"
     work_pool: *goat_data_work_pool

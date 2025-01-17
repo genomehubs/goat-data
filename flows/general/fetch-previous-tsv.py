@@ -13,13 +13,14 @@ from prefect.events import emit_event
 
 
 @task()
-def get_filenames(yaml_path: str, remote_path: str) -> tuple:
+def get_filenames(yaml_path: str, remote_path: str, work_dir: str) -> tuple:
     """
     Get local and remote filenames from the YAML and remote path.
 
     Args:
         yaml_path (str): Path to the YAML file.
         remote_path (str): Path to the remote TSV directory.
+        work_dir (str): Path to the working directory.
 
     Returns:
         tuple: Local and remote filenames.
@@ -32,6 +33,9 @@ def get_filenames(yaml_path: str, remote_path: str) -> tuple:
     except Exception as e:
         # Raise an error if reading the YAML file fails
         raise RuntimeError(f"Error reading YAML file: {e}") from e
+
+    # Append the working directory to the local filename
+    local_file = os.path.join(work_dir, local_file)
 
     # Get the remote filename from the remote path
     remote_file = os.path.join(remote_path, os.path.basename(local_file))
@@ -58,6 +62,8 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     except s3.exceptions.ClientError:
         return 0
 
+    # fetch the file
+    os.makedirs(os.path.dirname(local_file), exist_ok=True)
     with open(local_file, "wb") as f:
         s3.download_fileobj(bucket_name, key, f)
 
@@ -114,15 +120,16 @@ def compare_headers(yaml_file: dict, local_file: str) -> bool:
 
 
 @flow()
-def fetch_previous_tsv(yaml_path: str, remote_path: str) -> None:
+def fetch_previous_tsv(yaml_path: str, remote_path: str, work_dir: str) -> None:
     """
     Fetch the previous TSV file and compare headers.
 
     Args:
         yaml_path (str): Path to the YAML file.
         remote_path (str): Path to the remote TSV directory.
+        work_dir (str): Path to the working directory.
     """
-    (local_file, remote_file) = get_filenames(yaml_path, remote_path)
+    (local_file, remote_file) = get_filenames(yaml_path, remote_path, work_dir)
     line_count = fetch_tsv_file(remote_file, local_file)
     status = compare_headers(yaml_path, local_file)
     emit_event(
@@ -155,6 +162,13 @@ def parse_args():
         required=True,
         help="Path to the remote TSV directory.",
     )
+    parser.add_argument(
+        "-w",
+        "--work_dir",
+        type=str,
+        default=".",
+        help="Path to the working directory (default: current directory).",
+    )
     args = parser.parse_args()
     if not args.file_path:
         print("Error: file_path is required.", file=sys.stderr)
@@ -169,4 +183,5 @@ if __name__ == "__main__":
     fetch_previous_tsv(
         yaml_path=args.file_path,
         remote_path=args.remote_path,
+        work_dir=args.work_dir,
     )
