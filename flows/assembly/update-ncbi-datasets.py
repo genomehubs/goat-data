@@ -127,7 +127,7 @@ def fetch_ncbi_datasets(root_taxid: str, file_path: str, remote_path: str) -> No
         resource={
             "prefect.resource.id": f"fetch.datasets.{file_path}",
             "prefect.resource.type": "ncbi.datasets",
-            "prefect.resource.matches.previous": status,
+            "prefect.resource.matches.previous": "yes" if status else "no",
         },
         payload={"line_count": line_count, "matches_previous": status},
     )

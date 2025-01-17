@@ -127,7 +127,11 @@ def fetch_previous_tsv(yaml_path: str, remote_path: str) -> None:
     status = compare_headers(yaml_path, local_file)
     emit_event(
         event="fetch.previous.tsv.completed",
-        resource={"prefect.resource.id": f"fetch.previous.{yaml_path}"},
+        resource={
+            "prefect.resource.id": f"fetch.previous.{yaml_path}",
+            "prefect.resource.type": "fetch.previous",
+            "prefect.resource.matches.previous": "yes" if status else "no",
+        },
         payload={"line_count": line_count, "headers_match": status},
     )
     return status

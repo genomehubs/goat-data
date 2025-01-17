@@ -32,7 +32,8 @@ deployments:
       root_taxid: "2759"
       file_path: test/ncbi_datasets_canidae.jsonl
       remote_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
-    schedule: *daily
+    schedules:
+      daily: *daily
     work_pool: *goat_data_work_pool
 
   - name: fetch-previous-tsv
@@ -44,7 +45,7 @@ deployments:
       - enabled: true
         match:
           prefect.resource.type: ncbi.datasets
-          prefect.resource.matches.previous: false
+          prefect.resource.matches.previous: "no"
         expect:
           - update.ncbi.datasets.finished
         parameters:
