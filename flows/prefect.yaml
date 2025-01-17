@@ -21,9 +21,9 @@ definitions:
       work_queue_name: default
   schedules:
     daily: &daily
-      cron: 0 0 * * 1-6
+      cron: "0 0 * * 1-6"
     weekly: &weekly
-      cron: 0 0 * * 1
+      cron: "0 0 * * 1"
 
 deployments:
   - name: update-ncbi-datasets
@@ -32,15 +32,14 @@ deployments:
       root_taxid: "2759"
       file_path: test/ncbi_datasets_canidae.jsonl
       remote_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
-    schedules:
-      daily: *daily
+    schedules: *daily
     work_pool: *goat_data_work_pool
 
   - name: fetch-previous-tsv
     entrypoint: flows/general/fetch-previous-tsv.py:fetch_previous_tsv
     parameters:
-      yaml_path: null
-      remote_path: null
+      yaml_path:
+      remote_path:
     triggers:
       - enabled: true
         match:
