@@ -9,6 +9,7 @@ push: null
 # runtime steps
 pull:
   - prefect.deployments.steps.git_clone:
+      id: clone-step
       repository: https://github.com/genomehubs/goat-data.git
       branch: feature/assembly-pipelines
   - prefect.deployments.steps.set_working_directory:
@@ -27,7 +28,7 @@ definitions:
 
 deployments:
   - name: update-ncbi-datasets
-    entrypoint: flows/assembly/update-ncbi-datasets.py:fetch_ncbi_datasets
+    entrypoint: "{{ clone-step.directory }}/flows/assembly/update-ncbi-datasets.py:fetch_ncbi_datasets"
     parameters:
       root_taxid: "2759"
       file_path: test/ncbi_datasets_canidae.jsonl
@@ -37,7 +38,7 @@ deployments:
     work_pool: *goat_data_work_pool
 
   - name: fetch-previous-tsv
-    entrypoint: flows/general/fetch-previous-tsv.py:fetch_previous_tsv
+    entrypoint: "{{ clone-step.directory }}/flows/general/fetch-previous-tsv.py:fetch_previous_tsv"
     triggers:
       - enabled: true
         match:
