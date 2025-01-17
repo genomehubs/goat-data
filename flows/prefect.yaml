@@ -38,9 +38,6 @@ deployments:
 
   - name: fetch-previous-tsv
     entrypoint: flows/general/fetch-previous-tsv.py:fetch_previous_tsv
-    parameters:
-      yaml_path:
-      remote_path:
     triggers:
       - enabled: true
         match:
