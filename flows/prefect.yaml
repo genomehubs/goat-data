@@ -32,7 +32,8 @@ deployments:
       root_taxid: "2759"
       file_path: test/ncbi_datasets_canidae.jsonl
       remote_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
-    schedules: *daily
+    schedules:
+      - *daily
     work_pool: *goat_data_work_pool
 
   - name: fetch-previous-tsv
