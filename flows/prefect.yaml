@@ -1,0 +1,53 @@
+# generic metadata
+prefect-version: 3.1.12
+name: goat-data-import
+
+# preparation steps
+build: null
+push: null
+
+# runtime steps
+pull:
+  - prefect.deployments.steps.git_clone:
+    repository: https://github.com/genomehubs/goat-data.git
+    branch: feature/assembly-pipeline
+  - prefect.deployments.steps.set_working_directory:
+    directory: /home/ubuntu/prefect/deployments/goat-data-import
+
+definitions:
+  work_pools:
+    goat_data_work_pool: &goat_data_work_pool
+      name: goat-data
+      work_queue_name: default
+  schedules:
+    daily: &daily
+      cron: 0 0 * * 1-6
+    weekly: &weekly
+      cron: 0 0 * * 1
+
+deployments:
+  - name: update-ncbi-datasets
+    entrypoint: flows/assembly/update-ncbi-datasets.py:fetch_ncbi_datasets
+    parameters:
+      root_taxid: 2759
+      file_path: test/ncbi_datasets_canidae.jsonl
+      remote_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
+    schedule: *daily
+    work_pool: *goat_data_work_pool
+
+  - name: fetch-previous-tsv
+    entrypoint: flows/general/fetch-previous-tsv.py:fetch_previous_tsv
+    parameters:
+      yaml_path: null
+      remote_path: null
+    triggers:
+      - enabled: true
+        match:
+          prefect.resource.type: ncbi.datasets
+          prefect.resource.matches.previous: false
+        expect:
+          - update.ncbi.datasets.finished
+        parameters:
+          yaml_path: "sources/assembly-data/ncbi_datasets_eukaryota.types.yaml"
+          remote_path: "s3://goat/sources/assembly-data/"
+    work_pool: *goat_data_work_pool

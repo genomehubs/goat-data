@@ -123,8 +123,12 @@ def fetch_ncbi_datasets(root_taxid: str, file_path: str, remote_path: str) -> No
     line_count = fetch_ncbi_datasets_summary(root_taxid, file_path)
     status = compare_datasets_summary(file_path, remote_path)
     emit_event(
-        event="update.ncbi.datasets.completed",
-        resource={"prefect.resource.id": f"fetch.datasets.{file_path}"},
+        event="update.ncbi.datasets.finished",
+        resource={
+            "prefect.resource.id": f"fetch.datasets.{file_path}",
+            "prefect.resource.type": "ncbi.datasets",
+            "prefect.resource.matches.previous": status,
+        },
         payload={"line_count": line_count, "matches_previous": status},
     )
     return status
