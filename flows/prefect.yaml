@@ -10,7 +10,7 @@ push: null
 pull:
   - prefect.deployments.steps.git_clone:
     repository: https://github.com/genomehubs/goat-data.git
-    branch: feature/assembly-pipeline
+    branch: feature/assembly-pipelines
   - prefect.deployments.steps.set_working_directory:
     directory: /home/ubuntu/prefect/deployments/goat-data-import
 
@@ -29,7 +29,7 @@ deployments:
   - name: update-ncbi-datasets
     entrypoint: flows/assembly/update-ncbi-datasets.py:fetch_ncbi_datasets
     parameters:
-      root_taxid: 2759
+      root_taxid: "2759"
       file_path: test/ncbi_datasets_canidae.jsonl
       remote_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
     schedule: *daily
