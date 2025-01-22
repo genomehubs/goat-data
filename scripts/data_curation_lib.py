@@ -1,0 +1,192 @@
+import numpy as np
+import pandas as pd
+pd.set_option('future.no_silent_downcasting', True)
+
+from datetime import datetime
+
+# Helper function to handle file reading with error handling
+def safe_read_csv(file_path, delimiter="\t", **kwargs):
+    try:
+        return pd.read_csv(file_path, delimiter=delimiter, **kwargs)
+    except Exception as e:
+        print(f"Error reading file {file_path}: {e}")
+        return pd.DataFrame()
+
+# Open private TSV file
+def open_private_tsv(private_link_token):
+    return safe_read_csv(
+        private_link_token,
+        usecols=["project_acronym", "published_url", "start_header_line"],
+        dtype=object,
+    )
+
+# Open public TSV file
+def open_public_tsv(public_url):
+    return safe_read_csv(
+        public_url,
+        usecols=["project_acronym", "published_url", "start_header_line"],
+        dtype=object,
+    )
+
+# Open Google Spreadsheet
+def open_google_spreadsheet(acronym, file_link, header_index):
+    project_table = safe_read_csv(
+        file_link,
+        header=header_index,
+        dtype=object,
+        encoding="utf-8",
+    )
+    project_table.rename(columns={"#NCBI_taxon_id": "NCBI_taxon_id"}, inplace=True)
+    project_table["project"] = acronym.upper()
+    return project_table
+
+# Open source CSV
+def open_source_csv(acronym, file_link, header_index):
+    project_table = safe_read_csv(
+        file_link,
+        header=header_index,
+        dtype=object,
+    )
+    project_table.rename(columns={"#NCBI_taxon_id": "NCBI_taxon_id"}, inplace=True)
+    project_table["project"] = acronym.upper()
+    return project_table
+
+# General cleanup for table
+def general_cleanup_for_table(project_table):
+    project_table = project_table.replace(r"^\s*$", np.nan, regex=True).infer_objects()
+    project_table = project_table.replace(r"^ +| +$", "", regex=True)
+    project_table.replace("publication_available", "published", inplace=True)
+    project_table.replace("-", "", inplace=True)
+    project_table.dropna(how="all", axis=1, inplace=True)
+    project_table.dropna(how="all", axis=0, inplace=True)
+    return project_table
+
+# Cleanup headers
+def cleanup_headers_specific_units(project_table):
+    project_table.columns = (
+        project_table.columns
+        .str.replace(" ", "_")
+        .str.replace("\\(", "", regex=True)
+        .str.replace("\\)", "", regex=True)
+        .str.lower()
+    )
+    return project_table
+
+# Expand target status
+def expand_target_status(project_table, acronym):
+    target_status = ["long_list", "family_representative", "other_priority"]
+    acronym_lower = acronym.lower()
+
+    for status in target_status:
+        if status not in project_table:
+            project_table[status] = pd.Series(dtype="object")
+
+    project_table["long_list"] = acronym
+    project_table["family_representative"] = project_table["family_representative"].astype(object)
+    project_table["other_priority"] = project_table["other_priority"].astype(object)
+
+    project_table.loc[
+        project_table["target_list_status"] == f"{acronym_lower}_family_representative",
+        "family_representative"
+    ] = acronym
+    project_table.loc[
+        project_table["target_list_status"] == f"{acronym_lower}_other_priority",
+        "other_priority"
+    ] = acronym
+    return project_table
+
+# Reduce sequencing status
+def reduce_sequencing_status(project_table, acronym):
+    acronym_lower = acronym.lower()
+    status_mapping = {
+        f"{acronym_lower}_published": "published",
+        f"{acronym_lower}_insdc_open": "insdc_open",
+        f"{acronym_lower}_open": "open",
+        f"{acronym_lower}_insdc_submitted": "in_progress",
+        f"{acronym_lower}_in_assembly": "in_progress",
+        f"{acronym_lower}_data_generation": "in_progress",
+        f"{acronym_lower}_in_progress": "in_progress",
+        f"{acronym_lower}_sample_acquired": "sample_acquired",
+        f"{acronym_lower}_sample_collected": "sample_collected",
+    }
+    project_table["sequencing_status"].replace(status_mapping, inplace=True)
+    return project_table
+
+# Create status columns
+def create_status_column(project_table, acronym):
+    seq_statuses = [
+        "sample_collected", "sample_acquired", "in_progress", "data_generation",
+        "in_assembly", "insdc_submitted", "open", "insdc_open", "published",
+    ]
+
+    for status in seq_statuses:
+        if status not in project_table:
+            project_table[status] = pd.Series(dtype="object")
+
+    for status in seq_statuses:
+        project_table[status] = project_table[status].astype(object)
+        project_table.loc[project_table["sequencing_status"] == status, status] = acronym
+    return project_table
+
+# Expand sequencing status
+def expand_sequencing_status(project_table, acronym):
+    status_order = [
+        "published", "insdc_open", "open", "in_progress", "data_generation",
+        "in_assembly", "sample_acquired", "sample_collected"
+    ]
+
+    for i in range(len(status_order) - 1):
+        project_table[status_order[i + 1]] = project_table[status_order[i + 1]].astype(object)
+        project_table.loc[project_table[status_order[i]] == acronym, status_order[i + 1]] = acronym
+    return project_table
+
+# Create mandatory columns
+def create_mandatory_columns(project_table):
+    mandatory_fields = [
+        "ncbi_taxon_id", "species", "family", "synonym",
+        "publication_id", "contributing_project_lab",
+    ]
+
+    for field in mandatory_fields:
+        if field not in project_table:
+            project_table[field] = np.nan
+    return project_table
+
+# Export TSV file
+def export_expanded_tsv(project_table, acronym):
+    file_name = f"{acronym}_expanded.tsv"
+    try:
+        project_table.to_csv(file_name, sep="\t", index=False)
+        print(f"File saved as {file_name}")
+    except Exception as e:
+        print(f"Error exporting file {file_name}: {e}")
+
+# Full processing pipeline for spreadsheets
+def processing_schema_2_5_lists(acronym, url, start_row):
+    print(f"Opening {acronym} URL...")
+    project_table = open_google_spreadsheet(acronym, url, start_row)
+    print(f"Cleaning up {acronym} table...")
+    project_table = general_cleanup_for_table(project_table)
+    project_table = cleanup_headers_specific_units(project_table)
+    print(f"Expanding {acronym} target status...")
+    project_table = expand_target_status(project_table, acronym)
+    project_table = create_status_column(project_table, acronym)
+    print(f"Expanding {acronym} sequencing status...")
+    project_table = expand_sequencing_status(project_table, acronym)
+    print(f"Saving {acronym} to file...")
+    export_expanded_tsv(project_table, acronym)
+
+# Full processing pipeline for CSV files
+def processing_csv_lists(acronym, url, start_row):
+    print(f"Opening {acronym} URL...")
+    project_table = open_source_csv(acronym, url, start_row)
+    print(f"Cleaning up {acronym} table...")
+    project_table = general_cleanup_for_table(project_table)
+    project_table = cleanup_headers_specific_units(project_table)
+    print(f"Expanding {acronym} target status...")
+    project_table = expand_target_status(project_table, acronym)
+    project_table = create_status_column(project_table, acronym)
+    print(f"Expanding {acronym} sequencing status...")
+    project_table = expand_sequencing_status(project_table, acronym)
+    print(f"Saving {acronym} to file...")
+    export_expanded_tsv(project_table, acronym)
