@@ -19,8 +19,9 @@ def get_from_source(
             writer = csv.writer(output_file, delimiter="\t", lineterminator="\n")
             writer.writerow(fieldnames)
             writer.writerows(rows)
-    except Exception:
+    except Exception as exc:
         print(f"something has gone wrong: {output_filename}")
+        print(format_exc(exc))
         try:
             open(f"{output_filename}.failed", "x")
         except FileExistsError:
