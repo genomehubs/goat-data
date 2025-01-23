@@ -35,6 +35,7 @@ defaults:
         - erga-bge
         - erga-ch
         - erga-pil
+        - erga-com
         - eurofish
         - ffi
         - fish
@@ -118,8 +119,10 @@ defaults:
         description: "ERGA Biodiversity Genomics Europe (click to view GoaT project page)"
       erga-ch:
         description: "ERGA Switzerland (click to view GoaT project page)"
+      erga-com:
+        description: "ERGA Community Genomes (click to view GoaT project page)"
       erga-pil:
-        description: "ERGA Pilot (click to view GoaT project page)"
+        description: "ERGA Pilot (click to view GoaT project page)"      
       eurofish:
         description: "EUROFISH (click to view GoaT project page)"
       gaga:

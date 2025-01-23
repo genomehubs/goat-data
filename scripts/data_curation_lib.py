@@ -74,24 +74,31 @@ def cleanup_headers_specific_units(project_table):
 
 # Expand target status
 def expand_target_status(project_table, acronym):
-    target_status = ["long_list", "family_representative", "other_priority"]
-    acronym_lower = acronym.lower()
-
-    for status in target_status:
-        if status not in project_table:
-            project_table[status] = pd.Series(dtype="object")
-
+    possible_target_status = ["long_list", "family_representative", "other_priority"]
+    for item in possible_target_status:
+        if item not in project_table:
+            project_table[item] = np.nan
+    
     project_table["long_list"] = acronym
-    project_table["family_representative"] = project_table["family_representative"].astype(object)
-    project_table["other_priority"] = project_table["other_priority"].astype(object)
 
     project_table.loc[
-        project_table["target_list_status"] == f"{acronym_lower}_family_representative",
-        "family_representative"
+        project_table["target_list_status"]
+        == acronym.lower() + "_family_representative",
+        "family_representative",
     ] = acronym
+
     project_table.loc[
-        project_table["target_list_status"] == f"{acronym_lower}_other_priority",
-        "other_priority"
+        project_table["target_list_status"] == acronym.lower() + "_other_priority",
+        "other_priority",
+    ] = acronym
+
+    project_table.loc[
+        project_table["target_list_status"] == "family_representative",
+        "family_representative",
+    ] = acronym
+    
+    project_table.loc[
+        project_table["target_list_status"] == "other_priority", "other_priority"
     ] = acronym
     return project_table
 

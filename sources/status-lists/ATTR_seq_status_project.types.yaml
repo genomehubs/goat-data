@@ -119,6 +119,9 @@ attributes:
   sequencing_status_erga-ch:
     description: Sequencing status for ERGA Switzerland Project
     display_name: Sequencing status ERGA-CH
+  sequencing_status_erga-com:
+    description: Sequencing status for ERGA Community Genomes
+    display_name: Sequencing status ERGA-COM  
   sequencing_status_erga-pil:
     description: Sequencing status for ERGA Pilot Project
     display_name: Sequencing status ERGA-PIL

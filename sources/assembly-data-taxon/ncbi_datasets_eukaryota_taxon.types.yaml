@@ -40,6 +40,7 @@ attributes:
       PRJEB61747: ERGA-BGE
       PRJEB49197: ERGA-CH
       PRJEB47820: ERGA-PIL
+      PRJEB66264: ERGA-COM
       PRJNA393850: EUROFISH
       PRJNA1098046: FFI
       PRJNA1098053: FISH
@@ -92,6 +93,7 @@ attributes:
       PRJEB65317: EBPN
       PRJNA712951: ENDEMIXIT
       PRJEB43510: ERGA
+      PRJEB66264: ERGA-COM
       PRJEB47820: ERGA-PIL
       PRJNA393850: EUROFISH
       PRJNA1098046: FFI
@@ -306,6 +308,13 @@ attributes:
       - ;
     translate:
       PRJEB49197: insdc_open
+  sequencing_status_erga-com:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB66264: insdc_open
   sequencing_status_erga-pil:
     display_group: sequencing_status
     header: bioProjectAccession
