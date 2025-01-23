@@ -1,6 +1,7 @@
 # import requests
 import csv
 import sys
+from traceback import format_exc
 
 
 def get_from_source(
