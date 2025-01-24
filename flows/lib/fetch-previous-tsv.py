@@ -118,8 +118,6 @@ def fetch_previous_tsv(yaml_path: str, remote_path: str, work_dir: str) -> None:
     """
     config = utils.load_config(yaml_path)
     (local_file, remote_file) = get_filenames(yaml_path, remote_path, work_dir)
-    print(local_file, remote_file)
-    exit()
     line_count = fetch_tsv_file(remote_file, local_file)
     status = compare_headers(config, local_file)
     emit_event(
