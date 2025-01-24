@@ -3,22 +3,23 @@
 import argparse
 import gzip
 import os
+import shutil
 
 import boto3
-import yaml
 from prefect import flow, task
 from prefect.events import emit_event
 
 from . import utils
+from .utils import Config
 
 
 @task()
-def get_filenames(yaml_path: str, remote_path: str, work_dir: str) -> tuple:
+def get_filenames(config: Config, remote_path: str, work_dir: str) -> tuple:
     """
     Get local and remote filenames from the YAML and remote path.
 
     Args:
-        yaml_path (str): Path to the YAML file.
+        config (Config): YAML file as a dictionary.
         remote_path (str): Path to the remote TSV directory.
         work_dir (str): Path to the working directory.
 
@@ -26,13 +27,11 @@ def get_filenames(yaml_path: str, remote_path: str, work_dir: str) -> tuple:
         tuple: Local and remote filenames.
     """
     try:
-        # Get the local filename from the file.name attribute in the YAML
-        with open(yaml_path, "r") as f:
-            yaml_file = yaml.safe_load(f)
-            local_file = yaml_file["file"]["name"]
+        # Get the local filename from the config.file.name attribute
+        local_file = config.config["file"]["name"]
     except Exception as e:
         # Raise an error if reading the YAML file fails
-        raise RuntimeError(f"Error reading YAML file: {e}") from e
+        raise RuntimeError("Error reading file name from config") from e
 
     # Append the working directory to the local filename
     local_file = os.path.join(work_dir, local_file)
@@ -106,6 +105,27 @@ def compare_headers(config: utils.Config, local_file: str) -> bool:
     return config.headers == local_headers
 
 
+@task()
+def copy_yaml_files(yaml_path: str, config: utils.Config, work_dir: str) -> None:
+    """
+    Copy the YAML files to the working directory.
+
+    Args:
+        yaml_path (str): Path to the YAML file.
+        config (Config): YAML file as a dictionary.
+        work_dir (str): Path to the working directory.
+    """
+    # Copy the file at yaml_path to the working directory
+    shutil.copy(yaml_path, work_dir)
+
+    # Copy any dependencies to the working directory
+    if "needs" in config.config["file"]:
+        source_dir = os.path.dirname(yaml_path)
+        for file in config.config["file"]["needs"]:
+            file_path = os.path.join(source_dir, file)
+            shutil.copy(file_path, work_dir)
+
+
 @flow()
 def fetch_previous_tsv(yaml_path: str, remote_path: str, work_dir: str) -> None:
     """
@@ -117,8 +137,9 @@ def fetch_previous_tsv(yaml_path: str, remote_path: str, work_dir: str) -> None:
         work_dir (str): Path to the working directory.
     """
     config = utils.load_config(yaml_path)
-    (local_file, remote_file) = get_filenames(yaml_path, remote_path, work_dir)
+    (local_file, remote_file) = get_filenames(config, remote_path, work_dir)
     line_count = fetch_tsv_file(remote_file, local_file)
+    copy_yaml_files(yaml_path, config, work_dir)
     status = compare_headers(config, local_file)
     emit_event(
         event="fetch.previous.tsv.completed",
