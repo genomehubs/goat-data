@@ -26,7 +26,7 @@ definitions:
 
 deployments:
   - name: update-ncbi-datasets
-    entrypoint: flows/lib/update_ncbi_datasets.py:fetch_ncbi_datasets
+    entrypoint: flows/lib/update_ncbi_datasets.py:update_ncbi_datasets
     parameters:
       root_taxid: "9608"
       file_path: /home/ubuntu/tmp/test/assembly-data/ncbi_datasets_canidae.jsonl

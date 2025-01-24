@@ -120,7 +120,7 @@ def compare_datasets_summary(local_path: str, remote_path: str) -> bool:
 
 
 @flow()
-def fetch_ncbi_datasets(root_taxid: str, file_path: str, remote_path: str) -> None:
+def update_ncbi_datasets(root_taxid: str, file_path: str, remote_path: str) -> None:
     line_count = fetch_ncbi_datasets_summary(root_taxid, file_path)
     status = compare_datasets_summary(file_path, remote_path)
     emit_event(
@@ -170,7 +170,7 @@ if __name__ == "__main__":
     """Run the flow."""
     args = parse_args()
 
-    fetch_ncbi_datasets(
+    update_ncbi_datasets(
         root_taxid=args.root_taxid,
         file_path=args.file_path,
         remote_path=args.remote_path,
