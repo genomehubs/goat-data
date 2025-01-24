@@ -9,60 +9,32 @@ from collections import defaultdict
 from collections.abc import Generator
 from typing import Optional
 
-import assembly_methods as am
 from genomehubs import utils as gh_utils
 from prefect import flow, task
 from prefect.runtime.task_run import run_count
 
-
-class Config:
-    def __init__(self, config_file, feature_file=None):
-        self.config = gh_utils.load_yaml(config_file)
-        self.meta = gh_utils.get_metadata(self.config, config_file)
-        self.headers = gh_utils.set_headers(self.config)
-        self.parse_fns = gh_utils.get_parse_functions(self.config)
-        try:
-            self.previous_parsed = gh_utils.load_previous(
-                self.meta["file_name"], "genbankAccession", self.headers
-            )
-        except Exception:
-            self.previous_parsed = {}
-        self.feature_file = feature_file
-        if feature_file is not None:
-            self.feature_headers = am.set_feature_headers()
-            try:
-                self.previous_features = gh_utils.load_previous(
-                    feature_file, "assembly_id", self.feature_headers
-                )
-            except Exception:
-                self.previous_features = {}
+from . import utils
+from .utils import Config
 
 
-@task()
-def load_config(config_file: str, feature_file: Optional[str] = None):
-    return Config(config_file, feature_file)
+def parse_assembly_report(jsonl_path: str) -> Generator[dict, None, None]:
+    """
+    Parses an NCBI datasets JSONL file and yields each assembly report.
+
+    Args:
+        jsonl_path (str): The path to the JSONL file.
+
+    Yields:
+        dict: The assembly report data as a dictionary.
+    """
+    try:
+        with open(jsonl_path, "r") as f:
+            for line in f:
+                yield utils.convert_keys_to_camel_case(json.loads(line))
+    except Exception as e:
+        raise RuntimeError(f"Error reading JSONL file: {e}") from e
 
 
-@task()
-def fetch_ncbi_datasets_summary(root_taxid: str):
-    command = [
-        "datasets",
-        "summary",
-        "genome",
-        "taxon",
-        root_taxid,
-        "--as-json-lines",
-    ]
-    result = subprocess.run(command, capture_output=True, text=True)
-    if result.returncode != 0:
-        raise RuntimeError(f"Error fetching datasets summary: {result.stderr}")
-    for line in result.stdout.split("\n"):
-        if not line:
-            continue
-        yield am.convert_keys_to_camel_case(json.loads(line))
-
-
-@task()
 def fetch_ncbi_datasets_sequences(
     accession: str, timeout: int = 30
 ) -> Generator[dict, None, None]:
@@ -99,7 +71,6 @@ def fetch_ncbi_datasets_sequences(
         yield json.loads(line)
 
 
-@task()
 def process_assembly_report(
     report: dict, previous_report: dict, config: Config, parsed: dict
 ):
@@ -188,7 +159,7 @@ def fetch_and_parse_sequence_report(data: dict):
     accession = data["accession"]
     span = int(data["assemblyStats"]["totalSequenceLength"])
     level = data["assemblyInfo"]["assemblyLevel"]
-    if level == "Contig" or level == "Scaffold":
+    if level in ["Contig", "Scaffold"]:
         return
     organelles: defaultdict[str, list] = defaultdict(list)
     try:
@@ -197,29 +168,37 @@ def fetch_and_parse_sequence_report(data: dict):
         for seq in fetch_ncbi_datasets_sequences(
             accession, timeout=120 * (run_count + 1)
         ):
-            if am.is_non_nuclear(seq):
+            if utils.is_non_nuclear(seq):
                 organelles[seq["chr_name"]].append(seq)
-            elif am.is_assigned_to_chromosome(seq):
+            elif utils.is_assigned_to_chromosome(seq):
                 assigned_span += seq["length"]
-                if am.is_chromosome(seq):
+                if utils.is_chromosome(seq):
                     chromosomes.append(seq)
     except subprocess.TimeoutExpired:
         print(f"ERROR: Timeout fetching sequence report for {accession}")
         print(chromosomes)
         return
-    am.add_organelle_entries(data, organelles)
-    am.check_ebp_criteria(data, span, chromosomes, assigned_span)
-    am.add_chromosome_entries(data, chromosomes)
+    utils.add_organelle_entries(data, organelles)
+    utils.check_ebp_criteria(data, span, chromosomes, assigned_span)
+    utils.add_chromosome_entries(data, chromosomes)
 
 
-@task(log_prints=True)
 def add_report_to_parsed_reports(
     parsed: dict, report: dict, config: Config, biosamples: dict
 ):
+    """
+    Add the report to the parsed reports.
+
+    Args:
+        parsed (dict): A dictionary containing parsed data.
+        report (dict): A dictionary containing the assembly report.
+        config (Config): A Config object containing the configuration data.
+        biosamples (dict): A dictionary containing biosample information.
+    """
     accession = report["processedAssemblyInfo"]["genbankAccession"]
     row = gh_utils.parse_report_values(config.parse_fns, report)
     if accession not in parsed:
-        am.update_organelle_info(report, row)
+        utils.update_organelle_info(report, row)
     if "linkedAssembly" not in row or row["linkedAssembly"] is None:
         row["linkedAssembly"] = []
     biosample = row.get("biosampleAccession", [])
@@ -240,8 +219,15 @@ def add_report_to_parsed_reports(
     return parsed
 
 
-@task()
 def use_previous_report(processed_report: dict, parsed: dict, config: Config):
+    """
+    Use the previous report if the current report is the same as the previous one.
+
+    Args:
+        processed_report (dict): A dictionary containing processed assembly data.
+        parsed (dict): A dictionary containing parsed data.
+        config (Config): A Config object containing the configuration data.
+    """
     accession = processed_report["processedAssemblyInfo"]["genbankAccession"]
     if accession in config.previous_parsed:
         previous_report = config.previous_parsed[accession]
@@ -254,7 +240,7 @@ def use_previous_report(processed_report: dict, parsed: dict, config: Config):
                 and accession in config.previous_features
                 and accession not in parsed
             ):
-                am.append_to_tsv(
+                utils.append_to_tsv(
                     config.previous_features[accession],
                     config.feature_headers,
                     {"file_name": config.feature_file},
@@ -266,13 +252,25 @@ def use_previous_report(processed_report: dict, parsed: dict, config: Config):
 
 @task()
 def set_up_feature_file(config: Config):
+    """
+    Set up the feature file.
+
+    Args:
+        config (Config): A Config object containing the configuration data.
+    """
     gh_utils.write_tsv({}, config.feature_headers, {"file_name": config.feature_file})
 
 
-@task()
 def append_features(processed_report: dict, config: Config):
+    """
+    Append features to the feature file.
+
+    Args:
+        processed_report (dict): A dictionary containing processed assembly data.
+        config (Config): A Config object containing the configuration data.
+    """
     if config.feature_file is not None and "chromosomes" in processed_report:
-        am.append_to_tsv(
+        utils.append_to_tsv(
             processed_report["chromosomes"],
             config.feature_headers,
             {"file_name": config.feature_file},
@@ -281,6 +279,13 @@ def append_features(processed_report: dict, config: Config):
 
 @task(log_prints=True)
 def set_representative_assemblies(parsed: dict, biosamples: dict):
+    """
+    Set the representative assembly for each biosample.
+
+    Args:
+        parsed (dict): A dictionary containing parsed data.
+        biosamples (dict): A dictionary containing biosample information.
+    """
     for accessions in biosamples.values():
         most_recent = None
         primary_assembly = None
@@ -300,20 +305,28 @@ def set_representative_assemblies(parsed: dict, biosamples: dict):
             parsed[most_recent]["biosampleRepresentative"] = 1
 
 
-@flow(log_prints=True)
-def fetch_and_parse_ncbi_datasets(
-    root_taxid: str, config_file: str, feature_file: Optional[str] = None
+@task()
+def process_assembly_reports(
+    jsonl_path: str,
+    config: Config,
+    biosamples: dict,
+    parsed: dict,
+    previous_report: dict,
 ):
-    config = load_config(
-        config_file=config_file,
-        feature_file=feature_file,
-    )
-    if feature_file is not None:
-        set_up_feature_file(config)
-    biosamples = {}
-    parsed = {}
-    previous_report = {}
-    for report in fetch_ncbi_datasets_summary(root_taxid=root_taxid):
+    """
+    Process assembly reports and fetch sequence reports.
+
+    Args:
+        jsonl_path (str): Path to the NCBI datasets JSONL file.
+        config (Config): A Config object containing the configuration data.
+        biosamples (dict): A dictionary containing biosample information.
+        parsed (dict): A dictionary containing parsed data.
+        previous_report (dict): A dictionary containing the previous assembly report.
+
+    Returns:
+        None
+    """
+    for report in parse_assembly_report(jsonl_path=jsonl_path):
         processed_report = process_assembly_report(
             report, previous_report, config, parsed
         )
@@ -323,12 +336,44 @@ def fetch_and_parse_ncbi_datasets(
         append_features(processed_report, config)
         add_report_to_parsed_reports(parsed, processed_report, config, biosamples)
         previous_report = processed_report
+
+
+@flow(log_prints=True)
+def parse_ncbi_datasets_assembly(
+    jsonl_path: str, config_file: str, feature_file: Optional[str] = None
+):
+    """
+    Parse NCBI datasets assembly data.
+
+    Args:
+        jsonl_path (str): Path to the NCBI datasets JSONL file.
+        config_file (str): Path to the YAML configuration file.
+        feature_file (str): Path to the feature file.
+    """
+    config = utils.load_config(
+        config_file=config_file,
+        feature_file=feature_file,
+    )
+    if feature_file is not None:
+        set_up_feature_file(config)
+    biosamples = {}
+    parsed = {}
+    previous_report = {}
+    process_assembly_reports(jsonl_path, config, biosamples, parsed, previous_report)
     set_representative_assemblies(parsed, biosamples)
     write_to_tsv(parsed, config)
 
 
-if __name__ == "__main__":
+def parse_args():
+    """Parse command-line arguments."""
     parser = argparse.ArgumentParser(description="Fetch and parse NCBI datasets.")
+    parser.add_argument(
+        "-j",
+        "--jsonl_path",
+        type=str,
+        required=True,
+        help="Path to the NCBI datasets JSONL file.",
+    )
     parser.add_argument(
         "-f",
         "--file_path",
@@ -336,20 +381,23 @@ if __name__ == "__main__":
         required=True,
         help="Path to the assembly data files (without extension).",
     )
-    parser.add_argument(
-        "-r",
-        "--root_taxid",
-        type=str,
-        default="2759",
-        help="Root taxonomic ID for fetching datasets (default: 2759).",
-    )
     args = parser.parse_args()
-    if not args.file_path:
-        print("Error: file_path is required.")
+
+    if not args.jsonl_path:
+        print("Error: jsonl_path is required.")
         sys.exit(1)
 
-    fetch_and_parse_ncbi_datasets(
-        root_taxid=args.root_taxid,
-        config_file=f"{args.file_path}.types.yaml",
-        feature_file=f"{args.file_path}.features.tsv",
+    if not args.file_stem:
+        print("Error: file_stem is required.")
+        sys.exit(1)
+    return args
+
+
+if __name__ == "__main__":
+    args = parse_args()
+
+    parse_ncbi_datasets_assembly(
+        jsonl_path=args.jsonl_path,
+        config_file=f"{args.file_stem}.types.yaml",
+        feature_file=f"{args.file_stem}.features.tsv",
     )

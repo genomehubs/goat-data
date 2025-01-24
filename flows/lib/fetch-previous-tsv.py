@@ -3,13 +3,13 @@
 import argparse
 import gzip
 import os
-import sys
 
 import boto3
 import yaml
-from genomehubs import utils as gh_utils
 from prefect import flow, task
 from prefect.events import emit_event
+
+from . import utils
 
 
 @task()
@@ -79,12 +79,12 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
 
 
 @task()
-def compare_headers(yaml_file: dict, local_file: str) -> bool:
+def compare_headers(config: utils.Config, local_file: str) -> bool:
     """
     Compare headers in the local and remote TSV files.
 
     Args:
-        yaml_file (dict): YAML file as a dictionary.
+        config (Config): YAML file as a dictionary.
         local_file (str): Path to the local TSV file.
 
     Returns:
@@ -93,19 +93,6 @@ def compare_headers(yaml_file: dict, local_file: str) -> bool:
     # If local file does not exist, return False
     if not os.path.exists(local_file):
         return False
-
-    # Get the headers from the YAML file
-    try:
-        config = gh_utils.load_yaml(yaml_file)
-    except Exception as e:
-        # Raise an error if reading the YAML file fails
-        raise RuntimeError(f"Error reading YAML file: {e}") from e
-
-    try:
-        headers = gh_utils.set_headers(config)
-    except Exception as e:
-        # Raise an error if setting headers fails
-        raise RuntimeError(f"Error setting headers: {e}") from e
 
     # Get the headers from the local TSV file
     if local_file.endswith(".gz"):
@@ -116,7 +103,7 @@ def compare_headers(yaml_file: dict, local_file: str) -> bool:
             local_headers = f.readline().strip().split("\t")
 
     # Return True if the headers are the same
-    return headers == local_headers
+    return config.headers == local_headers
 
 
 @flow()
@@ -129,9 +116,12 @@ def fetch_previous_tsv(yaml_path: str, remote_path: str, work_dir: str) -> None:
         remote_path (str): Path to the remote TSV directory.
         work_dir (str): Path to the working directory.
     """
+    config = utils.load_config(yaml_path)
     (local_file, remote_file) = get_filenames(yaml_path, remote_path, work_dir)
+    print(local_file, remote_file)
+    exit()
     line_count = fetch_tsv_file(remote_file, local_file)
-    status = compare_headers(yaml_path, local_file)
+    status = compare_headers(config, local_file)
     emit_event(
         event="fetch.previous.tsv.completed",
         resource={
@@ -169,11 +159,7 @@ def parse_args():
         default=".",
         help="Path to the working directory (default: current directory).",
     )
-    args = parser.parse_args()
-    if not args.file_path:
-        print("Error: file_path is required.", file=sys.stderr)
-        sys.exit(1)
-    return args
+    return parser.parse_args()
 
 
 if __name__ == "__main__":
@@ -181,7 +167,7 @@ if __name__ == "__main__":
     args = parse_args()
 
     fetch_previous_tsv(
-        yaml_path=args.file_path,
+        yaml_path=args.yaml_path,
         remote_path=args.remote_path,
         work_dir=args.work_dir,
     )

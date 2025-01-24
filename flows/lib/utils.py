@@ -1,6 +1,150 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 from typing import Optional
+
+from genomehubs import utils as gh_utils
+
+
+def set_feature_headers() -> list[str]:
+    """Set chromosome headers.
+
+    Returns:
+        list: The list of headers.
+    """
+    return [
+        "assembly_id",
+        "sequence_id",
+        "start",
+        "end",
+        "strand",
+        "length",
+        "midpoint",
+        "midpoint_proportion",
+        "seq_proportion",
+    ]
+
+
+class Config:
+    """
+    Configuration class for Genomehubs YAML parsing.
+    """
+
+    def __init__(self, config_file, feature_file=None):
+        """
+        Initialize the configuration class.
+
+        Args:
+            config_file (str): Path to the YAML configuration file.
+            feature_file (str): Path to the feature file.
+
+        Returns:
+            Config: The configuration class.
+        """
+        self.config = gh_utils.load_yaml(config_file)
+        self.meta = gh_utils.get_metadata(self.config, config_file)
+        self.headers = gh_utils.set_headers(self.config)
+        self.parse_fns = gh_utils.get_parse_functions(self.config)
+        try:
+            self.previous_parsed = gh_utils.load_previous(
+                self.meta["file_name"], "genbankAccession", self.headers
+            )
+        except Exception:
+            self.previous_parsed = {}
+        self.feature_file = feature_file
+        if feature_file is not None:
+            self.feature_headers = set_feature_headers()
+            try:
+                self.previous_features = gh_utils.load_previous(
+                    feature_file, "assembly_id", self.feature_headers
+                )
+            except Exception:
+                self.previous_features = {}
+
+
+def load_config(config_file: str, feature_file: Optional[str] = None) -> Config:
+    """
+    Load the configuration file.
+
+    Args:
+        config_file (str): Path to the YAML configuration file.
+        feature_file (str): Path to the feature file.
+
+    Returns:
+        Config: The configuration class.
+    """
+    return Config(config_file, feature_file)
+
+
+def format_entry(entry, key: str, meta: dict) -> str:
+    """
+    Formats a single entry in a dictionary, handling the case where the entry is a list.
+
+    Args:
+        entry (Union[str, list]): The entry to be formatted, which may be a single
+            value or a list of values.
+        key (str): The key associated with the entry.
+        meta (dict): A dictionary containing metadata, including a "separators"
+            dictionary that maps keys to separator strings.
+
+    Returns:
+        str: The formatted entry, where list elements are joined using the separator
+            specified in the "separators" dictionary.
+    """
+    if not isinstance(entry, list):
+        return str(entry)
+    if "separators" not in meta or isinstance(meta["separators"], str):
+        return ",".join([str(e) for e in entry if e is not None])
+    return (
+        meta["separators"].get(key, ",").join([str(e) for e in entry if e is not None])
+    )
+
+
+def append_to_tsv(headers: list[str], rows: list[dict], meta: dict):
+    """
+    Appends the provided rows to a TSV file with the specified file name.
+
+    Args:
+        headers (list[str]): A list of column headers.
+        rows (list[dict]): A list of dictionaries, where each dictionary represents a
+            row of data and the keys correspond to the column headers.
+        meta (dict): A dictionary containing metadata, including the "file_name" key
+            which specifies the output file name.
+    """
+    with open(meta["file_name"], "a") as f:
+        for row in rows:
+            if isinstance(row, dict):
+                f.write(
+                    "\t".join(
+                        [format_entry(row.get(col, []), col, meta) for col in headers]
+                    )
+                    + "\n"
+                )
+
+
+def convert_keys_to_camel_case(data: dict) -> dict:
+    """
+    Recursively converts all keys in a dictionary to camel case.
+
+    Args:
+        data (dict): The dictionary to convert.
+
+    Returns:
+        dict: The dictionary with keys converted to camel case.
+    """
+    converted_data = {}
+    if isinstance(data, list):
+        return [convert_keys_to_camel_case(item) for item in data]
+    elif not isinstance(data, dict):
+        return data
+    for key, value in data.items():
+        if isinstance(value, (dict, list)):
+            value = convert_keys_to_camel_case(value)
+        converted_key = "".join(
+            word.capitalize() if i > 0 else word
+            for i, word in enumerate(key.split("_"))
+        )
+        converted_data[converted_key] = value
+    return converted_data
 
 
 def set_organelle_name(seq: dict) -> Optional[str]:
@@ -292,94 +436,3 @@ def update_organelle_info(data: dict, row: dict) -> None:
                 }
             }
         )
-
-
-def set_feature_headers() -> list[str]:
-    """Set chromosome headers.
-
-    Returns:
-        list: The list of headers.
-    """
-    return [
-        "assembly_id",
-        "sequence_id",
-        "start",
-        "end",
-        "strand",
-        "length",
-        "midpoint",
-        "midpoint_proportion",
-        "seq_proportion",
-    ]
-
-
-def format_entry(entry, key: str, meta: dict) -> str:
-    """
-    Formats a single entry in a dictionary, handling the case where the entry is a list.
-
-    Args:
-        entry (Union[str, list]): The entry to be formatted, which may be a single
-            value or a list of values.
-        key (str): The key associated with the entry.
-        meta (dict): A dictionary containing metadata, including a "separators"
-            dictionary that maps keys to separator strings.
-
-    Returns:
-        str: The formatted entry, where list elements are joined using the separator
-            specified in the "separators" dictionary.
-    """
-    if not isinstance(entry, list):
-        return str(entry)
-    if "separators" not in meta or isinstance(meta["separators"], str):
-        return ",".join([str(e) for e in entry if e is not None])
-    return (
-        meta["separators"].get(key, ",").join([str(e) for e in entry if e is not None])
-    )
-
-
-def append_to_tsv(headers: list[str], rows: list[dict], meta: dict):
-    """
-    Appends the provided rows to a TSV file with the specified file name.
-
-    Args:
-        headers (list[str]): A list of column headers.
-        rows (list[dict]): A list of dictionaries, where each dictionary represents a
-            row of data and the keys correspond to the column headers.
-        meta (dict): A dictionary containing metadata, including the "file_name" key
-            which specifies the output file name.
-    """
-    with open(meta["file_name"], "a") as f:
-        for row in rows:
-            if isinstance(row, dict):
-                f.write(
-                    "\t".join(
-                        [format_entry(row.get(col, []), col, meta) for col in headers]
-                    )
-                    + "\n"
-                )
-
-
-def convert_keys_to_camel_case(data: dict) -> dict:
-    """
-    Recursively converts all keys in a dictionary to camel case.
-
-    Args:
-        data (dict): The dictionary to convert.
-
-    Returns:
-        dict: The dictionary with keys converted to camel case.
-    """
-    converted_data = {}
-    if isinstance(data, list):
-        return [convert_keys_to_camel_case(item) for item in data]
-    elif not isinstance(data, dict):
-        return data
-    for key, value in data.items():
-        if isinstance(value, dict) or isinstance(value, list):
-            value = convert_keys_to_camel_case(value)
-        converted_key = "".join(
-            word.capitalize() if i > 0 else word
-            for i, word in enumerate(key.split("_"))
-        )
-        converted_data[converted_key] = value
-    return converted_data
