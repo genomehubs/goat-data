@@ -15,13 +15,13 @@ from .utils import Config
 
 
 @task(cache_policy=NO_CACHE)
-def get_filenames(config: Config, remote_path: str, work_dir: str) -> tuple:
+def get_filenames(config: Config, s3_path: str, work_dir: str) -> tuple:
     """
     Get local and remote filenames from the YAML and remote path.
 
     Args:
         config (Config): YAML file as a dictionary.
-        remote_path (str): Path to the remote TSV directory.
+        s3_path (str): Path to the TSV directory on S3.
         work_dir (str): Path to the working directory.
 
     Returns:
@@ -37,8 +37,8 @@ def get_filenames(config: Config, remote_path: str, work_dir: str) -> tuple:
     # Append the working directory to the local filename
     local_file = os.path.join(work_dir, local_file)
 
-    # Get the remote filename from the remote path
-    remote_file = os.path.join(remote_path, os.path.basename(local_file))
+    # Get the remote filename from the s3 path
+    remote_file = os.path.join(s3_path, os.path.basename(local_file))
     return (local_file, remote_file)
 
 
@@ -128,22 +128,22 @@ def copy_yaml_files(yaml_path: str, config: Config, work_dir: str) -> None:
 
 
 @flow()
-def fetch_previous_tsv(yaml_path: str, remote_path: str, work_dir: str) -> None:
+def fetch_previous_file_pair(yaml_path: str, s3_path: str, work_dir: str) -> None:
     """
-    Fetch the previous TSV file and compare headers.
+    Fetch the previous YAML/TSV files and compare headers.
 
     Args:
         yaml_path (str): Path to the YAML file.
-        remote_path (str): Path to the remote TSV directory.
+        s3_path (str): Path to the TSV directory on S3.
         work_dir (str): Path to the working directory.
     """
     config = utils.load_config(yaml_path)
-    (local_file, remote_file) = get_filenames(config, remote_path, work_dir)
+    (local_file, remote_file) = get_filenames(config, s3_path, work_dir)
     line_count = fetch_tsv_file(remote_file, local_file)
     copy_yaml_files(yaml_path, config, work_dir)
     status = compare_headers(config, local_file)
     emit_event(
-        event="fetch.previous.tsv.completed",
+        event="fetch.previous.file.pair.completed",
         resource={
             "prefect.resource.id": f"fetch.previous.{yaml_path}",
             "prefect.resource.type": "fetch.previous",
@@ -156,21 +156,21 @@ def fetch_previous_tsv(yaml_path: str, remote_path: str, work_dir: str) -> None:
 
 def parse_args():
     """Parse command-line arguments."""
-    parser = argparse.ArgumentParser(description="Fetch previous TSV file.")
+    parser = argparse.ArgumentParser(description="Fetch previous YAML/TSV files.")
 
     parser.add_argument(
         "-y",
         "--yaml_path",
         type=str,
         required=True,
-        help="Path to the local YAML file.",
+        help="Path to the source YAML file.",
     )
     parser.add_argument(
-        "-p",
-        "--remote_path",
+        "-s",
+        "--s3_path",
         type=str,
         required=True,
-        help="Path to the remote TSV directory.",
+        help="Path to the TSV directory on S3.",
     )
     parser.add_argument(
         "-w",
@@ -186,7 +186,7 @@ if __name__ == "__main__":
     """Run the flow."""
     args = parse_args()
 
-    fetch_previous_tsv(
+    fetch_previous_file_pair(
         yaml_path=args.yaml_path,
         remote_path=args.remote_path,
         work_dir=args.work_dir,

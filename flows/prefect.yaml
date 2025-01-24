@@ -26,17 +26,32 @@ definitions:
 
 deployments:
   - name: update-ncbi-datasets
-    entrypoint: flows/lib/update-ncbi-datasets.py:fetch_ncbi_datasets
+    entrypoint: flows/lib/update_ncbi_datasets.py:fetch_ncbi_datasets
     parameters:
-      root_taxid: "2759"
-      file_path: /home/ubuntu/tmp/test/ncbi_datasets_canidae.jsonl
+      root_taxid: "9608"
+      file_path: /home/ubuntu/tmp/test/assembly-data/ncbi_datasets_canidae.jsonl
       remote_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
     schedules:
       - *daily
     work_pool: *goat_data_work_pool
 
-  - name: fetch-previous-tsv
-    entrypoint: flows/lib/fetch-previous-tsv.py:fetch_previous_tsv
+  # - name: fetch-previous-file-pair
+  #   entrypoint: flows/lib/fetch_previous_file_pair.py:fetch_previous_file_pair
+  #   triggers:
+  #     - enabled: true
+  #       match:
+  #         prefect.resource.type: ncbi.datasets
+  #         prefect.resource.matches.previous: "no"
+  #       expect:
+  #         - update.ncbi.datasets.finished
+  #       parameters:
+  #         yaml_path: "sources/assembly-data/ncbi_datasets_eukaryota.types.yaml"
+  #         s3_path: "s3://goat/sources/assembly-data/"
+  #         work_dir: "/home/ubuntu/tmp/test/assembly-data"
+  #   work_pool: *goat_data_work_pool
+
+  - name: feth-parse-validate-ncbi-datasets
+    entrypoint: flows/lib/wrapper_fetch_parse_validate.py:fetch_parse_validate
     triggers:
       - enabled: true
         match:
@@ -45,7 +60,9 @@ deployments:
         expect:
           - update.ncbi.datasets.finished
         parameters:
+          pipeline: "ncbi_datasets"
           yaml_path: "sources/assembly-data/ncbi_datasets_eukaryota.types.yaml"
-          remote_path: "s3://goat/sources/assembly-data/"
+          s3_path: "s3://goat/sources/assembly-data/"
           work_dir: "/home/ubuntu/tmp/test/assembly-data"
+          append: "true"
     work_pool: *goat_data_work_pool

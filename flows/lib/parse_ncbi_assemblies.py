@@ -339,19 +339,19 @@ def process_assembly_reports(
 
 
 @flow(log_prints=True)
-def parse_ncbi_datasets_assembly(
-    jsonl_path: str, config_file: str, feature_file: Optional[str] = None
+def parse_ncbi_assemblies(
+    jsonl_path: str, yaml_path: str, feature_file: Optional[str] = None
 ):
     """
     Parse NCBI datasets assembly data.
 
     Args:
         jsonl_path (str): Path to the NCBI datasets JSONL file.
-        config_file (str): Path to the YAML configuration file.
+        yaml_path (str): Path to the YAML configuration file.
         feature_file (str): Path to the feature file.
     """
     config = utils.load_config(
-        config_file=config_file,
+        config_file=yaml_path,
         feature_file=feature_file,
     )
     if feature_file is not None:
@@ -375,12 +375,27 @@ def parse_args():
         help="Path to the NCBI datasets JSONL file.",
     )
     parser.add_argument(
-        "-f",
-        "--file_path",
+        "-y",
+        "--yaml_path",
         type=str,
         required=True,
-        help="Path to the assembly data files (without extension).",
+        help="Path to the YAML file.",
     )
+    # parser.add_argument(
+    #     "-f",
+    #     "--features",
+    #     type=str,
+    #     default=False,
+    #     help="Flag to save chromosomes as features to a TSV file.",
+    # )
+    parser.add_argument(
+        "-a",
+        "--append",
+        type=bool,
+        default=False,
+        help="Flag to append values to an existing TSV file(s).",
+    )
+
     args = parser.parse_args()
 
     if not args.jsonl_path:
@@ -396,8 +411,8 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
 
-    parse_ncbi_datasets_assembly(
+    parse_ncbi_assemblies(
         jsonl_path=args.jsonl_path,
-        config_file=f"{args.file_stem}.types.yaml",
+        yaml_path=f"{args.file_stem}.types.yaml",
         feature_file=f"{args.file_stem}.features.tsv",
     )
