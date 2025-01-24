@@ -26,7 +26,7 @@ definitions:
 
 deployments:
   - name: update-ncbi-datasets
-    entrypoint: flows/subflows/assembly/update-ncbi-datasets.py:fetch_ncbi_datasets
+    entrypoint: flows/lib/update-ncbi-datasets.py:fetch_ncbi_datasets
     parameters:
       root_taxid: "2759"
       file_path: /home/ubuntu/tmp/test/ncbi_datasets_canidae.jsonl
@@ -36,7 +36,7 @@ deployments:
     work_pool: *goat_data_work_pool
 
   - name: fetch-previous-tsv
-    entrypoint: flows/subflows/general/fetch-previous-tsv.py:fetch_previous_tsv
+    entrypoint: flows/lib/fetch-previous-tsv.py:fetch_previous_tsv
     triggers:
       - enabled: true
         match:
