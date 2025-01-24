@@ -7,18 +7,14 @@ import shutil
 
 import boto3
 from prefect import flow, task
+from prefect.cache_policies import NO_CACHE
 from prefect.events import emit_event
 
 from . import utils
 from .utils import Config
 
 
-def get_config_cache_key(_context, parameters):
-    """Return the cache key for the tasks accessing config."""
-    return f"{parameters['config'].config['file']['name']}"
-
-
-@task(cache_policy=get_config_cache_key)
+@task(cache_policy=NO_CACHE)
 def get_filenames(config: Config, remote_path: str, work_dir: str) -> tuple:
     """
     Get local and remote filenames from the YAML and remote path.
@@ -82,7 +78,7 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     return line_count
 
 
-@task(cache_policy=get_config_cache_key)
+@task(cache_policy=NO_CACHE)
 def compare_headers(config: Config, local_file: str) -> bool:
     """
     Compare headers in the local and remote TSV files.
@@ -110,7 +106,7 @@ def compare_headers(config: Config, local_file: str) -> bool:
     return config.headers == local_headers
 
 
-@task(cache_policy=get_config_cache_key)
+@task(cache_policy=NO_CACHE)
 def copy_yaml_files(yaml_path: str, config: Config, work_dir: str) -> None:
     """
     Copy the YAML files to the working directory.
