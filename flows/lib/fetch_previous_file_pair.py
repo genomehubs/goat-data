@@ -1,17 +1,26 @@
 #!/usr/bin/env python3
 
 import argparse
+import contextlib
 import gzip
 import os
 import shutil
+import sys
+from pathlib import Path
 
 import boto3
-from prefect import flow, task
 from prefect.cache_policies import NO_CACHE
-from prefect.events import emit_event
 
-from . import utils
-from .utils import Config
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
+
+with contextlib.suppress(ValueError):
+    sys.path.remove(str(parent))
+
+from lib import utils  # noqa: E402
+from lib.conditional_import import emit_event, flow, task  # noqa: E402
+from lib.utils import Config  # noqa: E402
 
 
 @task(cache_policy=NO_CACHE)
@@ -60,6 +69,7 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     try:
         s3.head_object(Bucket=bucket_name, Key=key)
     except s3.exceptions.ClientError:
+        # Return 0 if the remote file does not exist
         return 0
 
     # fetch the file
@@ -74,6 +84,7 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
     else:
         with open(local_file, "r") as f:
             line_count = sum(1 for _ in f)
+    print(f"Downloaded {line_count} lines from {remote_file} to {local_file}")
 
     return line_count
 
@@ -188,6 +199,6 @@ if __name__ == "__main__":
 
     fetch_previous_file_pair(
         yaml_path=args.yaml_path,
-        remote_path=args.remote_path,
+        s3_path=args.s3_path,
         work_dir=args.work_dir,
     )

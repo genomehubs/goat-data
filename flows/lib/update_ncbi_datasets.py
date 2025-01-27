@@ -1,15 +1,24 @@
 #!/usr/bin/env python3
 
 import argparse
+import contextlib
 import hashlib
 import os
 import subprocess
 import sys
+from pathlib import Path
 
 import boto3
 from botocore.exceptions import ClientError
-from prefect import flow, task
-from prefect.events import emit_event
+
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
+
+with contextlib.suppress(ValueError):
+    sys.path.remove(str(parent))
+
+from lib.conditional_import import emit_event, flow, task  # noqa: E402
 
 
 @task(retries=2, retry_delay_seconds=2, log_prints=True)
@@ -68,13 +77,13 @@ def fetch_ncbi_datasets_summary(
 
 
 @task(retries=2, retry_delay_seconds=2)
-def compare_datasets_summary(local_path: str, remote_path: str) -> bool:
+def compare_datasets_summary(local_path: str, s3_path: str) -> bool:
     """
     Compare local and remote NCBI datasets summary files.
 
     Args:
         local_path (str): Path to the local file.
-        remote_path (str): Path to the remote file.
+        s3_path (str): Path to the remote file on s3.
 
     Returns:
         bool: True if the files are the same, False otherwise.
@@ -88,12 +97,11 @@ def compare_datasets_summary(local_path: str, remote_path: str) -> bool:
 
     # Extract bucket name and key from the S3 path
     def parse_s3_path(s3_path):
-        if s3_path.startswith("s3://"):
-            s3_path = s3_path[5:]
+        s3_path = s3_path.removeprefix("s3://")
         bucket, key = s3_path.split("/", 1)
         return bucket, key
 
-    bucket, key = parse_s3_path(remote_path)
+    bucket, key = parse_s3_path(s3_path)
 
     # Return false if the remote file does not exist
     try:
@@ -120,9 +128,9 @@ def compare_datasets_summary(local_path: str, remote_path: str) -> bool:
 
 
 @flow()
-def update_ncbi_datasets(root_taxid: str, file_path: str, remote_path: str) -> None:
+def update_ncbi_datasets(root_taxid: str, file_path: str, s3_path: str) -> None:
     line_count = fetch_ncbi_datasets_summary(root_taxid, file_path)
-    status = compare_datasets_summary(file_path, remote_path)
+    status = compare_datasets_summary(file_path, s3_path)
     emit_event(
         event="update.ncbi.datasets.finished",
         resource={
@@ -153,25 +161,18 @@ def parse_args():
         help="Path to the NCBI datasets JSONL file.",
     )
     parser.add_argument(
-        "-p",
-        "--remote_path",
+        "-s",
+        "--s3_path",
         type=str,
         required=True,
-        help="Path to the remote NCBI datasets JSONL file.",
+        help="Path to the remote NCBI datasets JSONL file on s3.",
     )
-    args = parser.parse_args()
-    if not args.file_path:
-        print("Error: file_path is required.", file=sys.stderr)
-        sys.exit(1)
-    return args
+
+    return parser.parse_args()
 
 
 if __name__ == "__main__":
     """Run the flow."""
     args = parse_args()
 
-    update_ncbi_datasets(
-        root_taxid=args.root_taxid,
-        file_path=args.file_path,
-        remote_path=args.remote_path,
-    )
+    update_ncbi_datasets(**vars(args))

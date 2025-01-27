@@ -30,7 +30,7 @@ deployments:
     parameters:
       root_taxid: "9608"
       file_path: /home/ubuntu/tmp/test/assembly-data/ncbi_datasets_canidae.jsonl
-      remote_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
+      s3_path: s3://goat/resources/assembly-data/ncbi_datasets_canidae.jsonl
     schedules:
       - *daily
     work_pool: *goat_data_work_pool

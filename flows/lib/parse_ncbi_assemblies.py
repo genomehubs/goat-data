@@ -1,20 +1,30 @@
 #!/usr/bin/env python3
 
 import argparse
+import contextlib
 import json
 import os
 import subprocess
 import sys
 from collections import defaultdict
 from collections.abc import Generator
+from pathlib import Path
 from typing import Optional
 
 from genomehubs import utils as gh_utils
-from prefect import flow, task
 from prefect.runtime.task_run import run_count
 
-from . import utils
-from .utils import Config
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
+
+with contextlib.suppress(ValueError):
+    sys.path.remove(str(parent))
+
+# import lib.utils  # noqa: E402
+from lib import utils  # noqa: E402
+from lib.conditional_import import flow, task  # noqa: E402
+from lib.utils import Config  # noqa: E402
 
 
 def parse_assembly_report(jsonl_path: str) -> Generator[dict, None, None]:
@@ -72,8 +82,8 @@ def fetch_ncbi_datasets_sequences(
 
 
 def process_assembly_report(
-    report: dict, previous_report: dict, config: Config, parsed: dict
-):
+    report: dict, previous_report: Optional[dict], config: Config, parsed: dict
+) -> dict:
     """Process assembly level information.
 
     This function takes a data dictionary and an optional previous_report dictionary,
@@ -84,7 +94,7 @@ def process_assembly_report(
 
     Args:
         report (dict): A dictionary containing the assembly information.
-        previous_report (dict, optional): A dictionary containing previous assembly
+        previous_report (Optional[dict]): A dictionary containing previous assembly
         information, used to determine if the current assembly is the same as the
         previous one.
         config (Config): A Config object containing the configuration data.
@@ -311,7 +321,7 @@ def process_assembly_reports(
     config: Config,
     biosamples: dict,
     parsed: dict,
-    previous_report: dict,
+    previous_report: Optional[dict] = None,
 ):
     """
     Process assembly reports and fetch sequence reports.
@@ -321,7 +331,8 @@ def process_assembly_reports(
         config (Config): A Config object containing the configuration data.
         biosamples (dict): A dictionary containing biosample information.
         parsed (dict): A dictionary containing parsed data.
-        previous_report (dict): A dictionary containing the previous assembly report.
+        previous_report (Optional[dict]): A dictionary containing the previous
+        assembly report.
 
     Returns:
         None
@@ -335,12 +346,13 @@ def process_assembly_reports(
         fetch_and_parse_sequence_report(processed_report)
         append_features(processed_report, config)
         add_report_to_parsed_reports(parsed, processed_report, config, biosamples)
-        previous_report = processed_report
+        if previous_report is not None:
+            previous_report = processed_report
 
 
 @flow(log_prints=True)
 def parse_ncbi_assemblies(
-    jsonl_path: str, yaml_path: str, feature_file: Optional[str] = None
+    jsonl_path: str, yaml_path: str, append: bool, feature_file: Optional[str] = None
 ):
     """
     Parse NCBI datasets assembly data.
@@ -348,17 +360,19 @@ def parse_ncbi_assemblies(
     Args:
         jsonl_path (str): Path to the NCBI datasets JSONL file.
         yaml_path (str): Path to the YAML configuration file.
+        append (bool): Flag to append values to an existing TSV file(s).
         feature_file (str): Path to the feature file.
     """
     config = utils.load_config(
         config_file=yaml_path,
         feature_file=feature_file,
+        load_previous=append,
     )
     if feature_file is not None:
         set_up_feature_file(config)
     biosamples = {}
     parsed = {}
-    previous_report = {}
+    previous_report = {} if append else None
     process_assembly_reports(jsonl_path, config, biosamples, parsed, previous_report)
     set_representative_assemblies(parsed, biosamples)
     write_to_tsv(parsed, config)
@@ -391,28 +405,16 @@ def parse_args():
     parser.add_argument(
         "-a",
         "--append",
-        type=bool,
-        default=False,
+        action="store_true",
         help="Flag to append values to an existing TSV file(s).",
     )
 
-    args = parser.parse_args()
-
-    if not args.jsonl_path:
-        print("Error: jsonl_path is required.")
-        sys.exit(1)
-
-    if not args.file_stem:
-        print("Error: file_stem is required.")
-        sys.exit(1)
-    return args
+    return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_args()
 
     parse_ncbi_assemblies(
-        jsonl_path=args.jsonl_path,
-        yaml_path=f"{args.file_stem}.types.yaml",
-        feature_file=f"{args.file_stem}.features.tsv",
+        **vars(args),
     )

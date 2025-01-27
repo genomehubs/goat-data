@@ -1,25 +1,23 @@
 #!/usr/bin/env python3
 
+import contextlib
 import os
+import sys
 from argparse import Action, ArgumentParser, Namespace
 from enum import Enum, auto
 from glob import glob
+from pathlib import Path
 
-# import boto3
-from prefect import flow
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
 
-from .fetch_previous_file_pair import fetch_previous_file_pair
-from .parse_ncbi_assemblies import parse_ncbi_assemblies
+with contextlib.suppress(ValueError):
+    sys.path.remove(str(parent))
 
-# import gzip
-# import os
-# import shutil
-
-# from prefect.cache_policies import NO_CACHE
-# from prefect.events import emit_event
-
-# from . import utils
-# from .utils import Config
+from lib.conditional_import import flow  # noqa: E402
+from lib.fetch_previous_file_pair import fetch_previous_file_pair  # noqa: E402
+from lib.parse_ncbi_assemblies import parse_ncbi_assemblies  # noqa: E402
 
 
 class Pipeline(Enum):
@@ -45,12 +43,13 @@ def enum_action(enum_class):
     return EnumAction
 
 
-def parse_ncbi_assemblies_wrapper(args: Namespace, working_yaml: str) -> None:
+def parse_ncbi_assemblies_wrapper(
+    working_yaml: str, work_dir: str, append: bool
+) -> None:
     """
     Wrapper function to parse the NCBI assemblies JSONL file.
 
     Args:
-        args (Namespace): Parsed command-line arguments.
         working_yaml (str): Path to the working YAML file.
     """
     # use glob to find the jsonl file in the working directory
@@ -58,17 +57,17 @@ def parse_ncbi_assemblies_wrapper(args: Namespace, working_yaml: str) -> None:
     paths = glob(glob_path)
     # raise error if no jsonl file is found
     if not paths:
-        raise FileNotFoundError(f"No jsonl file found in {args.work_dir}")
+        raise FileNotFoundError(f"No jsonl file found in {work_dir}")
     # rais error if more than one jsonl file is found
     if len(paths) > 1:
-        raise ValueError(f"More than one jsonl file found in {args.work_dir}")
-    parse_ncbi_assemblies(
-        jsonl_path=paths[0], yaml_path=working_yaml, append=args.append
-    )
+        raise ValueError(f"More than one jsonl file found in {work_dir}")
+    parse_ncbi_assemblies(jsonl_path=paths[0], yaml_path=working_yaml, append=append)
 
 
 @flow()
-def fetch_parse_validate(pipeline: Pipeline, args: Namespace) -> None:
+def fetch_parse_validate(
+    pipeline: Pipeline, yaml_path: str, s3_path: str, work_dir: str, append: bool
+) -> None:
     """
     Fetch, parse, and validate the TSV file.
 
@@ -76,12 +75,17 @@ def fetch_parse_validate(pipeline: Pipeline, args: Namespace) -> None:
         pipeline (Pipeline): The pipeline to run.
         args (Namespace): Parsed command-line arguments.
     """
-    fetch_previous_file_pair(
-        yaml_path=args.yaml_path, s3_path=args.s3_path, work_dir=args.work_dir
+    header_status = fetch_previous_file_pair(
+        yaml_path=yaml_path, s3_path=s3_path, work_dir=work_dir
     )
-    working_yaml = os.path.join(args.work_dir, os.path.basename(args.yaml_path))
+    if not header_status:
+        # If the headers do not match, set append == False to parse all records
+        append = False
+    working_yaml = os.path.join(work_dir, os.path.basename(yaml_path))
     if pipeline == Pipeline.NCBI_ASSEMBLIES:
-        parse_ncbi_assemblies_wrapper(args, working_yaml)
+        parse_ncbi_assemblies_wrapper(
+            working_yaml=working_yaml, work_dir=work_dir, append=append
+        )
     elif pipeline not in [Pipeline.REFSEQ_ORGANELLES, Pipeline.ETCETERA]:
         raise ValueError("Invalid pipeline.")
 
@@ -126,8 +130,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-a",
         "--append",
-        type=bool,
-        default=False,
+        action="store_true",
         help="Flag to append values to an existing TSV file(s).",
     )
     return parser.parse_args()
@@ -136,4 +139,4 @@ def parse_args() -> Namespace:
 if __name__ == "__main__":
     """Run the flow."""
     args = parse_args()
-    fetch_parse_validate(pipeline=args.pipeline, args=args)
+    fetch_parse_validate(**vars(args))

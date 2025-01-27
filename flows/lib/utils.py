@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import contextlib
 from typing import Optional
 
 from genomehubs import utils as gh_utils
@@ -29,7 +30,7 @@ class Config:
     Configuration class for Genomehubs YAML parsing.
     """
 
-    def __init__(self, config_file, feature_file=None):
+    def __init__(self, config_file, feature_file=None, load_previous=False):
         """
         Initialize the configuration class.
 
@@ -44,12 +45,12 @@ class Config:
         self.meta = gh_utils.get_metadata(self.config, config_file)
         self.headers = gh_utils.set_headers(self.config)
         self.parse_fns = gh_utils.get_parse_functions(self.config)
-        try:
-            self.previous_parsed = gh_utils.load_previous(
-                self.meta["file_name"], "genbankAccession", self.headers
-            )
-        except Exception:
-            self.previous_parsed = {}
+        self.previous_parsed = {}
+        if load_previous:
+            with contextlib.suppress(Exception):
+                self.previous_parsed = gh_utils.load_previous(
+                    self.meta["file_name"], "genbankAccession", self.headers
+                )
         self.feature_file = feature_file
         if feature_file is not None:
             self.feature_headers = set_feature_headers()
@@ -61,18 +62,21 @@ class Config:
                 self.previous_features = {}
 
 
-def load_config(config_file: str, feature_file: Optional[str] = None) -> Config:
+def load_config(
+    config_file: str, feature_file: Optional[str] = None, load_previous: bool = False
+) -> Config:
     """
     Load the configuration file.
 
     Args:
         config_file (str): Path to the YAML configuration file.
         feature_file (str): Path to the feature file.
+        load_previous (bool): Whether to load the previous data.
 
     Returns:
         Config: The configuration class.
     """
-    return Config(config_file, feature_file)
+    return Config(config_file, feature_file, load_previous)
 
 
 def format_entry(entry, key: str, meta: dict) -> str:
