@@ -197,3 +197,39 @@ def processing_csv_lists(acronym, url, start_row):
     project_table = expand_sequencing_status(project_table, acronym)
     print(f"Saving {acronym} to file...")
     export_expanded_tsv(project_table, acronym)
+
+import requests
+from io import StringIO
+# Fetches a TSV file from a given URL and saves it locally as a .tsv file.
+
+def fetch_and_save_tsv(url, output_file):
+    """    
+    Parameters:
+        url (str): The URL of the TSV file.
+    
+    Returns:
+        pd.DataFrame: The loaded data as a DataFrame.
+    """
+    try:
+        # Fetch the TSV data from the URL
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for failed requests
+        
+        # Read the TSV content into a pandas DataFrame
+        data = pd.read_csv(StringIO(response.text), sep='\t')
+
+        if data is not None:
+            print(data.head())  # Display the first few rows of the DataFrame
+
+        # Save the DataFrame to a local .tsv file
+        data.to_csv(output_file, sep='\t', index=False)
+        
+        print(f"File saved successfully as {output_file}")
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching the file: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
+
+

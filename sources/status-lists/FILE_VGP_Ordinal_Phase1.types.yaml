@@ -3,39 +3,51 @@ file:
   header: true
   comment: "#"
   name: VGP_Ordinal_Phase1_plus.tsv
-  source: Declared Target List - VGP
-  source_description: Declared Target List for the Ordinal Phase, Vertebrates Genome Project, live spreadsheet - VGP Ordinal Phase List
-  #source_contact:
-  source_date: 2023-04-14
+  source: Declared Status List - VGP
+  source_description: Declared Status List for the Ordinal Phase, Vertebrates Genome Project, live spreadsheet - VGP Ordinal Phase List
+  source_contact: Erich Jarvis
+  source_date: 2025-01-24
 attributes:
   long_list:
-    header: phase1
+    header: all_projects
+    separator:
+      - ","    
   other_priority:
-    header: phase1
-  contributing_project_lab:
-    header: [main_project,second_project]
-    join: ","
+    header: all_projects
     separator:
       - ","
-    type: keyword
+  contributing_project_lab:
+    header: all_projects
+    separator:
+      - ","
   sequencing_status:
-    header: status
+    header: sequencing_status
   sequencing_status_vgp:
-    header: status
+    header: sequencing_status
   sample_collected:
     header: sample_collected
+    separator:
+      - ","
   sample_acquired:
     header: sample_acquired
+    separator:
+      - ","
   in_progress:
     header: in_progress
+    separator:
+      - ","
   open:
     header: open
+    separator:
+      - ","
   insdc_open:
     header: insdc_open
+    separator:
+      - ","
 taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
   species:
-    header: species_sequenced
-  order:
-    header: orders_latin_name
-  phylum:
-    header: phylum
+    header: scientific_name
+  family:
+    header: family_scientific_name
