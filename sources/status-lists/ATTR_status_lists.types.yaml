@@ -22,6 +22,7 @@ defaults:
         - beenome100
         - bpa
         - canbp
+        - canseq150
         - cbp
         - ccgp
         - cfgp
@@ -35,6 +36,7 @@ defaults:
         - erga-bge
         - erga-ch
         - erga-pil
+        - erga-com
         - eurofish
         - ffi
         - fish
@@ -62,6 +64,7 @@ defaults:
         - squalomix
         - tsi
         - vgp
+        - wa
         - ygg
         - zoonomia
     value_metadata:
@@ -96,6 +99,8 @@ defaults:
         description: "Bioplatforms Australia"
       canbp:
         description: "Canada Biogenome Project (click to view GoaT project page)"
+      canseq150:
+        description: "Canada 150 Sequencing Initiative (click to view GoaT project page)"
       cbp:
         description: "Catalan Biogenome Project (click to view GoaT project page)"
       ccgp:
@@ -118,6 +123,8 @@ defaults:
         description: "ERGA Biodiversity Genomics Europe (click to view GoaT project page)"
       erga-ch:
         description: "ERGA Switzerland (click to view GoaT project page)"
+      erga-com:
+        description: "ERGA Community Genomes (click to view GoaT project page)"
       erga-pil:
         description: "ERGA Pilot (click to view GoaT project page)"
       eurofish:
@@ -172,6 +179,8 @@ defaults:
         description: "Squalomix (click to view GoaT project page)"
       tsi:
         description: "Threatened Species Initiative (click to view GoaT project page)"
+      wa:
+        description: "Wise Ancestors Project (click to view GoaT project page)"
       vgp:
         description: "Vertebrate Genomes Project (click to view GoaT project page)"
       ygg:

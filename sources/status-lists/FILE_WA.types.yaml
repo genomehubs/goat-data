@@ -2,11 +2,12 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: PGP_expanded.tsv
-  source: Declared Status List - PGP
+  name: WA_expanded.tsv
+  source: Declared Status List - Wise Ancestors
+  source_description: Declared Status List, WA, live spreadsheet
+  source_contact: Solenne Correard
+  source_url: https://www.wiseancestors.org/
   source_date: "2025-01-28"
-  source_description: Declared Status List - Polar Genomes Project, live spreadsheet - Polar_Genomes_Project_goat
-  source_contact: Seunghyun Kang, Korea Polar Research Institute (KOPRI)
 attributes:
   long_list:
     header: long_list
@@ -14,32 +15,22 @@ attributes:
     header: other_priority
   family_representative:
     header: family_representative
+  # contributing_project_lab:
+  # header: contributing_project_lab
   sequencing_status:
     header: sequencing_status
-    separator:
-      - ";"
-      #    translate:
-      #      data_generation: in_progress
-      #      in_assembly: in_progress
-      #      insdc_submitted: in_progress
-  sequencing_status_pgp:
+  sequencing_status_wa:
     header: sequencing_status
-    separator:
-      - ";"
-      # translate:
-      #   data_generation: in_progress
-      #   in_assembly: in_progress
-      #   insdc_submitted: in_progress
   sample_collected:
     header: sample_collected
   sample_acquired:
     header: sample_acquired
+  in_progress:
+    header: in_progress
   data_generation:
     header: data_generation
   in_assembly:
     header: in_assembly
-  in_progress:
-    header: in_progress
   open:
     header: open
   insdc_open:

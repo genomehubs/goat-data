@@ -2,11 +2,12 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: EUROFISH_expanded.tsv
-  source: Declared Status Lists - EUROFISH
+  name: CANSEQ150_expanded.tsv
+  source: Declared Status List - CanSeq150
   source_date: "2025-01-28"
-  source_description: Declared Status List - EUROFISH, live spreadsheet - eurofish_all.tsv
-  source_contact: Gene Myers, mpi-cbg.de
+  source_description: Declared Status List - Canada 150 Sequencing Initiative - Live spreadsheet - CanSeq_150_GoaT
+  source_contact: Samantha Jones, Genome Sciences Centre, BC Cancer Research Centre, Canada
+  source_url: https://www.cgen.ca/canseq150
 attributes:
   long_list:
     header: long_list
@@ -16,21 +17,17 @@ attributes:
     header: family_representative
   sequencing_status:
     header: sequencing_status
-    #    translate:
-    #      data_generation: in_progress
-    #      in_assembly: in_progress
-    #      insdc_submitted: in_progress
-  sequencing_status_eurofish:
+  sequencing_status_canseq150:
     header: sequencing_status
-    # translate:
-    #   data_generation: in_progress
-    #   in_assembly: in_progress
-    #   insdc_submitted: in_progress
   sample_collected:
     header: sample_collected
   sample_acquired:
     header: sample_acquired
   in_progress:
+    header: in_progress
+  data_generation:
+    header: in_progress
+  in_assembly:
     header: in_progress
   insdc_open:
     header: insdc_open
@@ -40,9 +37,6 @@ taxonomy:
   taxon_id:
     header: ncbi_taxon_id
   species:
-    header: [genus, species]
-    join: " "
+    header: species
   family:
     header: family
-  synonym:
-    header: synonym

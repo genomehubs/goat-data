@@ -86,6 +86,9 @@ attributes:
   sequencing_status_canbp:
     description: Sequencing status for Canada Biogenome Project
     display_name: Sequencing status CanBP - CBP
+  sequencing_status_canseq150:
+    description: Sequencing status for Canada 150 Sequencing Initiative
+    display_name: Sequencing status CanSeq150
   sequencing_status_cbp:
     description: Sequencing status for Catalan Biogenome Project
     display_name: Sequencing status CBP
@@ -119,6 +122,9 @@ attributes:
   sequencing_status_erga-ch:
     description: Sequencing status for ERGA Switzerland Project
     display_name: Sequencing status ERGA-CH
+  sequencing_status_erga-com:
+    description: Sequencing status for ERGA Community Genomes
+    display_name: Sequencing status ERGA-COM  
   sequencing_status_erga-pil:
     description: Sequencing status for ERGA Pilot Project
     display_name: Sequencing status ERGA-PIL
@@ -204,6 +210,9 @@ attributes:
     description: Sequencing status for Vertebrate Genomes Project
     display_name: Sequencing status VGP
     display_group: sequencing_status
+  sequencing_status_wa:
+    description: Sequencing status for Wise Ancestors Project
+    display_name: Sequencing status WA
   sequencing_status_ygg:
     description: Sequencing status for Yggdrasil Project
     display_name: Sequencing status YGG
