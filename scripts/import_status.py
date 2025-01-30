@@ -15,11 +15,13 @@ projects = [
     "EUROFISH",
     "ERGA-BGE",
     "ERGA-CH",
+    "ERGA-COM",
     "GAGA",
     "GIGA",
     "LOEWE-TBG",
     "OTHER",
     "PGP",
+    "WA",
     "YGG",
 ]
 
