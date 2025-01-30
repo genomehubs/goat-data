@@ -2,12 +2,12 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: ATLASEA_expanded.tsv
-  source: Declared Status List - ATLASEA
+  name: ERGA-COM_expanded.tsv
+  source: Declared Status List - ERGA-COM
   source_date: "2025-01-30"
-  source_description: AtlaSea (France ERGA Partner Branch) Status List, live spreadsheet
-  source_contact: "Hugues Roest Crollius, Institut de Biologie de l'ENS (IBENS), France"
-  source_url: https://portal.atlasea.fr/home/
+  source_description: Declared Status List - ERGA-COM - live spreadsheet - ERGA_community_genomes
+  source_contact: Christian de Guttry, SIB Swiss Institute of Bioinformatics
+  source_url: https://www.erga-biodiversity.eu/erga-satellite-genomes
 attributes:
   long_list:
     header: long_list
@@ -15,28 +15,30 @@ attributes:
     header: other_priority
   family_representative:
     header: family_representative
-  # contributing_project_lab:
-  #   header: project
-  #   translate:
-  #     BGE: SSP Community Sampling
-  sequencing_status_atlasea:
+  #  # contributing_project_lab:
+  #  #   header: contributing_project_lab
+
+  sequencing_status_erga-com:
     header: sequencing_status
     translate:
-      data_generation: in_progress
-      in_assembly: in_progress
-      insdc_submitted: in_progress
+      none: ""
   sequencing_status:
     header: sequencing_status
     translate:
-      data_generation: in_progress
-      in_assembly: in_progress
-      insdc_submitted: in_progress
+      none: ""
   sample_collected:
     header: sample_collected
+  #  # sample_collected_by:
+  #  #   header: contributing_project_lab
+
   sample_acquired:
     header: sample_acquired
   in_progress:
     header: in_progress
+  data_generation:
+    header: data_generation
+  in_assembly:
+    header: in_assembly
   open:
     header: open
   insdc_open:

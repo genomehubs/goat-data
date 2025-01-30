@@ -2,11 +2,12 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: GIGA_expanded.tsv
-  source: Declared Status List - GIGA
-  source_description: Declared Status List - Global Invertebrate Genomics Alliance (GIGA), Static file - GIGA-phylumlist_withClass
+  name: WA_expanded.tsv
+  source: Declared Status List - Wise Ancestors
+  source_description: Declared Status List, WA, live spreadsheet
+  source_contact: Solenne Correard
+  source_url: https://www.wiseancestors.org/
   source_date: "2025-01-30"
-  source_contact: Jeff Robinson, UMBC
 attributes:
   long_list:
     header: long_list
@@ -14,9 +15,11 @@ attributes:
     header: other_priority
   family_representative:
     header: family_representative
+  # contributing_project_lab:
+  # header: contributing_project_lab
   sequencing_status:
     header: sequencing_status
-  sequencing_status_giga:
+  sequencing_status_wa:
     header: sequencing_status
   sample_collected:
     header: sample_collected
@@ -28,12 +31,12 @@ attributes:
     header: data_generation
   in_assembly:
     header: in_assembly
+  open:
+    header: open
   insdc_open:
     header: insdc_open
   published:
     header: published
-    # publication_id:
-    #   header: publication_ID
 taxonomy:
   taxon_id:
     header: ncbi_taxon_id

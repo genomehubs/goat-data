@@ -2,11 +2,12 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: GIGA_expanded.tsv
-  source: Declared Status List - GIGA
-  source_description: Declared Status List - Global Invertebrate Genomics Alliance (GIGA), Static file - GIGA-phylumlist_withClass
+  name: CANSEQ150_expanded.tsv
+  source: Declared Status List - CanSeq150
   source_date: "2025-01-30"
-  source_contact: Jeff Robinson, UMBC
+  source_description: Declared Status List - Canada 150 Sequencing Initiative - Live spreadsheet - CanSeq_150_GoaT
+  source_contact: Samantha Jones, Genome Sciences Centre, BC Cancer Research Centre, Canada
+  source_url: https://www.cgen.ca/canseq150
 attributes:
   long_list:
     header: long_list
@@ -16,7 +17,7 @@ attributes:
     header: family_representative
   sequencing_status:
     header: sequencing_status
-  sequencing_status_giga:
+  sequencing_status_canseq150:
     header: sequencing_status
   sample_collected:
     header: sample_collected
@@ -25,15 +26,13 @@ attributes:
   in_progress:
     header: in_progress
   data_generation:
-    header: data_generation
+    header: in_progress
   in_assembly:
-    header: in_assembly
+    header: in_progress
   insdc_open:
     header: insdc_open
   published:
     header: published
-    # publication_id:
-    #   header: publication_ID
 taxonomy:
   taxon_id:
     header: ncbi_taxon_id
