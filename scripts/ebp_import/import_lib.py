@@ -1,8 +1,6 @@
 import numpy as np
 import pandas as pd
-pd.set_option('future.no_silent_downcasting', True)
-
-from datetime import datetime
+import os
 
 # Helper function to handle file reading with error handling
 def safe_read_csv(file_path, delimiter="\t", **kwargs):
@@ -30,35 +28,40 @@ def open_public_tsv(public_url):
 
 # Open Google Spreadsheet
 def open_google_spreadsheet(acronym, file_link, header_index):
-    project_table = safe_read_csv(
-        file_link,
-        header=header_index,
-        dtype=object,
-        encoding="utf-8",
-    )
-    project_table.rename(columns={"#NCBI_taxon_id": "NCBI_taxon_id"}, inplace=True)
-    project_table["project"] = acronym.upper()
-    return project_table
+    encodings = ['utf-8', 'ISO-8859-1', 'latin1']  # List of encodings to try
+    project_table = None
+    
+    for encoding in encodings:
+        try:
+            project_table = pd.read_csv(
+                file_link,
+                delimiter="\t",
+                header=header_index,
+                dtype=object,
+                quoting=3,
+                encoding=encoding
+            )
+            print(f"File opened successfully with {encoding} encoding.")
+            break  # Exit the loop if reading is successful
+        except UnicodeDecodeError:
+            print(f"Failed to open file with {encoding} encoding. Trying next...")
 
-# Open source CSV
-def open_source_csv(acronym, file_link, header_index):
-    project_table = safe_read_csv(
-        file_link,
-        header=header_index,
-        dtype=object,
-    )
+    if project_table is None:
+        raise ValueError("Failed to open the file with the provided encodings.")
+
     project_table.rename(columns={"#NCBI_taxon_id": "NCBI_taxon_id"}, inplace=True)
     project_table["project"] = acronym.upper()
     return project_table
 
 # General cleanup for table
 def general_cleanup_for_table(project_table):
-    project_table = project_table.replace(r"^\s*$", np.nan, regex=True).infer_objects()
+    project_table = project_table.replace(r"^\s*$", np.nan, regex=True).infer_objects(copy=False)
     project_table = project_table.replace(r"^ +| +$", "", regex=True)
     project_table.replace("publication_available", "published", inplace=True)
     project_table.replace("-", "", inplace=True)
     project_table.dropna(how="all", axis=1, inplace=True)
     project_table.dropna(how="all", axis=0, inplace=True)
+    project_table.rename(columns={"#NCBI_taxon_id": "NCBI_taxon_id"}, inplace=True)
     return project_table
 
 # Cleanup headers
@@ -75,15 +78,16 @@ def cleanup_headers_specific_units(project_table):
 # Expand target status
 def expand_target_status(project_table, acronym):
     possible_target_status = ["long_list", "family_representative", "other_priority"]
+    
+    # Initialize columns as object dtype
     for item in possible_target_status:
         if item not in project_table:
-            project_table[item] = np.nan
+            project_table[item] = pd.Series(dtype="object")
     
     project_table["long_list"] = acronym
 
     project_table.loc[
-        project_table["target_list_status"]
-        == acronym.lower() + "_family_representative",
+        project_table["target_list_status"] == acronym.lower() + "_family_representative",
         "family_representative",
     ] = acronym
 
@@ -100,6 +104,7 @@ def expand_target_status(project_table, acronym):
     project_table.loc[
         project_table["target_list_status"] == "other_priority", "other_priority"
     ] = acronym
+
     return project_table
 
 # Reduce sequencing status
@@ -121,30 +126,35 @@ def reduce_sequencing_status(project_table, acronym):
 
 # Create status columns
 def create_status_column(project_table, acronym):
-    seq_statuses = [
+    possible_seq_statuses = [
         "sample_collected", "sample_acquired", "in_progress", "data_generation",
         "in_assembly", "insdc_submitted", "open", "insdc_open", "published",
     ]
 
-    for status in seq_statuses:
+    for status in possible_seq_statuses:
         if status not in project_table:
             project_table[status] = pd.Series(dtype="object")
 
-    for status in seq_statuses:
+    for status in possible_seq_statuses:
         project_table[status] = project_table[status].astype(object)
         project_table.loc[project_table["sequencing_status"] == status, status] = acronym
     return project_table
 
 # Expand sequencing status
 def expand_sequencing_status(project_table, acronym):
-    status_order = [
-        "published", "insdc_open", "open", "in_progress", "data_generation",
-        "in_assembly", "sample_acquired", "sample_collected"
-    ]
-
-    for i in range(len(status_order) - 1):
-        project_table[status_order[i + 1]] = project_table[status_order[i + 1]].astype(object)
-        project_table.loc[project_table[status_order[i]] == acronym, status_order[i + 1]] = acronym
+    project_table.loc[project_table["published"] == acronym, "insdc_open"] = acronym
+    project_table.loc[project_table["insdc_open"] == acronym, "open"] = acronym
+    project_table.loc[project_table["open"] == acronym, "in_progress"] = acronym
+    project_table.loc[
+        project_table["data_generation"] == acronym, "in_progress"
+    ] = acronym
+    project_table.loc[project_table["in_assembly"] == acronym, "in_progress"] = acronym
+    project_table.loc[
+        project_table["in_progress"] == acronym, "sample_acquired"
+    ] = acronym
+    project_table.loc[
+        project_table["sample_acquired"] == acronym, "sample_collected"
+    ] = acronym
     return project_table
 
 # Create mandatory columns
@@ -161,12 +171,12 @@ def create_mandatory_columns(project_table):
 
 # Export TSV file
 def export_expanded_tsv(project_table, acronym):
-    file_name = f"{acronym}_expanded.tsv"
-    try:
-        project_table.to_csv(file_name, sep="\t", index=False)
-        print(f"File saved as {file_name}")
-    except Exception as e:
-        print(f"Error exporting file {file_name}: {e}")
+    """
+    Save the file to the "tsv" folder in the same directory as the scripts.
+    
+    """
+    file_name = f"tsv/{acronym}_expanded.tsv" 
+    return project_table.to_csv(file_name, sep="\t", index=False)
 
 # Full processing pipeline for spreadsheets
 def processing_schema_2_5_lists(acronym, url, start_row):
@@ -180,55 +190,12 @@ def processing_schema_2_5_lists(acronym, url, start_row):
     project_table = create_status_column(project_table, acronym)
     print(f"Expanding {acronym} sequencing status...")
     project_table = expand_sequencing_status(project_table, acronym)
+    print(f"creating {acronym} mandatory fields ...")
+    project_table = create_mandatory_columns(project_table)
     print(f"Saving {acronym} to file...")
     export_expanded_tsv(project_table, acronym)
 
-# Full processing pipeline for CSV files
-def processing_csv_lists(acronym, url, start_row):
-    print(f"Opening {acronym} URL...")
-    project_table = open_source_csv(acronym, url, start_row)
-    print(f"Cleaning up {acronym} table...")
-    project_table = general_cleanup_for_table(project_table)
-    project_table = cleanup_headers_specific_units(project_table)
-    print(f"Expanding {acronym} target status...")
-    project_table = expand_target_status(project_table, acronym)
-    project_table = create_status_column(project_table, acronym)
-    print(f"Expanding {acronym} sequencing status...")
-    project_table = expand_sequencing_status(project_table, acronym)
-    print(f"Saving {acronym} to file...")
-    export_expanded_tsv(project_table, acronym)
 
-import requests
-from io import StringIO
-# Fetches a TSV file from a given URL and saves it locally as a .tsv file.
-
-def fetch_and_save_tsv(url, output_file):
-    """    
-    Parameters:
-        url (str): The URL of the TSV file.
-    
-    Returns:
-        pd.DataFrame: The loaded data as a DataFrame.
-    """
-    try:
-        # Fetch the TSV data from the URL
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an error for failed requests
-        
-        # Read the TSV content into a pandas DataFrame
-        data = pd.read_csv(StringIO(response.text), sep='\t')
-
-        if data is not None:
-            print(data.head())  # Display the first few rows of the DataFrame
-
-        # Save the DataFrame to a local .tsv file
-        data.to_csv(output_file, sep='\t', index=False)
-        
-        print(f"File saved successfully as {output_file}")
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching the file: {e}")
-    except Exception as e:
-        print(f"An error occurred: {e}")
 
 
 

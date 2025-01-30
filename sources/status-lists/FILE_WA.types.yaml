@@ -2,27 +2,25 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: ERGA-COM_expanded.tsv
-  source: Declared Status List - ERGA-COM
-  source_date: "2025-01-21"
-  source_description: Declared Status List - ERGA-COM - live spreadsheet - ERGA_community_genomes
-  source_contact: Christian de Guttry, SIB Swiss Institute of Bioinformatics
-  source_url: https://www.erga-biodiversity.eu/erga-satellite-genomes
+  name: WA_expanded.tsv
+  source: Declared Status List - Wise Ancestors
+  source_description: Declared Status List, Wise Ancestors, live spreadsheet
+  source_contact: Solenne Correard
+  source_url: https://www.wiseancestors.org/
+  source_date: "2025-01-27"
 attributes:
   long_list:
-    header: long_list
+    header: long_list  
   other_priority:
     header: other_priority
-  family_representative:
+ family_representative:
     header: family_representative
   contributing_project_lab:
     header: contributing_project_lab
-  sequencing_status_erga-com:
-    header: sequencing_status
-    translate:
   sequencing_status:
     header: sequencing_status
-    translate:
+  sequencing_status_wa:
+    header: sequencing_status
   sample_collected:
     header: sample_collected
   sample_acquired:
