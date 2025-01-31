@@ -37,6 +37,8 @@ def open_google_spreadsheet(acronym, file_link, header_index):
                 file_link,
                 delimiter="\t",
                 header=header_index,
+                keep_default_na=False,
+                na_values=["", "NA"],
                 dtype=object,
                 quoting=3,
                 encoding=encoding
