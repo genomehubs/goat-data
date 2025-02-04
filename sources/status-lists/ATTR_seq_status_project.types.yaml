@@ -110,6 +110,9 @@ attributes:
   sequencing_status_ebpn:
     description: Sequencing status for Earth Biogenome Project Norway EBP-Nor
     display_name: Sequencing status EBPN - EBP-Nor
+  sequencing_status_ebphk:
+    description: Sequencing status for Earth Biogenome Project Hong Kong
+    display_name: Sequencing status EBPHK
   sequencing_status_endemixit:
     description: Sequencing status for Italian Endemics Project
     display_name: Sequencing status ENDEMIXIT
