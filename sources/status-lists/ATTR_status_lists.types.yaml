@@ -30,6 +30,7 @@ defaults:
         - cngb
         - dtol
         - ebpn
+        - ebphk
         - ein
         - endemixit
         - erga
@@ -113,6 +114,8 @@ defaults:
         description: "Darwin Tree of Life (click to view GoaT project page)"
       ebpn:
         description: "EBP Norway (click to view GoaT project page)"
+      ebphk:
+        description: "Earth Biogenome Project Hong Kong (click to view GoaT project page)"
       ein:
         description: "Euglena International Network (click to view GoaT project page)"
       endemixit:
