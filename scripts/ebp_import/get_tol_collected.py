@@ -80,6 +80,20 @@ isl.export_expanded_tsv(DTOL_Fungi, "DTOL_Fungi_collected")
 #####
 #DTOL Protists
 
+dtol_protist = isl.open_google_spreadsheet("DTOL","https://docs.google.com/spreadsheets/d/e/2PACX-1vQOZv_it6Wa1i3l54sZgMR2w38Me_Zlbmfq81YlGEhKHmOX5HYg213yn1-97Py_qA/pub?gid=1818735230&single=true&output=tsv",0)
+dtol_protist = isl.cleanup_headers_specific_units(dtol_protist)
+dtol_protist = isl.general_cleanup_for_table(dtol_protist)
+
+prot_status_to_map = {
+    'COLLECTED': 'sample_collected',
+    'SUBMITTED':'sample_collected',
+    'RESUBMITTED':'sample_collected',
+    'GROWING':'sample_collected',
+    'DEAD': ""
+}
+dtol_protist['sample_collected'] = dtol_protist['status'].map(prot_status_to_map)
+isl.export_expanded_tsv(dtol_protist, "DTOL_protist_collected")
+
 #####
 #DTOL Chordata
 # https://docs.google.com/spreadsheets/d/1on84bBNxuUG5jouh4tb7clb5EQ2bvU5Z-o_wFyJg9VA/edit?gid=1707413927#gid=1707413927
