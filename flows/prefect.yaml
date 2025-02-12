@@ -35,21 +35,6 @@ deployments:
       - *daily
     work_pool: *goat_data_work_pool
 
-  # - name: fetch-previous-file-pair
-  #   entrypoint: flows/lib/fetch_previous_file_pair.py:fetch_previous_file_pair
-  #   triggers:
-  #     - enabled: true
-  #       match:
-  #         prefect.resource.type: ncbi.datasets
-  #         prefect.resource.matches.previous: "no"
-  #       expect:
-  #         - update.ncbi.datasets.finished
-  #       parameters:
-  #         yaml_path: "sources/assembly-data/ncbi_datasets_eukaryota.types.yaml"
-  #         s3_path: "s3://goat/sources/assembly-data/"
-  #         work_dir: "/home/ubuntu/tmp/test/assembly-data"
-  #   work_pool: *goat_data_work_pool
-
   - name: feth-parse-validate-ncbi-datasets
     entrypoint: flows/lib/wrapper_fetch_parse_validate.py:fetch_parse_validate
     parameters:

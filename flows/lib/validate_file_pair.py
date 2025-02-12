@@ -23,7 +23,7 @@ from lib.conditional_import import emit_event, flow, task  # noqa: E402
 from lib.tasks import get_filenames  # noqa: E402
 
 
-@task(log_stdout=True, log_stderr=True, log_prints=True)
+@task(log_prints=True)
 def validate_yaml_file(
     yaml_path: str, taxdump_path: str = None, min_valid: int = 0, min_assigned: int = 0
 ) -> bool:
