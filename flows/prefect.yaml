@@ -42,7 +42,7 @@ deployments:
       yaml_path: "sources/assembly-data/ncbi_datasets_eukaryota.types.yaml"
       s3_path: "s3://goat/sources/assembly-data/"
       work_dir: "/home/ubuntu/tmp/test/assembly-data"
-      append: "true"
+      append: true
     triggers:
       - enabled: true
         match:
