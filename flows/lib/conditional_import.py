@@ -2,7 +2,19 @@
 
 import os
 
-if os.environ.get("SKIP_PREFECT") == "true":
+
+def skip_prefect():
+    """
+    Skip Prefect imports if the environment variable is set.
+
+    Returns:
+        bool: True if the environment variable is set.
+    """
+    return os.environ.get("SKIP_PREFECT") == "true"
+
+
+if skip_prefect():
+    # Define dummy functions if Prefect is not installed
 
     def flow(*_, **__):
         return lambda x: x
@@ -14,6 +26,7 @@ if os.environ.get("SKIP_PREFECT") == "true":
         return lambda x: x
 
 else:
+    # Import Prefect functions if the environment variable is not set
     from prefect import flow, task
     from prefect.events import emit_event
 

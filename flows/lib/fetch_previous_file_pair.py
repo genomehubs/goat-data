@@ -20,35 +20,8 @@ with contextlib.suppress(ValueError):
 
 from lib import utils  # noqa: E402
 from lib.conditional_import import emit_event, flow, task  # noqa: E402
+from lib.tasks import get_filenames  # noqa: E402
 from lib.utils import Config  # noqa: E402
-
-
-@task(cache_policy=NO_CACHE)
-def get_filenames(config: Config, s3_path: str, work_dir: str) -> tuple:
-    """
-    Get local and remote filenames from the YAML and remote path.
-
-    Args:
-        config (Config): YAML file as a dictionary.
-        s3_path (str): Path to the TSV directory on S3.
-        work_dir (str): Path to the working directory.
-
-    Returns:
-        tuple: Local and remote filenames.
-    """
-    try:
-        # Get the local filename from the config.file.name attribute
-        local_file = config.config["file"]["name"]
-    except Exception as e:
-        # Raise an error if reading the YAML file fails
-        raise RuntimeError("Error reading file name from config") from e
-
-    # Append the working directory to the local filename
-    local_file = os.path.join(work_dir, local_file)
-
-    # Get the remote filename from the s3 path
-    remote_file = os.path.join(s3_path, os.path.basename(local_file))
-    return (local_file, remote_file)
 
 
 @task(retries=2, retry_delay_seconds=2)
@@ -85,6 +58,27 @@ def fetch_tsv_file(remote_file: str, local_file: str) -> int:
         with open(local_file, "r") as f:
             line_count = sum(1 for _ in f)
     print(f"Downloaded {line_count} lines from {remote_file} to {local_file}")
+
+    subdirs = ["names", "exclusions"]
+    # check if a file with the same name exists in the subdirs on S3
+    # if so make sure a local subdir exists and move the file there
+    filename = os.path.basename(local_file)
+    for subdir in subdirs:
+        subdir_remote_file = os.path.join(
+            os.path.dirname(remote_file), subdir, filename
+        )
+        print(f"Checking for {subdir_remote_file}")
+        bucket_name, key = subdir_remote_file.replace("s3://", "").split("/", 1)
+        try:
+            s3.head_object(Bucket=bucket_name, Key=key)
+        except s3.exceptions.ClientError:
+            continue
+        subdir_local_file = os.path.join(os.path.dirname(local_file), subdir, filename)
+        print(f"Moving {subdir_remote_file} to {subdir_local_file}")
+        os.makedirs(os.path.dirname(subdir_local_file), exist_ok=True)
+        with open(subdir_local_file, "wb") as f:
+            s3.download_fileobj(bucket_name, key, f)
+        # local_file = subdir_local_file
 
     return line_count
 

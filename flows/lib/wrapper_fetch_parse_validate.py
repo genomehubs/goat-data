@@ -4,8 +4,7 @@ import contextlib
 import os
 import sys
 from argparse import Action, ArgumentParser, Namespace
-from enum import Enum, auto
-from glob import glob
+from enum import Enum
 from pathlib import Path
 
 file = Path(__file__).resolve()
@@ -17,13 +16,17 @@ with contextlib.suppress(ValueError):
 
 from lib.conditional_import import flow  # noqa: E402
 from lib.fetch_previous_file_pair import fetch_previous_file_pair  # noqa: E402
-from lib.parse_ncbi_assemblies import parse_ncbi_assemblies  # noqa: E402
+from lib.validate_file_pair import validate_file_pair  # noqa: E402
+from parsers.register import register_plugins  # noqa: E402
+
+PARSERS = register_plugins()
 
 
-class Pipeline(Enum):
-    NCBI_ASSEMBLIES = auto()
-    REFSEQ_ORGANELLES = auto()
-    ETCETERA = auto()
+class Parser(str, Enum):
+    """Enum for the parser to run."""
+
+    # Dynamically add values from PARSERS.ParserEnum to Parser
+    locals().update(PARSERS.ParserEnum.__members__)
 
 
 def enum_action(enum_class):
@@ -43,37 +46,31 @@ def enum_action(enum_class):
     return EnumAction
 
 
-def parse_ncbi_assemblies_wrapper(
-    working_yaml: str, work_dir: str, append: bool
-) -> None:
-    """
-    Wrapper function to parse the NCBI assemblies JSONL file.
-
-    Args:
-        working_yaml (str): Path to the working YAML file.
-    """
-    # use glob to find the jsonl file in the working directory
-    glob_path = os.path.join(args.work_dir, "*.jsonl")
-    paths = glob(glob_path)
-    # raise error if no jsonl file is found
-    if not paths:
-        raise FileNotFoundError(f"No jsonl file found in {work_dir}")
-    # rais error if more than one jsonl file is found
-    if len(paths) > 1:
-        raise ValueError(f"More than one jsonl file found in {work_dir}")
-    parse_ncbi_assemblies(jsonl_path=paths[0], yaml_path=working_yaml, append=append)
-
-
 @flow()
 def fetch_parse_validate(
-    pipeline: Pipeline, yaml_path: str, s3_path: str, work_dir: str, append: bool
+    parser: Parser,
+    yaml_path: str,
+    s3_path: str,
+    work_dir: str,
+    taxdump_path: str,
+    append: bool,
+    dry_run: bool,
+    min_valid: int,
+    min_assigned: int,
 ) -> None:
     """
     Fetch, parse, and validate the TSV file.
 
     Args:
-        pipeline (Pipeline): The pipeline to run.
-        args (Namespace): Parsed command-line arguments.
+        parser (Parser): The parser to use.
+        yaml_path (str): Path to the source YAML file.
+        s3_path (str): Path to the TSV directory on S3.
+        work_dir (str): Path to the working directory.
+        taxdump_path (str): Path to an NCBI format taxdump.
+        append (bool): Flag to append values to an existing TSV file(s).
+        dry_run (bool): Flag to run the flow without updating s3/git files.
+        min_valid (int): Minimum expected number of valid rows.
+        min_assigned (int): Minimum expected number of assigned taxa.
     """
     header_status = fetch_previous_file_pair(
         yaml_path=yaml_path, s3_path=s3_path, work_dir=work_dir
@@ -82,12 +79,14 @@ def fetch_parse_validate(
         # If the headers do not match, set append == False to parse all records
         append = False
     working_yaml = os.path.join(work_dir, os.path.basename(yaml_path))
-    if pipeline == Pipeline.NCBI_ASSEMBLIES:
-        parse_ncbi_assemblies_wrapper(
-            working_yaml=working_yaml, work_dir=work_dir, append=append
-        )
-    elif pipeline not in [Pipeline.REFSEQ_ORGANELLES, Pipeline.ETCETERA]:
-        raise ValueError("Invalid pipeline.")
+    file_parser = PARSERS.parsers[parser.name]
+    file_parser.func(working_yaml=working_yaml, work_dir=work_dir, append=append)
+    if dry_run:
+        # set s3_path = None to skip copying the validated file to S3/git
+        s3_path = None
+    validate_file_pair(
+        yaml_path, work_dir, taxdump_path, s3_path, min_valid, min_assigned
+    )
 
 
 def parse_args() -> Namespace:
@@ -101,10 +100,10 @@ def parse_args() -> Namespace:
 
     parser.add_argument(
         "-p",
-        "--pipeline",
-        action=enum_action(Pipeline),
+        "--parser",
+        action=enum_action(Parser),
         required=True,
-        help="Pipeline to run.",
+        help="Parser to use.",
     )
     parser.add_argument(
         "-y",
@@ -128,10 +127,34 @@ def parse_args() -> Namespace:
         help="Path to the working directory (default: current directory).",
     )
     parser.add_argument(
+        "-t",
+        "--taxdump_path",
+        type=str,
+        help="Path to an NCBI format taxdump.",
+    )
+    parser.add_argument(
         "-a",
         "--append",
         action="store_true",
         help="Flag to append values to an existing TSV file(s).",
+    )
+    parser.add_argument(
+        "-d",
+        "--dry_run",
+        action="store_true",
+        help="Flag to run the flow without updating S3/git files.",
+    )
+    parser.add_argument(
+        "--min_valid",
+        type=int,
+        default=0,
+        help="Minimum expected number of valid rows.",
+    )
+    parser.add_argument(
+        "--min_assigned",
+        type=int,
+        default=0,
+        help="Minimum expected number of assigned taxa.",
     )
     return parser.parse_args()
 

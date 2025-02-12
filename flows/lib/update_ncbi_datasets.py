@@ -130,17 +130,19 @@ def compare_datasets_summary(local_path: str, s3_path: str) -> bool:
 @flow()
 def update_ncbi_datasets(root_taxid: str, file_path: str, s3_path: str) -> None:
     line_count = fetch_ncbi_datasets_summary(root_taxid, file_path)
-    status = compare_datasets_summary(file_path, s3_path)
-    emit_event(
-        event="update.ncbi.datasets.finished",
-        resource={
-            "prefect.resource.id": f"fetch.datasets.{file_path}",
-            "prefect.resource.type": "ncbi.datasets",
-            "prefect.resource.matches.previous": "yes" if status else "no",
-        },
-        payload={"line_count": line_count, "matches_previous": status},
-    )
-    return status
+    if s3_path:
+        status = compare_datasets_summary(file_path, s3_path)
+        emit_event(
+            event="update.ncbi.datasets.finished",
+            resource={
+                "prefect.resource.id": f"fetch.datasets.{file_path}",
+                "prefect.resource.type": "ncbi.datasets",
+                "prefect.resource.matches.previous": "yes" if status else "no",
+            },
+            payload={"line_count": line_count, "matches_previous": status},
+        )
+        return status
+    return False
 
 
 def parse_args():
@@ -164,7 +166,6 @@ def parse_args():
         "-s",
         "--s3_path",
         type=str,
-        required=True,
         help="Path to the remote NCBI datasets JSONL file on s3.",
     )
 

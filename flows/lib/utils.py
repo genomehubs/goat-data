@@ -79,6 +79,42 @@ def load_config(
     return Config(config_file, feature_file, load_previous)
 
 
+class Parser:
+    """
+    Parser class for data file parsing.
+    """
+
+    def __init__(self, name: str, func: callable, description: str):
+        """
+        Initialize the parser class.
+
+        Args:
+            name (str): The name of the parser.
+            func (callable): The parsing function.
+            description (str): The description of the parser.
+
+        Returns:
+            Parser: The parser class.
+        """
+        self.name = name
+        self.func = func
+        self.description = description
+
+    def parse(self, data: dict) -> dict:
+        """
+        Parse the data dictionary.
+
+        Args:
+            data (dict): The data dictionary to parse.
+
+        Returns:
+            dict: The parsed data dictionary.
+        """
+        parsed_data = {}
+        self.callback(data, parsed_data)
+        return parsed_data
+
+
 def format_entry(entry, key: str, meta: dict) -> str:
     """
     Formats a single entry in a dictionary, handling the case where the entry is a list.

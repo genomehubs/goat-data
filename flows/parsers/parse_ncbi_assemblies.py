@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 
-import argparse
 import contextlib
 import json
 import os
 import subprocess
 import sys
 from collections import defaultdict
-from collections.abc import Generator
+from glob import glob
 from pathlib import Path
-from typing import Optional
+from typing import Generator, Optional
 
 from genomehubs import utils as gh_utils
 from prefect.runtime.task_run import run_count
@@ -21,10 +20,10 @@ sys.path.append(str(root))
 with contextlib.suppress(ValueError):
     sys.path.remove(str(parent))
 
-# import lib.utils  # noqa: E402
 from lib import utils  # noqa: E402
 from lib.conditional_import import flow, task  # noqa: E402
-from lib.utils import Config  # noqa: E402
+from lib.utils import Config, Parser  # noqa: E402
+from parsers.args import parse_args  # noqa: E402
 
 
 def parse_assembly_report(jsonl_path: str) -> Generator[dict, None, None]:
@@ -378,43 +377,37 @@ def parse_ncbi_assemblies(
     write_to_tsv(parsed, config)
 
 
-def parse_args():
-    """Parse command-line arguments."""
-    parser = argparse.ArgumentParser(description="Fetch and parse NCBI datasets.")
-    parser.add_argument(
-        "-j",
-        "--jsonl_path",
-        type=str,
-        required=True,
-        help="Path to the NCBI datasets JSONL file.",
-    )
-    parser.add_argument(
-        "-y",
-        "--yaml_path",
-        type=str,
-        required=True,
-        help="Path to the YAML file.",
-    )
-    # parser.add_argument(
-    #     "-f",
-    #     "--features",
-    #     type=str,
-    #     default=False,
-    #     help="Flag to save chromosomes as features to a TSV file.",
-    # )
-    parser.add_argument(
-        "-a",
-        "--append",
-        action="store_true",
-        help="Flag to append values to an existing TSV file(s).",
-    )
+def parse_ncbi_assemblies_wrapper(
+    working_yaml: str, work_dir: str, append: bool
+) -> None:
+    """
+    Wrapper function to parse the NCBI assemblies JSONL file.
 
-    return parser.parse_args()
+    Args:
+        working_yaml (str): Path to the working YAML file.
+    """
+    # use glob to find the jsonl file in the working directory
+    glob_path = os.path.join(work_dir, "*.jsonl")
+    paths = glob(glob_path)
+    # raise error if no jsonl file is found
+    if not paths:
+        raise FileNotFoundError(f"No jsonl file found in {work_dir}")
+    # rais error if more than one jsonl file is found
+    if len(paths) > 1:
+        raise ValueError(f"More than one jsonl file found in {work_dir}")
+    parse_ncbi_assemblies(jsonl_path=paths[0], yaml_path=working_yaml, append=append)
+
+
+def plugin():
+    """Register the flow."""
+    return Parser(
+        name="NCBI_ASSEMBLIES",
+        func=parse_ncbi_assemblies_wrapper,
+        description="Parse NCBI assemblies from a datasets JSONL file.",
+    )
 
 
 if __name__ == "__main__":
+    """Run the flow."""
     args = parse_args()
-
-    parse_ncbi_assemblies(
-        **vars(args),
-    )
+    parse_ncbi_assemblies(**vars(args))

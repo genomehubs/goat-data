@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import contextlib
+import sys
+from pathlib import Path
+
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
+
+with contextlib.suppress(ValueError):
+    sys.path.remove(str(parent))
+
+from lib.utils import Parser  # noqa: E402
+from parsers.args import parse_args  # noqa: E402
+
+
+def parse_sequencing_status(working_yaml: str, work_dir: str, append: bool) -> None:
+    """
+    Wrapper function to parse the sequencing status files.
+
+    Args:
+        working_yaml (str): Path to the working YAML file.
+        work_dir (str): Path to the working directory.
+        append (bool): Whether to append to the existing TSV file.
+    """
+    print("parsing sequencing status files")
+
+
+def plugin():
+    """Register the flow."""
+    return Parser(
+        name="SEQUENCING_STATUS",
+        func=parse_sequencing_status,
+        description="Parse the sequencing status files in a directory.",
+    )
+
+
+if __name__ == "__main__":
+    """Run the flow."""
+    args = parse_args()
+    parse_sequencing_status(**vars(args))
