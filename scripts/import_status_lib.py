@@ -176,6 +176,8 @@ def create_mandatory_columns(project_table):
         "synonym",
         "publication_id",
         "contributing_project_lab",
+        "target_list_status",
+        "sequencing_status",
     ]
     for item in mandatory_fields:
         if item not in project_table:

@@ -11,7 +11,7 @@ import numpy as np
 # DToL live sheet as of Nov 2024:
 # https://docs.google.com/spreadsheets/d/10-RSLWo-0Hn0Lx3z_WJYuvx0WcgrlokFhqUpq4byJEc/edit?pli=1#gid=1370114100
 # public tsv:
-#https://docs.google.com/spreadsheets/d/e/2PACX-1vR6BXo-Z8cGMoMuREw4qt1rIqwf1wY4rRlfPw2ehKspPe_l8Gn5xb6rHwZOp26FgThBaszDyarKhHfi/pub?gid=1370114100&single=true&output=tsv
+# https://docs.google.com/spreadsheets/d/e/2PACX-1vR6BXo-Z8cGMoMuREw4qt1rIqwf1wY4rRlfPw2ehKspPe_l8Gn5xb6rHwZOp26FgThBaszDyarKhHfi/pub?gid=1370114100&single=true&output=tsv
 
 #### Open dataframe and add file-specific edits to clean file contents
 DTOL_AFR = isl.open_google_spreadsheet("DTOL","https://docs.google.com/spreadsheets/d/e/2PACX-1vR6BXo-Z8cGMoMuREw4qt1rIqwf1wY4rRlfPw2ehKspPe_l8Gn5xb6rHwZOp26FgThBaszDyarKhHfi/pub?gid=1370114100&single=true&output=tsv",0)
@@ -76,11 +76,35 @@ DTOL_Fungi = isl.cleanup_headers_specific_units(DTOL_Fungi)
 # Export edited tsvs
 isl.export_expanded_tsv(DTOL_Fungi, "DTOL_Fungi_collected")
 
+
 #####
 #DTOL Protists
 
+dtol_protist = isl.open_google_spreadsheet("DTOL","https://docs.google.com/spreadsheets/d/e/2PACX-1vQOZv_it6Wa1i3l54sZgMR2w38Me_Zlbmfq81YlGEhKHmOX5HYg213yn1-97Py_qA/pub?gid=1818735230&single=true&output=tsv",0)
+dtol_protist = isl.cleanup_headers_specific_units(dtol_protist)
+dtol_protist = isl.general_cleanup_for_table(dtol_protist)
+
+prot_status_to_map = {
+    'COLLECTED': 'sample_collected',
+    'SUBMITTED':'sample_collected',
+    'RESUBMITTED':'sample_collected',
+    'GROWING':'sample_collected',
+    'DEAD': ""
+}
+dtol_protist['sample_collected'] = dtol_protist['status'].map(prot_status_to_map)
+isl.export_expanded_tsv(dtol_protist, "DTOL_protist_collected")
+
 #####
 #DTOL Chordata
+# https://docs.google.com/spreadsheets/d/1on84bBNxuUG5jouh4tb7clb5EQ2bvU5Z-o_wFyJg9VA/edit?gid=1707413927#gid=1707413927
+# published tsv: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR35J07MSypi_jSOgX9Jxe7RIAo56NiI12esouj9jccdvjNxPV1-Hg5Idfk_1Zb0kQgiYrzNAC7Qjz3/pub?gid=1707413927&single=true&output=tsv'
+
+chordate_collected = isl.open_google_spreadsheet("DTOL","https://docs.google.com/spreadsheets/d/e/2PACX-1vR35J07MSypi_jSOgX9Jxe7RIAo56NiI12esouj9jccdvjNxPV1-Hg5Idfk_1Zb0kQgiYrzNAC7Qjz3/pub?gid=1707413927&single=true&output=tsv",0)
+chordate_collected = isl.general_cleanup_for_table(chordate_collected)
+chordate_collected = isl.cleanup_headers_specific_units(chordate_collected)
+
+isl.export_expanded_tsv(chordate_collected, "DTOL_chordata_collected")
+
 
 #####
 #PSYCHE
