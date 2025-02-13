@@ -77,4 +77,4 @@ def expand_sequencing_status(project_table, acronym):
 # Apply the new functions to the CANBP list and exprot the table
 create_status_column(canbp_list, "CANBP")
 expand_sequencing_status(canbp_list, "CANBP")
-canbp_list.to_csv("CANBP_status_expanded.tsv", sep="\t", index=False)
+canbp_list.to_csv("CANBP_livestatus_expanded.tsv", sep="\t", index=False)
