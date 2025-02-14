@@ -5,20 +5,10 @@ import contextlib
 import hashlib
 import os
 import subprocess
-import sys
-from pathlib import Path
 
 import boto3
 from botocore.exceptions import ClientError
-
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parents[1]
-sys.path.append(str(root))
-
-with contextlib.suppress(ValueError):
-    sys.path.remove(str(parent))
-
-from lib.conditional_import import emit_event, flow, task  # noqa: E402
+from conditional_import import emit_event, flow, task  # noqa: E402
 
 
 @task(retries=2, retry_delay_seconds=2, log_prints=True)
