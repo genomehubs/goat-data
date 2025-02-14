@@ -29,7 +29,7 @@ deployments:
     entrypoint: flows/lib/update_ncbi_datasets.py:update_ncbi_datasets
     parameters:
       root_taxid: "2759"
-      file_path: /home/ubuntu/tmp/test/assembly-data-{{ today().strftime('%Y%m%d') }}/ncbi_datasets_eukaryota.jsonl
+      file_path: "/home/ubuntu/tmp/test/assembly-data-{{ today().strftime('%Y%m%d') }}/ncbi_datasets_eukaryota.jsonl"
       s3_path: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.jsonl
     schedules:
       - *daily
