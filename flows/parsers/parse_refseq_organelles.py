@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
 
-import contextlib
+# sourcery skip: avoid-builtin-shadow
 import sys
-from pathlib import Path
+from os.path import abspath, dirname
 
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parents[1]
-sys.path.append(str(root))
+if __name__ == "__main__" and __package__ is None:
+    sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
+    __package__ = "flows.lib"
 
-with contextlib.suppress(ValueError):
-    sys.path.remove(str(parent))
-
-from lib.utils import Parser  # noqa: E402
-from parsers.args import parse_args  # noqa: E402
+from ..parsers.args import parse_args  # noqa: E402
+from .utils import Parser  # noqa: E402
 
 
 def parse_refseq_organelles(working_yaml: str, work_dir: str, append: bool) -> None:

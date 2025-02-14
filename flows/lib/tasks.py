@@ -1,21 +1,10 @@
 #!/usr/bin/env python3
 
-import contextlib
 import os
-import sys
-from pathlib import Path
 
+from conditional_import import task
 from prefect.cache_policies import NO_CACHE
-
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parents[1]
-sys.path.append(str(root))
-
-with contextlib.suppress(ValueError):
-    sys.path.remove(str(parent))
-
-from lib.conditional_import import task  # noqa: E402
-from lib.utils import Config  # noqa: E402
+from utils import Config
 
 
 @task(cache_policy=NO_CACHE)

@@ -1,27 +1,16 @@
 #!/usr/bin/env python3
 
 import argparse
-import contextlib
 import gzip
 import os
 import shutil
-import sys
-from pathlib import Path
 
 import boto3
+import utils
+from conditional_import import emit_event, flow, task
 from prefect.cache_policies import NO_CACHE
-
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parents[1]
-sys.path.append(str(root))
-
-with contextlib.suppress(ValueError):
-    sys.path.remove(str(parent))
-
-from lib import utils  # noqa: E402
-from lib.conditional_import import emit_event, flow, task  # noqa: E402
-from lib.tasks import get_filenames  # noqa: E402
-from lib.utils import Config  # noqa: E402
+from tasks import get_filenames
+from utils import Config
 
 
 @task(retries=2, retry_delay_seconds=2)

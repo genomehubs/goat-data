@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 
-import contextlib
+# sourcery skip: avoid-builtin-shadow
 import os
 import sys
-from pathlib import Path
+from os.path import abspath, dirname
 
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parents[1]
-sys.path.append(str(root))
-
-with contextlib.suppress(ValueError):
-    sys.path.remove(str(parent))
+if __name__ == "__main__" and __package__ is None:
+    sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
+    __package__ = "flows.lib"
 
 from lib.conditional_import import flow, task  # noqa: E402
 from lib.tasks import get_filenames  # noqa: E402

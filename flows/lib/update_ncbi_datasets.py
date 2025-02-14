@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 
 import argparse
-import contextlib
 import hashlib
 import os
 import subprocess
 
 import boto3
 from botocore.exceptions import ClientError
-from conditional_import import emit_event, flow, task  # noqa: E402
+from conditional_import import emit_event, flow, task
 
 
 @task(retries=2, retry_delay_seconds=2, log_prints=True)
@@ -87,9 +86,7 @@ def compare_datasets_summary(local_path: str, s3_path: str) -> bool:
 
     # Extract bucket name and key from the S3 path
     def parse_s3_path(s3_path):
-        with contextlib.suppress(ValueError):
-            s3_path = s3_path.removeprefix("s3://")
-        bucket, key = s3_path.split("/", 1)
+        bucket, key = s3_path.removeprefix("s3://").split("/", 1)
         return bucket, key
 
     bucket, key = parse_s3_path(s3_path)

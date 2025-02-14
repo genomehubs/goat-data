@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
 
-import contextlib
+# sourcery skip: avoid-builtin-shadow
 import os
 import sys
 from argparse import Action, ArgumentParser, Namespace
 from enum import Enum
-from pathlib import Path
+from os.path import abspath, dirname
 
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parents[1]
-sys.path.append(str(root))
+from conditional_import import flow
+from fetch_previous_file_pair import fetch_previous_file_pair
+from validate_file_pair import validate_file_pair
 
-with contextlib.suppress(ValueError):
-    sys.path.remove(str(parent))
+if __name__ == "__main__" and __package__ is None:
+    sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
+    __package__ = "flows.lib"
 
-from lib.conditional_import import flow  # noqa: E402
-from lib.fetch_previous_file_pair import fetch_previous_file_pair  # noqa: E402
-from lib.validate_file_pair import validate_file_pair  # noqa: E402
-from parsers.register import register_plugins  # noqa: E402
+from ..parsers.register import register_plugins  # noqa: E402
 
 PARSERS = register_plugins()
 

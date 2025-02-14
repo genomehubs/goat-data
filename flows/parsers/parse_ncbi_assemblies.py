@@ -1,29 +1,26 @@
 #!/usr/bin/env python3
 
-import contextlib
+# sourcery skip: avoid-builtin-shadow
 import json
 import os
 import subprocess
 import sys
 from collections import defaultdict
 from glob import glob
-from pathlib import Path
+from os.path import abspath, dirname
 from typing import Generator, Optional
 
 from genomehubs import utils as gh_utils
 from prefect.runtime.task_run import run_count
 
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parents[1]
-sys.path.append(str(root))
+if __name__ == "__main__" and __package__ is None:
+    sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
+    __package__ = "flows.lib"
 
-with contextlib.suppress(ValueError):
-    sys.path.remove(str(parent))
-
-from lib import utils  # noqa: E402
-from lib.conditional_import import flow, task  # noqa: E402
-from lib.utils import Config, Parser  # noqa: E402
-from parsers.args import parse_args  # noqa: E402
+from ..parsers.args import parse_args  # noqa: E402
+from . import utils  # noqa: E402
+from .conditional_import import flow, task  # noqa: E402
+from .utils import Config, Parser  # noqa: E402
 
 
 def parse_assembly_report(jsonl_path: str) -> Generator[dict, None, None]:
