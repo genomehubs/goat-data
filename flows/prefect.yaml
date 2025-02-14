@@ -20,9 +20,9 @@ definitions:
       work_queue_name: default
   schedules:
     daily: &daily
-      cron: "0 0 * * 1-6"
+      cron: "5 0 * * 1-6"
     weekly: &weekly
-      cron: "0 0 * * 1"
+      cron: "5 0 * * 1"
 
 deployments:
   - name: update-ncbi-datasets
