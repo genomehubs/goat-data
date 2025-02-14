@@ -97,7 +97,8 @@ def compare_datasets_summary(local_path: str, s3_path: str) -> bool:
 
     # Extract bucket name and key from the S3 path
     def parse_s3_path(s3_path):
-        s3_path = s3_path.removeprefix("s3://")
+        with contextlib.suppress(ValueError):
+            s3_path = s3_path.removeprefix("s3://")
         bucket, key = s3_path.split("/", 1)
         return bucket, key
 

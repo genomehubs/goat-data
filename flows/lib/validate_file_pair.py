@@ -83,7 +83,9 @@ def transfer_validated(yaml_path: str, work_dir: str, s3_path: str) -> None:
     (local_tsv_path, remote_tsv_path) = get_filenames(config, s3_path, work_dir)
 
     # Transfer the validated TSV file to S3
-    bucket, key = s3_path.removeprefix("s3://").split("/", 1)
+    with contextlib.suppress(ValueError):
+        s3_path = s3_path.removeprefix("s3://")
+    bucket, key = s3_path.split("/", 1)
     s3 = boto3.client("s3")
     s3.upload_file(local_tsv_path, bucket, key)
     print(f"Uploaded {local_tsv_path} to {remote_tsv_path}")
