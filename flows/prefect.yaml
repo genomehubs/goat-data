@@ -43,6 +43,7 @@ deployments:
       s3_path: "s3://goat/sources/assembly-data/"
       work_dir: "/home/ubuntu/tmp/test/assembly-data"
       append: true
+      dry_run: true
     triggers:
       - enabled: true
         match:

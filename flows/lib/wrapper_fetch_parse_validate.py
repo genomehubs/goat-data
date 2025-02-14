@@ -50,11 +50,11 @@ def fetch_parse_validate(
     yaml_path: str,
     s3_path: str,
     work_dir: str,
-    taxdump_path: str,
-    append: bool,
-    dry_run: bool,
-    min_valid: int,
-    min_assigned: int,
+    taxdump_path: str = None,
+    append: bool = False,
+    dry_run: bool = False,
+    min_valid: int = 0,
+    min_assigned: int = 0,
 ) -> None:
     """
     Fetch, parse, and validate the TSV file.
@@ -64,11 +64,11 @@ def fetch_parse_validate(
         yaml_path (str): Path to the source YAML file.
         s3_path (str): Path to the TSV directory on S3.
         work_dir (str): Path to the working directory.
-        taxdump_path (str): Path to an NCBI format taxdump.
-        append (bool): Flag to append values to an existing TSV file(s).
-        dry_run (bool): Flag to run the flow without updating s3/git files.
-        min_valid (int): Minimum expected number of valid rows.
-        min_assigned (int): Minimum expected number of assigned taxa.
+        taxdump_path (str, optional): Path to an NCBI format taxdump.
+        append (bool, optional): Flag to append values to an existing TSV file(s).
+        dry_run (bool, optional): Flag to run the flow without updating s3/git files.
+        min_valid (int, optional): Minimum expected number of valid rows.
+        min_assigned (int, optional): Minimum expected number of assigned taxa.
     """
     header_status = fetch_previous_file_pair(
         yaml_path=yaml_path, s3_path=s3_path, work_dir=work_dir
