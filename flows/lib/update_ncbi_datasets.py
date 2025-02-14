@@ -16,6 +16,7 @@ parent, root = file.parent, file.parents[1]
 sys.path.append(str(root))
 
 with contextlib.suppress(ValueError):
+    print(f"Removing {str(parent)} from sys.path")
     sys.path.remove(str(parent))
 
 from lib.conditional_import import emit_event, flow, task  # noqa: E402
