@@ -6,6 +6,7 @@ import sys
 from argparse import Action, ArgumentParser, Namespace
 from enum import Enum
 from os.path import abspath, dirname
+from typing import Optional
 
 from conditional_import import flow
 from fetch_previous_file_pair import fetch_previous_file_pair
@@ -50,7 +51,7 @@ def fetch_parse_validate(
     yaml_path: str,
     s3_path: str,
     work_dir: str,
-    taxdump_path: str = None,
+    taxdump_path: Optional[str] = None,
     append: bool = False,
     dry_run: bool = False,
     min_valid: int = 0,
@@ -127,7 +128,8 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-t",
         "--taxdump_path",
-        type=str,
+        type=Optional[str],
+        default=None,
         help="Path to an NCBI format taxdump.",
     )
     parser.add_argument(

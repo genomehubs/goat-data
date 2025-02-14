@@ -6,6 +6,7 @@ import os
 import shutil
 import subprocess
 import sys
+from typing import Optional
 
 import boto3
 import utils
@@ -15,7 +16,10 @@ from tasks import get_filenames
 
 @task(log_prints=True)
 def validate_yaml_file(
-    yaml_path: str, taxdump_path: str = None, min_valid: int = 0, min_assigned: int = 0
+    yaml_path: str,
+    taxdump_path: Optional[str] = None,
+    min_valid: int = 0,
+    min_assigned: int = 0,
 ) -> bool:
     """
     Validate the YAML file using blobtk validate.
@@ -31,7 +35,7 @@ def validate_yaml_file(
     """
     # Validate the YAML file using blobtk validate
     cmd = ["blobtk", "validate", "-g", yaml_path]
-    if taxdump_path:
+    if taxdump_path is not None:
         cmd.extend(
             [
                 "-t",
@@ -118,8 +122,8 @@ def check_min_counts(validation_report, taxonomy_report, min_valid, min_assigned
 def validate_file_pair(
     yaml_path: str,
     work_dir: str,
-    taxdump_path: str = None,
-    s3_path: str = None,
+    taxdump_path: Optional[str] = None,
+    s3_path: Optional[str] = None,
     min_valid: int = 1,
     min_assigned: int = 1,
 ) -> None:
@@ -143,7 +147,7 @@ def validate_file_pair(
     if status:
         check_min_counts(validation_report, taxonomy_report, min_valid, min_assigned)
 
-    if s3_path:
+    if s3_path is not None:
         transfer_validated(local_yaml_path, s3_path)
 
     emit_event(
