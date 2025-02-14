@@ -15,12 +15,12 @@ from prefect.runtime.task_run import run_count
 
 if __name__ == "__main__" and __package__ is None:
     sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
-    __package__ = "flows.lib"
+    __package__ = "flows"
 
-from ..parsers.args import parse_args  # noqa: E402
-from . import utils  # noqa: E402
-from .conditional_import import flow, task  # noqa: E402
-from .utils import Config, Parser  # noqa: E402
+from flows.lib import utils  # noqa: E402
+from flows.lib.conditional_import import flow, task  # noqa: E402
+from flows.lib.utils import Config, Parser  # noqa: E402
+from flows.parsers.args import parse_args  # noqa: E402
 
 
 def parse_assembly_report(jsonl_path: str) -> Generator[dict, None, None]:

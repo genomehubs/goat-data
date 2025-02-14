@@ -7,12 +7,12 @@ from os.path import abspath, dirname
 
 if __name__ == "__main__" and __package__ is None:
     sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
-    __package__ = "flows.lib"
+    __package__ = "flows"
 
-from lib.conditional_import import flow, task  # noqa: E402
-from lib.tasks import get_filenames  # noqa: E402
-from lib.utils import Config, Parser, load_config  # noqa: E402
-from parsers.args import parse_args  # noqa: E402
+from flows.lib.conditional_import import flow, task  # noqa: E402
+from flows.lib.tasks import get_filenames  # noqa: E402
+from flows.lib.utils import Config, Parser, load_config  # noqa: E402
+from flows.parsers.args import parse_args  # noqa: E402
 
 
 @task()

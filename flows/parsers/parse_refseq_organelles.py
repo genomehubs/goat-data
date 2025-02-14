@@ -6,10 +6,10 @@ from os.path import abspath, dirname
 
 if __name__ == "__main__" and __package__ is None:
     sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
-    __package__ = "flows.lib"
+    __package__ = "flows"
 
-from ..parsers.args import parse_args  # noqa: E402
-from .utils import Parser  # noqa: E402
+from flows.lib.utils import Parser  # noqa: E402
+from flows.parsers.args import parse_args  # noqa: E402
 
 
 def parse_refseq_organelles(working_yaml: str, work_dir: str, append: bool) -> None:

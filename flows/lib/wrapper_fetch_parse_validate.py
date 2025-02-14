@@ -13,9 +13,9 @@ from validate_file_pair import validate_file_pair
 
 if __name__ == "__main__" and __package__ is None:
     sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
-    __package__ = "flows.lib"
+    __package__ = "flows"
 
-from ..parsers.register import register_plugins  # noqa: E402
+from flows.parsers.register import register_plugins  # noqa: E402
 
 PARSERS = register_plugins()
 
