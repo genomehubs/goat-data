@@ -26,6 +26,7 @@ if skip_prefect():
         return lambda x: x
 
 else:
+    print("Importing Prefect functions")
     # Import Prefect functions if the environment variable is not set
     from prefect import flow, task
     from prefect.events import emit_event
