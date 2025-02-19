@@ -2,35 +2,42 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: DTOL_chordata_collected.tsv
+  name: DTOL_chordata_collected_expanded.tsv
   source: DTOL Chordata Collections List
-  source_date: "2025-02-10"
+  source_date: "2025-02-19"
   source_description: DTOL Chordata Working Group, Live Spreadsheet
   source_contact: DTOL Chordates SWG
 attributes:
   long_list:
-    header: long_list
+    header: project
     type: keyword
   sequencing_status:
-    header: goat_status
+    header: collected
+    translate:
+      'yes': sample_collected
     type: keyword
   sequencing_status_dtol:
-    header: goat_status
+    header: collected
+    translate:
+      'yes': sample_collected
     type: keyword
   sample_collected:
-    header: Collected
+    header: collected
     translate:
       'yes': DTOL
     type: keyword
   sample_collected_by:
-    header: 'GAL Coll'
+    header: gal_coll
     translate:
       'NHM BUT need to resend': NHM
+      'AJ/': SAN
+      'AJ/IOZ': SAN
+      'IOZ': SAN
     type: keyword
 taxonomy:
   taxon_id:
-    header: TXID
+    header: txid
   species:
-    header: Species
+    header: species
   family:
-    header: Family
+    header: family

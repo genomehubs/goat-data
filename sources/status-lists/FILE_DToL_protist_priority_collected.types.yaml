@@ -2,33 +2,35 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: DToL_protist_priority_collected.tsv
+  name: DTOL_protist_collected_expanded.tsv
   source: DToL Protists in Culture List
-  source_date: "2025-02-10"
+  source_date: "2025-02-19"
   source_description: DTOL Protists Collection List from DTOL Protist SWG, live spreadsheet - DToL Protists in Culture List...
   source_contact: DTOL Protist Samples Working Group
 attributes:
   long_list:
-    header: other_priority
+    header: project
     type: keyword
   other_priority:
-    header: other_priority
+    header: project
     type: keyword
   sample_collected:
-    header: goat_status
+    header: sample_collected
     translate:
       sample_collected: DTOL
     type: keyword
   sequencing_status:
-    header: goat_status
+    header: sample_collected
     type: keyword
   sequencing_status_dtol:
-    header: goat_status
+    header: sample_collected
     type: keyword
 taxonomy:
   taxon_id:
-    header: TAX_ID
+    header: tax_id
   species:
-    header: SPECIES
+    header: species
   family:
-    header: FAMILY
+    header: family
+  synonym:
+    header: submission_id
