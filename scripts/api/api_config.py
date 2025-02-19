@@ -179,7 +179,7 @@ def sts_row_handler(result_count, fieldnames, token, **kwargs):
         print(page)
 
         url = f"{sts_url}?page={page}&page_size={page_size}"
-        r = requests.get(url, headers={"Authorization": token, "Project": "ALL"},verify=False).json()
+        r = requests.get(url, headers={"Token": token, "Project": "ALL"},verify=False).json()
         dl = r["data"]["list"]
 
         for species in dl:
