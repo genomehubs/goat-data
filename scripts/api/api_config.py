@@ -163,7 +163,7 @@ sts_fieldnames = [
 
 
 def sts_url_opener(token):
-    return requests.get(sts_url, headers={"Authorization": token, "Project": "ALL"},verify=False)
+    return requests.get(sts_url, headers={"Token": token, "Project": "ALL"},verify=False)
 
 
 def sts_api_count_handler(r_text):
