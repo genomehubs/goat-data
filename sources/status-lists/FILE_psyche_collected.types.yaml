@@ -1,0 +1,43 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: PSYCHE_collected_expanded.tsv
+  source: Declared Collections List - Psyche
+  source_description: Collections List for Project Psyche, live spreadsheet - "working_species_collection_list"
+  source_contact: "Charlotte Wright, Wellcome Sanger Institute"
+  source_date: "2025-02-19"
+  source_url: https://www.projectpsyche.org/theorganisation/sampling-hubs-2/
+attributes:
+  long_list:
+    header: project
+    type: keyword
+  other_priority:
+    header: project
+    type: keyword
+  sequencing_status:
+    header: sample_collected
+    translate:
+      "yes": sample_collected
+      "Yes": sample_collected
+    type: keyword
+  sequencing_status_psyche:
+    header: sample_collected
+    translate:
+      "yes": sample_collected
+      "Yes": sample_collected
+    type: keyword
+  sample_collected:
+    header: sample_collected
+    translate:
+      "yes": PSYCHE
+      "Yes": PSYCHE
+    type: keyword
+  sample_collected_by:
+    header: associated_hub
+    type: keyword
+taxonomy:
+  species:
+    header: species
+  order:
+    header: order
