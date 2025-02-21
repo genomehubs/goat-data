@@ -75,3 +75,11 @@ SKIP_PREFECT=true python3 flows/lib/parse_ncbi_assemblies.py -j /tmp/assembly-da
 SKIP_PREFECT=true python3 flows/lib/wrapper_fetch_parse_validate.py -p ncbi_assemblies -y ./sources/assembly-data/ncbi_datasets_eukaryota.types.yaml -s s3://goat/sources/assembly-data -w /tmp/assembly-data -a
 
 ```
+
+## set date as variable
+
+```
+crontab -e
+
+0 0 * * * prefect variable set --overwrite date $(date '+%Y%m%d')
+```
