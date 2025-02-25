@@ -1,0 +1,34 @@
+file:
+  format: tsv
+  header: true
+  name: Bird_Chromosome_Database_V5_2024_expanded.tsv
+  source: Bird Chromosome Database
+  source_url: https://sites.unipampa.edu.br/birdchromosomedatabase/chromosome-number-in-birds/
+  source_description: The Bird Chromosome Database is an open resource that comprises information about chromosome number, karyotype, and the advances obtained by Fluorescent in situ Hybridization (FISH) studies in birds. The main purpose of this database is to retrieve and organize historical/current information regarding avian cytogenetics. Furthermore, it also aims to stimulate the development of new studies in this field. The database will be updated regularly and all users are encouraged to contribute to the improvement and spreading of bird cytogenetic information.
+  source_date: "2025-02-25"
+attributes:
+  chromosome_number:
+    header: 2n
+    separator:
+      - "-"
+      - "/"
+    type: short
+    metadata:
+      is_primary_value:
+        default: 1
+  haploid_number:
+    header: 2n
+    separator:
+      - "-"
+      - "/"
+    function: "{} / 2"
+    type: short
+taxonomy:
+  species:
+    header: species
+  family:
+    header: family
+  class:
+    header: class
+  synonym:
+    header: synonym
