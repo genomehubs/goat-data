@@ -98,7 +98,7 @@ subgraph FinishRelease
   end
 
   subgraph UpdateGit
-    ParsedFilesFinish@{shape: docs} -->
+    ParsedFilesFinish@{shape: docs, label: "ParsedFiles"} -->
     MergeChanges
   end
 
