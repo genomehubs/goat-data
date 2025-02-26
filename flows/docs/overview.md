@@ -97,11 +97,6 @@ subgraph FinishRelease
     RsyncToLustre --> DeleteIndexes
   end
 
-  subgraph UpdateGit
-    ParsedFilesFinish@{shape: docs, label: "ParsedFiles"} -->
-    MergeChanges
-  end
-
   subgraph UpdateS3
     CopyReleaseFilesToSources
   end
