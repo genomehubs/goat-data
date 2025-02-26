@@ -22,16 +22,6 @@ attributes:
       - max
       - count
     taxon_display_level: 2
-  chromosome_count:
-    taxon_display_group: assembly
-    taxon_summary:
-      - primary
-      - mode
-      - median
-      - min
-      - max
-      - count
-    taxon_display_level: 2
   assembly_level:
     taxon_display_group: assembly
     taxon_summary:
