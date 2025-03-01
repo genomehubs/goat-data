@@ -24,7 +24,7 @@ file:
   name: sra.tsv
   needs:
     - ATTR_sra.types.yaml
-  source_date: "2025-02-28"
+  source_date: "2025-03-01"
 taxonomy:
   taxon_id:
     header: taxon_id
