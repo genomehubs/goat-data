@@ -11,8 +11,6 @@ from typing import Optional
 
 import assembly_methods as am
 from genomehubs import utils as gh_utils
-from prefect import flow, task
-from prefect.runtime.task_run import run_count
 
 
 class Config:
@@ -38,12 +36,10 @@ class Config:
                 self.previous_features = {}
 
 
-@task()
 def load_config(config_file: str, feature_file: Optional[str] = None):
     return Config(config_file, feature_file)
 
 
-@task()
 def fetch_ncbi_datasets_summary(root_taxid: str):
     command = [
         "datasets",
@@ -62,7 +58,6 @@ def fetch_ncbi_datasets_summary(root_taxid: str):
         yield am.convert_keys_to_camel_case(json.loads(line))
 
 
-@task()
 def fetch_ncbi_datasets_sequences(
     accession: str, timeout: int = 30
 ) -> Generator[dict, None, None]:
@@ -99,7 +94,6 @@ def fetch_ncbi_datasets_sequences(
         yield json.loads(line)
 
 
-@task()
 def process_assembly_report(
     report: dict, previous_report: dict, config: Config, parsed: dict
 ):
@@ -156,7 +150,6 @@ def process_assembly_report(
     return processed_report
 
 
-@task()
 def write_to_tsv(parsed: dict, config: Config):
     """Write parsed data to a TSV file.
 
@@ -172,7 +165,6 @@ def write_to_tsv(parsed: dict, config: Config):
         gh_utils.write_tsv(parsed, config.headers, config.meta)
 
 
-@task(log_prints=True, retries=2, retry_delay_seconds=2)
 def fetch_and_parse_sequence_report(data: dict):
     """
     Processes the sequence report for an NCBI dataset, adding date fields for assemblies
@@ -194,9 +186,7 @@ def fetch_and_parse_sequence_report(data: dict):
     try:
         chromosomes: list = []
         assigned_span = 0
-        for seq in fetch_ncbi_datasets_sequences(
-            accession, timeout=120 * (run_count + 1)
-        ):
+        for seq in fetch_ncbi_datasets_sequences(accession, timeout=120):
             if am.is_non_nuclear(seq):
                 organelles[seq["chr_name"]].append(seq)
             elif am.is_assigned_to_chromosome(seq):
@@ -212,7 +202,6 @@ def fetch_and_parse_sequence_report(data: dict):
     am.add_chromosome_entries(data, chromosomes)
 
 
-@task(log_prints=True)
 def add_report_to_parsed_reports(
     parsed: dict, report: dict, config: Config, biosamples: dict
 ):
@@ -240,7 +229,6 @@ def add_report_to_parsed_reports(
     return parsed
 
 
-@task()
 def use_previous_report(processed_report: dict, parsed: dict, config: Config):
     accession = processed_report["processedAssemblyInfo"]["genbankAccession"]
     if accession in config.previous_parsed:
@@ -264,12 +252,10 @@ def use_previous_report(processed_report: dict, parsed: dict, config: Config):
     return False
 
 
-@task()
 def set_up_feature_file(config: Config):
     gh_utils.write_tsv({}, config.feature_headers, {"file_name": config.feature_file})
 
 
-@task()
 def append_features(processed_report: dict, config: Config):
     if config.feature_file is not None and "chromosomes" in processed_report:
         am.append_to_tsv(
@@ -279,7 +265,6 @@ def append_features(processed_report: dict, config: Config):
         )
 
 
-@task(log_prints=True)
 def set_representative_assemblies(parsed: dict, biosamples: dict):
     for accessions in biosamples.values():
         most_recent = None
@@ -300,7 +285,6 @@ def set_representative_assemblies(parsed: dict, biosamples: dict):
             parsed[most_recent]["biosampleRepresentative"] = 1
 
 
-@flow(log_prints=True)
 def fetch_and_parse_ncbi_datasets(
     root_taxid: str, config_file: str, feature_file: Optional[str] = None
 ):
