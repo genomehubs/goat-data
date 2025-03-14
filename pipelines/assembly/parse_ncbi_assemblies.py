@@ -285,6 +285,22 @@ def set_representative_assemblies(parsed: dict, biosamples: dict):
             parsed[most_recent]["biosampleRepresentative"] = 1
 
 
+def filter_excess_assemblies(parsed: dict, taxon_id: str, threshold: int):
+    """Filter out assemblies for a given taxon if the assembly span is below the
+    threshold."""
+
+    def is_below_threshold(row):
+        return (
+            row["taxid"] == taxon_id
+            and row["assemblySpan"] is not None
+            and row["assemblySpan"] < threshold
+        )
+
+    for accession, row in list(parsed.items()):
+        if is_below_threshold(row):
+            del parsed[accession]
+
+
 def fetch_and_parse_ncbi_datasets(
     root_taxid: str, config_file: str, feature_file: Optional[str] = None
 ):
@@ -308,6 +324,7 @@ def fetch_and_parse_ncbi_datasets(
         add_report_to_parsed_reports(parsed, processed_report, config, biosamples)
         previous_report = processed_report
     set_representative_assemblies(parsed, biosamples)
+    filter_excess_assemblies(parsed, taxon_id="9606", threshold=1000000000)
     write_to_tsv(parsed, config)
 
 
