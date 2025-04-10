@@ -4,13 +4,13 @@ file:
   comment: "#"
   name: BAT1K_expanded.tsv
   source: Declared Status List - BAT1K
-  source_date: "2025-01-21"
-  source_description: Declared Status Lists -BAT1K - static spreadsheet - ALL Bats
+  source_date: "2025-03-21"
+  source_description: Declared Status Lists -BAT1K - live spreadsheet - ALL Bats
   source_contact: Meike Mei - https://bat1k.com/contact-us/
-  source_url: https://bat1k.com/species-database/
+  source_url: https://urldefense.proofpoint.com/v2/url?u=https-3A__research.st-2Dandrews.ac.uk_bat1k_goat.csv&amp;d=DwIGaQ&amp;c=D7ByGjS34AllFgecYw0iC6Zq7qlm8uclZFI0SqQnqBo&amp;r=ROFPW9s86BDaHzmK9wYUbmvRhmF6aEC2Q3PZs5L7P9o&amp;m=jM-boN6vlSWlPdGLVjQQZzpw7PNs2oKYQHyh4OBVWihTymqJOPdUPpCU0RsiwTjV&amp;s=Ysq_9r0PCehJDGp4j4z0O1CAha0luPXBSU31vqHWH7Y&amp;e=
 attributes:
   long_list:
-    header: project
+    header: species
     type: keyword
   family_representative:
     header: family_representative
@@ -28,11 +28,6 @@ attributes:
   sample_collected:
     header: sample_collected
     type: keyword
-  # sample_collected_by:
-  #   header: collected_by
-  #   translate:
-  #     "BMS,RBGK": KEW
-  # type: keyword
   sample_acquired:
     header: sample_acquired
     type: keyword
