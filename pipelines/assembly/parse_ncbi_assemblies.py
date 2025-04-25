@@ -40,22 +40,50 @@ def load_config(config_file: str, feature_file: Optional[str] = None):
     return Config(config_file, feature_file)
 
 
+
 def fetch_ncbi_datasets_summary(root_taxid: str):
-    command = [
-        "datasets",
-        "summary",
-        "genome",
-        "taxon",
-        root_taxid,
-        "--as-json-lines",
-    ]
-    result = subprocess.run(command, capture_output=True, text=True)
-    if result.returncode != 0:
-        raise RuntimeError(f"Error fetching datasets summary: {result.stderr}")
-    for line in result.stdout.split("\n"):
-        if not line:
-            continue
-        yield am.convert_keys_to_camel_case(json.loads(line))
+    taxids = [root_taxid]
+    if taxids == "2759":
+        taxids = [
+            "2763",
+            "33090",
+            "38254",
+            "3027",
+            "2795258",
+            "3004206",
+            "3349793",
+            "2683617",
+            "2686027",
+            "2698737",
+            "2611341",
+            "1401294",
+            "61964",
+            "554915",
+            "2611352",
+            "2608240",
+            "2489521",
+            "2598132",
+            "2608109",
+            "33154",
+            "554296",
+            "42452",
+        ]
+    for taxid in taxids:
+        command = [
+            "datasets",
+            "summary",
+            "genome",
+            "taxon",
+            root_taxid,
+            "--as-json-lines",
+        ]
+        result = subprocess.run(command, capture_output=True, text=True)
+        if result.returncode != 0:
+            raise RuntimeError(f"Error fetching datasets summary: {result.stderr}")
+        for line in result.stdout.split("\n"):
+            if not line:
+                continue
+            yield am.convert_keys_to_camel_case(json.loads(line))
 
 
 def fetch_ncbi_datasets_sequences(
