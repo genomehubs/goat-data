@@ -5,7 +5,6 @@ import json
 import os
 import subprocess
 import sys
-import contextlib
 from collections import defaultdict
 from collections.abc import Generator
 from typing import Optional
@@ -44,7 +43,7 @@ def load_config(config_file: str, feature_file: Optional[str] = None):
 
 def fetch_ncbi_datasets_summary(root_taxid: str):
     taxids = [root_taxid]
-    if taxids == "2759":
+    if root_taxid == "2759":
         taxids = [
             "2763",
             "33090",
@@ -74,18 +73,17 @@ def fetch_ncbi_datasets_summary(root_taxid: str):
             "summary",
             "genome",
             "taxon",
-            root_taxid,
+            taxid,
             "--as-json-lines",
         ]
-        with contextlib.suppress(RuntimeError):
-            result = subprocess.run(command, capture_output=True, text=True)
-            if result.returncode != 0:
-                print(f"Error fetching datasets summary: {result.stderr}")
-                raise RuntimeError(f"Error fetching datasets summary: {result.stderr}")
-            for line in result.stdout.split("\n"):
-                if not line:
-                    continue
-                yield am.convert_keys_to_camel_case(json.loads(line))
+        result = subprocess.run(command, capture_output=True, text=True)
+        if result.returncode != 0:
+            print(f"Error fetching datasets summary: {result.stderr}")
+            continue
+        for line in result.stdout.split("\n"):
+            if not line:
+                continue
+            yield am.convert_keys_to_camel_case(json.loads(line))
 
 
 def fetch_ncbi_datasets_sequences(
