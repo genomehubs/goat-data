@@ -309,7 +309,7 @@ def set_representative_assemblies(parsed: dict, biosamples: dict):
                 primary_assembly = accession
         if primary_assembly is not None:
             parsed[primary_assembly]["biosampleRepresentative"] = 1
-        else:
+        elif most_recent is not None:
             parsed[most_recent]["biosampleRepresentative"] = 1
 
 
