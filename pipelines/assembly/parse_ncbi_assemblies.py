@@ -319,6 +319,7 @@ def filter_excess_assemblies(parsed: dict, taxon_id: str, threshold: int):
 
     def is_below_threshold(row):
         return (
+            "taxid" in row and
             row["taxid"] == taxon_id
             and row["assemblySpan"] is not None
             and row["assemblySpan"] < threshold
