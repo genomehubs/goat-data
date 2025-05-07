@@ -10,34 +10,38 @@ file:
   source_url: https://urldefense.proofpoint.com/v2/url?u=https-3A__research.st-2Dandrews.ac.uk_bat1k_goat.csv&amp;d=DwIGaQ&amp;c=D7ByGjS34AllFgecYw0iC6Zq7qlm8uclZFI0SqQnqBo&amp;r=ROFPW9s86BDaHzmK9wYUbmvRhmF6aEC2Q3PZs5L7P9o&amp;m=jM-boN6vlSWlPdGLVjQQZzpw7PNs2oKYQHyh4OBVWihTymqJOPdUPpCU0RsiwTjV&amp;s=Ysq_9r0PCehJDGp4j4z0O1CAha0luPXBSU31vqHWH7Y&amp;e=
 attributes:
   long_list:
-    header: long_list
+    header: species #@FANG long list receives the project acronym. all species are BAT1K, so we need to add a column df["project"] that has all values as BAT1K
+    type: keyword
+  family_representative: #@FANG the project does not have this column. we need to remove from the yaml
+    header: family_representative
+    type: keyword
   sequencing_status:
     header: sequencing_status
+    translate:
+      insdc_submitted: open
+    type: keyword
   sequencing_status_bat1k:
     header: sequencing_status
+    translate:
+      insdc_submitted: open
+    type: keyword
   sample_collected:
     header: sample_collected
+    type: keyword
   sample_acquired:
     header: sample_acquired
+    type: keyword
   in_progress:
     header: in_progress
+    type: keyword
   data_generation:
     header: data_generation
   in_assembly:
     header: in_assembly
-  insdc_submitted:
-    header: insdc_submitted
-  open:
-    header: open
-  insdc_open:
-    header: insdc_open
-  published:
-    header: published
+
+    #######@FANG add all other status that have a column name, even if the column is currenlty empty. That way if the new values appear GoaT can update itself
 taxonomy:
-  taxon_id:
-    header: ncbi_taxon_id
   species:
-    header: [genus, species]
-    join: " "
+    header: binomial #@FANG there is no header with that name. you can use 2 columns to form the species binomial by joining them like we did for the GAGA file https://github.com/genomehubs/goat-data/blob/13a0a784e33837f79e8cdc006d090bpro614023e7f6/sources/status-lists/FILE_GAGA.types.yaml#L43
   family:
     header: family
