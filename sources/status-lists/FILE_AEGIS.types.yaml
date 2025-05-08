@@ -1,0 +1,42 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: AEGIS_expanded.tsv
+  source: Declared Status List - AEGIS
+  source_date: "2025-05-08"
+  source_description: Declared Status Lists -AEGIS - live spreadsheet - ALL Bats
+  source_contact: Mark Blaxter - https://www.sanger.ac.uk/collaboration/ancient-environmental-genomics-initiative-for-sustainability-aegis/
+  source_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vTT8yYFN0sEMxzBRWv1sPE0b9G-sB6ua5PZuCW2rcdI1ttVG3YIAmz-7E0miHc6Shwz-68k5svT1YU5/pub?gid=1968802073&single=true&output=tsv
+attributes:
+  long_list:
+    header: long_list
+  sequencing_status:
+    header: sequencing_status
+  sequencing_status_aegis:
+    header: sequencing_status_aegis
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  data_generation:
+    header: data_generation
+  in_assembly:
+    header: in_assembly
+  insdc_submitted:
+    header: insdc_submitted
+  open:
+    header: open
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family

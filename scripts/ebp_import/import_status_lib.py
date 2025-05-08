@@ -38,6 +38,7 @@ def open_google_spreadsheet(acronym, file_link, header_index):
     project_table["project"] = acronym.upper()
     return project_table
 
+
 def general_cleanup_for_table(project_table):
     """
     Cleans up a pandas DataFrame by performing the following actions:
@@ -55,32 +56,24 @@ def general_cleanup_for_table(project_table):
     project_table = project_table.replace(r"^ +| +$", r"", regex=True).infer_objects(copy=False)
     project_table.dropna(how="all", axis=1, inplace=True)
     project_table.dropna(how="all", axis=0, inplace=True)
+    project_table.rename(columns={"#NCBI_taxon_id": "NCBI_taxon_id"}, inplace=True)
     return project_table
 
+
+# Cleanup headers
 def cleanup_headers_specific_units(project_table):
-    """
-    Cleans up the headers by performing the following actions:
-    - Replaces spaces with underscores.
-    - Converts all characters to lowercase.
-    - Removes parentheses.
-
-    Args:
-
-        project_table (pandas.DataFrame): The input DataFrame to be cleaned.
-
-    Returns:
-        pandas.DataFrame: The cleaned DataFrame.
-    """
     project_table.columns = (
-        project_table.columns
-        .str.replace(' ', '_')
-        .str.replace(r'\(', '',regex=True)
-        .str.replace(r'\)', '',regex=True)
+        project_table.columns.str.replace(" ", "_")
+        .str.replace("\(", "")
+        .str.replace("\)", "")
         .str.lower()
     )
     return project_table
 
+
 # Create and Populate target status columns
+
+
 def expand_target_status(project_table, acronym):
     possible_target_status = ["long_list", "family_representative", "other_priority"]
     for item in possible_target_status:
