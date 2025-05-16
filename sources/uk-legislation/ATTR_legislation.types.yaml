@@ -76,3 +76,12 @@ attributes:
     traverse: list
     traverse_direction: up
     type: keyword
+  uk_jncc:
+    description: Conservation Designations for UK Taxa 2023
+    display_group: uk_legislation
+    display_level: 2
+    display_name: JNCC Conservation Designations
+    summary: list
+    traverse: list
+    traverse_direction: up
+    type: keyword
