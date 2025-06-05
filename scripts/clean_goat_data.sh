@@ -154,10 +154,10 @@ for day_data_dir in `ls -d production-202[0-9].[0-1][0-9].[0-3][0-9]`; do
         count_deleted=$((count_deleted+1))
 
         # Remove snapshots data from s3
-        "$cmd" s3cmd del --recursive -n "s3://goat/snapshots/${day_data_dir}/"
+        "$cmd" s3cmd del --recursive "s3://goat/snapshots/${day_data_dir}/"
 
         # Remove release data from s3
-        "$cmd" s3cmd del --recursive -n "s3://goat/releases/${day_data_dir}/"
+        "$cmd" s3cmd del --recursive "s3://goat/releases/${day_data_dir}/"
 
         if $remove_prod_es_index; then
             echo "Delete ES index for ${day_data_dir}"
