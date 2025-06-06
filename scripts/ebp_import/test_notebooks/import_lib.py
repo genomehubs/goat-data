@@ -157,6 +157,23 @@ def expand_sequencing_status(project_table, acronym):
     ] = acronym
     return project_table
 
+# Expand sequencing status Remastered
+def expand_sequencing_status_new(project_table, acronym):
+    project_table.loc[project_table["published"] == acronym, "insdc_open"] = acronym
+    project_table.loc[project_table["insdc_open"] == acronym, "open"] = acronym
+    project_table.loc[project_table["open"] == acronym, "in_progress"] = acronym
+    project_table.loc[
+        project_table["data_generation"] == acronym, "in_progress"
+    ] = acronym
+    project_table.loc[project_table["in_assembly"] == acronym, "in_progress"] = acronym
+    project_table.loc[
+        project_table["in_progress"] == acronym, "sample_acquired"
+    ] = acronym
+    project_table.loc[
+        project_table["sample_acquired"] == acronym, "sample_collected"
+    ] = acronym
+    return project_table
+
 # Create mandatory columns
 def create_mandatory_columns(project_table):
     mandatory_fields = [
