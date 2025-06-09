@@ -9,6 +9,7 @@ defaults:
     constraint:
       enum:
         - 1000gch
+        - aegis
         - africabp
         - ag100pest
         - agc
@@ -74,6 +75,8 @@ defaults:
         link: https://goat.genomehubs.org/projects/{}
       1000gch:
         description: "1,000 Chilean Genomes (click to view GoaT project page)"
+      aegis:
+        description: "Ancient Environmental Genomics Initiative for Sustainability (click to view GoaT project page)"
       africabp:
         description: "Africa Biogenome Project (click to view GoaT project page)"
       ag100pest:
