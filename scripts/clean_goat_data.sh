@@ -1,5 +1,6 @@
 #!/bin/bash
-# This scipt is used to clean up old goat data directories
+
+# This script is used to clean up old goat data directories
 # The data directories are named as production-YYYY-MM-DD
 # The script will keep the data directories that are in the list of goat_archived_list.txt
 # The script will keep the data directories that are within the days to keep
@@ -151,7 +152,7 @@ for day_data_dir in `ls -d production-202[0-9].[0-1][0-9].[0-3][0-9]`; do
         echo "Delete data directory ${day_data_dir}"
         $cmd rm -rf $day_data_dir
         count_deleted=$((count_deleted+1))
-        
+
         if $remove_prod_es_index; then
             echo "Delete ES index for ${day_data_dir}"
             day=${day_data_dir#"production-"}

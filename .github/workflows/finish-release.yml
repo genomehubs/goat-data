@@ -18,10 +18,10 @@ jobs:
     steps:
       - name: rsync production snapshot to sanger lustre
         run: |
-          # rsync -av --delete /volumes/docker/snapshots/production/production-${{ inputs.release }} farm:/lustre/scratch123/tol/share/goat/dev/
-          # rsync -av --delete /volumes/docker/resources/files/ farm:/lustre/scratch123/tol/share/goat/dev/files/
+          s3cmd sync -v --delete-removed /volumes/docker/snapshots/production/production-${{ inputs.release }}/ s3://goat/snapshots/production-${{ inputs.release }}/
+          s3cmd sync -v --delete-removed --cache-file /volumes/docker/resources/files_s3cmd_sync_cache /volumes/docker/resources/files/ s3://goat/resources/files/
           /home/ubuntu/scripts/clean_goat_data.sh -d /volumes/docker/snapshots/production -r -p
-          # ssh farm /software/treeoflife/bin/clean_goat_data.sh -d /lustre/scratch123/tol/share/goat/dev -m  -r
+          /home/ubuntu/scripts/clean_goat_data_s3.sh -m -r
  
   restore-on-prod:
     runs-on: [self-hosted, runner2]
