@@ -488,41 +488,14 @@ file:
   format: tsv
   header: true
   name: ncbi_datasets_eukaryota_taxon.tsv.gz
-  organelle: nucleus
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   source_date: "2025-06-11"
-identifiers:
-  assembly_id:
-    constraint:
-      len: 32
-    header: genbankAccession
-    type: keyword
-  assembly_name:
-    constraint:
-      len: 64
-    header: assemblyName
-    type: keyword
-  genbank_accession:
-    constraint:
-      len: 32
-    header: genbankAccession
-    type: keyword
-  refseq_accession:
-    constraint:
-      len: 32
-    header: refseqAccession
-    type: keyword
-  wgs_accession:
-    constraint:
-      len: 16
-    header: wgsProjectAccession
-    type: keyword
 metadata:
   is_primary_value:
     header: primaryValue
-  source_slug:
-    header: genbankAccession
+  # source_slug:
+  #   header: genbankAccession
 names:
   common_name:
     header: commonName
