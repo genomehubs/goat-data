@@ -49,34 +49,56 @@ attributes:
         link: https://www.ebi.ac.uk/ena/browser/view/{}
       prjna533106:
         description: "Earth Biogenome Project (click to view on ENA)"
+      prjeb33226:
+        description: "25 Genomes Project (click to view on ENA)"
+      prjeb80366:
+        description: "Ancient Environmental Genomics Initiative for Sustainability (click to view on ENA)"
       prjna811786:
         description: "Africa Biogenome Project (click to view on ENA)"
       prjna555319:
         description: "Ag100Pest (click to view on ENA)"
+      prjeb51690:
+        description: "Anopheles Reference Genomes Project (click to view on ENA)"
       prjeb43743:
         description: "Aquatic Symbiosis Genomics Project (click to view on ENA)"
+      prjeb64126:
+        description: "ATLASea (click to view on ENA)"
       prjna489245:
         description: "Bat 1K (click to view on ENA)"
+      prjna923301:
+        description: "The Beenome100 project (click to view on ENA)"
       prjna545868:
         description: "Bird 10K (click to view on ENA)"
       prjna813333:
         description: "Canada Biogenome Project (click to view on ENA)"
+      prjna706690:
+        description: "Canada 150 Sequencing Initiative (click to view on ENA)"
       prjeb49670:
         description: "Catalan Biogenome Project (click to view on ENA)"
       prjna720569:
         description: "California Conservation Genomics Project (click to view on ENA)"
+      prjna1020146:
+        description: "Cetacean Genomes Project (click to view on ENA)"
       prjeb40665:
         description: "Darwin Tree of Life (click to view on ENA)"
+      prjeb65317:
+        description: "Earth Biogenome Project Norway (click to view on ENA)"
       prjna712951:
         description: "ENDEMIXIT (click to view on ENA)"
       prjeb61747:
         description: "ERGA Biodiversity Genomics Europe (click to view on ENA)"
+      prjeb66264:
+        description: "ERGA Community Genomes (click to view on ENA)"
+      prjeb49197:
+        description: "The Swiss node of the European Reference Genome Atlas  (click to view on ENA)"
       prjeb47820:
         description: "ERGA Pilot (click to view on ENA)"
       prjeb43510:
         description: "European Reference Genome Atlas (click to view on ENA)"
       prjna393850:
         description: "EUROFISH (click to view on ENA)"
+      prjna1180976:
+        description: "Genomics of the Brazilian Biodiversity (click to view on ENA)"
       prjna649812:
         description: "Global Invertebrate Genomics Alliance (click to view on ENA)"
       prjna163993:
@@ -91,10 +113,18 @@ attributes:
         description: "MetaInvert (click to view on ENA)"
       prjna1046164:
         description: "Ocean Genomes (click to view on ENA)"
+      prjeb71705:
+        description: "Project Psyche (click to view on ENA)"
       prjna707598:
         description: "Squalomix (click to view on ENA)"
+      prjna1075750:
+        description: "Threatened Species Initiative (click to view on ENA)"
       prjna489243:
         description: "Vertebrate Genomes Project (click to view on ENA)"
+      prjna955268:
+        description: "Yggdrasil (click to view on ENA)"
+      prjna312960:
+        description: "Zoonomia (click to view on ENA)"
   biosample:
     constraint:
       len: 32
@@ -302,11 +332,11 @@ attributes:
   qv_score:
     constraint:
       min: 1
-      type: 4dp
     description: VGP Quality Value score computed with gfastats
     display_group: metrics
     display_level: 2
     display_name: Quality Value score
+    type: 4dp
   linked_accession:
     display_group: linked assemblies
     type: keyword
@@ -315,7 +345,16 @@ attributes:
     type: keyword
   mitochondrion_assembly_span:
     display_group: linked assemblies
-    type: keyword
+    constraint:
+      min: 0
+      max: 100000000
+    units: bases
+    bins:
+      min: 0
+      max: 100000000
+      count: 10
+      scale: log10
+    type: integer
   mitochondrion_gc_percent:
     display_group: linked assemblies
     constraint:
@@ -331,7 +370,16 @@ attributes:
     type: keyword
   plastid_assembly_span:
     display_group: linked assemblies
-    type: keyword
+    constraint:
+      min: 0
+      max: 100000000
+    units: bases
+    bins:
+      min: 0
+      max: 100000000
+      count: 10
+      scale: log10
+    type: integer
   plastid_gc_percent:
     display_group: linked assemblies
     constraint:

@@ -27,12 +27,13 @@ attributes:
       PRJNA489245: BAT1K
       PRJNA923301: BEENOME100
       PRJNA1075696: BIOPLATFORMS
+      PRJNA707235: CAL-EBP
       PRJNA813333: CANBP
       PRJNA706690: CANSEQ150
       PRJEB49670: CBP
       PRJNA720569: CCGP
       PRJNA1020146: CGP
-      PRJNA1157211: DGB
+      PRJNA1157211: DBG
       PRJEB40665: DTOL
       PRJNA512907: DNAZOO
       PRJEB65317: EBPN
@@ -46,8 +47,9 @@ attributes:
       PRJNA1098046: FFI
       PRJNA1098053: FISH
       PRJNA1075727: GAP
-      PRJNA649812: GIGA
+      PRJNA1180976: GBB
       PRJNA1075702: GBR
+      PRJNA649812: GIGA
       PRJNA163993: i5K
       PRJNA844590: ILEBP
       PRJNA1098055: IPM
@@ -84,25 +86,29 @@ attributes:
       PRJNA489245: BAT1K
       PRJNA923301: BEENOME100
       PRJNA1075696: BIOPLATFORMS
+      PRJNA707235: CAL-EBP
       PRJNA813333: CANBP
       PRJNA706690: CANSEQ150
       PRJEB49670: CBP
       PRJNA720569: CCGP
       PRJNA1020146: CGP
-      PRJNA1157211: DGB
+      PRJNA1157211: DBG
       PRJEB40665: DTOL
       PRJNA512907: DNAZOO
       PRJEB65317: EBPN
       PRJNA712951: ENDEMIXIT
       PRJEB43510: ERGA
-      PRJEB66264: ERGA-COM
+      PRJEB61747: ERGA-BGE
+      PRJEB49197: ERGA-CH
       PRJEB47820: ERGA-PIL
+      PRJEB66264: ERGA-COM
       PRJNA393850: EUROFISH
       PRJNA1098046: FFI
       PRJNA1098053: FISH
       PRJNA1075727: GAP
-      PRJNA649812: GIGA
+      PRJNA1180976: GBB
       PRJNA1075702: GBR
+      PRJNA649812: GIGA
       PRJNA163993: i5K
       PRJNA844590: ILEBP
       PRJNA1098055: IPM
@@ -481,42 +487,15 @@ attributes:
 file:
   format: tsv
   header: true
-  name: ncbi_datasets_eukaryota.tsv.gz
-  organelle: nucleus
+  name: ncbi_datasets_eukaryota_taxon.tsv.gz
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
   source_date: "2025-06-10"
-identifiers:
-  assembly_id:
-    constraint:
-      len: 32
-    header: genbankAssmAccession
-    type: keyword
-  assembly_name:
-    constraint:
-      len: 64
-    header: assemblyName
-    type: keyword
-  genbank_accession:
-    constraint:
-      len: 32
-    header: genbankAssmAccession
-    type: keyword
-  refseq_accession:
-    constraint:
-      len: 32
-    header: refseqAssmAccession
-    type: keyword
-  wgs_accession:
-    constraint:
-      len: 16
-    header: wgsProjectAccession
-    type: keyword
 metadata:
   is_primary_value:
     header: primaryValue
-  source_slug:
-    header: genbankAssmAccession
+  # source_slug:
+  #   header: genbankAccession
 names:
   common_name:
     header: commonName
