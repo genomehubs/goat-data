@@ -98,8 +98,6 @@ attributes:
     taxon_name: mitochondrion_assembly_span
     taxon_key: mitochondrion_assembly_span
     taxon_display_name: mitochondrion span
-    taxon_summary: median
-    taxon_traverse: median
     taxon_traverse_limit: phylum
     taxon_display_level: 2
   mitochondrion_gc_percent:
@@ -121,8 +119,6 @@ attributes:
     taxon_name: plastid_assembly_span
     taxon_key: plastid_assembly_span
     taxon_display_name: plastid span
-    taxon_summary: median
-    taxon_traverse: median
     taxon_traverse_limit: phylum
     taxon_display_level: 2
   plastid_gc_percent:
