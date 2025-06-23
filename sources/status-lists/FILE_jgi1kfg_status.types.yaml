@@ -6,7 +6,7 @@ file:
   source: Declared Status List - 1KFG
   source_date: "2025-04-19"
   source_description: Declared Status List - 1KFG, JGI GOLD API StudyId Gs000001
-  source_url: https://gold.jgi.doe.gov/projects?page=1&Study.GOLD+Study+ID=Gs0000001&Project.Sequencing+Strategy=Whole+Genome+Sequencing
+  source_url: "https://gold.jgi.doe.gov/projects?page=1&Study.GOLD+Study+ID=Gs0000001&Project.Sequencing+Strategy=Whole+Genome+Sequencing"
 attributes:
   long_list:
     header: studyGoldId
@@ -17,31 +17,31 @@ attributes:
     translate:
       Permanent Draft: in_progress
       incomplete: in_progress
-      targeted:
+      targeted: ""
   sequencing_status_1kfg:
     header: projectStatus
     translate:
       Permanent Draft: in_progress
       incomplete: in_progress
-      targeted:
+      targeted: ""
   sample_collected:
     header: projectStatus
     translate:
       Permanent Draft: 1KFG
       incomplete: 1KFG
-      targeted:
+      targeted: ""
   sample_acquired:
     header: projectStatus
     translate:
       Permanent Draft: 1KFG
       incomplete: 1KFG
-      targeted:
+      targeted: ""
   in_progress:
     header: projectStatus
     translate:
       Permanent Draft: 1KFG
       incomplete: 1KFG
-      targeted:
+      targeted: ""
 taxonomy:
   taxon_id:
     header: ncbiTaxId

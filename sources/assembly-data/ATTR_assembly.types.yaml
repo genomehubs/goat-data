@@ -44,9 +44,8 @@ attributes:
       - bioproject_accession
     type: keyword
     value_metadata:
-      default:
-        description: Click to view BioProject record on ENA
-        link: https://www.ebi.ac.uk/ena/browser/view/{}
+      description: Click to view BioProject record on ENA
+      link: https://www.ebi.ac.uk/ena/browser/view/{}
       prjna533106:
         description: "Earth Biogenome Project (click to view on ENA)"
       prjna811786:
@@ -102,9 +101,8 @@ attributes:
       - biosample_accession
     type: keyword
     value_metadata:
-      default:
-        description: Click to view BioSample record on ENA
-        link: https://www.ebi.ac.uk/ena/browser/view/{}
+      description: Click to view BioSample record on ENA
+      link: https://www.ebi.ac.uk/ena/browser/view/{}
   gene_count:
     display_group: annotation
     display_level: 1

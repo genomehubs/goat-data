@@ -85,7 +85,7 @@ attributes:
     name: odb10_lineage
     summary: list
     traverse: false
-    traverse_direction: none
+    traverse_direction: false
 taxonomy:
   taxon_id:
     header: taxon_id
