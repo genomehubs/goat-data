@@ -95,7 +95,6 @@ attributes:
     type: short
     unit: "m"
   sample_location:
-    h3res: 5
     display_level: 1
     display_name: location
     type: geo_point
