@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-This script generates a list of IPBES reports their URLs based on GoaT data.
-It parses a list of country codes and generates the corresponding GoaT URLs.
+This script fetches and combines GoaT reports to summarise available data
+per country by taxon.
 """
 import argparse
 import os
