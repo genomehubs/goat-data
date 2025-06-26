@@ -1,23 +1,22 @@
 file:
   format: tsv
   header: true
-  comment: "#"
-  name: CGP_expanded.tsv
-  source: Declared Target List - CGP
+  #  comment: "#"
+
+  name: AEGIS_expanded.tsv
+  source: Declared Target List - AEGIS
   source_date: "2025-06-26"
-  source_description: Declared Target List - Cetaceans Genomes Project - live spreadsheet
-  source_contact: Phillip Morin, Southwest Fisheries Science Center, USA
+  source_description: Declared Status Lists -AEGIS - live spreadsheet - _ToL_AEGIS Target_Lists
+  source_contact: Mark Blaxter
 attributes:
   long_list:
-    header: long_list
+    header: project
   sequencing_status:
     header: sequencing_status
-    # translate:
-    #   data_generation: in_progress
-    #   in_assembly: in_progress
-    #   insdc_submitted: in_progress
-  sequencing_status_cgp:
+  sequencing_status_aegis:
     header: sequencing_status
+  contributing_project_lab:
+    header: contributing_project_lab
   sample_collected:
     header: sample_collected
   sample_acquired:
@@ -37,8 +36,9 @@ attributes:
   published:
     header: published
 taxonomy:
-  taxon_id:
-    header: ncbi_taxon_id
+  # taxon_id:
+
+  #   header: ncbi_taxon_id
   species:
     header: species
   family:
