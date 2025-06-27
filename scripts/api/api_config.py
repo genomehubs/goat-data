@@ -72,7 +72,7 @@ nhm_post_data = {
 }
 
 
-nhm_url = "https://data.nhm.ac.uk/api/3/action/datastore_multisearch"
+nhm_url = "https://data.nhm.ac.uk/api/3/action/vds_multi_query"
 nhm_headers = {"content-type": "application/json"}
 
 
