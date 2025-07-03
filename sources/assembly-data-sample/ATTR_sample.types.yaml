@@ -42,33 +42,33 @@ attributes:
     display_level: 1
     display_name: Ploidy
     translate:
-      1n: 1
-      haoloid: 1
-      haoploid: 1
-      haploid: 1
-      haploidy: 1
-      heploid: 1
-      monokaryotic, haploid: 1
-      haploid/diploid: [1, 2]
-      haplo-diploidy: [1, 2]
-      "Male: haploid; female: diploid": [1, 2]
-      2n: 2
-      diploid: 2
-      diploidy: 2
-      dipolid: 2
-      diploid, occasionally higher: 2
-      diplod: 2
-      diplioid: 2
-      dipliod: 2
-      Haploid consensus of diploid genome: 2
-      Diploid (presumed): 2
-      protandrous diploid: 2
-      triploid: 3
-      allotetraploid: 4
-      allotetraploids: 4
-      protandrous tetraploid: 4
-      tetraploid: 4
-      hexaploid: 6
+      1n: "1"
+      haoloid: "1"
+      haoploid: "1"
+      haploid: "1"
+      haploidy: "1"
+      heploid: "1"
+      monokaryotic, haploid: "1"
+      haploid/diploid: ["1", "2"]
+      haplo-diploidy: ["1", "2"]
+      "Male: haploid; female: diploid": ["1", "2"]
+      2n: "2"
+      diploid: "2"
+      diploidy: "2"
+      dipolid: "2"
+      diploid, occasionally higher: "2"
+      diplod: "2"
+      diplioid: "2"
+      dipliod: "2"
+      Haploid consensus of diploid genome: "2"
+      Diploid (presumed): "2"
+      protandrous diploid: "2"
+      triploid: "3"
+      allotetraploid: "4"
+      allotetraploids: "4"
+      protandrous tetraploid: "4"
+      tetraploid: "4"
+      hexaploid: "6"
       allopolyploid: NA
       amphidiploid: NA
       dikaryon: NA
