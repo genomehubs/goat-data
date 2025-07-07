@@ -122,9 +122,8 @@ jobs:
           release: ${{ inputs.release }}
           resources: ${{ inputs.resources }}
           directory: regional-lists
-          flags: --taxon-lookup any --taxon-spellcheck
+          flags: --taxon-lookup any --taxon-spellcheck --blank "N/A" --blank "None"
           type: taxon
-
       - name: Index uk-legislation
         uses: ./.github/workflows/genomehubs-index-directory
         with:

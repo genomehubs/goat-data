@@ -1,0 +1,45 @@
+file:
+  format: tsv
+  header: true
+  #  comment: "#"
+
+  name: AEGIS_expanded.tsv
+  source: Declared Target List - AEGIS
+  source_date: "2025-07-07"
+  source_description: Declared Status Lists -AEGIS - live spreadsheet - _ToL_AEGIS Target_Lists
+  source_contact: Mark Blaxter
+attributes:
+  long_list:
+    header: project
+  sequencing_status:
+    header: sequencing_status
+  sequencing_status_aegis:
+    header: sequencing_status
+  contributing_project_lab:
+    header: contributing_project_lab
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  data_generation:
+    header: data_generation
+  in_assembly:
+    header: in_assembly
+  insdc_submitted:
+    header: insdc_submitted
+  open:
+    header: open
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+taxonomy:
+  # taxon_id:
+
+  #   header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family

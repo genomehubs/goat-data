@@ -300,7 +300,7 @@ attributes:
   qv_score:
     constraint:
       min: 1
-      type: 4dp
+    type: 4dp
     description: VGP Quality Value score computed with gfastats
     display_group: metrics
     display_level: 2
