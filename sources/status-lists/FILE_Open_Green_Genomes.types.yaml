@@ -31,8 +31,8 @@ attributes:
   insdc_open:
     header: sequencing_status
     translate:
-      open: ""
-      in_progress: ""
+      open:  ""
+      in_progress:  ""
   open:
     header: sequencing_status
     translate:
