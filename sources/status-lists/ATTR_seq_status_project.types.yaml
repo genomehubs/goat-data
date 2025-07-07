@@ -19,27 +19,26 @@ defaults:
         - sample_collected
         - sample_available
     value_metadata:
-      default:
-        sample_available:
-          description: "Project has available samples for the taxon"
-        sample_collected:
-          description: "Project has collected samples for the taxon"
-        sample_acquired:
-          description: Samples received by sequencing center
-        in_progress:
-          description: Sequencing started but assembly not yet publicly available
-        data_generation:
-          description: Lab work in progress
-        in_assembly:
-          description: In assembly
-        insdc_submitted:
-          description: Assembly submitted to INSDC but not yet publicly available
-        open:
-          description: Data publicly available
-        insdc_open:
-          description: Data publicly available on INSDC sequence repositories
-        published:
-          description: Publication describing assembly is available
+      sample_available:
+        description: "Project has available samples for the taxon"
+      sample_collected:
+        description: "Project has collected samples for the taxon"
+      sample_acquired:
+        description: Samples received by sequencing center
+      in_progress:
+        description: Sequencing started but assembly not yet publicly available
+      data_generation:
+        description: Lab work in progress
+      in_assembly:
+        description: In assembly
+      insdc_submitted:
+        description: Assembly submitted to INSDC but not yet publicly available
+      open:
+        description: Data publicly available
+      insdc_open:
+        description: Data publicly available on INSDC sequence repositories
+      published:
+        description: Publication describing assembly is available
 attributes:
   sequencing_status:
     description: Most advanced sequencing status for taxon across all projects
