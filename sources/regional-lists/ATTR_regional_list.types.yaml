@@ -251,6 +251,7 @@ attributes:
         - zm
         - zw
         - ax
+        - xk
     description: List of countries where taxon is found
     display_group: regional_lists
     display_level: 2
@@ -760,3 +761,5 @@ attributes:
         description: Zimbabwe
       ax:
         description: Åland Islands
+      xk:
+        description: Kosovo
