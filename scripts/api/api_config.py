@@ -172,7 +172,7 @@ def sts_api_count_handler(r_text):
 
 
 def sts_row_handler(result_count, fieldnames, token, **kwargs):
-    page_size = 200
+    page_size = 100
     result = []
 
     for page in range(1, int(result_count / page_size) + 2):
