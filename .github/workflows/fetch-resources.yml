@@ -365,28 +365,28 @@ jobs:
           unzip -o -d ${{ inputs.resources }}/assembly-data ${{ inputs.resources }}/assembly-data/eukaryota.zip ncbi_dataset/data/assembly_data_report.jsonl
           ls ${{ inputs.resources }}/assembly-data
 
-      - name: Run parse_ncbi_assemblies.py
-        run: |
-          CMD="s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.types.yaml \$(pwd)/ 2>/dev/null || \
-          s3cmd get s3://goat/sources/assembly-data/ncbi_datasets_eukaryota.types.yaml \$(pwd)/ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ 2>/dev/null || \
-          s3cmd get s3://goat/sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || \
-          s3cmd get s3://goat/sources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || : && \
-          docker run --rm --network=host \
-          -v $(pwd)/pipelines/assembly/parse_ncbi_assemblies.py:/genomehubs/parse_ncbi_assemblies.py \
-          -v $(pwd)/pipelines/assembly/assembly_methods.py:/genomehubs/assembly_methods.py \
-          -v \$(pwd):/genomehubs/tmp \
-          -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
-          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"cd /genomehubs/tmp && \
-            /genomehubs/parse_ncbi_assemblies.py \
-              -r 2759 \
-              -f ncbi_datasets_eukaryota \"" \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+      # - name: Run parse_ncbi_assemblies.py
+      #   run: |
+      #     CMD="s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.types.yaml \$(pwd)/ 2>/dev/null || \
+      #     s3cmd get s3://goat/sources/assembly-data/ncbi_datasets_eukaryota.types.yaml \$(pwd)/ 2>/dev/null || : && \
+      #     s3cmd get s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ 2>/dev/null || \
+      #     s3cmd get s3://goat/sources/assembly-data/ncbi_datasets_eukaryota.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+      #     s3cmd get s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || \
+      #     s3cmd get s3://goat/sources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+      #     docker run --rm --network=host \
+      #     -v $(pwd)/pipelines/assembly/parse_ncbi_assemblies.py:/genomehubs/parse_ncbi_assemblies.py \
+      #     -v $(pwd)/pipelines/assembly/assembly_methods.py:/genomehubs/assembly_methods.py \
+      #     -v \$(pwd):/genomehubs/tmp \
+      #     -v ${{ inputs.resources }}/assembly-data:/genomehubs/assembly-data \
+      #     genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+      #       \"cd /genomehubs/tmp && \
+      #       /genomehubs/parse_ncbi_assemblies.py \
+      #         -r 2759 \
+      #         -f ncbi_datasets_eukaryota \"" \
+      #     ./scripts/update-resources/fetch-or-fallback.sh
+      #   env:
+      #     FALLBACK: s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz,s3://goat/resources/assembly-data-feature/ncbi_datasets_eukaryota_features.tsv.gz
+      #     RESOURCES: ${{ inputs.resources }}/assembly-data
       - name: copy ncbi_datasets_eukaryota.tsv.gz to ncbi_datasets_eukaryota_taxon.tsv.gz
         run: |
           s3cmd cp s3://goat/resources/assembly-data/ncbi_datasets_eukaryota.tsv.gz s3://goat/resources/assembly-data-taxon/ncbi_datasets_eukaryota_taxon.tsv.gz 2>/dev/null || :
