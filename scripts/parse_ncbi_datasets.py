@@ -27,8 +27,10 @@ configuration file.
 
 
 import argparse
+import contextlib
 import json
 import os
+import re
 import subprocess
 from collections import defaultdict
 from collections.abc import Generator
@@ -154,21 +156,26 @@ def set_additional_organelle_values(
         organelle_name (str): The name of the organelle.
     """
     if is_assembled_molecule(seq):
-        organelle["genbankAssmAccession"] = seq[0]["genbank_accession"]
-        organelle["totalSequenceLength"] = seq[0]["length"]
-        organelle["gcPercent"] = seq[0]["gc_percent"]
-        data["processedOrganelleInfo"][organelle_name]["assemblySpan"] = organelle[
-            "totalSequenceLength"
-        ]
-        data["processedOrganelleInfo"][organelle_name]["gcPercent"] = organelle[
-            "gcPercent"
-        ]
-        data["processedOrganelleInfo"][organelle_name]["accession"] = seq[0][
-            "genbank_accession"
-        ]
+        if "genbank_accession" in seq[0]:
+            organelle["genbankAssmAccession"] = seq[0]["genbank_accession"]
+            organelle["totalSequenceLength"] = seq[0]["length"]
+            organelle["gcPercent"] = seq[0]["gc_percent"]
+            data["processedOrganelleInfo"][organelle_name]["assemblySpan"] = organelle[
+                "totalSequenceLength"
+            ]
+            data["processedOrganelleInfo"][organelle_name]["gcPercent"] = organelle[
+                "gcPercent"
+            ]
+            data["processedOrganelleInfo"][organelle_name]["accession"] = seq[0][
+                "genbank_accession"
+            ]
     else:
         data["processedOrganelleInfo"][organelle_name]["scaffolds"] = ";".join(
-            [entry["genbank_accession"] for entry in seq]
+            [
+                entry["genbank_accession"]
+                for entry in seq
+                if "genbank_accession" in entry
+            ]
         )
 
 
@@ -421,6 +428,56 @@ def update_organelle_info(data: dict, row: dict) -> None:
         )
 
 
+def to_decimal_degrees(value: str) -> Optional[float]:
+    """
+    Convert a latitude or longitude string to decimal degrees.
+
+    Args:
+        value (str): The latitude or longitude string, which may be in decimal degrees,
+            or in degrees/minutes/seconds (DMS) format.
+
+    Returns:
+        float | None: The value in decimal degrees, or None if conversion fails.
+    """
+
+    if value is None:
+        return None
+
+    value = value.strip()
+    # Try direct float conversion (decimal degrees)
+    with contextlib.suppress(ValueError):
+        return float(value)
+    # Try to parse DMS format (e.g., 51°28'40"N or 51 28 40 N)
+    dms_regex = re.compile(
+        r"""(?P<deg>-?\d+)[°\s]+
+            (?P<min>\d+)?['\s]*
+            (?P<sec>\d+(?:\.\d+)?)?["\s]*
+            (?P<dir>[NSEW])?""",
+        re.IGNORECASE | re.VERBOSE,
+    )
+    match = dms_regex.match(value)
+    if not match:
+        return None
+
+    deg = float(match["deg"])
+    min_ = float(match["min"]) if match["min"] else 0.0
+    sec = float(match["sec"]) if match["sec"] else 0.0
+    decimal = abs(deg) + min_ / 60 + sec / 3600
+    if deg < 0:
+        decimal = -decimal
+
+    if direction := match["dir"]:
+        direction = direction.upper()
+        if direction in ["S", "W"]:
+            decimal = -abs(decimal)
+        elif direction in ["N", "E"]:
+            decimal = abs(decimal)
+    try:
+        return float(decimal)
+    except Exception:
+        return None
+
+
 def process_assembly_report(data: dict, previous_data: Optional[dict]) -> dict:
     """Process assembly level information.
 
@@ -460,6 +517,26 @@ def process_assembly_report(data: dict, previous_data: Optional[dict]) -> dict:
         }
     if "refseqCategory" in data.get("assemblyInfo", {}):
         data["processedAssemblyInfo"]["primaryValue"] = 1
+    # if the assembly has a biosample accession, lookup the location data and make
+    # a list of locations from the latitude and longitude fields
+    if "biosample" in data["assemblyInfo"]:
+        biosample = data["assemblyInfo"]["biosample"]
+        if "attributes" in biosample:
+            latitude = None
+            longitude = None
+            for attr in biosample["attributes"]:
+                if attr.get("name", "").lower() == "geographic location (latitude)":
+                    latitude = to_decimal_degrees(attr.get("value"))
+                elif attr.get("name", "").lower() == "geographic location (longitude)":
+                    longitude = to_decimal_degrees(attr.get("value"))
+            if latitude and longitude:
+                data["processedAssemblyInfo"][
+                    "sampleLocation"
+                ] = f"{latitude},{longitude}"
+            else:
+                data["processedAssemblyInfo"]["sampleLocation"] = None
+        else:
+            data["processedAssemblyInfo"]["sampleLocation"] = None
     return data
 
 
