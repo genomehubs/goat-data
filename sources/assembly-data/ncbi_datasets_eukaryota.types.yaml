@@ -145,6 +145,8 @@ attributes:
   ungapped_span:
     header: totalUngappedLength
     path: assemblyStats.totalUngappedLength
+  data_freeze:
+    default: latest
 file:
   display_group: general
   exclusions:

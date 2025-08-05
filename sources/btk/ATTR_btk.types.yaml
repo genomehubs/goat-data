@@ -100,14 +100,6 @@ identifiers:
     type: keyword
   assembly_id:
     type: keyword
-  bioproject:
-    synonyms:
-      - bioproject_accession
-    type: keyword
-  biosample:
-    synonyms:
-      - biosample_accession
-    type: keyword
   blobtoolkit_id:
     synonyms:
       - blobtoolkit_accession

@@ -371,3 +371,10 @@ attributes:
     description: primary or secondary assembly for a biosample
     display_group: general
     type: keyword
+  data_freeze:
+    constraint:
+      enum:
+        - latest
+        - vgp_2025
+    status: experimental
+    type: keyword
