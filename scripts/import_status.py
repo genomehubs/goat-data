@@ -6,6 +6,7 @@ import sys
 
 projects = [
     "1000GCH",
+    "AEGIS",
     "ATLASEA",
     "BEENOME100",
     "CANBP",
