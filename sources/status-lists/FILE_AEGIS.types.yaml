@@ -5,7 +5,7 @@ file:
 
   name: AEGIS_expanded.tsv
   source: Declared Target List - AEGIS
-  source_date: "2025-09-12"
+  source_date: "2025-09-13"
   source_description: Declared Status Lists -AEGIS - live spreadsheet - _ToL_AEGIS Target_Lists
   source_contact: Mark Blaxter
 attributes:
@@ -16,7 +16,7 @@ attributes:
   sequencing_status_aegis:
     header: sequencing_status
   contributing_project_lab:
-    header: contributing_project_lab
+    header: aegis_sub-project
   sample_collected:
     header: sample_collected
   sample_acquired:
