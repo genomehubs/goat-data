@@ -6,7 +6,7 @@ env:
   TAXROOT: 2759
 
 jobs:
-  run_test:
+  get_dockers:
     runs-on: [self-hosted, runner3]
     steps:
       - name: Get dockers
