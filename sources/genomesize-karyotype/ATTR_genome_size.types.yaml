@@ -48,6 +48,7 @@ attributes:
         - pulse field gel electrophoresis
         - reassociation kinetics
         - whole genome sequencing
+        - qPCR
     description: C value estimation method
     long_description: Method used to estimate the C value in picograms
     display_level: 2
@@ -133,6 +134,7 @@ attributes:
         - Red blood cells
         - Retinal cells
         - Salivary gland
+        - Skeletal muscle
         - Somatic cells
         - Sperm
         - Spleen
