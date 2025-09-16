@@ -29,6 +29,7 @@ defaults:
         - cfgp
         - cgp
         - cngb
+        - culi
         - dtol
         - ebpn
         - ebphk
@@ -44,6 +45,7 @@ defaults:
         - fish
         - gaga
         - gap
+        - gbb
         - gbr
         - giga
         - hk-ebp
@@ -113,6 +115,8 @@ defaults:
         description: "Cartilaginous Fish Genome Project (click to view GoaT project page)"
       cgp:
         description: "Cetaceans Genomes Project (click to view GoaT project page)"
+      culi:
+        description: "Culicidae Genomes (click to view GoaT project page)"
       dtol:
         description: "Darwin Tree of Life (click to view GoaT project page)"
       ebpn:
@@ -139,6 +143,8 @@ defaults:
         description: "Global Ant Genomics Alliance (click to view GoaT project page)"
       gap:
         description: "Genomics for Australian Plants (click to view GoaT project page)"
+      gbb:
+        description: "Genomics of the Brazilian Biodiversity (click to view GoaT project page
       gbr:
         description: "Great Barrier Reef SeaQuence Project (click to view GoaT project page)"
       giga:

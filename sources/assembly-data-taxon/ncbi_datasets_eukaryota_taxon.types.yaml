@@ -15,6 +15,7 @@ attributes:
     translate:
       PRJNA533106: EBP
       PRJEB33226: 25GP
+      PRJEB81973: 959NG
       PRJEB80366: AEGIS
       PRJNA811786: AFRICABP
       PRJNA555319: AG100PEST
@@ -74,6 +75,7 @@ attributes:
     translate:
       PRJNA533106: EBP
       PRJEB33226: 25GP
+      PRJEB81973: 959NG
       PRJEB80366: AEGIS
       PRJNA811786: AFRICABP
       PRJNA555319: AG100PEST
@@ -146,6 +148,13 @@ attributes:
       - ;
     translate:
       PRJEB33226: insdc_open
+  sequencing_status_959ng:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB81973: insdc_open
   sequencing_status_aegis:
     description: Sequencing status for AEGIS
     display_name: Sequencing status AEGIS
@@ -365,6 +374,13 @@ attributes:
       - ;
     translate:
       PRJNA1075727: insdc_open
+  sequencing_status_gbb:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJNA1180976: insdc_open
   sequencing_status_giga:
     display_group: sequencing_status
     header: bioProjectAccession
