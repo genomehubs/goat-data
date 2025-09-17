@@ -93,4 +93,4 @@ if __name__ == "__main__":
     all_tax_ids = get_ena_api_taxids(taxroot)
     new_tax_ids = get_new_ids(all_tax_ids)
     print(f"New tax_ids: {len(new_tax_ids)}")
-    fetch_new_taxa_jsonl(new_tax_ids)
+    # fetch_new_taxa_jsonl(new_tax_ids)

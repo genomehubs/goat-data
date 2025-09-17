@@ -79,19 +79,34 @@ jobs:
           FALLBACK: s3://goat/resources/btk/btk.tsv.gz,s3://goat/resources/btk/btk.files.yaml
           RESOURCES: ${{ inputs.resources }}/btk
 
-  fetch-ncbi-taxdump:
-    runs-on: [self-hosted, runner1]
+  # Commented out for updated taxonomy import
+  # fetch-ncbi-taxdump:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Fetch NCBI taxdump
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
+  #           | tar xzf - nodes.dmp names.dmp
+  #         FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp
+  #         RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
+
+  fetch-genomehubs-taxonomy:
+    runs-on: [self-hosted, runner2]
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch NCBI taxdump
+      - name: Fetch GenomeHubs taxonomy
         run: |
           ./scripts/update-resources/fetch-or-fallback.sh
         env:
           CMD: |
-            curl -s https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz \
-            | tar xzf - nodes.dmp names.dmp
-          FALLBACK: s3://goat/resources/taxdump/ncbi/nodes.dmp,s3://goat/resources/taxdump/ncbi/names.dmp
-          RESOURCES: ${{ inputs.resources }}/taxdump/ncbi
+            mkdir -p ${{ inputs.resources }}/genomehubs-taxonomy && \
+            curl -s https://goat.genomehubs.org/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz -o ${{ inputs.resources }}/genomehubs-taxonomy/nodes.jsonl.gz
+          FALLBACK: s3://goat/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz
+          RESOURCES: ${{ inputs.resources }}/ncbi-taxonomy
 
   fetch-refseq-organelles:
     runs-on: [self-hosted, runner1]
@@ -115,19 +130,20 @@ jobs:
           FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
           RESOURCES: ${{ inputs.resources }}/assembly-data
 
-  fetch-tolids:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Fetch ToLIDs
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
-            | gzip -c > tolids.tsv.gz
-          FALLBACK: s3://goat/resources/tolids/tolids.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/tolids
+  # Commented out for updated taxonomy import
+  # fetch-tolids:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Fetch ToLIDs
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           curl -s https://gitlab.com/wtsi-grit/darwin-tree-of-life-sample-naming/-/raw/master/tolids.txt \
+  #           | gzip -c > tolids.tsv.gz
+  #         FALLBACK: s3://goat/resources/tolids/tolids.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/tolids
 
   fetch-from-apis:
     runs-on: [self-hosted, runner1]
@@ -323,24 +339,25 @@ jobs:
   #         FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
   #         RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
-  fetch-ena-taxonomy-extra:
-    runs-on: [self-hosted, runner2]
-    # needs:
-    #   - fetch-ena-taxonomy-prev
-    steps:
-      - uses: actions/checkout@v4
-      - name: Fetch ENA taxonomy extra
-        run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            cp ${{ inputs.resources }}/ena-taxonomy.extra.jsonl.gz ./ 2>/dev/null || : && \
-            ${{ github.workspace }}/scripts/update-resources/get-ena-taxonomy-extra.py 2759 && \
-            cat ena-taxonomy.prev.jsonl.gz ena-taxonomy.new.jsonl.gz > ena-taxonomy.extra.jsonl.gz && \
-            cp ena-taxonomy.extra.jsonl.gz ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz && \
-            rm ena-taxonomy.prev.jsonl.gz ena-taxonomy.new.jsonl.gz
-          FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
-          RESOURCES: ${{ inputs.resources }}/ena-taxonomy
+  # Commented out for updated taxonomy import
+  # fetch-ena-taxonomy-extra:
+  #   runs-on: [self-hosted, runner2]
+  #   # needs:
+  #   #   - fetch-ena-taxonomy-prev
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Fetch ENA taxonomy extra
+  #       run: |
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         CMD: |
+  #           cp ${{ inputs.resources }}/ena-taxonomy.extra.jsonl.gz ./ 2>/dev/null || : && \
+  #           ${{ github.workspace }}/scripts/update-resources/get-ena-taxonomy-extra.py 2759 && \
+  #           cat ena-taxonomy.prev.jsonl.gz ena-taxonomy.new.jsonl.gz > ena-taxonomy.extra.jsonl.gz && \
+  #           cp ena-taxonomy.extra.jsonl.gz ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz && \
+  #           rm ena-taxonomy.prev.jsonl.gz ena-taxonomy.new.jsonl.gz
+  #         FALLBACK: s3://goat/resources/ena-taxonomy/ena-taxonomy.extra.jsonl.gz
+  #         RESOURCES: ${{ inputs.resources }}/ena-taxonomy
 
   fetch-ncbi-datasets-zip:
     runs-on: [self-hosted, runner1]

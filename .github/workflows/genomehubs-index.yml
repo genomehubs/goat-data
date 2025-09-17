@@ -66,24 +66,26 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "indices": "assembly*${{ inputs.release }},attributes*${{ inputs.release }},feature*${{ inputs.release }},identifiers*${{ inputs.release }},sample*${{ inputs.release }},taxon-*${{ inputs.release }}", "include_global_state":false}'
 
-      - name: Index ott3.3
-        uses: ./.github/workflows/genomehubs-index-directory
-        with:
-          dockerversion: ${{ inputs.dockerversion }}
-          release: ${{ inputs.release }}
-          resources: ${{ inputs.resources }}
-          directory: ott3.3
-          type: taxon
+      # Commented out for updated taxonomy import
+      # - name: Index ott3.3
+      #   uses: ./.github/workflows/genomehubs-index-directory
+      #   with:
+      #     dockerversion: ${{ inputs.dockerversion }}
+      #     release: ${{ inputs.release }}
+      #     resources: ${{ inputs.resources }}
+      #     directory: ott3.3
+      #     type: taxon
 
-      - name: Index tolids
-        uses: ./.github/workflows/genomehubs-index-directory
-        with:
-          dockerversion: ${{ inputs.dockerversion }}
-          release: ${{ inputs.release }}
-          resources: ${{ inputs.resources }}
-          directory: tolids
-          flags: --taxon-lookup any --taxon-spellcheck
-          type: taxon
+      # Commented out for updated taxonomy import
+      # - name: Index tolids
+      #   uses: ./.github/workflows/genomehubs-index-directory
+      #   with:
+      #     dockerversion: ${{ inputs.dockerversion }}
+      #     release: ${{ inputs.release }}
+      #     resources: ${{ inputs.resources }}
+      #     directory: tolids
+      #     flags: --taxon-lookup any --taxon-spellcheck
+      #     type: taxon
 
       - name: Snapshot initassembly_otttolids
         run: |

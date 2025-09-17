@@ -53,9 +53,13 @@ jobs:
         run: |
           yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
 
-      - name: sort ENA extra JSONL
+      # Commented out for updated taxonomy import
+      # - name: sort ENA extra JSONL
+      #   run: |
+      #     gunzip -c ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz | jq -s 'sort_by(.lineage)' | jq -c '.[]' | gzip -c > ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.sorted.jsonl.gz
+      - name: unzip GenomeHubs taxonomy
         run: |
-          gunzip -c ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.jsonl.gz | jq -s 'sort_by(.lineage)' | jq -c '.[]' | gzip -c > ${{ inputs.resources }}/ena-taxonomy/ena-taxonomy.extra.sorted.jsonl.gz
+          gunzip -c ${{ inputs.resources }}/genomehubs-taxonomy/nodes.jsonl.gz > ${{ inputs.resources }}/genomehubs-taxonomy/nodes.jsonl
       - name: Run genomehubs init
         run: |
           docker run --rm --network=host \
@@ -66,9 +70,9 @@ jobs:
                 --es-host es1:9200 \
                 --taxonomy-source ncbi \
                 --config-file sources/goat.yaml \
-                --taxonomy-jsonl resources/ena-taxonomy/ena-taxonomy.extra.sorted.jsonl.gz \
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
+        # --taxonomy-jsonl resources/ena-taxonomy/ena-taxonomy.extra.sorted.jsonl.gz \
 
       - name: Add ES index.mapping.nested_objects.limit 1000000
         run: |

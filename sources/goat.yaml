@@ -7,11 +7,10 @@ common:
     path: /genomehubs/resources/es
     batch: 10000
   taxonomy:
-    path: /tmp/new_taxdump
-    url:  https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz
+    path: /genomehubs/resources/genomehubs-taxonomy/nodes.jsonl
+    url: https://goat.genomehubs.org/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz
     file:
-      - names.dmp
-      - nodes.dmp
+      - nodes.jsonl
   log:
     es: false
     fetch: true

@@ -136,7 +136,20 @@ def build_report_urls(
     grouped_country_codes = group_country_codes(
         country_codes, int(max_bins // group_count)
     )
-    urls = []
+    # Build a URL for all countries combined
+    xOpts = quote("1;1000000000000;2")
+    query_string = build_query_string(
+        root_taxon, modifier, count_rank, group_rank, country_field, ""
+    )
+    query_string = query_string.replace("query=", "x=assembly_span%20AND%20")
+    url = (
+        f"{base_url}/report?{query_string}&"
+        f"report=table&rank={count_rank}&"
+        f"cat={group_rank}[{group_count}]&"
+        f"xOpts={xOpts}&compactLegend=true"
+    )
+    urls = [url]
+    # Build per country URLs
     for group in grouped_country_codes:
         group_str = ",".join(group)
         xOpts = quote(f"{group_str};;{len(group)}")
@@ -153,6 +166,7 @@ def build_report_urls(
             f"xOpts={xOpts}&compactLegend=true"
         )
         urls.append(url)
+
     return urls
 
 
@@ -213,7 +227,7 @@ def parse_reports(urls: List[str]) -> dict:
         allValues = table.get("histograms", {}).get("allValues", [])
         byCat = table.get("histograms", {}).get("byCat", {})
         for idx, bucket in enumerate(buckets):
-            results[bucket]["Total"] = allValues[idx]
+            results[bucket]["TOTAL"] = allValues[idx]
         for cat, values in byCat.items():
             for idx, bucket in enumerate(buckets):
                 results[bucket][cat] = values[idx]
@@ -238,7 +252,13 @@ def write_results_to_csv(
         for country_code, values in results[0].items():
             for key, value in values.items():
                 translated_key = translate_keys.get(key, key)
-                row = [country_code.upper(), translated_key]
+                try:
+                    row = [country_code.upper(), translated_key]
+                except AttributeError:
+                    if str(country_code) == "1":
+                        row = ["TOTAL", translated_key]
+                    else:
+                        continue
                 for idx, _ in enumerate(modifiers):
                     if idx == 0:
                         row.append(str(value))
@@ -383,13 +403,13 @@ if __name__ == "__main__":
 # python scripts/ipbes_reports.py sources/regional-lists/ATTR_regional_list.types.yaml \
 #     --max-bins 2500 \
 #     --modifiers 'assembly_level' 'ebp_standard_criteria' \
-#     --outfile ipbes_report_order.csv \
+#     --outfile goat_ipbes_report_order.csv \
 #     --group-rank order \
 #     --root-taxon '32523[Tetrapoda]'
-#
+
 # python scripts/ipbes_reports.py sources/regional-lists/ATTR_regional_list.types.yaml \
 #     --max-bins 2500 \
 #     --modifiers 'assembly_level' 'ebp_standard_criteria' \
-#     --outfile ipbes_report_class.csv
+#     --outfile goat_ipbes_report_class.csv \
 #     --group-rank class \
 #     --root-taxon '2759[Eukaryota]'
