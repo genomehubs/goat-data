@@ -3,25 +3,33 @@ file:
   header: true
   comment: "#"
   name: SQUALOMIX_expanded.tsv
-  source: Declared Status List - SQUALOMIX
-  source_date: "2025-09-16"
-  source_description: Declared Status List - SQUALOMIX, shark and ray genomics and beyond, static spreadsheet - Squalomix_BySKuraku_all
-  source_contact: Shigehiro Kuraku nig.ac.jp
+  source: Declared Status List - Squalomix
+  source_date: "2025-09-17"
+  source_description: Squalomix Status List, live spreadsheet
+  source_contact: Shigehiro Kuraku, National Institute of Genetics, 1111 Yata, Mishima, Shizuoka, 411-8540, Japan
 attributes:
   long_list:
     header: long_list
-  sequencing_status:
-    header: sequencing_status
-    # translate:
-    #   data_generation: in_progress
-    #   in_assembly: in_progress
-    #   insdc_submitted: in_progress
+  other_priority:
+    header: other_priority
+  family_representative:
+    header: family_representative
+  # contributing_project_lab:
+  #   header: project
+  #   translate:
+  #     BGE: SSP Community Sampling
   sequencing_status_squalomix:
     header: sequencing_status
-    # translate:
-    #   data_generation: in_progress
-    #   in_assembly: in_progress
-    #   insdc_submitted: in_progress
+    translate:
+      data_generation: in_progress
+      in_assembly: in_progress
+      insdc_submitted: in_progress
+  sequencing_status:
+    header: sequencing_status
+    translate:
+      data_generation: in_progress
+      in_assembly: in_progress
+      insdc_submitted: in_progress
   sample_collected:
     header: sample_collected
   sample_acquired:
@@ -38,7 +46,7 @@ taxonomy:
   taxon_id:
     header: ncbi_taxon_id
   species:
-    header: ["genus", "species"]
+    header: [genus, species]
     join: " "
   family:
     header: family

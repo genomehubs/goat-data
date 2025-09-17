@@ -1,0 +1,49 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: SQUALOMIX_expanded.tsv
+  source: Metadata for targets - Squalomix
+  source_date: "2025-09-17"
+  source_contact: Shigehiro Kuraku, National Institute of Genetics, 1111 Yata, Mishima, Shizuoka, 411-8540, Japan
+  source_url: https://github.com/Squalomix/squalomix.github.io
+  source_description: Squalomix GitHub - measurements for genome size and karyotype
+attributes:
+  genome_size:
+    header: "genome_size_estimate_(gb)"
+    type: long
+    function: "{} * 1000000000"
+  c_value_method:
+    type: keyword
+    header: method
+    translate:
+      flow_cytometry: Flow Cytometry
+  c_value_cell_type:
+    type: keyword
+    header: cell_type
+    translate:
+      skeletal muscle: Skeletal Muscle
+      blood cells: Blood Cells
+      embryo: Embryo
+      heart: Heart cells
+      spleen: Spleen
+  chromosome_number:
+    header: karyotype_2n
+    type: short
+    metadata:
+      is_primary_value:
+        default: 1
+  haploid_number:
+    header: karyotype_2n
+    function: "{} / 2"
+    type: short
+  sex_determination:
+    header: sex_determination
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: [genus, species]
+    join: " "
+  family:
+    header: family
