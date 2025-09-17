@@ -100,13 +100,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch GenomeHubs taxonomy
         run: |
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          CMD: |
-            mkdir -p ${{ inputs.resources }}/genomehubs-taxonomy && \
-            curl -s https://goat.genomehubs.org/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz -o ${{ inputs.resources }}/genomehubs-taxonomy/nodes.jsonl.gz
-          FALLBACK: s3://goat/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz
-          RESOURCES: ${{ inputs.resources }}/ncbi-taxonomy
+          mkdir -p ${{ inputs.resources }}/genomehubs-taxonomy && \
+          curl -sL https://goat.cog.sanger.ac.uk/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz -o ${{ inputs.resources }}/genomehubs-taxonomy/nodes.jsonl.gz
 
   fetch-refseq-organelles:
     runs-on: [self-hosted, runner1]
