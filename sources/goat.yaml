@@ -7,8 +7,8 @@ common:
     path: /genomehubs/resources/es
     batch: 10000
   taxonomy:
-    path: /genomehubs/resources/genomehubs-taxonomy/nodes.jsonl
-    url: https://goat.genomehubs.org/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz
+    path: /genomehubs/resources/genomehubs-taxonomy
+    url: https://goat.cog.sanger.ac.uk/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz
     file:
       - nodes.jsonl
   log:
