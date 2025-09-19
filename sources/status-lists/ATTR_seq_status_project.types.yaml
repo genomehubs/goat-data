@@ -46,6 +46,9 @@ attributes:
   sequencing_status_1000gch:
     description: Sequencing status for 1,000 Chilean Genomes
     display_name: Sequencing status 1000GCh
+  sequencing_status_959ng:
+    description: Sequencing status for The 959 Nematode Genomes Project
+    display_name: Sequencing status 959NG
   sequencing_status_africabp:
     description: Sequencing status for Africa Biogenome Project
     display_name: Sequencing status AfricaBP
@@ -208,6 +211,9 @@ attributes:
   sequencing_status_psyche:
     description: Sequencing status for Project Psyche
     display_name: Sequencing status Psyche
+  sequencing_status_r2k:
+    description: Sequencing status for Rodent 2K Project
+    display_name: Sequencing status R2K
   sequencing_status_squalomix:
     description: Sequencing status for Squalomix Project
     display_name: Sequencing status Squalomix
