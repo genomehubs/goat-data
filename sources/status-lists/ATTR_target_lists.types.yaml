@@ -9,6 +9,7 @@ defaults:
     constraint:
       enum:
         - 1000gch
+        - 959ng
         - aegis
         - africabp
         - ag100pest
@@ -65,6 +66,7 @@ defaults:
         - pp
         - prgp
         - psyche
+        - r2k
         - squalomix
         - tsi
         - vgp
@@ -77,6 +79,8 @@ defaults:
         link: https://goat.genomehubs.org/projects/{}
       1000gch:
         description: "1,000 Chilean Genomes (click to view GoaT project page)"
+      959ng:
+        description: "The 959 Nematode Genomes Project (click to view GoaT project page)"
       aegis:
         description: "Ancient Environmental Genomics Initiative for Sustainability (click to view GoaT project page)"
       africabp:
@@ -187,6 +191,8 @@ defaults:
         description: "Primate Genomes Project (click to view GoaT project page)"
       psyche:
         description: "Project Psyche (click to view GoaT project page)"
+      r2k:
+        description: "Rodent 2K (click to view GoaT project page)"
       squalomix:
         description: "Squalomix (click to view GoaT project page)"
       tsi:
