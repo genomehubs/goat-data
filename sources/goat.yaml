@@ -7,10 +7,13 @@ common:
     path: /genomehubs/resources/es
     batch: 10000
   taxonomy:
+    format: ncbi
     path: /genomehubs/resources/genomehubs-taxonomy
     url: https://goat.cog.sanger.ac.uk/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz
     file:
       - nodes.jsonl
+  taxon:
+    preload: true
   log:
     es: false
     fetch: true
