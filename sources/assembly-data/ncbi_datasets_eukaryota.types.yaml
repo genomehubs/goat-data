@@ -169,7 +169,7 @@ file:
   source_date: "2025-09-25"
 identifiers:
   assembly_id:
-    header: genbankAccession
+    header: assemblyId
     path: processedAssemblyInfo.genbankAccession
   assembly_name:
     header: assemblyName
