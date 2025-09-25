@@ -146,7 +146,8 @@ attributes:
     header: totalUngappedLength
     path: assemblyStats.totalUngappedLength
   data_freeze:
-    default: latest
+    header: dataFreeze
+    path: processedAssemblyInfo.dataFreeze
 file:
   display_group: general
   exclusions:
