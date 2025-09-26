@@ -375,6 +375,11 @@ attributes:
     constraint:
       enum:
         - latest
-        - vgp_2025
-    status: experimental
+        - vgp_phase1_main
+        - vgp_phase1_comp_vgp
+        - vgp_phase1_alt
+        - vgp_phase1_aux
+        - vgp_phase1_comp_external
+    description: list of data freezes this assembly is included in
+    display_group: data_freeze
     type: keyword
