@@ -148,6 +148,8 @@ attributes:
   data_freeze:
     header: dataFreeze
     path: processedAssemblyInfo.dataFreeze
+    separator:
+      - ","
 file:
   display_group: general
   exclusions:
@@ -166,7 +168,7 @@ file:
     - TAXON_assembly.types.yaml
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2025-09-16"
+  source_date: "2025-10-03"
 identifiers:
   assembly_id:
     header: assemblyId
