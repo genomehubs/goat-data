@@ -5,6 +5,7 @@ import sys
 # reload(isl)
 
 projects = [
+    "959NG",
     "1000GCH",
     "AEGIS",
     "ATLASEA",
@@ -12,16 +13,19 @@ projects = [
     "CANBP",
     "CBP",
     "CGP",
+    "CULI",
     "EBPN",
     "EUROFISH",
     "ERGA-BGE",
     "ERGA-CH",
     "ERGA-COM",
     "GAGA",
+    "GBB",
     "GIGA",
     "LOEWE-TBG",
     "OTHER",
     "PGP",
+    "SQUALOMIX",
     "WA",
     "YGG",
 ]
