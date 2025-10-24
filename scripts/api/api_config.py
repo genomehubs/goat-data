@@ -73,7 +73,10 @@ nhm_post_data = {
 
 
 nhm_url = "https://data.nhm.ac.uk/api/3/action/vds_multi_query"
-nhm_headers = {"content-type": "application/json"}
+nhm_headers = {
+    "content-type": "application/json",
+    "user-agent": "GoaT DToL script (curators contact: goat@genomehubs.org)",
+}
 
 
 def nhm_url_opener(**kwargs):
@@ -163,7 +166,9 @@ sts_fieldnames = [
 
 
 def sts_url_opener(token):
-    return requests.get(sts_url, headers={"Token": token, "Project": "ALL"},verify=False)
+    return requests.get(
+        sts_url, headers={"Token": token, "Project": "ALL"}, verify=False
+    )
 
 
 def sts_api_count_handler(r_text):
@@ -179,7 +184,9 @@ def sts_row_handler(result_count, fieldnames, token, **kwargs):
         print(page)
 
         url = f"{sts_url}?page={page}&page_size={page_size}"
-        r = requests.get(url, headers={"Token": token, "Project": "ALL"},verify=False).json()
+        r = requests.get(
+            url, headers={"Token": token, "Project": "ALL"}, verify=False
+        ).json()
         dl = r["data"]["list"]
 
         for species in dl:
