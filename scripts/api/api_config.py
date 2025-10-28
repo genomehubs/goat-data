@@ -1,6 +1,7 @@
 import json
-import yaml
+
 import requests
+import yaml
 
 #####################################################################
 # VGL
@@ -18,23 +19,23 @@ vgl_fieldnames = [
 vgl_output_filename = "vgp.raw"
 
 
-def vgl_url_opener(**kwargs):
-    vgl_url = "https://raw.githubusercontent.com/vgl-hub/genome-portal/master/_data/table_tracker.yml"
-    return requests.get(vgl_url, stream=True)
+# def vgl_url_opener(**kwargs):
+#     vgl_url = "https://raw.githubusercontent.com/vgl-hub/genome-portal/master/_data/table_tracker.yml"
+#     return requests.get(vgl_url, stream=True)
 
 
-def vgl_hub_count_handler(r_text):
-    vgp_yaml = yaml.safe_load(r_text)
-    return len(vgp_yaml["toc"])
+# def vgl_hub_count_handler(r_text):
+#     vgp_yaml = yaml.safe_load(r_text)
+#     return len(vgp_yaml["toc"])
 
 
-def vgl_row_handler(r_text, fieldnames, **kwargs):
-    vgp_yaml = yaml.safe_load(r_text)
-    result = []
-    for species in vgp_yaml["toc"]:
-        d = [species.get(f) for f in fieldnames]
-        result.append(d)
-    return result
+# def vgl_row_handler(r_text, fieldnames, **kwargs):
+#     vgp_yaml = yaml.safe_load(r_text)
+#     result = []
+#     for species in vgp_yaml["toc"]:
+#         d = [species.get(f) for f in fieldnames]
+#         result.append(d)
+#     return result
 
 
 #####################################################################
@@ -73,16 +74,20 @@ nhm_post_data = {
 
 
 nhm_url = "https://data.nhm.ac.uk/api/3/action/vds_multi_query"
-nhm_headers = {"content-type": "application/json"}
+nhm_headers = {"content-type": "application/json", "user-agent": "GoaT DToL script"}
 
 
 def nhm_url_opener(**kwargs):
+    print("NHM API request sent")
+    print(nhm_url)
+    print(nhm_post_data)
     return requests.post(nhm_url, headers=nhm_headers, json=nhm_post_data)
 
 
 def nhm_api_count_handler(r_text):
     j = json.loads(r_text)
     nhm_total = j["result"]["total"]
+    print(f"NHM total count: {nhm_total}")
     return nhm_total
 
 
@@ -112,103 +117,104 @@ def nhm_row_handler(fieldnames, **kwargs):
 # STS
 #####################################################################
 
-sts_url = "https://sts.tol.sanger.ac.uk/api/v1/species"
-sts_output_filename = "sts.tsv"
-sts_fieldnames = [
-    "available_samples_ready",
-    "common_name",
-    "desc",
-    "family",
-    "family_representative",
-    "family_representative_link",
-    "genome_notes",
-    "genus",
-    "infra_epithet",
-    "lab_work_status",
-    "marked_done",
-    "material_status",
-    "order_group",
-    "prefix",
-    "project_code",
-    "sample_count",
-    "scientific_name",
-    "sequencing_material_status_updated_at",
-    "sequencing_status",
-    "species_id",
-    "submitted_gals",
-    "taxon_group",
-    "taxon_id",
-    "taxon_uri",
-    "tissue_depleted",
-    "tissue_status",
-    "sequencing_status_simple",
-    "sequencing_status_dtol",
-    "sequencing_status_asg",
-    "sequencing_status_ergapi",
-    "sequencing_status_erga",
-    "sequencing_status_vgp",
-    "sequencing_status_blax",
-    "sequencing_status_durb",
-    "sequencing_status_rnd",
-    "sequencing_status_lawn",
-    "sequencing_status_berri",
-    "sequencing_status_meier",
-    "sequencing_status_misk",
-    "sequencing_status_psyche",
-    "sequencing_status_bat1k",
-    "sample_collected",
-    "sample_acquired",
-    "in_progress",
-]
+# sts_url = "https://sts.tol.sanger.ac.uk/api/v1/species"
+# sts_output_filename = "sts.tsv"
+# sts_fieldnames = [
+#     "available_samples_ready",
+#     "common_name",
+#     "desc",
+#     "family",
+#     "family_representative",
+#     "family_representative_link",
+#     "genome_notes",
+#     "genus",
+#     "infra_epithet",
+#     "lab_work_status",
+#     "marked_done",
+#     "material_status",
+#     "order_group",
+#     "prefix",
+#     "project_code",
+#     "sample_count",
+#     "scientific_name",
+#     "sequencing_material_status_updated_at",
+#     "sequencing_status",
+#     "species_id",
+#     "submitted_gals",
+#     "taxon_group",
+#     "taxon_id",
+#     "taxon_uri",
+#     "tissue_depleted",
+#     "tissue_status",
+#     "sequencing_status_simple",
+#     "sequencing_status_dtol",
+#     "sequencing_status_asg",
+#     "sequencing_status_ergapi",
+#     "sequencing_status_erga",
+#     "sequencing_status_vgp",
+#     "sequencing_status_blax",
+#     "sequencing_status_durb",
+#     "sequencing_status_rnd",
+#     "sequencing_status_lawn",
+#     "sequencing_status_berri",
+#     "sequencing_status_meier",
+#     "sequencing_status_misk",
+#     "sequencing_status_psyche",
+#     "sequencing_status_bat1k",
+#     "sample_collected",
+#     "sample_acquired",
+#     "in_progress",
+# ]
 
 
-def sts_url_opener(token):
-    return requests.get(sts_url, headers={"Token": token, "Project": "ALL"},verify=False)
+# def sts_url_opener(token):
+#     return requests.get(sts_url, headers={"Token": token, "Project": "ALL"},verify=False)
 
 
-def sts_api_count_handler(r_text):
-    j = json.loads(r_text)
-    return j["data"]["total"]
+# def sts_api_count_handler(r_text):
+#     j = json.loads(r_text)
+#     return j["data"]["total"]
 
 
-def sts_row_handler(result_count, fieldnames, token, **kwargs):
-    page_size = 100
-    result = []
+# def sts_row_handler(result_count, fieldnames, token, **kwargs):
+#     page_size = 100
+#     result = []
 
-    for page in range(1, int(result_count / page_size) + 2):
-        print(page)
+#     for page in range(1, int(result_count / page_size) + 2):
+#         print(page)
 
-        url = f"{sts_url}?page={page}&page_size={page_size}"
-        r = requests.get(url, headers={"Token": token, "Project": "ALL"},verify=False).json()
-        dl = r["data"]["list"]
+#         url = f"{sts_url}?page={page}&page_size={page_size}"
+#         r = requests.get(url, headers={"Token": token, "Project": "ALL"},verify=False).json()
+#         dl = r["data"]["list"]
 
-        for species in dl:
-            sequencing_status_simple = "sample_collected"  # default
-            lws = species.get("lab_work_status")
-            if "NOVEL" in str(lws) or "ASSIGNED_TO_LAB" in str(lws):
-                sequencing_status_simple = "sample_acquired"
-            else:
-                sequencing_status_simple = "in_progress"
+#         for species in dl:
+#             sequencing_status_simple = "sample_collected"  # default
+#             lws = species.get("lab_work_status")
+#             if "NOVEL" in str(lws) or "ASSIGNED_TO_LAB" in str(lws):
+#                 sequencing_status_simple = "sample_acquired"
+#             else:
+#                 sequencing_status_simple = "in_progress"
 
-            species["sequencing_status_simple"] = sequencing_status_simple
+#             species["sequencing_status_simple"] = sequencing_status_simple
 
-            pc = species.get("project_code")
-            for p in pc:
-                species[f"sequencing_status_{p.lower()}"] = sequencing_status_simple
+#             pc = species.get("project_code")
+#             for p in pc:
+#                 species[f"sequencing_status_{p.lower()}"] = sequencing_status_simple
 
-            if sequencing_status_simple == "in_progress":
-                species["sample_collected"] = ",".join(pc)
-                species["sample_acquired"] = ",".join(pc)
-                species["in_progress"] = ",".join(pc)
+#             if sequencing_status_simple == "in_progress":
+#                 species["sample_collected"] = ",".join(pc)
+#                 species["sample_acquired"] = ",".join(pc)
+#                 species["in_progress"] = ",".join(pc)
 
-            elif sequencing_status_simple == "sample_acquired":
-                species["sample_collected"] = ",".join(pc)
-                species["sample_acquired"] = ",".join(pc)
-            elif sequencing_status_simple == "sample_collected":
-                species["sample_collected"] = ",".join(pc)
-            species["submitted_gals"] = ",".join(species.get("submitted_gals"))
+#             elif sequencing_status_simple == "sample_acquired":
+#                 species["sample_collected"] = ",".join(pc)
+#                 species["sample_acquired"] = ",".join(pc)
+#             elif sequencing_status_simple == "sample_collected":
+#                 species["sample_collected"] = ",".join(pc)
+#             species["submitted_gals"] = ",".join(species.get("submitted_gals"))
 
-            d = [[species.get(f) for f in fieldnames]]
-            result.extend(d)
+#             d = [[species.get(f) for f in fieldnames]]
+#             result.extend(d)
 
-    return result
+#     return result
+#     return result
