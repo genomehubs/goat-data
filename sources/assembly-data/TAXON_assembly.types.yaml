@@ -35,7 +35,6 @@ attributes:
   assembly_level:
     taxon_display_group: assembly
     taxon_summary:
-      - primary
       - enum
     taxon_traverse: enum
     taxon_traverse_direction: up
