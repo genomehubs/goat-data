@@ -1,6 +1,6 @@
 import json
-import yaml
 import requests
+import yaml
 
 #####################################################################
 # VGL
@@ -73,19 +73,20 @@ nhm_post_data = {
 
 
 nhm_url = "https://data.nhm.ac.uk/api/3/action/vds_multi_query"
-nhm_headers = {
-    "content-type": "application/json",
-    "user-agent": "GoaT DToL script (curators contact: goat@genomehubs.org)",
-}
+nhm_headers = {"content-type": "application/json", "user-agent": "GoaT DToL script"}
 
 
 def nhm_url_opener(**kwargs):
+    print("NHM API request sent")
+    print(nhm_url)
+    print(nhm_post_data)
     return requests.post(nhm_url, headers=nhm_headers, json=nhm_post_data)
 
 
 def nhm_api_count_handler(r_text):
     j = json.loads(r_text)
     nhm_total = j["result"]["total"]
+    print(f"NHM total count: {nhm_total}")
     return nhm_total
 
 
