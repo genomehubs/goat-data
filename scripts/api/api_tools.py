@@ -10,6 +10,8 @@ def get_from_source(
 ):
     try:
         r = url_opener(token=token)
+        if r.status_code != 200:
+            raise ValueError(f"bad response: {r.status_code}")
         r_text = r.text
         result_count = count_handler(r_text)
         print(f"count is {result_count}")

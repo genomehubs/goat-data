@@ -4,6 +4,7 @@ Will generate .tsv files from api-retrieved data for GoaT import.
 """
 
 import sys
+import time
 
 import api_config as cfg
 import api_tools as at
@@ -29,6 +30,7 @@ def access_api_with_retries(
             print(f"Error occurred while accessing API: {e}")
             if i == 2:
                 print(f"Max retries for {output_filename} reached. Exiting.")
+            time.sleep(10)  # Wait before retrying
 
 
 access_api_with_retries(
