@@ -73,13 +73,15 @@ nhm_post_data = {
 
 
 nhm_url = "https://data.nhm.ac.uk/api/3/action/vds_multi_query"
-nhm_headers = {"content-type": "application/json", "user-agent": "GoaT DToL script"}
+nhm_headers = {
+    "content-type": "application/json",
+    "user-agent": "GoaT DToL script",
+    "accept": "application/json",
+}
 
 
 def nhm_url_opener(**kwargs):
-    print("NHM API request sent")
     print(nhm_url)
-    print(nhm_post_data)
     return requests.post(nhm_url, headers=nhm_headers, json=nhm_post_data)
 
 
