@@ -39,7 +39,7 @@ def access_api_with_retries(
             r = url_opener(token=token)
             if r.status_code == 200:
                 return
-        except (requests.ConnectionError, requests.HTTPError) as e:
+        except (requests.ConnectionError, requests.HTTPError, requests.Timeout, requests.RequestException) as e:
             print(
                 f"Connection error {e} occurred for attempt {attempt +1}/{retries} "
                 f"of accessing API. Retrying in {delay:.1f} seconds..."
