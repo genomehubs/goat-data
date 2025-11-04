@@ -4,6 +4,8 @@ Will generate .tsv files from api-retrieved data for GoaT import.
 """
 
 import sys
+import random
+import requests
 import time
 
 import api_config as cfg
@@ -13,9 +15,18 @@ import api_tools as at
 
 
 def access_api_with_retries(
-    url_opener, api_count_handler, row_handler, fieldnames, output_filename, token=None
+    url_opener,
+    api_count_handler,
+    row_handler,
+    fieldnames,
+    output_filename,
+    token=None,
+    retries=3,
 ):
-    for i in range(3):
+    max_delay = 30
+    for attempt in range(1, retries + 1):
+        base = min(max_delay, 2 ** (attempt - 1))
+        delay = random.uniform(0, base)
         try:
             at.get_from_source(
                 url_opener,
@@ -25,12 +36,16 @@ def access_api_with_retries(
                 output_filename,
                 token=token,
             )
-            break  # Exit the loop if successful
-        except Exception as e:
-            print(f"Error occurred while accessing API: {e}")
-            if i == 2:
-                print(f"Max retries for {output_filename} reached. Exiting.")
-            time.sleep(10)  # Wait before retrying
+            r = url_opener(token=token)
+            if r.status_code == 200:
+                return
+        except (requests.ConnectionError, requests.HTTPError) as e:
+            print(
+                f"Connection error {e} occurred for attempt {attempt +1}/{retries} "
+                f"of accessing API. Retrying in {delay:.1f} seconds..."
+            )
+            time.sleep(delay)
+    raise Exception(f"Max retries for {output_filename} reached. Exiting.")
 
 
 access_api_with_retries(

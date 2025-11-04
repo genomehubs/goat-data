@@ -14,7 +14,7 @@ def get_from_source(
             raise ValueError(f"bad response: {r.status_code}")
         r_text = r.text
         result_count = count_handler(r_text)
-        print(f"count is {result_count}")
+        print(f"count to create {output_filename} is {result_count}")
         rows = row_handler(
             r_text=r_text, result_count=result_count, fieldnames=fieldnames, token=token
         )
