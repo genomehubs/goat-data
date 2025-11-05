@@ -39,7 +39,12 @@ def access_api_with_retries(
             r = url_opener(token=token)
             if r.status_code == 200:
                 return
-        except (requests.ConnectionError, requests.HTTPError, requests.Timeout, requests.RequestException) as e:
+        except (
+            requests.ConnectionError,
+            requests.HTTPError,
+            requests.Timeout,
+            requests.RequestException,
+        ) as e:
             print(
                 f"Connection error {e} occurred for attempt {attempt +1}/{retries} "
                 f"of accessing API. Retrying in {delay:.1f} seconds..."
@@ -55,13 +60,13 @@ access_api_with_retries(
     cfg.vgl_fieldnames,
     f"{sys.argv[1]}/{cfg.vgl_output_filename}",
 )
-access_api_with_retries(
-    cfg.nhm_url_opener,
-    cfg.nhm_api_count_handler,
-    cfg.nhm_row_handler,
-    cfg.nhm_fieldnames,
-    f"{sys.argv[1]}/{cfg.nhm_output_filename}",
-)
+# access_api_with_retries(
+#     cfg.nhm_url_opener,
+#     cfg.nhm_api_count_handler,
+#     cfg.nhm_row_handler,
+#     cfg.nhm_fieldnames,
+#     f"{sys.argv[1]}/{cfg.nhm_output_filename}",
+# )
 access_api_with_retries(
     cfg.sts_url_opener,
     cfg.sts_api_count_handler,
