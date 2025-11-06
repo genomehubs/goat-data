@@ -5,28 +5,22 @@ defaults:
     source: INSDC
 identifiers:
   assembly_id:
-    description: Assembly identifier
     constraint:
       len: 32
     type: keyword
   genbank_accession:
-    description: GenBank accession number
     constraint:
       len: 32
     type: keyword
   refseq_accession:
-    description: RefSeq accession number
     constraint:
       len: 32
     type: keyword
   wgs_accession:
-    description: Whole Genome Shotgun project accession number
     constraint:
       len: 16
     type: keyword
   assembly_name:
-    description: Assembly name
-    long_description: The name assigned to the assembly by the submitter, when provided. Otherwise, a default name in the form ASM#####v#
     constraint:
       len: 64
     type: keyword
@@ -41,8 +35,6 @@ attributes:
         - apicoplast
         - kinetoplast
     description: assembled organelle
-    long_description: The organelle from which the assembly was derived
-    display_level: 2
     type: keyword
   bioproject:
     constraint:
@@ -57,60 +49,34 @@ attributes:
         link: https://www.ebi.ac.uk/ena/browser/view/{}
       prjna533106:
         description: "Earth Biogenome Project (click to view on ENA)"
-      prjna1245457:
-        description: "The 1,000 Chilean Genomes project (click to view on ENA)"
-      prjeb33226:
-        description: "25 Genomes Project (click to view on ENA)"
-      prjeb81973:
-        description: "The 959 Nematode Genomes Project (click to view on ENA)"
-      prjeb80366:
-        description: "Ancient Environmental Genomics Initiative for Sustainability (click to view on ENA)"
       prjna811786:
         description: "Africa Biogenome Project (click to view on ENA)"
       prjna555319:
         description: "Ag100Pest (click to view on ENA)"
-      prjeb51690:
-        description: "Anopheles Reference Genomes Project (click to view on ENA)"
       prjeb43743:
         description: "Aquatic Symbiosis Genomics Project (click to view on ENA)"
-      prjeb64126:
-        description: "ATLASea - an Atlas of Eukaryotic Marine Genomes (click to view on ENA)"
       prjna489245:
-        description: "Bat1K (click to view on ENA)"
-      prjna923301:
-        description: "The Beenome 100 Project (click to view on ENA)"
+        description: "Bat 1K (click to view on ENA)"
       prjna545868:
         description: "Bird 10K (click to view on ENA)"
       prjna813333:
         description: "Canada Biogenome Project (click to view on ENA)"
-      prjna706690:
-        description: "Canada 150 Sequencing Initiative (click to view on ENA)"
       prjeb49670:
         description: "Catalan Biogenome Project (click to view on ENA)"
       prjna720569:
         description: "California Conservation Genomics Project (click to view on ENA)"
-      prjna1020146:
-        description: "Cetaceans Genomes Project (click to view on ENA)"
       prjeb40665:
         description: "Darwin Tree of Life (click to view on ENA)"
-      prjeb65317:
-        description: "Earth Biogenome Project Norway (click to view on ENA)"
       prjna712951:
         description: "ENDEMIXIT (click to view on ENA)"
       prjeb61747:
         description: "ERGA Biodiversity Genomics Europe (click to view on ENA)"
-      prjeb66264:
-        description: "ERGA Community Genomes (click to view on ENA)"
       prjeb47820:
         description: "ERGA Pilot (click to view on ENA)"
-      prjeb49197:
-        description: "ERGA Switzerland (click to view on ENA)"
       prjeb43510:
         description: "European Reference Genome Atlas (click to view on ENA)"
       prjna393850:
         description: "EUROFISH (click to view on ENA)"
-      prjna1180976:
-        description: "Genomics of the Brazilian Biodiversity (click to view on ENA)"
       prjna649812:
         description: "Global Invertebrate Genomics Alliance (click to view on ENA)"
       prjna163993:
@@ -125,23 +91,11 @@ attributes:
         description: "MetaInvert (click to view on ENA)"
       prjna1046164:
         description: "Ocean Genomes (click to view on ENA)"
-      prjeb71705:
-        description: "Project Psyche (click to view on ENA)"
       prjna707598:
         description: "Squalomix (click to view on ENA)"
-      prjna1075750:
-        description: "Threatened Species Initiative (click to view on ENA)"
-      prjeb96280:
-        description: "Wise Ancestors (click to view on ENA)"
       prjna489243:
         description: "Vertebrate Genomes Project (click to view on ENA)"
-      prjna955268:
-        description: "Yggdrasil (click to view on ENA)"
-      prjna312960:
-        description: "Zoonomia (click to view on ENA)"
   biosample:
-    description: INSDC biosample ID
-    long_description: INSDC BioSample from which the sequences in the genome assembly were obtained
     constraint:
       len: 32
     synonyms:
@@ -152,8 +106,6 @@ attributes:
         description: Click to view BioSample record on ENA
         link: https://www.ebi.ac.uk/ena/browser/view/{}
   gene_count:
-    description: Assembly gene count
-    long_description: The total number of genes predicted in the assembly
     display_group: annotation
     display_level: 1
     display_name: Gene count
@@ -166,8 +118,6 @@ attributes:
       count: 10
       scale: log10
   protein_count:
-    description: Assembly protein count
-    long_description: The total number of proteins predicted in the assembly
     display_group: annotation
     display_level: 2
     display_name: Protein count
@@ -175,8 +125,6 @@ attributes:
       min: 1
     type: integer
   pseudogene_count:
-    description: Assembly pseudogene count
-    long_description: The total number of pseudogenes predicted in the assembly
     display_group: annotation
     display_level: 2
     display_name: Pseudogene count
@@ -184,8 +132,6 @@ attributes:
       min: 1
     type: integer
   noncoding_gene_count:
-    description: Assembly non-coding gene count
-    long_description: The total number of non-coding genes predicted in the assembly
     display_group: annotation
     display_level: 2
     display_name: Non-coding gene count
@@ -193,19 +139,14 @@ attributes:
       min: 1
     type: integer
   sample_sex:
-    description: Sample sex
-    long_description: Physical sex of sampled organism
     display_level: 2
     display_name: Sample sex
     type: keyword
   isolate:
-    description: Isolate identifier
-    long_description: The individual isolate from which the sequences in the genome assembly were derived
     display_level: 2
     display_name: Isolate
     type: keyword
   assembly_level:
-    description: The level at which a genome has been assembled
     display_level: 1
     display_name: Assembly level
     type: keyword
@@ -216,14 +157,10 @@ attributes:
         - scaffold
         - contig
   assembly_type:
-    description: Type of assembly
-    long_description: Chromosome or ploidy content of the submitted genome assembly
     display_level: 2
     display_name: Assembly type
     type: keyword
   assembly_span:
-    description: Total length of the assembly
-    long_description: Total sequence length of the genome including unplaced and unlocalized sequences
     display_group: metrics
     display_level: 1
     display_name: Assembly span
@@ -237,8 +174,6 @@ attributes:
       count: 10
       scale: log10
   ungapped_span:
-    description: Total length of the ungapped assembly
-    long_description: Total length of all top-level sequences ignoring gaps. Any stretch of 10 or more Ns in a sequence is treated like a gap
     display_group: metrics
     display_level: 2
     display_name: Ungapped span
@@ -247,8 +182,6 @@ attributes:
     type: long
     units: bases
   contig_n50:
-    description: Contig N50 value
-    long_description: Length such that sequence contigs of this length or longer include half the bases of the assembly
     display_group: metrics
     display_level: 1
     display_name: Contig N50
@@ -262,8 +195,6 @@ attributes:
       count: 10
       scale: log10
   contig_l50:
-    description: Contig L50 value
-    long_description: Number of sequence contigs that are longer than, or equal to, the N50 length and therefore include half the bases of the assembly
     display_group: metrics
     display_level: 2
     display_name: Contig L50
@@ -272,8 +203,6 @@ attributes:
     type: long
     units: bases
   scaffold_n50:
-    description: Scaffold N50 value
-    long_description: Length such that scaffolds of this length or longer include half the bases of the assembly
     display_group: metrics
     display_level: 1
     display_name: Scaffold N50
@@ -287,8 +216,6 @@ attributes:
       count: 10
       scale: log10
   scaffold_l50:
-    description: Scaffold L50 value
-    long_description: Number of scaffolds that are longer than, or equal to, the N50 length and therefore include half the bases of the assembly
     display_group: metrics
     display_level: 2
     display_name: Scaffold L50
@@ -297,8 +224,6 @@ attributes:
     type: long
     units: bases
   contig_count:
-    description: Number of contigs
-    long_description: Total number of sequence contigs in the assembly. Any stretch of 10 or more Ns in a sequence is treated as a gap between two contigs in a scaffold when counting contigs and calculating contig N50 & L50 values
     display_group: metrics
     display_level: 1
     display_name: Contig count
@@ -307,8 +232,6 @@ attributes:
     type: long
     units: bases
   scaffold_count:
-    description: Number of scaffolds
-    long_description: Number of scaffolds including placed, unlocalized, unplaced, alternate loci and patch scaffolds
     display_group: metrics
     display_level: 1
     display_name: Scaffold count
@@ -317,8 +240,6 @@ attributes:
     type: long
     units: bases
   chromosome_count:
-    description: Number of chromosomes in the assembly
-    long_description: Count of nuclear chromosomes in a submitted genome assembly, can be the chromosome count in a single haplotype plus all types of sex chromosomes found in the individual
     display_group: metrics
     display_level: 1
     display_name: Chromosome count
@@ -327,8 +248,6 @@ attributes:
     type: long
     units: bases
   sequence_count:
-    description: Number of Component Sequences
-    long_description: Total number of component WGS or clone sequences in the assembly
     display_group: metrics
     display_level: 2
     display_name: Sequence count
@@ -337,19 +256,16 @@ attributes:
     type: long
     units: bases
   last_updated:
-    description: Date the assembly was last updated by NCBI
     display_level: 2
     display_name: Last updated
     type: date
   ebp_standard_date:
-    description: Date the assembly reached an ebp_standard_criteria
     display_level: 2
     display_name: EBP metric date
     synonyms:
       - ebp_metric_date
     type: date
   ebp_standard_criteria:
-    description: highest EBP standard criteria met by the assembly
     constraint:
       enum:
         - 6.C
@@ -360,19 +276,14 @@ attributes:
     display_name: EBP standard criteria
     type: keyword
   refseq_category:
-    description: RefSeq category assigned to the assembly
-    long_description: The RefSeq category, if present, indicates whether the assembly is a reference genome
     display_level: 2
     display_name: RefSeq category
     type: keyword
   submitter:
-    description: Name of the submitting organization
-    long_description: The submitting consortium or organization. Full submitter information is available in the BioProject
     display_level: 2
     display_name: Submitter
     type: keyword
   gc_percent:
-    description: The percentage of GC base-pairs in the assembly
     display_group: metrics
     display_level: 1
     constraint:
@@ -381,7 +292,6 @@ attributes:
     type: 2dp
     units: "%"
   n_percent:
-    description: The percentage of Ns, undefined bases, in the assembly
     display_group: metrics
     display_level: 2
     constraint:
@@ -393,25 +303,20 @@ attributes:
     constraint:
       min: 1
     type: 4dp
-    description: Quality Value score of the assembly
+    description: VGP Quality Value score computed with gfastats
     display_group: metrics
     display_level: 2
     display_name: Quality Value score
   linked_accession:
-    description: Linked assembly accession
-    long_description: Accession of genome assemblies derived from the same diploid individual
     display_group: linked assemblies
     type: keyword
   source_accession:
-    description: Source of linked assembly accession
     display_group: linked assemblies
     type: keyword
   mitochondrion_assembly_span:
-    description: total length of mitochondrial assembly
     display_group: linked assemblies
     type: keyword
   mitochondrion_gc_percent:
-    description: The percentage of GC base-pairs in the mitochondrial assembly
     display_group: linked assemblies
     constraint:
       min: 0
@@ -419,19 +324,15 @@ attributes:
     type: 2dp
     units: "%"
   mitochondrion_accession:
-    description: Mitochondrion assembly accession
     display_group: linked assemblies
     type: keyword
   mitochondrion_scaffolds:
-    description: Number of scaffolds in the mitochondrial assembly
     display_group: linked assemblies
     type: keyword
   plastid_assembly_span:
-    description: total length of plastid assembly
     display_group: linked assemblies
     type: keyword
   plastid_gc_percent:
-    description: The percentage of GC base-pairs in the plastid assembly
     display_group: linked assemblies
     constraint:
       min: 0
@@ -439,11 +340,9 @@ attributes:
     type: 2dp
     units: "%"
   plastid_accession:
-    description: Plastid assembly accession
     display_group: linked assemblies
     type: keyword
   plastid_scaffolds:
-    description: Number of scaffolds in the plastid assembly
     display_group: linked assemblies
     type: keyword
   assigned_percent:
