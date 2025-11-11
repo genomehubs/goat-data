@@ -157,12 +157,12 @@ jobs:
           rm -rf ${{ inputs.resources }}/status-lists/tmp
           mkdir -p ${{ inputs.resources }}/status-lists/tmp
           python3 ./scripts/api/api_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.STS_AUTHORIZATION_KEY }} || exit 0
-      - name: Process NHM tsv
-        run: |
-          perl -plne '
-            s/(.*institutionCode.*)/$1\tsequencing_status\tsample_collected\tsample_collected_by/ and next;
-            s/$/\tsample_collected\tDTOL\tNHM/;
-          ' ${{ inputs.resources }}/status-lists/tmp/nhm.raw > ${{ inputs.resources }}/status-lists/tmp/nhm.tsv
+      # - name: Process NHM tsv
+      #   run: |
+      #     perl -plne '
+      #       s/(.*institutionCode.*)/$1\tsequencing_status\tsample_collected\tsample_collected_by/ and next;
+      #       s/$/\tsample_collected\tDTOL\tNHM/;
+      #     ' ${{ inputs.resources }}/status-lists/tmp/nhm.raw > ${{ inputs.resources }}/status-lists/tmp/nhm.tsv
       - name: Process VGP tsv
         run: |
           perl -plne '
@@ -178,16 +178,30 @@ jobs:
           python3 ./scripts/jgi_to_tsv.py ${{ inputs.resources }}/status-lists/tmp ${{ secrets.JGI_OFFLINE_TOKEN }} || exit 0
       - name: Fetch status from googlesheets
         # Fetches:
-        # - ATLASEA_expanded.tsv
-        # - BGE_expanded.tsv
-        # - CBP_expanded.tsv
-        # - EBPN_expanded.tsv
-        # - ERGA-CH_expanded.tsv
-        # - EUROFISH_expanded.tsv
-        # - GREECE-HSP_expanded.tsv
-        # - SOLVENIA-HSP_expanded.tsv
-        # - SPAIN-HSP_expanded.tsv
-        # - YGG_expanded.tsv
+        # {{project}}_expanded.tsv for the following projects:
+        # # 959NG
+        # # 1000GCH
+        # # AEGIS
+        # # ATLASEA
+        # # BEENOME100
+        # # CANBP
+        # # CBP
+        # # CGP
+        # # CULI
+        # # EBPN
+        # # EUROFISH
+        # # ERGA-BGE
+        # # ERGA-CH
+        # # ERGA-COM
+        # # GAGA
+        # # GBB
+        # # GIGA
+        # # LOEWE-TBG
+        # # OTHER
+        # # PGP
+        # # SQUALOMIX
+        # # WA
+        # # YGG
         run: |
           python3 ./scripts/import_status.py ${{ inputs.resources }}/status-lists/tmp "${{ secrets.ORIGINAL2_5_SCHEMA }}" || exit 0
       - name: Fetch other from googlesheets
