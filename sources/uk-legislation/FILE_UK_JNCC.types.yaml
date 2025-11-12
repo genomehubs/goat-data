@@ -1,0 +1,17 @@
+file:
+  format: tsv
+  header: true
+  name: uk_jncc.tsv
+  source: JNCC
+  source_date: "2025-11-12"
+  source_description: Conservation Designations for UK Taxa 2023
+  source_url: https://hub.jncc.gov.uk/assets/478f7160-967b-4366-acdf-8941fd33850b
+attributes:
+  uk_jncc:
+    header: all_directives
+    separator:
+      - ","
+    type: keyword
+taxonomy:
+  species:
+    header: recommended_taxon_name
