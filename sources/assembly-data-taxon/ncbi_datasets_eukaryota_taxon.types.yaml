@@ -517,15 +517,15 @@ file:
   name: ncbi_datasets_eukaryota_taxon.tsv.gz
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2025-07-08"
+  source_date: "2025-11-12"
 metadata:
   is_primary_value:
     header: primaryValue
     # source_slug:
     #   header: genbankAccession
-taxon_names:
-  common_name:
-    header: commonName
+# taxon_names:
+#   common_name:
+#     header: commonName
 taxonomy:
   taxon:
     header: organismName
