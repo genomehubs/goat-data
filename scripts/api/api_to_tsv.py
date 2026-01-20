@@ -67,11 +67,11 @@ access_api_with_retries(
 #     cfg.nhm_fieldnames,
 #     f"{sys.argv[1]}/{cfg.nhm_output_filename}",
 # )
-access_api_with_retries(
-    cfg.sts_url_opener,
-    cfg.sts_api_count_handler,
-    cfg.sts_row_handler,
-    cfg.sts_fieldnames,
-    f"{sys.argv[1]}/{cfg.sts_output_filename}",
-    token=sys.argv[2],
-)
+# access_api_with_retries(
+#     cfg.sts_url_opener,
+#     cfg.sts_api_count_handler,
+#     cfg.sts_row_handler,
+#     cfg.sts_fieldnames,
+#     f"{sys.argv[1]}/{cfg.sts_output_filename}",
+#     token=sys.argv[2],
+# )
