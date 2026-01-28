@@ -5,6 +5,7 @@ file:
   source: BUSCOv5
   source_url: https://busco.ezlab.org/
   tests: lineage_tests
+  source_date: "2026-01-28"
 attributes:
   odb10_lineage:
     header: odb10_lineage
@@ -81,6 +82,7 @@ attributes:
     display_group: assembly
     display_level: 2
     display_name: Busco_odb10 lineage
+    description: odb10 lineage used in BUSCO analysis
     key: odb10_lineage
     name: odb10_lineage
     summary: list

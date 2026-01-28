@@ -1,5 +1,6 @@
 # import requests
 import csv
+import os
 import sys
 from traceback import format_exc
 
@@ -9,13 +10,15 @@ def get_from_source(
 ):
     try:
         r = url_opener(token=token)
+        if r.status_code != 200:
+            raise ValueError(f"bad response: {r.status_code}")
         r_text = r.text
         result_count = count_handler(r_text)
-        print(f"count is {result_count}")
+        print(f"count to create is {result_count}")
         rows = row_handler(
             r_text=r_text, result_count=result_count, fieldnames=fieldnames, token=token
         )
-
+        os.makedirs(os.path.dirname(output_filename), exist_ok=True)
         with open(output_filename, "w") as output_file:
             writer = csv.writer(output_file, delimiter="\t", lineterminator="\n")
             writer.writerow(fieldnames)

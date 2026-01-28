@@ -16,6 +16,7 @@ attributes:
       PRJNA533106: EBP
       PRJEB33226: 25GP
       PRJEB81973: 959NG
+      PRJNA1245457: 1000GCH
       PRJEB80366: AEGIS
       PRJNA811786: AFRICABP
       PRJNA555319: AG100PEST
@@ -65,6 +66,7 @@ attributes:
       PRJNA707598: SQUALOMIX
       PRJNA1075750: TSI
       PRJNA489243: VGP
+      PRJEB96280: WA
       PRJNA955268: YGG
       PRJNA312960: ZOONOMIA
   insdc_open:
@@ -76,6 +78,7 @@ attributes:
       PRJNA533106: EBP
       PRJEB33226: 25GP
       PRJEB81973: 959NG
+      PRJNA1245457: 1000GCH
       PRJEB80366: AEGIS
       PRJNA811786: AFRICABP
       PRJNA555319: AG100PEST
@@ -124,6 +127,7 @@ attributes:
       PRJEB71705: PSYCHE
       PRJNA707598: SQUALOMIX
       PRJNA1075750: TSI
+      PRJEB96280: WA
       PRJNA489243: VGP
       PRJNA955268: YGG
       PRJNA312960: ZOONOMIA
@@ -140,7 +144,7 @@ attributes:
     separator:
       - ;
     translate:
-      TBD: insdc_open
+      PRJNA1245457: insdc_open
   sequencing_status_25gp:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -486,6 +490,13 @@ attributes:
       - ;
     translate:
       PRJNA489243: insdc_open
+  sequencing_status_wa:
+    display_group: sequencing_status
+    header: bioProjectAccession
+    separator:
+      - ;
+    translate:
+      PRJEB96280: insdc_open
   sequencing_status_ygg:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -506,15 +517,15 @@ file:
   name: ncbi_datasets_eukaryota_taxon.tsv.gz
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2025-07-08"
+  source_date: "2026-01-28"
 metadata:
   is_primary_value:
     header: primaryValue
     # source_slug:
     #   header: genbankAccession
-taxon_names:
-  common_name:
-    header: commonName
+# taxon_names:
+#   common_name:
+#     header: commonName
 taxonomy:
   taxon:
     header: organismName
