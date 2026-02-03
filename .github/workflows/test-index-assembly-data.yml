@@ -1,0 +1,39 @@
+name: test-index-assembly-data
+on:
+    workflow_dispatch:
+        inputs:
+            dockerversion:
+                description: "Docker container version"
+                required: true
+                default: "latest"
+                type: string
+            release:
+                description: "GoaT release version"
+                required: true
+                default: "2026.02.03"
+                type: string
+            resources:
+                description: "Path to local resources (leave empty to skip)"
+                required: false
+                default: "/home/ubuntu/resources"
+                type: string
+
+jobs:
+    test-index:
+        runs-on: [self-hosted, runner1]
+        timeout-minutes: 60
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+              with:
+                  persist-credentials: false
+                  clean: true
+
+            - name: Index assembly-data
+              uses: ./.github/workflows/genomehubs-index-directory
+              with:
+                  dockerversion: ${{ inputs.dockerversion }}
+                  release: ${{ inputs.release }}
+                  resources: ${{ inputs.resources }}
+                  directory: assembly-data
+                  type: assembly
