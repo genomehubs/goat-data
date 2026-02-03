@@ -144,13 +144,17 @@ ls -al $tmpdir
 
 # Run genomehubs index on the collated files
 docker run --rm --network=host \
-    -v $tmpdir:/genomehubs/sources \
-    genomehubs/genomehubs:$DOCKERVERSION bash -c \
-        "genomehubs index \
-        --es-host es1:9200 \
-        --taxonomy-source $TAXONOMY \
-        --config-file /genomehubs/sources/goat.yaml \
-        --${TYPE}-dir /genomehubs/sources $FLAGS"
+  -v $tmpdir:/genomehubs/sources \
+  genomehubs/genomehubs:$DOCKERVERSION bash -c \
+    "ls -al /genomehubs/sources && \
+    echo '--- config file inside container ---' && \
+    ls -al /genomehubs/sources/goat.yaml && \
+    head -n 5 /genomehubs/sources/goat.yaml && \
+    genomehubs index \
+    --es-host es1:9200 \
+    --taxonomy-source $TAXONOMY \
+    --config-file /genomehubs/sources/goat.yaml \
+    --${TYPE}-dir /genomehubs/sources $FLAGS"
 
 # If index was successful, move files from resources to release branch/bucket
 if [ $? -eq 0 ]; then
