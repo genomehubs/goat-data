@@ -151,7 +151,8 @@ docker run --rm --network=host \
     --es-host es1:9200 \
     --taxonomy-source $TAXONOMY \
     --config-file /genomehubs/sources/goat.yaml \
-    --${TYPE}-dir /genomehubs/sources $FLAGS"
+    --${TYPE}-dir /genomehubs/sources $FLAGS && \
+    chown -R $(id -u):$(id -g) /genomehubs/sources"
 
 # If index was successful, move files from resources to release branch/bucket
 if [ $? -eq 0 ]; then
