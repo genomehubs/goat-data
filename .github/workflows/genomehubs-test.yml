@@ -22,7 +22,7 @@ jobs:
       - name: Run genomehubs API tests
         run: |
           mkdir -p ${{ inputs.resources }}/projects
-          docker run --rm \
+          docker run --rm --user root \
             --network net-es \
             -e GH_RELEASE=${{ inputs.release }} \
             -e GH_HUBNAME=goat \
@@ -35,7 +35,7 @@ jobs:
       - name: Run genomehubs UI tests
         run: |
           mkdir -p ${{ inputs.resources }}/projects
-          docker run --rm \
+          docker run --rm --user root \
             --network net-es \
             -e GH_RELEASE=${{ inputs.release }} \
             -e GH_HUBNAME=goat \

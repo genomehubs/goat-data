@@ -1,8 +1,5 @@
 name: test-index-assembly-data
 on:
-    push:
-        branches:
-            - feature/debug-container
     workflow_dispatch:
         inputs:
             dockerversion:

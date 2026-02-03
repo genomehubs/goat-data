@@ -147,11 +147,7 @@ docker run --rm --network=host \
   --user root \
   -v $tmpdir:/genomehubs/sources \
   genomehubs/genomehubs:$DOCKERVERSION bash -c \
-    "ls -al /genomehubs/sources && \
-    echo '--- config file inside container ---' && \
-    ls -al /genomehubs/sources/goat.yaml && \
-    head -n 5 /genomehubs/sources/goat.yaml && \
-    genomehubs index \
+    "genomehubs index \
     --es-host es1:9200 \
     --taxonomy-source $TAXONOMY \
     --config-file /genomehubs/sources/goat.yaml \
