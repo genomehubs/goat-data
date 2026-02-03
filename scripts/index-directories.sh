@@ -131,8 +131,7 @@ if [ ! -z "$RESOURCES" ]; then
 fi
 
 # Fetch config file
-mkdir -p $tmpdir/config
-yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/config/goat.yaml
+yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/goat.yaml
 
 ls -al $tmpdir
 
@@ -143,7 +142,7 @@ docker run --rm --network=host \
         "genomehubs index \
         --es-host es1:9200 \
         --taxonomy-source $TAXONOMY \
-        --config-file /genomehubs/sources/config/goat.yaml \
+        --config-file /genomehubs/sources/goat.yaml \
         --${TYPE}-dir /genomehubs/sources $FLAGS"
 
 # If index was successful, move files from resources to release branch/bucket
