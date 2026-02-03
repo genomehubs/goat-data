@@ -131,7 +131,14 @@ if [ ! -z "$RESOURCES" ]; then
 fi
 
 # Fetch config file
-yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/goat.yaml
+if ! yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/goat.yaml 2>/dev/null; then
+  # Fallback if yq is missing or fails
+  cp $workdir/sources/goat.yaml $tmpdir/goat.yaml
+fi
+
+if [ ! -s "$tmpdir/goat.yaml" ]; then
+  fail "config file was not created at $tmpdir/goat.yaml"
+fi
 
 ls -al $tmpdir
 
