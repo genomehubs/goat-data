@@ -35,8 +35,8 @@ jobs:
             - name: Index assembly-data
               uses: ./.github/workflows/genomehubs-index-directory
               with:
-                  dockerversion: ${{ inputs.dockerversion }}
-                  release: ${{ inputs.release }}
-                  resources: ${{ inputs.resources }}
+                  dockerversion: ${{ inputs.dockerversion || 'latest' }}
+                  release: ${{ inputs.release || '2026.02.03' }}
+                  resources: ${{ inputs.resources || '/home/ubuntu/resources' }}
                   directory: assembly-data
                   type: assembly
