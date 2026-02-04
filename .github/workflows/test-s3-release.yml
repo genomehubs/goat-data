@@ -1,0 +1,61 @@
+name: test-s3-release
+on:
+    workflow_dispatch:
+        inputs:
+            release:
+                description: "Release version (e.g., 2026.02.04)"
+                required: true
+                type: string
+            resources:
+                description: "Resources path"
+                required: true
+                default: "/home/ubuntu/resources"
+                type: string
+
+env:
+    DOCKERVERSION: develop
+    RESOURCES: ${{ inputs.resources }}
+
+jobs:
+    set-variables:
+        runs-on: ubuntu-latest
+        outputs:
+            dockerversion: ${{ env.DOCKERVERSION }}
+            release: ${{ inputs.release }}
+            resources: ${{ env.RESOURCES }}
+        steps:
+            - name: Echo variables
+              run: |
+                  echo "dockerversion=${{ env.DOCKERVERSION }}"
+                  echo "release=${{ inputs.release }}"
+                  echo "resources=${{ env.RESOURCES }}"
+
+    fetch-dockers:
+        runs-on: [self-hosted, runner2]
+        steps:
+            - name: Get dockers
+              run: |
+                  docker system prune -f
+                  docker pull genomehubs/genomehubs:${{ env.DOCKERVERSION }}
+                  docker pull genomehubs/genomehubs-test:${{ env.DOCKERVERSION }}
+                  docker run --rm genomehubs/genomehubs sh -c 'echo $CONTAINER_VERSION'
+
+    run-tests:
+        needs:
+            - set-variables
+            - fetch-dockers
+        uses: ./.github/workflows/genomehubs-test.yml
+        with:
+            dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+            release: ${{ needs.set-variables.outputs.release }}
+            resources: ${{ needs.set-variables.outputs.resources }}
+
+    finish-release:
+        needs:
+            - set-variables
+            - run-tests
+        uses: ./.github/workflows/finish-release.yml
+        with:
+            dockerversion: ${{ needs.set-variables.outputs.dockerversion }}
+            release: ${{ needs.set-variables.outputs.release }}
+            resources: ${{ needs.set-variables.outputs.resources }}
