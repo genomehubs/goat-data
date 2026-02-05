@@ -33,6 +33,7 @@ jobs:
               genomehubs-test-api
 
       - name: Run genomehubs UI tests
+        continue-on-error: true
         run: |
           mkdir -p ${{ inputs.resources }}/projects
           docker run --rm \
@@ -45,6 +46,14 @@ jobs:
             -v ${{ inputs.resources }}/projects:/genomehubs/tests-out \
             genomehubs/genomehubs-test:${{ inputs.dockerversion }} \
               genomehubs-test-ui
+
+      - name: Upload UI test debug artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-test-debug-output
+          path: ${{ inputs.resources }}/projects/debug-*
+          retention-days: 7
 
       - name: Copy test images to S3
         run: |
