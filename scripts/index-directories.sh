@@ -144,7 +144,6 @@ ls -al $tmpdir
 
 # Run genomehubs index on the collated files
 docker run --rm --network=host \
-  --user root \
   -v $tmpdir:/genomehubs/sources \
   genomehubs/genomehubs:$DOCKERVERSION bash -c \
     "genomehubs index \
