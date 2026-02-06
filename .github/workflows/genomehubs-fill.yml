@@ -26,7 +26,7 @@ jobs:
       - name: Run genomehubs fill
         run: |
           yq '.common.hub.version="${{ inputs.release }}"' sources/goat.yaml > sources/goat.yaml.tmp && mv sources/goat.yaml.tmp sources/goat.yaml
-          docker run --rm --network=host \
+          docker run --rm --network=host --user root \
             -v `pwd`/sources:/genomehubs/sources \
             genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
               "genomehubs fill \
