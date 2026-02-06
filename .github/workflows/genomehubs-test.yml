@@ -33,6 +33,7 @@ jobs:
               genomehubs-test-api
 
       - name: Run genomehubs UI tests
+        id: ui-tests
         continue-on-error: true
         run: |
           mkdir -p ${{ inputs.resources }}/projects
@@ -52,9 +53,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ui-test-debug-output
-          path: ${{ inputs.resources }}/projects/debug-*
+          path: ${{ inputs.resources }}/projects/*
           retention-days: 7
+      
+      - name: Fail if UI tests failed
+        if: steps.ui-tests.outcome == 'failure'
+        run: exit 1
 
       - name: Copy test images to S3
         run: |
           s3cmd put setacl --acl-public ${{ inputs.resources }}/projects s3://goat/releases/${{ inputs.release }}/ --recursive
+
