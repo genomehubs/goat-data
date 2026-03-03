@@ -1,0 +1,44 @@
+attributes:
+  conservation_list:
+    description: List used as source of conservation status information
+    display_group: conservation_status
+    display_level: 2
+    display_name: Conservation list
+    summary: list
+    traverse: list
+    traverse_direction: down
+    type: keyword
+    constraint:
+      enum:
+      - CITES
+      - IUCN
+      - JNCC
+  cites_category:
+    description: Species CITES status
+    long_description: Category of taxon in the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES).
+    display_group: conservation_status
+    display_level: 2
+    display_name: CITES Category
+    summary: list
+    traverse: list
+    traverse_direction: down
+    type: keyword
+    constraint:
+      enum:
+      - appx_I
+      - appx_II
+      - appx_III
+      - conditional
+      - NC  
+    value_metadata:
+      appx_I:
+        description: "CITES appendix I - globally threatened"
+      appx_II:
+        description: "CITES appendix II - controlled"
+      appx_III:
+        description: "CITES appendix III protected in at least one country"
+      conditional:
+        description: "CITES listed with specific conditions"
+      NC:
+        description: "Might not be CITES accepted - Check original source"
+        
