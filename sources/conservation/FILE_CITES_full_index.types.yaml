@@ -1,0 +1,38 @@
+file:
+  format: tsv
+  header: true
+  name: CITES_checklist.tsv
+  source: CITES
+  source_date: "2025-11-26" 
+  source_description: Checklist of CITES, includes all ranks.
+  source_url:  https://checklist.cites.org/#/en
+  needs:
+    - ATTR_conservation.types.yaml
+attributes:
+  cites_category:
+    header: CurrentListing
+    separator:
+      - "/"
+    type: keyword
+    translate:
+      "I": "appx_I"
+      "II": "appx_II"
+      "III": "appx_III"
+      "NC": "NC"
+  conservation_list:
+    header: source
+    separator:
+      - ","
+    type: keyword
+taxonomy:
+  species:
+    header: ["Genus", "Species"]
+    join: " "
+  genus:
+    header: Genus
+  family:
+    header: Family
+  order:
+    header: Order
+  class:
+    header: Class
