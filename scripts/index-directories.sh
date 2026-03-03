@@ -131,20 +131,28 @@ if [ ! -z "$RESOURCES" ]; then
 fi
 
 # Fetch config file
-mkdir -p $tmpdir/config
-yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/config/goat.yaml
+if ! yq '.common.hub.version="'$RELEASE'"' $workdir/sources/goat.yaml > $tmpdir/goat.yaml 2>/dev/null; then
+  # Fallback if yq is missing or fails
+  cp $workdir/sources/goat.yaml $tmpdir/goat.yaml
+fi
+
+if [ ! -s "$tmpdir/goat.yaml" ]; then
+  fail "config file was not created at $tmpdir/goat.yaml"
+fi
 
 ls -al $tmpdir
 
 # Run genomehubs index on the collated files
 docker run --rm --network=host \
-    -v $tmpdir:/genomehubs/sources \
-    genomehubs/genomehubs:$DOCKERVERSION bash -c \
-        "genomehubs index \
-        --es-host es1:9200 \
-        --taxonomy-source $TAXONOMY \
-        --config-file /genomehubs/sources/config/goat.yaml \
-        --${TYPE}-dir /genomehubs/sources $FLAGS"
+  --user root \
+  -v $tmpdir:/genomehubs/sources \
+  genomehubs/genomehubs:$DOCKERVERSION bash -c \
+    "genomehubs index \
+    --es-host es1:9200 \
+    --taxonomy-source $TAXONOMY \
+    --config-file /genomehubs/sources/goat.yaml \
+    --${TYPE}-dir /genomehubs/sources $FLAGS && \
+    chown -R $(id -u):$(id -g) /genomehubs/sources"
 
 # If index was successful, move files from resources to release branch/bucket
 if [ $? -eq 0 ]; then
