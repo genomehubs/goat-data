@@ -126,6 +126,15 @@ jobs:
           directory: regional-lists
           flags: --taxon-lookup any --taxon-spellcheck --blank "N/A" --blank "None"
           type: taxon
+      - name: Index conservation
+        uses: ./.github/workflows/genomehubs-index-directory
+        with:
+          dockerversion: ${{ inputs.dockerversion }}
+          release: ${{ inputs.release }}
+          resources: ${{ inputs.resources }}
+          directory: conservation
+          flags: --taxon-lookup any --taxon-spellcheck
+          type: taxon
       - name: Index uk-legislation
         uses: ./.github/workflows/genomehubs-index-directory
         with:
