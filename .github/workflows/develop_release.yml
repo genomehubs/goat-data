@@ -316,6 +316,18 @@ jobs:
                 --config-file sources/goat.yaml \
                 --taxon-dir sources/regional_lists \
                 --taxon-lookup any --taxon-spellcheck"
+      - name: genomehubs index taxon conservation
+        run: |
+          docker run --rm --network=host \
+            -v `pwd`/sources:/genomehubs/sources \
+            genomehubs/genomehubs:develop bash -c \
+              "genomehubs index \
+                --es-host http://es1:9200 \
+                --taxonomy-source ncbi \
+                --config-file sources/goat.yaml \
+                --taxon-dir sources/conservation \
+                --taxon-lookup any --taxon-spellcheck"
+                
       - name: genomehubs index taxon uk_legislation
         run: |
           docker run --rm --network=host \
