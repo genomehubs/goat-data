@@ -1,0 +1,163 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: tol_genome_notes_expanded.tsv
+  source: Genome Notes List - ToL Portal
+  source_date: "2026-03-04"
+  source_description: Lists of Genome Notes Generated in the ToL Programme - Tree of Life Portal
+  source_url: https://portal.tol.sanger.ac.uk/
+attributes:
+  sequencing_status:
+    header: sequencing_status
+    separator:
+      - ","
+  sequencing_status_aegis:
+    header: sequencing_status_aegis
+    separator:
+      - ","
+  sequencing_status_asg:
+    header: sequencing_status_asg
+    separator:
+      - ","
+  # sequencing_status_bat1k:
+  #   header: sequencing_status_bat1k
+  #   separator:
+  #     - ","
+  sequencing_status_dtol:
+    header: sequencing_status_dtol
+    separator:
+      - ","
+  # sequencing_status_erga-bge:
+  #   header: sequencing_status_erga-bge
+  #   separator:
+  #     - ","
+  sequencing_status_erga-pil:
+    header: sequencing_status_ergapi
+    separator:
+      - ","
+  sequencing_status_psyche:
+    header: sequencing_status_psyche
+    separator:
+      - ","
+  sequencing_status_vgp:
+    header: sequencing_status_vgp
+    separator:
+      - ","
+      # Milestones Reached
+  published:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
+  insdc_open:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
+  open:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
+  in_assembly:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
+  data_generation:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
+  in_progress:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
+  sample_acquired:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
+  sample_collected:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
+      # publication_id:
+      #   header: gn_pmid
+      #   separator:
+      #     - ","
+      #   value_metadata:
+      #     source: PubMed
+      #     source_url_stub: https://www.doi.org/
+      #     source_slug:
+      #       header: doi
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
