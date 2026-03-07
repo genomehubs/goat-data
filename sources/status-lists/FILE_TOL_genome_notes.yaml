@@ -3,8 +3,12 @@ file:
   header: true
   comment: "#"
   name: tol_genome_notes_expanded.tsv
+  needs:
+    - ATTR_seq_status_project.types.yaml
+    - ATTR_status_lists.types.yaml
+    - ATTR_target_lists.types.yaml
   source: Genome Notes List - ToL Portal
-  source_date: "2026-03-06"
+  source_date: "2026-03-07"
   source_description: Lists of Genome Notes Generated in the ToL Programme - Tree of Life Portal
   source_url: https://portal.tol.sanger.ac.uk/
 attributes:
@@ -44,7 +48,6 @@ attributes:
     header: sequencing_status_vgp
     separator:
       - ","
-      # Milestones Reached
   published:
     header: published
     separator:
@@ -149,6 +152,19 @@ attributes:
       LAWN: ""
       MEIER: ""
       RND: ""
+  long_list:
+    header: published
+    separator:
+      - ","
+    translate:
+      ERGAPI: ERGA-PIL
+      BERRI: ""
+      BLAX: ""
+      DURB: ""
+      JARON: ""
+      LAWN: ""
+      MEIER: ""
+      RND: ""
       # publication_id:
       #   header: gn_pmid
       #   separator:
@@ -161,3 +177,5 @@ attributes:
 taxonomy:
   taxon_id:
     header: ncbi_taxon_id
+  species:
+    header: gn_species_name
