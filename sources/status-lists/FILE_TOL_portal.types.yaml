@@ -1,0 +1,264 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: tol_project_status_expanded.tsv
+  source: Declared Status Lists - TOL Portal
+  source_date: "2026-03-26"
+  source_description: Declared Status Lists - Tree of Life Portal
+  source_url: https://portal.tol.sanger.ac.uk/
+  needs:
+    - ATTR_seq_status_project.types.yaml
+    - ATTR_status_lists.types.yaml
+    - ATTR_target_lists.types.yaml
+attributes:
+  long_list:
+    header: long_list
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+  other_priority:
+    header: other_priority
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+  sequencing_status:
+    header: latest_sequencing_status
+    separator:
+      - ","
+  sequencing_status_aegis:
+    header: sequencing_status_aegis
+    separator:
+      - ","
+  sequencing_status_asg:
+    header: sequencing_status_asg
+    separator:
+      - ","
+  sequencing_status_bat1k:
+    header: sequencing_status_bat1k
+    separator:
+      - ","
+  sequencing_status_dtol:
+    header: sequencing_status_dtol
+    separator:
+      - ","
+  sequencing_status_erga-bge:
+    header: sequencing_status_erga
+    separator:
+      - ","
+  sequencing_status_erga-pil:
+    header: sequencing_status_ergapi
+    separator:
+      - ","
+  sequencing_status_psyche:
+    header: sequencing_status_psyche
+    separator:
+      - ","
+  sequencing_status_vgp:
+    header: sequencing_status_vgp
+    separator:
+      - ","
+  # sequencing_status_berri:
+  #   header: sequencing_status_berri
+  #   separator:
+  #     - ","
+  # sequencing_status_blax:
+  #   header: sequencing_status_blax
+  #   separator:
+  #     - ","
+  # sequencing_status_durb:
+  #   header: sequencing_status_durb
+  #   separator:
+  #     - ","
+  # sequencing_status_rnd:
+  #   header: sequencing_status_rnd
+  #   separator:
+  #     - ","
+  # sequencing_status_lawn:
+  #   header: sequencing_status_lawn
+  #   separator:
+  #     - ","
+  # sequencing_status_jaron:
+  #   header: sequencing_status_jaron
+  #   separator:
+  #     - ","
+  # sequencing_status_meier:
+  #   header: sequencing_status_meier
+  #   separator:
+  #     - ","
+  # sequencing_status_misk:
+  #   header: sequencing_status_misk
+  #   separator:
+  #     - ","
+  # sequencing_status_pedros:
+  #   header: sequencing_status_pedros
+  #   separator:
+  #     - ","
+  sample_collected:
+    header: sample_collected
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+  sample_acquired:
+    header: sample_acquired
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+  in_progress:
+    header: data_generation
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+  data_generation:
+    header: data_generation
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+  in_assembly:
+    header: in_assembly
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+  submitted:
+    header: submitted
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+  sample_collected_by:
+    header: sample_collected_by
+    separator:
+      - ","
+    translate:
+      DALHOUSIE UNIVERSITY: DALU
+      GEOMAR HELMHOLTZ CENTRE: GHC
+      MARINE BIOLOGICAL ASSOCIATION: MBA
+      NATURAL HISTORY MUSEUM: NHM
+      NOVA SOUTHEASTERN UNIVERSITY: NSU
+      PORTLAND STATE UNIVERSITY: PSU
+      QUEEN MARY UNIVERSITY OF LONDON: QMUL
+      ROYAL BOTANIC GARDEN EDINBURGH: RBGE
+      ROYAL BOTANIC GARDENS KEW: KEW
+      SANGER INSTITUTE: SAN
+      UNIVERSITY OF BRITISH COLUMBIA: UBC
+      UNIVERSITY OF DERBY: DERB
+      UNIVERSITY OF OXFORD: OXF
+      University of Oulu: OULU
+      University of Neuchatel: UNINE
+      Lund University: LUND
+      Grigore Antipa National Museum of Natural History: ANTIPA
+      UNIVERSITY OF FLORENCE: UNIFI
+      University of Florence: UNIFI
+      Biology Centre of the Academy of Sciences of the Czech Republic: BCCAS
+      UNIVERSITY OF VIENNA (CEPHALOPOD): VIEN
+      UNIVERSITY OF VIENNA (MOLLUSC): VIEN
+  resampling_required:
+    header: recollection_needed
+    separator:
+      - ","
+    translate:
+      'ERGAPI': ERGA-PIL
+      'ERGA': ERGA-BGE
+      'BLAX': ""
+      'DURB': ""
+      'JARON': ""
+      'LAWN': ""
+      'MEIER': ""
+      'PEDROS': ""
+      'RND': ""
+      'MISK': ""
+      'BERRI': ""
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: scientific_name
+  family:
+    header: family
