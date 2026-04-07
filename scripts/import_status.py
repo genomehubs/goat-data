@@ -22,6 +22,7 @@ projects = [
     "GAGA",
     "GBB",
     "GIGA",
+    "HUNTOMICS",
     "LOEWE-TBG",
     "OTHER",
     "PGP",
