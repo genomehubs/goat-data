@@ -1,0 +1,51 @@
+file:
+  format: tsv
+  header: true
+  comment: "#"
+  name: HUNTOMICS_expanded.tsv
+  source: Declared Status List - HUNTOMICS
+  source_date: "2025-04-07"
+  source_description: HUNTOMICS Status List, live spreadsheet
+  source_contact: Pascal Lapébie and Carole Bodin, Fédération Nationale des Chasseurs - FNC
+attributes:
+  long_list:
+    header: long_list
+  other_priority:
+    header: other_priority
+  family_representative:
+    header: family_representative
+  # contributing_project_lab:
+  #   header: project
+  #   translate:
+  #     BGE: SSP Community Sampling
+  sequencing_status_huntomics:
+    header: sequencing_status
+    translate:
+      data_generation: in_progress
+      in_assembly: in_progress
+      insdc_submitted: in_progress
+  sequencing_status:
+    header: sequencing_status
+    translate:
+      data_generation: in_progress
+      in_assembly: in_progress
+      insdc_submitted: in_progress
+  sample_collected:
+    header: sample_collected
+  sample_acquired:
+    header: sample_acquired
+  in_progress:
+    header: in_progress
+  open:
+    header: open
+  insdc_open:
+    header: insdc_open
+  published:
+    header: published
+taxonomy:
+  taxon_id:
+    header: ncbi_taxon_id
+  species:
+    header: species
+  family:
+    header: family
