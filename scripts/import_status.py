@@ -26,6 +26,7 @@ projects = [
     "LOEWE-TBG",
     "OTHER",
     "PGP",
+    "R2K",
     "SQUALOMIX",
     "WA",
     "YGG",
