@@ -8,6 +8,7 @@ projects = [
     "959NG",
     "1000GCH",
     "AEGIS",
+    "AFRICABP",
     "ATLASEA",
     "BEENOME100",
     "CANBP",
