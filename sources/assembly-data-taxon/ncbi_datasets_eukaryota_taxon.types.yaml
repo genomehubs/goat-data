@@ -52,7 +52,6 @@ attributes:
       PRJNA1180976: GBB
       PRJNA1075702: GBR
       PRJNA649812: GIGA
-      PRJEB86906: HUNTOMICS
       PRJNA163993: i5K
       PRJNA844590: ILEBP
       PRJNA1098055: IPM
@@ -64,7 +63,6 @@ attributes:
       PRJNA1098054: PP
       PRJNA785018: PRGP
       PRJEB71705: PSYCHE
-      PRJNA1399476: R2K
       PRJNA707598: SQUALOMIX
       PRJNA1075750: TSI
       PRJNA489243: VGP
@@ -116,7 +114,6 @@ attributes:
       PRJNA1180976: GBB
       PRJNA1075702: GBR
       PRJNA649812: GIGA
-      PRJEB86906: HUNTOMICS
       PRJNA163993: i5K
       PRJNA844590: ILEBP
       PRJNA1098055: IPM
@@ -128,7 +125,6 @@ attributes:
       PRJNA1098054: PP
       PRJNA785018: PRGP
       PRJEB71705: PSYCHE
-      PRJNA1399476: R2K
       PRJNA707598: SQUALOMIX
       PRJNA1075750: TSI
       PRJEB96280: WA
@@ -403,13 +399,6 @@ attributes:
       - ;
     translate:
       PRJNA1075702: insdc_open
-  sequencing_status_huntomics:
-    display_group: sequencing_status
-    header: bioProjectAccession
-    separator:
-      - ;
-    translate:
-      PRJEB86906: insdc_open
   sequencing_status_i5k:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -480,13 +469,6 @@ attributes:
       - ;
     translate:
       PRJEB71705: insdc_open
-  sequencing_status_r2k:
-    display_group: sequencing_status
-    header: bioProjectAccession
-    separator:
-      - ;
-    translate:
-      PRJNA1399476: insdc_open
   sequencing_status_squalomix:
     display_group: sequencing_status
     header: bioProjectAccession
@@ -535,7 +517,7 @@ file:
   name: ncbi_datasets_eukaryota_taxon.tsv.gz
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2026-03-27"
+  source_date: "2026-04-13"
 metadata:
   is_primary_value:
     header: primaryValue

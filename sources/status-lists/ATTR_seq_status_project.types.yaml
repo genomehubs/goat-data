@@ -160,9 +160,9 @@ attributes:
   sequencing_status_giga:
     description: Sequencing status for Global Invertebrate Genome Alliance Project
     display_name: Sequencing status GIGA
-  sequencing_status_huntomics:
-    description: Sequencing status for HUNTomics Project
-    display_name: Sequencing status HUNTOMICS
+  sequencing_status_hk-ebp:
+    description: Sequencing status for Hong Kong EBP
+    display_name: Sequencing status HK-EBP
   sequencing_status_i5k:
     description: Sequencing status for 5,000 Insect Genomes Project
     display_name: Sequencing status i5K
