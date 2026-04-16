@@ -14,14 +14,12 @@ attributes:
     header: other_priority
   family_representative:
     header: family_representative
-  # contributing_project_lab:
-  #   header: contributing_project_lab
-  #   separator:
-  #     - ","
-  #     - ";"
-  #   translate:
-  #     African BioGenome Project (AfricaBP): ""
-  #     " Nigeria": ""
+  contributing_project_lab:
+    header: contributing_project_lab
+    separator:
+      - ";"
+    translate:
+      " Nigeria": ""
   sequencing_status_africabp:
     header: sequencing_status
     translate:
