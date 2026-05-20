@@ -4,21 +4,21 @@ file:
   comment: "#"
   name: R2K_expanded.tsv
   source: Declared Status List - R2K
-  source_date: "2026-03-27"
+  source_date: "2026-05-20"
   source_description: Rodent 2K Status List, live spreadsheet
-  source_contact: David Thybert, University of East Anglia, UK
+  source_contact: Michael Wilson, SickKids Research Institute, Toronto, ON, Canada
   source_url: https://rodent2k.org/database/
 attributes:
   long_list:
-    header: project
+    header: long_list
   other_priority:
-    header: project
-  # family_representative:
-  #   header: family_representative
-  # contributing_project_lab:
-  #   header: project
-  #   translate:
-  #     BGE: SSP Community Sampling
+    header: other_priority
+  family_representative:
+    header: family_representative
+  contributing_project_lab:
+    header: contributing_project_lab
+    translate:
+      R2K: R2K Community
   sequencing_status_r2k:
     header: sequencing_status
     translate:

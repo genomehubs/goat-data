@@ -2,11 +2,11 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: SQUALOMIX_expanded.tsv
-  source: Declared Status List - Squalomix
+  name: HUNTOMICS_expanded.tsv
+  source: Declared Status List - HUNTOMICS
   source_date: "2026-05-20"
-  source_description: Squalomix Status List, live spreadsheet
-  source_contact: Shigehiro Kuraku, National Institute of Genetics, 1111 Yata, Mishima, Shizuoka, 411-8540, Japan
+  source_description: HUNTOMICS Status List, live spreadsheet
+  source_contact: Pascal Lapébie and Carole Bodin, Fédération Nationale des Chasseurs - FNC
 attributes:
   long_list:
     header: long_list
@@ -18,7 +18,7 @@ attributes:
   #   header: project
   #   translate:
   #     BGE: SSP Community Sampling
-  sequencing_status_squalomix:
+  sequencing_status_huntomics:
     header: sequencing_status
     translate:
       data_generation: in_progress
@@ -46,7 +46,6 @@ taxonomy:
   taxon_id:
     header: ncbi_taxon_id
   species:
-    header: [genus, species]
-    join: " "
+    header: species
   family:
     header: family
