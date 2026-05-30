@@ -2,12 +2,11 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: EBPHK_expanded.tsv
-  source: Declared Status List - EBPHK
-  source_description: Declared Status List, EarthBioGenome Project Hong Kong, static spreadsheet
-  source_contact: Jerome Hui
-  source_url: http://biodiversity.sls.cuhk.edu.hk/ebphk/
+  name: PSYCHE_collaborations_expanded.tsv
+  source: Declared Status List - PSYCHE Collaborators
   source_date: "2026-05-30"
+  source_description: PSYCHE Collaborators Status List, live spreadsheet
+  source_contact: Gerard Talavera, Institut Botànic de Barcelona
 attributes:
   long_list:
     header: long_list
@@ -17,20 +16,24 @@ attributes:
     header: family_representative
   contributing_project_lab:
     header: contributing_project_lab
+  sequencing_status_psyche:
+    header: sequencing_status
+    translate:
+      data_generation: in_progress
+      in_assembly: in_progress
+      insdc_submitted: in_progress
   sequencing_status:
     header: sequencing_status
-  sequencing_status_ebphk:
-    header: sequencing_status
+    translate:
+      data_generation: in_progress
+      in_assembly: in_progress
+      insdc_submitted: in_progress
   sample_collected:
     header: sample_collected
   sample_acquired:
     header: sample_acquired
   in_progress:
     header: in_progress
-  data_generation:
-    header: data_generation
-  in_assembly:
-    header: in_assembly
   open:
     header: open
   insdc_open:
