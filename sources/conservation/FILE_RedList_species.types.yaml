@@ -1,0 +1,47 @@
+file:
+  format: csv
+  header: true
+  name: redlist_simple_summary_species.csv
+  source: RedList
+  source_date: "2026-06-01"
+  source_description: Summary Species List of RedList, includes only species rank.
+  needs:
+    - ATTR_conservation.types.yaml
+attributes:
+  redlist_category:
+    header: redlistCategory
+    source_url_stub: https://www.iucnredlist.org/species/
+    type: keyword
+    translate:
+      Lower Risk/near threatened: Lower Risk-near threatened
+      Lower Risk/least concern: Lower Risk-least concern
+      Lower Risk/conservation dependent: Lower Risk-conservation dependent
+  redlist_scopes:
+    header: redlistCategory
+    source_url_stub: https://www.iucnredlist.org/species/
+    type: keyword
+  redlist_population_trend:
+    header: populationTrend
+    source_url_stub: https://www.iucnredlist.org/species/
+    type: keyword
+  conservation_list:
+    header: source
+    source_url_stub: https://www.iucnredlist.org/species/
+    type: keyword
+metadata:
+  # source_url_stub: "https://www.iucnredlist.org/species/"
+  source_slug:
+    header: ["internalTaxonId", "assessmentId"]
+    join: "/"
+taxonomy:
+  species:
+    header: ["genusName", "speciesName"]
+    join: " "
+  genus:
+    header: genusName
+  family:
+    header: familyName
+  order:
+    header: orderName
+  class:
+    header: className
