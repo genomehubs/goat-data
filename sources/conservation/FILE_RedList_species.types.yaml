@@ -2,9 +2,9 @@ file:
   format: csv
   header: true
   name: redlist_simple_summary_species.csv
-  source: RedList
-  source_date: "2026-06-01"
-  source_description: Summary Species List of RedList, includes only species rank.
+  source: IUCN Red List
+  source_date: "2026-06-02"
+  source_description: Summary of IUCN Red List of Threatened Species, includes only species rank.
   needs:
     - ATTR_conservation.types.yaml
 attributes:
@@ -17,7 +17,7 @@ attributes:
       Lower Risk/least concern: Lower Risk-least concern
       Lower Risk/conservation dependent: Lower Risk-conservation dependent
   redlist_scopes:
-    header: redlistCategory
+    header: scopes
     source_url_stub: https://www.iucnredlist.org/species/
     type: keyword
   redlist_population_trend:

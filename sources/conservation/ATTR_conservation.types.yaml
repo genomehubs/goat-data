@@ -43,8 +43,8 @@ attributes:
       NC:
         description: "Might not be CITES accepted - Check original source"
   redlist_category:
-    description: Red List threat status category
-    long_description: Category of taxon in the latest Red List assessment.
+    description: IUCN Red List Category
+    long_description: Category of taxon in the latest IUCN Red List assessment.
     display_group: conservation
     display_level: 2
     display_name: RedList Category
@@ -67,8 +67,35 @@ attributes:
         - 'Lower Risk-near threatened'
         - 'Lower Risk-least concern'
         - 'Lower Risk-conservation dependent'
+    value_metadata:
+      'Near Threatened':
+        description: "NT - Species is close to qualifying for or is likely to qualify for a threatened category in the near future."
+      'Critically Endangered':
+        description: "CR - Species is facing an extremely high risk of extinction in the wild."
+      'Endangered':
+        description: "EN - Species is facing a very high risk of extinction in the wild."
+      'Data Deficient':
+        description: "DD - Insufficient information to make a direct, or indirect, assessment of its risk of extinction based on its distribution and or population status."
+      'Vulnerable':
+        description: "VU - Species is considered as facing a high risk of extinction in the wild."
+      'Least Concern':
+        description: "LC - Species is evaluated against the Red List criteria, but does not qualify for any category of threat."
+      'Extinct':
+        description: "EX - No reasonable doubt that the last individual has died."
+      'Extinct in the Wild':
+        description: "EW - Known only to survive in cultivation, in captivity, or as a naturalized population outside its historic range."
+      'Not Applicable':
+        description: "Category not applicable."
+      'Regionally Extinct':
+        description: "RE - Species is extinct in a specific region but occurs in its natural range elsewhere."
+      'Lower Risk-near threatened':
+        description: "LR-nt - Species is close to qualifying for a threatened category in the near future."
+      'Lower Risk-least concern':
+        description: "LR-lc - Species is evaluated but does not qualify for any category of threat."
+      'Lower Risk-conservation dependent':
+        description: "LR-cd - Species is the focus of a conservation program, the cessation of which would result in it qualifying for a threatened category within a period of five years."
   redlist_scopes:
-    description: Red List threat status category scope
+    description: IUCN Red List threat status category scope.
     long_description: The region scope under which the threat assessment was made
     display_group: conservation
     display_level: 2
@@ -78,8 +105,8 @@ attributes:
     traverse_direction: down
     type: keyword
   redlist_population_trend:
-    description: Red List population trend
-    long_description: Population trend of the taxon in the latest Red List assessment.
+    description: IUCN Red List population trend
+    long_description: Population trend of the taxon in the latest IUCN Red List assessment.
     display_group: conservation
     display_level: 2
     display_name: RedList Population Trend
