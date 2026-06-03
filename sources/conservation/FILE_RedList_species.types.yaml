@@ -3,7 +3,7 @@ file:
   header: true
   name: redlist_simple_summary_species.csv
   source: IUCN Red List
-  source_date: "2026-06-02"
+  source_date: "2026-06-03"
   source_description: Summary of IUCN Red List of Threatened Species, includes only species rank.
   needs:
     - ATTR_conservation.types.yaml
@@ -13,9 +13,19 @@ attributes:
     source_url_stub: https://www.iucnredlist.org/species/
     type: keyword
     translate:
-      Lower Risk/near threatened: Lower Risk-near threatened
-      Lower Risk/least concern: Lower Risk-least concern
-      Lower Risk/conservation dependent: Lower Risk-conservation dependent
+      Near Threatened: NT
+      Critically Endangered: CR
+      Endangered: EN
+      Data Deficient: DD
+      Vulnerable: VU
+      Least Concern: LC
+      Extinct: EX
+      Extinct in the Wild: EW
+      Not Applicable: not_applicable
+      Regionally Extinct: RE
+      Lower Risk/near threatened: LR-nt
+      Lower Risk/least concern: LR-lc
+      Lower Risk/conservation dependent: LR-cd
   redlist_scopes:
     header: scopes
     source_url_stub: https://www.iucnredlist.org/species/
