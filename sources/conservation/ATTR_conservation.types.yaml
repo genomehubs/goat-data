@@ -54,46 +54,46 @@ attributes:
     type: keyword
     constraint:
       enum:
-        - 'Near Threatened'
-        - 'Critically Endangered'
-        - 'Endangered'
-        - 'Data Deficient'
-        - 'Vulnerable'
-        - 'Least Concern'
-        - 'Extinct'
-        - 'Extinct in the Wild'
-        - 'Not Applicable'
-        - 'Regionally Extinct'
-        - 'Lower Risk-near threatened'
-        - 'Lower Risk-least concern'
-        - 'Lower Risk-conservation dependent'
+        - 'NT'
+        - 'CR'
+        - 'EN'
+        - 'DD'
+        - 'VU'
+        - 'LC'
+        - 'EX'
+        - 'EW'
+        - 'not_applicable'
+        - 'RE'
+        - 'LR-nt'
+        - 'LR-lc'
+        - 'LR-cd'
     value_metadata:
-      'Near Threatened':
-        description: "NT - Species is close to qualifying for or is likely to qualify for a threatened category in the near future."
-      'Critically Endangered':
-        description: "CR - Species is facing an extremely high risk of extinction in the wild."
-      'Endangered':
-        description: "EN - Species is facing a very high risk of extinction in the wild."
-      'Data Deficient':
-        description: "DD - Insufficient information to make a direct, or indirect, assessment of its risk of extinction based on its distribution and or population status."
-      'Vulnerable':
-        description: "VU - Species is considered as facing a high risk of extinction in the wild."
-      'Least Concern':
-        description: "LC - Species is evaluated against the Red List criteria, but does not qualify for any category of threat."
-      'Extinct':
-        description: "EX - No reasonable doubt that the last individual has died."
-      'Extinct in the Wild':
-        description: "EW - Known only to survive in cultivation, in captivity, or as a naturalized population outside its historic range."
-      'Not Applicable':
+      'NT':
+        description: "Near Threatened - Species is close to qualifying for or is likely to qualify for a threatened category in the near future."
+      'CR':
+        description: "Critically Endangered - Species is facing an extremely high risk of extinction in the wild."
+      'EN':
+        description: "Endangered - Species is facing a very high risk of extinction in the wild."
+      'DD':
+        description: "Data Deficient - Insufficient information to make a direct, or indirect, assessment of its risk of extinction based on its distribution and or population status."
+      'VU':
+        description: "Vulnerable - Species is considered as facing a high risk of extinction in the wild."
+      'LC':
+        description: "Least Concern - Species is evaluated against the Red List criteria, but does not qualify for any category of threat."
+      'EX':
+        description: "Extinct - No reasonable doubt that the last individual has died."
+      'EW':
+        description: "Extinct in the Wild - Known only to survive in cultivation, in captivity, or as a naturalized population outside its historic range."
+      'not_applicable':
         description: "Category not applicable."
-      'Regionally Extinct':
-        description: "RE - Species is extinct in a specific region but occurs in its natural range elsewhere."
-      'Lower Risk-near threatened':
-        description: "LR-nt - Species is close to qualifying for a threatened category in the near future."
-      'Lower Risk-least concern':
-        description: "LR-lc - Species is evaluated but does not qualify for any category of threat."
-      'Lower Risk-conservation dependent':
-        description: "LR-cd - Species is the focus of a conservation program, the cessation of which would result in it qualifying for a threatened category within a period of five years."
+      'RE':
+        description: "Regionally Extinct - Species is extinct in a specific region but occurs in its natural range elsewhere."
+      'LR-nt':
+        description: "Lower Risk-near threatened - Species is close to qualifying for a threatened category in the near future."
+      'LR-lc':
+        description: "Lower Risk-least concern - Species is evaluated but does not qualify for any category of threat."
+      'LR-cd':
+        description: "Lower Risk-conservation dependent - Species is the focus of a conservation program, the cessation of which would result in it qualifying for a threatened category within a period of five years."
   redlist_scopes:
     description: IUCN Red List threat status category scope.
     long_description: The region scope under which the threat assessment was made
