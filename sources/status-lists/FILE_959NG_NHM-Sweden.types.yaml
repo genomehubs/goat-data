@@ -2,12 +2,11 @@ file:
   format: tsv
   header: true
   comment: "#"
-  name: R2K_expanded.tsv
-  source: Declared Status List - R2K
+  name: 959NG_NHM_Sweden_expanded.tsv
+  source: Declared Status List - 959NG NHM Sweden
   source_date: "2026-06-04"
-  source_description: Rodent 2K Status List, live spreadsheet
-  source_contact: Michael Wilson, SickKids Research Institute, Toronto, ON, Canada
-  source_url: https://rodent2k.org/database/
+  source_description: 959NG Status List of collaborator NHM Sweden, live spreadsheet
+  source_contact: Oleksandr Holovachov, Swedish Museum of Natural History
 attributes:
   long_list:
     header: long_list
@@ -17,9 +16,7 @@ attributes:
     header: family_representative
   contributing_project_lab:
     header: contributing_project_lab
-    translate:
-      R2K: R2K Community
-  sequencing_status_r2k:
+  sequencing_status_959ng:
     header: sequencing_status
     translate:
       data_generation: in_progress
