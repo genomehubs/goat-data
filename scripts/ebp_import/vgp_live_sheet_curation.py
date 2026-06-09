@@ -27,23 +27,25 @@ columns = [
     "CITES",
     "Main project",
     "Second project",
-    "Publication"
+   # "Publication"
 ]
 # Read the table from the link
 vgp_df = pd.read_csv(tsv_link,
-                    delimiter="\t",
-                    dtype=object,
-                    usecols=columns
-                    )
+    sep="\t",
+    dtype=object,
+    engine="python",
+    on_bad_lines="warn",  # or "skip"
+    usecols=columns,
+)
 
 print('Vgp file successfuly opened. Starting cleanup...')
 
 def vgp_table_cleanup(df):
     """
     Cleans up a pandas DataFrame by performing the following actions:
-    - Replaces empty or whitespace-only strings with NaN.
+    - Replaces empty or whitespace-only strings with None.
     - Strips leading and trailing spaces from all string values.
-    - Drops columns and rows where all values are NaN.
+    - Drops columns and rows where all values are None.
     
     Args:
         df (pandas.DataFrame): The input DataFrame to be cleaned.
@@ -51,7 +53,7 @@ def vgp_table_cleanup(df):
     Returns:
         pandas.DataFrame: The cleaned DataFrame.
     """
-    df = df.replace(r'^\s*$', np.nan, regex=True)
+    df = df.replace(r'^\s*$', None, regex=True)
     df = df.replace(r"^ +| +$", r"", regex=True)
     df.dropna(how="all", axis=1, inplace=True)
     df.dropna(how="all", axis=0, inplace=True)
@@ -102,7 +104,10 @@ translate_to_acronyms = {
                             'Canada Biogenome Project': 'CANBP',
                             'Minderoo OceanOmics': 'OG',
                             'Sanger 25G project': '25GP',
-                            'DToL, ERGA': 'DTOL, ERGA'
+                            'DToL, ERGA': 'DTOL,ERGA',
+                            'Amazoomics : Genomics of Brazilian Biodiversity': 'AMAZOOMICS,GBB',
+                            'AmaZoomics : Genomics of Brazilian Biodiversity': 'AMAZOOMICS,GBB',
+                            'Individual, Google': 'Individual,Google'
                         }
 
 # Map the acronyms to the each column individual
@@ -126,7 +131,7 @@ vgp_df['all_projects'] = vgp_df.apply(
 possible_seq_status = ["sample_collected","sample_acquired","in_progress","data_generation","in_assembly","insdc_submitted","open","insdc_open","published"]
 for item in possible_seq_status:
     if item not in vgp_df:
-        vgp_df[item] = np.nan
+        vgp_df[item] = None
 
 # Map the status to the GoaT status
 status_to_map = {
@@ -149,8 +154,9 @@ vgp_df.loc[vgp_df['insdc_open'] == vgp_df['all_projects'], 'open'] = vgp_df['all
 vgp_df.loc[vgp_df['open'] == vgp_df['all_projects'], 'in_progress'] = vgp_df['all_projects']
 vgp_df.loc[vgp_df['data_generation'] == vgp_df['all_projects'], 'in_progress'] = vgp_df['all_projects']
 vgp_df.loc[vgp_df['in_assembly'] == vgp_df['all_projects'], 'in_progress'] = vgp_df['all_projects']
+vgp_df.loc[vgp_df['in_progress'] == vgp_df['all_projects'], 'data_generation'] = vgp_df['all_projects']
 vgp_df.loc[vgp_df['in_progress'] == vgp_df['all_projects'], 'sample_acquired'] = vgp_df['all_projects']
 vgp_df.loc[vgp_df['sample_acquired'] == vgp_df['all_projects'], 'sample_collected'] = vgp_df['all_projects']
 
 print("Generating VGP_Ordinal_Phase1_plus.tsv file...")
-vgp_df.to_csv("tsv/VGP_Ordinal_Phase1_plus.tsv",sep="\t", index=False)
+vgp_df.to_csv("VGP_Ordinal_Phase1_plus.tsv",sep="\t", index=False)
