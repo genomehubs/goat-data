@@ -54,48 +54,59 @@ attributes:
     type: keyword
     constraint:
       enum:
-        - "NT"
-        - "CR"
-        - "EN"
-        - "DD"
-        - "VU"
-        - "LC"
-        - "EX"
-        - "EW"
-        - "NA"
-        - "RE"
-        - "LR-nt"
-        - "LR-lc"
-        - "LR-cd"
+        - 'nt'
+        - 'cr'
+        - 'en'
+        - 'dd'
+        - 'vu'
+        - 'lc'
+        - 'ex'
+        - 'ew'
+        - "na"
+        - 're'
+        - 'lr-nt'
+        - 'lr-lc'
+        - 'lr-cd'
     value_metadata:
-      default:
-        description: "IUCN Red List category of the taxon in the latest assessment."
-      NT:
+      'nt':
         description: "Near Threatened"
-      CR:
+        long_description: "Species is close to qualifying for or is likely to qualify for a threatened category in the near future."
+      'cr':
         description: "Critically Endangered"
-      EN:
+        long_description: "Species is facing an extremely high risk of extinction in the wild."
+      'en':
         description: "Endangered"
-      DD:
+        long_description: "Species is facing a very high risk of extinction in the wild."
+      'dd':
         description: "Data Deficient"
-      VU:
+        long_description: "Insufficient information to make a direct, or indirect, assessment of its risk of extinction based on its distribution and or population status."
+      'vu':
         description: "Vulnerable"
-      LC:
+        long_description: "Species is considered as facing a high risk of extinction in the wild."
+      'lc':
         description: "Least Concern"
-      EX:
+        long_description: "Species is evaluated against the Red List criteria, but does not qualify for any category of threat."
+      'ex':
         description: "Extinct"
-      EW:
+        long_description: "No reasonable doubt that the last individual has died."
+      'ew':
         description: "Extinct in the Wild"
-      NA:
+        long_description: "Known only to survive in cultivation, in captivity, or as a naturalized population outside its historic range."
+      "na":
         description: "Category not applicable."
-      RE:
+        long_description: "The category is not applicable to the species."
+      're':
         description: "Regionally Extinct"
-      LR-nt:
+        long_description: "Species is extinct in a specific region but occurs in its natural range elsewhere."
+      'lr-nt':
         description: "Lower Risk-near threatened"
-      LR-lc:
+        long_description: "Species is close to qualifying for a threatened category in the near future."
+      'lr-lc':
         description: "Lower Risk-least concern"
-      LR-cd:
+        long_description: "Species is evaluated but does not qualify for any category of threat."
+      'lr-cd':
         description: "Lower Risk-conservation dependent"
+        long_description: "Species is the focus of a conservation program, the cessation of which would result in it qualifying for a threatened category within a period of five years."
   redlist_scopes:
     description: IUCN Red List threat status category scope.
     long_description: The region scope under which the threat assessment was made
