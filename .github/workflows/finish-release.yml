@@ -20,7 +20,7 @@ jobs:
         run: |
           s3cmd sync -v --delete-removed /volumes/docker/snapshots/production/production-${{ inputs.release }}/ s3://goat/snapshots/production-${{ inputs.release }}/
           s3cmd sync -v --delete-removed --cache-file /volumes/docker/resources/files_s3cmd_sync_cache /volumes/docker/resources/files/ s3://goat/resources/files/
-          /home/ubuntu/scripts/clean_goat_data.sh -d /volumes/docker/snapshots/production -r -p
+          /home/ubuntu/scripts/clean_goat_data.sh -d /volumes/docker/snapshots/production -r -p -k 1
           /home/ubuntu/scripts/clean_goat_data_s3.sh -m -r
  
   restore-on-prod:
