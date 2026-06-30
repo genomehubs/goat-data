@@ -62,7 +62,7 @@ defaults:
         - omg
         - other
         - pgp
-        - phyloalps
+        # - phyloalps
         - pp
         - prgp
         - psyche
@@ -140,7 +140,7 @@ defaults:
       erga-com:
         description: "ERGA Community Genomes (click to view GoaT project page)"
       erga-pil:
-        description: "ERGA Pilot (click to view GoaT project page)"      
+        description: "ERGA Pilot (click to view GoaT project page)"
       eurofish:
         description: "EUROFISH (click to view GoaT project page)"
       gaga:
@@ -183,8 +183,8 @@ defaults:
         description: "Other EBP Projects"
       pgp:
         description: "Polar Genomes Project (click to view GoaT project page)"
-      phyloalps:
-        description: "PhyloAlps (click to view GoaT project page)"
+      # phyloalps:
+      #   description: "PhyloAlps (click to view GoaT project page)"
       pp:
         description: "Plant Pathogen Initiative (click to view GoaT project page)"
       prgp:

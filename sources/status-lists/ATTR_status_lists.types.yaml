@@ -62,7 +62,7 @@ defaults:
         - omg
         - other
         - pgp
-        - phyloalps
+        # - phyloalps
         - pp
         - prgp
         - psyche
@@ -183,8 +183,8 @@ defaults:
         description: "Other EBP Projects"
       pgp:
         description: "Polar Genomes Project (click to view GoaT project page)"
-      phyloalps:
-        description: "PhyloAlps (click to view GoaT project page)"
+      # phyloalps:
+      #   description: "PhyloAlps (click to view GoaT project page)"
       pp:
         description: "Plant Pathogen Initiative (click to view GoaT project page)"
       prgp:

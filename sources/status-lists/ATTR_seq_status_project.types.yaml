@@ -74,7 +74,7 @@ attributes:
     description: Sequencing status for AtlaSea Project
     display_name: Sequencing status AtlaSea
   sequencing_status_avi:
-    description: Sequencing status for Australian Avian Genomics Initiative 
+    description: Sequencing status for Australian Avian Genomics Initiative
     display_name: Sequencing status AVI
   sequencing_status_b10k:
     description: Sequencing status for Bird 10,000 Genomes Project
@@ -132,7 +132,7 @@ attributes:
     display_name: Sequencing status ERGA-CH
   sequencing_status_erga-com:
     description: Sequencing status for ERGA Community Genomes
-    display_name: Sequencing status ERGA-COM  
+    display_name: Sequencing status ERGA-COM
   sequencing_status_erga-pil:
     description: Sequencing status for ERGA Pilot Project
     display_name: Sequencing status ERGA-PIL
@@ -199,9 +199,9 @@ attributes:
   sequencing_status_pgp:
     description: Sequencing status for Polar Genomes Project
     display_name: Sequencing status PGP
-  sequencing_status_phyloalps:
-    description: Sequencing status for PhyloAlps Project
-    display_name: Sequencing status PhyloAlps
+  # sequencing_status_phyloalps:
+  #   description: Sequencing status for PhyloAlps Project
+  #   display_name: Sequencing status PhyloAlps
   sequencing_status_pp:
     description: Sequencing status for Plant Pathogen Initiative
     display_name: Sequencing status PP
