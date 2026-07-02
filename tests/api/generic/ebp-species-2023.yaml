@@ -1,6 +1,6 @@
 description: Check EBP species by time plot
 endpoint: report
-querystring: report=histogram&rank=species&result=taxon&cat=assembly_level%3Dcontig%2Cscaffold%2Cchromosome%2Ccomplete%20genome&includeEstimates=true&excludeAncestral%5B0%5D=bioproject&excludeMissing%5B0%5D=bioproject&stacked=true&cumulative=true&xOpts=2006%2C%2C2%2C%2CAssembly%20date&taxonomy=ncbi&x=min%28assembly_date%29%20AND%20bioproject%3DPRJNA533106
+querystring: report=histogram&rank=species&result=taxon&cat=assembly_level%3Dcontig%2Cscaffold%2Cchromosome%2Ccomplete%20genome&includeEstimates=true&excludeAncestral%5B0%5D=bioproject&excludeMissing%5B0%5D=bioproject&stacked=true&cumulative=true&xOpts=2006%2C%2C2%2C%2CAssembly%20date&taxonomy=ncbi&x=min%28assembly_date%29%20AND%20bioproject%3DPRJNA533106%20AND%20assembly_level
 assert:
   status:
     success: true
