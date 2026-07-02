@@ -1,6 +1,6 @@
 description: Check EBP progress rainbow
 endpoint: report
-querystring: report=arc&x=assembly_span%20AND%20bioproject%3DPRJNA533106&rank=phylum%2Cclass%2Corder%2Cfamily%2Cgenus%2Cspecies&includeEstimates=true&excludeAncestral%5B0%5D=bioproject&excludeMissing%5B0%5D=bioproject&taxonomy=ncbi&result=taxon
+querystring: report=arc&x=assembly_span%20AND%20assembly_level%20AND%20bioproject%3DPRJNA533106&rank=phylum%2Cclass%2Corder%2Cfamily%2Cgenus%2Cspecies&includeEstimates=true&excludeAncestral%5B0%5D=bioproject&excludeMissing%5B0%5D=bioproject&taxonomy=ncbi&result=taxon
 assert:
   status:
     success: true
