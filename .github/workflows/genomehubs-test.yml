@@ -45,8 +45,10 @@ jobs:
             -e GH_NODE=http://es1:9200 \
             -v `pwd`/tests/ui:/genomehubs/tests \
             -v ${{ inputs.resources }}/projects:/genomehubs/tests-out \
-            genomehubs/genomehubs-test:${{ inputs.dockerversion }} \
+            genomehubs/genomehubs-test:develop \
               genomehubs-test-ui
+        # genomehubs/genomehubs-test:${{ inputs.dockerversion }} \
+        #   genomehubs-test-ui
 
       - name: Upload UI test debug artifacts
         if: always()
@@ -55,7 +57,7 @@ jobs:
           name: ui-test-debug-output
           path: ${{ inputs.resources }}/projects/*
           retention-days: 7
-      
+
       - name: Fail if UI tests failed
         if: steps.ui-tests.outcome == 'failure'
         run: exit 1
@@ -63,4 +65,3 @@ jobs:
       - name: Copy test images to S3
         run: |
           s3cmd put setacl --acl-public ${{ inputs.resources }}/projects s3://goat/releases/${{ inputs.release }}/ --recursive
-
