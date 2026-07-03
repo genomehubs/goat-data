@@ -39,9 +39,10 @@ jobs:
             -H 'Content-Type: application/json' \
             -d' { "type": "fs", "settings": { "location": "/usr/share/elasticsearch/snapshots/production/production-${{ inputs.release }}" } }' || exit 0
 
-      - name: Delete indices and snapshots for that release, except current/analysis_file snapshot
+      - name: Delete existing indices and snapshots
+        # needed to avoid running out of space when runs fail
         run: |
-          curl -s -X DELETE "es1:9200/*--${{ inputs.release }}*"
+          curl -s -X DELETE "es1:9200/*--20*"
           curl -s -X DELETE "es1:9200/_snapshot/current/20*"
 
   genomehubs-init:
@@ -73,6 +74,10 @@ jobs:
                 --taxonomy-ncbi-root 2759 \
                 --taxon-preload"
         # --taxonomy-jsonl resources/ena-taxonomy/ena-taxonomy.extra.sorted.jsonl.gz \
+
+      - name: Delete unzipped GenomeHubs taxonomy
+        run: |
+          rm ${{ inputs.resources }}/genomehubs-taxonomy/nodes.jsonl
 
       - name: Add ES index.mapping.nested_objects.limit 1000000
         run: |
