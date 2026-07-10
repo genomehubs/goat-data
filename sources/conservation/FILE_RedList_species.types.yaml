@@ -3,7 +3,7 @@ file:
   header: true
   name: redlist_simple_summary_species.csv
   source: IUCN Red List
-  source_date: "2026-07-09"
+  source_date: "2026-07-10"
   source_description: Summary of IUCN Red List of Threatened Species, includes only species rank.
   needs:
     - ATTR_conservation.types.yaml
