@@ -103,27 +103,28 @@ jobs:
           mkdir -p ${{ inputs.resources }}/genomehubs-taxonomy && \
           curl -sL https://goat.cog.sanger.ac.uk/resources/taxonomy/genomehubs/eukaryota/nodes.jsonl.gz -o ${{ inputs.resources }}/genomehubs-taxonomy/nodes.jsonl.gz
 
-  fetch-refseq-organelles:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Fetch RefSeq organelles
-        run: |
-          CMD="s3cmd get s3://goat/resources/assembly-data/refseq_organelles.tsv.gz \$(pwd)/ 2>/dev/null || \
-          s3cmd get s3://goat/sources/assembly-data/refseq_organelles.tsv.gz \$(pwd)/ 2>/dev/null || : && \
-          s3cmd get s3://goat/resources/assembly-data/refseq_organelles.types.yaml \$(pwd)/ 2>/dev/null || \
-          s3cmd get s3://goat/sources/assembly-data/refseq_organelles.types.yaml \$(pwd)/ 2>/dev/null || : && \
-          docker run --rm --network=host \
-          -v $(pwd)/scripts/parse_refseq_organelles.py:/genomehubs/parse_refseq_organelles.py \
-          -v \$(pwd):/genomehubs/tmp \
-          genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
-            \"/genomehubs/parse_refseq_organelles.py \
-              -o mitochondrion plastid \
-              -c /genomehubs/tmp/refseq_organelles.types.yaml\"" \
-          ./scripts/update-resources/fetch-or-fallback.sh
-        env:
-          FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
-          RESOURCES: ${{ inputs.resources }}/assembly-data
+  # commented out for updated refseq update
+  # fetch-refseq-organelles:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Fetch RefSeq organelles
+  #       run: |
+  #         CMD="s3cmd get s3://goat/resources/assembly-data/refseq_organelles.tsv.gz \$(pwd)/ 2>/dev/null || \
+  #         s3cmd get s3://goat/sources/assembly-data/refseq_organelles.tsv.gz \$(pwd)/ 2>/dev/null || : && \
+  #         s3cmd get s3://goat/resources/assembly-data/refseq_organelles.types.yaml \$(pwd)/ 2>/dev/null || \
+  #         s3cmd get s3://goat/sources/assembly-data/refseq_organelles.types.yaml \$(pwd)/ 2>/dev/null || : && \
+  #         docker run --rm --network=host \
+  #         -v $(pwd)/scripts/parse_refseq_organelles.py:/genomehubs/parse_refseq_organelles.py \
+  #         -v \$(pwd):/genomehubs/tmp \
+  #         genomehubs/genomehubs:${{ inputs.dockerversion }} bash -c \
+  #           \"/genomehubs/parse_refseq_organelles.py \
+  #             -o mitochondrion plastid \
+  #             -c /genomehubs/tmp/refseq_organelles.types.yaml\"" \
+  #         ./scripts/update-resources/fetch-or-fallback.sh
+  #       env:
+  #         FALLBACK: s3://goat/resources/assembly-data/refseq_organelles.tsv.gz
+  #         RESOURCES: ${{ inputs.resources }}/assembly-data
 
   # Commented out for updated taxonomy import
   # fetch-tolids:

@@ -172,7 +172,7 @@ file:
 identifiers:
   assembly_id:
     header: assemblyId
-    path: processedAssemblyInfo.genbankAccession
+    path: assemblyID
   assembly_name:
     header: assemblyName
     path: assemblyInfo.assemblyName
