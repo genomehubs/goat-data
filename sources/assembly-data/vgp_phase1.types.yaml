@@ -168,11 +168,11 @@ file:
     - TAXON_assembly.types.yaml
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-  source_date: "2026-07-27"
+  source_date: "2026-07-28"
 identifiers:
   assembly_id:
     header: assemblyId
-    path: processedAssemblyInfo.assemblyId
+    path: processedAssemblyInfo.genbankAccession
   assembly_name:
     header: assemblyName
     path: assemblyInfo.assemblyName
