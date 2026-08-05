@@ -1,0 +1,39 @@
+attributes:
+  busco_completeness:
+    header: BUSCO Complete
+  busco_lineage:
+    header: Lineage
+  busco_string:
+    header: busco_string
+file:
+  format: tsv
+  header: true
+  name: vgp_phase1_comp_busco_data.tsv
+  needs:
+    - ATTR_assembly.types.yaml
+    - ATTR_btk.types.yaml
+    - TAXON_assembly.types.yaml
+  source_date: "2026-08-05"
+  source: VGP Phase 1 Comparative BUSCO Data
+  source_url: https://www.biorxiv.org/content/10.64898/2026.06.24.732306v1
+  exclusions:
+    attributes:
+      - bioproject
+      - biosample
+identifiers:
+  assembly_id:
+    header: freeze_id
+  genbank_accession:
+    header: Accession_ID
+  assembly_name:
+    header: Assembly_Name
+# metadata:
+#   source:
+#     header: source
+#   source_slug:
+#     header: sourceSlug
+#   source_url_stub:
+#     header: sourceStub
+taxonomy:
+  species:
+    header: Species_name
