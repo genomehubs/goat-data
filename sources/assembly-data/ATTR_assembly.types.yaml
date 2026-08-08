@@ -479,10 +479,11 @@ attributes:
         - vgp_phase1_main_v1
         - vgp_phase1_main_v4
         - vgp_phase1_main_ucsc
-        - vgp_phase1_busco_vgp        
+        - vgp_phase1_busco_vgp
         - vgp_phase1_comp_busco_external
         - vgp_phase1_comp_busco_vgp
         - vgp_phase1_alignment
+        - vgp_phase1_annotation
         - vgp_phase1_external
     description: list of data freezes this assembly is included in
     display_group: data_freeze
