@@ -6,18 +6,27 @@ file:
   source: Declared Status List - VGP
   source_description: Declared Status List for the Ordinal Phase, Vertebrates Genome Project, live spreadsheet - VGP Ordinal Phase List
   source_contact: Erich Jarvis
-  source_date: "2026-08-07"
+  source_date: "2026-08-08"
 attributes:
   long_list:
     header: all_projects
+    translate:
+      DTOL: ""
+      DToL: ""
     separator:
       - ","
   other_priority:
     header: all_projects
+    translate:
+      DTOL: ""
+      DToL: ""
     separator:
       - ","
   contributing_project_lab:
     header: all_projects
+    translate:
+      DTOL: ""
+      DToL: ""
     separator:
       - ","
   sequencing_status:
@@ -26,22 +35,37 @@ attributes:
     header: sequencing_status
   sample_collected:
     header: sample_collected
+    translate:
+      DTOL: ""
+      DToL: ""
     separator:
       - ","
   sample_acquired:
     header: sample_acquired
+    translate:
+      DTOL: ""
+      DToL: ""
     separator:
       - ","
   in_progress:
     header: in_progress
+    translate:
+      DTOL: ""
+      DToL: ""
     separator:
       - ","
   open:
     header: open
+    translate:
+      DTOL: ""
+      DToL: ""
     separator:
       - ","
   insdc_open:
     header: insdc_open
+    translate:
+      DTOL: ""
+      DToL: ""
     separator:
       - ","
 taxonomy:
