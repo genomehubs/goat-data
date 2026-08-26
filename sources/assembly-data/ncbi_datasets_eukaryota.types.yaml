@@ -197,3 +197,15 @@ taxonomy:
   taxon_id:
     header: taxId
     path: organism.taxId
+  genus_taxon_id:
+    header: genusTaxId
+  family_taxon_id:
+    header: familyTaxId
+  order_taxon_id:
+    header: orderTaxId
+  class_taxon_id:
+    header: classTaxId
+  phylum_taxon_id:
+    header: phylumTaxId
+  kingdom_taxon_id:
+    header: kingdomTaxId
