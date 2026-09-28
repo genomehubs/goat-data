@@ -1,0 +1,70 @@
+attributes:
+  first_assembly_date:
+    header: first_assembly_date
+    description: The date of the first assembly for the taxon.
+    type: date
+  first_assembly_accession:
+    header: first_assembly_accession
+    description: The accession number of the first assembly for the taxon.
+    type: keyword
+  first_assembled_by_ebp_date:
+    header: first_ebp_assembly_date
+    description: The date of the first assembly for the taxon by an EBP affiliate.
+    type: date
+  first_assembled_by_ebp_accession:
+    header: first_ebp_assembly_accession
+    description: The accession number of the first assembly for the taxon by an EBP affiliate.
+    type: keyword
+  first_ebp_standard_date:
+    header: first_metric_date
+    description: The date of the first assembly for the taxon to meet the ebp assembly standard.
+    type: date
+  first_ebp_standard_accession:
+    header: first_metric_accession
+    description: The accession number of the assembly for the taxon to meet the ebp assembly standard.
+    type: keyword
+  first_ebp_standard_by_ebp_date:
+    header: first_ebp_metric_date
+    description: The date of the first assembly by an ebp affiliate for the taxon to meet the ebp assembly standard.
+    type: date
+  first_ebp_standard_by_ebp_accession:
+    header: first_ebp_metric_accession
+    description: The accession number of the first assembly by an ebp affiliate for the taxon to meet the ebp assembly standard.
+    type: keyword
+  first_assembly_in_ranks:
+    header: first_assembly_in_ranks
+    description: The rank for which this taxon supplied the first assembly.
+    separator: ","
+    type: keyword
+  first_metric_in_ranks:
+    header: first_metric_in_ranks
+    description: The rank for which this taxon supplied the first assembly to meet the ebp standard.
+    separator: ","
+    type: keyword
+  latest_assembly_date:
+    header: latest_assembly_date
+    description: The date of the latest assembly for the taxon.
+    type: date
+  latest_assembly_accession:
+    header: latest_assembly_accession
+    description: The accession number of the latest assembly for the taxon.
+    type: keyword
+  total_assemblies:
+    header: total_assemblies
+    description: The total number of assemblies for the taxon.
+    type: short
+  current_assemblies:
+    header: current_assemblies
+    description: The current number of assemblies for the taxon.
+    type: short
+
+file:
+  display_group: historic_assemblies
+  format: tsv
+  header: true
+  name: taxon_milestone_summary.tsv
+  source: INSDC
+
+taxonomy:
+  taxon_id:
+    header: taxid
