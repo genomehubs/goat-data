@@ -476,6 +476,7 @@ attributes:
     constraint:
       enum:
         - latest
+        - superseded
         - vgp_phase1_main_v1
         - vgp_phase1_main_v4
         - vgp_phase1_main_ucsc
