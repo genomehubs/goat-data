@@ -156,7 +156,6 @@ attributes:
   version_status:
     header: versionStatus
     path: processedAssemblyInfo.versionStatus
-
 file:
   display_group: general
   needs:
@@ -174,7 +173,7 @@ file:
   name: assembly_historical.tsv
   source: INSDC
   source_url_stub: https://www.ncbi.nlm.nih.gov/assembly/
-
+  source_date: "2026-10-02"
 identifiers:
   assembly_id:
     header: assemblyID
@@ -191,7 +190,6 @@ identifiers:
   wgs_accession:
     header: wgsProjectAccession
     path: wgsInfo.wgsProjectAccession
-
 metadata:
   is_primary_value:
     header: primaryValue
@@ -199,12 +197,10 @@ metadata:
   source_slug:
     header: genbankAccession
     path: processedAssemblyInfo.genbankAccession
-
 # taxon_names:
 #   common_name:
 #     header: commonName
 #     path: organism.commonName
-
 taxonomy:
   taxon:
     header: organismName

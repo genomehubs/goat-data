@@ -57,14 +57,13 @@ attributes:
     header: current_assemblies
     description: The current number of assemblies for the taxon.
     type: short
-
 file:
   display_group: historic_assemblies
   format: tsv
   header: true
   name: taxon_milestone_summary.tsv
   source: INSDC
-
+  source_date: "2026-10-02"
 taxonomy:
   taxon_id:
     header: taxid
