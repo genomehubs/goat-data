@@ -2,6 +2,10 @@ attributes:
   first_assembly_date:
     header: first_assembly_date
     description: The date of the first assembly for the taxon.
+    display_level: 2
+    display_name: First assembly date
+    summary:
+      - min
     type: date
   first_assembly_accession:
     header: first_assembly_accession
@@ -39,7 +43,11 @@ attributes:
   first_metric_in_ranks:
     header: first_metric_in_ranks
     description: The rank for which this taxon supplied the first assembly to meet the ebp standard.
+    display_level: 2
+    display_name: First metric in ranks
     separator: ","
+    summary:
+      - list
     type: keyword
   latest_assembly_date:
     header: latest_assembly_date
