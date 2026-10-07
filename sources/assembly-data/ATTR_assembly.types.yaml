@@ -489,3 +489,11 @@ attributes:
     description: list of data freezes this assembly is included in
     display_group: data_freeze
     type: keyword
+  superseded_by:
+    description: Accession of assembly this version has been superseded by
+    display_group: superseded
+    type: keyword
+  superseded_by_version:
+    type: keyword
+  superseded_date:
+    type: date
