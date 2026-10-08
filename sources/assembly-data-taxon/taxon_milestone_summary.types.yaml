@@ -7,64 +7,112 @@ attributes:
     summary:
       - min
     type: date
-  first_assembly_accession:
-    header: first_assembly_accession
-    description: The accession number of the first assembly for the taxon.
-    type: keyword
-  first_assembled_by_ebp_date:
-    header: first_ebp_assembly_date
-    description: The date of the first assembly for the taxon by an EBP affiliate.
-    type: date
-  first_assembled_by_ebp_accession:
-    header: first_ebp_assembly_accession
-    description: The accession number of the first assembly for the taxon by an EBP affiliate.
-    type: keyword
+  # first_assembly_accession:
+  #   header: first_assembly_accession
+  #   description: The accession number of the first assembly for the taxon.
+  #   display_level: 2
+  #   display_name: First assembly accession
+  #   summary:
+  #     - list
+  #   type: keyword
+  # first_assembly_by_ebp_date:
+  #   header: first_ebp_assembly_date
+  #   description: The date of the first assembly for the taxon by an EBP affiliate.
+  #   display_level: 2
+  #   display_name: First assembly by EBP date
+  #   summary:
+  #     - min
+  #   type: date
+  # first_assembly_by_ebp_accession:
+  #   header: first_ebp_assembly_accession
+  #   description: The accession number of the first assembly for the taxon by an EBP affiliate.
+  #   display_level: 2
+  #   display_name: First assembly by EBP accession
+  #   summary:
+  #     - min
+  #   type: keyword
   first_ebp_standard_date:
     header: first_metric_date
     description: The date of the first assembly for the taxon to meet the ebp assembly standard.
+    display_level: 2
+    display_name: First EBP standard date
+    summary:
+      - min
     type: date
-  first_ebp_standard_accession:
-    header: first_metric_accession
-    description: The accession number of the assembly for the taxon to meet the ebp assembly standard.
-    type: keyword
-  first_ebp_standard_by_ebp_date:
-    header: first_ebp_metric_date
-    description: The date of the first assembly by an ebp affiliate for the taxon to meet the ebp assembly standard.
-    type: date
-  first_ebp_standard_by_ebp_accession:
-    header: first_ebp_metric_accession
-    description: The accession number of the first assembly by an ebp affiliate for the taxon to meet the ebp assembly standard.
-    type: keyword
+  # first_ebp_standard_accession:
+  #   header: first_metric_accession
+  #   description: The accession number of the assembly for the taxon to meet the ebp assembly standard.
+  #   display_level: 2
+  #   display_name: First EBP standard accession
+  #   summary:
+  #     - list
+  #   type: keyword
+  # first_ebp_standard_by_ebp_date:
+  #   header: first_ebp_metric_date
+  #   description: The date of the first assembly by an EBP affiliate for the taxon to meet the EBP assembly standard.
+  #   display_level: 2
+  #   display_name: First EBP standard by EBP date
+  #   summary:
+  #     - min
+  #   type: date
+  # first_ebp_standard_by_ebp_accession:
+  #   header: first_ebp_metric_accession
+  #   description: The accession number of the first assembly by an EBP affiliate for the taxon to meet the EBP assembly standard.
+  #   display_level: 2
+  #   display_name: First EBP standard by EBP accession
+  #   summary:
+  #     - list
+  #   type: keyword
   first_assembly_in_ranks:
     header: first_assembly_in_ranks
     description: The rank for which this taxon supplied the first assembly.
+    display_level: 2
+    display_name: First assembly in ranks
     separator: ","
+    summary:
+      - min
     type: keyword
-  first_metric_in_ranks:
+  first_ebp_standard_in_ranks:
     header: first_metric_in_ranks
     description: The rank for which this taxon supplied the first assembly to meet the ebp standard.
     display_level: 2
-    display_name: First metric in ranks
+    display_name: First EBP standard in ranks
     separator: ","
     summary:
       - list
     type: keyword
-  latest_assembly_date:
-    header: latest_assembly_date
-    description: The date of the latest assembly for the taxon.
-    type: date
-  latest_assembly_accession:
-    header: latest_assembly_accession
-    description: The accession number of the latest assembly for the taxon.
-    type: keyword
-  total_assemblies:
-    header: total_assemblies
-    description: The total number of assemblies for the taxon.
-    type: short
-  current_assemblies:
-    header: current_assemblies
-    description: The current number of assemblies for the taxon.
-    type: short
+  # latest_assembly_date:
+  #   header: latest_assembly_date
+  #   description: The date of the latest assembly for the taxon.
+  #   display_level: 2
+  #   display_name: Latest assembly date
+  #   summary:
+  #     - min
+  #   type: date
+  # latest_assembly_accession:
+  #   header: latest_assembly_accession
+  #   description: The accession number of the latest assembly for the taxon.
+  #   display_level: 2
+  #   display_name: Latest assembly accession
+  #   summary:
+  #     - max
+  #   type: keyword
+  # total_assemblies:
+  #   header: total_assemblies
+  #   description: The total number of assemblies for the taxon.
+  #   display_level: 2
+  #   display_name: Total assemblies
+  #   summary:
+  #     - max
+  #   type: short
+  # current_assemblies:
+  #   header: current_assemblies
+  #   description: The current number of assemblies for the taxon.
+  #   display_level: 2
+  #   display_name: Current assemblies
+  #   summary:
+  #     - max
+  #   type: short
 file:
   display_group: historic_assemblies
   format: tsv
