@@ -70,7 +70,7 @@ attributes:
     display_name: First assembly in ranks
     separator: ","
     summary:
-      - min
+      - list
     type: keyword
   first_ebp_standard_in_ranks:
     header: first_metric_in_ranks
