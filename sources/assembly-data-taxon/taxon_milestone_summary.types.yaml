@@ -81,45 +81,45 @@ attributes:
     summary:
       - list
     type: keyword
-  # latest_assembly_date:
-  #   header: latest_assembly_date
-  #   description: The date of the latest assembly for the taxon.
-  #   display_level: 2
-  #   display_name: Latest assembly date
-  #   summary:
-  #     - min
-  #   type: date
-  # latest_assembly_accession:
-  #   header: latest_assembly_accession
-  #   description: The accession number of the latest assembly for the taxon.
-  #   display_level: 2
-  #   display_name: Latest assembly accession
-  #   summary:
-  #     - max
-  #   type: keyword
-  # total_assemblies:
-  #   header: total_assemblies
-  #   description: The total number of assemblies for the taxon.
-  #   display_level: 2
-  #   display_name: Total assemblies
-  #   summary:
-  #     - max
-  #   type: short
-  # current_assemblies:
-  #   header: current_assemblies
-  #   description: The current number of assemblies for the taxon.
-  #   display_level: 2
-  #   display_name: Current assemblies
-  #   summary:
-  #     - max
-  #   type: short
+    # latest_assembly_date:
+    #   header: latest_assembly_date
+    #   description: The date of the latest assembly for the taxon.
+    #   display_level: 2
+    #   display_name: Latest assembly date
+    #   summary:
+    #     - min
+    #   type: date
+    # latest_assembly_accession:
+    #   header: latest_assembly_accession
+    #   description: The accession number of the latest assembly for the taxon.
+    #   display_level: 2
+    #   display_name: Latest assembly accession
+    #   summary:
+    #     - max
+    #   type: keyword
+    # total_assemblies:
+    #   header: total_assemblies
+    #   description: The total number of assemblies for the taxon.
+    #   display_level: 2
+    #   display_name: Total assemblies
+    #   summary:
+    #     - max
+    #   type: short
+    # current_assemblies:
+    #   header: current_assemblies
+    #   description: The current number of assemblies for the taxon.
+    #   display_level: 2
+    #   display_name: Current assemblies
+    #   summary:
+    #     - max
+    #   type: short
 file:
   display_group: historic_assemblies
   format: tsv
   header: true
   name: taxon_milestone_summary.tsv
   source: INSDC
-  source_date: "2026-10-08"
+  source_date: "2026-10-10"
 taxonomy:
   taxon_id:
     header: taxid
