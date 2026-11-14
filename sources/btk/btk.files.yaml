@@ -391259,6 +391259,51 @@
   title: blob plot GCA_986497575.1
   url: https://blobtoolkit.genomehubs.org/api/v1/image/GCA_986497575.1/blob/circle?format=png
 - analysis:
+    description: Analysis of public assembly GCA_986497585.1 using BlobToolKit
+    name: BlobToolKit
+    source: BlobToolKit
+    source_url: https://blobtoolkit.genomehubs.org/view/dataset/GCA_986497585.1
+    title: BlobToolKit analysis of GCA_986497585.1
+  analysis_id: btk-GCA_986497585.1
+  assembly_id: GCA_986497585.1
+  command: blobtoolkit pipeline
+  description: a cumulative plot from BlobToolKit analysis GCA_986497585.1
+  name: cumulative.png
+  source_url: https://blobtoolkit.genomehubs.org/view/GCA_986497585.1/dataset/GCA_986497585.1/cumulative
+  taxon_id: '3395417'
+  title: cumulative plot GCA_986497585.1
+  url: https://blobtoolkit.genomehubs.org/api/v1/image/GCA_986497585.1/cumulative?format=png
+- analysis:
+    description: Analysis of public assembly GCA_986497585.1 using BlobToolKit
+    name: BlobToolKit
+    source: BlobToolKit
+    source_url: https://blobtoolkit.genomehubs.org/view/dataset/GCA_986497585.1
+    title: BlobToolKit analysis of GCA_986497585.1
+  analysis_id: btk-GCA_986497585.1
+  assembly_id: GCA_986497585.1
+  command: blobtoolkit pipeline
+  description: a snail plot from BlobToolKit analysis GCA_986497585.1
+  name: snail.png
+  source_url: https://blobtoolkit.genomehubs.org/view/GCA_986497585.1/dataset/GCA_986497585.1/snail
+  taxon_id: '3395417'
+  title: snail plot GCA_986497585.1
+  url: https://blobtoolkit.genomehubs.org/api/v1/image/GCA_986497585.1/snail?format=png
+- analysis:
+    description: Analysis of public assembly GCA_986497585.1 using BlobToolKit
+    name: BlobToolKit
+    source: BlobToolKit
+    source_url: https://blobtoolkit.genomehubs.org/view/dataset/GCA_986497585.1
+    title: BlobToolKit analysis of GCA_986497585.1
+  analysis_id: btk-GCA_986497585.1
+  assembly_id: GCA_986497585.1
+  command: blobtoolkit pipeline
+  description: a blob plot from BlobToolKit analysis GCA_986497585.1
+  name: blob.png
+  source_url: https://blobtoolkit.genomehubs.org/view/GCA_986497585.1/dataset/GCA_986497585.1/blob
+  taxon_id: '3395417'
+  title: blob plot GCA_986497585.1
+  url: https://blobtoolkit.genomehubs.org/api/v1/image/GCA_986497585.1/blob/circle?format=png
+- analysis:
     description: Analysis of public assembly GCA_986497595.1 using BlobToolKit
     name: BlobToolKit
     source: BlobToolKit
@@ -391303,6 +391348,51 @@
   taxon_id: '49144'
   title: blob plot GCA_986497595.1
   url: https://blobtoolkit.genomehubs.org/api/v1/image/GCA_986497595.1/blob/circle?format=png
+- analysis:
+    description: Analysis of public assembly GCA_986497605.1 using BlobToolKit
+    name: BlobToolKit
+    source: BlobToolKit
+    source_url: https://blobtoolkit.genomehubs.org/view/dataset/GCA_986497605.1
+    title: BlobToolKit analysis of GCA_986497605.1
+  analysis_id: btk-GCA_986497605.1
+  assembly_id: GCA_986497605.1
+  command: blobtoolkit pipeline
+  description: a cumulative plot from BlobToolKit analysis GCA_986497605.1
+  name: cumulative.png
+  source_url: https://blobtoolkit.genomehubs.org/view/GCA_986497605.1/dataset/GCA_986497605.1/cumulative
+  taxon_id: '3395417'
+  title: cumulative plot GCA_986497605.1
+  url: https://blobtoolkit.genomehubs.org/api/v1/image/GCA_986497605.1/cumulative?format=png
+- analysis:
+    description: Analysis of public assembly GCA_986497605.1 using BlobToolKit
+    name: BlobToolKit
+    source: BlobToolKit
+    source_url: https://blobtoolkit.genomehubs.org/view/dataset/GCA_986497605.1
+    title: BlobToolKit analysis of GCA_986497605.1
+  analysis_id: btk-GCA_986497605.1
+  assembly_id: GCA_986497605.1
+  command: blobtoolkit pipeline
+  description: a snail plot from BlobToolKit analysis GCA_986497605.1
+  name: snail.png
+  source_url: https://blobtoolkit.genomehubs.org/view/GCA_986497605.1/dataset/GCA_986497605.1/snail
+  taxon_id: '3395417'
+  title: snail plot GCA_986497605.1
+  url: https://blobtoolkit.genomehubs.org/api/v1/image/GCA_986497605.1/snail?format=png
+- analysis:
+    description: Analysis of public assembly GCA_986497605.1 using BlobToolKit
+    name: BlobToolKit
+    source: BlobToolKit
+    source_url: https://blobtoolkit.genomehubs.org/view/dataset/GCA_986497605.1
+    title: BlobToolKit analysis of GCA_986497605.1
+  analysis_id: btk-GCA_986497605.1
+  assembly_id: GCA_986497605.1
+  command: blobtoolkit pipeline
+  description: a blob plot from BlobToolKit analysis GCA_986497605.1
+  name: blob.png
+  source_url: https://blobtoolkit.genomehubs.org/view/GCA_986497605.1/dataset/GCA_986497605.1/blob
+  taxon_id: '3395417'
+  title: blob plot GCA_986497605.1
+  url: https://blobtoolkit.genomehubs.org/api/v1/image/GCA_986497605.1/blob/circle?format=png
 - analysis:
     description: Analysis of public assembly GCA_986497615.1 using BlobToolKit
     name: BlobToolKit
