@@ -183,6 +183,8 @@ identifiers:
   wgs_accession:
     header: wgsProjectAccession
     path: wgsInfo.wgsProjectAccession
+  projectAcronym:
+    header: projectAcronym
 metadata:
   is_primary_value:
     header: primaryValue

@@ -22,7 +22,7 @@ jobs:
           s3cmd sync -v --delete-removed --cache-file /volumes/docker/resources/files_s3cmd_sync_cache /volumes/docker/resources/files/ s3://goat/resources/files/
           /home/ubuntu/scripts/clean_goat_data.sh -d /volumes/docker/snapshots/production -r -p -k 1
           /home/ubuntu/scripts/clean_goat_data_s3.sh -m -r
- 
+
   restore-on-prod:
     runs-on: [self-hosted, runner2]
     steps:
@@ -41,18 +41,19 @@ jobs:
             -d' { \"indices\": \"*--${{ inputs.release }}\", \"ignore_unavailable\": true, \"include_global_state\": false, \"include_aliases\": false}'
           "
 
-  merge-changes:
-    runs-on: [self-hosted, runner1]
-    steps:
-      - uses: actions/checkout@v4
+  # disable merge changes to prevent automatic merging of release branches into main
+  # merge-changes:
+  #   runs-on: [self-hosted, runner1]
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - name: Merge ${{ inputs.release }} -> main
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: ${{ inputs.release }}
-          target_branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Merge ${{ inputs.release }} -> main
+  #       uses: devmasx/merge-branch@master
+  #       with:
+  #         type: now
+  #         from_branch: ${{ inputs.release }}
+  #         target_branch: main
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
 
   update-s3:
     runs-on: [self-hosted, runner1]

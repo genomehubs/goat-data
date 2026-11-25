@@ -497,3 +497,7 @@ attributes:
     type: keyword
   superseded_date:
     type: date
+  projectAcronym:
+    display_level: 2
+    display_name: Project Acronym
+    type: keyword

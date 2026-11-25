@@ -29,12 +29,13 @@ while read YAML; do
   YAMLFILE=$(basename $YAML)
   if [ ! -z "$RESOURCES" ]; then
     # Fetch YAML
-    s3cmd get s3://goat/resources/$DIRECTORY/$YAMLFILE $tmpdir/$YAMLFILE 2>/dev/null
-    if [ $? -eq 0 ]; then
-      echo $YAMLFILE >> $tmpdir/from_resources.txt
-    else
-      cp $YAML $tmpdir/$YAMLFILE
-    fi
+    # Disable fetching YAML from S3, always use local copy from sources
+    # s3cmd get s3://goat/resources/$DIRECTORY/$YAMLFILE $tmpdir/$YAMLFILE 2>/dev/null
+    # if [ $? -eq 0 ]; then
+    #   echo $YAMLFILE >> $tmpdir/from_resources.txt
+    # else
+    cp $YAML $tmpdir/$YAMLFILE
+    # fi
     FILE=$(cat $tmpdir/$YAMLFILE | yq -r '.file.name' 2>/dev/null)
     if [[ -z $FILE ]] || [[ "$FILE" == null ]]; then
       continue
