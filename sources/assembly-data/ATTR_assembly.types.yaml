@@ -497,7 +497,8 @@ attributes:
     type: keyword
   superseded_date:
     type: date
-  projectAcronym:
+  project_acronym:
+    description: Acronym for the project associated with the assembly
     display_level: 2
     display_name: Project Acronym
     type: keyword
