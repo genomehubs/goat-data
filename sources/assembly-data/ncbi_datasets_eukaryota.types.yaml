@@ -185,7 +185,6 @@ identifiers:
     path: wgsInfo.wgsProjectAccession
   project_acronym:
     header: projectAcronym
-    path: processedAssemblyInfo.projectAcronym
 metadata:
   is_primary_value:
     header: primaryValue
